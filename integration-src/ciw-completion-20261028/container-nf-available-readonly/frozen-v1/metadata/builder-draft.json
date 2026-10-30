@@ -1,0 +1,482 @@
+{
+  "entityDraft": {
+    "code": "container_nfs_disponiveis_med_progress",
+    "name": "NFs disponíveis para associação — MED",
+    "entityType": "api",
+    "createPhysicalTable": false,
+    "structureType": "main",
+    "structureModuleCode": "operacional",
+    "structureBaseNumber": 1053,
+    "apiSourceCode": "motor_progress_container_financeiro",
+    "apiListOperationCode": "nfs_disponiveis_read",
+    "apiDetailOperationCode": "nfs_disponiveis_get",
+    "fields": [
+      {
+        "code": "container_id",
+        "label": "Container",
+        "dataType": "integer",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "apiJsonPath": "container_id",
+        "apiWritePath": "container_id",
+        "apiShowInGrid": false,
+        "apiShowInForm": true,
+        "apiShowInFilter": false,
+        "position": 10,
+        "options": {
+          "readonly": true,
+          "writable": false
+        }
+      },
+      {
+        "code": "nf_key",
+        "label": "Identificador",
+        "dataType": "string",
+        "primaryKey": true,
+        "required": true,
+        "readonlyField": true,
+        "apiJsonPath": "nf_key",
+        "apiWritePath": "nf_key",
+        "apiShowInGrid": false,
+        "apiShowInForm": true,
+        "apiShowInFilter": false,
+        "position": 20,
+        "options": {
+          "readonly": true,
+          "writable": false
+        }
+      },
+      {
+        "code": "estab",
+        "label": "Estabelecimento",
+        "dataType": "string",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "apiJsonPath": "estab",
+        "apiWritePath": "estab",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "position": 30,
+        "options": {
+          "readonly": true,
+          "writable": false
+        }
+      },
+      {
+        "code": "documento",
+        "label": "Documento",
+        "dataType": "string",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "apiJsonPath": "documento",
+        "apiWritePath": "documento",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "position": 40,
+        "options": {
+          "readonly": true,
+          "writable": false
+        }
+      },
+      {
+        "code": "serie",
+        "label": "Série",
+        "dataType": "string",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "apiJsonPath": "serie",
+        "apiWritePath": "serie",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "position": 50,
+        "options": {
+          "readonly": true,
+          "writable": false
+        }
+      },
+      {
+        "code": "especie",
+        "label": "Espécie",
+        "dataType": "integer",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "apiJsonPath": "especie",
+        "apiWritePath": "especie",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "position": 60,
+        "options": {
+          "readonly": true,
+          "writable": false
+        }
+      },
+      {
+        "code": "cod_emitente",
+        "label": "Emitente",
+        "dataType": "integer",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "apiJsonPath": "cod_emitente",
+        "apiWritePath": "cod_emitente",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "position": 70,
+        "options": {
+          "readonly": true,
+          "writable": false
+        }
+      },
+      {
+        "code": "nat_operacao",
+        "label": "Natureza de operação",
+        "dataType": "string",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "apiJsonPath": "nat_operacao",
+        "apiWritePath": "nat_operacao",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "position": 80,
+        "options": {
+          "readonly": true,
+          "writable": false
+        }
+      },
+      {
+        "code": "dt_emissao",
+        "label": "Emissão",
+        "dataType": "date",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "apiJsonPath": "dt_emissao",
+        "apiWritePath": "dt_emissao",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "position": 90,
+        "options": {
+          "readonly": true,
+          "writable": false
+        }
+      },
+      {
+        "code": "dt_trans",
+        "label": "Transação",
+        "dataType": "date",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "apiJsonPath": "dt_trans",
+        "apiWritePath": "dt_trans",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "position": 100,
+        "options": {
+          "readonly": true,
+          "writable": false
+        }
+      },
+      {
+        "code": "tot_valor",
+        "label": "Valor total",
+        "dataType": "decimal",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "apiJsonPath": "tot_valor",
+        "apiWritePath": "tot_valor",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "position": 110,
+        "options": {
+          "readonly": true,
+          "writable": false
+        },
+        "scale": 5
+      },
+      {
+        "code": "despesa_nota",
+        "label": "Despesa da nota",
+        "dataType": "decimal",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "apiJsonPath": "despesa_nota",
+        "apiWritePath": "despesa_nota",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "position": 120,
+        "options": {
+          "readonly": true,
+          "writable": false
+        },
+        "scale": 5
+      },
+      {
+        "code": "valor_embal",
+        "label": "Embalagem",
+        "dataType": "decimal",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "apiJsonPath": "valor_embal",
+        "apiWritePath": "valor_embal",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "position": 130,
+        "options": {
+          "readonly": true,
+          "writable": false
+        },
+        "scale": 5
+      },
+      {
+        "code": "valor_frete",
+        "label": "Frete",
+        "dataType": "decimal",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "apiJsonPath": "valor_frete",
+        "apiWritePath": "valor_frete",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "position": 140,
+        "options": {
+          "readonly": true,
+          "writable": false
+        },
+        "scale": 5
+      },
+      {
+        "code": "valor_mercad",
+        "label": "Mercadoria",
+        "dataType": "decimal",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "apiJsonPath": "valor_mercad",
+        "apiWritePath": "valor_mercad",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "position": 150,
+        "options": {
+          "readonly": true,
+          "writable": false
+        },
+        "scale": 5
+      },
+      {
+        "code": "valor_outras",
+        "label": "Outros valores",
+        "dataType": "decimal",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "apiJsonPath": "valor_outras",
+        "apiWritePath": "valor_outras",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "position": 160,
+        "options": {
+          "readonly": true,
+          "writable": false
+        },
+        "scale": 5
+      },
+      {
+        "code": "valor_seguro",
+        "label": "Seguro",
+        "dataType": "decimal",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "apiJsonPath": "valor_seguro",
+        "apiWritePath": "valor_seguro",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "position": 170,
+        "options": {
+          "readonly": true,
+          "writable": false
+        },
+        "scale": 5
+      },
+      {
+        "code": "documento_localizado",
+        "label": "Documento localizado?",
+        "dataType": "boolean",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "apiJsonPath": "documento_localizado",
+        "apiWritePath": "documento_localizado",
+        "apiShowInGrid": false,
+        "apiShowInForm": true,
+        "apiShowInFilter": false,
+        "position": 180,
+        "options": {
+          "readonly": true,
+          "writable": false
+        }
+      }
+    ]
+  },
+  "programDraft": {
+    "programCode": "op1053",
+    "programTitle": "NFs disponíveis para associação — MED",
+    "module": "operacional",
+    "pageType": "crud",
+    "builderEntityCode": "container_nfs_disponiveis_med_progress",
+    "screenId": "ciw.container-nfs-disponiveis-med",
+    "version": "1.0.0",
+    "subtitle": "Consulta de notas ainda disponíveis para este container",
+    "permissionPrefix": "container_nfs_disponiveis_med_progress",
+    "programOrigin": "standard",
+    "ownerScope": "system",
+    "gridEditMode": "form",
+    "allowCreate": false,
+    "allowUpdate": false,
+    "allowDelete": false,
+    "rowLinks": [],
+    "contextFields": [
+      {
+        "field": "container_id",
+        "filter": true,
+        "createDefault": false,
+        "readonly": true,
+        "required": true
+      }
+    ],
+    "crudOptions": {
+      "pageSize": 30,
+      "gridFields": [
+        {
+          "field": "estab",
+          "hidden": false,
+          "width": 155
+        },
+        {
+          "field": "documento",
+          "hidden": false,
+          "width": 155
+        },
+        {
+          "field": "serie",
+          "hidden": false,
+          "width": 155
+        },
+        {
+          "field": "especie",
+          "hidden": false,
+          "width": 155
+        },
+        {
+          "field": "cod_emitente",
+          "hidden": false,
+          "width": 155
+        },
+        {
+          "field": "nat_operacao",
+          "hidden": false,
+          "width": 155
+        },
+        {
+          "field": "dt_emissao",
+          "hidden": false,
+          "width": 155
+        },
+        {
+          "field": "dt_trans",
+          "hidden": false,
+          "width": 155
+        },
+        {
+          "field": "tot_valor",
+          "hidden": false,
+          "width": 155
+        },
+        {
+          "field": "despesa_nota",
+          "hidden": false,
+          "width": 155
+        },
+        {
+          "field": "valor_embal",
+          "hidden": false,
+          "width": 155
+        },
+        {
+          "field": "valor_frete",
+          "hidden": false,
+          "width": 155
+        },
+        {
+          "field": "valor_mercad",
+          "hidden": false,
+          "width": 155
+        },
+        {
+          "field": "valor_outras",
+          "hidden": false,
+          "width": 155
+        },
+        {
+          "field": "valor_seguro",
+          "hidden": false,
+          "width": 155
+        }
+      ],
+      "filterFields": [
+        "estab",
+        "documento",
+        "serie",
+        "especie",
+        "cod_emitente",
+        "nat_operacao",
+        "dt_emissao",
+        "dt_trans",
+        "tot_valor",
+        "despesa_nota",
+        "valor_embal",
+        "valor_frete",
+        "valor_mercad",
+        "valor_outras",
+        "valor_seguro"
+      ],
+      "defaultSort": [
+        {
+          "field": "documento",
+          "dir": "asc"
+        },
+        {
+          "field": "serie",
+          "dir": "asc"
+        }
+      ]
+    },
+    "changeSummary": "Consulta MED somente leitura da seleção legada; associação e desassociação permanecem separadas."
+  }
+}

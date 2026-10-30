@@ -1,0 +1,104 @@
+{
+  "status": "ANALYZED_NO_PRODUCT_POLICY_INVENTED",
+  "sources": [
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/cons_cta_corren_custo_distr/cons_cta_corren_custo_distr_grid.class.php",
+      "sha256": "0ee3e749c5b83d342d27723893469926c71d1dd4b90886886ed9a694a94d662d"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-linked-20261028/cons_item_container_custos_comparacao_real/cons_item_container_custos_comparacao_real_grid.class.php",
+      "sha256": "cb3ba3c4b138e959a75ebc36c4aef585f460eef0aa8153d819ca8ed299cfb595"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-linked-20261028/cons_item_container_custos_comparacao_dolar/cons_item_container_custos_comparacao_dolar_grid.class.php",
+      "sha256": "297bb945f86e9fb42f3e1ebbffd002c95d1e99d36776f166e13bdd74bcccdf3c"
+    }
+  ],
+  "proofs": [
+    {
+      "path": ".runtime/ciw-completion-20261028/sql-fixed-literal-parity-v1.json",
+      "sha256": "4aee7771da8d3bdea940257825545ab755006f1fa70e44cbb4039812f3b92ed3"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/sql-fixed-aggregate-parity-v1.json",
+      "sha256": "017f8fe6b924be225db2d387ad37c76687e1e69e0ebf34432add6b67e7fb8f90"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/cost-distribution-readonly/alias-prepare-verification/literal-verification.json",
+      "sha256": "67f706d579cf077074383d08997a93488c132e0b7be0557688fac0db69091df7"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/cost-distribution-readonly/alias-prepare-verification/scalar-consumption.json",
+      "sha256": "4e4a2529ae6e2edf56756b01d90bc41c0e438256c11ae77fca66ecc2381c0346"
+    }
+  ],
+  "fixture": {
+    "path": "integration-src/ciw-completion-20261028/cost-distribution-readonly/sql-prepare-aliases-v1.json",
+    "sha256": "8d6a0f96a38f3a44a01b3899301352ad5c456209afd6ded4289c8546fdb0b5db",
+    "cases": 6,
+    "prepareOnly": true,
+    "executedByExecutor": false
+  },
+  "sqlEstablished": [
+    "division1/0and0/0refused-at-execution-no-zero-result",
+    "NULLarithmetic-isSQLNULL-even-when-ODBCfetch-reports-string0",
+    "SUMempty/allNULL-NULL;COALESCE0;100-SUMNULL",
+    "UNION-deduplicates-date/amount-pair-including-NULL;UNIONALL-retains",
+    "UNIONDATE/empty-string-becomesCHARACTER10-with-spaces-and-MM/DD/YYYY"
+  ],
+  "consumer1048": {
+    "total": "0 initial; += raw aggregate field, not SQL expression",
+    "totalSourceLines": [
+      8069,
+      8088,
+      8096
+    ],
+    "saldo": "raw SUM(globalLedger) via retornoSimplesTb01; PHP saldoAtual-total",
+    "saldoSourceLines": [
+      7967,
+      7979,
+      8732,
+      8744,
+      8100,
+      8102
+    ],
+    "date": "first returned aggregate data without ORDERBY; explicit2001-01-01 only if no rows; firstNULL remainsNULL",
+    "dateSourceLines": [
+      7988,
+      8091,
+      8093
+    ],
+    "order": "derived SQL contains DATA,ID; outer defaultORDERBYID when session orderempty; user sort possible",
+    "orderSourceLines": [
+      1023,
+      1077,
+      5236,
+      5290
+    ],
+    "opening": "every id0 replaced by same saldo/date then included in running balance; no post-event dedup",
+    "openingSourceLines": [
+      5345,
+      5354
+    ],
+    "auxiliaryDates": "dt_registro_pedido/dt_prev_chegada/dt_recebto DATE/empty-string union; DATA uses physical DATE in every branch",
+    "globalScope": "saldo SUM includes entire ledger withoutMED/containerWHERE",
+    "remainingGates": [
+      "branch3unboundipc/pc-PREPARE-outcome",
+      "branch4space-string-vs-number-type-PREPARE-outcome",
+      "first-date/order/id0-policy-no-invented-chronological-default",
+      "legacy-driver/render/helper-PHP-version-unproven"
+    ]
+  },
+  "consumer1040_41": {
+    "rawLogicalNULL": "keepNULL; no raw0 inferred from ODBCfetch artifact",
+    "realFields4_5_7": "str_replace then stringcast before rendering; NULL would become empty-string with PHP8.4deprecation",
+    "derivedFields6_8_13": "direct driverfields; no explicit COALESCE/NULLtozero in source",
+    "render": "NM_encode_input(sc_strip_script(value)); empty-string rendersnbsp else numericformat2decimals; helper behavior remains a dependency",
+    "zeroDivisor": "whole-statement refusal, not per-row fabricated0/NULL",
+    "reuseDifference": "core generates units from quantity then rounds10; SQL uses rounded persisted totals/unit; must prove mismatch with TT vector before shared projection implementation"
+  },
+  "localPHPScalarProof": "8.4.3 only, NOT proof of deployed Scriptcase PHP/ADODB driver; see receipt",
+  "canonicalWrites": false,
+  "sqlOrNetworkByExecutor": false,
+  "product1048": "HELD_ON_ORDER_AND_ALIAS_POLICY"
+}

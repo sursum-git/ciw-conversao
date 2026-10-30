@@ -1,0 +1,66 @@
+--- a/programs/ImportDiscountsReadService.p
++++ b/programs/ImportDiscountsReadService.p
+@@ -21,6 +21,8 @@
+ DEFINE VARIABLE rowsRead AS INTEGER NO-UNDO.
+ DEFINE VARIABLE selectedId AS INTEGER NO-UNDO.
+ DEFINE VARIABLE isLedger AS LOGICAL NO-UNDO.
++DEFINE VARIABLE isSupplier AS LOGICAL NO-UNDO.
++DEFINE VARIABLE supplierId AS INTEGER NO-UNDO.
+ DEFINE VARIABLE complete AS LOGICAL NO-UNDO.
+ DEFINE VARIABLE rowBuffer AS HANDLE NO-UNDO.
+ DEFINE VARIABLE clean AS JsonObject NO-UNDO.
+@@ -40,29 +42,43 @@
+  IF v=? OR v<1 OR v>2147483647 OR v<>TRUNCATE(v,0) THEN RETURN ?.
+  RETURN INTEGER(v).
+ END FUNCTION.
++FUNCTION SupplierIdValue RETURNS INTEGER():
++ DEFINE VARIABLE v AS DECIMAL NO-UNDO.
++ IF NOT poRequest:Has('fornecedor_id') OR poRequest:GetType('fornecedor_id')<>JsonDataType:NUMBER THEN RETURN ?.
++ v=poRequest:GetDecimal('fornecedor_id').
++ IF v=? OR v<-2147483648 OR v>2147483647 OR v<>TRUNCATE(v,0) THEN RETURN ?.
++ RETURN INTEGER(v).
++END FUNCTION.
+ DO ON ERROR UNDO, THROW:
+  started=ETIME.
+  IF NOT VALID-OBJECT(poRequest) THEN RUN Fail('IMPORT_DISCOUNTS_REQUEST',422).
+- IF pcResource<>'import_descontos_geral' AND pcResource<>'import_descontos_lancamentos' THEN RUN Fail('IMPORT_DISCOUNTS_RESOURCE',422).
++ IF pcResource<>'import_descontos_geral' AND pcResource<>'import_descontos_lancamentos' AND pcResource<>'import_descontos_fornecedor' THEN RUN Fail('IMPORT_DISCOUNTS_RESOURCE',422).
+  isLedger=pcResource='import_descontos_lancamentos'.
++ isSupplier=pcResource='import_descontos_fornecedor'.
+  IF NOT poRequest:Has('operation') OR poRequest:GetType('operation')<>JsonDataType:STRING THEN RUN Fail('IMPORT_DISCOUNTS_REQUEST',422).
+  op=poRequest:GetCharacter('operation').
+  IF op<>'read' AND op<>'get' THEN RUN Fail('IMPORT_DISCOUNTS_READ_ONLY',405).
+  allowedNames=IF op='read' THEN 'operation,skip,take,filter,sort' ELSE 'operation,id,record_key'.
+  IF isLedger THEN allowedNames=allowedNames + ',desconto_importacao_id'.
++ IF isSupplier THEN allowedNames=allowedNames + ',fornecedor_id'.
+  names=poRequest:GetNames().
+  DO n=1 TO EXTENT(names): IF NOT Exact(names[n],allowedNames) THEN RUN Fail('IMPORT_DISCOUNTS_REQUEST',422). END.
+  selectedId=IF isLedger THEN ContextId() ELSE ?.
+  IF isLedger AND selectedId=? THEN RUN Fail('IMPORT_DISCOUNTS_CONTEXT',422).
+- collectorPath=SEARCH('sursum-api/programs/ImportDiscountsCollector.r'). readerPath=SEARCH('sursum-api/programs/CiwErpReadService.r').
++ IF isSupplier THEN DO:
++  supplierId=SupplierIdValue().
++  IF supplierId=? THEN RUN Fail('IMPORT_DISCOUNTS_CONTEXT',422).
++ END.
++ collectorPath=SEARCH(IF isSupplier THEN 'sursum-api/programs/ImportDiscountsSupplierCollector.r' ELSE 'sursum-api/programs/ImportDiscountsCollector.r'). readerPath=SEARCH('sursum-api/programs/CiwErpReadService.r').
+  IF collectorPath=? OR readerPath=? THEN RUN Fail('IMPORT_DISCOUNTS_CONFIGURATION',503).
+  DO STOP-AFTER 10 ON STOP UNDO, LEAVE:
+-  RUN VALUE(collectorPath)(phDiscounts,phLedger,selectedId,started,50000,INPUT-OUTPUT rowsRead,OUTPUT TABLE ttImportDiscountsRead,OUTPUT TABLE ttImportDiscountLedgerRead).
++  RUN VALUE(collectorPath)(phDiscounts,phLedger,IF isSupplier THEN supplierId ELSE selectedId,started,50000,INPUT-OUTPUT rowsRead,OUTPUT TABLE ttImportDiscountsRead,OUTPUT TABLE ttImportDiscountLedgerRead).
+   IF isLedger AND NOT CAN-FIND(FIRST ttImportDiscountsRead WHERE ttImportDiscountsRead.desconto_importacao_id=selectedId) THEN RUN Fail('IMPORT_DISCOUNTS_PARENT',404).
+   IF NOT isLedger THEN DO:
+    labelsPath=SEARCH('sursum-api/programs/ContainersVersionHistoryLabels.r').
+    IF labelsPath=? THEN RUN Fail('IMPORT_DISCOUNTS_CONFIGURATION',503).
+    FOR EACH ttImportDiscountsRead:
++    IF isSupplier AND (ttImportDiscountsRead.fornecedor_id=? OR ttImportDiscountsRead.fornecedor_id<>supplierId) THEN RUN Fail('IMPORT_DISCOUNTS_CONTEXT_RESPONSE',503).
+     RUN VALUE(labelsPath)(phCurrentAllocations,phCurrentItems,phCurrentEmitters,phCurrentReasons,'item',ttImportDiscountsRead.item_container_id,started,INPUT-OUTPUT rowsRead,OUTPUT labelsValue).
+     ASSIGN ttImportDiscountsRead.item_codigo_erp_atual=IF labelsValue:IsNull('item_codigo_erp_atual') THEN ? ELSE labelsValue:GetCharacter('item_codigo_erp_atual')
+            ttImportDiscountsRead.item_descricao_atual=IF labelsValue:IsNull('item_descricao_atual') THEN ? ELSE labelsValue:GetCharacter('item_descricao_atual').
+@@ -75,6 +91,7 @@
+   END.
+   rowBuffer=IF isLedger THEN BUFFER ttImportDiscountLedgerRead:HANDLE ELSE BUFFER ttImportDiscountsRead:HANDLE.
+   clean=CAST(poRequest:Clone(),JsonObject). IF isLedger THEN clean:Remove('desconto_importacao_id').
++  IF isSupplier THEN clean:Remove('fornecedor_id').
+   RUN VALUE(readerPath)(rowBuffer,pcResource,'',clean,OUTPUT poResponse).
+   complete=TRUE.
+  END.

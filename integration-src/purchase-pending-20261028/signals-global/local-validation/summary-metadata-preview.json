@@ -1,0 +1,1386 @@
+{
+    "schemaVersion": "1.0",
+    "pageType": "crud",
+    "screenId": "ciw.sinalizadores-importacao-med",
+    "program": {
+        "id": "op1031",
+        "module": "operacional",
+        "entity": "proc_compra_sinalizadores_med_progress",
+        "title": "Sinalizadores de Importação — MED",
+        "version": "1.0.0",
+        "subtitle": "Empresa MED. Quantidade por regra, incluindo regras sem alertas.",
+        "icon": "table",
+        "permission": "proc_compra_sinalizadores_med_progress.read"
+    },
+    "permissions": {
+        "read": "proc_compra_sinalizadores_med_progress.read",
+        "create": false,
+        "edit": false,
+        "delete": false,
+        "saveLayout": "user.preferences"
+    },
+    "dataSource": {
+        "api": {
+            "read": {
+                "endpointId": "read",
+                "method": "POST"
+            },
+            "get": {
+                "endpointId": "get",
+                "method": "POST"
+            },
+            "saveLayout": {
+                "endpointId": "saveLayout",
+                "method": "POST"
+            },
+            "restoreLayout": {
+                "endpointId": "restoreLayout",
+                "method": "POST"
+            },
+            "saveSort": {
+                "endpointId": "saveSort",
+                "method": "POST"
+            },
+            "deleteSort": {
+                "endpointId": "deleteSort",
+                "method": "POST"
+            },
+            "saveGroup": {
+                "endpointId": "saveGroup",
+                "method": "POST"
+            },
+            "deleteGroup": {
+                "endpointId": "deleteGroup",
+                "method": "POST"
+            },
+            "saveFilter": {
+                "endpointId": "saveFilter",
+                "method": "POST"
+            },
+            "deleteFilter": {
+                "endpointId": "deleteFilter",
+                "method": "POST"
+            },
+            "lookupFrequent": {
+                "endpointId": "lookupFrequent",
+                "method": "POST"
+            },
+            "recordLookupUsage": {
+                "endpointId": "recordLookupUsage",
+                "method": "POST"
+            },
+            "saveMobileTemplate": {
+                "endpointId": "saveMobileTemplate",
+                "method": "POST"
+            },
+            "deleteMobileTemplate": {
+                "endpointId": "deleteMobileTemplate",
+                "method": "POST"
+            }
+        }
+    },
+    "runtime": {
+        "entityCode": "proc_compra_sinalizadores_med_progress",
+        "programId": "op1031",
+        "mode": "readonly-api",
+        "lock": {
+            "enabled": false,
+            "modes": []
+        },
+        "messages": {
+            "enabled": false,
+            "pollIntervalSeconds": 30,
+            "events": {
+                "enabled": false
+            }
+        }
+    },
+    "contextFields": [],
+    "dataModel": {
+        "primaryKey": "record_key",
+        "fields": {
+            "record_key": {
+                "label": "Chave do alerta",
+                "type": "text",
+                "nullable": false,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "record_key"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "proc_compra_sinalizadores_med_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "text"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tamanho",
+                        "value": "2048"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "record_key",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": true,
+                    "maxLength": 2048
+                }
+            },
+            "sinaliz_imp_id": {
+                "label": "Regra",
+                "type": "integer",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "sinaliz_imp_id"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "proc_compra_sinalizadores_med_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "sinaliz_imp_id",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false
+                }
+            },
+            "tipo_registro": {
+                "label": "Origem",
+                "type": "text",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "tipo_registro"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "proc_compra_sinalizadores_med_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "text"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tamanho",
+                        "value": "256"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "tipo_registro",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false,
+                    "maxLength": 256
+                }
+            },
+            "nome_alerta": {
+                "label": "Alerta",
+                "type": "text",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "nome_alerta"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "proc_compra_sinalizadores_med_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "text"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tamanho",
+                        "value": "256"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "nome_alerta",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false,
+                    "maxLength": 256
+                }
+            },
+            "titulo_configurado": {
+                "label": "Título configurado",
+                "type": "text",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "titulo_configurado"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "proc_compra_sinalizadores_med_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "text"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tamanho",
+                        "value": "256"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "titulo_configurado",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false,
+                    "maxLength": 256
+                }
+            },
+            "descricao_alerta": {
+                "label": "Descrição configurada",
+                "type": "text",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "descricao_alerta"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "proc_compra_sinalizadores_med_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "text"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tamanho",
+                        "value": "2048"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "descricao_alerta",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false,
+                    "maxLength": 2048
+                }
+            },
+            "dias_alerta": {
+                "label": "Dias configurados",
+                "type": "integer",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "dias_alerta"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "proc_compra_sinalizadores_med_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "dias_alerta",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false
+                }
+            },
+            "quantidade": {
+                "label": "Quantidade",
+                "type": "integer",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "quantidade"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "proc_compra_sinalizadores_med_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "quantidade",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false
+                }
+            },
+            "data_consulta": {
+                "label": "Data da consulta",
+                "type": "date",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "data_consulta"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "proc_compra_sinalizadores_med_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "date"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "data_consulta",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false
+                }
+            }
+        }
+    },
+    "crud": {
+        "query": {
+            "pageSize": 20,
+            "defaultSort": [
+                {
+                    "field": "sinaliz_imp_id",
+                    "dir": "asc"
+                }
+            ]
+        },
+        "filter": {
+            "type": "window",
+            "mode": "basic",
+            "title": "Filtros",
+            "openOnLoad": false,
+            "showAppliedFilters": true,
+            "fields": [
+                {
+                    "id": "sinaliz_imp_id",
+                    "field": "sinaliz_imp_id",
+                    "label": "Regra",
+                    "type": "integer",
+                    "operator": "eq",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "eq"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "sinaliz_imp_id"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "proc_compra_sinalizadores_med_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "integer"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "sinaliz_imp_id",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "tipo_registro",
+                    "field": "tipo_registro",
+                    "label": "Origem",
+                    "type": "text",
+                    "operator": "contains",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "contains"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "tipo_registro"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "proc_compra_sinalizadores_med_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "text"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tamanho",
+                            "value": "256"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "tipo_registro",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "nome_alerta",
+                    "field": "nome_alerta",
+                    "label": "Alerta",
+                    "type": "text",
+                    "operator": "contains",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "contains"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "nome_alerta"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "proc_compra_sinalizadores_med_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "text"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tamanho",
+                            "value": "256"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "nome_alerta",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "dias_alerta",
+                    "field": "dias_alerta",
+                    "label": "Dias configurados",
+                    "type": "integer",
+                    "operator": "eq",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "eq"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "dias_alerta"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "proc_compra_sinalizadores_med_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "integer"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "dias_alerta",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "quantidade",
+                    "field": "quantidade",
+                    "label": "Quantidade",
+                    "type": "integer",
+                    "operator": "eq",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "eq"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "quantidade"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "proc_compra_sinalizadores_med_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "integer"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "quantidade",
+                            "critical": true
+                        }
+                    ]
+                }
+            ]
+        },
+        "grid": {
+            "editing": {
+                "mode": "form"
+            },
+            "pageable": true,
+            "sortable": true,
+            "filterable": false,
+            "groupable": false,
+            "resizable": true,
+            "reorderable": true,
+            "columnMenu": true,
+            "toolbar": [
+                {
+                    "id": "filters",
+                    "label": "Filtros",
+                    "action": "filters",
+                    "icon": "filter"
+                },
+                {
+                    "id": "refresh",
+                    "label": "Atualizar",
+                    "action": "refresh",
+                    "icon": "arrow-rotate-cw"
+                },
+                {
+                    "id": "layout",
+                    "label": "Leiaute",
+                    "action": "layout",
+                    "icon": "columns",
+                    "permission": "saveLayout"
+                }
+            ],
+            "columns": [
+                {
+                    "field": "sinaliz_imp_id",
+                    "title": "Regra",
+                    "width": 150,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "sinaliz_imp_id"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "proc_compra_sinalizadores_med_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "integer"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "sinaliz_imp_id",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "tipo_registro",
+                    "title": "Origem",
+                    "width": 220,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "220"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "tipo_registro"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "proc_compra_sinalizadores_med_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "text"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tamanho",
+                            "value": "256"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "tipo_registro",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "nome_alerta",
+                    "title": "Alerta",
+                    "width": 220,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "220"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "nome_alerta"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "proc_compra_sinalizadores_med_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "text"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tamanho",
+                            "value": "256"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "nome_alerta",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "dias_alerta",
+                    "title": "Dias configurados",
+                    "width": 150,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "dias_alerta"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "proc_compra_sinalizadores_med_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "integer"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "dias_alerta",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "quantidade",
+                    "title": "Quantidade",
+                    "width": 150,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "quantidade"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "proc_compra_sinalizadores_med_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "integer"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "quantidade",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                }
+            ],
+            "rowActions": [
+                {
+                    "id": "view",
+                    "label": "Visualizar",
+                    "action": "view",
+                    "icon": "eye",
+                    "permission": "read"
+                }
+            ],
+            "rowLinks": [
+                {
+                    "id": "alertas",
+                    "label": "Registros sinalizados",
+                    "screenId": "ciw.alertas-importacao-med",
+                    "parameters": [
+                        {
+                            "field": "sinaliz_imp_id",
+                            "sourceField": "sinaliz_imp_id"
+                        }
+                    ],
+                    "position": "end"
+                }
+            ],
+            "bulkActions": {
+                "enabled": false,
+                "actions": []
+            },
+            "print": {
+                "enabled": false,
+                "options": []
+            }
+        },
+        "form": {
+            "id": "ciw-sinalizadores-importacao-med-form",
+            "mode": "popup",
+            "layout": "tabs",
+            "maximizeForm": true,
+            "title": {
+                "create": "Incluir sinalizadores de importação — med",
+                "view": "Detalhe de sinalizadores de importação — med",
+                "edit": "Alterar sinalizadores de importação — med",
+                "delete": "Excluir sinalizadores de importação — med"
+            },
+            "behavior": {
+                "closeOnSave": true,
+                "closeOnCancel": true
+            },
+            "tabs": [
+                {
+                    "id": "alerta",
+                    "title": "Sinalizador",
+                    "sections": [
+                        {
+                            "id": "regra",
+                            "title": "Regra e registro",
+                            "columns": 2,
+                            "fields": [
+                                {
+                                    "field": "sinaliz_imp_id",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "tipo_registro",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "nome_alerta",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "titulo_configurado",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "descricao_alerta",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "dias_alerta",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "quantidade",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "data_consulta",
+                                    "readonly": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "fields": [
+                {
+                    "field": "sinaliz_imp_id",
+                    "readonly": true
+                },
+                {
+                    "field": "tipo_registro",
+                    "readonly": true
+                },
+                {
+                    "field": "nome_alerta",
+                    "readonly": true
+                },
+                {
+                    "field": "titulo_configurado",
+                    "readonly": true
+                },
+                {
+                    "field": "descricao_alerta",
+                    "readonly": true
+                },
+                {
+                    "field": "dias_alerta",
+                    "readonly": true
+                },
+                {
+                    "field": "quantidade",
+                    "readonly": true
+                },
+                {
+                    "field": "data_consulta",
+                    "readonly": true
+                }
+            ],
+            "logs": {
+                "enabled": false
+            },
+            "print": {
+                "enabled": false,
+                "options": []
+            },
+            "otherActions": {
+                "enabled": false,
+                "actions": []
+            }
+        },
+        "userLayout": {
+            "enabled": true,
+            "storageKey": "ciw-sinalizadores-importacao-med-layout"
+        }
+    }
+}

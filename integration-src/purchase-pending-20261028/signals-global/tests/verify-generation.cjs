@@ -1,0 +1,4 @@
+const fs=require('fs'),path=require('path'),vm=require('vm'),assert=require('assert');const root=path.join(__dirname,'..');const outputs=new Map();const virtualFs=Object.assign({},fs,{mkdirSync(){},writeFileSync(p,s){outputs.set(path.normalize(p),Buffer.from(s));}});
+vm.runInNewContext(fs.readFileSync(root+'/extract-collector.cjs','utf8'),{__dirname:root,require:n=>n==='fs'?virtualFs:require(n)},{filename:'extract-collector.cjs'});
+for(const relative of ['abl/PurchaseSignalsCollector.p','abl/PurchaseSignalsService.p','includes/PurchaseSignalsTable.i','patches/PurchaseSignalsService.p.json']){const p=path.normalize(path.join(root,relative));assert.ok(outputs.has(p));assert.equal(Buffer.compare(outputs.get(p),fs.readFileSync(p)),0,'Regenerator differs: '+relative);}
+console.log('PASS isolated virtual-filesystem generation matches 4 frozen files; no writes');

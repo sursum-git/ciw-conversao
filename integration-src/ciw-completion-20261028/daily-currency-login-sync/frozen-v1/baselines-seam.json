@@ -1,0 +1,11 @@
+{
+  "target": "D:\\opencode\\motor-progress\\v2\\sursum-api\\programs\\CiwCotacoesService.p",
+  "baselineSha256": "64c35d1616afb509836665bf8550341d705a487bdb12d56c8df0ded66ba61a4a",
+  "candidateSha256": "0f9683eaf6cc09bb6627df182b4a4a7f5437f5f3347fdba043bab70f7baf5ea8",
+  "privateParticipantSha256": "f9a89a338cdd95b347fb00944309abaa465ad88242ca33480a83db3ee8681101",
+  "publicSignatureUnchanged": true,
+  "publicAlwaysRequiresOwnRoot": true,
+  "historyPersistenceCopiedOnceThenDelegated": true,
+  "canonicalWrites": false,
+  "physicalEmsAdapter": false
+}

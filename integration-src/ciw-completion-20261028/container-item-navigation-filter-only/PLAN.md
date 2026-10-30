@@ -1,0 +1,11 @@
+# Navegação de item por filtro local — plano de implementação
+
+Escopo aprovado pelo root: capacidade nativa CRUD opt-in `contextFields[].filterOnly`, sem relaxar ApiRequestContext, RuntimePurchaseItemAudit ou requestContextFields. A seleção permanece em withContextFilters e sai somente do contexto externo. Configuração ausente mantém o payload anterior. Sem escritores/negócio/API/DB/publicação ou edição canônica.
+
+1. Capturar bytes/hash dos compartilhados atuais e exports d4f647 em baseline isolada; gerar testes primeiro. Reproduzir GET com PK no contexto rejeitado pelo helper PHP real e mostrar o payload atual vazando esse PK.
+2. Validar descritor fechado em Builder PHP, normalizador/validator JS e JSONSchema CRUD: boolean, apenas CRUD; quando true, integer/opcional/filter=true/readonly=true/createDefault=false explícitos. Processo continua rejeitando. Campos antigos e flag false preservam semântica anterior.
+3. CrudEngine preserva contextValues para seleção e usa contexto externo derivado sem os campos filterOnly no GET e renderers. Form renderer exclui a flag também em opções/download direto; batch continua parent-only. Testar métodos reais de read/get/save/batch e helper externo intacto, incluindo ausência do campo opcional e colisão de filtro de usuário.
+4. Produzir drafts mínimos sobre exports atuais:1008→1014/pedido e1002/alocação;1002→1014/pedido;1014 e1002 declaram PK opcional filterOnly. Validar por normalizeEntityPayload/validateExternalDraft reais, normalizer/validator/schema reais e protótipos nativos; permitir somente deltas esperados, permissões/abas/fontes inalteradas.
+5. Emitir bytepatches com baselines/reversão, matriz/exemplo nativo sem mock de produção, revisão e manifesto candidato. Nenhum freeze anterior ou inventário global será reescrito. Prova real de leitura publicada fica com o root após integração e autoria, sem alegar que testes locais a substituem.
+
+Limites separados: USD/BRL, condições de colunas realizadas, descrição ERP MED/IMA e resumo financeiro não fazem parte desta alteração. Os links abrem a grade do item selecionado, com suas ações nativas atuais; não atribuir a eles abertura automática do formulário ou restrições globais create/delete do legado.

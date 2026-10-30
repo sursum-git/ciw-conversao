@@ -1,0 +1,469 @@
+{
+  "status": "FROZEN_REBASED_POST_BUILD6_NOT_PUBLISHED",
+  "version": "discounts-v1.2",
+  "stage": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\import-discounts-readonly\\frozen-v1.2\\candidate-exact",
+  "localStage": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\import-discounts-readonly\\rebase-after6-local",
+  "canonicalWrites": false,
+  "scope": {
+    "programs": [
+      "op1045",
+      "op1046"
+    ],
+    "globalSourceScope": true,
+    "newEntities": 2,
+    "newReadGetOperations": 4,
+    "newRowLinks": 1,
+    "grants": 0,
+    "writers": 0,
+    "physicalSchemaChanges": 0,
+    "newSqlConnections": 0
+  },
+  "dependency": {
+    "sharedHelperSha256": "9bfe21dc6ff9d86105d7602d376a2adc3cc3b9fe61783a68f7d1cd03f9d100bb",
+    "authoritativeCompanion": "container-version-history/frozen-lookups-v2",
+    "installHelperOnce": true,
+    "helperPositionalAbiUnchanged": true,
+    "discountApiServiceFixedHandles": 6,
+    "ledgerOnlyNeedsTwoPhysicalSources": true
+  },
+  "baselines": [
+    {
+      "target": "D:\\opencode\\motor-progress\\v2\\sursum-api\\programs\\CiwErpReadService.p",
+      "baselineSha256": "2a2111dc9fa56459b0f42796e837675b56921b852d5e012c43f4e71a8b35e1d8",
+      "candidateSha256": "500aa6dc47e9f0ecffa86dd3c4dcc7aa51ce0b3087a18aa209979e2ca8d376bf",
+      "exactCandidate": "candidate-exact/CiwErpReadService.p",
+      "patch": "patches/CiwErpReadService.p.patch",
+      "baselineKind": "Current stable integrated6, exact byte edits preserve tax1043/lookup/aux/batch"
+    },
+    {
+      "target": "D:\\opencode\\motor-progress\\v2\\sursum-api\\programs\\CiwCadastrosCrud.p",
+      "baselineSha256": "a167b039396533829ede08ab1569215f27b0c6b643af30b6bbe6ae60c8b893b1",
+      "candidateSha256": "7c0e717180db8d877ad8536119898dfd5577f4466951f179f9d99a787960cd65",
+      "exactCandidate": "candidate-exact/CiwCadastrosCrud.p",
+      "patch": "patches/CiwCadastrosCrud.p.patch",
+      "baselineKind": "Current stable integrated6, exact byte edits preserve tax1043/lookup/aux/batch"
+    },
+    {
+      "target": "D:\\opencode\\construtor-pg\\backend\\src\\Runtime\\RuntimeCiwErpQuery.php",
+      "baselineSha256": "076d9f9b7dc324743191f9ccada5b43e7c3461cdaaa8506d92fb297ce520a116",
+      "candidateSha256": "65aa509cc3d2459771fd229cc31e65bd545644da331411dd01152b77475639a8",
+      "exactCandidate": "candidate-exact/RuntimeCiwErpQuery.php",
+      "patch": "patches/RuntimeCiwErpQuery.php.patch",
+      "baselineKind": "Current stable integrated6, exact byte edits preserve tax1043/lookup/aux/batch"
+    },
+    {
+      "target": "D:\\opencode\\construtor-pg\\backend\\src\\Runtime\\RuntimeApiEntityActionService.php",
+      "baselineSha256": "cd7d6cb032f250c8ef69909033009d4210873c9c0bc811e5ded2b8d2e0c557fa",
+      "candidateSha256": "c34b1cea17c910e97031f5a08e3bd0a4e3b3a26b6ec5ac69f23833812e999a6d",
+      "exactCandidate": "candidate-exact/RuntimeApiEntityActionService.php",
+      "patch": "patches/RuntimeApiEntityActionService.php.patch",
+      "baselineKind": "Current stable integrated6, exact byte edits preserve tax1043/lookup/aux/batch"
+    }
+  ],
+  "newPhpFile": {
+    "source": "php/RuntimeImportDiscountRead.php",
+    "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeImportDiscountRead.php",
+    "sha256": "da183dfadf900d516a577495d8348293c0aa1a9b36954cde50de9be819cd0197"
+  },
+  "metadataBaseline": {
+    "path": ".runtime/ciw-completion-20261028/source-132-current-after6.json",
+    "sha256": "5246dbeb34d0c1d4501b4e179646bb4a58ec9406bbba2efc9a2f39891461d039",
+    "beforeOperations": 132,
+    "afterOperations": 136,
+    "appendOnly": true,
+    "preserveActualAuthentication": true
+  },
+  "validation": {
+    "localOpenEdge": "12.8 development only",
+    "compiledUnitsPerCodepage": 9,
+    "checksPerCombination": 79,
+    "checks": {
+      "collector": 18,
+      "readGet": 44,
+      "sharedLabels": 17
+    },
+    "compatibility": {
+      "compiledUnitsPerCodepage": 10,
+      "checksPerCombination": 79,
+      "tests": {
+        "oldHelper": 13,
+        "history": 38,
+        "aux": 28
+      },
+      "assertionsRemoved": 0,
+      "fixtureOnlyAddedPhysicalCodigoErp": true
+    },
+    "codepages": [
+      "UTF-8",
+      "ISO8859-1"
+    ],
+    "cultures": [
+      "AMERICAN",
+      "EUROPEAN"
+    ],
+    "numDbs": 0,
+    "redGreenObserved": true,
+    "phpTests": 12,
+    "phpAssertions": 57,
+    "realRuntimeMethods": [
+      "readCiwErpPage",
+      "get"
+    ],
+    "transport": "mocked no network",
+    "fullPhpTests": 885,
+    "fullPhpAssertions": 5841
+  },
+  "contracts": [
+    "General vl_utiliz coalesced zero; vl_utiliz_detalhe raw nullable SUM; same shapes read/get",
+    "Balance uses authorizedUSD minus coalesced utilizedUSD in one collector",
+    "cod_usuario is physical DATE, never actor",
+    "Complete typed record_key and selected owner enforced before PHP mapping",
+    "Current names use proven joins without supplier identific/company or reason cost restriction",
+    "Shared global physical-record50000 and wallclock10s budget; reader page200; NO-LOCK no cache"
+  ],
+  "gates": [
+    "Independent review",
+    "If official6 or another publication changed any shared hash/source count, rebase guarded additive proposals before applying; preserve all branches",
+    "Root compile OpenEdge12.2 on42 and deploy API+Service+helper/include/Reader/dispatcher/PHP coherently",
+    "Preserve ACTUAL source authentication; four source appends and native publication only",
+    "Root PASOE/native read/get/ownership/current-label/NULL/date validation; permissions unchanged unless separately authorized"
+  ],
+  "limits": [
+    "No official compile/publication/real-business execution by executor",
+    "Contextual item grids/bridge item0 and all writers remain outside this conversion",
+    "No universal collation/export-format parity claimed"
+  ],
+  "receipts": [
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/php-red-valid.xml",
+      "sha256": "91b8510dab559ec56a15f93f3e5d64b414f715d750c4681bb593225036eb53ed"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/php-final-green.xml",
+      "sha256": "0604d0431c74df3b25d6bca5959199652918e9a55fa4aac2f0ec2727dc914107"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/local/final-compile-UTF-8.log",
+      "sha256": "d6089b00ef5354987b9244cc8567a59b7ec79ac52f62b70890fc519cab7d4305"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/lookup-compat-local/compile-UTF-8.log",
+      "sha256": "36d97babba782a1d8b0d7e2ad4f2cbd3e831596718b68e40adadd49e2885b69e"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/local/red-UTF-8-AMERICAN.log",
+      "sha256": "f595f4157215fe9c18670aded70752ba41ef5de942954c87d53d1846cdf32bdb"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/local/read-red-UTF-8-AMERICAN.log",
+      "sha256": "24d918bfec73c93649dd55028b8dc9c8d0a73d4d4eed5ec28bd5c4c3a91a6c7a"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/local/labels-red-UTF-8-AMERICAN.log",
+      "sha256": "4b28cc98ac3d7de463052df292e9a7bca918b125ae072b3778857c9844d0bc5f"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/local/final-green-UTF-8-AMERICAN.log",
+      "sha256": "c9c9288af7fdb7da123ef4c636e1d83527e2e8996d486a42b772250b9470b74c"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/lookup-compat-local/green-UTF-8-AMERICAN.log",
+      "sha256": "52e2fccc2c40f12919ef2389d93b4dcc2b46a469cf744595a19219344ede50c2"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/local/red-UTF-8-EUROPEAN.log",
+      "sha256": "f595f4157215fe9c18670aded70752ba41ef5de942954c87d53d1846cdf32bdb"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/local/read-red-UTF-8-EUROPEAN.log",
+      "sha256": "24d918bfec73c93649dd55028b8dc9c8d0a73d4d4eed5ec28bd5c4c3a91a6c7a"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/local/labels-red-UTF-8-EUROPEAN.log",
+      "sha256": "4b28cc98ac3d7de463052df292e9a7bca918b125ae072b3778857c9844d0bc5f"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/local/final-green-UTF-8-EUROPEAN.log",
+      "sha256": "c9c9288af7fdb7da123ef4c636e1d83527e2e8996d486a42b772250b9470b74c"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/lookup-compat-local/green-UTF-8-EUROPEAN.log",
+      "sha256": "52e2fccc2c40f12919ef2389d93b4dcc2b46a469cf744595a19219344ede50c2"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/local/final-compile-ISO8859-1.log",
+      "sha256": "d6089b00ef5354987b9244cc8567a59b7ec79ac52f62b70890fc519cab7d4305"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/lookup-compat-local/compile-ISO8859-1.log",
+      "sha256": "36d97babba782a1d8b0d7e2ad4f2cbd3e831596718b68e40adadd49e2885b69e"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/local/red-ISO8859-1-AMERICAN.log",
+      "sha256": "f595f4157215fe9c18670aded70752ba41ef5de942954c87d53d1846cdf32bdb"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/local/read-red-ISO8859-1-AMERICAN.log",
+      "sha256": "24d918bfec73c93649dd55028b8dc9c8d0a73d4d4eed5ec28bd5c4c3a91a6c7a"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/local/labels-red-ISO8859-1-AMERICAN.log",
+      "sha256": "4b28cc98ac3d7de463052df292e9a7bca918b125ae072b3778857c9844d0bc5f"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/local/final-green-ISO8859-1-AMERICAN.log",
+      "sha256": "c9c9288af7fdb7da123ef4c636e1d83527e2e8996d486a42b772250b9470b74c"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/lookup-compat-local/green-ISO8859-1-AMERICAN.log",
+      "sha256": "52e2fccc2c40f12919ef2389d93b4dcc2b46a469cf744595a19219344ede50c2"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/local/red-ISO8859-1-EUROPEAN.log",
+      "sha256": "f595f4157215fe9c18670aded70752ba41ef5de942954c87d53d1846cdf32bdb"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/local/read-red-ISO8859-1-EUROPEAN.log",
+      "sha256": "24d918bfec73c93649dd55028b8dc9c8d0a73d4d4eed5ec28bd5c4c3a91a6c7a"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/local/labels-red-ISO8859-1-EUROPEAN.log",
+      "sha256": "4b28cc98ac3d7de463052df292e9a7bca918b125ae072b3778857c9844d0bc5f"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/local/final-green-ISO8859-1-EUROPEAN.log",
+      "sha256": "c9c9288af7fdb7da123ef4c636e1d83527e2e8996d486a42b772250b9470b74c"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/lookup-compat-local/green-ISO8859-1-EUROPEAN.log",
+      "sha256": "52e2fccc2c40f12919ef2389d93b4dcc2b46a469cf744595a19219344ede50c2"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/rebase-after6-stage/php-incremental.xml",
+      "sha256": "8ae882c4e216b039ff64237ecbbdd7f6f590a9ecb0ee21d8b5d675b9fbaee7b6"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/rebase-after6-stage/php-full.xml",
+      "sha256": "99fb962ae81ac754b2df7a25d618e44483f2a61ac7fe1c3891bb093b886b9df7"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/rebase-after6-local/compile-UTF-8.log",
+      "sha256": "d6089b00ef5354987b9244cc8567a59b7ec79ac52f62b70890fc519cab7d4305"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/rebase-after6-local/compile-ISO8859-1.log",
+      "sha256": "d6089b00ef5354987b9244cc8567a59b7ec79ac52f62b70890fc519cab7d4305"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/rebase-after6-local/green-UTF-8-AMERICAN.log",
+      "sha256": "c9c9288af7fdb7da123ef4c636e1d83527e2e8996d486a42b772250b9470b74c"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/rebase-after6-local/green-UTF-8-EUROPEAN.log",
+      "sha256": "c9c9288af7fdb7da123ef4c636e1d83527e2e8996d486a42b772250b9470b74c"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/rebase-after6-local/green-ISO8859-1-AMERICAN.log",
+      "sha256": "c9c9288af7fdb7da123ef4c636e1d83527e2e8996d486a42b772250b9470b74c"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/import-discounts-readonly/rebase-after6-local/green-ISO8859-1-EUROPEAN.log",
+      "sha256": "c9c9288af7fdb7da123ef4c636e1d83527e2e8996d486a42b772250b9470b74c"
+    }
+  ],
+  "files": [
+    {
+      "path": "abl/ImportDiscountsCollector.p",
+      "sha256": "710e829b911874ce17f9976bcd478d558594fb49db5eeadffdd04a588c8c51f5"
+    },
+    {
+      "path": "abl/ImportDiscountsReadApi.p",
+      "sha256": "d5c88dab039cff35166eeb2b8905554999513e13945295d6d5b619004dbd9407"
+    },
+    {
+      "path": "abl/ImportDiscountsReadService.p",
+      "sha256": "ad50ae2fc4a6ae5f0c4045912443f0895b9c24afb673fb3c06ebcb1a4fe3a148"
+    },
+    {
+      "path": "baselines.json",
+      "sha256": "7e4a199ca468781d78ae89cf9231fbf024075b4ed6f9bb8a017e78dc7f230885"
+    },
+    {
+      "path": "candidate-exact/CiwCadastrosCrud.p",
+      "sha256": "7c0e717180db8d877ad8536119898dfd5577f4466951f179f9d99a787960cd65"
+    },
+    {
+      "path": "candidate-exact/CiwErpReadService.p",
+      "sha256": "500aa6dc47e9f0ecffa86dd3c4dcc7aa51ce0b3087a18aa209979e2ca8d376bf"
+    },
+    {
+      "path": "candidate-exact/RuntimeApiEntityActionService.php",
+      "sha256": "c34b1cea17c910e97031f5a08e3bd0a4e3b3a26b6ec5ac69f23833812e999a6d"
+    },
+    {
+      "path": "candidate-exact/RuntimeCiwErpQuery.php",
+      "sha256": "65aa509cc3d2459771fd229cc31e65bd545644da331411dd01152b77475639a8"
+    },
+    {
+      "path": "finalize-source.cjs",
+      "sha256": "11caa087561315be9f614ea366d3639bed9ca08af642da5ca3a886bd0762fb88"
+    },
+    {
+      "path": "freeze.cjs",
+      "sha256": "0ef086333049683bc311c8d44fe071721d06ab3e7a2b0e5bbdf11a31adde2e2c"
+    },
+    {
+      "path": "includes/ImportDiscountsReadTables.i",
+      "sha256": "f1d31239a2f8c669218af4d7f968f45b8600bd4a12dd7a087e043b0726b1fbc1"
+    },
+    {
+      "path": "metadata/api-source-additions.json",
+      "sha256": "2ce4c970b61eae011bca66e1a1d7d76c86367babf9dcce696b8c356bcc13f54f"
+    },
+    {
+      "path": "metadata/import_descontos_geral-builder-draft.json",
+      "sha256": "4ddd1c508b04eb4b8557f662ea7d648087c23028ecea6ed0ee402f1a18b08caf"
+    },
+    {
+      "path": "metadata/import_descontos_lancamentos-builder-draft.json",
+      "sha256": "c59e788fb360eb96dde5c9c3f3b641d8976a30f5f51424823a4fffc8832e1e7f"
+    },
+    {
+      "path": "metadata/source-patch.json",
+      "sha256": "0e30a141edd992e5ac86452e62756891a38c2ad41c5093ff176db47bd7d5f412"
+    },
+    {
+      "path": "patches/CiwCadastrosCrud.p.patch",
+      "sha256": "e2c7c5fbfd398f49f0453d613440189969db481c3b498f00f7893e23f0e9d079"
+    },
+    {
+      "path": "patches/CiwErpReadService.p.patch",
+      "sha256": "7f14732dc3ac086bb783825a6a0c5695e5493cd803bc166b4e3448c621d29014"
+    },
+    {
+      "path": "patches/RuntimeApiEntityActionService.php.patch",
+      "sha256": "550e5346da61250d9223a7d397d8bc68fffc43d76459a740a95c92f1fad9f979"
+    },
+    {
+      "path": "patches/RuntimeCiwErpQuery.php.patch",
+      "sha256": "bbff3fba644277992977c80ac9c083b7c24fee227cf9b4420039b6842b3f17bf"
+    },
+    {
+      "path": "php/RuntimeImportDiscountRead.php",
+      "sha256": "da183dfadf900d516a577495d8348293c0aa1a9b36954cde50de9be819cd0197"
+    },
+    {
+      "path": "PLAN.md",
+      "sha256": "f0baeb61783e8e28b07a60e979e63b507d2649601e6bcd364fe25479863861f0"
+    },
+    {
+      "path": "prepare-label-product.cjs",
+      "sha256": "0ef086333049683bc311c8d44fe071721d06ab3e7a2b0e5bbdf11a31adde2e2c"
+    },
+    {
+      "path": "prepare-label-tests.cjs",
+      "sha256": "0ef086333049683bc311c8d44fe071721d06ab3e7a2b0e5bbdf11a31adde2e2c"
+    },
+    {
+      "path": "prepare-local.cjs",
+      "sha256": "0ef086333049683bc311c8d44fe071721d06ab3e7a2b0e5bbdf11a31adde2e2c"
+    },
+    {
+      "path": "prepare-lookup-compat.cjs",
+      "sha256": "0ef086333049683bc311c8d44fe071721d06ab3e7a2b0e5bbdf11a31adde2e2c"
+    },
+    {
+      "path": "prepare-metadata.cjs",
+      "sha256": "0ef086333049683bc311c8d44fe071721d06ab3e7a2b0e5bbdf11a31adde2e2c"
+    },
+    {
+      "path": "prepare-php.cjs",
+      "sha256": "0ef086333049683bc311c8d44fe071721d06ab3e7a2b0e5bbdf11a31adde2e2c"
+    },
+    {
+      "path": "prepare-stage.cjs",
+      "sha256": "0ef086333049683bc311c8d44fe071721d06ab3e7a2b0e5bbdf11a31adde2e2c"
+    },
+    {
+      "path": "prepare-tests.cjs",
+      "sha256": "0ef086333049683bc311c8d44fe071721d06ab3e7a2b0e5bbdf11a31adde2e2c"
+    },
+    {
+      "path": "README.md",
+      "sha256": "29b7ceabb5bca43115886b37d20904b3e7e71506e0a9bc6c0308da1b3100feb4"
+    },
+    {
+      "path": "shared-lookups/abi.json",
+      "sha256": "5966822caee225e4172be7aa8f469eab4eccc327ea80ca16139b38537b4c6dea"
+    },
+    {
+      "path": "shared-lookups/compatibility-tests.json",
+      "sha256": "a318d3a8d70525125b015814cff4a88c30df12fae6409068c9ba69690cf202be"
+    },
+    {
+      "path": "shared-lookups/ContainersVersionHistoryLabels.p",
+      "sha256": "9bfe21dc6ff9d86105d7602d376a2adc3cc3b9fe61783a68f7d1cd03f9d100bb"
+    },
+    {
+      "path": "source-schema-proof.json",
+      "sha256": "7aab65d0e8aa7de1dda41724b090b4d9820636b62f3e4fbf1395b9cd266e5ca9"
+    },
+    {
+      "path": "tests/abl/ImportDiscountCurrentFixtures.i",
+      "sha256": "5057a938491603a8ab25ca1608a995edb761d53a54f193283601b2d533e1590f"
+    },
+    {
+      "path": "tests/abl/ImportDiscountsCollectorTest.p",
+      "sha256": "209803792a2e745037d972d2127a8e201d80f66d639991377384323eb86c27e6"
+    },
+    {
+      "path": "tests/abl/ImportDiscountsLabelsTest.p",
+      "sha256": "71a08b4c66f434bd1ccd596c7b6b618ec678d615b7469e021bfe8275946c9ef0"
+    },
+    {
+      "path": "tests/abl/ImportDiscountSourceFixtures.i",
+      "sha256": "076f38cb3427a465a871cc1789880948ada244367afebe4df2976f245f362f4e"
+    },
+    {
+      "path": "tests/abl/ImportDiscountsReadTest.p",
+      "sha256": "cc83171fa68ddc298d674e03b4e9f935318acaa5a5c56393de5a9534c65ff1b0"
+    },
+    {
+      "path": "tests/lookup-compat/ContainersVersionAuxHistoryTest.p",
+      "sha256": "b2194fabceea481a7b482be23ce826fab859d519aa10c87de48aa0b4a3111060"
+    },
+    {
+      "path": "tests/lookup-compat/ContainersVersionHistoryLabelsTest.p",
+      "sha256": "4ad681be78815fce68b65a51e1830edbe83db82474c26fcfebda691c26f04547"
+    },
+    {
+      "path": "tests/lookup-compat/ContainersVersionHistoryTest.p",
+      "sha256": "e9cde6bcf0b4a5942c7bb991800be9b5220c233d284d905324044517808b5075"
+    },
+    {
+      "path": "tests/lookup-compat/ContainersVersionHistoryTestTables.i",
+      "sha256": "24480f748f0b71bf28b27ef4abf117540238ebc8cdf992a4e883940ab907262d"
+    },
+    {
+      "path": "tests/runtime-bootstrap.php",
+      "sha256": "4a2fae287ad4f78f08e22c8597561f1ca54a02e4b098801eee6715af8135a23f"
+    },
+    {
+      "path": "tests/RuntimeImportDiscountReadIntegrationTest.php",
+      "sha256": "f5e3d52c8a3770f450e1823f1549b2c2563382660a5129c8b700dbaec0ac7b11"
+    },
+    {
+      "path": "verify.cjs",
+      "sha256": "e89ce86c1d7b913e720e05f46deecd9f02fe7eda4c63bcf17f2cde24c0e73df7"
+    },
+    {
+      "path": "views.json",
+      "sha256": "1ef0d4a5bee500182414d1fc70924b783088a75784bd0155d0ec6f15b598a5f4"
+    }
+  ],
+  "predecessor": {
+    "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\import-discounts-readonly\\frozen-v1\\manifest.json",
+    "sha256": "714587844c8e94c71234b090fa1068c3e2ea2dc07832439603f89fcd33748e83",
+    "productAblPhpUnchangedExceptFourSharedRebases": true
+  }
+}

@@ -1,0 +1,840 @@
+{
+  "at": "2026-10-23T14:18:27.512Z",
+  "scope": "CIW",
+  "businessEndpointsCalled": false,
+  "programs": [
+    {
+      "code": "cd0090",
+      "title": "Empresas",
+      "screenId": "ciw.empresas",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.0",
+      "permissions": {
+        "read": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "geral",
+          "title": "Geral"
+        }
+      ]
+    },
+    {
+      "code": "cd0091",
+      "title": "Tipos de anexo",
+      "screenId": "ciw.tipos-anexo",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.0",
+      "permissions": {
+        "read": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "geral",
+          "title": "Geral"
+        }
+      ]
+    },
+    {
+      "code": "cd0092",
+      "title": "Despesas",
+      "screenId": "ciw.despesas",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.2",
+      "permissions": {
+        "read": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "geral",
+          "title": "Geral"
+        }
+      ]
+    },
+    {
+      "code": "cd0093",
+      "title": "Empresas por despesa",
+      "screenId": "ciw.empresas-despesa",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.1",
+      "permissions": {
+        "read": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "geral",
+          "title": "Geral"
+        }
+      ]
+    },
+    {
+      "code": "cd0094",
+      "title": "Colorações",
+      "screenId": "ciw.coloracoes",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.0",
+      "permissions": {
+        "read": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "geral",
+          "title": "Geral"
+        }
+      ]
+    },
+    {
+      "code": "cd0095",
+      "title": "Situações do container",
+      "screenId": "ciw.situacoes-container",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.0",
+      "permissions": {
+        "read": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "geral",
+          "title": "Geral"
+        }
+      ]
+    },
+    {
+      "code": "cd0096",
+      "title": "Tipos de versão de custo",
+      "screenId": "ciw.tipos-versao-custo",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.0",
+      "permissions": {
+        "read": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "geral",
+          "title": "Geral"
+        }
+      ]
+    },
+    {
+      "code": "cd0097",
+      "title": "Motivos de desconto",
+      "screenId": "ciw.motivos-desconto",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.0",
+      "permissions": {
+        "read": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "geral",
+          "title": "Geral"
+        }
+      ]
+    },
+    {
+      "code": "cd0098",
+      "title": "Parâmetros IMA",
+      "screenId": "ciw.parametros-ima",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.0",
+      "permissions": {
+        "read": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "geral",
+          "title": "Geral"
+        }
+      ]
+    },
+    {
+      "code": "cd0099",
+      "title": "Fornecedores",
+      "screenId": "ciw.fornecedores",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.0",
+      "permissions": {
+        "read": true,
+        "create": false,
+        "edit": false,
+        "delete": false,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "geral",
+          "title": "Geral"
+        }
+      ]
+    },
+    {
+      "code": "cd0100",
+      "title": "Fornecedores estrangeiros",
+      "screenId": "ciw.fornecedores-estrangeiros",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.0",
+      "permissions": {
+        "read": true,
+        "create": false,
+        "edit": false,
+        "delete": false,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "geral",
+          "title": "Geral"
+        }
+      ]
+    },
+    {
+      "code": "cd0101",
+      "title": "Itens ERP",
+      "screenId": "ciw.itens-erp",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.0",
+      "permissions": {
+        "read": true,
+        "create": false,
+        "edit": false,
+        "delete": false,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "geral",
+          "title": "Geral"
+        }
+      ]
+    },
+    {
+      "code": "cd0102",
+      "title": "Representantes ativos",
+      "screenId": "ciw.representantes-ativos",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.0",
+      "permissions": {
+        "read": true,
+        "create": false,
+        "edit": false,
+        "delete": false,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "geral",
+          "title": "Geral"
+        }
+      ]
+    },
+    {
+      "code": "cd0103",
+      "title": "Cotações Banco Central",
+      "screenId": "ciw.cotacoes-bc",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.1",
+      "permissions": {
+        "read": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "geral",
+          "title": "Geral"
+        }
+      ]
+    },
+    {
+      "code": "cd0104",
+      "title": "Buscar cotação no Banco Central",
+      "screenId": "ciw.cotacoes-bc-buscar",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.0",
+      "permissions": {
+        "read": true,
+        "process": true
+      },
+      "tabs": []
+    },
+    {
+      "code": "cd0105",
+      "title": "Notas Fiscais de Importação — MED",
+      "screenId": "ciw.notas-fiscais-med",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.0",
+      "permissions": {
+        "read": true,
+        "create": false,
+        "edit": false,
+        "delete": false,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "geral",
+          "title": "Geral"
+        }
+      ]
+    },
+    {
+      "code": "cd0106",
+      "title": "Títulos a Pagar — MED",
+      "screenId": "ciw.titulos-pagar-med",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.0",
+      "permissions": {
+        "read": true,
+        "create": false,
+        "edit": false,
+        "delete": false,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "geral",
+          "title": "Geral"
+        }
+      ]
+    },
+    {
+      "code": "cd0107",
+      "title": "Processos de Compra — Financeiro MED",
+      "screenId": "ciw.processos-compra-financeiro-med",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.0",
+      "permissions": {
+        "read": true,
+        "create": false,
+        "edit": false,
+        "delete": false,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "geral",
+          "title": "Geral"
+        }
+      ]
+    },
+    {
+      "code": "cd0108",
+      "title": "Processos de Compra — MED",
+      "screenId": "ciw.processos-compra-med",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.2",
+      "permissions": {
+        "read": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "principal",
+          "title": "Principal"
+        },
+        {
+          "id": "observacao",
+          "title": "Observação"
+        },
+        {
+          "id": "itens",
+          "title": "Itens",
+          "type": "linkedPage"
+        },
+        {
+          "id": "pagamentos",
+          "title": "Pagamentos",
+          "type": "linkedPage"
+        }
+      ]
+    },
+    {
+      "code": "op1000",
+      "title": "Containers",
+      "screenId": "ciw.containers",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.2",
+      "permissions": {
+        "read": true,
+        "create": false,
+        "edit": false,
+        "delete": false,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "geral",
+          "title": "Geral"
+        }
+      ]
+    },
+    {
+      "code": "op1001",
+      "title": "Painel do Container",
+      "screenId": "ciw.container-painel",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.7",
+      "permissions": {
+        "read": true,
+        "create": false,
+        "edit": true,
+        "delete": true,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "dados",
+          "title": "Dados"
+        },
+        {
+          "id": "resumo",
+          "title": "Resumo",
+          "type": "linkedPage"
+        },
+        {
+          "id": "itens",
+          "title": "Itens / Alocação",
+          "type": "linkedPage"
+        },
+        {
+          "id": "custos_itens",
+          "title": "Custos dos Itens",
+          "type": "linkedPage"
+        },
+        {
+          "id": "despesas",
+          "title": "Despesas",
+          "type": "linkedPage"
+        },
+        {
+          "id": "anexos",
+          "title": "Anexos",
+          "type": "linkedPage"
+        },
+        {
+          "id": "versoes",
+          "title": "Versões Custo",
+          "type": "linkedPage"
+        },
+        {
+          "id": "pagamentos",
+          "title": "Pagamentos",
+          "type": "linkedPage"
+        },
+        {
+          "id": "nfs",
+          "title": "Notas Fiscais",
+          "type": "linkedPage"
+        },
+        {
+          "id": "comparativos",
+          "title": "Comparativos de Custo",
+          "type": "linkedPage"
+        },
+        {
+          "id": "rastro_dolar",
+          "title": "Rastro do Dólar Médio",
+          "type": "linkedPage"
+        },
+        {
+          "id": "gerar_versao",
+          "title": "Gerar Versão de Custo",
+          "type": "linkedPage"
+        },
+        {
+          "id": "fechar_custos",
+          "title": "Fechar Custos",
+          "type": "linkedPage"
+        },
+        {
+          "id": "sincronizar_impostos",
+          "title": "Sincronizar Impostos",
+          "type": "linkedPage"
+        }
+      ]
+    },
+    {
+      "code": "op1002",
+      "title": "Itens do Container",
+      "screenId": "ciw.container-itens",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.1",
+      "permissions": {
+        "read": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "geral",
+          "title": "Geral"
+        }
+      ]
+    },
+    {
+      "code": "op1003",
+      "title": "Despesas do Container",
+      "screenId": "ciw.container-despesas",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.1",
+      "permissions": {
+        "read": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "geral",
+          "title": "Geral"
+        }
+      ]
+    },
+    {
+      "code": "op1004",
+      "title": "Anexos do Container",
+      "screenId": "ciw.container-anexos",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.0",
+      "permissions": {
+        "read": true,
+        "create": false,
+        "edit": false,
+        "delete": false,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "geral",
+          "title": "Geral"
+        }
+      ]
+    },
+    {
+      "code": "op1005",
+      "title": "Versões de Custo do Container",
+      "screenId": "ciw.container-versoes-custo",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.0",
+      "permissions": {
+        "read": true,
+        "create": false,
+        "edit": false,
+        "delete": false,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "geral",
+          "title": "Geral"
+        }
+      ]
+    },
+    {
+      "code": "op1006",
+      "title": "Pagamentos do Container",
+      "screenId": "ciw.container-pagamentos",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.2",
+      "permissions": {
+        "read": true,
+        "create": true,
+        "edit": false,
+        "delete": true,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "geral",
+          "title": "Geral"
+        }
+      ]
+    },
+    {
+      "code": "op1007",
+      "title": "Notas Fiscais do Container",
+      "screenId": "ciw.container-nfs",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.1",
+      "permissions": {
+        "read": true,
+        "create": false,
+        "edit": false,
+        "delete": false,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "geral",
+          "title": "Geral"
+        }
+      ]
+    },
+    {
+      "code": "op1008",
+      "title": "Custos dos Itens",
+      "screenId": "ciw.container-custos-itens",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.0",
+      "permissions": {
+        "read": true,
+        "create": false,
+        "edit": false,
+        "delete": false,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "geral",
+          "title": "Geral"
+        }
+      ]
+    },
+    {
+      "code": "op1009",
+      "title": "Resumo do Container",
+      "screenId": "ciw.container-resumo",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.0",
+      "permissions": {
+        "read": true,
+        "create": false,
+        "edit": false,
+        "delete": false,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "geral",
+          "title": "Geral"
+        }
+      ]
+    },
+    {
+      "code": "op1010",
+      "title": "Comparativos de Custo",
+      "screenId": "ciw.container-comparativos",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.0",
+      "permissions": {
+        "read": true,
+        "create": false,
+        "edit": false,
+        "delete": false,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "geral",
+          "title": "Geral"
+        }
+      ]
+    },
+    {
+      "code": "op1011",
+      "title": "Rastro do Dólar Médio",
+      "screenId": "ciw.container-rastro-dolar",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.0",
+      "permissions": {
+        "read": true,
+        "create": false,
+        "edit": false,
+        "delete": false,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "geral",
+          "title": "Geral"
+        }
+      ]
+    },
+    {
+      "code": "op1013",
+      "title": "Pagamentos do Processo de Compra — MED",
+      "screenId": "ciw.proc-compra-pagamentos",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.1",
+      "permissions": {
+        "read": true,
+        "create": true,
+        "edit": false,
+        "delete": true,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "geral",
+          "title": "Geral"
+        }
+      ]
+    },
+    {
+      "code": "op1014",
+      "title": "Itens do Processo de Compra — MED",
+      "screenId": "ciw.proc-compra-itens",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.2",
+      "permissions": {
+        "read": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "principal",
+          "title": "Principal"
+        },
+        {
+          "id": "especificacoes",
+          "title": "Especificações"
+        },
+        {
+          "id": "prazos",
+          "title": "Prazos e amostras"
+        },
+        {
+          "id": "avaliacao",
+          "title": "Avaliação"
+        },
+        {
+          "id": "observacao",
+          "title": "Observações"
+        },
+        {
+          "id": "envios_amostras",
+          "title": "Envios de amostras",
+          "type": "linkedPage"
+        },
+        {
+          "id": "anexos",
+          "title": "Anexos",
+          "type": "linkedPage"
+        }
+      ]
+    },
+    {
+      "code": "op1015",
+      "title": "Gerar Versão de Custo",
+      "screenId": "ciw.container-gerar-versao",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.0",
+      "permissions": {
+        "read": true,
+        "process": true
+      },
+      "tabs": []
+    },
+    {
+      "code": "op1016",
+      "title": "Fechar Custos do Container",
+      "screenId": "ciw.container-fechar-custos",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.0",
+      "permissions": {
+        "read": true,
+        "process": true
+      },
+      "tabs": []
+    },
+    {
+      "code": "op1017",
+      "title": "Sincronizar Impostos do Container",
+      "screenId": "ciw.container-sincronizar-impostos",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.0",
+      "permissions": {
+        "read": true,
+        "process": true
+      },
+      "tabs": []
+    },
+    {
+      "code": "op1018",
+      "title": "Envios de Amostras dos Itens — MED",
+      "screenId": "ciw.proc-compra-amostras",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.0",
+      "permissions": {
+        "read": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "principal",
+          "title": "Envio de amostra"
+        }
+      ]
+    },
+    {
+      "code": "op1019",
+      "title": "Anexos dos Itens — MED",
+      "screenId": "ciw.proc-compra-anexos",
+      "runtimeHttpStatus": 200,
+      "version": "1.0.0",
+      "permissions": {
+        "read": true,
+        "create": true,
+        "edit": true,
+        "delete": true,
+        "saveLayout": true
+      },
+      "tabs": [
+        {
+          "id": "principal",
+          "title": "Anexo do item"
+        }
+      ]
+    }
+  ]
+}

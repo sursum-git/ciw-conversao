@@ -1,0 +1,1098 @@
+{
+  "date": "2026-10-28",
+  "kind": "source-review-and-reconciliation-only",
+  "productBehaviorImplemented": false,
+  "sourceHashesVerified": [
+    {
+      "path": "sources/scriptcase/purchase-pending/cons_procs_compra/cons_procs_compra.php",
+      "sha256": "3453b4b48bacb4741bdadfeec568537829aae42412294fa3ec5274949ac42519",
+      "remoteSha256": "3453b4b48bacb4741bdadfeec568537829aae42412294fa3ec5274949ac42519",
+      "manifest": "integration-src/ciw-inventory/purchase-pending-source-manifest.json",
+      "sensitiveLiteralsOmitted": 0
+    },
+    {
+      "path": "sources/scriptcase/purchase-pending/cons_procs_compra/cons_procs_compra_grid.class.php",
+      "sha256": "124739c9a82ddc224b3288fb8aa122a58da6ab981ff818faf691485a4f1f1ce2",
+      "remoteSha256": "de235118b8eaa593649c57f8dfc9ea5b631b7a7cfc74b5e1b77a26c3a4b71288",
+      "manifest": "integration-src/ciw-inventory/purchase-pending-source-manifest.json",
+      "sensitiveLiteralsOmitted": 8
+    },
+    {
+      "path": "sources/scriptcase/purchase-pending/cons_procs_compra/index.php",
+      "sha256": "9cf828ad50801770b3f58be4796581bb8ae95c09aa35aba6db42a16f56f6fffa",
+      "remoteSha256": "05596604b44af4ee389bb6b0c1ec28a6802874a743b35467b09b30c0de6d9512",
+      "manifest": "integration-src/ciw-inventory/purchase-pending-source-manifest.json",
+      "sensitiveLiteralsOmitted": 9
+    },
+    {
+      "path": "sources/scriptcase/purchase-pending/ctrl_envios_repres_amostra/ctrl_envios_repres_amostra.php",
+      "sha256": "a0be97baed27f2e3870a48dfedc2fb9935a9d991b1da879ac4b2a99546bf302d",
+      "remoteSha256": "a0be97baed27f2e3870a48dfedc2fb9935a9d991b1da879ac4b2a99546bf302d",
+      "manifest": "integration-src/ciw-inventory/purchase-pending-source-manifest.json",
+      "sensitiveLiteralsOmitted": 0
+    },
+    {
+      "path": "sources/scriptcase/purchase-pending/ctrl_envios_repres_amostra/ctrl_envios_repres_amostra_apl.php",
+      "sha256": "7874ee9752d11e213965aaceeb4b43085e9d03b27e75997adf8f6603cd293192",
+      "remoteSha256": "d34142a3d990390fabe79bc7b85cc506dc2a30e28e83c1b23a91f6166f182123",
+      "manifest": "integration-src/ciw-inventory/purchase-pending-source-manifest.json",
+      "sensitiveLiteralsOmitted": 2
+    },
+    {
+      "path": "sources/scriptcase/purchase-pending/ctrl_envios_repres_amostra/ctrl_envios_repres_amostra_form0.php",
+      "sha256": "752d4dcb7153bd0412b172e80f982c379a88ef38323c82f03e98a02fcd00d6cc",
+      "remoteSha256": "7256e4bb4a2ed31b6986b16d3d6cb8e9d12c8f4f6d5518009f44731a18a59371",
+      "manifest": "integration-src/ciw-inventory/purchase-pending-source-manifest.json",
+      "sensitiveLiteralsOmitted": 0
+    },
+    {
+      "path": "sources/scriptcase/purchase-pending/ctrl_envios_repres_amostra/index.php",
+      "sha256": "557c6a3e0a0c55231423efdef0a34103dc41b4aa6af5e26edebe27574d5bc220",
+      "remoteSha256": "3b4953085cbcf1a7794d6d74913903266d02ed4e36dcbd86c0e87f844a699340",
+      "manifest": "integration-src/ciw-inventory/purchase-pending-source-manifest.json",
+      "sensitiveLiteralsOmitted": 2
+    },
+    {
+      "path": "sources/scriptcase/purchase-pending/cons_representante_ativos/cons_representante_ativos.php",
+      "sha256": "c569be07fe36e04bdfa4142c222dd745afc0ee30c5eaac1f9a1508bef4a27576",
+      "remoteSha256": "c569be07fe36e04bdfa4142c222dd745afc0ee30c5eaac1f9a1508bef4a27576",
+      "manifest": "integration-src/ciw-inventory/purchase-batch-samples-source-manifest.json",
+      "sensitiveLiteralsOmitted": 0
+    },
+    {
+      "path": "sources/scriptcase/purchase-pending/cons_representante_ativos/cons_representante_ativos_grid.class.php",
+      "sha256": "d8f91c89fa6f5b0ea30f42c5a6a89ab99e357b535fbcb2155123d2318609f2d5",
+      "remoteSha256": "e8a9810730714eb41e906d553bf5ae62c8436a731f586499de4836cfd60687ef",
+      "manifest": "integration-src/ciw-inventory/purchase-batch-samples-source-manifest.json",
+      "sensitiveLiteralsOmitted": 2
+    },
+    {
+      "path": "sources/scriptcase/purchase-pending/cons_representante_ativos/cons_representante_ativos_lookup.class.php",
+      "sha256": "a36dcea06c14ec28fb38baf0087a78a3d220d357fdadfb3c52407b7329101ca8",
+      "remoteSha256": "a36dcea06c14ec28fb38baf0087a78a3d220d357fdadfb3c52407b7329101ca8",
+      "manifest": "integration-src/ciw-inventory/purchase-batch-samples-source-manifest.json",
+      "sensitiveLiteralsOmitted": 0
+    },
+    {
+      "path": "sources/scriptcase/purchase-pending/cons_representante_ativos/index.php",
+      "sha256": "49f1699fffa424f2a5367c6855cfef8a514eb9714ce0187055711103bddaebef",
+      "remoteSha256": "6dbac80f5432fc7134594d8d8cb5fa75f5f7c532dcca5c0c3f0415051c684def",
+      "manifest": "integration-src/ciw-inventory/purchase-batch-samples-source-manifest.json",
+      "sensitiveLiteralsOmitted": 7
+    },
+    {
+      "path": "sources/scriptcase/purchase-pending/ctrl_envios_repres_amostra/ctrl_envios_repres_amostra.php",
+      "sha256": "a0be97baed27f2e3870a48dfedc2fb9935a9d991b1da879ac4b2a99546bf302d",
+      "remoteSha256": "a0be97baed27f2e3870a48dfedc2fb9935a9d991b1da879ac4b2a99546bf302d",
+      "manifest": "integration-src/ciw-inventory/purchase-batch-samples-source-manifest.json",
+      "sensitiveLiteralsOmitted": 0
+    },
+    {
+      "path": "sources/scriptcase/purchase-pending/ctrl_envios_repres_amostra/ctrl_envios_repres_amostra_apl.php",
+      "sha256": "7874ee9752d11e213965aaceeb4b43085e9d03b27e75997adf8f6603cd293192",
+      "remoteSha256": "d34142a3d990390fabe79bc7b85cc506dc2a30e28e83c1b23a91f6166f182123",
+      "manifest": "integration-src/ciw-inventory/purchase-batch-samples-source-manifest.json",
+      "sensitiveLiteralsOmitted": 2
+    },
+    {
+      "path": "sources/scriptcase/purchase-pending/ctrl_envios_repres_amostra/ctrl_envios_repres_amostra_form0.php",
+      "sha256": "752d4dcb7153bd0412b172e80f982c379a88ef38323c82f03e98a02fcd00d6cc",
+      "remoteSha256": "7256e4bb4a2ed31b6986b16d3d6cb8e9d12c8f4f6d5518009f44731a18a59371",
+      "manifest": "integration-src/ciw-inventory/purchase-batch-samples-source-manifest.json",
+      "sensitiveLiteralsOmitted": 0
+    },
+    {
+      "path": "sources/scriptcase/purchase-pending/ctrl_envios_repres_amostra/index.php",
+      "sha256": "557c6a3e0a0c55231423efdef0a34103dc41b4aa6af5e26edebe27574d5bc220",
+      "remoteSha256": "3b4953085cbcf1a7794d6d74913903266d02ed4e36dcbd86c0e87f844a699340",
+      "manifest": "integration-src/ciw-inventory/purchase-batch-samples-source-manifest.json",
+      "sensitiveLiteralsOmitted": 2
+    },
+    {
+      "path": "sources/scriptcase/purchase-payment-bridges-20261028/bl_selecao_pagto_proc_compra/bl_selecao_pagto_proc_compra.php",
+      "sha256": "7b59cba61318c4604545e432c83b43df9a37d78a2b29c5d6934dc45eaa35fb38",
+      "remoteSha256": "7b59cba61318c4604545e432c83b43df9a37d78a2b29c5d6934dc45eaa35fb38",
+      "manifest": "integration-src/ciw-inventory/purchase-payment-bridges-20261028-source-manifest.json",
+      "sensitiveLiteralsOmitted": 0
+    },
+    {
+      "path": "sources/scriptcase/purchase-payment-bridges-20261028/bl_selecao_pagto_proc_compra/index.php",
+      "sha256": "6f6eb8ce26e3f493bd7eb59945a3b17af2918befbafa7e250da6458c546a0c34",
+      "remoteSha256": "2b4901e4adc9869ff2e6f397d7bdc13aa9d58a6f5afdb7bfe996eca177d8b132",
+      "manifest": "integration-src/ciw-inventory/purchase-payment-bridges-20261028-source-manifest.json",
+      "sensitiveLiteralsOmitted": 16
+    },
+    {
+      "path": "sources/scriptcase/purchase-payment-bridges-20261028/bl_selecionado_pagto_proc_compra/bl_selecionado_pagto_proc_compra.php",
+      "sha256": "84c5ff68c231c17607c03196e825e13c54dceec8110130051c03effc4979280e",
+      "remoteSha256": "84c5ff68c231c17607c03196e825e13c54dceec8110130051c03effc4979280e",
+      "manifest": "integration-src/ciw-inventory/purchase-payment-bridges-20261028-source-manifest.json",
+      "sensitiveLiteralsOmitted": 0
+    },
+    {
+      "path": "sources/scriptcase/purchase-payment-bridges-20261028/bl_selecionado_pagto_proc_compra/index.php",
+      "sha256": "4d2631139ddce64b6643e3ca7cbef46b8e10b70d03ad0964a0e7a527516e62ad",
+      "remoteSha256": "13bfda9d39f03c8c5a6a5cf42398521f94efe3f53a36a496fe8b01f92b01d161",
+      "manifest": "integration-src/ciw-inventory/purchase-payment-bridges-20261028-source-manifest.json",
+      "sensitiveLiteralsOmitted": 16
+    }
+  ],
+  "canonicalReadOnlyReferences": [
+    {
+      "path": "D:/opencode/construtor-pg/integrations/ciw-referencias/representantes_ativos-builder-draft.json",
+      "sha256": "88037cfe7bfd9491ec85524e212be797f2dc775c6d37eccf3e4f3081dd1f9ab9",
+      "action": "read-only reference; no patch"
+    },
+    {
+      "path": "D:/opencode/construtor-pg/integrations/ciw-purchase-quantities/processos-compra-med-builder-draft.json",
+      "sha256": "d1c83a65285a48bdd7bd89a11165c3bcd0bca4a137629ccae7bc52d0b080a747",
+      "action": "read-only reference; no patch"
+    },
+    {
+      "path": "D:/opencode/construtor-pg/integrations/ciw-purchase-orders/api-source-additions.json",
+      "sha256": "d5ce8fbdaf0bceb1bc0d3ba90a66ff7a08871fbe3d1b856576546584c290f57f",
+      "action": "read-only reference; no patch"
+    },
+    {
+      "path": "D:/opencode/motor-progress/v2/sursum-api/programs/PurchaseSamplesApi.p",
+      "sha256": "042a095fd20c33baa2d0e5faa55b6536d0088ef984475d9ac8c04af898d0a6bf",
+      "action": "read-only reference; no patch"
+    },
+    {
+      "path": "D:/opencode/motor-progress/v2/sursum-api/programs/PurchaseSamplesService.p",
+      "sha256": "1956ac93cd14d48a25dddc8dd4489b90f903f1a4d41b349ad19c5068d791d4e6",
+      "action": "read-only reference; no patch"
+    },
+    {
+      "path": "D:/opencode/motor-progress/v2/sursum-api/programs/PurchaseOrdersService.p",
+      "sha256": "4b71a936d569cfe4085ff5b3a67fcf392166e6f93770015f418fecd50e244e1f",
+      "action": "read-only reference; no patch"
+    },
+    {
+      "path": "D:/opencode/motor-progress/v2/sursum-api/programs/PurchasePaymentsService.p",
+      "sha256": "72e7d1a503e5f4d5ae4ee8d3d5afa7ce7fd1574a7df5469d1f45991fcbedde7f",
+      "action": "read-only reference; no patch"
+    },
+    {
+      "path": "D:/opencode/construtor-pg/integrations/ciw-purchase-payments/proc-compra-pagamentos-builder-draft.json",
+      "sha256": "61a76d09d0cdd3bc21ecda90721fdb8d32a9b5932a53aa5f88d507bf6f598ff4",
+      "action": "read-only reference; no patch"
+    }
+  ],
+  "findings": [
+    {
+      "id": "controller-session-only",
+      "source": "sources/scriptcase/purchase-pending/ctrl_envios_repres_amostra/ctrl_envios_repres_amostra_apl.php",
+      "lines": [
+        1757,
+        1764
+      ],
+      "input": "dt_envio",
+      "sessionKey": "data_envio_corrente",
+      "nextApplication": "cons_representante_ativos",
+      "writerFound": false,
+      "requiredDate": true,
+      "legacyMaximum": "today"
+    },
+    {
+      "id": "empty-representative-selection",
+      "source": "sources/scriptcase/purchase-pending/cons_representante_ativos/index.php",
+      "lines": [
+        4424,
+        4522
+      ],
+      "emptyEventBlocks": 2,
+      "writesFound": false,
+      "orderSelectionFound": false,
+      "confidence": "direct source inspection; manifests verify analysis copies"
+    },
+    {
+      "id": "different-representative-catalogs",
+      "legacy": "EMS5 PUB.representante/cdn_repres/dat_desligto IS NULL",
+      "contextualWriter": "ems2cad.repres/cod-rep/ind-situacao=1",
+      "automaticCodeMappingProved": false,
+      "existingReadOnlyScreen": "ciw.representantes-ativos/cd0102/1.0.0"
+    },
+    {
+      "id": "general-orders-no-write-no-selection",
+      "table": "pub.procs_compra",
+      "originalWhere": "",
+      "fields": [
+        "proc_compra_id",
+        "empresa_id",
+        "dt_registro",
+        "fornecedor_id",
+        "cod_proc_fornec",
+        "dt_limite",
+        "cod_situacao"
+      ],
+      "allSevenFieldsInExistingMedParent": true,
+      "allCompaniesParityProved": false,
+      "requiredBusinessContext": [],
+      "cataloguedInboundApplication": "cons_cta_corren_fornec_imp_entregue",
+      "inboundScope": "supplier current account; outside scope"
+    },
+    {
+      "id": "allocation-already-completed",
+      "applications": [
+        "control_selec_proc_compra",
+        "grid_itens_proc_compra_selecao"
+      ],
+      "existingScreen": "ciw.container-alocar-itens/op1025/1.0.0",
+      "evidence": "integration-src/ciw-inventory/container-allocation-validation.json",
+      "state": "COMPLETED_CLEANED",
+      "reapply": false
+    },
+    {
+      "id": "order-form-variant",
+      "application": "form_proc_compra",
+      "caller": "cons_proc_compra_sinaliz",
+      "callerOperation": "update only with proc_compra_id",
+      "sourceFieldsCoveredByExistingMedParent": true,
+      "exactBehaviorEquivalence": false,
+      "dangerousDeletePredicate": "DELETE FROM PUB.itens_proc_compra WHERE item_proc_compra_id = proc_compra_id",
+      "supplierHelperBuildsSqlWithoutExecution": true,
+      "proposedDisposition": "reconcile MED navigation to existing parent; do not copy cascade or assert full equivalence"
+    },
+    {
+      "id": "payment-bridges-reviewed",
+      "applications": [
+        "bl_selecao_pagto_proc_compra",
+        "bl_selecionado_pagto_proc_compra"
+      ],
+      "localSanitizedSourceFiles": 4,
+      "sourceAbsenceResolved": true,
+      "existingMedFlow": "ciw.proc-compra-pagamentos/op1013/1.0.1",
+      "bridgeProofs": [
+        {
+          "application": "bl_selecao_pagto_proc_compra",
+          "path": "sources/scriptcase/purchase-payment-bridges-20261028/bl_selecao_pagto_proc_compra/index.php",
+          "directBusinessWriteInvoked": false,
+          "membership": " num_id_tit_ap not in ($listaIdTitulos) ",
+          "destination": "cons_tit_ap",
+          "filterHelper": "preencherCondPgtoProcCompra",
+          "titleIdsHelper": "buscarTitAssociadosProcCompra",
+          "processFromLegacySession": "proc_compra_id_corrente",
+          "safeExistingReplacement": "ciw.proc-compra-pagamentos/op1013/1.0.1",
+          "scope": "MED navigation absorbed; not unrestricted multi-company or row-for-row legacy SQL parity"
+        },
+        {
+          "application": "bl_selecionado_pagto_proc_compra",
+          "path": "sources/scriptcase/purchase-payment-bridges-20261028/bl_selecionado_pagto_proc_compra/index.php",
+          "directBusinessWriteInvoked": false,
+          "membership": " num_id_tit_ap in ($listaIdTitulos) ",
+          "destination": "cons_tit_ap",
+          "filterHelper": "preencherCondPgtoProcCompra",
+          "titleIdsHelper": "buscarTitAssociadosProcCompra",
+          "processFromLegacySession": "proc_compra_id_corrente",
+          "safeExistingReplacement": "ciw.proc-compra-pagamentos/op1013/1.0.1",
+          "scope": "MED navigation absorbed; not unrestricted multi-company or row-for-row legacy SQL parity"
+        }
+      ],
+      "legacyFilters": [
+        "title IDs IN/NOT IN current process links",
+        "supplier from session",
+        "EMS5 company from session",
+        "emission date >= process registration date"
+      ],
+      "currentSafeContract": [
+        "mandatory real MED parent context",
+        "server derives supplier/company/date",
+        "available excludes any already-owned title globally",
+        "linked reads preserve actual links; no destructive legacy SQL copied",
+        "existing writer handles locks/concurrency/root rollback/native user and before-after logs"
+      ],
+      "exactRowForRowOrMultiCompanyParity": false,
+      "legacyZeroSentinel": "empty list uses0; not a real process/title ID or identity provider",
+      "arbitraryDebugIdsNotPorted": true
+    }
+  ],
+  "excerpts": [
+    {
+      "path": "sources/scriptcase/purchase-pending/ctrl_envios_repres_amostra/ctrl_envios_repres_amostra_apl.php",
+      "sha256": "7874ee9752d11e213965aaceeb4b43085e9d03b27e75997adf8f6603cd293192",
+      "start": 1757,
+      "end": 1764,
+      "lines": [
+        {
+          "line": 1757,
+          "text": "if (!isset($this->sc_temp_data_envio_corrente)) {$this->sc_temp_data_envio_corrente = (isset($_SESSION['data_envio_corrente'])) ? $_SESSION['data_envio_corrente'] : \"\";}"
+        },
+        {
+          "line": 1758,
+          "text": " $data_envio_corrente = $this->dt_envio ;"
+        },
+        {
+          "line": 1759,
+          "text": " if (isset($data_envio_corrente)) {$this->sc_temp_data_envio_corrente = $data_envio_corrente;}"
+        },
+        {
+          "line": 1760,
+          "text": ";"
+        },
+        {
+          "line": 1761,
+          "text": " if (isset($this->sc_temp_data_envio_corrente)) { $_SESSION['data_envio_corrente'] = $this->sc_temp_data_envio_corrente;}"
+        },
+        {
+          "line": 1762,
+          "text": " if (!isset($this->Campos_Mens_erro) || empty($this->Campos_Mens_erro))"
+        },
+        {
+          "line": 1763,
+          "text": " {"
+        },
+        {
+          "line": 1764,
+          "text": "$this->nmgp_redireciona_form($this->Ini->path_link . \"\" . SC_dir_app_name('cons_representante_ativos') . \"/\", $this->nm_location, \"\", \"_self\", \"ret_self\", 440, 630);"
+        }
+      ]
+    },
+    {
+      "path": "sources/scriptcase/purchase-pending/ctrl_envios_repres_amostra/ctrl_envios_repres_amostra_apl.php",
+      "sha256": "7874ee9752d11e213965aaceeb4b43085e9d03b27e75997adf8f6603cd293192",
+      "start": 2508,
+      "end": 2508,
+      "lines": [
+        {
+          "line": 2508,
+          "text": "    $this->dt_envio_Dt_max = date('Ymd'); "
+        }
+      ]
+    },
+    {
+      "path": "sources/scriptcase/purchase-pending/cons_representante_ativos/index.php",
+      "sha256": "49f1699fffa424f2a5367c6855cfef8a514eb9714ce0187055711103bddaebef",
+      "start": 4472,
+      "end": 4494,
+      "lines": [
+        {
+          "line": 4472,
+          "text": " "
+        },
+        {
+          "line": 4473,
+          "text": "$_SESSION['scriptcase']['cons_representante_ativos']['contr_erro'] = 'off'; "
+        },
+        {
+          "line": 4474,
+          "text": "    }  "
+        },
+        {
+          "line": 4475,
+          "text": "    $_SESSION['scriptcase']['cons_representante_ativos']['contr_erro'] = 'on';"
+        },
+        {
+          "line": 4476,
+          "text": " "
+        },
+        {
+          "line": 4477,
+          "text": "$_SESSION['scriptcase']['cons_representante_ativos']['contr_erro'] = 'off'; "
+        },
+        {
+          "line": 4478,
+          "text": "}  "
+        },
+        {
+          "line": 4479,
+          "text": "    $this->NM_buffer = ob_get_contents();"
+        },
+        {
+          "line": 4480,
+          "text": "    if (!empty($this->NM_buffer))"
+        },
+        {
+          "line": 4481,
+          "text": "    {"
+        },
+        {
+          "line": 4482,
+          "text": "        ob_end_flush();"
+        },
+        {
+          "line": 4483,
+          "text": "    }"
+        },
+        {
+          "line": 4484,
+          "text": "?>"
+        },
+        {
+          "line": 4485,
+          "text": "      </td></tr><tr><td align=\"center\">"
+        },
+        {
+          "line": 4486,
+          "text": "      <form name=\"F4\" method=\"post\" "
+        },
+        {
+          "line": 4487,
+          "text": "                        action=\"<?php echo $nm_f_saida ?>\" "
+        },
+        {
+          "line": 4488,
+          "text": "                        target=\"_self\">"
+        },
+        {
+          "line": 4489,
+          "text": "      <input type=hidden name=\"nmgp_opcao\" value=\"volta_grid\"/>"
+        },
+        {
+          "line": 4490,
+          "text": "      <input type=hidden name=\"script_case_init\" value=\"<?php echo NM_encode_input($this->Ini->sc_page);?>\"/>"
+        },
+        {
+          "line": 4491,
+          "text": "<?php"
+        },
+        {
+          "line": 4492,
+          "text": "    if (!empty($this->NM_buffer))"
+        },
+        {
+          "line": 4493,
+          "text": "    {"
+        },
+        {
+          "line": 4494,
+          "text": "        echo \"<input type=submit name=\\\"nmgp_bok\\\" value=\\\"\" . $this->Ini->Nm_lang['lang_btns_cfrm'] . \"\\\"/>\";"
+        }
+      ]
+    },
+    {
+      "path": "sources/scriptcase/purchase-pending/cons_representante_ativos/cons_representante_ativos_grid.class.php",
+      "sha256": "d8f91c89fa6f5b0ea30f42c5a6a89ab99e357b535fbcb2155123d2318609f2d5",
+      "start": 878,
+      "end": 878,
+      "lines": [
+        {
+          "line": 878,
+          "text": "       $nmgp_select = \"SELECT distinct cdn_repres, nom_pessoa, nom_abrev from \" . $this->Ini->nm_tabela; "
+        }
+      ]
+    },
+    {
+      "path": "sources/scriptcase/purchase-pending/cons_representante_ativos/index.php",
+      "sha256": "49f1699fffa424f2a5367c6855cfef8a514eb9714ce0187055711103bddaebef",
+      "start": 1188,
+      "end": 1188,
+      "lines": [
+        {
+          "line": 1188,
+          "text": "          $this->nm_tabela = \"PUB.representante\"; "
+        }
+      ]
+    },
+    {
+      "path": "sources/scriptcase/purchase-pending/cons_representante_ativos/index.php",
+      "sha256": "49f1699fffa424f2a5367c6855cfef8a514eb9714ce0187055711103bddaebef",
+      "start": 3673,
+      "end": 3673,
+      "lines": [
+        {
+          "line": 3673,
+          "text": "         $_SESSION['sc_session'][$this->Ini->sc_page]['cons_representante_ativos']['where_orig'] = \" where (dat_desligto is null)\";"
+        }
+      ]
+    },
+    {
+      "path": "sources/scriptcase/purchase-pending/cons_procs_compra/cons_procs_compra_grid.class.php",
+      "sha256": "124739c9a82ddc224b3288fb8aa122a58da6ab981ff818faf691485a4f1f1ce2",
+      "start": 999,
+      "end": 999,
+      "lines": [
+        {
+          "line": 999,
+          "text": "       $nmgp_select = \"SELECT proc_compra_id, empresa_id, dt_registro, fornecedor_id, cod_proc_fornec, dt_limite, cod_situacao from \" . $this->Ini->nm_tabela; "
+        }
+      ]
+    },
+    {
+      "path": "sources/scriptcase/purchase-pending/cons_procs_compra/index.php",
+      "sha256": "9cf828ad50801770b3f58be4796581bb8ae95c09aa35aba6db42a16f56f6fffa",
+      "start": 3862,
+      "end": 3864,
+      "lines": [
+        {
+          "line": 3862,
+          "text": "         $_SESSION['sc_session'][$this->Ini->sc_page]['cons_procs_compra']['where_orig'] = \"\";"
+        },
+        {
+          "line": 3863,
+          "text": "         $_SESSION['sc_session'][$this->Ini->sc_page]['cons_procs_compra']['where_pesq']        = $_SESSION['sc_session'][$this->Ini->sc_page]['cons_procs_compra']['where_orig'];  "
+        },
+        {
+          "line": 3864,
+          "text": "         $_SESSION['sc_session'][$this->Ini->sc_page]['cons_procs_compra']['where_pesq_ant']    = $_SESSION['sc_session'][$this->Ini->sc_page]['cons_procs_compra']['where_orig'];  "
+        }
+      ]
+    },
+    {
+      "path": "sources/scriptcase/purchases/form_proc_compra/form_proc_compra_apl.php",
+      "sha256": "bc44a0c7e157dfcdf8f6df5b66459094e199a88cdf525f8be97018a5970a3d61",
+      "start": 5965,
+      "end": 5981,
+      "lines": [
+        {
+          "line": 5965,
+          "text": "function alterarFornecItensPed($pedido,$fornec)"
+        },
+        {
+          "line": 5966,
+          "text": "{"
+        },
+        {
+          "line": 5967,
+          "text": "$_SESSION['scriptcase']['form_proc_compra']['contr_erro'] = 'on';"
+        },
+        {
+          "line": 5968,
+          "text": "  "
+        },
+        {
+          "line": 5969,
+          "text": "    $aItens =  $this->getIDItensProcCompra($pedido);"
+        },
+        {
+          "line": 5970,
+          "text": "    if(is_array($aItens)){"
+        },
+        {
+          "line": 5971,
+          "text": "        $tam = count($aItens);"
+        },
+        {
+          "line": 5972,
+          "text": "        for($i=0;$i< $tam; $i++){"
+        },
+        {
+          "line": 5973,
+          "text": "            $itemProcCompra = $aItens[$i]['item_proc_compra_id'];"
+        },
+        {
+          "line": 5974,
+          "text": "            $cmd = \"update pub.cta_corren_fornec_imp set fornecedor_id = $fornec "
+        },
+        {
+          "line": 5975,
+          "text": "            where item_proc_compra_id = $itemProcCompra \";"
+        },
+        {
+          "line": 5976,
+          "text": "        }"
+        },
+        {
+          "line": 5977,
+          "text": "    }"
+        },
+        {
+          "line": 5978,
+          "text": ""
+        },
+        {
+          "line": 5979,
+          "text": "$_SESSION['scriptcase']['form_proc_compra']['contr_erro'] = 'off';"
+        },
+        {
+          "line": 5980,
+          "text": "}"
+        },
+        {
+          "line": 5981,
+          "text": "function verifTitPedImp($numIdTitulo)"
+        }
+      ]
+    },
+    {
+      "path": "sources/scriptcase/purchases/form_proc_compra/form_proc_compra_apl.php",
+      "sha256": "bc44a0c7e157dfcdf8f6df5b66459094e199a88cdf525f8be97018a5970a3d61",
+      "start": 4091,
+      "end": 4095,
+      "lines": [
+        {
+          "line": 4091,
+          "text": "              /* PUB.itens_proc_compra */"
+        },
+        {
+          "line": 4092,
+          "text": "      if (in_array(strtolower($this->Ini->nm_tpbanco), $this->Ini->nm_bases_access))"
+        },
+        {
+          "line": 4093,
+          "text": "      {"
+        },
+        {
+          "line": 4094,
+          "text": "          $sc_cmd_dependency = \"DELETE FROM PUB.itens_proc_compra WHERE item_proc_compra_id = \" . $this->proc_compra_id ;"
+        },
+        {
+          "line": 4095,
+          "text": "      }"
+        }
+      ]
+    },
+    {
+      "path": "sources/scriptcase/purchase-signals/cons_proc_compra_sinaliz/cons_proc_compra_sinaliz_grid.class.php",
+      "sha256": "aec4fb8879d140ad6c7ae10ec739bb14c84e523b3ce0f372a7f38572249d4018",
+      "start": 4064,
+      "end": 4067,
+      "lines": [
+        {
+          "line": 4064,
+          "text": "              if (isset($this->Ini->sc_lig_md5[\"form_proc_compra\"]) && $this->Ini->sc_lig_md5[\"form_proc_compra\"] == \"S\")"
+        },
+        {
+          "line": 4065,
+          "text": "              {"
+        },
+        {
+          "line": 4066,
+          "text": "                  $Parms_Edt  = \"proc_compra_id*scin\" . str_replace('\"', \"@aspasd@\", $this->proc_compra_id) . \"*scoutNM_btn_insert*scinN*scoutNM_btn_update*scinS*scoutNM_btn_delete*scinN*scoutNM_btn_navega*scinN*scoutnmgp_opcao*scinigual*scout\";"
+        },
+        {
+          "line": 4067,
+          "text": "                  if ($_SESSION['sc_session'][$this->Ini->sc_page]['cons_proc_compra_sinaliz']['dashboard_info']['under_dashboard'] && isset($linkTarget))"
+        }
+      ]
+    },
+    {
+      "path": "sources/scriptcase/purchase-payment-bridges-20261028/bl_selecao_pagto_proc_compra/index.php",
+      "sha256": "6f6eb8ce26e3f493bd7eb59945a3b17af2918befbafa7e250da6458c546a0c34",
+      "start": 5113,
+      "end": 5143,
+      "lines": [
+        {
+          "line": 5113,
+          "text": "if (!isset($_SESSION['escopo_pagto'])) {$_SESSION['escopo_pagto'] = \"\";}"
+        },
+        {
+          "line": 5114,
+          "text": "if (!isset($this->sc_temp_escopo_pagto)) {$this->sc_temp_escopo_pagto = (isset($_SESSION['escopo_pagto'])) ? $_SESSION['escopo_pagto'] : \"\";}"
+        },
+        {
+          "line": 5115,
+          "text": "  $this->sc_temp_acao_pagto_proc_compra = '';"
+        },
+        {
+          "line": 5116,
+          "text": " unset($_SESSION['condicao_cons_tit_ap']);"
+        },
+        {
+          "line": 5117,
+          "text": " unset($this->sc_temp_condicao_cons_tit_ap);"
+        },
+        {
+          "line": 5118,
+          "text": " unset($_SESSION['escopo_pagto']);"
+        },
+        {
+          "line": 5119,
+          "text": " unset($this->sc_temp_escopo_pagto);"
+        },
+        {
+          "line": 5120,
+          "text": ";"
+        },
+        {
+          "line": 5121,
+          "text": "$listaIdTitulos = $this->buscarTitAssociadosProcCompra($this->sc_temp_proc_compra_id_corrente);"
+        },
+        {
+          "line": 5122,
+          "text": "if($listaIdTitulos == ''){"
+        },
+        {
+          "line": 5123,
+          "text": "   $listaIdTitulos = 0;\t"
+        },
+        {
+          "line": 5124,
+          "text": "}"
+        },
+        {
+          "line": 5125,
+          "text": "$escopo_pagto = \"proc_compra\";"
+        },
+        {
+          "line": 5126,
+          "text": " if (isset($escopo_pagto)) {$this->sc_temp_escopo_pagto = $escopo_pagto;}"
+        },
+        {
+          "line": 5127,
+          "text": ";"
+        },
+        {
+          "line": 5128,
+          "text": ""
+        },
+        {
+          "line": 5129,
+          "text": "$condicao_cons_tit_ap = \" num_id_tit_ap not in ($listaIdTitulos) \";"
+        },
+        {
+          "line": 5130,
+          "text": "$condicao_cons_tit_ap = $this->preencherCondPgtoProcCompra($condicao_cons_tit_ap);"
+        },
+        {
+          "line": 5131,
+          "text": ""
+        },
+        {
+          "line": 5132,
+          "text": ""
+        },
+        {
+          "line": 5133,
+          "text": " if (isset($condicao_cons_tit_ap)) {$this->sc_temp_condicao_cons_tit_ap = $condicao_cons_tit_ap;}"
+        },
+        {
+          "line": 5134,
+          "text": ";"
+        },
+        {
+          "line": 5135,
+          "text": ""
+        },
+        {
+          "line": 5136,
+          "text": ""
+        },
+        {
+          "line": 5137,
+          "text": " if (isset($this->sc_temp_escopo_pagto)) {$_SESSION['escopo_pagto'] = $this->sc_temp_escopo_pagto;}"
+        },
+        {
+          "line": 5138,
+          "text": " if (isset($this->sc_temp_condicao_cons_tit_ap)) {$_SESSION['condicao_cons_tit_ap'] = $this->sc_temp_condicao_cons_tit_ap;}"
+        },
+        {
+          "line": 5139,
+          "text": " if (isset($this->sc_temp_acao_pagto_proc_compra)) {$_SESSION['acao_pagto_proc_compra'] = $this->sc_temp_acao_pagto_proc_compra;}"
+        },
+        {
+          "line": 5140,
+          "text": " if (isset($this->sc_temp_proc_compra_id_corrente)) {$_SESSION['proc_compra_id_corrente'] = $this->sc_temp_proc_compra_id_corrente;}"
+        },
+        {
+          "line": 5141,
+          "text": " if (!isset($this->Campos_Mens_erro) || empty($this->Campos_Mens_erro))"
+        },
+        {
+          "line": 5142,
+          "text": " {"
+        },
+        {
+          "line": 5143,
+          "text": "$this->nmgp_redireciona_form($this->Ini->path_link . \"\" . SC_dir_app_name('cons_tit_ap') . \"/\", $this->nm_location, \"\",\"_self\", 440, 630, \"ret_self\");"
+        }
+      ]
+    },
+    {
+      "path": "sources/scriptcase/purchase-payment-bridges-20261028/bl_selecionado_pagto_proc_compra/index.php",
+      "sha256": "4d2631139ddce64b6643e3ca7cbef46b8e10b70d03ad0964a0e7a527516e62ad",
+      "start": 5113,
+      "end": 5140,
+      "lines": [
+        {
+          "line": 5113,
+          "text": "if (!isset($_SESSION['escopo_pagto'])) {$_SESSION['escopo_pagto'] = \"\";}"
+        },
+        {
+          "line": 5114,
+          "text": "if (!isset($this->sc_temp_escopo_pagto)) {$this->sc_temp_escopo_pagto = (isset($_SESSION['escopo_pagto'])) ? $_SESSION['escopo_pagto'] : \"\";}"
+        },
+        {
+          "line": 5115,
+          "text": "  $this->sc_temp_acao_pagto_proc_compra = 'associar';"
+        },
+        {
+          "line": 5116,
+          "text": " unset($_SESSION['condicao_cons_tit_ap']);"
+        },
+        {
+          "line": 5117,
+          "text": " unset($this->sc_temp_condicao_cons_tit_ap);"
+        },
+        {
+          "line": 5118,
+          "text": " unset($_SESSION['escopo_pagto']);"
+        },
+        {
+          "line": 5119,
+          "text": " unset($this->sc_temp_escopo_pagto);"
+        },
+        {
+          "line": 5120,
+          "text": ";"
+        },
+        {
+          "line": 5121,
+          "text": "$listaIdTitulos = $this->buscarTitAssociadosProcCompra($this->sc_temp_proc_compra_id_corrente);"
+        },
+        {
+          "line": 5122,
+          "text": "if($listaIdTitulos == ''){"
+        },
+        {
+          "line": 5123,
+          "text": "   $listaIdTitulos = 0;\t"
+        },
+        {
+          "line": 5124,
+          "text": "}"
+        },
+        {
+          "line": 5125,
+          "text": "$escopo_pagto = \"proc_compra\";"
+        },
+        {
+          "line": 5126,
+          "text": " if (isset($escopo_pagto)) {$this->sc_temp_escopo_pagto = $escopo_pagto;}"
+        },
+        {
+          "line": 5127,
+          "text": ";"
+        },
+        {
+          "line": 5128,
+          "text": ""
+        },
+        {
+          "line": 5129,
+          "text": "$condicao_cons_tit_ap = \" num_id_tit_ap in ($listaIdTitulos) \";"
+        },
+        {
+          "line": 5130,
+          "text": "$condicao_cons_tit_ap = $this->preencherCondPgtoProcCompra($condicao_cons_tit_ap);"
+        },
+        {
+          "line": 5131,
+          "text": ""
+        },
+        {
+          "line": 5132,
+          "text": " if (isset($condicao_cons_tit_ap)) {$this->sc_temp_condicao_cons_tit_ap = $condicao_cons_tit_ap;}"
+        },
+        {
+          "line": 5133,
+          "text": ";"
+        },
+        {
+          "line": 5134,
+          "text": " if (isset($this->sc_temp_escopo_pagto)) {$_SESSION['escopo_pagto'] = $this->sc_temp_escopo_pagto;}"
+        },
+        {
+          "line": 5135,
+          "text": " if (isset($this->sc_temp_condicao_cons_tit_ap)) {$_SESSION['condicao_cons_tit_ap'] = $this->sc_temp_condicao_cons_tit_ap;}"
+        },
+        {
+          "line": 5136,
+          "text": " if (isset($this->sc_temp_acao_pagto_proc_compra)) {$_SESSION['acao_pagto_proc_compra'] = $this->sc_temp_acao_pagto_proc_compra;}"
+        },
+        {
+          "line": 5137,
+          "text": " if (isset($this->sc_temp_proc_compra_id_corrente)) {$_SESSION['proc_compra_id_corrente'] = $this->sc_temp_proc_compra_id_corrente;}"
+        },
+        {
+          "line": 5138,
+          "text": " if (!isset($this->Campos_Mens_erro) || empty($this->Campos_Mens_erro))"
+        },
+        {
+          "line": 5139,
+          "text": " {"
+        },
+        {
+          "line": 5140,
+          "text": "$this->nmgp_redireciona_form($this->Ini->path_link . \"\" . SC_dir_app_name('cons_tit_ap') . \"/\", $this->nm_location, \"\",\"_self\", 440, 630, \"ret_self\");"
+        }
+      ]
+    },
+    {
+      "path": "sources/scriptcase/purchase-payment-bridges-20261028/bl_selecao_pagto_proc_compra/index.php",
+      "sha256": "6f6eb8ce26e3f493bd7eb59945a3b17af2918befbafa7e250da6458c546a0c34",
+      "start": 5456,
+      "end": 5475,
+      "lines": [
+        {
+          "line": 5456,
+          "text": "function buscarTitAssociadosProcCompra($procCompraIdParam)"
+        },
+        {
+          "line": 5457,
+          "text": "{"
+        },
+        {
+          "line": 5458,
+          "text": "$_SESSION['scriptcase']['bl_selecao_pagto_proc_compra']['contr_erro'] = 'on';"
+        },
+        {
+          "line": 5459,
+          "text": "  "
+        },
+        {
+          "line": 5460,
+          "text": "    $listaIdTitulos = '';"
+        },
+        {
+          "line": 5461,
+          "text": "    $aRetorno = $this->retornoMultReg('pub.pagtos_proc_compra','num_id_tit_ap',"
+        },
+        {
+          "line": 5462,
+          "text": "        \" proc_compra_id = $procCompraIdParam \",\"espec\" );"
+        },
+        {
+          "line": 5463,
+          "text": "    if(is_array($aRetorno)){"
+        },
+        {
+          "line": 5464,
+          "text": "        for($i =0;$i < count($aRetorno);$i++){"
+        },
+        {
+          "line": 5465,
+          "text": "            if($listaIdTitulos == ''){"
+        },
+        {
+          "line": 5466,
+          "text": "                $listaIdTitulos = $aRetorno[$i]['num_id_tit_ap'];"
+        },
+        {
+          "line": 5467,
+          "text": "            }"
+        },
+        {
+          "line": 5468,
+          "text": "            else{"
+        },
+        {
+          "line": 5469,
+          "text": "                $listaIdTitulos .= ','.$aRetorno[$i]['num_id_tit_ap'];"
+        },
+        {
+          "line": 5470,
+          "text": "            }"
+        },
+        {
+          "line": 5471,
+          "text": "        }"
+        },
+        {
+          "line": 5472,
+          "text": "    }"
+        },
+        {
+          "line": 5473,
+          "text": "    return $listaIdTitulos;"
+        },
+        {
+          "line": 5474,
+          "text": ""
+        },
+        {
+          "line": 5475,
+          "text": "$_SESSION['scriptcase']['bl_selecao_pagto_proc_compra']['contr_erro'] = 'off';"
+        }
+      ]
+    },
+    {
+      "path": "sources/scriptcase/purchase-payment-bridges-20261028/bl_selecao_pagto_proc_compra/index.php",
+      "sha256": "6f6eb8ce26e3f493bd7eb59945a3b17af2918befbafa7e250da6458c546a0c34",
+      "start": 5530,
+      "end": 5548,
+      "lines": [
+        {
+          "line": 5530,
+          "text": ""
+        },
+        {
+          "line": 5531,
+          "text": "    if($this->sc_temp_fornecedor_proc_compra_corrente != ''){"
+        },
+        {
+          "line": 5532,
+          "text": "        if($condicaoTitAP != '') \t  $operador = \" and \";"
+        },
+        {
+          "line": 5533,
+          "text": "        else $operador = \" \";"
+        },
+        {
+          "line": 5534,
+          "text": "        $condicaoTitAP .=  $operador.\" cdn_fornecedor =\". $this->sc_temp_fornecedor_proc_compra_corrente;"
+        },
+        {
+          "line": 5535,
+          "text": "    }"
+        },
+        {
+          "line": 5536,
+          "text": ""
+        },
+        {
+          "line": 5537,
+          "text": "    if($this->sc_temp_empresa_proc_compra_corrente_ems5 != ''){"
+        },
+        {
+          "line": 5538,
+          "text": "        if($condicaoTitAP != '') \t  $operador = \" and \";"
+        },
+        {
+          "line": 5539,
+          "text": "        else $operador = \" \";"
+        },
+        {
+          "line": 5540,
+          "text": "        $condicaoTitAP .=  $operador.\"  cod_empresa =\". $this->sc_temp_empresa_proc_compra_corrente_ems5;"
+        },
+        {
+          "line": 5541,
+          "text": ""
+        },
+        {
+          "line": 5542,
+          "text": "    }"
+        },
+        {
+          "line": 5543,
+          "text": "    if($this->sc_temp_dt_reg_proc_compra_corrente != ''){"
+        },
+        {
+          "line": 5544,
+          "text": "        if($condicaoTitAP != '') $operador = \" and \";"
+        },
+        {
+          "line": 5545,
+          "text": "        else $operador = \" \";"
+        },
+        {
+          "line": 5546,
+          "text": "        $condicaoTitAP .=  $operador.\"   dat_emis_docto >= '\".$this->sc_temp_dt_reg_proc_compra_corrente.\"'\" ;"
+        },
+        {
+          "line": 5547,
+          "text": "    }"
+        },
+        {
+          "line": 5548,
+          "text": "    return $condicaoTitAP;"
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "localSourceReview": true,
+    "hashVerification": true,
+    "metadataFieldComparison": true,
+    "legacyPhpExecuted": false,
+    "productTestsAdded": false,
+    "official122Compile": "not applicable; no executable changed",
+    "pasoeCurrentValidation": false,
+    "historicalEvidenceOnly": true,
+    "businessWrites": 0,
+    "ddlWrites": 0,
+    "grants": 0,
+    "canonicalMutations": 0
+  }
+}

@@ -1,0 +1,1162 @@
+{
+  "database": "ems5",
+  "table": "tit_ap",
+  "fields": [
+    {
+      "name": "cod_empresa",
+      "type": "character",
+      "format": "x(3)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_estab",
+      "type": "character",
+      "format": "x(5)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_espec_docto",
+      "type": "character",
+      "format": "x(3)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_ser_docto",
+      "type": "character",
+      "format": "x(3)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cdn_fornecedor",
+      "type": "integer",
+      "format": ">>>,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_tit_ap",
+      "type": "character",
+      "format": "x(10)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_parcela",
+      "type": "character",
+      "format": "x(02)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "num_fatur_ap",
+      "type": "integer",
+      "format": ">>>,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "ind_origin_tit_ap",
+      "type": "character",
+      "format": "X(03)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": "can-do(\"PED,REC,EXP,APB,ACR,EEC\", tit_ap.ind_origin_tit_ap)",
+      "triggers": [
+      ]
+    },
+    {
+      "name": "ind_sit_tit_ap",
+      "type": "character",
+      "format": "X(13)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": "can-do(\"Liberado,Pendente CQ,Suspenso,Devolvido,Antecipado,Antecipado CQ\", tit_ap.ind_sit_tit_ap)",
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_pagto_bloqdo",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_sdo_tit_ap",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "yes",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_tit_ap_estordo",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_portador",
+      "type": "character",
+      "format": "x(5)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dat_transacao",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": "today",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dat_emis_docto",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": "today",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dat_vencto_tit_ap",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": "today",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dat_desconto",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dat_prev_pagto",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": "today",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dat_ult_pagto",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dat_ult_apurac_variac_val",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": "today",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dat_liquidac_tit_ap",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": "12\/31\/9999",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "num_dias_atraso",
+      "type": "integer",
+      "format": ">9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val_perc_juros_dia_atraso",
+      "type": "decimal",
+      "format": ">9.999999",
+      "decimals": 6,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val_juros_dia_atraso",
+      "type": "decimal",
+      "format": "->>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val_perc_multa_atraso",
+      "type": "decimal",
+      "format": ">9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val_perc_desc",
+      "type": "decimal",
+      "format": ">9.9999",
+      "decimals": 4,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val_desconto",
+      "type": "decimal",
+      "format": "->>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_apol_seguro",
+      "type": "character",
+      "format": "x(12)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_seguradora",
+      "type": "character",
+      "format": "x(8)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_arrendador",
+      "type": "character",
+      "format": "x(6)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_contrat_leas",
+      "type": "character",
+      "format": "x(12)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "num_pessoa",
+      "type": "integer",
+      "format": ">>>,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_calc_fasb",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_calc_cmcac",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_indic_econ",
+      "type": "character",
+      "format": "x(8)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val_origin_tit_ap",
+      "type": "decimal",
+      "format": "->>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val_juros",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val_multa_tit_ap",
+      "type": "decimal",
+      "format": "->>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val_ajust_val_tit_ap",
+      "type": "decimal",
+      "format": "->>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val_cm_tit_ap",
+      "type": "decimal",
+      "format": "->>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val_pagto_tit_ap",
+      "type": "decimal",
+      "format": "->>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val_desc_tit_ap",
+      "type": "decimal",
+      "format": "->>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val_abat_tit_ap",
+      "type": "decimal",
+      "format": "->>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val_transf_estab",
+      "type": "decimal",
+      "format": "->>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val_saida_subst_nf_dupl",
+      "type": "decimal",
+      "format": "->>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val_entr_transf_estab",
+      "type": "decimal",
+      "format": "->>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val_sdo_tit_ap",
+      "type": "decimal",
+      "format": "->>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "num_id_tit_ap",
+      "type": "integer",
+      "format": "999999999",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_refer",
+      "type": "character",
+      "format": "x(10)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "ind_tip_espec_docto",
+      "type": "character",
+      "format": "X(17)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": "can-do(\"Nenhum,Normal,Antecipação,Previsão,Provisão,Cheques Recebidos,Imposto Retido,Imposto Taxado,Material Recebido,Nota de Crédito,Nota de Débito,Nota Fiscal,Aviso Débito,Nota Promissória\", tit_ap.ind_tip_espec_docto)",
+      "triggers": [
+      ]
+    },
+    {
+      "name": "num_id_movto_tit_ap_ult",
+      "type": "integer",
+      "format": ">>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_forma_pagto",
+      "type": "character",
+      "format": "x(3)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "num_seq_refer",
+      "type": "integer",
+      "format": ">>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "num_id_movto_cta_corren",
+      "type": "integer",
+      "format": "999999999",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_tit_ap_bco",
+      "type": "character",
+      "format": "x(20)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_pagto_cartcred",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cb4_tit_ap_bco_cobdor",
+      "type": "character",
+      "format": "x(50)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_grp_fornec",
+      "type": "character",
+      "format": "x(4)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_sist_nac_bcio_cobdor",
+      "type": "character",
+      "format": "x(8)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_tit_ap_bco_cobdor",
+      "type": "character",
+      "format": "x(20)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_livre_1",
+      "type": "character",
+      "format": "x(100)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_integr_cfl_atlzdo",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_concil",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_proces_import",
+      "type": "character",
+      "format": "x(12)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_livre_2",
+      "type": "character",
+      "format": "x(100)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dat_livre_1",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dat_livre_2",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_livre_1",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_livre_2",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "num_livre_1",
+      "type": "integer",
+      "format": ">>>>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "num_livre_2",
+      "type": "integer",
+      "format": ">>>>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val_livre_1",
+      "type": "decimal",
+      "format": ">>>,>>>,>>9.9999",
+      "decimals": 4,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val_livre_2",
+      "type": "decimal",
+      "format": ">>>,>>>,>>9.9999",
+      "decimals": 4,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_estab_embarq",
+      "type": "character",
+      "format": "x(5)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_embarq",
+      "type": "character",
+      "format": "x(16)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_safra",
+      "type": "character",
+      "format": "9999\/9999",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_contrat_graos",
+      "type": "character",
+      "format": "x(20)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    }
+  ],
+  "indexes": [
+    {
+      "name": "titap_dat_desconto",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod_estab",
+        "dat_liquidac_tit_ap",
+        "cod_espec_docto",
+        "dat_desconto"
+      ]
+    },
+    {
+      "name": "titap_dat_prev_pagto",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod_estab",
+        "dat_liquidac_tit_ap",
+        "cod_espec_docto",
+        "dat_prev_pagto"
+      ]
+    },
+    {
+      "name": "titap_emis",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod_estab",
+        "dat_emis_docto"
+      ]
+    },
+    {
+      "name": "titap_estab_fornec_liquidac",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod_estab",
+        "cdn_fornecedor",
+        "dat_liquidac_tit_ap",
+        "dat_transacao"
+      ]
+    },
+    {
+      "name": "titap_estab_liq_espec_trans",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod_estab",
+        "dat_liquidac_tit_ap",
+        "cod_espec_docto",
+        "dat_transacao"
+      ]
+    },
+    {
+      "name": "titap_estab_trans_espec",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod_estab",
+        "dat_transacao",
+        "cod_espec_docto"
+      ]
+    },
+    {
+      "name": "titap_fornec_emis",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod_estab",
+        "cdn_fornecedor",
+        "dat_emis_docto",
+        "cod_espec_docto"
+      ]
+    },
+    {
+      "name": "titap_fornec_financ",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod_empresa",
+        "cdn_fornecedor",
+        "dat_prev_pagto"
+      ]
+    },
+    {
+      "name": "titap_id",
+      "unique": true,
+      "primary": true,
+      "fields": [
+        "cod_estab",
+        "cdn_fornecedor",
+        "cod_espec_docto",
+        "cod_ser_docto",
+        "cod_tit_ap",
+        "cod_parcela"
+      ]
+    },
+    {
+      "name": "titap_id_movto_cta_corren",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "num_id_movto_cta_corren"
+      ]
+    },
+    {
+      "name": "titap_log_integr_clf",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod_estab",
+        "cod_espec_docto",
+        "log_integr_cfl_atlzdo",
+        "dat_prev_pagto"
+      ]
+    },
+    {
+      "name": "titap_pessoa",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "num_pessoa",
+        "cod_espec_docto",
+        "cod_ser_docto",
+        "cod_tit_ap",
+        "cod_parcela"
+      ]
+    },
+    {
+      "name": "titap_portador_cod_bco_pagto",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod_portador",
+        "cod_tit_ap_bco"
+      ]
+    },
+    {
+      "name": "titap_proces_import",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod_proces_import"
+      ]
+    },
+    {
+      "name": "titap_safra",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cdn_fornecedor",
+        "ind_tip_espec_docto"
+      ]
+    },
+    {
+      "name": "titap_sdo_tit_ap",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod_estab",
+        "cod_espec_docto",
+        "log_sdo_tit_ap",
+        "cdn_fornecedor"
+      ]
+    },
+    {
+      "name": "titap_sist_bcio_cod_bco_cobr",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod_sist_nac_bcio_cobdor",
+        "cod_tit_ap_bco_cobdor"
+      ]
+    },
+    {
+      "name": "titap_tip_espec_pessoa_trans",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod_estab",
+        "ind_tip_espec_docto",
+        "num_pessoa",
+        "dat_transacao"
+      ]
+    },
+    {
+      "name": "titap_titulo",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod_estab",
+        "cod_tit_ap",
+        "cod_parcela"
+      ]
+    },
+    {
+      "name": "titap_token",
+      "unique": true,
+      "primary": false,
+      "fields": [
+        "cod_estab",
+        "num_id_tit_ap"
+      ]
+    }
+  ],
+  "triggers": [
+    {
+      "event": "create",
+      "procedure": "database\/tgfin\/tcp\/tcfin271.p"
+    },
+    {
+      "event": "delete",
+      "procedure": "database\/tgfin\/tdp\/tdfin271.p"
+    },
+    {
+      "event": "write",
+      "procedure": "database\/tgfin\/twp\/twfin271.p"
+    }
+  ]
+}

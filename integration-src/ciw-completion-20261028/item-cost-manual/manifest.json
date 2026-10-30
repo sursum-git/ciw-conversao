@@ -1,0 +1,258 @@
+{
+  "package": "item-cost-manual",
+  "version": "1",
+  "program": "op1051",
+  "entity": "item_custos_manual_progress",
+  "screen": "ciw.item-custos-manuais",
+  "status": "candidate-ready-readonly-partial-origin",
+  "originStatus": "form_item_custos_manual and form_item_custos remain Partial; query gives access to global type1 subset of cons_item_custos",
+  "writerEnabled": false,
+  "businessExecuted": false,
+  "canonicalFilesChanged": false,
+  "testCommand": "powershell -NoProfile -ExecutionPolicy Bypass -File integration-src/ciw-completion-20261028/item-cost-manual/tests/verify-all.ps1",
+  "verificationPath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/item-cost-manual/verification-v1.json",
+  "verificationSha256": "26510a4ec97c73ce51433ed968a2fe716c2664af3d906409e8a2bd1385f35f0b",
+  "localEvidence": {
+    "success": true,
+    "businessExecuted": false,
+    "canonicalFilesChanged": false,
+    "official122Compiled": false,
+    "numDbs": 0,
+    "ablChecksPerCombination": 80,
+    "ablNewChecks": 24,
+    "ablExistingReaderChecks": 47,
+    "ablExistingPurchaseChecks": 9,
+    "combinations": 4,
+    "codepages": [
+      "UTF-8",
+      "ISO8859-1"
+    ],
+    "cultures": [
+      "AMERICAN",
+      "EUROPEAN"
+    ],
+    "phpTests": 31,
+    "phpAssertions": 147,
+    "nativeSchemaChecks": 32,
+    "nativeBrowserChecks": 13,
+    "wiringChecks": 31,
+    "logs": [
+      {
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/item-cost-manual/abl-final.log",
+        "sha256": "393180327eaeee3298e005e2184f71009df2d104fb3e2f06d2096e972681e7af"
+      },
+      {
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/item-cost-manual/phpunit-final.log",
+        "sha256": "85923934ded5ed1b2747e5739af4e06cb19dcaf1b3caa39a08a2bc13d7e20c74"
+      },
+      {
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/item-cost-manual/builder-final.log",
+        "sha256": "5e9db7bd0072f642bd98abed7d5046b08784a4e8cbe8420ca807e2c0af88bee2"
+      },
+      {
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/item-cost-manual/verify-wiring.py.log",
+        "sha256": "5575e81f452466e0fa4969ba53095b12ac9e69da4a017520ae54092421170e30"
+      },
+      {
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/item-cost-manual/native-final.log",
+        "sha256": "ad83da0e699308b75d065a284422ada06b5b18a584d5715e29251ce3f0804fe3"
+      },
+      {
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/item-cost-manual/browser-final.log",
+        "sha256": "c2267f882a2fa3fd699df4d9c4d85a5d34c5868e3c43d85f8c2dc36a037e3176"
+      },
+      {
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/item-cost-manual/suite-complete.log",
+        "sha256": "50b41a9be1ea2152defa3532e00a6ae8d4c00d0720a35f83ea5bd52fa45c66ca"
+      }
+    ]
+  },
+  "sharedBaselines": [
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwErpReadService.p",
+      "baselineSha256": "8d7d6da8069bdee82e5c4c95fca3df643e918ae10b96ef22d8a77459ac7bd3cc",
+      "candidateRuntimePath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/item-cost-manual/local/sursum-api/programs/CiwErpReadService.p",
+      "candidateSha256": "7f649c465a49eac8b183fa1019389de9b5625bd75f06b29c8b86c2176311532d",
+      "patchPlan": "patches/patch-plan.json"
+    },
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwCadastrosCrud.p",
+      "baselineSha256": "62cc9bdd4dc11b316f2c541e33ce09fb1506f7013b751dcdc1e75ffdf767c330",
+      "candidateRuntimePath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/item-cost-manual/local/sursum-api/programs/CiwCadastrosCrud.p",
+      "candidateSha256": "ba5df3c00d86ce9a68158c0e8f358b09b167b5e57dac2c3b1dc8d0484e437492",
+      "patchPlan": "patches/patch-plan.json"
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeCiwErpQuery.php",
+      "baselineSha256": "4b772859b435de0b0eaac360bf581400f8df771b8eeb7af037f43f53d659b0a9",
+      "candidateRuntimePath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/item-cost-manual/local/php/RuntimeCiwErpQuery.php",
+      "candidateSha256": "dbe9bc46ba817996f4a811c2e14325db652bfbc3a847b0f3c6a5a4f0d9ff6e84",
+      "patchPlan": "patches/patch-plan.json"
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeApiEntityActionService.php",
+      "baselineSha256": "6f52ddca37b15b3494989b71b6f7ac05ce3b73c31d4562db62a61edd48ed51ff",
+      "candidateRuntimePath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/item-cost-manual/local/php/RuntimeApiEntityActionService.php",
+      "candidateSha256": "9bb374b7c317ce70c7bb39bce2bf15e7448b04521905ebb7dfb7c64ffec23774",
+      "patchPlan": "patches/patch-plan.json"
+    }
+  ],
+  "officialPredecessor": {
+    "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/official-build7/canonical-manifest.json",
+    "sha256": "f37042f8ef9fc6def93896a350f315ec70ea7532edd5842c47180e7a1a2f9212",
+    "wave": 7,
+    "allFourBaselinesMatchIntegratedManifest": true,
+    "oldResourcesPreservedByExactAdditiveHunks": true
+  },
+  "newSources": [
+    {
+      "source": "php/RuntimeItemCostManualRead.php",
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeItemCostManualRead.php"
+    },
+    {
+      "source": "php/RuntimeItemCostManualSchema.php",
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeItemCostManualSchema.php"
+    }
+  ],
+  "metadataStatus": {
+    "preparedOnly": true,
+    "sourcePreview": "132 existing operations preserved plus read/get; compose alongside other pending additions against live snapshot, never replace auth",
+    "parentLink": "none; global query has no invented container context",
+    "sourceAddition": "metadata/source-addition.json"
+  },
+  "limits": {
+    "rows": 50000,
+    "milliseconds": 10000,
+    "pageSizeMaximum": 200,
+    "physicalFields": 23,
+    "syntheticIdentity": "record_key",
+    "fixedType": 1,
+    "scope": "global/shared; physical table has no company/container owner",
+    "datetimeFilter": "not offered; datetime values serialized as ISO and preserved",
+    "defaultSort": "item_custo_id desc is a new UI choice, not literal session parity"
+  },
+  "gates": [
+    "root review no P1/P2",
+    "live source append composition and permission/native navigation decisions",
+    "official OpenEdge12.2/.42 compile and TT four combinations; local12.8 is diagnostic only",
+    "root hash-guarded integration/publication and real readonly validation in sursum-api/med",
+    "write rules remain undecided: effective stock/selection defaults, central sequence adoption, scalar-array legacy delete divergence, generic/manual permissions and attachments"
+  ],
+  "forbiddenActionsExecuted": [],
+  "freezesPreserved": [
+    "fiscal readonly v2",
+    "batch1042 v1",
+    "tax-only1043 v1",
+    "selection1047 v1/v1.1"
+  ],
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "3f6d9231def00387a4c15d49da6602af614700b1bb109f4d856c402c022f3638"
+    },
+    {
+      "path": "metadata/api-source-preview.json",
+      "sha256": "efc9a742ffaa57e7ffa07ce43047ebdf81dfffe65836d392b0b4a84d427c2bf9"
+    },
+    {
+      "path": "metadata/builder-draft.json",
+      "sha256": "ca3796eae9e0a3f7167094bbdb2b169d65e73a34c19383f90f63b8921e7761fd"
+    },
+    {
+      "path": "metadata/source-addition.json",
+      "sha256": "171593c907a0d6e83851e3f3fea89d1573d621719e366ee672ac18cab4af0574"
+    },
+    {
+      "path": "patches/CiwCadastrosCrud.p.patch",
+      "sha256": "0a8914f6b3373beb917e65a8a99dc5291722a54f1f2fe02d4bdbba5967b99831"
+    },
+    {
+      "path": "patches/CiwErpReadService.p.patch",
+      "sha256": "3074735e46da725eb76084b2bba0002a79ea670d240a22360dd33bef2bf87d2d"
+    },
+    {
+      "path": "patches/patch-plan.json",
+      "sha256": "a28e92c8851033c5533e1dbe1f5b4937e67f35674e9830bfa8629d7c1f16d1d4"
+    },
+    {
+      "path": "patches/RuntimeApiEntityActionService.php.patch",
+      "sha256": "2a2d0ab6961ad95b2ef9b7a4c455e6d92e8992659d020adcca2047213dfb4ebd"
+    },
+    {
+      "path": "patches/RuntimeCiwErpQuery.php.patch",
+      "sha256": "ca345514094a988cfd375a14a1fbf36473d0a50157482280f310c15889a37d5d"
+    },
+    {
+      "path": "php/RuntimeItemCostManualRead.php",
+      "sha256": "946490ec5c2ebdd22933370a82909c4ca5bbe1cc163b859647e29350d3aa734f"
+    },
+    {
+      "path": "php/RuntimeItemCostManualSchema.php",
+      "sha256": "e9834759baa01b2659f31e68c73c2fe85ed5f30eee670d213b8f74a883d5c5cb"
+    },
+    {
+      "path": "PLAN.md",
+      "sha256": "80ad20504ce5b04d03dd5694f91c2e4723c6d744caf15f18b8b6a01cbdebb619"
+    },
+    {
+      "path": "REVIEW.md",
+      "sha256": "d7786b2e57be85bc8f52e9af68742f24d6d3bc92ce29dfdb990e918e843e77bf"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "0627880ce3eb0f0e5e30281c3a6fd4a1604ea43ac2ecc0c86750230ba3087aba"
+    },
+    {
+      "path": "tests/bootstrap.php",
+      "sha256": "af56f06c7a7b8b44b8c53d566e7fbe9c019f8707669a41d333bc1a80178d0873"
+    },
+    {
+      "path": "tests/browser-readonly.cjs",
+      "sha256": "ca51c1e6e766e0f9f5cd764c33b69ca3043541aac31cc2233db76ee9f44ff318"
+    },
+    {
+      "path": "tests/freeze.py",
+      "sha256": "9680535d6299455f916d088f1eba7376a0880623ae1714a2496a930cb40a767c"
+    },
+    {
+      "path": "tests/ItemCostManualReadTest.p",
+      "sha256": "1ee4801252453c7ff6282e2ed6423d2c9fa760aacddc58046c27341eb51211e3"
+    },
+    {
+      "path": "tests/phpunit.xml",
+      "sha256": "aab8017a5becf4e1b51689b89d0ba15776ef4048ad356970e01ac6080a8faf68"
+    },
+    {
+      "path": "tests/prepare-metadata.py",
+      "sha256": "72027830df7da1ca414c3ebb4914f09b6b1dc2cccb73b878b40c74bb55a0c00f"
+    },
+    {
+      "path": "tests/prepare.py",
+      "sha256": "4d1fd9c1833f6145e4cb32a967509f9d48e12e2176f6c83f3a16ce724dd9520b"
+    },
+    {
+      "path": "tests/preview-native.php",
+      "sha256": "859ea8da8c687405972615fde8e0f68a2776bc42e96519207d3d980373756d97"
+    },
+    {
+      "path": "tests/run-abl.ps1",
+      "sha256": "c3746f43b02d3d61acd56775d181d7838f76e97a92160ff04a0bbc6a47c722c9"
+    },
+    {
+      "path": "tests/RuntimeItemCostManualReadTest.php",
+      "sha256": "c2acb1994d10719cc841d794806105d92b56afba21e6ffd63ca6bdcdb42c5f49"
+    },
+    {
+      "path": "tests/validate-native.cjs",
+      "sha256": "837b8428adb9c891fd95ba697287de5e7bd15c2b66c9d2723c5407e0e35b889c"
+    },
+    {
+      "path": "tests/verify-all.ps1",
+      "sha256": "b38c964421184e096d0658881183c21c5cdd1b36e79027f80aeb534ec1cf35a5"
+    },
+    {
+      "path": "tests/verify-wiring.py",
+      "sha256": "fb31206047420e2c3221f3fa73e438cf674bdfb2b03ec4eab0cf34e19e9f1045"
+    }
+  ]
+}

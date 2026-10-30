@@ -1,0 +1,63 @@
+{
+  "database": "espec",
+  "table": "relacs_desp_calculada",
+  "fields": [
+    {
+      "name": "relac_desp_calculada_id",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "despesa_id",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "despesa_id_base",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    }
+  ],
+  "indexes": [
+    {
+      "name": "ind_relac",
+      "unique": true,
+      "primary": false,
+      "fields": [
+        "despesa_id",
+        "despesa_id_base"
+      ]
+    },
+    {
+      "name": "primario",
+      "unique": false,
+      "primary": true,
+      "fields": [
+        "relac_desp_calculada_id"
+      ]
+    }
+  ],
+  "triggers": [
+  ]
+}

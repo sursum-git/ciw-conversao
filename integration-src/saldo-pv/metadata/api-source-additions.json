@@ -1,0 +1,64 @@
+{
+  "sourceCode": "motor_progress_estoque_termos",
+  "operations": [
+    {
+      "code": "estoque_termos_read",
+      "name": "Correções da pesquisa de estoque — read",
+      "type": "list",
+      "method": "POST",
+      "path": "/SursumPrograms/ciw-cadastros",
+      "bodyTemplate": {
+        "operation": "read",
+        "resource": "estoque_termos"
+      },
+      "itemsPath": "data"
+    },
+    {
+      "code": "estoque_termos_get",
+      "name": "Correções da pesquisa de estoque — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "/SursumPrograms/ciw-cadastros",
+      "bodyTemplate": {
+        "operation": "get",
+        "resource": "estoque_termos"
+      },
+      "itemPath": "data"
+    },
+    {
+      "code": "estoque_termos_create",
+      "name": "Correções da pesquisa de estoque — create",
+      "type": "create",
+      "method": "POST",
+      "path": "/SursumPrograms/ciw-cadastros",
+      "bodyTemplate": {
+        "operation": "create",
+        "resource": "estoque_termos"
+      },
+      "itemPath": "data"
+    },
+    {
+      "code": "estoque_termos_update",
+      "name": "Correções da pesquisa de estoque — update",
+      "type": "update",
+      "method": "POST",
+      "path": "/SursumPrograms/ciw-cadastros",
+      "bodyTemplate": {
+        "operation": "update",
+        "resource": "estoque_termos"
+      },
+      "itemPath": "data"
+    },
+    {
+      "code": "estoque_termos_delete",
+      "name": "Correções da pesquisa de estoque — delete",
+      "type": "delete",
+      "method": "POST",
+      "path": "/SursumPrograms/ciw-cadastros",
+      "bodyTemplate": {
+        "operation": "delete",
+        "resource": "estoque_termos"
+      }
+    }
+  ]
+}

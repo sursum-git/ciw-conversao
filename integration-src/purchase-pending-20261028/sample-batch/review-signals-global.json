@@ -1,0 +1,181 @@
+{
+  "date": "2026-10-28",
+  "reviewer": "samples_executor",
+  "status": "NO_OPEN_P1_P2_IN_REVIEWED_SCOPE",
+  "candidateDirectory": "integration-src/purchase-pending-20261028/signals-global",
+  "openP1P2": [],
+  "closedFindings": [
+    {
+      "id": "SG-P2-01",
+      "title": "Enforce cumulative work budget inside each process collector",
+      "status": "CLOSED",
+      "evidence": "Collector ABI now accepts private piScanBudget/piStarted; global passes50000-scanned and original started, collector checks each item before evaluation, maps limit503 and clears TT; contextual adapter passes50000/ETIME. Existing public contextual signature unchanged."
+    },
+    {
+      "id": "SG-INTEGRATION-01",
+      "title": "Keep budget fix and dependencies in generator/manifest",
+      "status": "CLOSED",
+      "evidence": "extract-collector.cjs now generates private budget ABI and contextual arguments; integration-manifest lists Collector, compatibility adapter, PurchaseSignalsTable include and adapter baseline patch. Manifest artifact hashes and all5canonical baselines match."
+    }
+  ],
+  "reviewedInvariants": [
+    "Rule5 source bl_sinaliz/index.php7863-7883: situacao1, real shipment unknown, inclusive today..today+days; fixed MED establishment prefix5; physical names/types checked in schema-evidence.json.",
+    "Rules1–4 stay solely in PurchaseSignalRules; extracted collector handles all item alerts once per process, no reader pages in global collection.",
+    "Contextual projection same15physicalTTfields plus record_key from unchanged reader branch; public adapter arguments preserved.",
+    "Globaldetailkey includes rule,type,process,item,container. Container/process link counterpart defaultsNULL; native renderer11checks validate link omission/context.",
+    "PHP detailcontext requires exactly sinaliz_imp_id via ApiRequestContext; read assertRows checks every response row; get has existing context assertion and ABL selected-rule filtering.",
+    "Read/get only; clocks, company, SQL, programs fixed server-side. Summary includes all5rules including zero counts. No rules/cost/version formulas duplicated.",
+    "Cumulative50k/10s checked within collector with caller start/budget; failures have no successful partial data. Collector does not recollect paged chunks."
+  ],
+  "verification": {
+    "phpQuery": "33checks independently executed PASS",
+    "nativeMetadataLinks": "11checks independently executed PASS",
+    "phpLint": "patched RuntimeCiwErpQuery and RuntimeApiEntityActionService independently checked PASS",
+    "localAblLogs": [
+      {
+        "path": "local-validation/UTF-8-AMERICAN/global-service.log",
+        "result": "PASS global service checks=55 culture=AMERICAN NUM-DBS=0"
+      },
+      {
+        "path": "local-validation/UTF-8-AMERICAN/container-rule.log",
+        "result": "PASS container rule checks=13 NUM-DBS=0"
+      },
+      {
+        "path": "local-validation/UTF-8-AMERICAN/signals-service-AMERICAN.log",
+        "result": "PASS signals service checks=34 culture=AMERICAN NUM-DBS=0"
+      },
+      {
+        "path": "local-validation/UTF-8-EUROPEAN/global-service.log",
+        "result": "PASS global service checks=55 culture=EUROPEAN NUM-DBS=0"
+      },
+      {
+        "path": "local-validation/UTF-8-EUROPEAN/container-rule.log",
+        "result": "PASS container rule checks=13 NUM-DBS=0"
+      },
+      {
+        "path": "local-validation/UTF-8-EUROPEAN/signals-service-EUROPEAN.log",
+        "result": "PASS signals service checks=34 culture=EUROPEAN NUM-DBS=0"
+      },
+      {
+        "path": "local-validation/ISO8859-1-AMERICAN/global-service.log",
+        "result": "PASS global service checks=55 culture=AMERICAN NUM-DBS=0"
+      },
+      {
+        "path": "local-validation/ISO8859-1-AMERICAN/container-rule.log",
+        "result": "PASS container rule checks=13 NUM-DBS=0"
+      },
+      {
+        "path": "local-validation/ISO8859-1-AMERICAN/signals-service-AMERICAN.log",
+        "result": "PASS signals service checks=34 culture=AMERICAN NUM-DBS=0"
+      },
+      {
+        "path": "local-validation/ISO8859-1-EUROPEAN/global-service.log",
+        "result": "PASS global service checks=55 culture=EUROPEAN NUM-DBS=0"
+      },
+      {
+        "path": "local-validation/ISO8859-1-EUROPEAN/container-rule.log",
+        "result": "PASS container rule checks=13 NUM-DBS=0"
+      },
+      {
+        "path": "local-validation/ISO8859-1-EUROPEAN/signals-service-EUROPEAN.log",
+        "result": "PASS signals service checks=34 culture=EUROPEAN NUM-DBS=0"
+      }
+    ],
+    "localAblExecutionByReviewer": false,
+    "localAblCompiler": "12.8 local logs inspected only; not publication artifacts",
+    "official122": "root compiling/validating; not claimed by reviewer",
+    "pasoe": "root pending",
+    "manifestArtifactHashes": [
+      {
+        "path": "abl/PurchaseSignalContainerRules.p",
+        "sha256": "545156e9efe187bdf691937fb7381b637d47fd85254c6d9ba1b60217172df4f4"
+      },
+      {
+        "path": "abl/PurchaseSignalsCollector.p",
+        "sha256": "168c22a825ae486b3244bd3cc6c69028492b2c1e1ab90edda3d1b560b3122cdb"
+      },
+      {
+        "path": "abl/PurchaseSignalsGlobalApi.p",
+        "sha256": "bd06696450e3ce34073159a4536940b9b2a295485f90a750bae7ea774ba03783"
+      },
+      {
+        "path": "abl/PurchaseSignalsGlobalService.p",
+        "sha256": "7cedfcb36d74d3586c914ccfec933f211599cb05bdaf1b175337bd6e8a15fecb"
+      },
+      {
+        "path": "abl/PurchaseSignalsService.p",
+        "sha256": "1db1293fc45e4d45d2e193d83dbb8a3a905452082ca7ebbf522c41ec2787cd12"
+      },
+      {
+        "path": "includes/PurchaseSignalsTable.i",
+        "sha256": "6cea7c794796806f5a0f184f2f355c8e3c88b26937111b877ba579fe9daa0c90"
+      },
+      {
+        "path": "metadata/alertas-importacao-med-builder-draft.json",
+        "sha256": "78e8253b803625c288357ec3a017f7890ac536578a7b9a1558c2e0b7c1447223"
+      },
+      {
+        "path": "metadata/api-source-additions.json",
+        "sha256": "28b8c74dd8e573baa2dbfc2e0f438d4389492b4d2ddb9d15db3b38af14ca8beb"
+      },
+      {
+        "path": "metadata/sinalizadores-importacao-med-builder-draft.json",
+        "sha256": "7fb30bdb0f6502225859ec4b0b330351fafd000ee4fbac8a649874f850e185fd"
+      },
+      {
+        "path": "tests/CompileAndRun.p",
+        "sha256": "9a0c5940b9e5adbd9b731b7e6d174218a3d2390fdc1e39f3760d5bc07fb24aa7"
+      },
+      {
+        "path": "tests/PurchaseSignalContainerRulesTest.p",
+        "sha256": "83a4143f1cb07930ff64ca92ebed426b293c1ceb2237a4f05c94c52f5cec2d1c"
+      },
+      {
+        "path": "tests/PurchaseSignalsGlobalServiceTest.p",
+        "sha256": "054e9ce1071f780c0aa2573bb46ec47376109f012b1991253d07116c2250a1b6"
+      }
+    ],
+    "canonicalPatchBaselines": [
+      {
+        "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwCadastrosCrud.p",
+        "baselineSHA256": "85bf40bde18b8fa036cc08f61ebe730dcf177fe84fbb4505e6a840d41581cf7f",
+        "matches": true
+      },
+      {
+        "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwErpReadService.p",
+        "baselineSHA256": "acca30907d892181796e40cdc8b41409f7870f5d8c8ed6c3e6bfddb2f7cd30ef",
+        "matches": true
+      },
+      {
+        "target": "D:/opencode/motor-progress/v2/sursum-api/programs/PurchaseSignalsService.p",
+        "baselineSHA256": "f98158cb3ea0a2cb2bd7c954de547861491dff1e632a07a1c4487c3c1cc5bcdc",
+        "matches": true
+      },
+      {
+        "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeApiEntityActionService.php",
+        "baselineSHA256": "a1553414fcee213e3563131a7e12b13ce3b85a9b79b3ffab7b001b6b9c04526f",
+        "matches": true
+      },
+      {
+        "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeCiwErpQuery.php",
+        "baselineSHA256": "315f28cd985d77b92e1126f290e044f7081bc9ee94875b9796c8b223726d4104",
+        "matches": true
+      }
+    ],
+    "schemaEvidence": "signals-global/schema-evidence.json from official dictionary probe; only public field/type subset read"
+  },
+  "mutations": {
+    "candidateChanged": false,
+    "canonicalChanged": false,
+    "remoteCalls": 0,
+    "businessWrites": 0,
+    "ddl": 0,
+    "grants": 0
+  },
+  "notes": [
+    "Rule5 comment cites historical line numbers; current sanitized predicate reviewed at7863-7883.",
+    "Read-only queries keep technical native logs; no fictitious business transaction.",
+    "Coordinator must compose overlapping PHP/dispatcher patches from global/config packages against their baselines.",
+    "Local-stage.r files are test artifacts and must not be published."
+  ]
+}

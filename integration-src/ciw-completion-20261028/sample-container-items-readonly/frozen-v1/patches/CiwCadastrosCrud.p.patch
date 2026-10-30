@@ -1,0 +1,16 @@
+diff --git a/CiwCadastrosCrud.p b/CiwCadastrosCrud.p
+index 2a0ca7e..f1effe1 100644
+--- a/CiwCadastrosCrud.p
++++ b/CiwCadastrosCrud.p
+@@ -51,6 +51,11 @@ DO ON ERROR UNDO, THROW:
+   IF NOT ValidHeader(cActor) OR NOT ValidHeader(cSession) THEN DO: RUN ErrorResponse("CIW_CADASTRO_IDENTITY_REQUIRED",401). RETURN. END.
+  END.
+  CASE cResource:
++  WHEN "item_container_amostra" THEN DO:
++   cService=SEARCH("sursum-api/programs/SampleContainerItemsReadApi.r").
++   IF cService=? THEN UNDO, THROW NEW Progress.Lang.AppError("Consulta de itens de amostra indisponivel.",1).
++   RUN VALUE(cService)(poRequest,OUTPUT poResponse). RETURN.
++  END.
+   WHEN "import_descontos_geral" OR WHEN "import_descontos_lancamentos" THEN DO:
+    cService=SEARCH("sursum-api/programs/ImportDiscountsReadApi.r").
+    IF cService=? THEN UNDO, THROW NEW Progress.Lang.AppError("Consulta de descontos indisponivel.",1).

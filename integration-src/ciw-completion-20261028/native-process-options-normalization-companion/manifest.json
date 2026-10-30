@@ -1,0 +1,153 @@
+{
+  "package": "native-process-options-normalization-companion",
+  "version": "1",
+  "status": "candidate-ready-P1-normalization-fix-review",
+  "requires1047ManifestSha256": "ed0cc7a801afe2e75d086d61a94972f6d6102514595f3a049689989619631dee",
+  "target": "D:/opencode/construtor-pg/backend/src/Builder/ProgramBuilderService.php",
+  "baselineIsFutureComposed8": true,
+  "baselineOrigin": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/official-build8/backend-stage/backend/src/Builder/ProgramBuilderService.php",
+  "baselineSha256": "1cfc3517b513b1e4efb767e58ef1f6487e921ef6b22b11d0cb3733a5abdcf9db",
+  "candidateRuntimePath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/native-process-options-normalization-companion/local/backend/src/Builder/ProgramBuilderService.php",
+  "candidateSha256": "72c6dafbfa0e93196b443ec45cd6d7c743fddd6415719febd70a0965d1fe18ee",
+  "patchPlan": "patches/patch-plan.json",
+  "applyMode": "byte-exact-sequential-anchors; no universal EOL normalization",
+  "changes": 4,
+  "canonicalChanged": false,
+  "stage8Changed": false,
+  "businessExecuted": false,
+  "scope": "preserve closed enum items only for API string/editor-dropdown fields referenced by normalized optionsSource.parameterFields; no global normalizeOptionItems change",
+  "sameBoundary": "normalizer and validator call one helper: list1..20, value/text strings only, no extra keys, duplicate values or coercion; original validator semantics unchanged",
+  "processOnly": "existing normalization/publication guard unchanged and exercised with real normalized entities before persistence/archive",
+  "verification": {
+    "success": true,
+    "canonicalChanged": false,
+    "stage8Changed": false,
+    "businessExecuted": false,
+    "ablChanged": false,
+    "redReproduced": true,
+    "phpTests": 48,
+    "phpAssertions": 192,
+    "combinedMetadataTests": 2,
+    "combinedMetadataAssertions": 41,
+    "fullSchemaChecks": 9,
+    "realNativeChecks": 19,
+    "byteScopeChecks": 21,
+    "normalizationPath": "real normalizeEntityPayload + public validateExternalDraft on frozen1047 + roundtrip; public CRUD saveDraft/publish rejection",
+    "logs": [
+      {
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/native-process-options-normalization-companion/red-final.log",
+        "sha256": "42c36b291661ad8af70695b8e4529c949925e11758ecbe1fd5b23dd028f3fd6c"
+      },
+      {
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/native-process-options-normalization-companion/phpunit-final.log",
+        "sha256": "cecc8e0935fd68d469bc9bd633215b2d16cefdeebdfd6335fed7807e2ad519cb"
+      },
+      {
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/native-process-options-normalization-companion/combined-final.log",
+        "sha256": "cb95e96cd2496d56b04de9f2164476882ba32af54444fac65006d79b60cf7970"
+      },
+      {
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/native-process-options-normalization-companion/schema-final.log",
+        "sha256": "3db0154ebe36558229ba53655730fe2f75f8c13eca312962f12fdf3a57753454"
+      },
+      {
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/native-process-options-normalization-companion/browser-final.log",
+        "sha256": "74093bf5d772b0bf7b860db3a7142da7636c4ec6054b7ce231c7fae2af1de7a3"
+      },
+      {
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/native-process-options-normalization-companion/wiring-final.log",
+        "sha256": "e7ab9f108c458d79c7838a9c86b3b576800a4094679a77820925a1dc2a2d2b55"
+      },
+      {
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/native-process-options-normalization-companion/suite-complete.log",
+        "sha256": "eecca54e6ee5bbaa1088fb5693a8d7758efea3e826a4f5a897c09d1e1b7ec97c"
+      }
+    ]
+  },
+  "verificationPath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/native-process-options-normalization-companion/verification-v1.json",
+  "verificationSha256": "37b839e45426491949bc18328489ec560365c54eb2b0b047f2e018c00c433c4f",
+  "oldFreezesVerified": [
+    {
+      "package": "container-expense-default-selection",
+      "version": "v1.2",
+      "manifestSha256": "ed0cc7a801afe2e75d086d61a94972f6d6102514595f3a049689989619631dee",
+      "verified": true
+    },
+    {
+      "package": "native-process-dependent-options-example",
+      "version": "v1",
+      "manifestSha256": "4876279c9a6b478b89c67f8b0cb0ef7c68ba9817e9789b5a1f68637caf4f04f3",
+      "verified": true
+    },
+    {
+      "package": "container-attachments-download",
+      "version": "v1",
+      "manifestSha256": "e64108d15e24b1692c2d9ad31555cbeb4e960a6fd660a551cbe17e922d6522df",
+      "verified": true
+    },
+    {
+      "package": "item-cost-manual",
+      "version": "v1",
+      "manifestSha256": "5cabfe5a1464ebbc242f0bd580daa0c4017fda40999e33a959e2e5f04d0c352d",
+      "verified": true
+    }
+  ],
+  "isolatedRecheckCommand": "powershell -NoProfile -ExecutionPolicy Bypass -File integration-src/ciw-completion-20261028/native-process-options-normalization-companion/tests/verify-all.ps1",
+  "commandNote": "uses already prepared private red/local inputs; never prepare/finalize/regenerate official-build8; tests write only this companion runtime outputs",
+  "gates": [
+    "independent manager/executor review",
+    "compare exact futureBuilder8 baseline SHA before byte overlay composition",
+    "executor reruns/seals combined PHP/metadata evidence; ABL source/TT unchanged",
+    "root integration/publication follows separately; no grants/business authorized"
+  ],
+  "files": [
+    {
+      "path": "patches/patch-plan.json",
+      "sha256": "0503a7c626a2460e027d491c1318292c48be9502c25586954b17744e532aad36"
+    },
+    {
+      "path": "patches/ProgramBuilderService.php.patch",
+      "sha256": "f1f860e7adb68cafe87e5eef5ed996cac58cdb175a8e9e49c81d3ec0f8c1db74"
+    },
+    {
+      "path": "PLAN.md",
+      "sha256": "f079e6bf18f17d1e3d1ace743fe7cb2834e9b157080e6e2ed7b5a32ad2ef954a"
+    },
+    {
+      "path": "REVIEW.md",
+      "sha256": "a15af0800e18d365833b0a309ab51b72c20ae0286ed0d237d8286355c81f92ca"
+    },
+    {
+      "path": "tests/freeze.py",
+      "sha256": "4ae526b23c2d1eaafae665ed75f98d2742574e5b6078bf3f8d12a24fb16f3d8c"
+    },
+    {
+      "path": "tests/NormalizedDependentOptionsTest.php",
+      "sha256": "b618f911629e9b71709f898081998021cc3e2fe1ea2f1d91b111849982783109"
+    },
+    {
+      "path": "tests/patch.py",
+      "sha256": "47348c1170f4cb9feacadffe540fdd506cff6c6e7667a52677ffeeda61c7fbe3"
+    },
+    {
+      "path": "tests/phpunit.xml",
+      "sha256": "5f5cfdb75b85ff11d048f42ba363d095e907351058c032f8c8ef38086363e1a8"
+    },
+    {
+      "path": "tests/prepare.py",
+      "sha256": "ada8ac3cd665b66c8854f2c9ecbad495ea7ce6959bca2365067d3bd5783a78e1"
+    },
+    {
+      "path": "tests/schema.cjs",
+      "sha256": "04d3c9ce8a21f5130b7d20875e793a71364d68da7aabdf0b88f4a1384b1a4c8d"
+    },
+    {
+      "path": "tests/verify-all.ps1",
+      "sha256": "69853e664930d306914fdf19a5762966fbb63a5ad40369377b4859cc32543e43"
+    },
+    {
+      "path": "tests/verify.py",
+      "sha256": "41aad683f3fa7936b7d0b9611811dbae3df084f18b6874a4388ecd3c4afc79d2"
+    }
+  ]
+}

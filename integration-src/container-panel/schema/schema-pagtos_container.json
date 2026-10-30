@@ -1,0 +1,103 @@
+{
+  "database": "espec",
+  "table": "pagtos_container",
+  "fields": [
+    {
+      "name": "num_id_tit_ap",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "container_id",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vl_pago_em_dolar",
+      "type": "decimal",
+      "format": ">>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vl_pago_em_real",
+      "type": "decimal",
+      "format": ">>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vl_aprop_em_dolar",
+      "type": "decimal",
+      "format": ">>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vl_cotacao_dolar",
+      "type": "decimal",
+      "format": ">>9.999999",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dt_pagto",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    }
+  ],
+  "indexes": [
+    {
+      "name": "ind_pagtos_container",
+      "unique": true,
+      "primary": true,
+      "fields": [
+        "num_id_tit_ap",
+        "container_id"
+      ]
+    }
+  ],
+  "triggers": [
+  ]
+}

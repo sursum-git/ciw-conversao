@@ -1,0 +1,135 @@
+{
+  "database": "espec",
+  "table": "locais_estoq_portal",
+  "fields": [
+    {
+      "name": "local_estoq_portal_id",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_empresa",
+      "type": "character",
+      "format": "x(8)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_estab",
+      "type": "character",
+      "format": "x(8)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_depos",
+      "type": "character",
+      "format": "x(15)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_grupo_usuario",
+      "type": "character",
+      "format": "x(30)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dt_hora_inicio",
+      "type": "datetime",
+      "format": "99\/99\/9999 HH:MM:SS.SSS",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dt_hora_fim",
+      "type": "datetime",
+      "format": "99\/99\/9999 HH:MM:SS",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_usuario",
+      "type": "character",
+      "format": "x(20)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    }
+  ],
+  "indexes": [
+    {
+      "name": "ind_empresa",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod_empresa",
+        "cod_estab",
+        "cod_depos"
+      ]
+    },
+    {
+      "name": "ind_grupo_usuar",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod_grupo_usuario",
+        "cod_empresa",
+        "cod_estab",
+        "cod_depos"
+      ]
+    },
+    {
+      "name": "primario",
+      "unique": true,
+      "primary": true,
+      "fields": [
+        "local_estoq_portal_id"
+      ]
+    }
+  ],
+  "triggers": [
+  ]
+}

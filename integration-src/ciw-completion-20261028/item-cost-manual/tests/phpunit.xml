@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="bootstrap.php" cacheResult="false"><testsuites><testsuite name="ManualItemCostRead">
+<file>RuntimeItemCostManualReadTest.php</file>
+<file>D:/opencode/construtor-pg/backend/tests/Runtime/RuntimeApiEntityActionServiceTest.php</file>
+<file>D:/opencode/construtor-pg/backend/tests/Runtime/RuntimeApiRequestContextTest.php</file>
+<file>D:/opencode/construtor-pg/backend/tests/Runtime/RuntimeCiwErpQueryTest.php</file>
+<file>D:/opencode/construtor-pg/backend/tests/Runtime/RuntimeCiwErpReadIntegrationTest.php</file>
+</testsuite></testsuites></phpunit>

@@ -1,0 +1,125 @@
+{
+  "scope": [
+    "bl_calcular_impostos_proc_compra",
+    "bl_resumo_proc_compra",
+    "form_controles_proc_compra",
+    "grid_controles_proc_compra",
+    "grid_procs_compra",
+    "menu_proc_compra"
+  ],
+  "analysis_copies": true,
+  "files": [
+    {
+      "application": "bl_calcular_impostos_proc_compra",
+      "file": "bl_calcular_impostos_proc_compra.php",
+      "remote_sha256": "5b5eb35327cd3ac482fb035e99af8c8f238da0cc76307b12534be6c8f0ed2954",
+      "copied_sha256": "5b5eb35327cd3ac482fb035e99af8c8f238da0cc76307b12534be6c8f0ed2954",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_calcular_impostos_proc_compra",
+      "file": "index.php",
+      "remote_sha256": "36db0056b8ca646f78f03571cf4d3ba31f399e7f548589041dc43f55ce6cfa7d",
+      "copied_sha256": "1c0d5d2c7795ed0dfe1e5ced1454b3357a1ea4188dca3311fc356d5dfa4eac21",
+      "sensitive_literals_omitted": 16
+    },
+    {
+      "application": "bl_resumo_proc_compra",
+      "file": "bl_resumo_proc_compra.php",
+      "remote_sha256": "2a4854ed57f0eee780768a8b6b06cc3f58ee0694f7f7a1fea5e68fcc444195eb",
+      "copied_sha256": "2a4854ed57f0eee780768a8b6b06cc3f58ee0694f7f7a1fea5e68fcc444195eb",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_resumo_proc_compra",
+      "file": "index.php",
+      "remote_sha256": "b89ebb3c6d2890c4f708093c2e56cbdc67aba975fbf7c53e2e474c38a3fa3602",
+      "copied_sha256": "db85a1f781d344b8e1bbd4ea7e17c4b6ebb2353c71589bcaf45d9ee9f8a4a8d1",
+      "sensitive_literals_omitted": 16
+    },
+    {
+      "application": "form_controles_proc_compra",
+      "file": "form_controles_proc_compra.php",
+      "remote_sha256": "918ba427c4083e303e06a8c980a1a047144327f1a51015000db58362360d3144",
+      "copied_sha256": "918ba427c4083e303e06a8c980a1a047144327f1a51015000db58362360d3144",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "form_controles_proc_compra",
+      "file": "form_controles_proc_compra_apl.php",
+      "remote_sha256": "81a9999867e0b4d36e31d583f962c9e7187cf6d983478c009ce475cc1c1a4436",
+      "copied_sha256": "0a48bacde5e666b28fa74e53c9f38ada9af88a186024602e18cc7e0d42caba55",
+      "sensitive_literals_omitted": 2
+    },
+    {
+      "application": "form_controles_proc_compra",
+      "file": "form_controles_proc_compra_form0.php",
+      "remote_sha256": "55bfd2371a324e2f0ec00d250c0fa78f7e64b4623b6fb61198f2bf1a31106281",
+      "copied_sha256": "f443590dc2b95411bf9d69a6299bf23bf12a9b806d43d611a0743523fcf60904",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "form_controles_proc_compra",
+      "file": "index.php",
+      "remote_sha256": "13c7c90b3803ca1e3b04dbdb9e22adf9ef2b1d9024317684d68ad9d5a74ae04e",
+      "copied_sha256": "9fc84ccb86bbeca544fa037f8b51d8b8e4f09ad028ac827815cfb41548721a1a",
+      "sensitive_literals_omitted": 2
+    },
+    {
+      "application": "grid_controles_proc_compra",
+      "file": "grid_controles_proc_compra.php",
+      "remote_sha256": "e35d320caa696862c92a0c58a22d2c994a635ac5ee026bf2cab262906b202ef3",
+      "copied_sha256": "e35d320caa696862c92a0c58a22d2c994a635ac5ee026bf2cab262906b202ef3",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "grid_controles_proc_compra",
+      "file": "grid_controles_proc_compra_grid.class.php",
+      "remote_sha256": "593454579686ff6b7dabd2251567ff932c7a1e3f2596f1c8a4a5b7e14864c7e1",
+      "copied_sha256": "d7c4ace03f0328a8780ea5fc1d0cd56a749175654b994aacc211e4a3407f1809",
+      "sensitive_literals_omitted": 4
+    },
+    {
+      "application": "grid_controles_proc_compra",
+      "file": "index.php",
+      "remote_sha256": "290e255f45351a01c9f3f05050aa44baad93c4357532b0ff3e9404e102307c04",
+      "copied_sha256": "fb0c09a0eddfa47d3b5d70bb0a14da6b34b85b124dd86f78f6d42275b50b07a2",
+      "sensitive_literals_omitted": 9
+    },
+    {
+      "application": "grid_procs_compra",
+      "file": "grid_procs_compra.php",
+      "remote_sha256": "ec1c0b36fc317f9b571c7af5ec1cafef26008c7145f6c450ef3720eded802186",
+      "copied_sha256": "ec1c0b36fc317f9b571c7af5ec1cafef26008c7145f6c450ef3720eded802186",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "grid_procs_compra",
+      "file": "grid_procs_compra_grid.class.php",
+      "remote_sha256": "45f60608ef05a14842ac14989c7969b1ec5a6f7ab9e62e3c823b7a571180d1e8",
+      "copied_sha256": "ba7075323af736fba6e814686533bf566bc5f1c2b404de8d28949a0c7b3924c3",
+      "sensitive_literals_omitted": 4
+    },
+    {
+      "application": "grid_procs_compra",
+      "file": "index.php",
+      "remote_sha256": "a6f4168e91aab0c643152bb1b01652beac00b38c8e73e5483812d6bd81cdc9a9",
+      "copied_sha256": "d6c5e0893387b335809478ff4d2f118724c93bf88675f81b745bc62bf6e494b1",
+      "sensitive_literals_omitted": 8
+    },
+    {
+      "application": "menu_proc_compra",
+      "file": "index.php",
+      "remote_sha256": "c2ad05e9f23d882e960b4778058333af63fcb8f312d3f5137b9cac1c0d53a012",
+      "copied_sha256": "f532752a4381038cc530fcae61740e660ff665ccbb43789cd8451fffafaf4bcd",
+      "sensitive_literals_omitted": 2
+    },
+    {
+      "application": "menu_proc_compra",
+      "file": "menu_proc_compra.php",
+      "remote_sha256": "1aaddd62ba0355e00b8bf87949abdf303edb31fd099079f2612675946c0443f9",
+      "copied_sha256": "1aaddd62ba0355e00b8bf87949abdf303edb31fd099079f2612675946c0443f9",
+      "sensitive_literals_omitted": 0
+    }
+  ]
+}

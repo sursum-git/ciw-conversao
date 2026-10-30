@@ -1,0 +1,74 @@
+{
+  "database": "espec",
+  "table": "grupos_aplicacoes",
+  "fields": [
+    {
+      "name": "cod_grupo",
+      "type": "integer",
+      "format": ">9",
+      "mandatory": false,
+      "extent": 0
+    },
+    {
+      "name": "nome_aplicacao",
+      "type": "character",
+      "format": "x(128)",
+      "mandatory": false,
+      "extent": 0
+    },
+    {
+      "name": "acesso_permitido",
+      "type": "character",
+      "format": "x(1)",
+      "mandatory": false,
+      "extent": 0
+    },
+    {
+      "name": "insercao_permitida",
+      "type": "character",
+      "format": "x(1)",
+      "mandatory": false,
+      "extent": 0
+    },
+    {
+      "name": "exclusao_permitida",
+      "type": "character",
+      "format": "x(1)",
+      "mandatory": false,
+      "extent": 0
+    },
+    {
+      "name": "alteracao_permitida",
+      "type": "character",
+      "format": "x(1)",
+      "mandatory": false,
+      "extent": 0
+    },
+    {
+      "name": "exportacao_permitida",
+      "type": "character",
+      "format": "x(1)",
+      "mandatory": false,
+      "extent": 0
+    },
+    {
+      "name": "impressao_permitida",
+      "type": "character",
+      "format": "x(1)",
+      "mandatory": false,
+      "extent": 0
+    }
+  ],
+  "indexes": [
+    {
+      "name": "primario",
+      "unique": true,
+      "primary": true,
+      "fields": [
+        "cod_grupo",
+        "nome_aplicacao"
+      ]
+    }
+  ],
+  "evidence": "ReadCiwAccessSchema.p executado OpenEdge12.2 no .42; somente dicionario"
+}

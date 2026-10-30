@@ -1,0 +1,46 @@
+[
+  {
+    "code": 1036,
+    "name": "Pagamentos históricos da versão",
+    "entity": "container_versao_pagtos_historico_med_progress",
+    "resource": "container_versao_pagtos_historico_med",
+    "screen": "ciw.container-versao-pagamentos-historico",
+    "tt": "ttVersionHistoryPayments",
+    "array": "payments",
+    "fields": "versao_id,num_id_tit_ap,vl_real,vl_dolar",
+    "keys": "container_id,versao_id,num_id_tit_ap"
+  },
+  {
+    "code": 1037,
+    "name": "NFs históricas da versão",
+    "entity": "container_versao_nfs_historico_med_progress",
+    "resource": "container_versao_nfs_historico_med",
+    "screen": "ciw.container-versao-nfs-historico",
+    "tt": "ttVersionHistoryNfs",
+    "array": "nfs",
+    "fields": "versao_id,documento,serie,estab,nat_operacao,cod_emitente,vl_mercadoria,vl_despesa",
+    "keys": "container_id,versao_id,documento,serie,estab,nat_operacao,cod_emitente"
+  },
+  {
+    "code": 1038,
+    "name": "Descontos históricos da versão",
+    "entity": "container_versao_descontos_historico_med_progress",
+    "resource": "container_versao_descontos_historico_med",
+    "screen": "ciw.container-versao-descontos-historico",
+    "tt": "ttVersionHistoryDiscounts",
+    "array": "discounts",
+    "fields": "versao_id,desconto_importacao_id,vl_autoriz_real,vl_autoriz_dolar,log_custo",
+    "keys": "container_id,versao_id,desconto_importacao_id"
+  },
+  {
+    "code": 1039,
+    "name": "Despesas históricas da versão",
+    "entity": "container_versao_despesas_historico_med_progress",
+    "resource": "container_versao_despesas_historico_med",
+    "screen": "ciw.container-versao-despesas-historico",
+    "tt": "ttVersionHistoryExpenses",
+    "array": "expenses",
+    "fields": "versao_id,despesa_id,vl_prev,vl_base_imp,vl_negociado,log_custo",
+    "keys": "container_id,versao_id,despesa_id"
+  }
+]

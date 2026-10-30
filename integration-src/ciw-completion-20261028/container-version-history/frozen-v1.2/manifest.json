@@ -1,0 +1,118 @@
+{
+  "status": "FROZEN_CANDIDATE_NOT_APPLIED_NOT_PUBLISHED",
+  "version": "v1.2",
+  "files": [
+    {
+      "path": "abl/ContainersVersionHistoryApi.p",
+      "sha256": "d3101f8cccc81d637002c185074f9dd69ded7000cd6b03e0ebbd7c6ef4e99065"
+    },
+    {
+      "path": "abl/ContainersVersionHistoryService.p",
+      "sha256": "32e81cdfa54c1494d573a83fb9977302fc9da6720b8bf7a8a638e7fff4a05a19"
+    },
+    {
+      "path": "includes/ContainersVersionHistoryTable.i",
+      "sha256": "dbeff4ce3e3dab4565dd2373e87a7ca44bf36aa25c0ec71209fa60f514b19c76"
+    },
+    {
+      "path": "tests/RuntimeContainerVersionHistoryIntegrationTest.php",
+      "sha256": "ad6e40f3153f33ae99f817214f22e1415ddf553c678996343aa5f262047feb42"
+    },
+    {
+      "path": "tests/abl/ContainersVersionHistoryTest.p",
+      "sha256": "1f185823329d13a00bbb265243daded6663e6647c662f02f79d49983953c94a3"
+    },
+    {
+      "path": "tests/abl/ContainersVersionHistoryTestTables.i",
+      "sha256": "24480f748f0b71bf28b27ef4abf117540238ebc8cdf992a4e883940ab907262d"
+    },
+    {
+      "path": "tests/metadata.cjs",
+      "sha256": "182bb19ca5b459a4e4b961cb15793531c9580272096cfa8676e68f6876417368"
+    },
+    {
+      "path": "tests/runtime-bootstrap.php",
+      "sha256": "8b3311f6251c53fbce9af85dfcc9659d314446e36ad8f1931565aeda92388abb"
+    },
+    {
+      "path": "tests/transport.php",
+      "sha256": "a274ca8ede600f7ddbd3e5cad2113bec70994ce361a4136b7b53451f2b0ae447"
+    },
+    {
+      "path": "metadata/api-source-additions.json",
+      "sha256": "d7d92e18fb4d20ed591ef33e569dbb4b88befa0c60c2623eada4f52706f36835"
+    },
+    {
+      "path": "metadata/history-builder-draft.json",
+      "sha256": "da03e08f188a5f99cd190e163817ceb83cafed013e0b170bf8fb098f5541d581"
+    },
+    {
+      "path": "metadata/parent-patch.json",
+      "sha256": "c8b000b0e379f8910d2cfa68187aea17d78cd64a16f172eda070ee45a0b35d5a"
+    },
+    {
+      "path": "metadata/source-patch.json",
+      "sha256": "23d80be8ce7641cc26d477f6285e0b771288a9fc91f323478e6357f0b36a8605"
+    },
+    {
+      "path": "patches/CiwCadastrosCrud.p.patch",
+      "sha256": "31a40538c4d282972a2d15e76ee24ed58adf98a85bf9f0acb50a057a734927a7"
+    },
+    {
+      "path": "patches/CiwErpReadService.p.patch",
+      "sha256": "fd12311ed14a6f9c09912cc35feed49f9eaf8bd6a9dab2f68f3088b7ab618677"
+    },
+    {
+      "path": "patches/ContainersVersionService.p.patch",
+      "sha256": "36769e7ffbe25b8f2c7130e9a5ac1b77257001032dde09f377396bae4a342cfc"
+    },
+    {
+      "path": "patches/RuntimeApiEntityActionService.php.patch",
+      "sha256": "6a3699be48126b567efa9315fabfd3153ddce224ba5a47ff2e86b27bd0cb482f"
+    },
+    {
+      "path": "patches/RuntimeCiwErpQuery.php.patch",
+      "sha256": "289127885d2425c670ded10eebe669758ad241d462df5a46da0ebc4a93f5e3d8"
+    },
+    {
+      "path": "baselines.json",
+      "sha256": "c936e2c398f2ae542973ffd51d7d6cf0141e8f1e8189c47c018a3c144cdee1f6"
+    },
+    {
+      "path": "README.md",
+      "sha256": "1ebb3ad25d9cfc0a2bd182de44bbe5732360729f1c2d7821be70d15ae633f30a"
+    },
+    {
+      "path": "RECONCILIATION.md",
+      "sha256": "390b8f98dfcd123c3bf4b04151bf6edaf391eac95f93757aee49b69189eb56db"
+    },
+    {
+      "path": "PLAN.md",
+      "sha256": "d0ecee530acd5cce73a0b39e05c7a079c31b89fd3c2d21833cf3622bb969dbac"
+    }
+  ],
+  "officialCompileRequired": "OpenEdge12.2/.42; sursum-api/med/9911 only",
+  "localDiagnostics": {
+    "version": "12.8 development only",
+    "compiles": 8,
+    "newChecksPerCulture": 28,
+    "centralRegressionPerCulture": 189,
+    "cultures": [
+      "AMERICAN",
+      "EUROPEAN"
+    ],
+    "numDbs": 0
+  },
+  "phpTransportChecks": 21,
+  "runtimeServiceTests": 5,
+  "runtimeServiceAssertions": 17,
+  "metadataSchemaChecks": 41,
+  "remaining": [
+    "independent-review",
+    "official12.2-four-combinations",
+    "additional-central-Composition-Boundary-regression",
+    "PASOE-and-native-runtime-readonly",
+    "lookup-and-six-historical-views"
+  ],
+  "harnessOnlyFix": "FIX-CODEPAGE(textValue)=UTF-8 before ObjectModelParser; production files identical to frozen-v1.1"
+}

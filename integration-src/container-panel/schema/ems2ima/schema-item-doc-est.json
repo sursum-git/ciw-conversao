@@ -1,0 +1,2954 @@
+{
+  "database": "ems2ima",
+  "table": "item-doc-est",
+  "fields": [
+    {
+      "name": "cod-emitente",
+      "type": "integer",
+      "format": ">>>>>>>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "nro-docto",
+      "type": "character",
+      "format": "x(16)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "serie-docto",
+      "type": "character",
+      "format": "x(5)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "nat-operacao",
+      "type": "character",
+      "format": "x(06)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "aliquota-ipi",
+      "type": "decimal",
+      "format": ">>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "aliquota-iss",
+      "type": "decimal",
+      "format": ">>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cd-trib-icm",
+      "type": "integer",
+      "format": ">9",
+      "decimals": null,
+      "initial": "1",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cd-trib-iss",
+      "type": "integer",
+      "format": ">9",
+      "decimals": null,
+      "initial": "1",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "class-fiscal",
+      "type": "character",
+      "format": "9999.99.99",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": "can-find(classif-fisc where classif-fisc.class-fiscal =                                item-doc-est.class-fiscal)",
+      "triggers": [
+      ]
+    },
+    {
+      "name": "it-codigo",
+      "type": "character",
+      "format": "x(16)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": "can-find(item where item.it-codigo = item-doc-est.it-codigo)",
+      "triggers": [
+      ]
+    },
+    {
+      "name": "sequencia",
+      "type": "integer",
+      "format": ">>>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "peso-liquido",
+      "type": "decimal",
+      "format": ">>>,>>>,>>9.99999",
+      "decimals": 5,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "quantidade",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.9999",
+      "decimals": 4,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "un",
+      "type": "character",
+      "format": "xx",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "base-ipi",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 2,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "base-icm",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 2,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "base-iss",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 2,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "despesas",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 2,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "ipi-ntrib",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 2,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "icm-ntrib",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 2,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "iss-ntrib",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 2,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "ipi-outras",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 2,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "icm-outras",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 2,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "iss-outras",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 2,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "preco-total",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 2,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "icm-complem",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 2,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod-depos",
+      "type": "character",
+      "format": "x(3)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": "can-find(deposito of item-doc-est)",
+      "triggers": [
+      ]
+    },
+    {
+      "name": "lote",
+      "type": "character",
+      "format": "x(40)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "componente",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "nro-comp",
+      "type": "character",
+      "format": "x(16)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "serie-comp",
+      "type": "character",
+      "format": "x(5)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "aliquota-icm",
+      "type": "decimal",
+      "format": ">>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "codigo-rejei",
+      "type": "integer",
+      "format": ">>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": "can-find(cod-rejeicao of item-doc-est)",
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cotacao-fasb",
+      "type": "decimal",
+      "format": ">>>,>>9.99999999",
+      "decimals": 8,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "ct-codigo",
+      "type": "character",
+      "format": "x(20)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dt-retorno",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": "today",
+      "mandatory": false,
+      "extent": 0,
+      "validation": "dt-retorno >= docum-est.dt-emissao",
+      "triggers": [
+      ]
+    },
+    {
+      "name": "desconto",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 2,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dt-vali-lote",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "nr-ficha",
+      "type": "integer",
+      "format": ">>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "atualiza-pa",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "yes",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "encerra-pa",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "reabre-pa",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "nat-comp",
+      "type": "character",
+      "format": "x(06)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "nr-ord-produ",
+      "type": "integer",
+      "format": ">>>,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": "item-doc-est.nr-ord-prod = 0 or\r\ncan-find(ord-prod where ord-prod.nr-ord-prod = \r\n           item-doc-est.nr-ord-prod)",
+      "triggers": [
+      ]
+    },
+    {
+      "name": "num-pedido",
+      "type": "integer",
+      "format": ">>>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": "item-doc-est.num-pedido = ? or\r\nitem-doc-est.num-pedido = 0 or\r\ncan-find(pedido-compr where pedido-compr.num-pedido =                item-doc-est.num-pedido)",
+      "triggers": [
+      ]
+    },
+    {
+      "name": "numero-ordem",
+      "type": "integer",
+      "format": "zzzzz9,99",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": "item-doc-est.numero-ordem = ? or\r\nitem-doc-est.numero-ordem = 0 or\r\ncan-find(ordem-compra where ordem-compra.numero-ordem =                   item-doc-est.numero-ordem)",
+      "triggers": [
+      ]
+    },
+    {
+      "name": "parcela",
+      "type": "integer",
+      "format": ">>>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "qt-do-forn",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.9999",
+      "decimals": 4,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "sc-codigo",
+      "type": "character",
+      "format": "x(20)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vl-imp-impor",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 2,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "nr-pedcli",
+      "type": "character",
+      "format": "x(12)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "nr-pd-seq",
+      "type": "integer",
+      "format": ">>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "narrativa",
+      "type": "character",
+      "format": "x(2000)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "reabre-pd",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "valor-ipi",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 2,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "valor-icm",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 2,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "valor-iss",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 2,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "preco-unit",
+      "type": "decimal",
+      "format": ">>>,>>>,>>9.99999",
+      "decimals": 5,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 2,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "data-comp",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dt-ent-prev",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "pr-total",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 3,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "baixa-ce",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "yes",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dt-nota-comp",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod-refer",
+      "type": "character",
+      "format": "x(8)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "base-icm-cmi",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "base-ipi-cmi",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "base-iss-cmi",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "desconto-cmi",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "despesas-cmi",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "icm-comp-cmi",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "icm-ntr-cmi",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "icm-out-cmi",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "ipi-ntr-cmi",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "ipi-out-cmi",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "iss-ntr-cmi",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "iss-out-cmi",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "pr-total-cmi",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vl-icm-cmi",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vl-ipi-cmi",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vl-iss-cmi",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vl-imp-cmi",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "seq-comp",
+      "type": "integer",
+      "format": ">>>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vl-subs-cmi",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "nr-pd-ent",
+      "type": "integer",
+      "format": ">>>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod-emit-benef",
+      "type": "integer",
+      "format": ">>>>>>>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "i-nr-gi",
+      "type": "integer",
+      "format": "99999999",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "c-nr-invoice",
+      "type": "character",
+      "format": "x(10)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "i-seq-inv",
+      "type": "integer",
+      "format": "999",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "pc-restituicao",
+      "type": "decimal",
+      "format": ">>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "nivel-restituicao",
+      "type": "character",
+      "format": "!",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "emite-comp",
+      "type": "integer",
+      "format": ">>>>>>>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cotacao-cmi",
+      "type": "decimal",
+      "format": ">>>,>>9.99999999",
+      "decimals": 8,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "pr-unit-cmi",
+      "type": "decimal",
+      "format": ">>>,>>>,>>9.99999",
+      "decimals": 5,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "pr-mob-cmi",
+      "type": "decimal",
+      "format": ">>>,>>>,>>9.9999",
+      "decimals": 4,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vl-subs",
+      "type": "decimal",
+      "format": ">>>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 2,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "base-subs",
+      "type": "decimal",
+      "format": ">>>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 2,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "pre-unit-mob",
+      "type": "decimal",
+      "format": ">>>,>>>,>>9.99999",
+      "decimals": 5,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 2,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "base-subs-cmi",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "qt-real",
+      "type": "decimal",
+      "format": ">>>>>,>>9.9999",
+      "decimals": 4,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "num-ord-inv",
+      "type": "integer",
+      "format": ">>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "nat-of",
+      "type": "character",
+      "format": "x(06)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod-localiz",
+      "type": "character",
+      "format": "x(20)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cd-trib-ipi",
+      "type": "integer",
+      "format": ">9",
+      "decimals": null,
+      "initial": "1",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "conta-contabil",
+      "type": "character",
+      "format": "x(20)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "item-pai",
+      "type": "character",
+      "format": "x(16)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod-roteiro",
+      "type": "character",
+      "format": "x(16)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "op-codigo",
+      "type": "integer",
+      "format": ">>>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "origem",
+      "type": "integer",
+      "format": ">9",
+      "decimals": null,
+      "initial": "9",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod-esp",
+      "type": "character",
+      "format": "!!",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vl-taxa",
+      "type": "decimal",
+      "format": ">>>,>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod-tax",
+      "type": "integer",
+      "format": ">>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vl-isr",
+      "type": "decimal",
+      "format": ">>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "hora",
+      "type": "character",
+      "format": "x(08)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vl-taxa-me",
+      "type": "decimal",
+      "format": ">>>,>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "fn-docto-ap",
+      "type": "integer",
+      "format": ">>>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "qt-saldo",
+      "type": "decimal",
+      "format": ">>>,>>9.9999",
+      "decimals": 4,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "preco-total-alt",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 2,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "nr-docto-ap",
+      "type": "character",
+      "format": "x(16)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "preco-fatura",
+      "type": "decimal",
+      "format": ">>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cota-moeda",
+      "type": "decimal",
+      "format": "->>,>>9.9999",
+      "decimals": 4,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 2,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "perc-vat",
+      "type": "decimal",
+      "format": ">>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "perc-sales-tax",
+      "type": "decimal",
+      "format": ">>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "perc-isr",
+      "type": "decimal",
+      "format": ">>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod-tax-isr",
+      "type": "integer",
+      "format": ">>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "usuario",
+      "type": "character",
+      "format": "x(12)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "data",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": "today",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "est-cob",
+      "type": "character",
+      "format": "x(5)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "preco-unit-me",
+      "type": "decimal",
+      "format": ">>>>>,>>>,>>9.99999",
+      "decimals": 5,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "preco-total-me",
+      "type": "decimal",
+      "format": ">>>>>,>>>,>>9.9999",
+      "decimals": 4,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "desconto-me",
+      "type": "decimal",
+      "format": ">>>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "sit-item",
+      "type": "integer",
+      "format": ">9",
+      "decimals": null,
+      "initial": "1",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cotacao-alt",
+      "type": "decimal",
+      "format": ">>>,>>>,>>9.9999",
+      "decimals": 4,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 2,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vl-unit-mob",
+      "type": "decimal",
+      "format": "->>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "etiquetas",
+      "type": "integer",
+      "format": "zz9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "flag-atu",
+      "type": "integer",
+      "format": "9",
+      "decimals": null,
+      "initial": "2",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "qt-etiquetas",
+      "type": "integer",
+      "format": "zz9",
+      "decimals": null,
+      "initial": "1",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "char-1",
+      "type": "character",
+      "format": "x(2000)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "char-2",
+      "type": "character",
+      "format": "x(2000)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dec-1",
+      "type": "decimal",
+      "format": "->>>>>>>>>>>9.99999999",
+      "decimals": 8,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dec-2",
+      "type": "decimal",
+      "format": "->>>>>>>>>>>9.99999999",
+      "decimals": 8,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "int-1",
+      "type": "integer",
+      "format": "->>>>>>>>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "int-2",
+      "type": "integer",
+      "format": "->>>>>>>>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log-1",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log-2",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "data-1",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "data-2",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "check-sum",
+      "type": "character",
+      "format": "x(20)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vl-isr-me",
+      "type": "decimal",
+      "format": ">>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "despesas-me",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 2,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "quant-conf",
+      "type": "decimal",
+      "format": ">>>>>,>>9.9999",
+      "decimals": 4,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "base-pis-subs",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "base-cofins-subs",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vl-pis-subs",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vl-cofins-subs",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log-fifo-oc",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "No",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "seq-evento",
+      "type": "integer",
+      "format": ">>>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log-icm-retido",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "No",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod-emit-terc",
+      "type": "integer",
+      "format": ">>>>>>>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "nro-docto-terc",
+      "type": "character",
+      "format": "X(16)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "serie-terc",
+      "type": "character",
+      "format": "X(5)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "nat-terc",
+      "type": "character",
+      "format": "x(06)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "seq-terc",
+      "type": "integer",
+      "format": ">>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "nr-ato-concessorio",
+      "type": "character",
+      "format": "X(20)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "valor-frete",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "valor-frete-me",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "nr-proc-imp",
+      "type": "character",
+      "format": "X(12)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "declaracao-import",
+      "type": "character",
+      "format": "X(20)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "num-seq-rma",
+      "type": "integer",
+      "format": ">>>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log-geracao-ncr-ap",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-perc-restocagem",
+      "type": "decimal",
+      "format": ">9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-restocagem",
+      "type": "decimal",
+      "format": ">>>,>>9.9999",
+      "decimals": 4,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cdn-devolucao",
+      "type": "integer",
+      "format": "9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod-motivo",
+      "type": "character",
+      "format": "X(3)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod-disposicao",
+      "type": "character",
+      "format": "X(3)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod-despesa",
+      "type": "character",
+      "format": "X(12)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "fornec-comp",
+      "type": "integer",
+      "format": ">>>>>>>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-perc-rep-ipi",
+      "type": "decimal",
+      "format": ">>9.9999",
+      "decimals": 4,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-perc-red-icms",
+      "type": "decimal",
+      "format": ">>9.9999",
+      "decimals": 4,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-sdo-alocad-oc",
+      "type": "decimal",
+      "format": "->>,>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-sdo-alocad-terc",
+      "type": "decimal",
+      "format": "->>,>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "num-event-contrat",
+      "type": "integer",
+      "format": ">>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "num-ret-om",
+      "type": "integer",
+      "format": ">>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "peso-bruto-item",
+      "type": "decimal",
+      "format": ">>>,>>>,>>9.99999",
+      "decimals": 5,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "peso-liquido-item",
+      "type": "decimal",
+      "format": ">>>,>>>,>>9.99999",
+      "decimals": 5,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod-estab-compon",
+      "type": "character",
+      "format": "x(5)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "idi-tributac-cofins",
+      "type": "integer",
+      "format": "9",
+      "decimals": null,
+      "initial": "2",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-aliq-cofins",
+      "type": "decimal",
+      "format": ">>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-base-calc-cofins",
+      "type": "decimal",
+      "format": ">>>,>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-cofins",
+      "type": "decimal",
+      "format": ">>>,>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-cofins-fasb",
+      "type": "decimal",
+      "format": ">>>,>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-cofins-cmi",
+      "type": "decimal",
+      "format": ">>>,>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "idi-tributac-pis",
+      "type": "integer",
+      "format": "9",
+      "decimals": null,
+      "initial": "2",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-aliq-pis",
+      "type": "decimal",
+      "format": ">>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "base-pis",
+      "type": "decimal",
+      "format": ">>>,>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "valor-pis",
+      "type": "decimal",
+      "format": ">>>,>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "valor-pis-fasb",
+      "type": "decimal",
+      "format": ">>>,>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "valor-pis-cmi",
+      "type": "decimal",
+      "format": ">>>,>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "num-ord-import",
+      "type": "integer",
+      "format": "zzzzz9,99",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "num-parc-import",
+      "type": "integer",
+      "format": ">>>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cdn-impto-retid",
+      "type": "integer",
+      "format": ">>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-aliq-impto-retid",
+      "type": "decimal",
+      "format": ">>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-impto-retid",
+      "type": "decimal",
+      "format": ">>>,>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-impto-retid-me",
+      "type": "decimal",
+      "format": ">>>,>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-aduana-pis",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>>,>>9.99999",
+      "decimals": 5,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-despes-aduana-pis",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>>,>>9.99999",
+      "decimals": 5,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-aliq-impto-import",
+      "type": "decimal",
+      "format": ">>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-aliq-ext-ipi",
+      "type": "decimal",
+      "format": ">>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-aliq-ext-pis",
+      "type": "decimal",
+      "format": ">>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-aliq-ext-cofins",
+      "type": "decimal",
+      "format": ">>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-aliq-ext-icms",
+      "type": "decimal",
+      "format": ">>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-aduana-cofins",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>>,>>9.99999",
+      "decimals": 5,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-despes-aduana-cofins",
+      "type": "decimal",
+      "format": ">>>>,>>>,>>>,>>9.99999",
+      "decimals": 5,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-unit-pis-import",
+      "type": "decimal",
+      "format": ">>,>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-unit-vol-pis-import",
+      "type": "decimal",
+      "format": ">>,>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-unit-cofins-import",
+      "type": "decimal",
+      "format": ">>,>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-unit-vol-cofins-import",
+      "type": "decimal",
+      "format": ">>,>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-reduc-cofins-import",
+      "type": "decimal",
+      "format": ">>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-reduc-pis-import",
+      "type": "decimal",
+      "format": ">>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod-unid-negoc",
+      "type": "character",
+      "format": "X(3)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log-usa-unid-negoc-fifo",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "id-bem",
+      "type": "decimal",
+      "format": ">>>,>>>,>>9",
+      "decimals": 0,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log-gerou-ncredito",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod-parc-devol",
+      "type": "character",
+      "format": "x(2)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "num-sit-trib-icms",
+      "type": "integer",
+      "format": "999",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-base-st-antec",
+      "type": "decimal",
+      "format": "->>,>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-st-antec",
+      "type": "decimal",
+      "format": "->>,>>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod-lote-fabrican",
+      "type": "character",
+      "format": "x(40)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dat-valid-lote-fabrican",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod-barras",
+      "type": "character",
+      "format": "x(50)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dat-fabricc-lote",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "nom-fabrican",
+      "type": "character",
+      "format": "x(60)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log-nota-ajust-import",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod-cfop-saida",
+      "type": "character",
+      "format": "x(5)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "nat-of-comp",
+      "type": "character",
+      "format": "x(6)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "ind-bem-movel-usado",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log-doacao",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "ano-mes-apuracao",
+      "type": "character",
+      "format": "x(07)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    }
+  ],
+  "indexes": [
+    {
+      "name": "ch-ato",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "nr-ato-concessorio"
+      ]
+    },
+    {
+      "name": "componente",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod-emitente",
+        "serie-comp",
+        "nro-comp",
+        "nat-comp",
+        "seq-comp",
+        "it-codigo"
+      ]
+    },
+    {
+      "name": "disposicao",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod-disposicao"
+      ]
+    },
+    {
+      "name": "documento",
+      "unique": true,
+      "primary": true,
+      "fields": [
+        "serie-docto",
+        "nro-docto",
+        "cod-emitente",
+        "nat-operacao",
+        "sequencia"
+      ]
+    },
+    {
+      "name": "item",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "it-codigo"
+      ]
+    },
+    {
+      "name": "itmdctsd_ix9",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "nat-of"
+      ]
+    },
+    {
+      "name": "itmdctst-09",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "num-pedido",
+        "numero-ordem",
+        "parcela"
+      ]
+    },
+    {
+      "name": "motivo",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod-motivo"
+      ]
+    },
+    {
+      "name": "terceiro",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod-emit-terc",
+        "serie-terc",
+        "nro-docto-terc",
+        "nat-terc",
+        "seq-terc",
+        "it-codigo"
+      ]
+    }
+  ],
+  "triggers": [
+    {
+      "event": "Create",
+      "procedure": "database\/tgin\/tcp\/tcin176.p"
+    },
+    {
+      "event": "Delete",
+      "procedure": "database\/tgin\/tdp\/tdin176.p"
+    },
+    {
+      "event": "Write",
+      "procedure": "database\/tgin\/twp\/twin176.p"
+    }
+  ]
+}

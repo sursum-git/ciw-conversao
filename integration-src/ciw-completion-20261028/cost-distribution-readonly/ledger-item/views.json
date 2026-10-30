@@ -1,0 +1,9 @@
+[
+  {
+    "code": 1050,
+    "entity": "custo_distribuicao_lancamentos_item_progress",
+    "resource": "custo_distribuicao_lancamentos_item",
+    "screen": "ciw.custo-distribuicao-lancamentos-item",
+    "name": "Conta corrente de distribuição do item"
+  }
+]

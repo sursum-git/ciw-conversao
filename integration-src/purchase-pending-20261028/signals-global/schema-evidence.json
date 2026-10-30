@@ -1,0 +1,48 @@
+{
+  "source": ".runtime/purchase-pending-integration-20261028/schema/schema.json",
+  "sourceSHA256": "8a15776f4dc6f2752ad658c38fa77dba12674c32cd99d57dd38b20658c6fc6ee",
+  "fields": [
+    {
+      "table": "pp-container",
+      "field": "cod-estabel",
+      "type": "character",
+      "format": "X(3)",
+      "extent": 0
+    },
+    {
+      "table": "pp-container",
+      "field": "dt_prev_embarque",
+      "type": "date",
+      "format": "99/99/9999",
+      "extent": 0
+    },
+    {
+      "table": "pp-container",
+      "field": "dt_real_embarque",
+      "type": "date",
+      "format": "99/99/9999",
+      "extent": 0
+    },
+    {
+      "table": "pp-container",
+      "field": "nr-container",
+      "type": "integer",
+      "format": ">>>,>>9",
+      "extent": 0
+    },
+    {
+      "table": "pp-container",
+      "field": "situacao",
+      "type": "integer",
+      "format": "9",
+      "extent": 0
+    },
+    {
+      "table": "pp-container",
+      "field": "situacao_container_id",
+      "type": "integer",
+      "format": "->,>>>,>>9",
+      "extent": 0
+    }
+  ]
+}

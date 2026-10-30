@@ -1,0 +1,1470 @@
+{
+  "at": "2026-10-29T03:26:57.744355+00:00",
+  "inventorySha256": "9f6b28d731a24a7d9d0f328ba55db2d63124bac947a4674e040eb3c023e3c21d",
+  "ledgerSha256": "9149b51d22f022194866b99ba0ef6c018e1c529d65ed4a4cf4674ff20e2c3605",
+  "origins": 262,
+  "recordedConverted": 62,
+  "notClosed": 200,
+  "notClosedDoesNotMeanNotImplemented": true,
+  "substantiveSources": 189,
+  "wrapperOnly": 1,
+  "withoutLocalPhp": 10,
+  "freshHumanAuthorizations": {
+    "aux4Reads": "authorized, applied and verified by root; exact gates consumed",
+    "build7FourReads": "authorized, applied and verified by root; exact gates consumed",
+    "batch1042ExactScenarioAndThreePermissions": "metadata/native and exact3permissions applied+verified; cenário novo2147000110 executado pelo root, com verificação final de limpeza concluída e logs preservados"
+  },
+  "batch1042ConfirmedSteps": [
+    "create-header",
+    "create-A",
+    "create-B",
+    "batch-update",
+    "concurrent-B",
+    "stale-batch",
+    "batch-delete",
+    "cleanup-header",
+    "verify-cleanup"
+  ],
+  "attachmentCorpus": {
+    "observedMedReferences": 146,
+    "availableFiles": 0,
+    "backupPathConfirmed": false,
+    "furtherProbesAuthorizedByThisReport": false
+  },
+  "families": [
+    {
+      "family": "Alternativas de containers a confirmar",
+      "notClosedOrigins": 6,
+      "principalOrigins": [
+        "bl_painel_container",
+        "bl_pp_container",
+        "grid_containers",
+        "form_PUB_pp_container",
+        "form_containers",
+        "cons_ped_container"
+      ],
+      "status": "Seis origens em triagem real de uso/diferenças. cons_ped_container só tem wrapper local; index principal comprovadamente ausente. Não excluir nem converter por nome.",
+      "origins": [
+        {
+          "application": "bl_painel_container",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_pp_container",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        },
+        {
+          "application": "grid_containers",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        },
+        {
+          "application": "form_PUB_pp_container",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        },
+        {
+          "application": "form_containers",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_ped_container",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        }
+      ]
+    },
+    {
+      "family": "Alternativas históricas e testes",
+      "notClosedOrigins": 28,
+      "principalOrigins": [
+        "app_login_bkp",
+        "cons_cta_corren_custo_distr_bkp",
+        "cons_docum_est_importacao_old",
+        "grid_itens_container_old"
+      ],
+      "status": "28 origens em triagem; sufixo antigo/bkp/teste não prova inatividade. Oito diagnósticos foram deliberadamente excluídos da coleta operacional.",
+      "origins": [
+        {
+          "application": "app_login_bkp",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_painel_container_restore",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_resumo_container_bkp",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_sinaliz_restore",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_teste",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_teste_calcDespCalculada",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_teste_distr_custo",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_teste_dolar",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_teste_geral_lib",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_teste_log",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_tst_calcSaldoPorItemData",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_tst_ldpa",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_cta_corren_custo_distr_bkp",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_cta_corren_fornec_imp_entregue_old",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_cta_corren_res_ped_old",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_cta_fornec_imp_entregue_bkp",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_docum_est_importacao_old",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_item_container_custos_bkp",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        },
+        {
+          "application": "grid_despesas_container_bkp",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        },
+        {
+          "application": "grid_itens_container_bkp",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        },
+        {
+          "application": "grid_itens_container_comparacao_bkp",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        },
+        {
+          "application": "grid_itens_container_old",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        },
+        {
+          "application": "form_cta_corren_custo_distr_bkp",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        },
+        {
+          "application": "form_item_custos_media_old",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        },
+        {
+          "application": "form_pp_container_bkp",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        },
+        {
+          "application": "blank",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        },
+        {
+          "application": "blank_1",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        },
+        {
+          "application": "blank_2",
+          "recordedState": "Triagem",
+          "classification": "source-usage-triage-required",
+          "targetScreen": ""
+        }
+      ]
+    },
+    {
+      "family": "Amostras e desenhos",
+      "notClosedOrigins": 6,
+      "principalOrigins": [
+        "ctrl_envios_repres_amostra",
+        "grid_desenhos",
+        "form_desenhos",
+        "grid_tipos_desenho",
+        "form_tipos_desenho"
+      ],
+      "status": "Consulta global de amostras1052 publicada. Envios por representante e desenhos/tipos ainda não encerrados; tabelas de desenhos não visíveis no escopo de esquema/perfil observado, sem DDL inventado.",
+      "origins": [
+        {
+          "application": "cons_item_container_amostra",
+          "recordedState": "Pendente",
+          "classification": "assigned-current-wave",
+          "targetScreen": ""
+        },
+        {
+          "application": "grid_desenhos",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "grid_tipos_desenho",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "ctrl_envios_repres_amostra",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": "ciw.representantes-ativos"
+        },
+        {
+          "application": "form_desenhos",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "form_tipos_desenho",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        }
+      ]
+    },
+    {
+      "family": "Anexos e documentos",
+      "notClosedOrigins": 2,
+      "principalOrigins": [
+        "cons_anexos_container",
+        "form_anexos_container"
+      ],
+      "status": "Listagem/manutenção existente e candidato de download devem ser distinguidos. Download não ativado:146 referências MED observadas, zero arquivos físicos disponíveis; caminho/backup ainda não informado.",
+      "origins": [
+        {
+          "application": "cons_anexos_container",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "form_anexos_container",
+          "recordedState": "Parcial",
+          "classification": "published-related-functional-gap-review",
+          "targetScreen": "ciw.container-anexos"
+        }
+      ]
+    },
+    {
+      "family": "Cadastros e parâmetros compartilhados",
+      "notClosedOrigins": 11,
+      "principalOrigins": [
+        "grid_despesas_impostos",
+        "grid_empresas_imposto",
+        "grid_tipos_valor"
+      ],
+      "status": "1055 tela1.0.0 publicada, fonte146 preservando144; consulta/get/PK3/paginação/filtros nativos validados. API oficial7compiles/384checks e17checksPASOE; acesso humano1055 ainda não solicitado. Cinco consultas/filtros anteriores publicados. TiposValor/Empresas×Imposto têm origem física ainda não resolvida no perfil observado.",
+      "origins": [
+        {
+          "application": "cons_im_param",
+          "recordedState": "Parcial",
+          "classification": "assigned-current-wave",
+          "targetScreen": "ciw.parametros-ima"
+        },
+        {
+          "application": "cons_tipos_versao_custo",
+          "recordedState": "Parcial",
+          "classification": "assigned-current-wave",
+          "targetScreen": "ciw.tipos-versao-custo"
+        },
+        {
+          "application": "grid_despesas_impostos",
+          "recordedState": "Parcial",
+          "classification": "assigned-current-wave",
+          "targetScreen": "ciw.empresas-despesa"
+        },
+        {
+          "application": "grid_empresas_imposto",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "grid_motivos_desconto",
+          "recordedState": "Parcial",
+          "classification": "assigned-current-wave",
+          "targetScreen": "ciw.motivos-desconto"
+        },
+        {
+          "application": "grid_pub_coloracoes",
+          "recordedState": "Parcial",
+          "classification": "assigned-current-wave",
+          "targetScreen": "ciw.coloracoes"
+        },
+        {
+          "application": "grid_situacoes_container",
+          "recordedState": "Parcial",
+          "classification": "assigned-current-wave",
+          "targetScreen": "ciw.situacoes-container"
+        },
+        {
+          "application": "grid_tipos_anexo",
+          "recordedState": "Relacionada",
+          "classification": "published-related-functional-gap-review",
+          "targetScreen": "ciw.tipos-anexo"
+        },
+        {
+          "application": "grid_tipos_valor",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "form_empresas_imposto",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "form_tipos_valor",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        }
+      ]
+    },
+    {
+      "family": "Containers e navegação contextual",
+      "notClosedOrigins": 14,
+      "principalOrigins": [
+        "bl_selecao_nf",
+        "bl_selecionado_nf",
+        "cons_docum_est_importacao",
+        "cons_pp_it_container"
+      ],
+      "status": "1053 API e tela1.0.0 publicadas:42 compilações oficiais,5.704checks TT e43checks PASOE em cinco containers, incluindo conjuntos acima de200. Runtime nativo26checks em cinco contextos aprovou consulta/detalhe/filtro/paginação. Fonte financeira6 preserva4operações e auth; pai1000v1.0.3 tem sóversão/link. Acesso humano1053 ainda não concedido. Associação/desassociação e demais pontes continuam separadas.",
+      "origins": [
+        {
+          "application": "bl_chama_grid_itens_container",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_chama_grid_itens_container_comparacao",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_lib_container",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_selecao_nf",
+          "recordedState": "Pendente",
+          "classification": "assigned-current-wave",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_selecionado_nf",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_voltar_selecao_container",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_docum_est_importacao",
+          "recordedState": "Parcial",
+          "classification": "assigned-current-wave",
+          "targetScreen": "ciw.container-nfs"
+        },
+        {
+          "application": "cons_itens_container_simul_calc",
+          "recordedState": "Preparado",
+          "classification": "candidate-not-published-verify-gap",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_pp_container_filtro_fornecedor",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_pp_it_container",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "grid_itens_container",
+          "recordedState": "Parcial",
+          "classification": "published-related-functional-gap-review",
+          "targetScreen": "ciw.container-itens"
+        },
+        {
+          "application": "grid_pp_container",
+          "recordedState": "Parcial",
+          "classification": "published-related-functional-gap-review",
+          "targetScreen": "ciw.containers"
+        },
+        {
+          "application": "form_pp_container",
+          "recordedState": "Parcial",
+          "classification": "published-related-functional-gap-review",
+          "targetScreen": "ciw.container-painel"
+        },
+        {
+          "application": "menu_container",
+          "recordedState": "Parcial",
+          "classification": "published-related-functional-gap-review",
+          "targetScreen": "ciw.container-painel"
+        }
+      ]
+    },
+    {
+      "family": "Cotações e referências ERP",
+      "notClosedOrigins": 10,
+      "principalOrigins": [
+        "bl_sincr_cotacao",
+        "bl_atu_dolar_dia",
+        "form_pp_container_cotacoes",
+        "bl_getCotacaoEms2"
+      ],
+      "status": "1054 coordenador/adapters preparado e testado localmente; sem hooklogin/ativação. Gates de triggers, vetorEMS30/31, concorrência e wrapper físico permanecem. Outras pontes exigem rastreio próprio.",
+      "origins": [
+        {
+          "application": "bl_atu_dolar_dia",
+          "recordedState": "Parcial",
+          "classification": "published-related-functional-gap-review",
+          "targetScreen": "ciw.cotacoes-bc-buscar"
+        },
+        {
+          "application": "bl_buscarCotacaoVendaContainer",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_getCotacaoEms2",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_getCpsTbs",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_getMovtoEstoqPorData",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_pegar_dolar",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_sincr_cotacao",
+          "recordedState": "Pendente",
+          "classification": "assigned-current-wave",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_hist_cotacoes_bc",
+          "recordedState": "Parcial",
+          "classification": "published-related-functional-gap-review",
+          "targetScreen": "ciw.cotacoes-bc"
+        },
+        {
+          "application": "cons_tit_ap",
+          "recordedState": "Parcial",
+          "classification": "published-related-functional-gap-review",
+          "targetScreen": "ciw.titulos-pagar-med"
+        },
+        {
+          "application": "form_pp_container_cotacoes",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        }
+      ]
+    },
+    {
+      "family": "Custos, versões e simulações",
+      "notClosedOrigins": 26,
+      "principalOrigins": [
+        "cons_item_container_custos_comparacao_real",
+        "cons_item_container_custos_comparacao_dolar",
+        "form_item_custos_manual",
+        "form_item_custos"
+      ],
+      "status": "Comparações1040/41:69compilações/8.020checks TT oficiais,12fontes canônicas e17artefatos runtime publicados. PASOE87checks aprovados nas duas moedas; suplemento separado de8chamadas comprovou segunda página real com take1/total2 e GET da segunda linha, sem alegar conjunto acima de200. Duas telas1040/1041v1.0.0 e pai1005v1.0.3 já publicados87385, recibo3378023e…, fonte150preservando146/auth; validação nativa real concluída em17chamadas funcionais:duas telas/read/get/filtro decimal observado/contexto e segunda página total2; acesso humano ainda não concedido, sem prova visualLDAP. Exportação/impressão legadas permanecem lacunas; não declarar equivalência integral nem promover as origens. Filtros decimais Builder205 já integrados. Histórico e quatro consultas filhas publicados; as quatro leituras AUX foram aplicadas/verificadas. Manual1051 só leitura. Demais formulários/médias exigem confronto próprio.",
+      "origins": [
+        {
+          "application": "bl_chama_cons_item_custos",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_item_custos",
+          "recordedState": "Preparado",
+          "classification": "candidate-not-published-verify-gap",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_item_custos_gravacao",
+          "recordedState": "Preparado",
+          "classification": "candidate-not-published-verify-gap",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_ponte_versoes_item_custo_container",
+          "recordedState": "Pendente",
+          "classification": "assigned-current-wave",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_seleciona_form_item_custos",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_det_versoes_item_custo_container",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_item_container_custo_descontos",
+          "recordedState": "Pendente",
+          "classification": "assigned-current-wave",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_item_container_custo_despesas",
+          "recordedState": "Pendente",
+          "classification": "assigned-current-wave",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_item_container_custo_nfs",
+          "recordedState": "Pendente",
+          "classification": "assigned-current-wave",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_item_container_custo_pgtos",
+          "recordedState": "Pendente",
+          "classification": "assigned-current-wave",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_item_container_custos",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_item_container_custos_comparacao_dolar",
+          "recordedState": "Pendente",
+          "classification": "assigned-current-wave",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_item_container_custos_comparacao_real",
+          "recordedState": "Pendente",
+          "classification": "assigned-current-wave",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_item_custos",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_item_custos_det_media",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_itens_media_custo",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_versoes_item_custo_container",
+          "recordedState": "Parcial",
+          "classification": "assigned-current-wave",
+          "targetScreen": "ciw.container-versoes-custo"
+        },
+        {
+          "application": "contr_item_custos",
+          "recordedState": "Preparado",
+          "classification": "candidate-not-published-verify-gap",
+          "targetScreen": ""
+        },
+        {
+          "application": "form_item_custos",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "form_item_custos_container",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "form_item_custos_manual",
+          "recordedState": "Pendente",
+          "classification": "assigned-current-wave",
+          "targetScreen": ""
+        },
+        {
+          "application": "form_item_custos_media_01",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "form_item_custos_media_cons",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "form_itens_media_custo",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "form_medias_custo",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "form_versoes_item_custo_container",
+          "recordedState": "Preparado",
+          "classification": "assigned-current-wave",
+          "targetScreen": ""
+        }
+      ]
+    },
+    {
+      "family": "Descontos e créditos",
+      "notClosedOrigins": 14,
+      "principalOrigins": [
+        "cons_descontos_importacao",
+        "cons_desc_geral_fornec",
+        "form_descontos_importacao",
+        "form_cta_corren_desconto",
+        "ctrl_desc_canc_media"
+      ],
+      "status": "Consultas1045/1046 publicadas; acesso aplicado e verificado pelo root. Manutenção, estorno/cancelamento e outras consultas não estão encerrados por essa entrega.",
+      "origins": [
+        {
+          "application": "bl_ponte_descontos_importacao",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_cta_corren_desconto",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_desc_geral_fornec",
+          "recordedState": "Pendente",
+          "classification": "assigned-current-wave",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_descontos_geral",
+          "recordedState": "Pendente",
+          "classification": "assigned-current-wave",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_descontos_imp_geral",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_descontos_importacao",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_det_desconto_geral",
+          "recordedState": "Pendente",
+          "classification": "assigned-current-wave",
+          "targetScreen": ""
+        },
+        {
+          "application": "grid_cta_corren_desconto",
+          "recordedState": "Pendente",
+          "classification": "assigned-current-wave",
+          "targetScreen": ""
+        },
+        {
+          "application": "grid_descontos_importacao",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "grid_descontos_importacao_itens",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "ctrl_desc_canc_media",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "form_cta_corren_desconto",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "form_descontos_importacao",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "form_descontos_importacao_item",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        }
+      ]
+    },
+    {
+      "family": "Despesas e fiscal do container",
+      "notClosedOrigins": 9,
+      "principalOrigins": [
+        "form_despesas_container_multi_reg",
+        "cons_selec_despesas",
+        "bl_calcular_impostos_container",
+        "bl_criar_despesas_container"
+      ],
+      "status": "Fiscal/memória e processos1043/1047 publicados, sem run operacional desses processos. 1042 API/tela publicadas e três acessos aprovados já aplicados/verificados; cenário novo2147000110 executado pelo root, com verificação final de limpeza concluída e logs preservados. ALL1044 depende de uso real.",
+      "origins": [
+        {
+          "application": "bl_calcular_impostos_container",
+          "recordedState": "Pendente",
+          "classification": "assigned-current-wave",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_criar_despesas_container",
+          "recordedState": "Pendente",
+          "classification": "assigned-current-wave",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_funcoes_rateio_despesas_item",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_sincrIpiItensContainer",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_calcs_imp_container",
+          "recordedState": "Pendente",
+          "classification": "assigned-current-wave",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_despesas_container_memoria_calculo",
+          "recordedState": "Pendente",
+          "classification": "assigned-current-wave",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_selec_despesas",
+          "recordedState": "Pendente",
+          "classification": "assigned-current-wave",
+          "targetScreen": ""
+        },
+        {
+          "application": "grid_despesas_container",
+          "recordedState": "Parcial",
+          "classification": "published-related-functional-gap-review",
+          "targetScreen": "ciw.container-despesas"
+        },
+        {
+          "application": "form_despesas_container_multi_reg",
+          "recordedState": "Preparado",
+          "classification": "assigned-current-wave",
+          "targetScreen": ""
+        }
+      ]
+    },
+    {
+      "family": "Distribuição de custos",
+      "notClosedOrigins": 7,
+      "principalOrigins": [
+        "cons_distr_custo_geracao_saldo",
+        "grid_despesas_container_distr_custo",
+        "bl_distr_custo",
+        "bl_saldo_inicial_distr_custo"
+      ],
+      "status": "Consulta1049 e extrato por item1050 publicados. Extrato geral1048 ainda exige absorver UNION/NULL/ordem/identidade legadas; geração/movimentação e próprios formulários permanecem separados.",
+      "origins": [
+        {
+          "application": "bl_distr_custo",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_distribuir_custo_contr",
+          "recordedState": "Preparado",
+          "classification": "candidate-not-published-verify-gap",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_saldo_inicial_distr_custo",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_distr_custo_geracao_saldo",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_itens_aptos_distr_custo",
+          "recordedState": "Pendente",
+          "classification": "assigned-current-wave",
+          "targetScreen": ""
+        },
+        {
+          "application": "grid_despesas_container_distr_custo",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "ctrl_simul_distr_custo",
+          "recordedState": "Preparado",
+          "classification": "candidate-not-published-verify-gap",
+          "targetScreen": ""
+        }
+      ]
+    },
+    {
+      "family": "Financeiro e contas correntes",
+      "notClosedOrigins": 28,
+      "principalOrigins": [
+        "cons_cta_corren_custo_distr",
+        "cons_cta_corren_res_ped",
+        "cons_tit_ap_associar_container",
+        "cons_tit_ap_associar_container_apos_di",
+        "cons_tit_ap_associar_pedido"
+      ],
+      "status": "Há serviços e consultas publicados, mas falta reconciliar cada origem e suas ações/contextos. A exclusão pontual do menu Conta corrente fornecedor não exclui toda a família.",
+      "origins": [
+        {
+          "application": "bl_ajustarCtaCorrenFornec",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_cta_corren_fornec",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_eliminarLanctosCtaCorrenPedImp",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_estornarSaldoPgtosItemPed",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_gerarLanctosCtaCorrenPedImp",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_gerarLanctosPedidosIntegrCtaCorrente",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_gerar_conta_corrente",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_selecao_pagto_container",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_selecionado_pagto_container",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_sincrQtEmbarcadaCtaCorrenFornec",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_cta_corren_custo_distr",
+          "recordedState": "Pendente",
+          "classification": "assigned-current-wave",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_cta_corren_distr_item_container",
+          "recordedState": "Pendente",
+          "classification": "assigned-current-wave",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_cta_corren_fornec_imp",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_cta_corren_fornec_imp_embarcado",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_cta_corren_fornec_imp_entregue",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_cta_corren_fornec_imp_nao_embarcado",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_cta_corren_fornec_imp_saldos",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_cta_corren_fornec_imp_tudo",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_cta_corren_res_ped",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_tit_ap_associados_container",
+          "recordedState": "Parcial",
+          "classification": "published-related-functional-gap-review",
+          "targetScreen": "ciw.container-pagamentos"
+        },
+        {
+          "application": "cons_tit_ap_associados_pedido",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_tit_ap_associar_container",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_tit_ap_associar_container_apos_di",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_tit_ap_associar_pedido",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_tit_ap_container",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "form_cta_corren_custo_distr",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "form_cta_corren_custo_distr_inc",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "form_cta_corren_fornec_imp",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        }
+      ]
+    },
+    {
+      "family": "Identidade e permissões",
+      "notClosedOrigins": 6,
+      "principalOrigins": [
+        "app_login",
+        "ctrl_login_html",
+        "bl_getProgUsuario",
+        "bl_permissoes",
+        "bl_timeout"
+      ],
+      "status": "Autenticação existente preservada. Revisão geral e novos acessos ficam na etapa final; não repetir permissões já consumidas.",
+      "origins": [
+        {
+          "application": "app_login",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "ctrl_login_html",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_getProgUsuario",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_permissoes",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_tela_login",
+          "recordedState": "Parcial",
+          "classification": "published-related-functional-gap-review",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_timeout",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        }
+      ]
+    },
+    {
+      "family": "Logs e auditoria",
+      "notClosedOrigins": 13,
+      "principalOrigins": [
+        "cons_logs",
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "cons_itens_log",
+        "grid_sc_log"
+      ],
+      "status": "Auditoria nova já existe nos fluxos convertidos; consulta histórica e aplicações legadas de logs ainda precisam contrato/confronto próprios.",
+      "origins": [
+        {
+          "application": "bl_gerar_log_db",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_getGerarLogUsuarioCorrente",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_log_calc_itens",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_log_db",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_logs",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_transacoes",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_itens_log",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_log_apl",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_log_inc_alt",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_logs",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "grid_sc_log",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "ctrl_tipo_log",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "form_sc_log",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        }
+      ]
+    },
+    {
+      "family": "Navegação e utilitários transversais",
+      "notClosedOrigins": 3,
+      "principalOrigins": [
+        "menu",
+        "bl_list",
+        "bl_processando"
+      ],
+      "status": "Reconciliar eventos, parâmetros e retornos das pontes. Não são necessariamente novas telas.",
+      "origins": [
+        {
+          "application": "bl_list",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_processando",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "menu",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        }
+      ]
+    },
+    {
+      "family": "Pedidos de importação e alocação",
+      "notClosedOrigins": 9,
+      "principalOrigins": [
+        "cons_procs_compra",
+        "form_proc_compra",
+        "bl_criar_itens_container",
+        "grid_controles_proc_compra",
+        "form_itens_controle"
+      ],
+      "status": "Serviços principais de pedidos/alocação já entregues; origens restantes exigem confronto específico. Quatro aplicações de Controles ficam para o FINAL, por determinação do usuário.",
+      "origins": [
+        {
+          "application": "bl_criar_itens_container",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_voltar_selecao_ped_importacao",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_procs_compra",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": "ciw.processos-compra-med"
+        },
+        {
+          "application": "grid_controles_proc_compra",
+          "recordedState": "Pendente",
+          "classification": "final-user-deferred",
+          "targetScreen": ""
+        },
+        {
+          "application": "grid_itens_controle",
+          "recordedState": "Pendente",
+          "classification": "final-user-deferred",
+          "targetScreen": ""
+        },
+        {
+          "application": "form_cons_fornec_imp",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "form_controles_proc_compra",
+          "recordedState": "Pendente",
+          "classification": "final-user-deferred",
+          "targetScreen": ""
+        },
+        {
+          "application": "form_itens_controle",
+          "recordedState": "Pendente",
+          "classification": "final-user-deferred",
+          "targetScreen": ""
+        },
+        {
+          "application": "form_proc_compra",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": "ciw.processos-compra-med"
+        }
+      ]
+    },
+    {
+      "family": "Visões operacionais e sinalizadores",
+      "notClosedOrigins": 8,
+      "principalOrigins": [
+        "cons_planilha",
+        "bl_resumo",
+        "cons_pedidos_por_item_ref_container",
+        "menu_vendas_container"
+      ],
+      "status": "Sinalizadores MED entregues não encerram planilhas, visões globais ou seleção de vendas por semelhança.",
+      "origins": [
+        {
+          "application": "bl_cons_controle_importacao",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_cons_planilha",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_resumo",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "bl_selec_vendas_container",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_pedidos_por_item_ref_container",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "cons_planilha",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "menu_ctrl_importacao",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        },
+        {
+          "application": "menu_vendas_container",
+          "recordedState": "Pendente",
+          "classification": "active-backlog-verify-source",
+          "targetScreen": ""
+        }
+      ]
+    }
+  ],
+  "inventoryChanged": false,
+  "completionClaim": false,
+  "comparisonPublicationEvidence": {
+    "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\build13-metadata-publication-preparation\\metadata-publication.json",
+    "sha256": "3378023ed0b4ec643747213a85794592c7a7509324eec8f38476b6772e9eae1a",
+    "nativePostPublicationPending": false,
+    "humanGrantApplied": false,
+    "originPromotion": false
+  }
+}

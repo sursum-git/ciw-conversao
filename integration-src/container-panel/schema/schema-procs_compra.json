@@ -1,0 +1,210 @@
+{
+  "database": "espec",
+  "table": "procs_compra",
+  "fields": [
+    {
+      "name": "proc_compra_id",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "empresa_id",
+      "type": "integer",
+      "format": ">>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "qt_container",
+      "type": "integer",
+      "format": ">9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_situacao",
+      "type": "integer",
+      "format": ">9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_proc_fornec",
+      "type": "character",
+      "format": "x(50)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "qt_dias_translado",
+      "type": "integer",
+      "format": ">>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cotacao_prevista",
+      "type": "decimal",
+      "format": ">>9.99999",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "observacao",
+      "type": "character",
+      "format": "x(8000)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dt_registro",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "fornecedor_id",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dt_limite",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_facilid_contato_fornec",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "Sim",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_considerar_previsao",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "Sim",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "nr_container_original",
+      "type": "character",
+      "format": "x(8)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    }
+  ],
+  "indexes": [
+    {
+      "name": "ind_cod_situacao",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod_situacao"
+      ]
+    },
+    {
+      "name": "ind_empresa",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "empresa_id"
+      ]
+    },
+    {
+      "name": "ind_fornecedor",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "fornecedor_id"
+      ]
+    },
+    {
+      "name": "ind_procs_compra",
+      "unique": true,
+      "primary": true,
+      "fields": [
+        "proc_compra_id"
+      ]
+    }
+  ],
+  "triggers": [
+  ]
+}

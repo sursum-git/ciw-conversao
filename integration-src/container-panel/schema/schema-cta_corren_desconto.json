@@ -1,0 +1,106 @@
+{
+  "database": "espec",
+  "table": "cta_corren_desconto",
+  "fields": [
+    {
+      "name": "cta_corren_desconto_id",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "desconto_importacao_id",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "container_id",
+      "type": "integer",
+      "format": ">>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "valor_utilizado",
+      "type": "decimal",
+      "format": ">,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "data",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_usuario",
+      "type": "date",
+      "format": "99\/99\/99",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    }
+  ],
+  "indexes": [
+    {
+      "name": "ind_container",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "container_id"
+      ]
+    },
+    {
+      "name": "ind_desconto",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "desconto_importacao_id"
+      ]
+    },
+    {
+      "name": "primario",
+      "unique": true,
+      "primary": true,
+      "fields": [
+        "cta_corren_desconto_id"
+      ]
+    }
+  ],
+  "triggers": [
+  ]
+}

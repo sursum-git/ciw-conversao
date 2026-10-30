@@ -1,0 +1,107 @@
+{
+  "source_manifest": "integration-src/ciw-inventory/phase1-source-manifest.json",
+  "sources_are_sanitized_analysis_copies": true,
+  "paths": [
+    {
+      "application": "bl_tela_login",
+      "source": "sources/scriptcase/phase1/bl_tela_login/index.php",
+      "active_entry": "POST usuario/senha/sistema calls validarLogin and aplicarPermissoesSC",
+      "identity_helper": "getDadosUserWeb uses espec.user-web, equality by login",
+      "permission_helper": "aplicarPermissoesSC selects grupos_aplicacoes by usuarios_grupos.login_usuario",
+      "legacy_state": "Scriptcase per-application session configuration; not copied as the new authorization engine"
+    },
+    {
+      "application": "app_login",
+      "source": "sources/scriptcase/phase1/app_login/app_login_apl.php",
+      "active_entry": "s_users active=Y; empty usuario_ad compares stored password, otherwise sc_ldap_login with IMA\\usuario_ad",
+      "relation_to_primary_entry": "separate available entry; not proof that the current bl_tela_login path uses LDAP"
+    },
+    {
+      "application": "bl_permissoes",
+      "source": "sources/scriptcase/phase1/bl_permissoes/index.php",
+      "helper": "getProgUsuario uses modulos/programas/s_groups_apps/s_users_groups",
+      "relation_to_progress_groups": "different permission source; do not merge by matching numeric IDs"
+    }
+  ],
+  "proven_construtor_contract": {
+    "session_source": "RuntimeUserSession.sessionProperties.authentication.provider",
+    "writer": "AuthService.completeAuthenticatedLogin",
+    "transport": "RuntimeExternalJsonClient.request with responseContract=sursum-programs",
+    "ldap_provider_exists": true,
+    "global_php_ldap_extension_enabled": false,
+    "ldap_provider_activation_or_configuration_changed": false
+  },
+  "physical_fields": {
+    "user-web": [
+      "Login",
+      "ativo",
+      "id",
+      "usuario",
+      "tp-usuario"
+    ],
+    "usuarios_grupos": [
+      "login_usuario",
+      "cod_grupo"
+    ],
+    "grupos_aplicacoes": [
+      "cod_grupo",
+      "nome_aplicacao",
+      "acesso_permitido",
+      "insercao_permitida",
+      "alteracao_permitida",
+      "exclusao_permitida",
+      "exportacao_permitida",
+      "impressao_permitida"
+    ]
+  },
+  "schema_evidence": {
+    "source": "existing PASOE metadata endpoint, sursum-api/med via loopback tunnel19910",
+    "business_records_read": false,
+    "files": [
+      "schema/user_web-runtime-fields.json",
+      "schema/usuarios_grupos-runtime-fields.json",
+      "schema/grupos-aplicacoes-runtime-fields.json"
+    ],
+    "index_information": "field membership in indices is returned; uniqueness not inferred",
+    "compiler_12_2_probe": "completed; schema/schema12.2-*.json; unique Login, nonunique id, composite unique membership/grants"
+  },
+  "scope_exclusion": {
+    "label": "Conta corrente fornecedor",
+    "section": "Tarefas",
+    "technical_target": "not confirmed; dynamic menu metadata unavailable",
+    "effect": "do not convert this item; other shared financial routines not automatically excluded"
+  },
+  "auth_library_investigation": {
+    "evidence": "auth-library-evidence.json",
+    "report": "docs/ciw-autenticacao-bibliotecas.md",
+    "files_read": 1363,
+    "relevant_definitions": 15,
+    "business_records_read": false,
+    "php_executed": false,
+    "primary_observed_mechanism": "Progress espec.user-web login/password equality and ativo; no LDAP call in validarLogin",
+    "separate_app_login_mechanism": "s_users; local password if usuario_ad empty, otherwise LDAP",
+    "ldap_server_in_source": "192.168.0.61",
+    "ldap_domain_in_source": "IMA",
+    "runtime_bind_validated": false,
+    "construtor_provider_implemented": true
+  },
+  "selected_authentication_entry": {
+    "application": "bl_tela_login",
+    "selected_by": "explicit_user_message",
+    "selected_on": "2026-10-17",
+    "mechanism": "Progress espec.user-web",
+    "proposed_provider": "ima-user-web",
+    "design": "docs/superpowers/specs/2026-10-17-ciw-login-progress-design.md",
+    "implementation_status": "real_login_verified_ima_source_enabled_positive_acl_pending",
+    "ldap_not_selected": true,
+    "design_approved_on": "2026-10-17",
+    "design_approval": "Aprovar o desenho complementar",
+    "implementation_plan": "docs/superpowers/plans/2026-10-17-ciw-login-progress.md",
+    "execution_method": "inline_already_selected",
+    "plan_approval": "Aprovar o plano e executar aqui",
+    "linked_account": "tasilpar/default",
+    "positive_real_login_verified": true,
+    "authorization_positive_verified": false,
+    "real_account_acl_result": "tasilpar:5membershipRows,0grantsColoracoes,7denied"
+  }
+}

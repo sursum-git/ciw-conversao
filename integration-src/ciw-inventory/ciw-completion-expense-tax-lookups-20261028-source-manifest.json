@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "scope": [
+    "grid_despesas_impostos/grid_despesas_impostos_lookup.class.php",
+    "form_despesas_impostos/form_despesas_impostos_lookup.class.php"
+  ],
+  "files": [
+    {
+      "file": "grid_despesas_impostos/grid_despesas_impostos_lookup.class.php",
+      "exists": true,
+      "remote_sha256": "0338ba51658129c761e0bcb4164e88f02fb4319bfc5d47396a6ea1a31e610b26",
+      "copied_sha256": "0338ba51658129c761e0bcb4164e88f02fb4319bfc5d47396a6ea1a31e610b26",
+      "sensitive_assignment_lines_omitted": 0
+    },
+    {
+      "file": "form_despesas_impostos/form_despesas_impostos_lookup.class.php",
+      "exists": false
+    }
+  ],
+  "readOnly": true,
+  "executeLegacyPhp": false,
+  "sanitizedBeforePersist": true,
+  "noFallback": true
+}

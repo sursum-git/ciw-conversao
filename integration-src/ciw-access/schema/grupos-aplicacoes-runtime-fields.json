@@ -1,0 +1,113 @@
+{
+  "success": true,
+  "database": "espec",
+  "updatedAt": "16/10/2026 17:10:12,563-03:00",
+  "table": "grupos_aplicacoes",
+  "tableLastUpdate": "",
+  "data": [
+    {
+      "name": "cod_grupo",
+      "database": "espec",
+      "type": "integer",
+      "label": "Grupo",
+      "format": ">9",
+      "viewAs": "",
+      "listExpression": "",
+      "options": [],
+      "mandatory": false,
+      "extent": 0,
+      "indices": "primario"
+    },
+    {
+      "name": "nome_aplicacao",
+      "database": "espec",
+      "type": "character",
+      "label": "Aplicação",
+      "format": "x(128)",
+      "viewAs": "",
+      "listExpression": "",
+      "options": [],
+      "mandatory": false,
+      "extent": 0,
+      "indices": "primario"
+    },
+    {
+      "name": "acesso_permitido",
+      "database": "espec",
+      "type": "character",
+      "label": "Acesso Permitido?",
+      "format": "x(1)",
+      "viewAs": "",
+      "listExpression": "",
+      "options": [],
+      "mandatory": false,
+      "extent": 0,
+      "indices": ""
+    },
+    {
+      "name": "insercao_permitida",
+      "database": "espec",
+      "type": "character",
+      "label": "",
+      "format": "x(1)",
+      "viewAs": "",
+      "listExpression": "",
+      "options": [],
+      "mandatory": false,
+      "extent": 0,
+      "indices": ""
+    },
+    {
+      "name": "exclusao_permitida",
+      "database": "espec",
+      "type": "character",
+      "label": "Exclusão permitida?",
+      "format": "x(1)",
+      "viewAs": "",
+      "listExpression": "",
+      "options": [],
+      "mandatory": false,
+      "extent": 0,
+      "indices": ""
+    },
+    {
+      "name": "alteracao_permitida",
+      "database": "espec",
+      "type": "character",
+      "label": "Alteração Permitida ?",
+      "format": "x(1)",
+      "viewAs": "",
+      "listExpression": "",
+      "options": [],
+      "mandatory": false,
+      "extent": 0,
+      "indices": ""
+    },
+    {
+      "name": "exportacao_permitida",
+      "database": "espec",
+      "type": "character",
+      "label": "Exportação Permitida?",
+      "format": "x(1)",
+      "viewAs": "",
+      "listExpression": "",
+      "options": [],
+      "mandatory": false,
+      "extent": 0,
+      "indices": ""
+    },
+    {
+      "name": "impressao_permitida",
+      "database": "espec",
+      "type": "character",
+      "label": "Impressão Permitida",
+      "format": "x(1)",
+      "viewAs": "",
+      "listExpression": "",
+      "options": [],
+      "mandatory": false,
+      "extent": 0,
+      "indices": ""
+    }
+  ]
+}

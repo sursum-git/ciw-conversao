@@ -1,0 +1,62 @@
+{
+  "database": "espec",
+  "table": "despesas_impostos",
+  "fields": [
+    {
+      "name": "despesa_id",
+      "type": "integer",
+      "format": ">>>9",
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "imposto_id",
+      "type": "integer",
+      "format": ">>>9",
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "empresa_id",
+      "type": "integer",
+      "format": ">>9",
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    }
+  ],
+  "indexes": [
+    {
+      "name": "ind_despesas_impostos",
+      "unique": true,
+      "primary": true,
+      "fields": [
+        "despesa_id",
+        "imposto_id",
+        "empresa_id"
+      ]
+    }
+  ],
+  "triggers": [
+  ],
+  "tipoAnexoIdTables": [
+    "despesas_proc_compra",
+    "despesas",
+    "despesas_container",
+    "empresas_despesa",
+    "item_container_custo_despesas",
+    "relacs_desp_calculada",
+    "relacs_desp_calculadas"
+  ]
+}

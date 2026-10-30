@@ -1,0 +1,206 @@
+{
+  "scope": [
+    "bl_atu_dolar_dia",
+    "bl_getCotacaoEms2",
+    "bl_pegar_dolar",
+    "cons_fornecedor",
+    "cons_fornecedor_estrangeiro",
+    "cons_hist_cotacoes_bc",
+    "cons_itens",
+    "cons_nota_fiscal",
+    "cons_representante_ativos",
+    "cons_tit_ap"
+  ],
+  "analysis_copies": true,
+  "files": [
+    {
+      "application": "bl_atu_dolar_dia",
+      "file": "bl_atu_dolar_dia.php",
+      "remote_sha256": "fe5cd2e86f0c5348be6e87e7481781e405fd0b3f5f2542729c070226cfd8c303",
+      "copied_sha256": "fe5cd2e86f0c5348be6e87e7481781e405fd0b3f5f2542729c070226cfd8c303",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_atu_dolar_dia",
+      "file": "index.php",
+      "remote_sha256": "a335badfb64facf210f9788df6015b77a0eb5a7d884b4fdaba6f0ff75d6b2cfd",
+      "copied_sha256": "fd2558e2478e92f03ef3385e80633f37fb063543fbc1189379be95431ab2d61d",
+      "sensitive_literals_omitted": 17
+    },
+    {
+      "application": "bl_getCotacaoEms2",
+      "file": "bl_getCotacaoEms2.php",
+      "remote_sha256": "7d2488fb94f214e8ec9d24df2657746da2eec88d018c62b312f6af8715f075ad",
+      "copied_sha256": "7d2488fb94f214e8ec9d24df2657746da2eec88d018c62b312f6af8715f075ad",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_getCotacaoEms2",
+      "file": "index.php",
+      "remote_sha256": "fcb1eab80dbc75a476f486e9c19f7b754fd7542978e2361664cb8e8993e29262",
+      "copied_sha256": "d70f79bc9606fa3454d19d482df829008e3fbb10eb3c11bb67a090b80ecac500",
+      "sensitive_literals_omitted": 17
+    },
+    {
+      "application": "bl_pegar_dolar",
+      "file": "bl_pegar_dolar.php",
+      "remote_sha256": "0411b841adb6dc83f73842e77d5a16dfb4e3689d4e8412707331899358c67a87",
+      "copied_sha256": "0411b841adb6dc83f73842e77d5a16dfb4e3689d4e8412707331899358c67a87",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_pegar_dolar",
+      "file": "index.php",
+      "remote_sha256": "c9445a93a61ac4605375fbc14daee1ab44d53e85bf14c082d67fc103b366d0d2",
+      "copied_sha256": "4c98d1383174c03a827d5eca33eefe5321be3c928c0f9e6e0d0b6deb18a09a9a",
+      "sensitive_literals_omitted": 17
+    },
+    {
+      "application": "cons_fornecedor",
+      "file": "cons_fornecedor.php",
+      "remote_sha256": "83bab2c0e1d2a3f3fa1f22a9066388c0a37d33e5e9a4e82081a4830b91686b58",
+      "copied_sha256": "83bab2c0e1d2a3f3fa1f22a9066388c0a37d33e5e9a4e82081a4830b91686b58",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_fornecedor",
+      "file": "cons_fornecedor_grid.class.php",
+      "remote_sha256": "5d90e78ec6a1fcdb22fad329a538ca9b1e7959728e371c83faede1caf43e5e71",
+      "copied_sha256": "81ac1831fb766122065f1e9923de9f6a51d0f5ea61c8ec0f2317671a63078210",
+      "sensitive_literals_omitted": 2
+    },
+    {
+      "application": "cons_fornecedor",
+      "file": "index.php",
+      "remote_sha256": "d9b2f1e9a4a61fb77bf1ba0f22e28eaa04e81cba6766ee729861ebe04dfb5106",
+      "copied_sha256": "eea8e31ebed56f7bad2bba3a3f9e789602953c65020ab5bf566e3d3f2f6afbff",
+      "sensitive_literals_omitted": 7
+    },
+    {
+      "application": "cons_fornecedor_estrangeiro",
+      "file": "cons_fornecedor_estrangeiro.php",
+      "remote_sha256": "604891f20aa216407919db56e88706539673f46c7e65fb3cb95756eaad1c73ef",
+      "copied_sha256": "604891f20aa216407919db56e88706539673f46c7e65fb3cb95756eaad1c73ef",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_fornecedor_estrangeiro",
+      "file": "cons_fornecedor_estrangeiro_grid.class.php",
+      "remote_sha256": "0371e041769dcfb799008e2b256448306e674b58ee818eaacf84c00516548fb1",
+      "copied_sha256": "e9be09c117011672ab08461fc6e41e9726cbb0f96c32a2cf4c533f75d3b28422",
+      "sensitive_literals_omitted": 2
+    },
+    {
+      "application": "cons_fornecedor_estrangeiro",
+      "file": "index.php",
+      "remote_sha256": "a4f5255d47986779f7f5587330028aebe0f72a6cce8684e91182f136b72b9a1e",
+      "copied_sha256": "13288b1ea7bb270a8f4640cce774fc6dddb9a35846302b959b7b10f90dbe1451",
+      "sensitive_literals_omitted": 7
+    },
+    {
+      "application": "cons_hist_cotacoes_bc",
+      "file": "cons_hist_cotacoes_bc.php",
+      "remote_sha256": "b81b65db87d8292242483303f28701379c9dfb31456c45e0881c3933c589075b",
+      "copied_sha256": "b81b65db87d8292242483303f28701379c9dfb31456c45e0881c3933c589075b",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_hist_cotacoes_bc",
+      "file": "cons_hist_cotacoes_bc_grid.class.php",
+      "remote_sha256": "4247ac3ececd9fb21506b321c17e38c8a7266c0d9f692149df1e44a04e675905",
+      "copied_sha256": "8b23e44e68a0e76327ceac4c0993115471ea7bfe5e1cd544cb7292e7e6cad623",
+      "sensitive_literals_omitted": 5
+    },
+    {
+      "application": "cons_hist_cotacoes_bc",
+      "file": "index.php",
+      "remote_sha256": "b7150c43fb208a8fb0464bd1d0721f20ba6521896d6f6affabae0376985ddee6",
+      "copied_sha256": "cf043d6679a5bd2e040a45a214cb15090e1b1d503e02e02c272a204075e17c42",
+      "sensitive_literals_omitted": 22
+    },
+    {
+      "application": "cons_itens",
+      "file": "cons_itens.php",
+      "remote_sha256": "47989a91cd54a40c246b8830eba7cb99d8931041070301bbb75ebb3e0320eb69",
+      "copied_sha256": "47989a91cd54a40c246b8830eba7cb99d8931041070301bbb75ebb3e0320eb69",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_itens",
+      "file": "cons_itens_grid.class.php",
+      "remote_sha256": "572cf04157dc4cc5ae77f82304132d023b63ef277871f1cc29c2fec719b1698c",
+      "copied_sha256": "0f847267f8ed14c455dca67551510f955568e6f16638e5b989a27c7e53c84f52",
+      "sensitive_literals_omitted": 4
+    },
+    {
+      "application": "cons_itens",
+      "file": "index.php",
+      "remote_sha256": "4625a59c0f180bd1c60089bfde3ed4dab12d48490d1ceb1b688b2908e5f13d23",
+      "copied_sha256": "f5cf0961492be15859133f37cfb502e55150d5df59c0e85dcb6629bae73192df",
+      "sensitive_literals_omitted": 9
+    },
+    {
+      "application": "cons_nota_fiscal",
+      "file": "cons_nota_fiscal.php",
+      "remote_sha256": "b860bd4d7494f4dfc54fe766227591c1c929ef09844ef2d4b8ed2cd40a06d9cf",
+      "copied_sha256": "b860bd4d7494f4dfc54fe766227591c1c929ef09844ef2d4b8ed2cd40a06d9cf",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_nota_fiscal",
+      "file": "cons_nota_fiscal_grid.class.php",
+      "remote_sha256": "9058affd680bf6c8d74450735343488fa67cf7d8e8b959caaaf56749173c063b",
+      "copied_sha256": "45dfd2c590cac184a1fc29caa735444116b0981660b349b5e52573d5c9ce21ea",
+      "sensitive_literals_omitted": 4
+    },
+    {
+      "application": "cons_nota_fiscal",
+      "file": "index.php",
+      "remote_sha256": "d5d818224965ff66d7bd26cbf69289ecbd96e7052e7be9ad5e0c874165a7b1f5",
+      "copied_sha256": "263927ef0eae8d66d494ec62d2348366737f0e41a82cfdcfb15f3831eb462bfe",
+      "sensitive_literals_omitted": 7
+    },
+    {
+      "application": "cons_representante_ativos",
+      "file": "cons_representante_ativos.php",
+      "remote_sha256": "c569be07fe36e04bdfa4142c222dd745afc0ee30c5eaac1f9a1508bef4a27576",
+      "copied_sha256": "c569be07fe36e04bdfa4142c222dd745afc0ee30c5eaac1f9a1508bef4a27576",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_representante_ativos",
+      "file": "cons_representante_ativos_grid.class.php",
+      "remote_sha256": "e8a9810730714eb41e906d553bf5ae62c8436a731f586499de4836cfd60687ef",
+      "copied_sha256": "d8f91c89fa6f5b0ea30f42c5a6a89ab99e357b535fbcb2155123d2318609f2d5",
+      "sensitive_literals_omitted": 2
+    },
+    {
+      "application": "cons_representante_ativos",
+      "file": "index.php",
+      "remote_sha256": "6dbac80f5432fc7134594d8d8cb5fa75f5f7c532dcca5c0c3f0415051c684def",
+      "copied_sha256": "49f1699fffa424f2a5367c6855cfef8a514eb9714ce0187055711103bddaebef",
+      "sensitive_literals_omitted": 7
+    },
+    {
+      "application": "cons_tit_ap",
+      "file": "cons_tit_ap.php",
+      "remote_sha256": "598c287cb4a02157ab50bdd130843c936253ffab4989138ee14f25a9b4ac3d6a",
+      "copied_sha256": "598c287cb4a02157ab50bdd130843c936253ffab4989138ee14f25a9b4ac3d6a",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_tit_ap",
+      "file": "cons_tit_ap_grid.class.php",
+      "remote_sha256": "0b484541b4114db85387e1d09e40a3090bbbe64057977821e29ff3d64b92d6eb",
+      "copied_sha256": "88d563f77aa4da59341c3d59904ac4052201162915156d602f7166d53cfa31c2",
+      "sensitive_literals_omitted": 3
+    },
+    {
+      "application": "cons_tit_ap",
+      "file": "index.php",
+      "remote_sha256": "fe8c42d33fd67939ea243f37c8bdae5cfe477cd59d4cbe039258a8a990bc6729",
+      "copied_sha256": "83f36156376d764db6e6b3ceafe3d74d72feaf4a902b5875555d9b488197fa5a",
+      "sensitive_literals_omitted": 23
+    }
+  ]
+}

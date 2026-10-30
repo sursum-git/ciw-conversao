@@ -1,0 +1,153 @@
+{
+  "relative": "programs/ImportDiscountsReadService.p",
+  "canonical": "D:\\opencode\\motor-progress\\v2\\sursum-api\\programs\\ImportDiscountsReadService.p",
+  "baselineSha256": "ad50ae2fc4a6ae5f0c4045912443f0895b9c24afb673fb3c06ebcb1a4fe3a148",
+  "candidateSha256": "bfd6ff61b0f2e8dc8c0934a37e8830066b9d520f39e87afaa1490c6a8c1c0c90",
+  "hunks": [
+    {
+      "baselineStart": 1215,
+      "baselineEnd": 1215,
+      "candidateStart": 1215,
+      "candidateEnd": 1309,
+      "beforeBase64": "",
+      "afterBase64": "REVGSU5FIFZBUklBQkxFIGlzU3VwcGxpZXIgQVMgTE9HSUNBTCBOTy1VTkRPLgpERUZJTkUgVkFSSUFCTEUgc3VwcGxpZXJJZCBBUyBJTlRFR0VSIE5PLVVORE8uCg=="
+    },
+    {
+      "baselineStart": 2168,
+      "baselineEnd": 2168,
+      "candidateStart": 2262,
+      "candidateEnd": 2610,
+      "beforeBase64": "",
+      "afterBase64": "RlVOQ1RJT04gU3VwcGxpZXJJZFZhbHVlIFJFVFVSTlMgSU5URUdFUigpOgogREVGSU5FIFZBUklBQkxFIHYgQVMgREVDSU1BTCBOTy1VTkRPLgogSUYgTk9UIHBvUmVxdWVzdDpIYXMoJ2Zvcm5lY2Vkb3JfaWQnKSBPUiBwb1JlcXVlc3Q6R2V0VHlwZSgnZm9ybmVjZWRvcl9pZCcpPD5Kc29uRGF0YVR5cGU6TlVNQkVSIFRIRU4gUkVUVVJOID8uCiB2PXBvUmVxdWVzdDpHZXREZWNpbWFsKCdmb3JuZWNlZG9yX2lkJykuCiBJRiB2PT8gT1IgdjwtMjE0NzQ4MzY0OCBPUiB2PjIxNDc0ODM2NDcgT1Igdjw+VFJVTkNBVEUodiwwKSBUSEVOIFJFVFVSTiA/LgogUkVUVVJOIElOVEVHRVIodikuCkVORCBGVU5DVElPTi4K"
+    },
+    {
+      "baselineStart": 2288,
+      "baselineEnd": 2424,
+      "candidateStart": 2730,
+      "candidateEnd": 2912,
+      "beforeBase64": "IElGIHBjUmVzb3VyY2U8PidpbXBvcnRfZGVzY29udG9zX2dlcmFsJyBBTkQgcGNSZXNvdXJjZTw+J2ltcG9ydF9kZXNjb250b3NfbGFuY2FtZW50b3MnIFRIRU4gUlVOIEZhaWwoJ0lNUE9SVF9ESVNDT1VOVFNfUkVTT1VSQ0UnLDQyMikuCg==",
+      "afterBase64": "IElGIHBjUmVzb3VyY2U8PidpbXBvcnRfZGVzY29udG9zX2dlcmFsJyBBTkQgcGNSZXNvdXJjZTw+J2ltcG9ydF9kZXNjb250b3NfbGFuY2FtZW50b3MnIEFORCBwY1Jlc291cmNlPD4naW1wb3J0X2Rlc2NvbnRvc19mb3JuZWNlZG9yJyBUSEVOIFJVTiBGYWlsKCdJTVBPUlRfRElTQ09VTlRTX1JFU09VUkNFJyw0MjIpLgo="
+    },
+    {
+      "baselineStart": 2477,
+      "baselineEnd": 2477,
+      "candidateStart": 2965,
+      "candidateEnd": 3019,
+      "beforeBase64": "",
+      "afterBase64": "IGlzU3VwcGxpZXI9cGNSZXNvdXJjZT0naW1wb3J0X2Rlc2NvbnRvc19mb3JuZWNlZG9yJy4K"
+    },
+    {
+      "baselineStart": 2904,
+      "baselineEnd": 2904,
+      "candidateStart": 3446,
+      "candidateEnd": 3512,
+      "beforeBase64": "",
+      "afterBase64": "IElGIGlzU3VwcGxpZXIgVEhFTiBhbGxvd2VkTmFtZXM9YWxsb3dlZE5hbWVzICsgJyxmb3JuZWNlZG9yX2lkJy4K"
+    },
+    {
+      "baselineStart": 3173,
+      "baselineEnd": 3308,
+      "candidateStart": 3781,
+      "candidateEnd": 4124,
+      "beforeBase64": "IGNvbGxlY3RvclBhdGg9U0VBUkNIKCdzdXJzdW0tYXBpL3Byb2dyYW1zL0ltcG9ydERpc2NvdW50c0NvbGxlY3Rvci5yJykuIHJlYWRlclBhdGg9U0VBUkNIKCdzdXJzdW0tYXBpL3Byb2dyYW1zL0Npd0VycFJlYWRTZXJ2aWNlLnInKS4K",
+      "afterBase64": "IElGIGlzU3VwcGxpZXIgVEhFTiBETzoKICBzdXBwbGllcklkPVN1cHBsaWVySWRWYWx1ZSgpLgogIElGIHN1cHBsaWVySWQ9PyBUSEVOIFJVTiBGYWlsKCdJTVBPUlRfRElTQ09VTlRTX0NPTlRFWFQnLDQyMikuCiBFTkQuCiBjb2xsZWN0b3JQYXRoPVNFQVJDSChJRiBpc1N1cHBsaWVyIFRIRU4gJ3N1cnN1bS1hcGkvcHJvZ3JhbXMvSW1wb3J0RGlzY291bnRzU3VwcGxpZXJDb2xsZWN0b3IucicgRUxTRSAnc3Vyc3VtLWFwaS9wcm9ncmFtcy9JbXBvcnREaXNjb3VudHNDb2xsZWN0b3IucicpLiByZWFkZXJQYXRoPVNFQVJDSCgnc3Vyc3VtLWFwaS9wcm9ncmFtcy9DaXdFcnBSZWFkU2VydmljZS5yJykuCg=="
+    },
+    {
+      "baselineStart": 3436,
+      "baselineEnd": 3608,
+      "candidateStart": 4252,
+      "candidateEnd": 4459,
+      "beforeBase64": "ICBSVU4gVkFMVUUoY29sbGVjdG9yUGF0aCkocGhEaXNjb3VudHMscGhMZWRnZXIsc2VsZWN0ZWRJZCxzdGFydGVkLDUwMDAwLElOUFVULU9VVFBVVCByb3dzUmVhZCxPVVRQVVQgVEFCTEUgdHRJbXBvcnREaXNjb3VudHNSZWFkLE9VVFBVVCBUQUJMRSB0dEltcG9ydERpc2NvdW50TGVkZ2VyUmVhZCkuCg==",
+      "afterBase64": "ICBSVU4gVkFMVUUoY29sbGVjdG9yUGF0aCkocGhEaXNjb3VudHMscGhMZWRnZXIsSUYgaXNTdXBwbGllciBUSEVOIHN1cHBsaWVySWQgRUxTRSBzZWxlY3RlZElkLHN0YXJ0ZWQsNTAwMDAsSU5QVVQtT1VUUFVUIHJvd3NSZWFkLE9VVFBVVCBUQUJMRSB0dEltcG9ydERpc2NvdW50c1JlYWQsT1VUUFVUIFRBQkxFIHR0SW1wb3J0RGlzY291bnRMZWRnZXJSZWFkKS4K"
+    },
+    {
+      "baselineStart": 3988,
+      "baselineEnd": 3988,
+      "candidateStart": 4839,
+      "candidateEnd": 5008,
+      "beforeBase64": "",
+      "afterBase64": "ICAgIElGIGlzU3VwcGxpZXIgQU5EICh0dEltcG9ydERpc2NvdW50c1JlYWQuZm9ybmVjZWRvcl9pZD0/IE9SIHR0SW1wb3J0RGlzY291bnRzUmVhZC5mb3JuZWNlZG9yX2lkPD5zdXBwbGllcklkKSBUSEVOIFJVTiBGYWlsKCdJTVBPUlRfRElTQ09VTlRTX0NPTlRFWFRfUkVTUE9OU0UnLDUwMykuCg=="
+    },
+    {
+      "baselineStart": 5548,
+      "baselineEnd": 5548,
+      "candidateStart": 6568,
+      "candidateEnd": 6620,
+      "beforeBase64": "",
+      "afterBase64": "ICBJRiBpc1N1cHBsaWVyIFRIRU4gY2xlYW46UmVtb3ZlKCdmb3JuZWNlZG9yX2lkJykuCg=="
+    }
+  ],
+  "unchangedRanges": [
+    {
+      "baselineStart": 0,
+      "baselineEnd": 1215,
+      "candidateStart": 0,
+      "candidateEnd": 1215,
+      "sha256": "0c21646130e72a852dca67258978d206f2bec756ee34e525adb31ff8d80a16ae"
+    },
+    {
+      "baselineStart": 1215,
+      "baselineEnd": 2168,
+      "candidateStart": 1309,
+      "candidateEnd": 2262,
+      "sha256": "d266639209ca64cb7f1fb15b5feb11ad87af79b6383c14d311df465c202a9a4d"
+    },
+    {
+      "baselineStart": 2168,
+      "baselineEnd": 2288,
+      "candidateStart": 2610,
+      "candidateEnd": 2730,
+      "sha256": "af4ee40cc7bcb41f6a02f6a2e98dfc0cc77585be1c511ab7d72f31e43c9a5e92"
+    },
+    {
+      "baselineStart": 2424,
+      "baselineEnd": 2477,
+      "candidateStart": 2912,
+      "candidateEnd": 2965,
+      "sha256": "fa84c1f80cbbc7f9ec729ca58d2bc9f1f1526422bbba7fc5fd735a25faa7a82d"
+    },
+    {
+      "baselineStart": 2477,
+      "baselineEnd": 2904,
+      "candidateStart": 3019,
+      "candidateEnd": 3446,
+      "sha256": "1accdd4feb34038e1ddc795d0b8f43a5298a20eb5f42b541549b6f29f1da3c22"
+    },
+    {
+      "baselineStart": 2904,
+      "baselineEnd": 3173,
+      "candidateStart": 3512,
+      "candidateEnd": 3781,
+      "sha256": "a8ca4c3c611d6a93b6ad67132a1334087fa8f26c9ed5a6b500ad4e254346bdba"
+    },
+    {
+      "baselineStart": 3308,
+      "baselineEnd": 3436,
+      "candidateStart": 4124,
+      "candidateEnd": 4252,
+      "sha256": "09f36eab274a726da91f3d2eed40210f87914ff4e42c052341e9e66322642b9d"
+    },
+    {
+      "baselineStart": 3608,
+      "baselineEnd": 3988,
+      "candidateStart": 4459,
+      "candidateEnd": 4839,
+      "sha256": "2492dd02265c02ef12abc230b7190d179c5091271a7ad533b544b1cd59f1d295"
+    },
+    {
+      "baselineStart": 3988,
+      "baselineEnd": 5548,
+      "candidateStart": 5008,
+      "candidateEnd": 6568,
+      "sha256": "846c8d852ab21d818a2ac2f51a4baf783123e99911fb33f146b34d8abad996c6"
+    },
+    {
+      "baselineStart": 5548,
+      "baselineEnd": 6788,
+      "candidateStart": 6620,
+      "candidateEnd": 7860,
+      "sha256": "4a694f00314d86e986cdff7ba5d1cf0587c12a1ac90110ce070c506207438975"
+    }
+  ],
+  "applyOnlyByExactBaseline": true
+}

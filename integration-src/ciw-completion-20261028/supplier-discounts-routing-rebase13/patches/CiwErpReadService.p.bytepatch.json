@@ -1,0 +1,33 @@
+{
+  "relative": "programs/CiwErpReadService.p",
+  "canonical": "D:\\opencode\\motor-progress\\v2\\sursum-api\\programs\\CiwErpReadService.p",
+  "baselineSha256": "8ecee3d853961e297598d533844da711c3f0dca058d7b4c35125fa8575b3581e",
+  "candidateSha256": "3eab006f6b1c579d75ba77ae2becbcd47af664f9a64124f2abadd16373de51e3",
+  "hunks": [
+    {
+      "baselineStart": 14443,
+      "baselineEnd": 14443,
+      "candidateStart": 14443,
+      "candidateEnd": 14912,
+      "beforeBase64": "",
+      "afterBase64": "ICBXSEVOICdpbXBvcnRfZGVzY29udG9zX2Zvcm5lY2Vkb3InIFRIRU4gQVNTSUdOIGNGaWVsZExpc3Q9J2Rlc2NvbnRvX2ltcG9ydGFjYW9faWQsbW90aXZvX2Rlc2NvbnRvX2lkLGRlc2NyaWNhbyxsb2dfY3JlZGl0byx2bF9kb2xhcix2bF9yZWFsLHZsX2NvdGFjYW9fZG9sYXIsaXRlbV9jb250YWluZXJfaWQsY29kX3RpcG8sZm9ybmVjZWRvcl9pZCx2bF9yZWFsX2F1dG9yaXphZG8sdmxfZG9sYXJfYXV0b3JpemFkbyxkdF9hdXRvcml6YWNhbyx2bF91dGlsaXosdmxfdXRpbGl6X2RldGFsaGUsdmxfc2FsZG8saXRlbV9jb2RpZ29fZXJwX2F0dWFsLGl0ZW1fZGVzY3JpY2FvX2F0dWFsLGZvcm5lY2Vkb3Jfbm9tZV9hYnJldl9hdHVhbCxtb3Rpdm9fZGVzY3JpY2FvX2F0dWFsLGFycXVpdm8nIGNBbGlhc0xpc3Q9Y0ZpZWxkTGlzdCBjS2V5TGlzdD0nZGVzY29udG9faW1wb3J0YWNhb19pZCcgYmFzZVdoZXJlPSdUUlVFJy4NCg=="
+    }
+  ],
+  "unchangedRanges": [
+    {
+      "baselineStart": 0,
+      "baselineEnd": 14443,
+      "candidateStart": 0,
+      "candidateEnd": 14443,
+      "sha256": "ab1b381b61882a7e2614a5603ff20703db4a63fd99946380a2bf5a88cd71e5d3"
+    },
+    {
+      "baselineStart": 14443,
+      "baselineEnd": 34655,
+      "candidateStart": 14912,
+      "candidateEnd": 35124,
+      "sha256": "efebac6ed055045a464c7b1e2769c2cdb11a7a4aca894cdb9a34ccea46cc1cd6"
+    }
+  ],
+  "applyOnlyByExactBaseline": true
+}

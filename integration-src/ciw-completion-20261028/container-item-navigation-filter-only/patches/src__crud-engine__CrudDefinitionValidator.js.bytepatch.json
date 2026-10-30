@@ -1,0 +1,30 @@
+{
+  "canonical": "D:\\opencode\\construtor-pg\\src\\crud-engine\\CrudDefinitionValidator.js",
+  "relative": "src/crud-engine/CrudDefinitionValidator.js",
+  "baselineSha256": "d02d5d03e569d8f3e78621c7ff5b72d700f191957ed5900f2e428863d625047b",
+  "candidateSha256": "a42792d03c65ef1e9b7c2a1b21f32c834861d63347789cde7e1e68202c6dfa0a",
+  "edits": [
+    {
+      "start": 4507,
+      "end": 4626,
+      "beforeBase64": "ICAgICAgICBpZiAoIWNsb3NlZChpdGVtLCBbImZpZWxkIiwgImZpbHRlciIsICJjcmVhdGVEZWZhdWx0IiwgInJlYWRvbmx5IiwgInJlcXVpcmVkIl0sICJjb250ZXh0RmllbGRzIikpIHsgcmV0dXJuOyB9DQo=",
+      "afterBase64": "ICAgICAgICBpZiAoIWNsb3NlZChpdGVtLCBbImZpZWxkIiwgImZpbHRlciIsICJjcmVhdGVEZWZhdWx0IiwgInJlYWRvbmx5IiwgInJlcXVpcmVkIiwgImZpbHRlck9ubHkiXSwgImNvbnRleHRGaWVsZHMiKSkgeyByZXR1cm47IH0NCiAgICAgICAgaWYgKE9iamVjdC5wcm90b3R5cGUuaGFzT3duUHJvcGVydHkuY2FsbChpdGVtLCAiZmlsdGVyT25seSIpICYmICh0eXBlb2YgaXRlbS5maWx0ZXJPbmx5ICE9PSAiYm9vbGVhbiIgfHwgKGl0ZW0uZmlsdGVyT25seSAmJiAoZGVmaW5pdGlvbi5wYWdlVHlwZSAhPT0gImNydWQiIHx8ICFmaWVsZHNbaXRlbS5maWVsZF0gfHwgZmllbGRzW2l0ZW0uZmllbGRdLnR5cGUgIT09ICJpbnRlZ2VyIiB8fCBpdGVtLnJlcXVpcmVkICE9PSBmYWxzZSB8fCBpdGVtLmZpbHRlciAhPT0gdHJ1ZSB8fCBpdGVtLnJlYWRvbmx5ICE9PSB0cnVlIHx8IGl0ZW0uY3JlYXRlRGVmYXVsdCAhPT0gZmFsc2UpKSkpIHsgZXJyb3JzLnB1c2goImZpbHRlck9ubHkgZXhpZ2UgY29udGV4dG8gaW50ZWdlciBvcGNpb25hbCByZWFkb25seSwgZmlsdHJvIGF0aXZvIGUgc2VtIGRlZmF1bHQgZGUgY3JpYWNhby4iKTsgfQ0K"
+    }
+  ],
+  "unchangedByteRanges": [
+    {
+      "baselineStart": 0,
+      "candidateStart": 0,
+      "bytes": 4507,
+      "sha256": "3f7ff416f06e66f900a5050f658cb9679cf142cb865a4970a15c59a8d9e443e7"
+    },
+    {
+      "baselineStart": 4626,
+      "candidateStart": 5095,
+      "bytes": 65805,
+      "sha256": "c1d77de88d43b86f2316d782cf9b055779167e7c0edc9cc186b37547ad917c40"
+    }
+  ],
+  "roundTripExact": true,
+  "role": "native-runtime-capability"
+}

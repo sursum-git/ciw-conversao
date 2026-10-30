@@ -1,0 +1,68 @@
+{
+  "textPatches": [
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwErpReadService.p",
+      "baselineSha256": "8d7d6da8069bdee82e5c4c95fca3df643e918ae10b96ef22d8a77459ac7bd3cc",
+      "candidateRuntimePath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/item-cost-manual/local/sursum-api/programs/CiwErpReadService.p",
+      "changes": [
+        {
+          "old": " CASE pcResource:\n",
+          "new": " CASE pcResource:\n  WHEN 'item_custos_manual' THEN ASSIGN cFieldList='item_custo_id,dt_hr_custo,vl_unit_novo,dt_referencia,caminho_arquivo,cod_tipo_custo,memoria_calculo,it_codigo,qt_estoque,qt_nf_mae,qt_etiq_container,qt_etiq_branco,qt_etiq_outros_container,vl_unit_anterior,cod_situacao,cod_usuario,qt_estoque_selecionado,it_codigo_media,qt_estoque_media,vl_unit_media,vl_unit_container,qt_container,media_custo_id' cAliasList=cFieldList cKeyList='item_custo_id' baseWhere=b:NAME + '.cod_tipo_custo = 1'.\n"
+        },
+        {
+          "old": "   WHEN 'LOGICAL' THEN o:Add(nameValue,LOGICAL(f:BUFFER-VALUE)).",
+          "new": "   WHEN 'LOGICAL' THEN o:Add(nameValue,LOGICAL(f:BUFFER-VALUE)).\n   WHEN 'DATETIME' THEN DO: IF pcResource<>'item_custos_manual' THEN RUN Fail('CIW_ERP_SCHEMA_INVALID',503). o:Add(nameValue,ISO-DATE(DATETIME(f:BUFFER-VALUE))). END."
+        },
+        {
+          "old": "  totalValue=totalValue + 1.\n",
+          "new": "  totalValue=totalValue + 1.\n  IF pcResource='item_custos_manual' AND totalValue>50000 THEN RUN Fail('CIW_ERP_QUERY_LIMIT',503).\n"
+        }
+      ]
+    },
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwCadastrosCrud.p",
+      "baselineSha256": "62cc9bdd4dc11b316f2c541e33ce09fb1506f7013b751dcdc1e75ffdf767c330",
+      "candidateRuntimePath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/item-cost-manual/local/sursum-api/programs/CiwCadastrosCrud.p",
+      "changes": [
+        {
+          "old": " CASE cResource:\n",
+          "new": " CASE cResource:\n  WHEN \"item_custos_manual\" THEN DO:\n   IF cOperation<>\"read\" AND cOperation<>\"get\" THEN DO: RUN ErrorResponse(\"CIW_ERP_READ_ONLY\",405). RETURN. END.\n   cService=SEARCH(\"sursum-api/programs/CiwErpReadService.r\").\n   IF cService=? THEN UNDO,THROW NEW Progress.Lang.AppError(\"Leitor de custos manuais indisponivel\",1).\n   CREATE BUFFER hData FOR TABLE \"espec.item_custos\" BUFFER-NAME \"bCiwManualItemCosts\".\n   cleanRequest=CAST(poRequest:Clone(),JsonObject). cleanRequest:Remove(\"resource\").\n   RUN VALUE(cService)(hData,\"item_custos_manual\",\"\",cleanRequest,OUTPUT poResponse). RETURN.\n  END.\n"
+        }
+      ]
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeCiwErpQuery.php",
+      "baselineSha256": "4b772859b435de0b0eaac360bf581400f8df771b8eeb7af037f43f53d659b0a9",
+      "candidateRuntimePath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/item-cost-manual/local/php/RuntimeCiwErpQuery.php",
+      "changes": [
+        {
+          "old": "private const RESOURCES=[",
+          "new": "private const RESOURCES=['item_custos_manual_progress'=>'item_custos_manual',"
+        },
+        {
+          "old": "['proc_compra_sinalizadores_med_progress','proc_compra_quantidades_med_progress'",
+          "new": "['item_custos_manual_progress','proc_compra_sinalizadores_med_progress','proc_compra_quantidades_med_progress'"
+        }
+      ]
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeApiEntityActionService.php",
+      "baselineSha256": "6f52ddca37b15b3494989b71b6f7ac05ce3b73c31d4562db62a61edd48ed51ff",
+      "candidateRuntimePath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/item-cost-manual/local/php/RuntimeApiEntityActionService.php",
+      "changes": [
+        {
+          "old": "        $containerFiscalKey = match ($definition['entityCode'] ?? null) {",
+          "new": "        if (RuntimeItemCostManualRead::supports($definition)) { RuntimeItemCostManualRead::readResponse($body); }\n        $containerFiscalKey = match ($definition['entityCode'] ?? null) {"
+        },
+        {
+          "old": "        $id = $this->extractRecordId($definition, $payload);\n        if (RuntimeImportDiscountRead::supports($definition))",
+          "new": "        $id = $this->extractRecordId($definition, $payload);\n        if (RuntimeItemCostManualRead::supports($definition)) { RuntimeItemCostManualRead::getRequest($definition,$payload,$id); }\n        if (RuntimeImportDiscountRead::supports($definition))"
+        },
+        {
+          "old": "            $mapped = $this->enrichRows($definition, [$this->mapItem($definition, $item)])[0] ?? [];",
+          "new": "            if (RuntimeItemCostManualRead::supports($definition)) { RuntimeItemCostManualRead::getResponse($response['body'],$item,$id); }\n            $mapped = $this->enrichRows($definition, [$this->mapItem($definition, $item)])[0] ?? [];"
+        }
+      ]
+    }
+  ]
+}

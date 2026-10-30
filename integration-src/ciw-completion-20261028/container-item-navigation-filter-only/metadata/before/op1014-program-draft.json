@@ -1,0 +1,367 @@
+{
+  "programCode": "op1014",
+  "programTitle": "Itens do Processo de Compra — MED",
+  "module": "operacional",
+  "pageType": "crud",
+  "builderEntityCode": "proc_compra_itens_progress",
+  "screenId": "ciw.proc-compra-itens",
+  "version": "1.0.4",
+  "subtitle": "Empresa MED. Itens vinculados ao processo de compra selecionado.",
+  "icon": null,
+  "permissionPrefix": "proc_compra_itens_progress",
+  "gridEditMode": "form",
+  "crudOptions": {
+    "pageSize": 50,
+    "gridFields": [
+      {
+        "field": "item_proc_compra_id"
+      },
+      {
+        "field": "descricao"
+      },
+      {
+        "field": "codigo_erp"
+      },
+      {
+        "field": "qt_dias_producao"
+      },
+      {
+        "field": "unid_medida"
+      },
+      {
+        "field": "vl_custo_dolar"
+      },
+      {
+        "field": "vl_negociado"
+      },
+      {
+        "field": "qt_comprada"
+      },
+      {
+        "field": "qt_alocada"
+      },
+      {
+        "field": "qt_saldo"
+      },
+      {
+        "field": "dt_item_certificacao"
+      }
+    ],
+    "filterFields": [
+      "item_proc_compra_id",
+      "descricao",
+      "codigo_erp",
+      "qt_dias_producao",
+      "unid_medida",
+      "vl_custo_dolar",
+      "vl_negociado",
+      "qt_comprada",
+      "qt_alocada",
+      "qt_saldo",
+      "dt_item_certificacao"
+    ],
+    "defaultSort": [
+      {
+        "field": "item_proc_compra_id",
+        "dir": "asc"
+      }
+    ]
+  },
+  "processOptions": null,
+  "formOptions": {
+    "mode": "popup",
+    "tabs": [
+      {
+        "id": "principal",
+        "title": "Principal",
+        "sections": [
+          {
+            "id": "identificacao",
+            "title": "Item do pedido",
+            "columns": 2,
+            "fields": [
+              "item_proc_compra_id",
+              "proc_compra_id",
+              "descricao",
+              "codigo_erp",
+              "unid_medida",
+              "qt_comprada",
+              "qt_alocada",
+              "qt_saldo",
+              "vl_custo_dolar",
+              "vl_negociado",
+              "vl_base_tributacao",
+              "vl_cubagem",
+              "ind_distr_custo",
+              "dt_item_certificacao"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "especificacoes",
+        "title": "Especificações",
+        "sections": [
+          {
+            "id": "tecido",
+            "title": "Especificações do tecido",
+            "columns": 2,
+            "fields": [
+              "composicao",
+              "shrinkage",
+              "peso",
+              "largura",
+              "calc_gm",
+              "rolo",
+              "coloracao_id",
+              "item_estacao",
+              "formato_amostra_id"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "prazos",
+        "title": "Prazos e amostras",
+        "sections": [
+          {
+            "id": "producao",
+            "title": "Produção e mostruário",
+            "columns": 2,
+            "fields": [
+              "qt_dias_producao",
+              "dt_maxima_producao",
+              "dt_prev_termino_producao",
+              "dt_termino_producao",
+              "log_mostruario",
+              "dt_mostruario",
+              "dt_cheg_amostras_emb",
+              "dt_recbto_laudo",
+              "dt_recbto_embalagem"
+            ]
+          },
+          {
+            "id": "so_ld",
+            "title": "Strike Offs e Lab Dips",
+            "columns": 2,
+            "fields": [
+              "log_aprov_so_ld",
+              "qt_dias_calc_so_ld",
+              "dt_prev_envio_desenhos",
+              "dt_real_envio_desenhos",
+              "dt_prev_recbto_so_ld",
+              "dt_real_recbto_so_ld",
+              "dt_prev_aprov_so_ld",
+              "dt_real_aprov_so_ld"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "avaliacao",
+        "title": "Avaliação",
+        "sections": [
+          {
+            "id": "qualidade",
+            "title": "Produção e qualidade",
+            "columns": 2,
+            "fields": [
+              "ind_producao_no_prazo",
+              "ind_relat_semanal_producao",
+              "ind_qualid_emb",
+              "ind_laudo_antes_embarque",
+              "ind_prod_conf_pi",
+              "ind_rec_amostra_antes_emb",
+              "ind_qt_conf_proforma",
+              "ind_tamanho_pecas_correto"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "observacao",
+        "title": "Observações",
+        "sections": [
+          {
+            "id": "observacao",
+            "title": "Observações",
+            "columns": 1,
+            "fields": [
+              "observacao"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "envios_amostras",
+        "title": "Envios de amostras",
+        "type": "linkedPage",
+        "linkedPage": {
+          "screenId": "ciw.proc-compra-amostras",
+          "engine": "crud",
+          "hideHeader": false,
+          "requireRecord": true,
+          "filters": [
+            {
+              "field": "proc_compra_id",
+              "sourceField": "proc_compra_id",
+              "operator": "eq"
+            },
+            {
+              "field": "item_proc_compra_id",
+              "sourceField": "item_proc_compra_id",
+              "operator": "eq"
+            }
+          ]
+        }
+      },
+      {
+        "id": "anexos",
+        "title": "Anexos",
+        "type": "linkedPage",
+        "linkedPage": {
+          "screenId": "ciw.proc-compra-anexos",
+          "engine": "crud",
+          "hideHeader": false,
+          "requireRecord": true,
+          "filters": [
+            {
+              "field": "proc_compra_id",
+              "sourceField": "proc_compra_id",
+              "operator": "eq"
+            },
+            {
+              "field": "item_proc_compra_id",
+              "sourceField": "item_proc_compra_id",
+              "operator": "eq"
+            }
+          ]
+        }
+      },
+      {
+        "id": "alocacoes",
+        "title": "Alocações",
+        "type": "linkedPage",
+        "linkedPage": {
+          "screenId": "ciw.proc-compra-alocacoes",
+          "engine": "crud",
+          "hideHeader": false,
+          "requireRecord": true,
+          "filters": [
+            {
+              "field": "proc_compra_id",
+              "sourceField": "proc_compra_id",
+              "operator": "eq"
+            },
+            {
+              "field": "item_proc_compra_id",
+              "sourceField": "item_proc_compra_id",
+              "operator": "eq"
+            }
+          ]
+        }
+      },
+      {
+        "id": "formatos_amostra",
+        "title": "Formatos de amostra",
+        "type": "linkedPage",
+        "linkedPage": {
+          "screenId": "ciw.formatos-amostra",
+          "engine": "crud",
+          "hideHeader": false,
+          "requireRecord": false,
+          "filters": []
+        }
+      }
+    ]
+  },
+  "rowLinks": [
+    {
+      "id": "envios_amostras",
+      "label": "Envios de amostras",
+      "screenId": "ciw.proc-compra-amostras",
+      "parameters": [
+        {
+          "field": "proc_compra_id",
+          "sourceField": "proc_compra_id"
+        },
+        {
+          "field": "item_proc_compra_id",
+          "sourceField": "item_proc_compra_id"
+        }
+      ],
+      "position": "start"
+    },
+    {
+      "id": "anexos",
+      "label": "Anexos",
+      "screenId": "ciw.proc-compra-anexos",
+      "parameters": [
+        {
+          "field": "proc_compra_id",
+          "sourceField": "proc_compra_id"
+        },
+        {
+          "field": "item_proc_compra_id",
+          "sourceField": "item_proc_compra_id"
+        }
+      ],
+      "position": "end"
+    },
+    {
+      "id": "alocacoes",
+      "label": "Alocações",
+      "screenId": "ciw.proc-compra-alocacoes",
+      "parameters": [
+        {
+          "field": "proc_compra_id",
+          "sourceField": "proc_compra_id"
+        },
+        {
+          "field": "item_proc_compra_id",
+          "sourceField": "item_proc_compra_id"
+        }
+      ],
+      "position": "end"
+    },
+    {
+      "id": "formatos_amostra",
+      "label": "Formatos de amostra",
+      "screenId": "ciw.formatos-amostra",
+      "parameters": [],
+      "position": "end"
+    }
+  ],
+  "contextFields": [
+    {
+      "field": "proc_compra_id",
+      "filter": true,
+      "createDefault": true,
+      "readonly": true,
+      "required": true
+    }
+  ],
+  "allowCreate": true,
+  "allowUpdate": true,
+  "allowDelete": true,
+  "changeSummary": null,
+  "programOrigin": "standard",
+  "ownerScope": "system",
+  "customizationPolicy": "overlay_only",
+  "subscriberId": null,
+  "baseProgramCode": null,
+  "baseProgramVersionId": null,
+  "upgradeFrozen": false,
+  "frozenReason": null,
+  "publicationPolicy": {
+    "allowedDatabaseEnvironments": []
+  },
+  "analyticsConfig": null,
+  "reportConfig": null,
+  "specialDocumentConfig": null,
+  "regulatedDocumentConfig": null,
+  "masterDetailConfig": null,
+  "customMode": null,
+  "customEntryUrl": null,
+  "customFrameTitle": null
+}

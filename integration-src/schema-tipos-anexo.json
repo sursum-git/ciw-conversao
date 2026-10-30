@@ -1,0 +1,35 @@
+{
+  "success": true,
+  "database": "espec",
+  "updatedAt": "15/10/2026 10:16:33,729-03:00",
+  "table": "tipos_anexo",
+  "tableLastUpdate": "",
+  "data": [
+    {
+      "name": "tipo_anexo_id",
+      "database": "espec",
+      "type": "integer",
+      "label": "",
+      "format": ">>>,>>>,>>9",
+      "viewAs": "",
+      "listExpression": "",
+      "options": [],
+      "mandatory": false,
+      "extent": 0,
+      "indices": "primario"
+    },
+    {
+      "name": "descricao",
+      "database": "espec",
+      "type": "character",
+      "label": "",
+      "format": "x(50)",
+      "viewAs": "",
+      "listExpression": "",
+      "options": [],
+      "mandatory": false,
+      "extent": 0,
+      "indices": ""
+    }
+  ]
+}

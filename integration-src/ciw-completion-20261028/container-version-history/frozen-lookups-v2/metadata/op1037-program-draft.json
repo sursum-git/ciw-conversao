@@ -1,0 +1,118 @@
+{
+  "programDraft": {
+    "programCode": "op1037",
+    "programTitle": "NFs históricas da versão",
+    "module": "operacional",
+    "pageType": "crud",
+    "builderEntityCode": "container_versao_nfs_historico_med_progress",
+    "screenId": "ciw.container-versao-nfs-historico",
+    "version": "1.0.1",
+    "subtitle": "Snapshot persistido da versão selecionada — MED",
+    "icon": null,
+    "permissionPrefix": "container_versao_nfs_historico_med_progress",
+    "gridEditMode": "form",
+    "crudOptions": {
+      "pageSize": 30,
+      "gridFields": [
+        {
+          "field": "documento",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "serie",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "estab",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "nat_operacao",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "cod_emitente",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "vl_mercadoria",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "vl_despesa",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "emitente_nome_abrev_atual",
+          "hidden": false,
+          "width": 260
+        }
+      ],
+      "filterFields": [
+        "documento",
+        "serie",
+        "estab",
+        "nat_operacao",
+        "cod_emitente",
+        "vl_mercadoria",
+        "vl_despesa",
+        "emitente_nome_abrev_atual"
+      ],
+      "defaultSort": [
+        {
+          "field": "documento",
+          "dir": "asc"
+        }
+      ]
+    },
+    "processOptions": null,
+    "formOptions": null,
+    "rowLinks": [],
+    "contextFields": [
+      {
+        "field": "container_id",
+        "filter": true,
+        "createDefault": true,
+        "readonly": true,
+        "required": true
+      },
+      {
+        "field": "versao_id",
+        "filter": true,
+        "createDefault": true,
+        "readonly": true,
+        "required": true
+      }
+    ],
+    "allowCreate": false,
+    "allowUpdate": false,
+    "allowDelete": false,
+    "changeSummary": "Acrescenta coluna de cadastro atual somente leitura; snapshot e contexto preservados.",
+    "programOrigin": "standard",
+    "ownerScope": "system",
+    "customizationPolicy": "overlay_only",
+    "subscriberId": null,
+    "baseProgramCode": null,
+    "baseProgramVersionId": null,
+    "upgradeFrozen": false,
+    "frozenReason": null,
+    "publicationPolicy": {
+      "allowedDatabaseEnvironments": []
+    },
+    "analyticsConfig": null,
+    "reportConfig": null,
+    "specialDocumentConfig": null,
+    "regulatedDocumentConfig": null,
+    "masterDetailConfig": null,
+    "customMode": null,
+    "customEntryUrl": null,
+    "customFrameTitle": null
+  }
+}

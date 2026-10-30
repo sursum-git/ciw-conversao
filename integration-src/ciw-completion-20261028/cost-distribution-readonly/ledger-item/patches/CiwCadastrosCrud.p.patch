@@ -1,0 +1,16 @@
+diff --git a/CiwCadastrosCrud.p b/CiwCadastrosCrud.p
+index ba06e7e..e65574b 100644
+--- a/CiwCadastrosCrud.p
++++ b/CiwCadastrosCrud.p
+@@ -51,6 +51,11 @@ DO ON ERROR UNDO, THROW:
+   IF NOT ValidHeader(cActor) OR NOT ValidHeader(cSession) THEN DO: RUN ErrorResponse("CIW_CADASTRO_IDENTITY_REQUIRED",401). RETURN. END.
+  END.
+  CASE cResource:
++  WHEN "custo_distribuicao_lancamentos_item" THEN DO:
++   cService=SEARCH("sursum-api/programs/CostDistributionLedgerReadApi.r").
++   IF cService=? THEN UNDO, THROW NEW Progress.Lang.AppError("Consulta de itens aptos indisponivel.",1).
++   RUN VALUE(cService)(poRequest,OUTPUT poResponse). RETURN.
++  END.
+   WHEN "container_versao_pagtos_historico_med" OR WHEN "container_versao_nfs_historico_med" OR WHEN "container_versao_descontos_historico_med" OR WHEN "container_versao_despesas_historico_med" THEN DO:
+    cService=SEARCH("sursum-api/programs/ContainersVersionAuxHistoryApi.r").
+    IF cService=? THEN UNDO, THROW NEW Progress.Lang.AppError("Historical auxiliary API unavailable",1).

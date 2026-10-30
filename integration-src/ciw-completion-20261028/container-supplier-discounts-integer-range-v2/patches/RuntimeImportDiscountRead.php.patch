@@ -1,0 +1,29 @@
+--- a/backend/src/Runtime/RuntimeImportDiscountRead.php
++++ b/backend/src/Runtime/RuntimeImportDiscountRead.php
+@@ -23,20 +23,21 @@
+  private static function supplierContext(array $definition,array $endpoint,array $payload):array {
+   $url=parse_url((string)($endpoint['url']??''));
+   if(($definition['fields']['fornecedor_id']['dataType']??null)!=='integer'||!is_array($url)||array_intersect(['user','pass','query','fragment'],array_keys($url))||!in_array($url['path']??null,['/med/web/SursumPrograms/ciw-cadastros','/SursumPrograms/ciw-cadastros'],true)||!(($url['scheme']??null)==='http'&&($url['host']??null)==='127.0.0.1'&&($url['port']??null)===19910||($url['scheme']??null)==='https'&&($url['host']??null)==='192.168.0.111'&&($url['port']??null)===9911))self::invalid(422);
+-  $context=$payload['context']??null;if(!is_array($context)||count($context)!==1||!array_key_exists('fornecedor_id',$context))self::invalid(422);
+-  $id=self::signedInteger($context['fornecedor_id'],422,true);$leaves=0;
+-  $visit=static function(mixed $filter,int $depth=0,bool $and=true)use(&$visit,&$leaves,$id):void {
++  $id=null;$leaves=0;
++  if(array_key_exists('context',$payload)){$context=$payload['context'];if(!is_array($context)||count($context)!==1||!array_key_exists('fornecedor_id',$context))self::invalid(422);$id=self::signedInteger($context['fornecedor_id'],422,true);}
++  elseif(($endpoint['bodyTemplate']['operation']??null)!=='read')self::invalid(422);
++  $visit=static function(mixed $filter,int $depth=0,bool $and=true)use(&$visit,&$leaves,&$id):void {
+    if(!is_array($filter)||$depth>6)self::invalid(422);
+    if(array_key_exists('filters',$filter)){
+     if(!is_array($filter['filters'])||!array_is_list($filter['filters'])||count($filter['filters'])<1||count($filter['filters'])>50||!in_array($filter['logic']??null,['and','or'],true))self::invalid(422);
+     foreach($filter['filters']as $child)$visit($child,$depth+1,$and&&$filter['logic']==='and');return;
+    }
+    if(++$leaves>50)self::invalid(422);
+-   if(($filter['field']??null)==='fornecedor_id'&&(!$and||($filter['operator']??null)!=='eq'||self::signedInteger($filter['value']??null,422)!==$id))self::invalid(422);
++   if(($filter['field']??null)==='fornecedor_id'){if(!$and||($filter['operator']??null)!=='eq')self::invalid(422);$selected=self::signedInteger($filter['value']??null,422);if($id!==null&&$selected!==$id)self::invalid(422);$id=$selected;}
+   };
+   if(isset($payload['filter'])&&$payload['filter']!==[])$visit($payload['filter']);
+   if(array_key_exists('filters',$payload)){if(!is_array($payload['filters'])||!array_is_list($payload['filters'])||count($payload['filters'])>50)self::invalid(422);foreach($payload['filters']as $filter)$visit($filter);}
+-  return ['fornecedor_id'=>$id];
++  if($id===null)self::invalid(422);return ['fornecedor_id'=>$id];
+  }
+  private static function supplierRow(array $row,array $context):void {
+   $fields=['desconto_importacao_id'=>'integer','motivo_desconto_id'=>'integer','descricao'=>'string','log_credito'=>'boolean','vl_dolar'=>'decimal','vl_real'=>'decimal','vl_cotacao_dolar'=>'decimal','item_container_id'=>'integer','cod_tipo'=>'integer','fornecedor_id'=>'integer','vl_real_autorizado'=>'decimal','vl_dolar_autorizado'=>'decimal','dt_autorizacao'=>'date','vl_utiliz'=>'decimal','vl_utiliz_detalhe'=>'decimal','vl_saldo'=>'decimal','item_codigo_erp_atual'=>'string','item_descricao_atual'=>'string','fornecedor_nome_abrev_atual'=>'string','motivo_descricao_atual'=>'string','arquivo'=>'string','record_key'=>'string'];

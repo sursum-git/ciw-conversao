@@ -1,0 +1,35 @@
+{
+  "success": true,
+  "database": "espec",
+  "updatedAt": "16/10/2026 17:11:52,193-03:00",
+  "table": "usuarios_grupos",
+  "tableLastUpdate": "",
+  "data": [
+    {
+      "name": "login_usuario",
+      "database": "espec",
+      "type": "character",
+      "label": "Login",
+      "format": "x(32)",
+      "viewAs": "",
+      "listExpression": "",
+      "options": [],
+      "mandatory": false,
+      "extent": 0,
+      "indices": "primario"
+    },
+    {
+      "name": "cod_grupo",
+      "database": "espec",
+      "type": "integer",
+      "label": "Grupo",
+      "format": ">9",
+      "viewAs": "",
+      "listExpression": "",
+      "options": [],
+      "mandatory": false,
+      "extent": 0,
+      "indices": "primario"
+    }
+  ]
+}

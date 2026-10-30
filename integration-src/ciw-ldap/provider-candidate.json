@@ -1,0 +1,22 @@
+{
+  "providerCode": "ldap",
+  "targetAccount": "tadeu.parreiras",
+  "enabled": false,
+  "config": {
+    "host": "ldaps://IMA-SRV-AD1.ima.com.br",
+    "port": 636,
+    "baseDn": "DC=ima,DC=com,DC=br",
+    "usernameAttribute": "sAMAccountName",
+    "userDnPattern": "IMA\\{username}",
+    "encryption": "ldaps",
+    "displayNameAttribute": "displayName",
+    "emailAttribute": "mail",
+    "groupsAttribute": "memberOf",
+    "permissions": []
+  },
+  "activationPending": [
+    "Valid certificate and CA trust for the domain controller",
+    "Local DNS resolution of IMA-SRV-AD1.ima.com.br",
+    "Protected real login validation and explicit account binding"
+  ]
+}

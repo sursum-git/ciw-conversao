@@ -1,0 +1,47 @@
+{
+  "scope": "1053 MED readonly pagination companion; previous freezes immutable",
+  "predecessors": [
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-nf-available-readonly\\frozen-v1\\manifest.json",
+      "sha256": "60aa0eefd598d7bbb0d9e3da07deef060283367c164612f7bf09d3243a3851ff"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-nf-available-readonly-alias\\v1.2\\frozen\\manifest.json",
+      "sha256": "f244c7ecdaaf366a9a43d0879e45a48186c9e8ed7412db90bd8e8113119c6251"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\official-build11\\canonical-manifest.json",
+      "sha256": "b4b985a6c3ab6ddb0839768b0f4c4b6164673d3e67beb244a28786ebbd20d419"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\runtime-build10\\pasoe-limit-diagnostic-proof.json",
+      "sha256": "3d21a29eaee26b09fe014b59e1e04d96a550ec7cb889e45fd0e93a735db73363"
+    }
+  ],
+  "originalSourceEvidencePath": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-nf-available-readonly\\frozen-v1\\source-evidence.json",
+  "originalSourceEvidenceSha256": "e8d49cd39a03745efcc785f2e80414d281bd80a0dcacbbad2d80baa62327d4e9",
+  "sourceContractPreserved": [
+    "supplier and establishment directly from container",
+    "nature begins3 and electronic status3",
+    "exclude by DOCUMENT ONLY",
+    "same NfRow/NfKey/AcceptRow eligibility",
+    "MED only; IMA origin not closed",
+    "SQL collation ambiguity refusal retained"
+  ],
+  "contractChange": {
+    "read": "server page1..200 plus complete filtered total within source/time bounds",
+    "get": "same aliases and ownership; candidates200 cap removed; source/time bounds retained",
+    "sourceReads": 50000,
+    "timeoutSeconds": 10,
+    "TTrows": "<=sourceReads; source budget does not recount derived TT",
+    "exportAllRows": "disabled as in existing Builder output; oversized take refuses422"
+  },
+  "route": "/SursumPrograms/containers-financeiro",
+  "newProgramCode": false,
+  "reservedExistingProgramCode": "op1053",
+  "canonicalWrites": false,
+  "businessWrites": false,
+  "newFrontend": false,
+  "newSequence": false,
+  "authenticationReplacementAllowed": false
+}

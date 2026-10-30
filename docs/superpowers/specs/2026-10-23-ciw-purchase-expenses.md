@@ -1,0 +1,15 @@
+# Despesas dos processos de compra MED
+
+Continuação expressamente solicitada na arquitetura existente: converter grid_despesas_proc_compra/form_despesas_proc_compra e comando bl_criar_despesas_proc_compra. Frontend nativo por JSON, sem alterar Kendo, serviços fixos ABL, ator autenticado e snapshots completos nos logs. Não duplicar cálculo fiscal/financeiro/custos nem executar funções de biblioteca somente por estarem replicadas no PHP.
+
+Usuário aprovou em23/10, reply call_af30f069484e4295b76204c87902071a: gerar somente despesas ausentes, preservando valores existentes. Entrada real do gerador chama apenas criarDespesasProcCompra; buscarDespesasEmp seleciona vínculos empresa ativos e definição log_imposto=0, copiando vl_padrao. Funções de impostos replicadas não são chamadas por esse comando. Novo comando precisa de confirmaçãoKendo, operação fixa cadastrada/duplooptin/permissão própria; abrir a tela nunca gera registros.
+
+Contexto obrigatório do processo MED e dono físico fechado. CRUD edita despesa e valor previsto; PK/processo/cálculo/imagens/stamp são controlados pelo servidor. Conferir schema/seq/dependências reais antes de fixar contrato. Reutilizar PurchaseOrderContext.i, leitor CiwErpReadService, despacho e transporte/auditoria nativos; núcleo único para manutenção e geração, sem copiar lógica de inserção/identidade/snapshot. Sem cascata/reparent implícitos. Inteiros sem casas, decimal conforme schema/cultura.
+
+Fontes atuais11arquivos/25literaisomitidos, sources/scriptcase/purchase-expenses. APL e index do formulário estão vazios inclusive na cópia fresca do servidor; há form0,JS/sajax,consulta e gerador completos. Recuperar o que estiver disponível, registrar limitação e não inventar eventos financeiros de formulário. A UI gerada expõe ID/despesa/vl_prev. Biblioteca buscarDespesasEmp replicada intacta em sources/scriptcase/purchase-items/form_itens_proc_compra/form_itens_proc_compra_apl.php.
+
+Compilar OE12.2/.42, publicar137via111 e validar PASOE sursum-api/med9911; sem trocar instância. Preservar canônicos sujos com baseline/backup/hash e publicações anteriores. Novos grants, novo cenário operacional e eventual DDL dependem de autorização específica, sem reutilizar cenários encerrados; sequência existente será preferida e nunca reseeded implicitamente. Nenhuma senha/token em fontes/memória. Atualizar quatro memórias distinguindo preparado/publicado/validado.
+
+## Fontes regenerados conferidos
+
+Após a resposta humana, nova leitura do servidor recuperou index/APL completos (manifesto atualizado,11arquivos/43literais omitidos). Eventos onScriptinit/onRefresh chamam localHabilitarCampos; onAfterInsert/Update/Delete somente preencherIDLog. Não há recálculo automático. Lookup manual consulta TODAS as definições pub.despesas, sem exigir vínculo ativo de empresa; manter esse contrato, restringindo apenas a geração aos vínculos ativos não impostos. A tentativa de desabilitar vl_prev compara array com1 e não constitui validação efetiva; não introduzir bloqueio novo nem fórmula fiscal. Sequência fixa existente substitui MAX+1 inseguro do formulário. Evidência privada source-regenerated-verification.json.

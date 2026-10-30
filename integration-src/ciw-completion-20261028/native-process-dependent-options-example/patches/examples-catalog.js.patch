@@ -1,0 +1,16 @@
+--- D:/opencode/construtor-pg/src/examples/examples-catalog.js
++++ D:/opencode/construtor-pg/src/examples/examples-catalog.js
+@@ -639,6 +639,13 @@
+       title: "Indice de documentos",
+       summary: "Mapa rapido das trilhas de reports, special_document e regulated_document, com links para exemplos, auditorias e conferencia.",
+       page: pagePath + "manual-documentos.html"
++    },
++    {
++      id: "processamento-opcoes-dependentes",
++      category: "Processamento",
++      title: "Opções dependentes de parâmetros",
++      summary: "Dois enums fechados recarregam a seleção; contexto protegido, resposta antiga descartada e confirmação nativa.",
++      page: pagePath + "processamento-opcoes-dependentes.html"
+     },
+     {
+       id: "processamento-parametros",

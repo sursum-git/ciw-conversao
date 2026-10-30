@@ -1,0 +1,692 @@
+{
+  "status": "LOCAL_PREPARED_HELD_NOT_PUBLISHED",
+  "official12_2": false,
+  "noNetworkOrSqlByCandidate": true,
+  "local8Compiles": {
+    "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/service-local/compile-service-current.log",
+    "sha256": "4437c049a6c91fbfcc47a7cb6b84a941c6c2c6e760cb3954317d02d7f82409ef",
+    "count": 8,
+    "numDbs": 0,
+    "version": "12.8 diagnostic only"
+  },
+  "newTtChecksPerCombination": 377,
+  "regressionTtChecksPerCombination": 495,
+  "ttTotal": 3488,
+  "ttLogCount": 72,
+  "ttProofs": [
+    {
+      "suite": "ComparisonRoundingEvidenceTest.p",
+      "expectedChecks": 21,
+      "cp": "UTF-8",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/rounding-local/rounding-UTF-8-AMERICAN.log",
+      "sha256": "76f1c9587c59b719b574bc13af9408d61e84e11f79c4678c7ba96e0933688cab",
+      "testSourceSha256": "cb540ecb3abe3ce444bd0e3c7e50ed60f0d48109de073214faa061950479f99d"
+    },
+    {
+      "suite": "ComparisonRoundingEvidenceTest.p",
+      "expectedChecks": 21,
+      "cp": "UTF-8",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/rounding-local/rounding-UTF-8-EUROPEAN.log",
+      "sha256": "76f1c9587c59b719b574bc13af9408d61e84e11f79c4678c7ba96e0933688cab",
+      "testSourceSha256": "cb540ecb3abe3ce444bd0e3c7e50ed60f0d48109de073214faa061950479f99d"
+    },
+    {
+      "suite": "ComparisonRoundingEvidenceTest.p",
+      "expectedChecks": 21,
+      "cp": "ISO8859-1",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/rounding-local/rounding-ISO8859-1-AMERICAN.log",
+      "sha256": "76f1c9587c59b719b574bc13af9408d61e84e11f79c4678c7ba96e0933688cab",
+      "testSourceSha256": "cb540ecb3abe3ce444bd0e3c7e50ed60f0d48109de073214faa061950479f99d"
+    },
+    {
+      "suite": "ComparisonRoundingEvidenceTest.p",
+      "expectedChecks": 21,
+      "cp": "ISO8859-1",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/rounding-local/rounding-ISO8859-1-EUROPEAN.log",
+      "sha256": "76f1c9587c59b719b574bc13af9408d61e84e11f79c4678c7ba96e0933688cab",
+      "testSourceSha256": "cb540ecb3abe3ce444bd0e3c7e50ed60f0d48109de073214faa061950479f99d"
+    },
+    {
+      "suite": "ComparisonProjectionTest.p",
+      "expectedChecks": 26,
+      "cp": "UTF-8",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/projection-local/projection-UTF-8-AMERICAN.log",
+      "sha256": "d190c4955f125dd199ef942b2f1477bfc31d871f51df00db4e4a163954c104d9",
+      "testSourceSha256": "03b7d72f2fa06ee1696a1b0a9021f43463053e2716cb764ed6c45eef5374d080"
+    },
+    {
+      "suite": "ComparisonProjectionTest.p",
+      "expectedChecks": 26,
+      "cp": "UTF-8",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/projection-local/projection-UTF-8-EUROPEAN.log",
+      "sha256": "d190c4955f125dd199ef942b2f1477bfc31d871f51df00db4e4a163954c104d9",
+      "testSourceSha256": "03b7d72f2fa06ee1696a1b0a9021f43463053e2716cb764ed6c45eef5374d080"
+    },
+    {
+      "suite": "ComparisonProjectionTest.p",
+      "expectedChecks": 26,
+      "cp": "ISO8859-1",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/projection-local/projection-ISO8859-1-AMERICAN.log",
+      "sha256": "d190c4955f125dd199ef942b2f1477bfc31d871f51df00db4e4a163954c104d9",
+      "testSourceSha256": "03b7d72f2fa06ee1696a1b0a9021f43463053e2716cb764ed6c45eef5374d080"
+    },
+    {
+      "suite": "ComparisonProjectionTest.p",
+      "expectedChecks": 26,
+      "cp": "ISO8859-1",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/projection-local/projection-ISO8859-1-EUROPEAN.log",
+      "sha256": "d190c4955f125dd199ef942b2f1477bfc31d871f51df00db4e4a163954c104d9",
+      "testSourceSha256": "03b7d72f2fa06ee1696a1b0a9021f43463053e2716cb764ed6c45eef5374d080"
+    },
+    {
+      "suite": "ComparisonItemJoinTest.p",
+      "expectedChecks": 10,
+      "cp": "UTF-8",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/itemjoin-local/itemjoin-UTF-8-AMERICAN.log",
+      "sha256": "7c253242eb9cb860fb42486209ac15ab784d4b71dced78742dc15db604dc3002",
+      "testSourceSha256": "75941bea44db5a4ed932ae57cf8f511b3b67451e7e30f0b761756eb61860ddd0"
+    },
+    {
+      "suite": "ComparisonItemJoinTest.p",
+      "expectedChecks": 10,
+      "cp": "UTF-8",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/itemjoin-local/itemjoin-UTF-8-EUROPEAN.log",
+      "sha256": "7c253242eb9cb860fb42486209ac15ab784d4b71dced78742dc15db604dc3002",
+      "testSourceSha256": "75941bea44db5a4ed932ae57cf8f511b3b67451e7e30f0b761756eb61860ddd0"
+    },
+    {
+      "suite": "ComparisonItemJoinTest.p",
+      "expectedChecks": 10,
+      "cp": "ISO8859-1",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/itemjoin-local/itemjoin-ISO8859-1-AMERICAN.log",
+      "sha256": "7c253242eb9cb860fb42486209ac15ab784d4b71dced78742dc15db604dc3002",
+      "testSourceSha256": "75941bea44db5a4ed932ae57cf8f511b3b67451e7e30f0b761756eb61860ddd0"
+    },
+    {
+      "suite": "ComparisonItemJoinTest.p",
+      "expectedChecks": 10,
+      "cp": "ISO8859-1",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/itemjoin-local/itemjoin-ISO8859-1-EUROPEAN.log",
+      "sha256": "7c253242eb9cb860fb42486209ac15ab784d4b71dced78742dc15db604dc3002",
+      "testSourceSha256": "75941bea44db5a4ed932ae57cf8f511b3b67451e7e30f0b761756eb61860ddd0"
+    },
+    {
+      "suite": "ComparisonMaterializerTest.p",
+      "expectedChecks": 14,
+      "cp": "UTF-8",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/materializer-local/materializer-UTF-8-AMERICAN.log",
+      "sha256": "45ee3b46c6f4b67852cd8b2051204dce62272f4c0fe7858b507b162b2dbabe89",
+      "testSourceSha256": "d073735845417381ad0b836a0c7294af7efc95ecd1f78081ca2fb1ce4f8ce910"
+    },
+    {
+      "suite": "ComparisonMaterializerTest.p",
+      "expectedChecks": 14,
+      "cp": "UTF-8",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/materializer-local/materializer-UTF-8-EUROPEAN.log",
+      "sha256": "45ee3b46c6f4b67852cd8b2051204dce62272f4c0fe7858b507b162b2dbabe89",
+      "testSourceSha256": "d073735845417381ad0b836a0c7294af7efc95ecd1f78081ca2fb1ce4f8ce910"
+    },
+    {
+      "suite": "ComparisonMaterializerTest.p",
+      "expectedChecks": 14,
+      "cp": "ISO8859-1",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/materializer-local/materializer-ISO8859-1-AMERICAN.log",
+      "sha256": "45ee3b46c6f4b67852cd8b2051204dce62272f4c0fe7858b507b162b2dbabe89",
+      "testSourceSha256": "d073735845417381ad0b836a0c7294af7efc95ecd1f78081ca2fb1ce4f8ce910"
+    },
+    {
+      "suite": "ComparisonMaterializerTest.p",
+      "expectedChecks": 14,
+      "cp": "ISO8859-1",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/materializer-local/materializer-ISO8859-1-EUROPEAN.log",
+      "sha256": "45ee3b46c6f4b67852cd8b2051204dce62272f4c0fe7858b507b162b2dbabe89",
+      "testSourceSha256": "d073735845417381ad0b836a0c7294af7efc95ecd1f78081ca2fb1ce4f8ce910"
+    },
+    {
+      "suite": "ComparisonReaderTest.p",
+      "expectedChecks": 13,
+      "cp": "UTF-8",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/reader-local/reader-UTF-8-AMERICAN.log",
+      "sha256": "59cb56253a99abf10b12240213c7eafe8f65d98b0ee74f81affb8d2e7e70b75c",
+      "testSourceSha256": "f647e5d6532d98b41368007f9da60af87e71f09488555932327fd9db23131adc"
+    },
+    {
+      "suite": "ComparisonReaderTest.p",
+      "expectedChecks": 13,
+      "cp": "UTF-8",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/reader-local/reader-UTF-8-EUROPEAN.log",
+      "sha256": "59cb56253a99abf10b12240213c7eafe8f65d98b0ee74f81affb8d2e7e70b75c",
+      "testSourceSha256": "f647e5d6532d98b41368007f9da60af87e71f09488555932327fd9db23131adc"
+    },
+    {
+      "suite": "ComparisonReaderTest.p",
+      "expectedChecks": 13,
+      "cp": "ISO8859-1",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/reader-local/reader-ISO8859-1-AMERICAN.log",
+      "sha256": "59cb56253a99abf10b12240213c7eafe8f65d98b0ee74f81affb8d2e7e70b75c",
+      "testSourceSha256": "f647e5d6532d98b41368007f9da60af87e71f09488555932327fd9db23131adc"
+    },
+    {
+      "suite": "ComparisonReaderTest.p",
+      "expectedChecks": 13,
+      "cp": "ISO8859-1",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/reader-local/reader-ISO8859-1-EUROPEAN.log",
+      "sha256": "59cb56253a99abf10b12240213c7eafe8f65d98b0ee74f81affb8d2e7e70b75c",
+      "testSourceSha256": "f647e5d6532d98b41368007f9da60af87e71f09488555932327fd9db23131adc"
+    },
+    {
+      "suite": "ComparisonServiceTest.p",
+      "expectedChecks": 19,
+      "cp": "UTF-8",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/service-local/service-UTF-8-AMERICAN.log",
+      "sha256": "ff6f2d2073d695a2a64ff3b0b027057963b86f614337aee8785fb3b37a3f06d7",
+      "testSourceSha256": "63624f73d79923bff0aaae4d94bd38bc6c4b7e6de3036540e1cc38163d244f06"
+    },
+    {
+      "suite": "ComparisonServiceTest.p",
+      "expectedChecks": 19,
+      "cp": "UTF-8",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/service-local/service-UTF-8-EUROPEAN.log",
+      "sha256": "ff6f2d2073d695a2a64ff3b0b027057963b86f614337aee8785fb3b37a3f06d7",
+      "testSourceSha256": "63624f73d79923bff0aaae4d94bd38bc6c4b7e6de3036540e1cc38163d244f06"
+    },
+    {
+      "suite": "ComparisonServiceTest.p",
+      "expectedChecks": 19,
+      "cp": "ISO8859-1",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/service-local/service-ISO8859-1-AMERICAN.log",
+      "sha256": "ff6f2d2073d695a2a64ff3b0b027057963b86f614337aee8785fb3b37a3f06d7",
+      "testSourceSha256": "63624f73d79923bff0aaae4d94bd38bc6c4b7e6de3036540e1cc38163d244f06"
+    },
+    {
+      "suite": "ComparisonServiceTest.p",
+      "expectedChecks": 19,
+      "cp": "ISO8859-1",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/service-local/service-ISO8859-1-EUROPEAN.log",
+      "sha256": "ff6f2d2073d695a2a64ff3b0b027057963b86f614337aee8785fb3b37a3f06d7",
+      "testSourceSha256": "63624f73d79923bff0aaae4d94bd38bc6c4b7e6de3036540e1cc38163d244f06"
+    },
+    {
+      "suite": "ComparisonSqlObservedTest.p",
+      "expectedChecks": 274,
+      "cp": "UTF-8",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/sql-observed-local/sql-observed-UTF-8-AMERICAN.log",
+      "sha256": "92c7ce9ca21b76d8e399e5059ebf22dbe2355cbca1d9bab0021269cc0b8ea722",
+      "testSourceSha256": "8afda4db9e164cad170352eef47c4ea4e9ad8ad94eb07e381bf6f8beb0f70f3d"
+    },
+    {
+      "suite": "ComparisonSqlObservedTest.p",
+      "expectedChecks": 274,
+      "cp": "UTF-8",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/sql-observed-local/sql-observed-UTF-8-EUROPEAN.log",
+      "sha256": "92c7ce9ca21b76d8e399e5059ebf22dbe2355cbca1d9bab0021269cc0b8ea722",
+      "testSourceSha256": "8afda4db9e164cad170352eef47c4ea4e9ad8ad94eb07e381bf6f8beb0f70f3d"
+    },
+    {
+      "suite": "ComparisonSqlObservedTest.p",
+      "expectedChecks": 274,
+      "cp": "ISO8859-1",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/sql-observed-local/sql-observed-ISO8859-1-AMERICAN.log",
+      "sha256": "92c7ce9ca21b76d8e399e5059ebf22dbe2355cbca1d9bab0021269cc0b8ea722",
+      "testSourceSha256": "8afda4db9e164cad170352eef47c4ea4e9ad8ad94eb07e381bf6f8beb0f70f3d"
+    },
+    {
+      "suite": "ComparisonSqlObservedTest.p",
+      "expectedChecks": 274,
+      "cp": "ISO8859-1",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/sql-observed-local/sql-observed-ISO8859-1-EUROPEAN.log",
+      "sha256": "92c7ce9ca21b76d8e399e5059ebf22dbe2355cbca1d9bab0021269cc0b8ea722",
+      "testSourceSha256": "8afda4db9e164cad170352eef47c4ea4e9ad8ad94eb07e381bf6f8beb0f70f3d"
+    },
+    {
+      "suite": "ContainersVersionHistoryTest.p",
+      "expectedChecks": 38,
+      "cp": "UTF-8",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/ContainersVersionHistoryTest-UTF-8-AMERICAN.log",
+      "sha256": "a23437c94fe7bd46e2842009c953ca3e8714940cf52275d85c02f7e24f6a8254",
+      "testSourceSha256": "e9cde6bcf0b4a5942c7bb991800be9b5220c233d284d905324044517808b5075"
+    },
+    {
+      "suite": "ContainersVersionHistoryTest.p",
+      "expectedChecks": 38,
+      "cp": "UTF-8",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/ContainersVersionHistoryTest-UTF-8-EUROPEAN.log",
+      "sha256": "a23437c94fe7bd46e2842009c953ca3e8714940cf52275d85c02f7e24f6a8254",
+      "testSourceSha256": "e9cde6bcf0b4a5942c7bb991800be9b5220c233d284d905324044517808b5075"
+    },
+    {
+      "suite": "ContainersVersionHistoryTest.p",
+      "expectedChecks": 38,
+      "cp": "ISO8859-1",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/ContainersVersionHistoryTest-ISO8859-1-AMERICAN.log",
+      "sha256": "a23437c94fe7bd46e2842009c953ca3e8714940cf52275d85c02f7e24f6a8254",
+      "testSourceSha256": "e9cde6bcf0b4a5942c7bb991800be9b5220c233d284d905324044517808b5075"
+    },
+    {
+      "suite": "ContainersVersionHistoryTest.p",
+      "expectedChecks": 38,
+      "cp": "ISO8859-1",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/ContainersVersionHistoryTest-ISO8859-1-EUROPEAN.log",
+      "sha256": "a23437c94fe7bd46e2842009c953ca3e8714940cf52275d85c02f7e24f6a8254",
+      "testSourceSha256": "e9cde6bcf0b4a5942c7bb991800be9b5220c233d284d905324044517808b5075"
+    },
+    {
+      "suite": "ContainersVersionTest.p",
+      "expectedChecks": 189,
+      "cp": "UTF-8",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/ContainersVersionTest-UTF-8-AMERICAN.log",
+      "sha256": "f3bd2b5e632994713f488e666401c8e6cf1e65d62d58c7263977ad0a9003250b",
+      "testSourceSha256": "80504be79a48caf04126b5a196441ae17730d4b409f273855f027d967f905f9f"
+    },
+    {
+      "suite": "ContainersVersionTest.p",
+      "expectedChecks": 189,
+      "cp": "UTF-8",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/ContainersVersionTest-UTF-8-EUROPEAN.log",
+      "sha256": "f3bd2b5e632994713f488e666401c8e6cf1e65d62d58c7263977ad0a9003250b",
+      "testSourceSha256": "80504be79a48caf04126b5a196441ae17730d4b409f273855f027d967f905f9f"
+    },
+    {
+      "suite": "ContainersVersionTest.p",
+      "expectedChecks": 189,
+      "cp": "ISO8859-1",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/ContainersVersionTest-ISO8859-1-AMERICAN.log",
+      "sha256": "f3bd2b5e632994713f488e666401c8e6cf1e65d62d58c7263977ad0a9003250b",
+      "testSourceSha256": "80504be79a48caf04126b5a196441ae17730d4b409f273855f027d967f905f9f"
+    },
+    {
+      "suite": "ContainersVersionTest.p",
+      "expectedChecks": 189,
+      "cp": "ISO8859-1",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/ContainersVersionTest-ISO8859-1-EUROPEAN.log",
+      "sha256": "f3bd2b5e632994713f488e666401c8e6cf1e65d62d58c7263977ad0a9003250b",
+      "testSourceSha256": "80504be79a48caf04126b5a196441ae17730d4b409f273855f027d967f905f9f"
+    },
+    {
+      "suite": "CiwErpReadTest.p",
+      "expectedChecks": 47,
+      "cp": "UTF-8",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/CiwErpReadTest-UTF-8-AMERICAN.log",
+      "sha256": "1c812106f6d932629824c847eacd9c6cecc7a91d70bf3a711e55a1d9846ce242",
+      "testSourceSha256": "321e247e04e397c8fde6541bdb0c6fda06a67f27d47d7496b52b5fa9cae82a34"
+    },
+    {
+      "suite": "CiwErpReadTest.p",
+      "expectedChecks": 47,
+      "cp": "UTF-8",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/CiwErpReadTest-UTF-8-EUROPEAN.log",
+      "sha256": "f22c5437801683d7ec8e917c36f7020d21bd704cf349cef53e0bb04cd03867d4",
+      "testSourceSha256": "321e247e04e397c8fde6541bdb0c6fda06a67f27d47d7496b52b5fa9cae82a34"
+    },
+    {
+      "suite": "CiwErpReadTest.p",
+      "expectedChecks": 47,
+      "cp": "ISO8859-1",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/CiwErpReadTest-ISO8859-1-AMERICAN.log",
+      "sha256": "1c812106f6d932629824c847eacd9c6cecc7a91d70bf3a711e55a1d9846ce242",
+      "testSourceSha256": "321e247e04e397c8fde6541bdb0c6fda06a67f27d47d7496b52b5fa9cae82a34"
+    },
+    {
+      "suite": "CiwErpReadTest.p",
+      "expectedChecks": 47,
+      "cp": "ISO8859-1",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/CiwErpReadTest-ISO8859-1-EUROPEAN.log",
+      "sha256": "f22c5437801683d7ec8e917c36f7020d21bd704cf349cef53e0bb04cd03867d4",
+      "testSourceSha256": "321e247e04e397c8fde6541bdb0c6fda06a67f27d47d7496b52b5fa9cae82a34"
+    },
+    {
+      "suite": "PurchaseItemsReadTest.p",
+      "expectedChecks": 9,
+      "cp": "UTF-8",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/PurchaseItemsReadTest-UTF-8-AMERICAN.log",
+      "sha256": "0ea50b00df5fbd099fc369588c37f95c6311bd0056537a987fb8d5e1d0b8bdd0",
+      "testSourceSha256": "a8c05e089db3aaed7bc4a5ea97ae5fd28e4b1298b0032d78924e7d85094def7c"
+    },
+    {
+      "suite": "PurchaseItemsReadTest.p",
+      "expectedChecks": 9,
+      "cp": "UTF-8",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/PurchaseItemsReadTest-UTF-8-EUROPEAN.log",
+      "sha256": "df50acc7cc009e19f35e27575ef2fef01bb03208604d2fb8c21a73b9a4692c8a",
+      "testSourceSha256": "a8c05e089db3aaed7bc4a5ea97ae5fd28e4b1298b0032d78924e7d85094def7c"
+    },
+    {
+      "suite": "PurchaseItemsReadTest.p",
+      "expectedChecks": 9,
+      "cp": "ISO8859-1",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/PurchaseItemsReadTest-ISO8859-1-AMERICAN.log",
+      "sha256": "0ea50b00df5fbd099fc369588c37f95c6311bd0056537a987fb8d5e1d0b8bdd0",
+      "testSourceSha256": "a8c05e089db3aaed7bc4a5ea97ae5fd28e4b1298b0032d78924e7d85094def7c"
+    },
+    {
+      "suite": "PurchaseItemsReadTest.p",
+      "expectedChecks": 9,
+      "cp": "ISO8859-1",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/PurchaseItemsReadTest-ISO8859-1-EUROPEAN.log",
+      "sha256": "df50acc7cc009e19f35e27575ef2fef01bb03208604d2fb8c21a73b9a4692c8a",
+      "testSourceSha256": "a8c05e089db3aaed7bc4a5ea97ae5fd28e4b1298b0032d78924e7d85094def7c"
+    },
+    {
+      "suite": "ContainersVersionAuxHistoryTest.p",
+      "expectedChecks": 28,
+      "cp": "UTF-8",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/ContainersVersionAuxHistoryTest-UTF-8-AMERICAN.log",
+      "sha256": "f7420b6f8bc5170cdc36e88f07ab7d4674dd6be91f031a59e31e99324eb4b788",
+      "testSourceSha256": "b2194fabceea481a7b482be23ce826fab859d519aa10c87de48aa0b4a3111060"
+    },
+    {
+      "suite": "ContainersVersionAuxHistoryTest.p",
+      "expectedChecks": 28,
+      "cp": "UTF-8",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/ContainersVersionAuxHistoryTest-UTF-8-EUROPEAN.log",
+      "sha256": "f7420b6f8bc5170cdc36e88f07ab7d4674dd6be91f031a59e31e99324eb4b788",
+      "testSourceSha256": "b2194fabceea481a7b482be23ce826fab859d519aa10c87de48aa0b4a3111060"
+    },
+    {
+      "suite": "ContainersVersionAuxHistoryTest.p",
+      "expectedChecks": 28,
+      "cp": "ISO8859-1",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/ContainersVersionAuxHistoryTest-ISO8859-1-AMERICAN.log",
+      "sha256": "f7420b6f8bc5170cdc36e88f07ab7d4674dd6be91f031a59e31e99324eb4b788",
+      "testSourceSha256": "b2194fabceea481a7b482be23ce826fab859d519aa10c87de48aa0b4a3111060"
+    },
+    {
+      "suite": "ContainersVersionAuxHistoryTest.p",
+      "expectedChecks": 28,
+      "cp": "ISO8859-1",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/ContainersVersionAuxHistoryTest-ISO8859-1-EUROPEAN.log",
+      "sha256": "f7420b6f8bc5170cdc36e88f07ab7d4674dd6be91f031a59e31e99324eb4b788",
+      "testSourceSha256": "b2194fabceea481a7b482be23ce826fab859d519aa10c87de48aa0b4a3111060"
+    },
+    {
+      "suite": "ImportDiscountsLabelsTest.p",
+      "expectedChecks": 17,
+      "cp": "UTF-8",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/ImportDiscountsLabelsTest-UTF-8-AMERICAN.log",
+      "sha256": "0c3a9f134b185e352b043508dfa0e8b635a9de4e4ae54e658b61768359955cd3",
+      "testSourceSha256": "71a08b4c66f434bd1ccd596c7b6b618ec678d615b7469e021bfe8275946c9ef0"
+    },
+    {
+      "suite": "ImportDiscountsLabelsTest.p",
+      "expectedChecks": 17,
+      "cp": "UTF-8",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/ImportDiscountsLabelsTest-UTF-8-EUROPEAN.log",
+      "sha256": "0c3a9f134b185e352b043508dfa0e8b635a9de4e4ae54e658b61768359955cd3",
+      "testSourceSha256": "71a08b4c66f434bd1ccd596c7b6b618ec678d615b7469e021bfe8275946c9ef0"
+    },
+    {
+      "suite": "ImportDiscountsLabelsTest.p",
+      "expectedChecks": 17,
+      "cp": "ISO8859-1",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/ImportDiscountsLabelsTest-ISO8859-1-AMERICAN.log",
+      "sha256": "0c3a9f134b185e352b043508dfa0e8b635a9de4e4ae54e658b61768359955cd3",
+      "testSourceSha256": "71a08b4c66f434bd1ccd596c7b6b618ec678d615b7469e021bfe8275946c9ef0"
+    },
+    {
+      "suite": "ImportDiscountsLabelsTest.p",
+      "expectedChecks": 17,
+      "cp": "ISO8859-1",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/ImportDiscountsLabelsTest-ISO8859-1-EUROPEAN.log",
+      "sha256": "0c3a9f134b185e352b043508dfa0e8b635a9de4e4ae54e658b61768359955cd3",
+      "testSourceSha256": "71a08b4c66f434bd1ccd596c7b6b618ec678d615b7469e021bfe8275946c9ef0"
+    },
+    {
+      "suite": "ImportDiscountsReadTest.p",
+      "expectedChecks": 44,
+      "cp": "UTF-8",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/ImportDiscountsReadTest-UTF-8-AMERICAN.log",
+      "sha256": "8e5d32672f37bd99778e89b5d8b1ebddccec25f6add51c3830b3d72a055209c1",
+      "testSourceSha256": "cc83171fa68ddc298d674e03b4e9f935318acaa5a5c56393de5a9534c65ff1b0"
+    },
+    {
+      "suite": "ImportDiscountsReadTest.p",
+      "expectedChecks": 44,
+      "cp": "UTF-8",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/ImportDiscountsReadTest-UTF-8-EUROPEAN.log",
+      "sha256": "8e5d32672f37bd99778e89b5d8b1ebddccec25f6add51c3830b3d72a055209c1",
+      "testSourceSha256": "cc83171fa68ddc298d674e03b4e9f935318acaa5a5c56393de5a9534c65ff1b0"
+    },
+    {
+      "suite": "ImportDiscountsReadTest.p",
+      "expectedChecks": 44,
+      "cp": "ISO8859-1",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/ImportDiscountsReadTest-ISO8859-1-AMERICAN.log",
+      "sha256": "8e5d32672f37bd99778e89b5d8b1ebddccec25f6add51c3830b3d72a055209c1",
+      "testSourceSha256": "cc83171fa68ddc298d674e03b4e9f935318acaa5a5c56393de5a9534c65ff1b0"
+    },
+    {
+      "suite": "ImportDiscountsReadTest.p",
+      "expectedChecks": 44,
+      "cp": "ISO8859-1",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/ImportDiscountsReadTest-ISO8859-1-EUROPEAN.log",
+      "sha256": "8e5d32672f37bd99778e89b5d8b1ebddccec25f6add51c3830b3d72a055209c1",
+      "testSourceSha256": "cc83171fa68ddc298d674e03b4e9f935318acaa5a5c56393de5a9534c65ff1b0"
+    },
+    {
+      "suite": "CostDistributionEligibleTest.p",
+      "expectedChecks": 33,
+      "cp": "UTF-8",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/CostDistributionEligibleTest-UTF-8-AMERICAN.log",
+      "sha256": "b7559df1f297764de78660f88708f1976f237a0597a14edb7e114f4da2b527a3",
+      "testSourceSha256": "2b2b086f7591bc726e13d8f94c86aea680a9acc4e4bfada21c999d8c4af5b05b"
+    },
+    {
+      "suite": "CostDistributionEligibleTest.p",
+      "expectedChecks": 33,
+      "cp": "UTF-8",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/CostDistributionEligibleTest-UTF-8-EUROPEAN.log",
+      "sha256": "b88ad0ae2d027a936ea391c3c500c2ce7398bcc66d1e297b12759f90c8dc35d5",
+      "testSourceSha256": "2b2b086f7591bc726e13d8f94c86aea680a9acc4e4bfada21c999d8c4af5b05b"
+    },
+    {
+      "suite": "CostDistributionEligibleTest.p",
+      "expectedChecks": 33,
+      "cp": "ISO8859-1",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/CostDistributionEligibleTest-ISO8859-1-AMERICAN.log",
+      "sha256": "b7559df1f297764de78660f88708f1976f237a0597a14edb7e114f4da2b527a3",
+      "testSourceSha256": "2b2b086f7591bc726e13d8f94c86aea680a9acc4e4bfada21c999d8c4af5b05b"
+    },
+    {
+      "suite": "CostDistributionEligibleTest.p",
+      "expectedChecks": 33,
+      "cp": "ISO8859-1",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/CostDistributionEligibleTest-ISO8859-1-EUROPEAN.log",
+      "sha256": "b88ad0ae2d027a936ea391c3c500c2ce7398bcc66d1e297b12759f90c8dc35d5",
+      "testSourceSha256": "2b2b086f7591bc726e13d8f94c86aea680a9acc4e4bfada21c999d8c4af5b05b"
+    },
+    {
+      "suite": "CostDistributionLedgerTest.p",
+      "expectedChecks": 31,
+      "cp": "UTF-8",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/CostDistributionLedgerTest-UTF-8-AMERICAN.log",
+      "sha256": "47fbbbadbe8d2a18c4a3b679382d1366edeeeeb94e61c29bfdad430d21f47301",
+      "testSourceSha256": "a168ddcc4a6fb3d5bb4d52c71cfc97399254e7da7f76f85470c0f970aca41d67"
+    },
+    {
+      "suite": "CostDistributionLedgerTest.p",
+      "expectedChecks": 31,
+      "cp": "UTF-8",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/CostDistributionLedgerTest-UTF-8-EUROPEAN.log",
+      "sha256": "067e80cbf2028e98c1c666d73cf92b1f303c9ee19290ce283d453b87fc32cec1",
+      "testSourceSha256": "a168ddcc4a6fb3d5bb4d52c71cfc97399254e7da7f76f85470c0f970aca41d67"
+    },
+    {
+      "suite": "CostDistributionLedgerTest.p",
+      "expectedChecks": 31,
+      "cp": "ISO8859-1",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/CostDistributionLedgerTest-ISO8859-1-AMERICAN.log",
+      "sha256": "47fbbbadbe8d2a18c4a3b679382d1366edeeeeb94e61c29bfdad430d21f47301",
+      "testSourceSha256": "a168ddcc4a6fb3d5bb4d52c71cfc97399254e7da7f76f85470c0f970aca41d67"
+    },
+    {
+      "suite": "CostDistributionLedgerTest.p",
+      "expectedChecks": 31,
+      "cp": "ISO8859-1",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/CostDistributionLedgerTest-ISO8859-1-EUROPEAN.log",
+      "sha256": "067e80cbf2028e98c1c666d73cf92b1f303c9ee19290ce283d453b87fc32cec1",
+      "testSourceSha256": "a168ddcc4a6fb3d5bb4d52c71cfc97399254e7da7f76f85470c0f970aca41d67"
+    },
+    {
+      "suite": "ItemCostManualReadTest.p",
+      "expectedChecks": 24,
+      "cp": "UTF-8",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/ItemCostManualReadTest-UTF-8-AMERICAN.log",
+      "sha256": "626d25dab69d1f97f96b838b42a271688bab7ca7ca55eb9cb5fa59ec2dd09085",
+      "testSourceSha256": "724b45dace64b64f6ce51723d75d42966b6c845694c43619259cbca0441cfaad"
+    },
+    {
+      "suite": "ItemCostManualReadTest.p",
+      "expectedChecks": 24,
+      "cp": "UTF-8",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/ItemCostManualReadTest-UTF-8-EUROPEAN.log",
+      "sha256": "626d25dab69d1f97f96b838b42a271688bab7ca7ca55eb9cb5fa59ec2dd09085",
+      "testSourceSha256": "724b45dace64b64f6ce51723d75d42966b6c845694c43619259cbca0441cfaad"
+    },
+    {
+      "suite": "ItemCostManualReadTest.p",
+      "expectedChecks": 24,
+      "cp": "ISO8859-1",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/ItemCostManualReadTest-ISO8859-1-AMERICAN.log",
+      "sha256": "626d25dab69d1f97f96b838b42a271688bab7ca7ca55eb9cb5fa59ec2dd09085",
+      "testSourceSha256": "724b45dace64b64f6ce51723d75d42966b6c845694c43619259cbca0441cfaad"
+    },
+    {
+      "suite": "ItemCostManualReadTest.p",
+      "expectedChecks": 24,
+      "cp": "ISO8859-1",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/ItemCostManualReadTest-ISO8859-1-EUROPEAN.log",
+      "sha256": "626d25dab69d1f97f96b838b42a271688bab7ca7ca55eb9cb5fa59ec2dd09085",
+      "testSourceSha256": "724b45dace64b64f6ce51723d75d42966b6c845694c43619259cbca0441cfaad"
+    },
+    {
+      "suite": "SampleContainerItemsTest.p",
+      "expectedChecks": 35,
+      "cp": "UTF-8",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/SampleContainerItemsTest-UTF-8-AMERICAN.log",
+      "sha256": "1c1b877faeeb9c8456f8158c41655d6a6584a95280a584a4e66372e6617280b3",
+      "testSourceSha256": "edd7e959c258a6dcf8f8a78bd9c89070e22210ce9d04f8c3e55272219973c88a"
+    },
+    {
+      "suite": "SampleContainerItemsTest.p",
+      "expectedChecks": 35,
+      "cp": "UTF-8",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/SampleContainerItemsTest-UTF-8-EUROPEAN.log",
+      "sha256": "edb87a5e6b53cc4ce789a889cffb19508626a448516a21102567a8049ce67b37",
+      "testSourceSha256": "edd7e959c258a6dcf8f8a78bd9c89070e22210ce9d04f8c3e55272219973c88a"
+    },
+    {
+      "suite": "SampleContainerItemsTest.p",
+      "expectedChecks": 35,
+      "cp": "ISO8859-1",
+      "culture": "AMERICAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/SampleContainerItemsTest-ISO8859-1-AMERICAN.log",
+      "sha256": "1c1b877faeeb9c8456f8158c41655d6a6584a95280a584a4e66372e6617280b3",
+      "testSourceSha256": "edd7e959c258a6dcf8f8a78bd9c89070e22210ce9d04f8c3e55272219973c88a"
+    },
+    {
+      "suite": "SampleContainerItemsTest.p",
+      "expectedChecks": 35,
+      "cp": "ISO8859-1",
+      "culture": "EUROPEAN",
+      "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/regression-local/SampleContainerItemsTest-ISO8859-1-EUROPEAN.log",
+      "sha256": "edb87a5e6b53cc4ce789a889cffb19508626a448516a21102567a8049ce67b37",
+      "testSourceSha256": "edd7e959c258a6dcf8f8a78bd9c89070e22210ce9d04f8c3e55272219973c88a"
+    }
+  ],
+  "php": {
+    "tests": 899,
+    "assertions": 5988,
+    "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/php-full.xml",
+    "sha256": "f85f84328424200845bcc75aa2adfa527a4ba5e836a981002d38a371b61fe18a",
+    "logSha256": "6044602f42f249c6ddef89ab03f65a567f4b81db2033934cbb559aed5706ffd8",
+    "newTests": 14,
+    "newAssertions": 147,
+    "realRuntimeClasses": true,
+    "syntheticActualTtRow": true,
+    "transportMockOnly": true
+  },
+  "native": {
+    "path": ".runtime/ciw-completion-20261028/container-cost-comparison-readonly/native-validation.json",
+    "sha256": "4701116c43b80ea76cc86718729b1fe37b45b0dff0c87ebe3776e2d8c9b58b24",
+    "schemaAndValidator": true,
+    "numericFilterFunctionality": false,
+    "browserRendered": false
+  },
+  "gates": [
+    "SQL precision overflow boundaries and physical dynamic optimizer/NULL-zero validation; current evidence is metadata plus closed synthetic source vectors",
+    "Native numeric filters currently generated text/contains: central separate companion required before publication (12 fields each draft)",
+    "Central consultar requires existing pp-container, unlike source joins: orphan-version policy/seam review required before full parity claim",
+    "Fresh current source and parent export before additive proposal; no old catalog overwrite",
+    "Official12.2/PASOE/native by root"
+  ]
+}

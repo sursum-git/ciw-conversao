@@ -1,0 +1,169 @@
+{
+  "success": true,
+  "state": "LOCAL_CANDIDATE_REVIEW_REQUIRED",
+  "diagnosticVersion": "12.8",
+  "official12_2": false,
+  "numDbs": 0,
+  "compileCountGreen": 8,
+  "suites": 7,
+  "logs": 28,
+  "checksPerCombination": 372,
+  "checksTotal": 1488,
+  "tests": {
+    "OrphanVersionReadPolicyTest": 32,
+    "ComparisonOrphanServiceTest": 29,
+    "ContainersVersionTest": 189,
+    "ContainersVersionHistoryTest": 38,
+    "ContainersVersionAuxHistoryTest": 28,
+    "CiwErpReadTest": 47,
+    "PurchaseItemsReadTest": 9
+  },
+  "logPins": [
+    {
+      "path": ".runtime/ciw-completion-20261028/comparison-orphan-read-policy/v1/green/OrphanVersionReadPolicyTest-UTF-8-AMERICAN.log",
+      "sha256": "0ae011f133baeefb85dcf9c16673d55705cae3129308e3efc0c7738cf394c32e",
+      "checks": 32
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/comparison-orphan-read-policy/v1/green/OrphanVersionReadPolicyTest-UTF-8-EUROPEAN.log",
+      "sha256": "0ae011f133baeefb85dcf9c16673d55705cae3129308e3efc0c7738cf394c32e",
+      "checks": 32
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/comparison-orphan-read-policy/v1/green/OrphanVersionReadPolicyTest-ISO8859-1-AMERICAN.log",
+      "sha256": "0ae011f133baeefb85dcf9c16673d55705cae3129308e3efc0c7738cf394c32e",
+      "checks": 32
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/comparison-orphan-read-policy/v1/green/OrphanVersionReadPolicyTest-ISO8859-1-EUROPEAN.log",
+      "sha256": "0ae011f133baeefb85dcf9c16673d55705cae3129308e3efc0c7738cf394c32e",
+      "checks": 32
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/comparison-orphan-read-policy/v1/green/ComparisonOrphanServiceTest-UTF-8-AMERICAN.log",
+      "sha256": "ba8747eaa1e39c639766f19ef977d480c1286b1dcb54a36263e57fea54db78a7",
+      "checks": 29
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/comparison-orphan-read-policy/v1/green/ComparisonOrphanServiceTest-UTF-8-EUROPEAN.log",
+      "sha256": "ba8747eaa1e39c639766f19ef977d480c1286b1dcb54a36263e57fea54db78a7",
+      "checks": 29
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/comparison-orphan-read-policy/v1/green/ComparisonOrphanServiceTest-ISO8859-1-AMERICAN.log",
+      "sha256": "ba8747eaa1e39c639766f19ef977d480c1286b1dcb54a36263e57fea54db78a7",
+      "checks": 29
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/comparison-orphan-read-policy/v1/green/ComparisonOrphanServiceTest-ISO8859-1-EUROPEAN.log",
+      "sha256": "ba8747eaa1e39c639766f19ef977d480c1286b1dcb54a36263e57fea54db78a7",
+      "checks": 29
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/comparison-orphan-read-policy/v1/green/ContainersVersionTest-UTF-8-AMERICAN.log",
+      "sha256": "f3bd2b5e632994713f488e666401c8e6cf1e65d62d58c7263977ad0a9003250b",
+      "checks": 189
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/comparison-orphan-read-policy/v1/green/ContainersVersionTest-UTF-8-EUROPEAN.log",
+      "sha256": "f3bd2b5e632994713f488e666401c8e6cf1e65d62d58c7263977ad0a9003250b",
+      "checks": 189
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/comparison-orphan-read-policy/v1/green/ContainersVersionTest-ISO8859-1-AMERICAN.log",
+      "sha256": "f3bd2b5e632994713f488e666401c8e6cf1e65d62d58c7263977ad0a9003250b",
+      "checks": 189
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/comparison-orphan-read-policy/v1/green/ContainersVersionTest-ISO8859-1-EUROPEAN.log",
+      "sha256": "f3bd2b5e632994713f488e666401c8e6cf1e65d62d58c7263977ad0a9003250b",
+      "checks": 189
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/comparison-orphan-read-policy/v1/green/ContainersVersionHistoryTest-UTF-8-AMERICAN.log",
+      "sha256": "a23437c94fe7bd46e2842009c953ca3e8714940cf52275d85c02f7e24f6a8254",
+      "checks": 38
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/comparison-orphan-read-policy/v1/green/ContainersVersionHistoryTest-UTF-8-EUROPEAN.log",
+      "sha256": "a23437c94fe7bd46e2842009c953ca3e8714940cf52275d85c02f7e24f6a8254",
+      "checks": 38
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/comparison-orphan-read-policy/v1/green/ContainersVersionHistoryTest-ISO8859-1-AMERICAN.log",
+      "sha256": "a23437c94fe7bd46e2842009c953ca3e8714940cf52275d85c02f7e24f6a8254",
+      "checks": 38
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/comparison-orphan-read-policy/v1/green/ContainersVersionHistoryTest-ISO8859-1-EUROPEAN.log",
+      "sha256": "a23437c94fe7bd46e2842009c953ca3e8714940cf52275d85c02f7e24f6a8254",
+      "checks": 38
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/comparison-orphan-read-policy/v1/green/ContainersVersionAuxHistoryTest-UTF-8-AMERICAN.log",
+      "sha256": "f7420b6f8bc5170cdc36e88f07ab7d4674dd6be91f031a59e31e99324eb4b788",
+      "checks": 28
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/comparison-orphan-read-policy/v1/green/ContainersVersionAuxHistoryTest-UTF-8-EUROPEAN.log",
+      "sha256": "f7420b6f8bc5170cdc36e88f07ab7d4674dd6be91f031a59e31e99324eb4b788",
+      "checks": 28
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/comparison-orphan-read-policy/v1/green/ContainersVersionAuxHistoryTest-ISO8859-1-AMERICAN.log",
+      "sha256": "f7420b6f8bc5170cdc36e88f07ab7d4674dd6be91f031a59e31e99324eb4b788",
+      "checks": 28
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/comparison-orphan-read-policy/v1/green/ContainersVersionAuxHistoryTest-ISO8859-1-EUROPEAN.log",
+      "sha256": "f7420b6f8bc5170cdc36e88f07ab7d4674dd6be91f031a59e31e99324eb4b788",
+      "checks": 28
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/comparison-orphan-read-policy/v1/green/CiwErpReadTest-UTF-8-AMERICAN.log",
+      "sha256": "1c812106f6d932629824c847eacd9c6cecc7a91d70bf3a711e55a1d9846ce242",
+      "checks": 47
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/comparison-orphan-read-policy/v1/green/CiwErpReadTest-UTF-8-EUROPEAN.log",
+      "sha256": "f22c5437801683d7ec8e917c36f7020d21bd704cf349cef53e0bb04cd03867d4",
+      "checks": 47
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/comparison-orphan-read-policy/v1/green/CiwErpReadTest-ISO8859-1-AMERICAN.log",
+      "sha256": "1c812106f6d932629824c847eacd9c6cecc7a91d70bf3a711e55a1d9846ce242",
+      "checks": 47
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/comparison-orphan-read-policy/v1/green/CiwErpReadTest-ISO8859-1-EUROPEAN.log",
+      "sha256": "f22c5437801683d7ec8e917c36f7020d21bd704cf349cef53e0bb04cd03867d4",
+      "checks": 47
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/comparison-orphan-read-policy/v1/green/PurchaseItemsReadTest-UTF-8-AMERICAN.log",
+      "sha256": "0ea50b00df5fbd099fc369588c37f95c6311bd0056537a987fb8d5e1d0b8bdd0",
+      "checks": 9
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/comparison-orphan-read-policy/v1/green/PurchaseItemsReadTest-UTF-8-EUROPEAN.log",
+      "sha256": "df50acc7cc009e19f35e27575ef2fef01bb03208604d2fb8c21a73b9a4692c8a",
+      "checks": 9
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/comparison-orphan-read-policy/v1/green/PurchaseItemsReadTest-ISO8859-1-AMERICAN.log",
+      "sha256": "0ea50b00df5fbd099fc369588c37f95c6311bd0056537a987fb8d5e1d0b8bdd0",
+      "checks": 9
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/comparison-orphan-read-policy/v1/green/PurchaseItemsReadTest-ISO8859-1-EUROPEAN.log",
+      "sha256": "df50acc7cc009e19f35e27575ef2fef01bb03208604d2fb8c21a73b9a4692c8a",
+      "checks": 9
+    }
+  ],
+  "writerAndCollectorByteIdentical": true,
+  "networkCalls": 0,
+  "canonicalWrites": 0,
+  "productBusinessWrites": 0,
+  "httpOptInRejected": true,
+  "onlyComparisonPrivateCaller": true
+}

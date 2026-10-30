@@ -1,0 +1,11 @@
+{
+  "code": "read_manual",
+  "name": "Consulta manual de empresas",
+  "type": "list",
+  "method": "POST",
+  "path": "/SursumPrograms/empresas-consulta-manual",
+  "headers": {},
+  "queryParams": {},
+  "bodyTemplate": {},
+  "itemsPath": "data"
+}

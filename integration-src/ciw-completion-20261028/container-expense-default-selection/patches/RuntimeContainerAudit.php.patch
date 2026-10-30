@@ -1,0 +1,26 @@
+--- D:\opencode\construtor-pg\backend\src\Runtime\RuntimeContainerAudit.php
++++ D:\opencode\construtor-pg\backend\src\Runtime\RuntimeContainerAudit.php
+@@ -6,7 +6,7 @@
+ {
+     public static function supports(array $definition): bool
+     {
+-        return in_array($definition['entityCode'] ?? '', ['container_painel_progress','container_despesas_progress','container_processos_progress','container_itens_progress','container_pagamentos_progress'], true);
++        return in_array($definition['entityCode'] ?? '', ['container_painel_progress','container_despesas_progress','container_processos_progress','container_despesas_selecao_progress','container_itens_progress','container_pagamentos_progress'], true);
+     }
+ 
+     public static function resource(array $definition, array $endpoint, string $operation): ?string
+@@ -18,12 +18,13 @@
+             'container_itens_progress' => ['motor_progress_container_itens','containers-itens','item_container_id','container-itens'],
+             'container_pagamentos_progress' => ['motor_progress_container_pagamentos','containers-pagamentos','pagamento_key','container-pagamentos'],
+             'container_processos_progress' => ['motor_progress_container_processos','containers-processos','container_id','container_processes'],
++            'container_despesas_selecao_progress' => ['motor_progress_container_processos','containers-processos','container_id','container_processes'],
+             default => null,
+         };
+         if (!$contract || ($definition['primaryKey'] ?? '') !== $contract[2] || ($definition['apiBinding']['sourceCode'] ?? '') !== $contract[0]) { return null; }
+         $path = parse_url((string) ($endpoint['url'] ?? ''), PHP_URL_PATH);
+         $template = $endpoint['bodyTemplate'] ?? [];
+-        $resource = $contract[3] === 'container_processes' ? (['gerar'=>'versoes','fechar'=>'custos','sincronizar'=>'impostos','calcular_impostos'=>'impostos'][$operation] ?? null) : $contract[3];
++        $resource = $contract[3] === 'container_processes' ? (['gerar'=>'versoes','fechar'=>'custos','sincronizar'=>'impostos','calcular_impostos'=>'impostos','selecionar_despesas'=>'impostos'][$operation] ?? null) : $contract[3];
+         if (!$resource || $contract[3] !== 'container_processes' && !in_array($operation, $contract[3] === 'container-pagamentos' ? ['create','delete'] : ['create','update','delete'], true)
+             || !in_array($path, ['/SursumPrograms/'.$contract[1],'/med/web/SursumPrograms/'.$contract[1]], true)
+             || !is_array($template) || count($template) !== 2 || ($template['resource'] ?? null) !== $resource || ($template['operation'] ?? null) !== $operation) { return null; }

@@ -1,0 +1,53 @@
+{
+  "source": "sources/scriptcase/ciw-completion-helpers-20261028/bl_sincr_cotacao/index.php",
+  "source_lines": [
+    5985,
+    6002,
+    7483,
+    7510
+  ],
+  "cases": [
+    {
+      "day": 1,
+      "synthetic_value": "5.12345",
+      "raw_legacy_insert": "5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345",
+      "token_count": 30,
+      "nonempty_count": 30,
+      "trailing_empty": false,
+      "extent_from_dictionary": 31,
+      "assignment_result": "UNPROVEN_NOT_EXECUTED"
+    },
+    {
+      "day": 15,
+      "synthetic_value": "5.12345",
+      "raw_legacy_insert": "0;0;0;0;0;0;0;0;0;0;0;0;0;0;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345;5.12345",
+      "token_count": 30,
+      "nonempty_count": 30,
+      "trailing_empty": false,
+      "extent_from_dictionary": 31,
+      "assignment_result": "UNPROVEN_NOT_EXECUTED"
+    },
+    {
+      "day": 28,
+      "synthetic_value": "5.12345",
+      "raw_legacy_insert": "0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;5.12345;5.12345;5.12345",
+      "token_count": 30,
+      "nonempty_count": 30,
+      "trailing_empty": false,
+      "extent_from_dictionary": 31,
+      "assignment_result": "UNPROVEN_NOT_EXECUTED"
+    },
+    {
+      "day": 31,
+      "synthetic_value": "5.12345",
+      "raw_legacy_insert": "0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;",
+      "token_count": 31,
+      "nonempty_count": 30,
+      "trailing_empty": true,
+      "extent_from_dictionary": 31,
+      "assignment_result": "UNPROVEN_NOT_EXECUTED"
+    }
+  ],
+  "commands": [],
+  "writes_executed": false
+}

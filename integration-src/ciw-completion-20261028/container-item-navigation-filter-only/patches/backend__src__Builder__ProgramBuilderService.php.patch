@@ -1,0 +1,36 @@
+--- baseline/backend/src/Builder/ProgramBuilderService.php
++++ candidate/backend/src/Builder/ProgramBuilderService.php
+@@ -3612,7 +3612,7 @@
+             'processOptions' => $pageType === 'process' ? $this->normalizeProcessOptions($payload['processOptions'] ?? null, $entity, $payload['contextFields'] ?? []) : null,
+             'formOptions' => $this->normalizeFormOptions($payload['formOptions'] ?? null, $entity, $pageType, $payload['contextFields'] ?? []),
+             'rowLinks' => $this->normalizeRowLinks($payload['rowLinks'] ?? [], $entity),
+-            'contextFields' => $this->normalizeContextFields($payload['contextFields'] ?? [], $entity),
++            'contextFields' => $this->normalizeContextFields($payload['contextFields'] ?? [], $entity, $pageType),
+             'allowCreate' => $pageType === 'master_detail' ? (bool) ($payload['allowCreate'] ?? true) : ($pageType === 'crud' ? (($this->apiEntitySupportsOperation($entity, 'create') || ($gridEditMode === 'batch' && $this->apiEntitySupportsOperation($entity, 'batch'))) ? (bool) ($payload['allowCreate'] ?? true) : ($entity && $entity->getEntityType() === 'api' ? false : (bool) ($payload['allowCreate'] ?? true))) : false),
+             'allowUpdate' => $pageType === 'master_detail' ? (bool) ($payload['allowUpdate'] ?? true) : ($pageType === 'crud' ? (($this->apiEntitySupportsOperation($entity, 'update') || ($gridEditMode === 'batch' && $this->apiEntitySupportsOperation($entity, 'batch'))) ? (bool) ($payload['allowUpdate'] ?? true) : ($entity && $entity->getEntityType() === 'api' ? false : (bool) ($payload['allowUpdate'] ?? true))) : false),
+             'allowDelete' => $pageType === 'master_detail' ? (bool) ($payload['allowDelete'] ?? true) : ($pageType === 'crud' ? (($this->apiEntitySupportsOperation($entity, 'delete') || ($gridEditMode === 'batch' && $this->apiEntitySupportsOperation($entity, 'batch'))) ? (bool) ($payload['allowDelete'] ?? true) : ($entity && $entity->getEntityType() === 'api' ? false : (bool) ($payload['allowDelete'] ?? true))) : false),
+@@ -7225,18 +7225,22 @@
+         return $value;
+     }
+ 
+-    private function normalizeContextFields(mixed $value, ?BuilderEntity $entity): array
++    private function normalizeContextFields(mixed $value, ?BuilderEntity $entity, string $pageType = 'crud'): array
+     {
+         if (!is_array($value) || !array_is_list($value) || count($value) > 10) { throw new RuntimeHttpException('BUILDER_CONTEXT_INVALID', 'Contexto invalido.', 422); }
+         $fields = []; foreach ($entity?->getFields() ?? [] as $field) { $fields[$field->getCode()] = $field; }
+         $seen = [];
+         foreach ($value as $item) {
+-            $this->closedObject($item, ['field', 'filter', 'createDefault', 'readonly', 'required'], 'contextFields');
++            $this->closedObject($item, ['field', 'filter', 'createDefault', 'readonly', 'required', 'filterOnly'], 'contextFields');
+             $field = $item['field'] ?? '';
+             if (!isset($fields[$field]) || $fields[$field]->getDataType() !== 'integer' || isset($seen[$field])) { throw new RuntimeHttpException('BUILDER_CONTEXT_INVALID', 'Contexto exige campo integer existente e unico.', 422); }
+             $seen[$field] = true;
++            if (array_key_exists('filterOnly', $item)) {
++                if ($pageType !== 'crud' || !is_bool($item['filterOnly']) || ($item['filterOnly'] && (($item['required'] ?? null) !== false || ($item['filter'] ?? null) !== true || ($item['readonly'] ?? null) !== true || ($item['createDefault'] ?? null) !== false))) { throw new RuntimeHttpException('BUILDER_CONTEXT_INVALID', 'filterOnly exige CRUD, contexto opcional readonly, filtro ativo e sem default de criacao.', 422); }
++            }
+             foreach (['filter', 'createDefault', 'readonly', 'required'] as $key) { if (isset($item[$key]) && !is_bool($item[$key])) { throw new RuntimeHttpException('BUILDER_CONTEXT_INVALID', 'Propriedade de contexto deve ser booleana.', 422); } }
+         }
++        foreach ($value as $index => $item) { if (($item['filterOnly'] ?? null) === false) { unset($value[$index]['filterOnly']); } }
+         return $value;
+     }
+ 

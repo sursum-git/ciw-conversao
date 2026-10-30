@@ -1,0 +1,48 @@
+{
+  "relative": "src/crud-engine/CrudDefinitionValidator.js",
+  "role": "generic-native-capability",
+  "baselineSha256": "a42792d03c65ef1e9b7c2a1b21f32c834861d63347789cde7e1e68202c6dfa0a",
+  "candidateSha256": "b9589de89540edfb222b801a25e34ab8b7afba52bce0407bc3cae9b5e3627a4c",
+  "hunks": [
+    {
+      "baselineStart": 4507,
+      "baselineEnd": 4640,
+      "candidateStart": 4507,
+      "candidateEnd": 4656,
+      "beforeBase64": "ICAgICAgICBpZiAoIWNsb3NlZChpdGVtLCBbImZpZWxkIiwgImZpbHRlciIsICJjcmVhdGVEZWZhdWx0IiwgInJlYWRvbmx5IiwgInJlcXVpcmVkIiwgImZpbHRlck9ubHkiXSwgImNvbnRleHRGaWVsZHMiKSkgeyByZXR1cm47IH0NCg==",
+      "afterBase64": "ICAgICAgICBpZiAoIWNsb3NlZChpdGVtLCBbImZpZWxkIiwgImZpbHRlciIsICJjcmVhdGVEZWZhdWx0IiwgInJlYWRvbmx5IiwgInJlcXVpcmVkIiwgImZpbHRlck9ubHkiLCAiaW50ZWdlclJhbmdlIl0sICJjb250ZXh0RmllbGRzIikpIHsgcmV0dXJuOyB9DQo="
+    },
+    {
+      "baselineStart": 5095,
+      "baselineEnd": 5095,
+      "candidateStart": 5111,
+      "candidateEnd": 5380,
+      "beforeBase64": "",
+      "afterBase64": "ICAgICAgICBpZiAoT2JqZWN0LnByb3RvdHlwZS5oYXNPd25Qcm9wZXJ0eS5jYWxsKGl0ZW0sICJpbnRlZ2VyUmFuZ2UiKSkgew0KICAgICAgICAgIHRyeSB7IGdsb2JhbC5QYWdlRGVmaW5pdGlvbk5vcm1hbGl6ZXIuaW50ZWdlckNvbnRleHRSYW5nZShkZWZpbml0aW9uLCBpdGVtKTsgfSBjYXRjaCAoZXJyb3IpIHsgZXJyb3JzLnB1c2goImludGVnZXJSYW5nZSBpbnZhbGlkbyBwYXJhIENSVUQgcmVhZG9ubHkgb3UgbGltaXRlcyBpbnQzMi4iKTsgfQ0KICAgICAgICB9DQo="
+    }
+  ],
+  "unchangedRanges": [
+    {
+      "baselineStart": 0,
+      "baselineEnd": 4507,
+      "candidateStart": 0,
+      "candidateEnd": 4507,
+      "sha256": "3f7ff416f06e66f900a5050f658cb9679cf142cb865a4970a15c59a8d9e443e7"
+    },
+    {
+      "baselineStart": 4640,
+      "baselineEnd": 5095,
+      "candidateStart": 4656,
+      "candidateEnd": 5111,
+      "sha256": "cd3a21d461fe32985e83796bf578d42cff17cd3daee10c0dd9333c8f0e92feed"
+    },
+    {
+      "baselineStart": 5095,
+      "baselineEnd": 70900,
+      "candidateStart": 5380,
+      "candidateEnd": 71185,
+      "sha256": "c1d77de88d43b86f2316d782cf9b055779167e7c0edc9cc186b37547ad917c40"
+    }
+  ],
+  "applyOnlyByExactBaseline": true
+}

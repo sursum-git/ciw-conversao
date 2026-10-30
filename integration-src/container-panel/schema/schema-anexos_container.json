@@ -1,0 +1,102 @@
+{
+  "database": "espec",
+  "table": "anexos_container",
+  "fields": [
+    {
+      "name": "anexo_container_id",
+      "type": "integer",
+      "format": ">>>,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "container_id",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "item_container_id",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "descricao",
+      "type": "character",
+      "format": "x(400)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "tipos_anexo_id",
+      "type": "integer",
+      "format": ">9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "caminho_arquivo",
+      "type": "character",
+      "format": "x(200)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dt_hr_arquivo",
+      "type": "datetime",
+      "format": "99\/99\/9999 HH:MM:SS",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    }
+  ],
+  "indexes": [
+    {
+      "name": "primario",
+      "unique": true,
+      "primary": true,
+      "fields": [
+        "anexo_container_id"
+      ]
+    }
+  ],
+  "triggers": [
+  ]
+}

@@ -1,0 +1,17 @@
+'use strict';
+const c=require('./purchase-payments-builder-common.cjs');
+const state=c.path.join(c.root,'.runtime/purchase-order-attachments-20261023'),meta=c.path.join(c.root,'integration-src/purchase-order-attachments/metadata');c.fs.mkdirSync(meta,{recursive:true});
+const pre=c.readJson(c.path.join(state,'preflight.json'));c.assert.equal(pre.sourceOperations,79);c.assert.match(pre.programCode,/^op\d{4}$/);c.assert.equal(pre.parent.program.version,'1.0.2');
+const child=c.readJson('D:/opencode/construtor-pg/integrations/ciw-purchase-attachments/proc-compra-anexos-builder-draft.json');
+const rename=value=>JSON.parse(JSON.stringify(value).replaceAll('proc_compra_anexos','proc_compra_documentos').replaceAll('ciw.proc-compra-anexos','ciw.proc-compra-documentos'));
+const d=rename(child);Object.assign(d.entityDraft,{name:'Anexos do Processo — MED',structureBaseNumber:Number(pre.programCode.slice(2))});Object.assign(d.programDraft,{programCode:pre.programCode,programTitle:d.entityDraft.name,subtitle:'Empresa MED. Documentos gerais e anexos dos itens do processo selecionado.',contextFields:[{field:'proc_compra_id',filter:true,createDefault:true,readonly:true,required:true}]});
+d.programDraft.formOptions.tabs[0].title='Anexo do processo';d.programDraft.crudOptions.gridFields.splice(1,0,{field:'item_proc_compra_id'});d.programDraft.crudOptions.filterFields.push('item_proc_compra_id');
+const item=d.entityDraft.fields.find(f=>f.code==='item_proc_compra_id');item.apiShowInGrid=true;item.apiShowInFilter=true;item.options.defaultValue=0;
+const ops=rename(c.readJson('D:/opencode/construtor-pg/integrations/ciw-purchase-attachments/api-source-additions.json'));
+for(const op of ops.operations){op.requestContextFields=['proc_compra_id'];op.name=op.type==='list'&&op.code.endsWith('opcoes_tipo')?'Tipos de anexo do processo':d.entityDraft.name+' — '+op.bodyTemplate.operation;}
+const parent=c.readJson('D:/opencode/construtor-pg/integrations/ciw-purchase-items/processos-compra-med-builder-draft.json');c.assert.equal(parent.programDraft.version,'1.0.2');c.assert.equal(parent.programDraft.formOptions.tabs.length,4);c.assert.ok(!parent.programDraft.formOptions.tabs.some(x=>x.id==='anexos'));
+parent.programDraft.version='1.0.3';parent.programDraft.subtitle='Empresa MED. Pedido de importação, itens, pagamentos e anexos vinculados.';
+parent.programDraft.formOptions.tabs.push({id:'anexos',title:'Anexos',type:'linkedPage',linkedPage:{screenId:d.programDraft.screenId,engine:'crud',hideHeader:false,requireRecord:true,filters:[{field:'proc_compra_id',sourceField:'proc_compra_id',operator:'eq'}]}});
+parent.programDraft.rowLinks.push({id:'anexos',label:'Anexos',screenId:d.programDraft.screenId,parameters:[{field:'proc_compra_id',sourceField:'proc_compra_id'}],position:'end'});
+for(const[name,value]of Object.entries({'proc-compra-documentos-builder-draft.json':d,'processos-compra-med-builder-draft.json':parent,'api-source-additions.json':ops,'navigation-proposal.json':{childScreen:d.programDraft.screenId,programCode:pre.programCode,parentScreen:parent.programDraft.screenId,parentVersion:'1.0.3',parentTabs:5,itemVersionPreserved:'1.0.2',oldSourceOperations:79,newSourceOperations:85,homeChanged:false,newSequence:false,reuseStorage:true,reuseWriter:true}}))c.fs.writeFileSync(c.path.join(meta,name),JSON.stringify(value,null,2)+'\n');
+console.log('PASS prepared parent attachment metadata:11fields/6ops/order-only context, parent5tabs/1.0.3; no catalog writes');

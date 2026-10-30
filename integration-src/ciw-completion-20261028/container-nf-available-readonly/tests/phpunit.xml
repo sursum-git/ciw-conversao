@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="bootstrap.php" cacheResult="false"><testsuites><testsuite name="ContainerNfAvailableReadonly">
+<file>RuntimeContainerNfAvailableReadTest.php</file>
+<file>ContainerNfAvailableBuilderTest.php</file>
+<file>LegacyNfSelectionContractTest.php</file>
+<file>D:/opencode/construtor-pg/backend/tests/Runtime/RuntimeApiRequestContextTest.php</file>
+<file>D:/opencode/construtor-pg/backend/tests/Runtime/RuntimeApiEntityActionServiceTest.php</file>
+</testsuite></testsuites></phpunit>

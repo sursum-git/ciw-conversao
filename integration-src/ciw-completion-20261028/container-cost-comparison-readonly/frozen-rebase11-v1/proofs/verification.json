@@ -1,0 +1,426 @@
+{
+  "success": true,
+  "status": "PREPARED_HELD_AFTER12_ORPHAN_POLICY_AND_OFFICIAL",
+  "sharedFiles": 5,
+  "hunks": 17,
+  "outsideHunksExact": true,
+  "action15IsolatedLfPreserved": true,
+  "preserve1055": true,
+  "localUniqueCompileFiles": 18,
+  "localCompileExecutions": 26,
+  "localVersion": "12.8",
+  "numDbs": 0,
+  "testSuites": 19,
+  "testLogs": 76,
+  "ttChecks": 3692,
+  "newChecksPerCombination": 379,
+  "regressionChecksPerCombination": 544,
+  "fullPhpTests": 1001,
+  "fullPhpAssertions": 7807,
+  "loadedAppDefinitions": 278,
+  "privateBuilderSha256": "205ebd14329f8e8896d07c07716939db8a12d58345fecf76cab5252f4e0694a7",
+  "nativeNumericFiltersPerCurrency": 12,
+  "sqlRootReceipts": [
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\sql-comparison-expression-metadata-v1.json",
+      "sha256": "7c7eeb34b077cf422f4050bc0903298fdd5e8c3a64aba12b79b2f56f7fb5ac8d",
+      "sqlExecutedByRootOnly": true
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\sql-comparison-operand-metadata-v1.json",
+      "sha256": "f22c7e6eb0c10e32c9e3348a5608caa66017f25b19d4ce126bdadcb87404c062",
+      "sqlExecutedByRootOnly": true
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\sql-comparison-source-derived-v2.json",
+      "sha256": "51058b12cb8d0044fda2d12d24ed42775f58c0c16a43ba31c85018120fd2a157",
+      "sqlExecutedByRootOnly": true
+    }
+  ],
+  "logs": [
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\projection-local\\projection-UTF-8-AMERICAN.log",
+      "sha256": "d190c4955f125dd199ef942b2f1477bfc31d871f51df00db4e4a163954c104d9",
+      "checks": 26
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\projection-local\\projection-UTF-8-EUROPEAN.log",
+      "sha256": "d190c4955f125dd199ef942b2f1477bfc31d871f51df00db4e4a163954c104d9",
+      "checks": 26
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\projection-local\\projection-ISO8859-1-AMERICAN.log",
+      "sha256": "d190c4955f125dd199ef942b2f1477bfc31d871f51df00db4e4a163954c104d9",
+      "checks": 26
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\projection-local\\projection-ISO8859-1-EUROPEAN.log",
+      "sha256": "d190c4955f125dd199ef942b2f1477bfc31d871f51df00db4e4a163954c104d9",
+      "checks": 26
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\rounding-local\\rounding-UTF-8-AMERICAN.log",
+      "sha256": "76f1c9587c59b719b574bc13af9408d61e84e11f79c4678c7ba96e0933688cab",
+      "checks": 21
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\rounding-local\\rounding-UTF-8-EUROPEAN.log",
+      "sha256": "76f1c9587c59b719b574bc13af9408d61e84e11f79c4678c7ba96e0933688cab",
+      "checks": 21
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\rounding-local\\rounding-ISO8859-1-AMERICAN.log",
+      "sha256": "76f1c9587c59b719b574bc13af9408d61e84e11f79c4678c7ba96e0933688cab",
+      "checks": 21
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\rounding-local\\rounding-ISO8859-1-EUROPEAN.log",
+      "sha256": "76f1c9587c59b719b574bc13af9408d61e84e11f79c4678c7ba96e0933688cab",
+      "checks": 21
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\itemjoin-local\\itemjoin-UTF-8-AMERICAN.log",
+      "sha256": "7c253242eb9cb860fb42486209ac15ab784d4b71dced78742dc15db604dc3002",
+      "checks": 10
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\itemjoin-local\\itemjoin-UTF-8-EUROPEAN.log",
+      "sha256": "7c253242eb9cb860fb42486209ac15ab784d4b71dced78742dc15db604dc3002",
+      "checks": 10
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\itemjoin-local\\itemjoin-ISO8859-1-AMERICAN.log",
+      "sha256": "7c253242eb9cb860fb42486209ac15ab784d4b71dced78742dc15db604dc3002",
+      "checks": 10
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\itemjoin-local\\itemjoin-ISO8859-1-EUROPEAN.log",
+      "sha256": "7c253242eb9cb860fb42486209ac15ab784d4b71dced78742dc15db604dc3002",
+      "checks": 10
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\materializer-local\\materializer-UTF-8-AMERICAN.log",
+      "sha256": "45ee3b46c6f4b67852cd8b2051204dce62272f4c0fe7858b507b162b2dbabe89",
+      "checks": 14
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\materializer-local\\materializer-UTF-8-EUROPEAN.log",
+      "sha256": "45ee3b46c6f4b67852cd8b2051204dce62272f4c0fe7858b507b162b2dbabe89",
+      "checks": 14
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\materializer-local\\materializer-ISO8859-1-AMERICAN.log",
+      "sha256": "45ee3b46c6f4b67852cd8b2051204dce62272f4c0fe7858b507b162b2dbabe89",
+      "checks": 14
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\materializer-local\\materializer-ISO8859-1-EUROPEAN.log",
+      "sha256": "45ee3b46c6f4b67852cd8b2051204dce62272f4c0fe7858b507b162b2dbabe89",
+      "checks": 14
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\reader-local\\reader-UTF-8-AMERICAN.log",
+      "sha256": "59cb56253a99abf10b12240213c7eafe8f65d98b0ee74f81affb8d2e7e70b75c",
+      "checks": 13
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\reader-local\\reader-UTF-8-EUROPEAN.log",
+      "sha256": "59cb56253a99abf10b12240213c7eafe8f65d98b0ee74f81affb8d2e7e70b75c",
+      "checks": 13
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\reader-local\\reader-ISO8859-1-AMERICAN.log",
+      "sha256": "59cb56253a99abf10b12240213c7eafe8f65d98b0ee74f81affb8d2e7e70b75c",
+      "checks": 13
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\reader-local\\reader-ISO8859-1-EUROPEAN.log",
+      "sha256": "59cb56253a99abf10b12240213c7eafe8f65d98b0ee74f81affb8d2e7e70b75c",
+      "checks": 13
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\sql-observed-local\\sql-observed-UTF-8-AMERICAN.log",
+      "sha256": "92c7ce9ca21b76d8e399e5059ebf22dbe2355cbca1d9bab0021269cc0b8ea722",
+      "checks": 274
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\sql-observed-local\\sql-observed-UTF-8-EUROPEAN.log",
+      "sha256": "92c7ce9ca21b76d8e399e5059ebf22dbe2355cbca1d9bab0021269cc0b8ea722",
+      "checks": 274
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\sql-observed-local\\sql-observed-ISO8859-1-AMERICAN.log",
+      "sha256": "92c7ce9ca21b76d8e399e5059ebf22dbe2355cbca1d9bab0021269cc0b8ea722",
+      "checks": 274
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\sql-observed-local\\sql-observed-ISO8859-1-EUROPEAN.log",
+      "sha256": "92c7ce9ca21b76d8e399e5059ebf22dbe2355cbca1d9bab0021269cc0b8ea722",
+      "checks": 274
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\service-local\\service-UTF-8-AMERICAN.log",
+      "sha256": "76f1c9587c59b719b574bc13af9408d61e84e11f79c4678c7ba96e0933688cab",
+      "checks": 21
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\service-local\\service-UTF-8-EUROPEAN.log",
+      "sha256": "76f1c9587c59b719b574bc13af9408d61e84e11f79c4678c7ba96e0933688cab",
+      "checks": 21
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\service-local\\service-ISO8859-1-AMERICAN.log",
+      "sha256": "76f1c9587c59b719b574bc13af9408d61e84e11f79c4678c7ba96e0933688cab",
+      "checks": 21
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\service-local\\service-ISO8859-1-EUROPEAN.log",
+      "sha256": "76f1c9587c59b719b574bc13af9408d61e84e11f79c4678c7ba96e0933688cab",
+      "checks": 21
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\ContainersVersionHistoryTest-UTF-8-AMERICAN.log",
+      "sha256": "a23437c94fe7bd46e2842009c953ca3e8714940cf52275d85c02f7e24f6a8254",
+      "checks": 38
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\ContainersVersionHistoryTest-UTF-8-EUROPEAN.log",
+      "sha256": "a23437c94fe7bd46e2842009c953ca3e8714940cf52275d85c02f7e24f6a8254",
+      "checks": 38
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\ContainersVersionHistoryTest-ISO8859-1-AMERICAN.log",
+      "sha256": "a23437c94fe7bd46e2842009c953ca3e8714940cf52275d85c02f7e24f6a8254",
+      "checks": 38
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\ContainersVersionHistoryTest-ISO8859-1-EUROPEAN.log",
+      "sha256": "a23437c94fe7bd46e2842009c953ca3e8714940cf52275d85c02f7e24f6a8254",
+      "checks": 38
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\ContainersVersionTest-UTF-8-AMERICAN.log",
+      "sha256": "f3bd2b5e632994713f488e666401c8e6cf1e65d62d58c7263977ad0a9003250b",
+      "checks": 189
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\ContainersVersionTest-UTF-8-EUROPEAN.log",
+      "sha256": "f3bd2b5e632994713f488e666401c8e6cf1e65d62d58c7263977ad0a9003250b",
+      "checks": 189
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\ContainersVersionTest-ISO8859-1-AMERICAN.log",
+      "sha256": "f3bd2b5e632994713f488e666401c8e6cf1e65d62d58c7263977ad0a9003250b",
+      "checks": 189
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\ContainersVersionTest-ISO8859-1-EUROPEAN.log",
+      "sha256": "f3bd2b5e632994713f488e666401c8e6cf1e65d62d58c7263977ad0a9003250b",
+      "checks": 189
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\CiwErpReadTest-UTF-8-AMERICAN.log",
+      "sha256": "1c812106f6d932629824c847eacd9c6cecc7a91d70bf3a711e55a1d9846ce242",
+      "checks": 47
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\CiwErpReadTest-UTF-8-EUROPEAN.log",
+      "sha256": "f22c5437801683d7ec8e917c36f7020d21bd704cf349cef53e0bb04cd03867d4",
+      "checks": 47
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\CiwErpReadTest-ISO8859-1-AMERICAN.log",
+      "sha256": "1c812106f6d932629824c847eacd9c6cecc7a91d70bf3a711e55a1d9846ce242",
+      "checks": 47
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\CiwErpReadTest-ISO8859-1-EUROPEAN.log",
+      "sha256": "f22c5437801683d7ec8e917c36f7020d21bd704cf349cef53e0bb04cd03867d4",
+      "checks": 47
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\PurchaseItemsReadTest-UTF-8-AMERICAN.log",
+      "sha256": "0ea50b00df5fbd099fc369588c37f95c6311bd0056537a987fb8d5e1d0b8bdd0",
+      "checks": 9
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\PurchaseItemsReadTest-UTF-8-EUROPEAN.log",
+      "sha256": "df50acc7cc009e19f35e27575ef2fef01bb03208604d2fb8c21a73b9a4692c8a",
+      "checks": 9
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\PurchaseItemsReadTest-ISO8859-1-AMERICAN.log",
+      "sha256": "0ea50b00df5fbd099fc369588c37f95c6311bd0056537a987fb8d5e1d0b8bdd0",
+      "checks": 9
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\PurchaseItemsReadTest-ISO8859-1-EUROPEAN.log",
+      "sha256": "df50acc7cc009e19f35e27575ef2fef01bb03208604d2fb8c21a73b9a4692c8a",
+      "checks": 9
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\ContainersVersionAuxHistoryTest-UTF-8-AMERICAN.log",
+      "sha256": "f7420b6f8bc5170cdc36e88f07ab7d4674dd6be91f031a59e31e99324eb4b788",
+      "checks": 28
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\ContainersVersionAuxHistoryTest-UTF-8-EUROPEAN.log",
+      "sha256": "f7420b6f8bc5170cdc36e88f07ab7d4674dd6be91f031a59e31e99324eb4b788",
+      "checks": 28
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\ContainersVersionAuxHistoryTest-ISO8859-1-AMERICAN.log",
+      "sha256": "f7420b6f8bc5170cdc36e88f07ab7d4674dd6be91f031a59e31e99324eb4b788",
+      "checks": 28
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\ContainersVersionAuxHistoryTest-ISO8859-1-EUROPEAN.log",
+      "sha256": "f7420b6f8bc5170cdc36e88f07ab7d4674dd6be91f031a59e31e99324eb4b788",
+      "checks": 28
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\ImportDiscountsLabelsTest-UTF-8-AMERICAN.log",
+      "sha256": "0c3a9f134b185e352b043508dfa0e8b635a9de4e4ae54e658b61768359955cd3",
+      "checks": 17
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\ImportDiscountsLabelsTest-UTF-8-EUROPEAN.log",
+      "sha256": "0c3a9f134b185e352b043508dfa0e8b635a9de4e4ae54e658b61768359955cd3",
+      "checks": 17
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\ImportDiscountsLabelsTest-ISO8859-1-AMERICAN.log",
+      "sha256": "0c3a9f134b185e352b043508dfa0e8b635a9de4e4ae54e658b61768359955cd3",
+      "checks": 17
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\ImportDiscountsLabelsTest-ISO8859-1-EUROPEAN.log",
+      "sha256": "0c3a9f134b185e352b043508dfa0e8b635a9de4e4ae54e658b61768359955cd3",
+      "checks": 17
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\ImportDiscountsReadTest-UTF-8-AMERICAN.log",
+      "sha256": "8e5d32672f37bd99778e89b5d8b1ebddccec25f6add51c3830b3d72a055209c1",
+      "checks": 44
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\ImportDiscountsReadTest-UTF-8-EUROPEAN.log",
+      "sha256": "8e5d32672f37bd99778e89b5d8b1ebddccec25f6add51c3830b3d72a055209c1",
+      "checks": 44
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\ImportDiscountsReadTest-ISO8859-1-AMERICAN.log",
+      "sha256": "8e5d32672f37bd99778e89b5d8b1ebddccec25f6add51c3830b3d72a055209c1",
+      "checks": 44
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\ImportDiscountsReadTest-ISO8859-1-EUROPEAN.log",
+      "sha256": "8e5d32672f37bd99778e89b5d8b1ebddccec25f6add51c3830b3d72a055209c1",
+      "checks": 44
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\CostDistributionEligibleTest-UTF-8-AMERICAN.log",
+      "sha256": "b7559df1f297764de78660f88708f1976f237a0597a14edb7e114f4da2b527a3",
+      "checks": 33
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\CostDistributionEligibleTest-UTF-8-EUROPEAN.log",
+      "sha256": "b88ad0ae2d027a936ea391c3c500c2ce7398bcc66d1e297b12759f90c8dc35d5",
+      "checks": 33
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\CostDistributionEligibleTest-ISO8859-1-AMERICAN.log",
+      "sha256": "b7559df1f297764de78660f88708f1976f237a0597a14edb7e114f4da2b527a3",
+      "checks": 33
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\CostDistributionEligibleTest-ISO8859-1-EUROPEAN.log",
+      "sha256": "b88ad0ae2d027a936ea391c3c500c2ce7398bcc66d1e297b12759f90c8dc35d5",
+      "checks": 33
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\CostDistributionLedgerTest-UTF-8-AMERICAN.log",
+      "sha256": "47fbbbadbe8d2a18c4a3b679382d1366edeeeeb94e61c29bfdad430d21f47301",
+      "checks": 31
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\CostDistributionLedgerTest-UTF-8-EUROPEAN.log",
+      "sha256": "067e80cbf2028e98c1c666d73cf92b1f303c9ee19290ce283d453b87fc32cec1",
+      "checks": 31
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\CostDistributionLedgerTest-ISO8859-1-AMERICAN.log",
+      "sha256": "47fbbbadbe8d2a18c4a3b679382d1366edeeeeb94e61c29bfdad430d21f47301",
+      "checks": 31
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\CostDistributionLedgerTest-ISO8859-1-EUROPEAN.log",
+      "sha256": "067e80cbf2028e98c1c666d73cf92b1f303c9ee19290ce283d453b87fc32cec1",
+      "checks": 31
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\ItemCostManualReadTest-UTF-8-AMERICAN.log",
+      "sha256": "626d25dab69d1f97f96b838b42a271688bab7ca7ca55eb9cb5fa59ec2dd09085",
+      "checks": 24
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\ItemCostManualReadTest-UTF-8-EUROPEAN.log",
+      "sha256": "626d25dab69d1f97f96b838b42a271688bab7ca7ca55eb9cb5fa59ec2dd09085",
+      "checks": 24
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\ItemCostManualReadTest-ISO8859-1-AMERICAN.log",
+      "sha256": "626d25dab69d1f97f96b838b42a271688bab7ca7ca55eb9cb5fa59ec2dd09085",
+      "checks": 24
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\ItemCostManualReadTest-ISO8859-1-EUROPEAN.log",
+      "sha256": "626d25dab69d1f97f96b838b42a271688bab7ca7ca55eb9cb5fa59ec2dd09085",
+      "checks": 24
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\SampleContainerItemsTest-UTF-8-AMERICAN.log",
+      "sha256": "1c1b877faeeb9c8456f8158c41655d6a6584a95280a584a4e66372e6617280b3",
+      "checks": 35
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\SampleContainerItemsTest-UTF-8-EUROPEAN.log",
+      "sha256": "edb87a5e6b53cc4ce789a889cffb19508626a448516a21102567a8049ce67b37",
+      "checks": 35
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\SampleContainerItemsTest-ISO8859-1-AMERICAN.log",
+      "sha256": "1c1b877faeeb9c8456f8158c41655d6a6584a95280a584a4e66372e6617280b3",
+      "checks": 35
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\SampleContainerItemsTest-ISO8859-1-EUROPEAN.log",
+      "sha256": "edb87a5e6b53cc4ce789a889cffb19508626a448516a21102567a8049ce67b37",
+      "checks": 35
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\ExpenseTaxRelationsReadTest-UTF-8-AMERICAN.log",
+      "sha256": "8bc68af3eca7b7cab95edd6357fcbc9eeeeaf37014dea183255bd82fbf6fa12f",
+      "checks": 49
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\ExpenseTaxRelationsReadTest-UTF-8-EUROPEAN.log",
+      "sha256": "8bc68af3eca7b7cab95edd6357fcbc9eeeeaf37014dea183255bd82fbf6fa12f",
+      "checks": 49
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\ExpenseTaxRelationsReadTest-ISO8859-1-AMERICAN.log",
+      "sha256": "8bc68af3eca7b7cab95edd6357fcbc9eeeeaf37014dea183255bd82fbf6fa12f",
+      "checks": 49
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\comparison-after11\\regression-local\\ExpenseTaxRelationsReadTest-ISO8859-1-EUROPEAN.log",
+      "sha256": "8bc68af3eca7b7cab95edd6357fcbc9eeeeaf37014dea183255bd82fbf6fa12f",
+      "checks": 49
+    }
+  ],
+  "official13PreparedManifestSha256": "f624a2ac0351b223d5ab7a608a26b535ebeefb87e4b7e300d07cfe64aa7fb348",
+  "canonicalWrites": false,
+  "networkExecuted": false,
+  "businessWrites": false
+}

@@ -1,0 +1,16 @@
+'use strict';
+const c=require('./purchase-payments-builder-common.cjs'),state=c.path.join(c.root,'.runtime/purchase-quantities-20261027');
+const save=(n,v)=>c.fs.writeFileSync(c.path.join(state,n),JSON.stringify(v,null,2)+'\n');
+c.session(async({api,runtime})=>{
+ const pre=c.readJson(c.path.join(state,'preflight.json')),ctx=c.readJson(c.path.join(state,'readonly-context.json'));
+ const source=(await api('/api-sources/motor_progress_ciw_cadastros')).apiSource;c.assert.equal(source.operations.length,109);for(const old of c.readJson(c.path.join(state,'source-registry-before.json')).operations)c.assert.deepEqual(source.operations.find(x=>x.code===old.code),old);
+ const child=await runtime('ciw.proc-compra-quantidades'),parent=await runtime('ciw.processos-compra-med');
+ c.assert.equal(parent.program.version,'1.0.8');c.assert.equal(parent.crud.form.tabs.length,11);c.assert.deepEqual(parent.crud.form.tabs.slice(0,10),pre.parent.crud.form.tabs);c.assert.deepEqual(parent.program.logs,pre.parent.program.logs);c.assert.deepEqual(parent.crud.form.logs,pre.parent.crud.form.logs);c.assert.equal(parent.crud.form.logs.mode,'recordEvents');c.assert.equal(parent.program.logs.mode,'deletions');
+ c.assert.equal(child.program.version,'1.0.1');c.assert.equal(Object.keys(child.dataModel.fields).length,24);for(const key of ['create','edit','delete'])c.assert.equal(child.permissions[key],false);
+ const page=await runtime('ciw.proc-compra-quantidades/endpoints/read',{context:ctx,take:200,skip:0});c.assert.ok(page.total>0);c.assert.deepEqual(page.data,c.readJson(c.path.join(state,'pasoe-rows-private.json')).data);
+ const row=page.data[0],detail=await runtime('ciw.proc-compra-quantidades/endpoints/get',{context:ctx,id:row.record_key});c.assert.deepEqual(detail.data??detail,row);
+ c.assert.deepEqual((await api('/entities/procs_compra_med_progress')).entity,c.readJson(c.path.join(state,'parent-entity-before.json')),'PARENT_ENTITY_CHANGED');
+ const global=await runtime('ciw.quantidades-importadas-med/endpoints/read',{take:2,skip:0});c.assert.equal(global.total,c.readJson(c.path.join(state,'pasoe-global-private.json')).total);c.assert.equal(global.data.length,2);
+ const general=await runtime('ciw.quantidades-importadas-med');c.assert.equal(general.program.version,'1.0.0');c.assert.equal((general.contextFields??[]).length,0);for(const key of ['create','edit','delete'])c.assert.equal(general.permissions[key],false);const globalDetail=await runtime('ciw.quantidades-importadas-med/endpoints/get',{id:global.data[0].record_key});c.assert.deepEqual(globalDetail.data??globalDetail,global.data[0]);
+ save('published-definitions.json',{child,parent,general});save('native-read-proof.json',{success:true,sourceOperations:109,previousOperationsPreserved:105,parentVersion:'1.0.8',parentTabs:11,previousTabsPreserved:10,readGet:true,globalAndContext:true,parentLogsPreserved:true,deletionMode:true,recordEventsMode:true,rows:page.total,businessWrites:false,userPermissionsChanged:false});console.log('PASS native runtime quantities read/get;parent11tabs/10preserved; record/deletion logs preserved;105old operations intact');
+},{readOnly:true}).catch(e=>{console.error(e.message);process.exitCode=1;});

@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-20",
+  "instance": "sursum-api/med",
+  "resources": [
+    {
+      "resource": "im_param",
+      "screenId": "ciw.parametros-ima",
+      "programCode": "cd0098",
+      "version": "1.0.0",
+      "applications": [
+        "form_im_param",
+        "cons_im_param"
+      ],
+      "runtimeCrudValidated": true,
+      "auditValidated": true,
+      "visualValidation": "pending",
+      "evidence": "docs/ciw-parametros-impostos-validacao-2026-10-20.md;12.2/.42:71checks parametros por cultura/codepage e229despesas por cultura; PHP542/3237; PASOE CRUD/conflito/isolamento/rollback/auditoria, cleanup completo;12relacoeslegadas semorfao."
+    },
+    {
+      "resource": "despesas_impostos",
+      "screenId": "ciw.empresas-despesa",
+      "programCode": "cd0093",
+      "version": "1.0.1",
+      "applications": [
+        "form_despesas_impostos",
+        "grid_despesas_impostos"
+      ],
+      "runtimeCrudValidated": true,
+      "auditValidated": true,
+      "visualValidation": "pending",
+      "evidence": "docs/ciw-parametros-impostos-validacao-2026-10-20.md;12.2/.42:71checks parametros por cultura/codepage e229despesas por cultura; PHP542/3237; PASOE CRUD/conflito/isolamento/rollback/auditoria, cleanup completo;12relacoeslegadas semorfao."
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="tests/bootstrap.php" cacheResult="false" failOnWarning="true" failOnNotice="true" failOnDeprecation="true">
+  <testsuites><testsuite name="Canonical with native item deletion log regression">
+    <directory>D:/opencode/construtor-pg/backend/tests</directory>
+    <exclude>D:/opencode/construtor-pg/backend/tests/Runtime/RuntimePurchaseItemLogScopeTest.php</exclude>
+    <directory>tests/Runtime</directory>
+  </testsuite></testsuites>
+</phpunit>

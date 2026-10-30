@@ -1,0 +1,41 @@
+{
+  "sourceCode": "motor_progress_ciw_cadastros",
+  "status": "ADDITIVE_ONLY_REBASE_AFTER_1055_CURRENT_SOURCE_REQUIRED",
+  "operations": [
+    {
+      "code": "import_descontos_fornecedor_read",
+      "name": "Descontos por fornecedor — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "import_descontos_fornecedor",
+        "operation": "read"
+      },
+      "requestContextFields": [
+        "fornecedor_id"
+      ],
+      "itemsPath": "data",
+      "totalPath": "total"
+    },
+    {
+      "code": "import_descontos_fornecedor_get",
+      "name": "Descontos por fornecedor — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "import_descontos_fornecedor",
+        "operation": "get"
+      },
+      "requestContextFields": [
+        "fornecedor_id"
+      ],
+      "itemPath": "data"
+    }
+  ]
+}

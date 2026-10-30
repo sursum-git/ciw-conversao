@@ -1,0 +1,41 @@
+{
+  "files": [
+    {
+      "canonical": "D:\\opencode\\construtor-pg\\backend\\src\\Builder\\ProgramBuilderService.php",
+      "relative": "backend/src/Builder/ProgramBuilderService.php",
+      "baselineSha256": "205ebd14329f8e8896d07c07716939db8a12d58345fecf76cab5252f4e0694a7"
+    },
+    {
+      "canonical": "D:\\opencode\\construtor-pg\\src\\page-engine\\PageDefinitionNormalizer.js",
+      "relative": "src/page-engine/PageDefinitionNormalizer.js",
+      "baselineSha256": "fb038ccb2446957902432473535aad0b1e7b61ba8152b02e04aa6c7baf60ecca"
+    },
+    {
+      "canonical": "D:\\opencode\\construtor-pg\\src\\crud-engine\\CrudDefinitionValidator.js",
+      "relative": "src/crud-engine/CrudDefinitionValidator.js",
+      "baselineSha256": "d02d5d03e569d8f3e78621c7ff5b72d700f191957ed5900f2e428863d625047b"
+    },
+    {
+      "canonical": "D:\\opencode\\construtor-pg\\src\\crud-engine\\CrudEngine.js",
+      "relative": "src/crud-engine/CrudEngine.js",
+      "baselineSha256": "5d78f77bc72c56c1bbd345d92ae3e4714a71f1d04e5b76e0453855a8c193bba7"
+    },
+    {
+      "canonical": "D:\\opencode\\construtor-pg\\src\\crud-engine\\CrudKendoFormRenderer.js",
+      "relative": "src/crud-engine/CrudKendoFormRenderer.js",
+      "baselineSha256": "d3028663b4c006771f7b8eac06d12ff7398c3e73a5c58391c328070a9d1047d9"
+    },
+    {
+      "canonical": "D:\\opencode\\construtor-pg\\public\\metadata\\schemas\\crud-definition-v1.schema.json",
+      "relative": "public/metadata/schemas/crud-definition-v1.schema.json",
+      "baselineSha256": "5a1511bf85cdad06c6fb53db72ef649f66fd00410f7ae7b79ee6cab5c27cc751"
+    },
+    {
+      "canonical": "D:\\opencode\\construtor-pg\\docs\\paridade-demo-producao.md",
+      "relative": "docs/paridade-demo-producao.md",
+      "baselineSha256": "d0634a264dfc151c242af05a7c1274cd22c27e0678d4a1e52124740100dc363c",
+      "role": "documentation-parity-only"
+    }
+  ],
+  "exportsProofSha256": "d4f647a3d11cbd2e35f1dcda1555e8b57bffd175d48ceb362ce9efb1affab1ee"
+}

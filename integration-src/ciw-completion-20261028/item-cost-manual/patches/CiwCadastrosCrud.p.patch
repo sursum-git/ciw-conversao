@@ -1,0 +1,17 @@
+--- D:/opencode/motor-progress/v2/sursum-api/programs/CiwCadastrosCrud.p
++++ D:/opencode/motor-progress/v2/sursum-api/programs/CiwCadastrosCrud.p
+@@ -51,6 +51,14 @@
+   IF NOT ValidHeader(cActor) OR NOT ValidHeader(cSession) THEN DO: RUN ErrorResponse("CIW_CADASTRO_IDENTITY_REQUIRED",401). RETURN. END.
+  END.
+  CASE cResource:
++  WHEN "item_custos_manual" THEN DO:
++   IF cOperation<>"read" AND cOperation<>"get" THEN DO: RUN ErrorResponse("CIW_ERP_READ_ONLY",405). RETURN. END.
++   cService=SEARCH("sursum-api/programs/CiwErpReadService.r").
++   IF cService=? THEN UNDO,THROW NEW Progress.Lang.AppError("Leitor de custos manuais indisponivel",1).
++   CREATE BUFFER hData FOR TABLE "espec.item_custos" BUFFER-NAME "bCiwManualItemCosts".
++   cleanRequest=CAST(poRequest:Clone(),JsonObject). cleanRequest:Remove("resource").
++   RUN VALUE(cService)(hData,"item_custos_manual","",cleanRequest,OUTPUT poResponse). RETURN.
++  END.
+   WHEN "import_descontos_geral" OR WHEN "import_descontos_lancamentos" THEN DO:
+    cService=SEARCH("sursum-api/programs/ImportDiscountsReadApi.r").
+    IF cService=? THEN UNDO, THROW NEW Progress.Lang.AppError("Consulta de descontos indisponivel.",1).

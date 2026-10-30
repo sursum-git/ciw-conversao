@@ -1,0 +1,10 @@
+--- D:\opencode\motor-progress\v2\sursum-api\programs\ContainersProcessos.p
++++ D:\opencode\motor-progress\v2\sursum-api\programs\ContainersProcessos.p
+@@ -62,6 +62,7 @@
+  cEstab=hCollector[1]:BUFFER-FIELD("cod-estabel"):BUFFER-VALUE.
+  IF cEstab=? OR cEstab="" THEN DO: RUN Fail("CONTAINER_CONFIGURATION","Estabelecimento ausente.",422). RETURN. END.
+  IF SUBSTRING(cEstab,1,1)<>"1" AND SUBSTRING(cEstab,1,1)<>"5" THEN DO: RUN Fail("CONTAINER_CONFIGURATION","Empresa sem banco ERP autorizado.",422). RETURN. END.
++ IF op="calcular_impostos" AND NOT cEstab BEGINS "5" THEN DO: RUN Fail("CONTAINER_PROCESS_MED_REQUIRED","Comando fiscal exige container MED.",422). RETURN. END.
+  hCollector[1]:BUFFER-RELEASE().
+  tables="empresas,itens_container,itens_proc_compra,procs_compra,despesas,empresas_despesa,despesas_impostos,relacs_desp_calculada,calcs_imp_container,despesas_container,pp-it-container,pp_container_permissao,pp_container_saldo_repres,nfs_container,cta_corren_desconto,anexos_container,versoes_item_custo_container,pagtos_container,cta_corren_fornec_imp,item_container_custos".
+  DO n=1 TO 20: hHeader[n]=FixedBuffer("espec." + ENTRY(n,tables)). END.

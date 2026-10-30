@@ -1,0 +1,35 @@
+--- D:/opencode/motor-progress/v2/sursum-api/programs/CiwErpReadService.p
++++ D:/opencode/motor-progress/v2/sursum-api/programs/CiwErpReadService.p
+@@ -191,7 +191,7 @@
+    END CASE.
+   END.
+  END.
+- IF LOOKUP(pcResource,'proc_compra_itens,proc_compra_amostras,proc_compra_anexos,proc_compra_documentos,proc_compra_despesas,proc_compra_resumo,proc_compra_alocacoes')>0 THEN DO: DELETE OBJECT k. RETURN o. END.
++ IF LOOKUP(pcResource,'proc_compra_itens,proc_compra_amostras,proc_compra_anexos,proc_compra_documentos,proc_compra_despesas,proc_compra_resumo,proc_compra_alocacoes,container_calculos_impostos_med,container_despesa_memoria_med')>0 THEN DO: DELETE OBJECT k. RETURN o. END.
+  k:Write(lc,FALSE). o:Add('record_key',STRING(lc)). DELETE OBJECT k. RETURN o.
+ END FUNCTION.
+ DO ON ERROR UNDO, THROW:
+@@ -222,6 +222,14 @@
+    IF pcCompany=? OR pcCompany='' THEN RUN Fail('CIW_ERP_COMPANY_UNAVAILABLE',503).
+    ASSIGN cFieldList='sinaliz_imp_id,proc_compra_id,item_proc_compra_id,tipo_registro,nome_alerta,titulo_configurado,descricao_alerta,dias_alerta,data_base,data_alerta,data_consulta,cod_proc_fornec,fornecedor_id,item_descricao,codigo_erp'
+     cAliasList=cFieldList cKeyList='sinaliz_imp_id,proc_compra_id,item_proc_compra_id' baseWhere=b:NAME + '.proc_compra_id = ' + NumText(DECIMAL(pcCompany)).
++  END.
++  WHEN 'container_calculos_impostos_med' THEN DO:
++   IF pcCompany=? OR pcCompany='' THEN RUN Fail('CIW_ERP_COMPANY_UNAVAILABLE',503).
++   ASSIGN cFieldList='calc_imp_container_id,container_id,dt_hr_calculo,data_calculo,usuario_id,memoria_calculo,desc_memoria_calc' cAliasList=cFieldList cKeyList='calc_imp_container_id' baseWhere=b:NAME + '.container_id = ' + NumText(DECIMAL(pcCompany)).
++  END.
++  WHEN 'container_despesa_memoria_med' THEN DO:
++   IF pcCompany=? OR pcCompany='' THEN RUN Fail('CIW_ERP_COMPANY_UNAVAILABLE',503).
++   ASSIGN cFieldList='despesa_container_id,container_id,calc_imp_container_id,memoria_calculo,link_calculo_id' cAliasList=cFieldList cKeyList='despesa_container_id' baseWhere=b:NAME + '.container_id = ' + NumText(DECIMAL(pcCompany)).
+   END.
+   WHEN 'proc_compra_alocacoes' THEN DO:
+    IF pcCompany=? OR pcCompany='' THEN RUN Fail('CIW_ERP_COMPANY_UNAVAILABLE',503).
+@@ -329,7 +337,7 @@
+   totalValue=totalValue + 1.
+   IF op='get' AND totalValue>1 THEN RUN Fail('CIW_ERP_KEY_AMBIGUOUS',409).
+   IF op='get' OR totalValue>skipValue AND rows:Length<takeValue THEN DO:
+-   item=RowJson(). fieldName=IF LOOKUP(pcResource,'procs_compra_med,proc_compra_resumo')>0 THEN NumText(item:GetInteger('proc_compra_id')) ELSE IF pcResource='proc_compra_alocacoes' THEN NumText(item:GetInteger('item_container_id')) ELSE IF pcResource='proc_compra_itens' THEN NumText(item:GetInteger('item_proc_compra_id')) ELSE IF LOOKUP(pcResource,'proc_compra_anexos,proc_compra_documentos')>0 THEN NumText(item:GetInteger('anexo_proc_compra_id')) ELSE IF pcResource='proc_compra_despesas' THEN NumText(item:GetInteger('despesa_proc_compra_id')) ELSE IF pcResource='proc_compra_amostras' THEN NumText(item:GetInteger('envio_amostra_repres_id')) ELSE item:GetCharacter('record_key').
++   item=RowJson(). fieldName=IF LOOKUP(pcResource,'procs_compra_med,proc_compra_resumo')>0 THEN NumText(item:GetInteger('proc_compra_id')) ELSE IF pcResource='container_calculos_impostos_med' THEN NumText(item:GetInteger('calc_imp_container_id')) ELSE IF pcResource='container_despesa_memoria_med' THEN NumText(item:GetInteger('despesa_container_id')) ELSE IF pcResource='proc_compra_alocacoes' THEN NumText(item:GetInteger('item_container_id')) ELSE IF pcResource='proc_compra_itens' THEN NumText(item:GetInteger('item_proc_compra_id')) ELSE IF LOOKUP(pcResource,'proc_compra_anexos,proc_compra_documentos')>0 THEN NumText(item:GetInteger('anexo_proc_compra_id')) ELSE IF pcResource='proc_compra_despesas' THEN NumText(item:GetInteger('despesa_proc_compra_id')) ELSE IF pcResource='proc_compra_amostras' THEN NumText(item:GetInteger('envio_amostra_repres_id')) ELSE item:GetCharacter('record_key').
+    IF seen:Has(fieldName) THEN RUN Fail('CIW_ERP_KEY_AMBIGUOUS',409).
+    seen:Add(fieldName,TRUE). rows:Add(item).
+   END.

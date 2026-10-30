@@ -1,0 +1,78 @@
+{
+  "canonical": "D:\\opencode\\construtor-pg\\backend\\src\\Builder\\ProgramBuilderService.php",
+  "relative": "backend/src/Builder/ProgramBuilderService.php",
+  "baselineSha256": "205ebd14329f8e8896d07c07716939db8a12d58345fecf76cab5252f4e0694a7",
+  "candidateSha256": "a58a98b85127c85377b1592c2f6bde38b0a8bf78ce86d343bed239cf084e0401",
+  "edits": [
+    {
+      "start": 177828,
+      "end": 177933,
+      "beforeBase64": "ICAgICAgICAgICAgJ2NvbnRleHRGaWVsZHMnID0+ICR0aGlzLT5ub3JtYWxpemVDb250ZXh0RmllbGRzKCRwYXlsb2FkWydjb250ZXh0RmllbGRzJ10gPz8gW10sICRlbnRpdHkpLA0K",
+      "afterBase64": "ICAgICAgICAgICAgJ2NvbnRleHRGaWVsZHMnID0+ICR0aGlzLT5ub3JtYWxpemVDb250ZXh0RmllbGRzKCRwYXlsb2FkWydjb250ZXh0RmllbGRzJ10gPz8gW10sICRlbnRpdHksICRwYWdlVHlwZSksDQo="
+    },
+    {
+      "start": 376571,
+      "end": 376661,
+      "beforeBase64": "ICAgIHByaXZhdGUgZnVuY3Rpb24gbm9ybWFsaXplQ29udGV4dEZpZWxkcyhtaXhlZCAkdmFsdWUsID9CdWlsZGVyRW50aXR5ICRlbnRpdHkpOiBhcnJheQ0K",
+      "afterBase64": "ICAgIHByaXZhdGUgZnVuY3Rpb24gbm9ybWFsaXplQ29udGV4dEZpZWxkcyhtaXhlZCAkdmFsdWUsID9CdWlsZGVyRW50aXR5ICRlbnRpdHksIHN0cmluZyAkcGFnZVR5cGUgPSAnY3J1ZCcpOiBhcnJheQ0K"
+    },
+    {
+      "start": 377008,
+      "end": 377128,
+      "beforeBase64": "ICAgICAgICAgICAgJHRoaXMtPmNsb3NlZE9iamVjdCgkaXRlbSwgWydmaWVsZCcsICdmaWx0ZXInLCAnY3JlYXRlRGVmYXVsdCcsICdyZWFkb25seScsICdyZXF1aXJlZCddLCAnY29udGV4dEZpZWxkcycpOw0K",
+      "afterBase64": "ICAgICAgICAgICAgJHRoaXMtPmNsb3NlZE9iamVjdCgkaXRlbSwgWydmaWVsZCcsICdmaWx0ZXInLCAnY3JlYXRlRGVmYXVsdCcsICdyZWFkb25seScsICdyZXF1aXJlZCcsICdmaWx0ZXJPbmx5J10sICdjb250ZXh0RmllbGRzJyk7DQo="
+    },
+    {
+      "start": 377440,
+      "end": 377440,
+      "beforeBase64": "",
+      "afterBase64": "ICAgICAgICAgICAgaWYgKGFycmF5X2tleV9leGlzdHMoJ2ZpbHRlck9ubHknLCAkaXRlbSkpIHsNCiAgICAgICAgICAgICAgICBpZiAoJHBhZ2VUeXBlICE9PSAnY3J1ZCcgfHwgIWlzX2Jvb2woJGl0ZW1bJ2ZpbHRlck9ubHknXSkgfHwgKCRpdGVtWydmaWx0ZXJPbmx5J10gJiYgKCgkaXRlbVsncmVxdWlyZWQnXSA/PyBudWxsKSAhPT0gZmFsc2UgfHwgKCRpdGVtWydmaWx0ZXInXSA/PyBudWxsKSAhPT0gdHJ1ZSB8fCAoJGl0ZW1bJ3JlYWRvbmx5J10gPz8gbnVsbCkgIT09IHRydWUgfHwgKCRpdGVtWydjcmVhdGVEZWZhdWx0J10gPz8gbnVsbCkgIT09IGZhbHNlKSkpIHsgdGhyb3cgbmV3IFJ1bnRpbWVIdHRwRXhjZXB0aW9uKCdCVUlMREVSX0NPTlRFWFRfSU5WQUxJRCcsICdmaWx0ZXJPbmx5IGV4aWdlIENSVUQsIGNvbnRleHRvIG9wY2lvbmFsIHJlYWRvbmx5LCBmaWx0cm8gYXRpdm8gZSBzZW0gZGVmYXVsdCBkZSBjcmlhY2FvLicsIDQyMik7IH0NCiAgICAgICAgICAgIH0NCg=="
+    },
+    {
+      "start": 377701,
+      "end": 377701,
+      "beforeBase64": "",
+      "afterBase64": "ICAgICAgICBmb3JlYWNoICgkdmFsdWUgYXMgJGluZGV4ID0+ICRpdGVtKSB7IGlmICgoJGl0ZW1bJ2ZpbHRlck9ubHknXSA/PyBudWxsKSA9PT0gZmFsc2UpIHsgdW5zZXQoJHZhbHVlWyRpbmRleF1bJ2ZpbHRlck9ubHknXSk7IH0gfQ0K"
+    }
+  ],
+  "unchangedByteRanges": [
+    {
+      "baselineStart": 0,
+      "candidateStart": 0,
+      "bytes": 177828,
+      "sha256": "64aa6bf4ee2ca8fcc139277dff0e70f3571364f71470edcc00e7616f1869c824"
+    },
+    {
+      "baselineStart": 177933,
+      "candidateStart": 177944,
+      "bytes": 198638,
+      "sha256": "4511f262caf152a5beda7cca4431000994a7a2d7fe2c761752b8563348e42523"
+    },
+    {
+      "baselineStart": 376661,
+      "candidateStart": 376699,
+      "bytes": 347,
+      "sha256": "274bbac4b42a57c12aae9652273fe2f8a1ee5f2617c5c6693d2f49490a76fb97"
+    },
+    {
+      "baselineStart": 377128,
+      "candidateStart": 377180,
+      "bytes": 312,
+      "sha256": "a71486050be16ab14564d42e2ad0805f064c0ca796c0000b7b318929bb7b0d68"
+    },
+    {
+      "baselineStart": 377440,
+      "candidateStart": 377994,
+      "bytes": 261,
+      "sha256": "b3247c9acb1f702663446e7cd21838b5d068b9d224db355c3f50e4dd924c5550"
+    },
+    {
+      "baselineStart": 377701,
+      "candidateStart": 378390,
+      "bytes": 103311,
+      "sha256": "0712d0d84a97c5d4cc0143e38b88e8adc33c1fa8f7996d4134738ec81ed60bfa"
+    }
+  ],
+  "roundTripExact": true,
+  "role": "native-runtime-capability"
+}

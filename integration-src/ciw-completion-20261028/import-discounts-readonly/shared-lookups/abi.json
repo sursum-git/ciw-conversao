@@ -1,0 +1,16 @@
+{
+  "baselinePath": "integration-src/ciw-completion-20261028/container-version-history/frozen-lookups-v1/abl/ContainersVersionHistoryLabels.p",
+  "baselineSha256": "d78961c6cf351b2acfa5c8298d58666216df3064ebdf76a6e3ea06dff3d217cb",
+  "candidateSha256": "9bfe21dc6ff9d86105d7602d376a2adc3cc3b9fe61783a68f7d1cd03f9d100bb",
+  "parameterDeclarationsUnchanged": true,
+  "changes": [
+    "item adds item_codigo_erp_atual in the same purchase-item query",
+    "new fixed motivo kind uses fourth trusted handle for espec.motivos_desconto"
+  ],
+  "oldConsumers": [
+    "item_descricao_atual",
+    "emitente_nome_abrev_atual",
+    "despesa_descricao_atual unchanged"
+  ],
+  "gate": "Do not overwrite this helper with frozen-lookups-v1 older helper when integrating history-label bundle later"
+}

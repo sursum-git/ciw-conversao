@@ -1,0 +1,21 @@
+{
+    "success": true,
+    "realBuilder": true,
+    "normalizedCount": 146,
+    "old144CodeTypeBodyContextPreserved": true,
+    "newTypes": [
+        "list",
+        "detail"
+    ],
+    "getBodyOperation": "get",
+    "context": [
+        "fornecedor_id"
+    ],
+    "readonly": true,
+    "source15FieldsAndHiddenPhysicalPk": true,
+    "newProgramCode": "op1056",
+    "programSpecSha256": "61572bcac4c91bba102819a93116ae85256f665c044e70df472676c7b974bb79",
+    "builderSha256": "72c6dafbfa0e93196b443ec45cd6d7c743fddd6415719febd70a0965d1fe18ee",
+    "businessWrites": false,
+    "networkExecuted": false
+}

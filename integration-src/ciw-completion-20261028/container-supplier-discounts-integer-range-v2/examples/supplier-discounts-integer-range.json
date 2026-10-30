@@ -1,0 +1,4323 @@
+{
+    "schemaVersion": "1.0",
+    "pageType": "crud",
+    "screenId": "ciw.descontos-importacao-fornecedor",
+    "program": {
+        "id": "op1056",
+        "module": "operacional",
+        "entity": "descontos_importacao_fornecedor_progress",
+        "title": "Descontos de importação por fornecedor",
+        "version": "1.0.0",
+        "subtitle": "Consulta vinculada ao fornecedor da navegação; arquivo somente texto.",
+        "icon": "file",
+        "permission": "descontos_importacao_fornecedor_progress.read",
+        "programOrigin": "standard",
+        "ownerScope": "system",
+        "customizationPolicy": "overlay_only",
+        "subscriberId": null,
+        "baseProgramCode": null,
+        "baseProgramVersionId": null,
+        "upgradeFrozen": false,
+        "frozenReason": null,
+        "publicationPolicy": {
+            "allowedDatabaseEnvironments": []
+        }
+    },
+    "permissions": {
+        "read": "descontos_importacao_fornecedor_progress.read",
+        "create": false,
+        "edit": false,
+        "delete": false,
+        "saveLayout": "user.preferences"
+    },
+    "dataSource": {
+        "api": {
+            "read": {
+                "endpointId": "read",
+                "method": "POST"
+            },
+            "get": {
+                "endpointId": "get",
+                "method": "POST"
+            },
+            "saveLayout": {
+                "endpointId": "saveLayout",
+                "method": "POST"
+            },
+            "restoreLayout": {
+                "endpointId": "restoreLayout",
+                "method": "POST"
+            },
+            "saveSort": {
+                "endpointId": "saveSort",
+                "method": "POST"
+            },
+            "deleteSort": {
+                "endpointId": "deleteSort",
+                "method": "POST"
+            },
+            "saveGroup": {
+                "endpointId": "saveGroup",
+                "method": "POST"
+            },
+            "deleteGroup": {
+                "endpointId": "deleteGroup",
+                "method": "POST"
+            },
+            "saveFilter": {
+                "endpointId": "saveFilter",
+                "method": "POST"
+            },
+            "deleteFilter": {
+                "endpointId": "deleteFilter",
+                "method": "POST"
+            },
+            "lookupFrequent": {
+                "endpointId": "lookupFrequent",
+                "method": "POST"
+            },
+            "recordLookupUsage": {
+                "endpointId": "recordLookupUsage",
+                "method": "POST"
+            },
+            "saveMobileTemplate": {
+                "endpointId": "saveMobileTemplate",
+                "method": "POST"
+            },
+            "deleteMobileTemplate": {
+                "endpointId": "deleteMobileTemplate",
+                "method": "POST"
+            }
+        }
+    },
+    "runtime": {
+        "entityCode": "descontos_importacao_fornecedor_progress",
+        "programId": "op1056",
+        "mode": "readonly-api",
+        "lock": {
+            "enabled": false,
+            "modes": []
+        },
+        "messages": {
+            "enabled": false,
+            "pollIntervalSeconds": 30,
+            "events": {
+                "enabled": false
+            }
+        }
+    },
+    "contextFields": [
+        {
+            "field": "fornecedor_id",
+            "filter": true,
+            "createDefault": false,
+            "readonly": true,
+            "required": true,
+            "integerRange": {
+                "min": -2147483648,
+                "max": 2147483647
+            }
+        }
+    ],
+    "dataModel": {
+        "primaryKey": "record_key",
+        "fields": {
+            "record_key": {
+                "label": "Chave da linha",
+                "type": "text",
+                "nullable": false,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "record_key"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "descontos_importacao_fornecedor_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "text"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "string"
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tamanho",
+                        "value": "2048"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "record_key",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": true,
+                    "maxLength": 2048
+                }
+            },
+            "desconto_importacao_id": {
+                "label": "Desconto",
+                "type": "integer",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "desconto_importacao_id"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "descontos_importacao_fornecedor_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "desconto_importacao_id",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false
+                }
+            },
+            "motivo_desconto_id": {
+                "label": "Motivo",
+                "type": "integer",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "motivo_desconto_id"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "descontos_importacao_fornecedor_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "motivo_desconto_id",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false
+                }
+            },
+            "descricao": {
+                "label": "Descrição",
+                "type": "text",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "descricao"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "descontos_importacao_fornecedor_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "text"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "string"
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tamanho",
+                        "value": "4000"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "descricao",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false,
+                    "maxLength": 4000
+                }
+            },
+            "log_credito": {
+                "label": "Crédito",
+                "type": "boolean",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "log_credito"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "descontos_importacao_fornecedor_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "boolean"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "boolean"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "log_credito",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false
+                }
+            },
+            "vl_dolar": {
+                "label": "Valor USD",
+                "type": "number",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "vl_dolar"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "descontos_importacao_fornecedor_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "number"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "numeric"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "vl_dolar",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "decimals": 2,
+                "format": "n2",
+                "validation": {
+                    "required": false
+                }
+            },
+            "vl_real": {
+                "label": "Valor BRL",
+                "type": "number",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "vl_real"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "descontos_importacao_fornecedor_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "number"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "numeric"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "vl_real",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "decimals": 2,
+                "format": "n2",
+                "validation": {
+                    "required": false
+                }
+            },
+            "vl_cotacao_dolar": {
+                "label": "Cotação USD",
+                "type": "number",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "vl_cotacao_dolar"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "descontos_importacao_fornecedor_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "number"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "numeric"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "vl_cotacao_dolar",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "decimals": 2,
+                "format": "n2",
+                "validation": {
+                    "required": false
+                }
+            },
+            "item_container_id": {
+                "label": "Item do container",
+                "type": "integer",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "item_container_id"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "descontos_importacao_fornecedor_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "item_container_id",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false
+                }
+            },
+            "cod_tipo": {
+                "label": "Tipo",
+                "type": "integer",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "cod_tipo"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "descontos_importacao_fornecedor_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "cod_tipo",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "editor": "dropdown",
+                "options": [
+                    {
+                        "value": 1,
+                        "text": "1"
+                    },
+                    {
+                        "value": 2,
+                        "text": "2"
+                    }
+                ],
+                "validation": {
+                    "required": false
+                }
+            },
+            "fornecedor_id": {
+                "label": "Fornecedor",
+                "type": "integer",
+                "nullable": false,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "fornecedor_id"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "descontos_importacao_fornecedor_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "fornecedor_id",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": true
+                }
+            },
+            "vl_real_autorizado": {
+                "label": "Autorizado BRL",
+                "type": "number",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "vl_real_autorizado"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "descontos_importacao_fornecedor_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "number"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "numeric"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "vl_real_autorizado",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "decimals": 2,
+                "format": "n2",
+                "validation": {
+                    "required": false
+                }
+            },
+            "vl_dolar_autorizado": {
+                "label": "Autorizado USD",
+                "type": "number",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "vl_dolar_autorizado"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "descontos_importacao_fornecedor_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "number"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "numeric"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "vl_dolar_autorizado",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "decimals": 2,
+                "format": "n2",
+                "validation": {
+                    "required": false
+                }
+            },
+            "dt_autorizacao": {
+                "label": "Data da autorização",
+                "type": "date",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "dt_autorizacao"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "descontos_importacao_fornecedor_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "date"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "date"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "dt_autorizacao",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false
+                }
+            },
+            "vl_utiliz": {
+                "label": "Utilizado USD",
+                "type": "number",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "vl_utiliz"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "descontos_importacao_fornecedor_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "number"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "numeric"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "vl_utiliz",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "decimals": 2,
+                "format": "n2",
+                "validation": {
+                    "required": false
+                }
+            },
+            "vl_utiliz_detalhe": {
+                "label": "Utilizado USD — soma do detalhe",
+                "type": "number",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "vl_utiliz_detalhe"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "descontos_importacao_fornecedor_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "number"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "numeric"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "vl_utiliz_detalhe",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "decimals": 2,
+                "format": "n2",
+                "validation": {
+                    "required": false
+                }
+            },
+            "vl_saldo": {
+                "label": "Saldo USD",
+                "type": "number",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "vl_saldo"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "descontos_importacao_fornecedor_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "number"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "numeric"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "vl_saldo",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "decimals": 2,
+                "format": "n2",
+                "validation": {
+                    "required": false
+                }
+            },
+            "item_codigo_erp_atual": {
+                "label": "Código ERP atual do item",
+                "type": "text",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "item_codigo_erp_atual"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "descontos_importacao_fornecedor_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "text"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "string"
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tamanho",
+                        "value": "160"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "item_codigo_erp_atual",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false,
+                    "maxLength": 160
+                }
+            },
+            "item_descricao_atual": {
+                "label": "Descrição atual do item",
+                "type": "text",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "item_descricao_atual"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "descontos_importacao_fornecedor_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "text"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "string"
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tamanho",
+                        "value": "160"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "item_descricao_atual",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false,
+                    "maxLength": 160
+                }
+            },
+            "fornecedor_nome_abrev_atual": {
+                "label": "Nome atual do fornecedor",
+                "type": "text",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "fornecedor_nome_abrev_atual"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "descontos_importacao_fornecedor_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "text"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "string"
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tamanho",
+                        "value": "160"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "fornecedor_nome_abrev_atual",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false,
+                    "maxLength": 160
+                }
+            },
+            "motivo_descricao_atual": {
+                "label": "Descrição atual do motivo",
+                "type": "text",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "motivo_descricao_atual"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "descontos_importacao_fornecedor_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "text"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "string"
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tamanho",
+                        "value": "160"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "motivo_descricao_atual",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false,
+                    "maxLength": 160
+                }
+            },
+            "arquivo": {
+                "label": "Arquivo (referência)",
+                "type": "text",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "arquivo"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "descontos_importacao_fornecedor_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "text"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "string"
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tamanho",
+                        "value": "4000"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "arquivo",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false,
+                    "maxLength": 4000
+                }
+            }
+        }
+    },
+    "crud": {
+        "query": {
+            "pageSize": 30,
+            "defaultSort": [],
+            "defaultPageSize": 30
+        },
+        "filter": {
+            "type": "window",
+            "mode": "basic",
+            "title": "Filtros",
+            "openOnLoad": false,
+            "showAppliedFilters": true,
+            "fields": [
+                {
+                    "id": "item_container_id",
+                    "field": "item_container_id",
+                    "label": "Item do container",
+                    "type": "integer",
+                    "operator": "eq",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "eq"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "item_container_id"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "integer"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "integer"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "item_container_id",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "fornecedor_id",
+                    "field": "fornecedor_id",
+                    "label": "Fornecedor",
+                    "type": "integer",
+                    "operator": "eq",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "eq"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "fornecedor_id"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "integer"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "integer"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "fornecedor_id",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "motivo_desconto_id",
+                    "field": "motivo_desconto_id",
+                    "label": "Motivo",
+                    "type": "integer",
+                    "operator": "eq",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "eq"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "motivo_desconto_id"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "integer"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "integer"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "motivo_desconto_id",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "descricao",
+                    "field": "descricao",
+                    "label": "Descrição",
+                    "type": "text",
+                    "operator": "contains",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "contains"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "descricao"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "text"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "string"
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tamanho",
+                            "value": "4000"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "descricao",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "log_credito",
+                    "field": "log_credito",
+                    "label": "Crédito",
+                    "type": "boolean",
+                    "operator": "eq",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "eq"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "log_credito"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "boolean"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "boolean"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "log_credito",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "vl_dolar",
+                    "field": "vl_dolar",
+                    "label": "Valor USD",
+                    "type": "decimal",
+                    "operator": "eq",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "contains"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_dolar"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_dolar",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "vl_real",
+                    "field": "vl_real",
+                    "label": "Valor BRL",
+                    "type": "decimal",
+                    "operator": "eq",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "contains"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_real"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_real",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "vl_cotacao_dolar",
+                    "field": "vl_cotacao_dolar",
+                    "label": "Cotação USD",
+                    "type": "decimal",
+                    "operator": "eq",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "contains"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_cotacao_dolar"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_cotacao_dolar",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "cod_tipo",
+                    "field": "cod_tipo",
+                    "label": "Tipo",
+                    "type": "integer",
+                    "operator": "eq",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "eq"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "cod_tipo"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "integer"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "integer"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "cod_tipo",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "vl_real_autorizado",
+                    "field": "vl_real_autorizado",
+                    "label": "Autorizado BRL",
+                    "type": "decimal",
+                    "operator": "eq",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "contains"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_real_autorizado"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_real_autorizado",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "vl_dolar_autorizado",
+                    "field": "vl_dolar_autorizado",
+                    "label": "Autorizado USD",
+                    "type": "decimal",
+                    "operator": "eq",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "contains"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_dolar_autorizado"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_dolar_autorizado",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "dt_autorizacao",
+                    "field": "dt_autorizacao",
+                    "label": "Data da autorização",
+                    "type": "date",
+                    "operator": "eq",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "contains"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "dt_autorizacao"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "date"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "date"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "dt_autorizacao",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "vl_utiliz",
+                    "field": "vl_utiliz",
+                    "label": "Utilizado USD",
+                    "type": "decimal",
+                    "operator": "eq",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "contains"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_utiliz"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_utiliz",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "vl_saldo",
+                    "field": "vl_saldo",
+                    "label": "Saldo USD",
+                    "type": "decimal",
+                    "operator": "eq",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "contains"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_saldo"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_saldo",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "arquivo",
+                    "field": "arquivo",
+                    "label": "Arquivo (referência)",
+                    "type": "text",
+                    "operator": "contains",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "contains"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "arquivo"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "text"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "string"
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tamanho",
+                            "value": "4000"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "arquivo",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "item_codigo_erp_atual",
+                    "field": "item_codigo_erp_atual",
+                    "label": "Código ERP atual do item",
+                    "type": "text",
+                    "operator": "contains",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "contains"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "item_codigo_erp_atual"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "text"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "string"
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tamanho",
+                            "value": "160"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "item_codigo_erp_atual",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "item_descricao_atual",
+                    "field": "item_descricao_atual",
+                    "label": "Descrição atual do item",
+                    "type": "text",
+                    "operator": "contains",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "contains"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "item_descricao_atual"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "text"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "string"
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tamanho",
+                            "value": "160"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "item_descricao_atual",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "fornecedor_nome_abrev_atual",
+                    "field": "fornecedor_nome_abrev_atual",
+                    "label": "Nome atual do fornecedor",
+                    "type": "text",
+                    "operator": "contains",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "contains"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "fornecedor_nome_abrev_atual"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "text"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "string"
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tamanho",
+                            "value": "160"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "fornecedor_nome_abrev_atual",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "motivo_descricao_atual",
+                    "field": "motivo_descricao_atual",
+                    "label": "Descrição atual do motivo",
+                    "type": "text",
+                    "operator": "contains",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "contains"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "motivo_descricao_atual"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "text"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "string"
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tamanho",
+                            "value": "160"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "motivo_descricao_atual",
+                            "critical": true
+                        }
+                    ]
+                }
+            ]
+        },
+        "grid": {
+            "editing": {
+                "mode": "form"
+            },
+            "pageable": true,
+            "sortable": true,
+            "filterable": false,
+            "groupable": false,
+            "resizable": true,
+            "reorderable": true,
+            "columnMenu": true,
+            "toolbar": [
+                {
+                    "id": "filters",
+                    "label": "Filtros",
+                    "action": "filters",
+                    "icon": "filter"
+                },
+                {
+                    "id": "refresh",
+                    "label": "Atualizar",
+                    "action": "refresh",
+                    "icon": "arrow-rotate-cw"
+                },
+                {
+                    "id": "layout",
+                    "label": "Leiaute",
+                    "action": "layout",
+                    "icon": "columns",
+                    "permission": "saveLayout"
+                }
+            ],
+            "columns": [
+                {
+                    "field": "item_container_id",
+                    "title": "Item do container",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "item_container_id"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "integer"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "integer"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "item_container_id",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "fornecedor_id",
+                    "title": "Fornecedor",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "fornecedor_id"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "integer"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "integer"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "fornecedor_id",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "motivo_desconto_id",
+                    "title": "Motivo",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "motivo_desconto_id"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "integer"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "integer"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "motivo_desconto_id",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "descricao",
+                    "title": "Descrição",
+                    "width": 180,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "220"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "descricao"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "text"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "string"
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tamanho",
+                            "value": "4000"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "descricao",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "log_credito",
+                    "title": "Crédito",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "log_credito"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "boolean"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "boolean"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "log_credito",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "vl_dolar",
+                    "title": "Valor USD",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_dolar"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_dolar",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "vl_real",
+                    "title": "Valor BRL",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_real"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_real",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "vl_cotacao_dolar",
+                    "title": "Cotação USD",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_cotacao_dolar"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_cotacao_dolar",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "cod_tipo",
+                    "title": "Tipo",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "cod_tipo"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "integer"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "integer"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "cod_tipo",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "vl_real_autorizado",
+                    "title": "Autorizado BRL",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_real_autorizado"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_real_autorizado",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "vl_dolar_autorizado",
+                    "title": "Autorizado USD",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_dolar_autorizado"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_dolar_autorizado",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "dt_autorizacao",
+                    "title": "Data da autorização",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "dt_autorizacao"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "date"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "date"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "dt_autorizacao",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "vl_utiliz",
+                    "title": "Utilizado USD",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_utiliz"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_utiliz",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "vl_saldo",
+                    "title": "Saldo USD",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_saldo"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_saldo",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "arquivo",
+                    "title": "Arquivo (referência)",
+                    "width": 180,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "220"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "arquivo"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "text"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "string"
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tamanho",
+                            "value": "4000"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "arquivo",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "item_codigo_erp_atual",
+                    "title": "Código ERP atual do item",
+                    "width": 180,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "220"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "item_codigo_erp_atual"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "text"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "string"
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tamanho",
+                            "value": "160"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "item_codigo_erp_atual",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "item_descricao_atual",
+                    "title": "Descrição atual do item",
+                    "width": 180,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "220"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "item_descricao_atual"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "text"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "string"
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tamanho",
+                            "value": "160"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "item_descricao_atual",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "fornecedor_nome_abrev_atual",
+                    "title": "Nome atual do fornecedor",
+                    "width": 180,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "220"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "fornecedor_nome_abrev_atual"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "text"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "string"
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tamanho",
+                            "value": "160"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "fornecedor_nome_abrev_atual",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "motivo_descricao_atual",
+                    "title": "Descrição atual do motivo",
+                    "width": 180,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "220"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "motivo_descricao_atual"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "text"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "string"
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tamanho",
+                            "value": "160"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "motivo_descricao_atual",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "record_key",
+                    "title": "Chave da linha",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "220"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "record_key"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "text"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "string"
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tamanho",
+                            "value": "2048"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "record_key",
+                            "critical": true
+                        }
+                    ],
+                    "visible": false
+                },
+                {
+                    "field": "desconto_importacao_id",
+                    "title": "Desconto",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "desconto_importacao_id"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "integer"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "integer"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "desconto_importacao_id",
+                            "critical": true
+                        }
+                    ],
+                    "visible": false
+                },
+                {
+                    "field": "vl_utiliz_detalhe",
+                    "title": "Utilizado USD — soma do detalhe",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_utiliz_detalhe"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "descontos_importacao_fornecedor_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_utiliz_detalhe",
+                            "critical": true
+                        }
+                    ],
+                    "visible": false
+                }
+            ],
+            "rowActions": [
+                {
+                    "id": "view",
+                    "label": "Visualizar",
+                    "action": "view",
+                    "icon": "eye",
+                    "permission": "read"
+                }
+            ],
+            "rowLinks": [],
+            "bulkActions": {
+                "enabled": false,
+                "actions": []
+            },
+            "print": {
+                "enabled": false,
+                "options": []
+            }
+        },
+        "form": {
+            "id": "ciw-descontos-importacao-fornecedor-form",
+            "mode": "popup",
+            "layout": "tabs",
+            "maximizeForm": true,
+            "title": {
+                "create": "Incluir descontos de importação por fornecedor",
+                "view": "Detalhe de descontos de importação por fornecedor",
+                "edit": "Alterar descontos de importação por fornecedor",
+                "delete": "Excluir descontos de importação por fornecedor"
+            },
+            "behavior": {
+                "closeOnSave": true,
+                "closeOnCancel": true
+            },
+            "tabs": [
+                {
+                    "id": "geral",
+                    "title": "Geral",
+                    "sections": [
+                        {
+                            "id": "principal",
+                            "title": "Principal",
+                            "columns": 2,
+                            "fields": [
+                                {
+                                    "field": "motivo_desconto_id",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "descricao",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "log_credito",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "vl_dolar",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "vl_real",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "vl_cotacao_dolar",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "item_container_id",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "cod_tipo",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "fornecedor_id",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "vl_real_autorizado",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "vl_dolar_autorizado",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "dt_autorizacao",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "vl_utiliz",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "vl_saldo",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "item_codigo_erp_atual",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "item_descricao_atual",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "fornecedor_nome_abrev_atual",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "motivo_descricao_atual",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "arquivo",
+                                    "readonly": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "fields": [
+                {
+                    "field": "motivo_desconto_id",
+                    "readonly": true
+                },
+                {
+                    "field": "descricao",
+                    "readonly": true
+                },
+                {
+                    "field": "log_credito",
+                    "readonly": true
+                },
+                {
+                    "field": "vl_dolar",
+                    "readonly": true
+                },
+                {
+                    "field": "vl_real",
+                    "readonly": true
+                },
+                {
+                    "field": "vl_cotacao_dolar",
+                    "readonly": true
+                },
+                {
+                    "field": "item_container_id",
+                    "readonly": true
+                },
+                {
+                    "field": "cod_tipo",
+                    "readonly": true
+                },
+                {
+                    "field": "fornecedor_id",
+                    "readonly": true
+                },
+                {
+                    "field": "vl_real_autorizado",
+                    "readonly": true
+                },
+                {
+                    "field": "vl_dolar_autorizado",
+                    "readonly": true
+                },
+                {
+                    "field": "dt_autorizacao",
+                    "readonly": true
+                },
+                {
+                    "field": "vl_utiliz",
+                    "readonly": true
+                },
+                {
+                    "field": "vl_saldo",
+                    "readonly": true
+                },
+                {
+                    "field": "item_codigo_erp_atual",
+                    "readonly": true
+                },
+                {
+                    "field": "item_descricao_atual",
+                    "readonly": true
+                },
+                {
+                    "field": "fornecedor_nome_abrev_atual",
+                    "readonly": true
+                },
+                {
+                    "field": "motivo_descricao_atual",
+                    "readonly": true
+                },
+                {
+                    "field": "arquivo",
+                    "readonly": true
+                }
+            ],
+            "logs": {
+                "enabled": false
+            },
+            "print": {
+                "enabled": false,
+                "options": []
+            },
+            "otherActions": {
+                "enabled": false,
+                "actions": []
+            }
+        },
+        "userLayout": {
+            "enabled": true,
+            "storageKey": "ciw-descontos-importacao-fornecedor-layout"
+        }
+    }
+}

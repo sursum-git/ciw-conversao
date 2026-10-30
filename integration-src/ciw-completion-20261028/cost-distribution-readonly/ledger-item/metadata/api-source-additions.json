@@ -1,0 +1,38 @@
+{
+  "sourceCode": "motor_progress_ciw_cadastros",
+  "status": "APPEND_ONLY_REQUIRES_ROOT_CURRENT_EXPORT_REBASE",
+  "preserveActualAuthentication": true,
+  "operations": [
+    {
+      "code": "custo_distribuicao_lancamentos_item_read",
+      "name": "Conta corrente de distribuição do item — read",
+      "type": "list",
+      "method": "POST",
+      "path": "/SursumPrograms/ciw-cadastros",
+      "bodyTemplate": {
+        "resource": "custo_distribuicao_lancamentos_item",
+        "operation": "read"
+      },
+      "requestContextFields": [
+        "item_container_id"
+      ],
+      "itemsPath": "data",
+      "totalPath": "total"
+    },
+    {
+      "code": "custo_distribuicao_lancamentos_item_get",
+      "name": "Conta corrente de distribuição do item — get",
+      "type": "get",
+      "method": "POST",
+      "path": "/SursumPrograms/ciw-cadastros",
+      "bodyTemplate": {
+        "resource": "custo_distribuicao_lancamentos_item",
+        "operation": "get"
+      },
+      "requestContextFields": [
+        "item_container_id"
+      ],
+      "itemPath": "data"
+    }
+  ]
+}

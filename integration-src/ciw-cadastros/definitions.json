@@ -1,0 +1,78 @@
+[
+  {
+    "resource": "coloracoes",
+    "primaryKey": "coloracao_id",
+    "fields": [
+      {
+        "name": "descricao",
+        "type": "character",
+        "maxLength": 50
+      },
+      {
+        "name": "log_inativo",
+        "type": "logical"
+      }
+    ],
+    "references": [
+      "itens_proc_compra"
+    ]
+  },
+  {
+    "resource": "situacoes_container",
+    "primaryKey": "situacao_container_id",
+    "fields": [
+      {
+        "name": "descricao",
+        "type": "character",
+        "maxLength": 100
+      },
+      {
+        "name": "log_gerar_saldo_a_pagar",
+        "type": "logical"
+      },
+      {
+        "name": "log_gerar_distr_custo",
+        "type": "logical"
+      },
+      {
+        "name": "num_ordem",
+        "type": "integer"
+      }
+    ],
+    "references": [
+      "pp-container",
+      "versoes_item_custo_container"
+    ]
+  },
+  {
+    "resource": "tipos_versao_custo",
+    "primaryKey": "tipo_versao_custo_id",
+    "fields": [
+      {
+        "name": "descricao",
+        "type": "character",
+        "maxLength": 100
+      }
+    ],
+    "references": []
+  },
+  {
+    "resource": "motivos_desconto",
+    "primaryKey": "motivo_desconto_id",
+    "fields": [
+      {
+        "name": "descricao",
+        "type": "character",
+        "maxLength": 100
+      },
+      {
+        "name": "log_considerar_custo",
+        "type": "integer",
+        "binaryFlag": true
+      }
+    ],
+    "references": [
+      "descontos_importacao"
+    ]
+  }
+]

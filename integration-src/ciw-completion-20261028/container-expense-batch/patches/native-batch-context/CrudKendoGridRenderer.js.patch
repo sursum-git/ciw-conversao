@@ -1,0 +1,52 @@
+--- D:\opencode\construtor-pg\src\crud-engine\CrudKendoGridRenderer.js
++++ D:\opencode\construtor-pg\src\crud-engine\CrudKendoGridRenderer.js
+@@ -12,6 +12,7 @@
+       this.rowActionNamespace = ".crudRowAction" + (++rowActionSequence);
+       this.deferInitialRead = Boolean(options.deferInitialRead);
+       this.filters = global.CrudUtils.ensureArray(options.initialFilters);
++      this.contextValues = options.contextValues || {};
+       this.lastColumnMenuField = null;
+       this.initialReadPromise = Promise.resolve(null);
+       this.resolveInitialRead = null;
+@@ -175,6 +176,14 @@
+       return values;
+     }
+ 
++    batchOriginalValues(row) {
++      const snapshot = this.definition.grid && this.definition.grid.editing && this.definition.grid.editing.snapshot;
++      if (!snapshot) { return this.batchValues(row); }
++      const original = {};
++      snapshot.originalFields.forEach((name) => { original[name] = row[name] == null ? null : row[name]; });
++      return original;
++    }
++
+     batchValuesEqual(left, right) {
+       return this.batchFieldNames().every((name) => {
+         const field = this.definition.dataModel.fields[name];
+@@ -307,7 +316,16 @@
+         this.batchSaving = true;
+         this.grid.wrapper.attr("aria-busy", "true");
+         this.notifyBatchChange();
+-        await this.httpClient.request({url: endpoint.url, method: endpoint.method || "POST", data: {changes}});
++        const data = {changes};
++        const snapshot = this.definition.grid && this.definition.grid.editing && this.definition.grid.editing.snapshot;
++        if (snapshot) {
++          data.context = {};
++          snapshot.contextFields.forEach((name) => {
++            if (!Object.prototype.hasOwnProperty.call(this.contextValues, name)) { throw new Error("Contexto obrigatorio do lote: " + name + "."); }
++            data.context[name] = this.contextValues[name];
++          });
++        }
++        await this.httpClient.request({url: endpoint.url, method: endpoint.method || "POST", data});
+         // The transaction committed. Prevent resending the draft even if reload fails.
+         this.discardBatch();
+         this.batchReloading = true;
+@@ -916,7 +934,7 @@
+               if (this.isBatchMode()) {
+                 this.batchOriginals.clear(); this.batchDeleted.clear();
+                 global.CrudUtils.ensureArray(response.data).forEach((row) => {
+-                  this.batchOriginals.set(String(row[this.definition.dataModel.primaryKey]), this.batchValues(row));
++                  this.batchOriginals.set(String(row[this.definition.dataModel.primaryKey]), this.batchOriginalValues(row));
+                 });
+               }
+               options.success(response);

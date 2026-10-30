@@ -1,0 +1,81 @@
+{
+  "canonical13Manifest": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\build13-root-companions-v3\\canonical-manifest.json",
+  "supplierFreezeSha256": "ad6ae7a988a532c1e3d9adab252e7e408afdeec1367173dccee6887b7361470c",
+  "integerRangeFreezeSha256": "6cd22a02ec200becc7329fa380f59ef4be4b8bd8ffb1b8e0c5b6fae4726e4b1b",
+  "futureBuilderSha256": "c0653c409de42dc98a9904c6b3bf4d86217e71d49445374700c30060093ba123",
+  "helperCandidateSha256": "d89428668214f8901cd02a32176200afa3433f645fddd3cf42cd749e8545893a",
+  "files": [
+    {
+      "relative": "programs/ImportDiscountsCollector.p",
+      "canonical": "D:\\opencode\\motor-progress\\v2\\sursum-api\\programs\\ImportDiscountsCollector.p",
+      "baselineSha256": "710e829b911874ce17f9976bcd478d558594fb49db5eeadffdd04a588c8c51f5",
+      "frozenOriginalBaselineSha256": "710e829b911874ce17f9976bcd478d558594fb49db5eeadffdd04a588c8c51f5",
+      "frozenOriginalCandidateSha256": "f9ae15850d6dd54072ee6601fac12e4f477c3e95c3660372c7d16cd4523bd5eb",
+      "needsRebase": false
+    },
+    {
+      "relative": "programs/ImportDiscountsReadService.p",
+      "canonical": "D:\\opencode\\motor-progress\\v2\\sursum-api\\programs\\ImportDiscountsReadService.p",
+      "baselineSha256": "ad50ae2fc4a6ae5f0c4045912443f0895b9c24afb673fb3c06ebcb1a4fe3a148",
+      "frozenOriginalBaselineSha256": "ad50ae2fc4a6ae5f0c4045912443f0895b9c24afb673fb3c06ebcb1a4fe3a148",
+      "frozenOriginalCandidateSha256": "bfd6ff61b0f2e8dc8c0934a37e8830066b9d520f39e87afaa1490c6a8c1c0c90",
+      "needsRebase": false
+    },
+    {
+      "relative": "programs/ImportDiscountsReadApi.p",
+      "canonical": "D:\\opencode\\motor-progress\\v2\\sursum-api\\programs\\ImportDiscountsReadApi.p",
+      "baselineSha256": "d5c88dab039cff35166eeb2b8905554999513e13945295d6d5b619004dbd9407",
+      "frozenOriginalBaselineSha256": "d5c88dab039cff35166eeb2b8905554999513e13945295d6d5b619004dbd9407",
+      "frozenOriginalCandidateSha256": "0e9cfb342b287b63e7e5665b85a9ea86b8577a90d167ca87f1bcb585731c2649",
+      "needsRebase": false
+    },
+    {
+      "relative": "programs/CiwErpReadService.p",
+      "canonical": "D:\\opencode\\motor-progress\\v2\\sursum-api\\programs\\CiwErpReadService.p",
+      "baselineSha256": "8ecee3d853961e297598d533844da711c3f0dca058d7b4c35125fa8575b3581e",
+      "frozenOriginalBaselineSha256": "e330e9adcf4377f09d822e2423f7262d05428ca78172667ff61a20df669711ed",
+      "frozenOriginalCandidateSha256": "b1c87a6a21ad5b2728aa6ad4431b56aae90dd643beef78f2c9702724a4e1d5d8",
+      "needsRebase": true
+    },
+    {
+      "relative": "programs/CiwCadastrosCrud.p",
+      "canonical": "D:\\opencode\\motor-progress\\v2\\sursum-api\\programs\\CiwCadastrosCrud.p",
+      "baselineSha256": "325746bfbf416dab5b5b05614e937bd9d45203240f215cd779484584a28a427b",
+      "frozenOriginalBaselineSha256": "5717308a591f27516341ded859ce669b4c3fab95199f93b06bae655080cf75c3",
+      "frozenOriginalCandidateSha256": "5a71b1c62df7e9351279654563f36e059d153e6b6bc1a177060eae215710da30",
+      "needsRebase": true
+    },
+    {
+      "relative": "includes/ImportDiscountsReadTables.i",
+      "canonical": "D:\\opencode\\motor-progress\\v2\\sursum-api\\includes\\ImportDiscountsReadTables.i",
+      "baselineSha256": "f1d31239a2f8c669218af4d7f968f45b8600bd4a12dd7a087e043b0726b1fbc1",
+      "frozenOriginalBaselineSha256": "f1d31239a2f8c669218af4d7f968f45b8600bd4a12dd7a087e043b0726b1fbc1",
+      "frozenOriginalCandidateSha256": "340f3fe91a4e1c76a971221df1f84f8b6f9e6c1974f4b31dbf6baca31d2f7c16",
+      "needsRebase": false
+    },
+    {
+      "relative": "backend/src/Runtime/RuntimeImportDiscountRead.php",
+      "canonical": "D:\\opencode\\construtor-pg\\backend\\src\\Runtime\\RuntimeImportDiscountRead.php",
+      "baselineSha256": "da183dfadf900d516a577495d8348293c0aa1a9b36954cde50de9be819cd0197",
+      "frozenOriginalBaselineSha256": "da183dfadf900d516a577495d8348293c0aa1a9b36954cde50de9be819cd0197",
+      "frozenOriginalCandidateSha256": "5e5d142c103c93b192123e104215ce7a2d186fe817465ba8c3198556caf668f3",
+      "needsRebase": false
+    },
+    {
+      "relative": "backend/src/Runtime/RuntimeCiwErpQuery.php",
+      "canonical": "D:\\opencode\\construtor-pg\\backend\\src\\Runtime\\RuntimeCiwErpQuery.php",
+      "baselineSha256": "ec83a005dfaf87ed7e6bcebd03b5b2c221f39ea0d8f0c72a34a67c62aef46b44",
+      "frozenOriginalBaselineSha256": "ee404b000f78b9ff0d482ccf9e735fcd483d196b30811b53b422d4587c819da5",
+      "frozenOriginalCandidateSha256": "7e3d9f1359d550e06179b5943fc9dad75f2aa2959c9cb62fd2d9aaa253ac0cc6",
+      "needsRebase": true
+    },
+    {
+      "relative": "backend/src/Runtime/RuntimeApiEntityActionService.php",
+      "canonical": "D:\\opencode\\construtor-pg\\backend\\src\\Runtime\\RuntimeApiEntityActionService.php",
+      "baselineSha256": "d5413e3085c445107aedc22d8c07a374259dc056ef5550cccf0c7d8dc388a7bb",
+      "frozenOriginalBaselineSha256": "5f7591ae378c46c0c865c04cb03afaeb9c76fa31dbf329e5661851942ccfc7c6",
+      "frozenOriginalCandidateSha256": "9644d7dfa05b5c77567a7faf02e2a236e280f9950a303c83d7f84e52894d46ec",
+      "needsRebase": true
+    }
+  ]
+}

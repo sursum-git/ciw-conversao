@@ -1,0 +1,94 @@
+{
+  "textPatches": [
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Builder/ProgramBuilderService.php",
+      "baselineSha256": "5a667b65a39d717983e96532d9ab25d7e4c79a9162bfed10639a5810278f5024",
+      "changes": [
+        {
+          "old": "['operationCode', 'valueField', 'textField', 'excludeCurrent', 'copyFields'], 'optionsSource'",
+          "new": "['operationCode', 'valueField', 'textField', 'excludeCurrent', 'copyFields', 'parameterFields'], 'optionsSource'"
+        },
+        {
+          "old": "        return $value;\n    }\n\n    private function validateApiOptionsOperation",
+          "new": "        if (array_key_exists('parameterFields',$value)) {\n            $names=$value['parameterFields'];\n            if (!is_array($names) || !array_is_list($names) || !$names || count($names)>2 || count(array_unique($names,SORT_REGULAR))!==count($names)) { throw new RuntimeHttpException('ENTITY_API_OPTIONS_PARAMETERS','Parametros de opcoes invalidos.',422); }\n            foreach($names as $name) { if (!is_string($name) || !preg_match('/^[a-z][a-z0-9_]*$/D',$name) || in_array($name,['context','operation','resource','parameters'],true)) { throw new RuntimeHttpException('ENTITY_API_OPTIONS_PARAMETERS','Parametro de opcoes invalido.',422); } }\n        }\n        return $value;\n    }\n\n    private function validateApiOptionsOperation"
+        },
+        {
+          "old": "        foreach ($source['copyFields'] ?? [] as $target => $path) {",
+          "new": "        foreach ($source['parameterFields'] ?? [] as $name) {\n            $parameter=null;foreach($entity->getFields() as $field) { if ($field->getCode()===$name) { $parameter=$field; } }\n            $options=$parameter?->getOptions() ?? []; $values=$options['options'] ?? null;\n            if (!$parameter || $parameter->getDataType()!=='string' || ($options['editor']??null)!=='dropdown' || ($options['readonly']??false) || !is_array($values) || !array_is_list($values) || !$values || count($values)>20) { throw new RuntimeHttpException('ENTITY_API_OPTIONS_PARAMETERS','Parametro exige enum escalar fechado.',422); }\n            $seen=[];foreach($values as $option) { if (!is_array($option) || array_diff(array_keys($option),['value','text']) || !is_string($option['value']??null) || !is_string($option['text']??null) || isset($seen[$option['value']])) { throw new RuntimeHttpException('ENTITY_API_OPTIONS_PARAMETERS','Enum de opcoes invalido.',422); } $seen[$option['value']]=true; }\n        }\n        foreach ($source['copyFields'] ?? [] as $target => $path) {"
+        },
+        {
+          "old": "                if (!$lookup || !\\App\\Runtime\\RuntimeProcessLookupPolicy::allows($lookup, array_column(is_array($contexts) ? $contexts : [], 'field'))) { $fail(); }",
+          "new": "                if (!$lookup || !\\App\\Runtime\\RuntimeProcessLookupPolicy::allows($lookup, array_column(is_array($contexts) ? $contexts : [], 'field'))) { $fail(); }\n                foreach ($source['parameterFields'] ?? [] as $dependency) { if (!in_array($dependency,$value['parameterFields'],true)) { $fail(); } }"
+        },
+        {
+          "old": "                if (($apiField['optionsSource']['excludeCurrent'] ?? false) === true) { $fields[$code]['optionsSource']['excludeCurrent'] = true; }",
+          "new": "                if (($apiField['optionsSource']['excludeCurrent'] ?? false) === true) { $fields[$code]['optionsSource']['excludeCurrent'] = true; }\n                if (isset($apiField['optionsSource']['parameterFields'])) { $fields[$code]['optionsSource']['parameterFields']=$apiField['optionsSource']['parameterFields']; }"
+        },
+        {
+          "old": "        $crud = $this->generateCrudDefinition($config);\n        $contextCodes",
+          "new": "        $crud = $this->generateCrudDefinition($config);\n        $lookupParameters=[];foreach($config['_entity']->getFields() as $field) { $lookupParameters=array_merge($lookupParameters,$field->getOptions()['api']['optionsSource']['parameterFields'] ?? []); }\n        $contextCodes"
+        },
+        {
+          "old": "'label' => $field['label'], 'type' => $field['type'],\n                'required'",
+          "new": "'label' => $field['label'], 'type' => in_array($name,$lookupParameters,true) ? 'dropdown' : $field['type'],\n                'required'"
+        },
+        {
+          "old": "        $existingProgram = $this->programs->findOneBy(['code' => $programCode]);",
+          "new": "        $this->assertApiOptionsPageType($pageType, $entity);\n        $existingProgram = $this->programs->findOneBy(['code' => $programCode]);"
+        },
+        {
+          "old": "        $grant = null;\n        try {",
+          "new": "        $this->assertApiOptionsPageType($version->getPageType(), null, $version->getGeneratedDefinition());\n        $grant = null;\n        try {"
+        },
+        {
+          "old": "    private function endpointConfig(BuilderProgramVersion $version, string $endpointId, string $handler): array",
+          "new": "    private function assertApiOptionsPageType(string $pageType, ?BuilderEntity $entity = null, array $definition = []): void\n    {\n        if ($pageType === 'process') { return; }\n        $fail = static function (): never { throw new RuntimeHttpException('ENTITY_API_OPTIONS_PROCESS_ONLY','Opcoes dependentes sao permitidas somente em paginas de processo.',422); };\n        foreach ($entity?->getFields() ?? [] as $field) {\n            $source = $field->getOptions()['api']['optionsSource'] ?? null;\n            if (is_array($source) && array_key_exists('parameterFields',$source)) { $fail(); }\n        }\n        $pending = [$definition];\n        while ($pending) {\n            $node = array_pop($pending);\n            if (is_array($node['optionsSource'] ?? null) && array_key_exists('parameterFields',$node['optionsSource'])) { $fail(); }\n            foreach ($node as $value) { if (is_array($value)) { $pending[] = $value; } }\n        }\n    }\n\n    private function processLookupParameterConfig(BuilderProgramVersion $version,string $endpointId):array\n    {\n        if ($version->getPageType()!=='process' || !str_starts_with($endpointId,'options.')) { return []; }\n        $entity=$this->entities->findOneBy(['code'=>$version->getBuilderEntityCode()]);\n        foreach($entity?->getFields() ?? [] as $field) { if ($field->getCode()===substr($endpointId,8) && isset($field->getOptions()['api']['optionsSource']['parameterFields'])) { return ['lookupParameterFields'=>$field->getOptions()['api']['optionsSource']['parameterFields']]; } }\n        return [];\n    }\n\n    private function endpointConfig(BuilderProgramVersion $version, string $endpointId, string $handler): array"
+        },
+        {
+          "old": "                'fieldCode' => str_starts_with($endpointId, 'options.') ? substr($endpointId, 8) : null,",
+          "new": "                ...$this->processLookupParameterConfig($version,$endpointId),\n                'fieldCode' => str_starts_with($endpointId, 'options.') ? substr($endpointId, 8) : null,"
+        }
+      ]
+    },
+    {
+      "target": "D:/opencode/construtor-pg/src/process-engine/ProcessDefinitionValidator.js",
+      "baselineSha256": "e8d55e6537ab7567042927430273febcfced7b4f6068cdfba40c76781af74688",
+      "changes": [
+        {
+          "old": "Object.keys(field.optionsSource).some(key=>key!=='endpointId')",
+          "new": "Object.keys(field.optionsSource).some(key=>!['endpointId','parameterFields'].includes(key))"
+        },
+        {
+          "old": "        if (field.required != null && typeof field.required !== \"boolean\") {",
+          "new": "        if (field.optionsSource && field.optionsSource.parameterFields != null) {\n          const names=field.optionsSource.parameterFields;\n          if (!Array.isArray(names) || !names.length || names.length>2 || new Set(names).size!==names.length || names.some(name=>{\n            const parameter=fields.find(value=>(value.field || value.name || value.id)===name);\n            return typeof name!=='string' || !parameter || name===(field.field || field.name || field.id) || parameter.type!=='dropdown' || parameter.readonly || !Array.isArray(parameter.options) || !parameter.options.length || parameter.options.some(option=>!option || typeof option.value!=='string' || typeof option.text!=='string');\n          })) { errors.push(label+'.parametros de opcoes exigem enums fechados.'); }\n        }\n        if (field.required != null && typeof field.required !== \"boolean\") {"
+        }
+      ]
+    },
+    {
+      "target": "D:/opencode/construtor-pg/src/process-engine/ProcessEngine.js",
+      "baselineSha256": "a172476944d817ec47a2bb9739750c5a89a0fc3dac513d8084b0746f3365164d",
+      "changes": [
+        {
+          "old": "      this.optionsPromise=this.loadParameterOptions();",
+          "new": "      this.bindLookupParameterChanges();\n      this.optionsPromise=this.loadParameterOptions();"
+        },
+        {
+          "old": "    loadParameterOptions() {",
+          "new": "    bindLookupParameterChanges() {\n      const fields=global.CrudUtils.ensureArray(this.definition.process.parameters.fields);\n      const names=new Set();fields.forEach(field=>(field.optionsSource && field.optionsSource.parameterFields || []).forEach(name=>names.add(name)));\n      names.forEach(name=>{const widget=this.fieldWidgets[name];if(widget){widget.bind('change',()=>{this.optionsPromise=this.loadParameterOptions();});}});\n    }\n\n    lookupParametersMatch(parameters) {\n      const fields=global.CrudUtils.ensureArray(this.definition.process.parameters.fields);\n      for(const field of fields) {\n        const names=field.optionsSource && field.optionsSource.parameterFields;if(!names){continue;}\n        if(this.optionsLoading || this.optionsFailed){return false;}\n        const confirmed=this.lookupParameterValues && this.lookupParameterValues[field.field || field.name || field.id];\n        if(!confirmed){return false;}\n        for(const name of names) {\n          const parameter=fields.find(item=>(item.field || item.name || item.id)===name);\n          if(parameters[name]!==confirmed[name] || this.getFieldValue(this.normalizeField(parameter))!==confirmed[name]){return false;}\n        }\n      }\n      return true;\n    }\n\n    loadParameterOptions() {"
+        },
+        {
+          "old": "        return Promise.resolve(this.httpClient.request({url:endpoint.url,method:'POST',data:{context:Object.assign({},this.contextValues)}})).then(response=>{",
+          "new": "        const requestData={context:Object.assign({},this.contextValues)};\n        if(source.parameterFields) {\n          requestData.parameters={};\n          try { source.parameterFields.forEach(name=>{const parameter=this.definition.process.parameters.fields.find(item=>(item.field || item.name || item.id)===name),value=this.getFieldValue(this.normalizeField(parameter));if(!parameter.options.some(option=>option.value===value)){throw global.CrudUtils.makeError('PROCESS_OPTIONS_INVALID','Parametro fora do enum.');}requestData.parameters[name]=value;}); }\n          catch(error) { return Promise.reject(error); }\n        }\n        return Promise.resolve(this.httpClient.request({url:endpoint.url,method:'POST',data:requestData})).then(response=>{"
+        },
+        {
+          "old": "          widget.dataSource.data(data);widget.enable(!field.readonly);",
+          "new": "          if(source.parameterFields){\n            const previous=widget.value();widget.dataSource.data(data);widget.value(previous.filter(id=>ids.has(Number(id))));\n            this.lookupParameterValues=this.lookupParameterValues || {};this.lookupParameterValues[field.field || field.name || field.id]=Object.assign({},requestData.parameters);\n          }else{widget.dataSource.data(data);}\n          widget.enable(!field.readonly);"
+        },
+        {
+          "old": "    sendProcessRequest(endpoint, parameters) {\n      if (this.destroyed || this.isProcessing)",
+          "new": "    sendProcessRequest(endpoint, parameters) {\n      if (!this.lookupParametersMatch(parameters.values)) {return Promise.resolve(false);}\n      if (this.destroyed || this.isProcessing)"
+        }
+      ]
+    }
+  ]
+}

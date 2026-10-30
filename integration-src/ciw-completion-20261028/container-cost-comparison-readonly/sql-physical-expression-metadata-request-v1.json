@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "purpose": "Metadata of exact source physical expressions and inner ratio; closed two zero-row SELECTs, root only",
+  "sourceContract": {
+    "path": "integration-src/ciw-completion-20261028/container-cost-comparison-readonly/SOURCE_CONTRACT.json",
+    "sha256": "053f07115cae76d43771343f473f8b18918ad476026d7295770967903b6230d1"
+  },
+  "operandMetadataProof": {
+    "path": ".runtime/ciw-completion-20261028/sql-comparison-operand-metadata-v1.json",
+    "sha256": "f22c7e6eb0c10e32c9e3348a5608caa66017f25b19d4ce126bdadcb87404c062"
+  },
+  "derivedProof": {
+    "path": ".runtime/ciw-completion-20261028/sql-comparison-source-derived-v2.json",
+    "sha256": "51058b12cb8d0044fda2d12d24ed42775f58c0c16a43ba31c85018120fd2a157"
+  },
+  "policy": {
+    "fixedDsn": "espec_pro",
+    "processOnlyOdbcIni": "/etc/odbc.ini",
+    "rootApprovalRequiredBeforeExecution": true,
+    "candidateExecuted": false,
+    "onlyBusinessTablesReferenced": [
+      "pub.item_container_custos",
+      "pub.versoes_item_custo_container",
+      "pub.itens_container",
+      "pub.itens_proc_compra"
+    ],
+    "whereAlwaysFalse": "1=0",
+    "businessRowsProjected": false,
+    "businessWrites": false,
+    "ddl": false,
+    "freeSql": false,
+    "fallbackDsn": false,
+    "maxQueries": 2,
+    "timeoutSecondsPerQuery": 10,
+    "maxBusinessRowsReturned": 0,
+    "allowedRootActions": [
+      "SQL_PREPARE",
+      "SQL_DESCRIBE_COL",
+      "SQL_EXECUTE only zero-row query if required for field metadata; never alter WHERE or fetch business values"
+    ],
+    "result": "query id/hash, prepared/executed booleans, column name/type/precision/scale, numeric error, zero row count; no business data"
+  },
+  "cases": [
+    {
+      "case": "real_physical_expression_metadata",
+      "currency": "real",
+      "sourceGrid": "sources/scriptcase/ciw-completion-linked-20261028/cons_item_container_custos_comparacao_real/cons_item_container_custos_comparacao_real_grid.class.php",
+      "sourceGridSha256": "cb3ba3c4b138e959a75ebc36c4aef585f460eef0aa8153d819ca8ed299cfb595",
+      "sourceIndex": "sources/scriptcase/ciw-completion-linked-20261028/cons_item_container_custos_comparacao_real/index.php",
+      "sourceIndexSha256": "70e6ab06b3c0d9a279f37bc6ba30930f0f6abee552f6e4c53fe9b4fca2dc4496",
+      "sourceSelectLine": 793,
+      "sourceTablesLine": 1160,
+      "sourceWhereLiteral": "$_SESSION['sc_session'][$this->Ini->sc_page]['cons_item_container_custos_comparacao_real']['where_orig'] = \" where (versao.versao_id = item_custo.versao_id and  item_custo.item_container_id = itens_container.item_container_id and  itens_pedido.item_proc_compra_id = itens_container.item_proc_compra_id and  versao.versao_id = \" . $_SESSION['versao_corrente'] . \")\";",
+      "scopeSubstitution": "Literal session-selected version placeholder replaced with closed integer123; WHERE1=0 ensures zero business rows, not an observed positive identity.",
+      "sourceProjectionCount": 14,
+      "extraProjection": {
+        "alias": "probe_inner_ratio",
+        "expressionLiteral": "((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev)",
+        "reason": "Exact inner subexpression of both source unit divisions; metadata only, no new business formula."
+      },
+      "query": "SELECT itens_pedido.codigo_erp as itens_pedido_codigo_erp, itens_pedido.descricao as itens_pedido_descricao, item_custo.qt_alocada as qt_alocada, item_custo.qt_confirm_emb as qt_confirm_emb, item_custo.vl_custo_prev_real as item_custo_vl_custo_prev_real, item_custo.vl_desp_prev_real as item_custo_vl_desp_prev_real, vl_custo_prev_real + vl_desp_prev_real as vl_tot_prev, item_custo.vl_unit_prev as item_custo_vl_unit_prev, item_custo.vl_desp_prev_real_sem_distr_cust as cmp_maior_30_1, vl_custo_prev_real + vl_desp_prev_real_sem_distr_cust as vl_tot_sem_distr_custo, (vl_custo_prev_real + vl_desp_prev_real_sem_distr_cust) / ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as vl_unit_sem_distr_custo, vl_custo_prev_real * perc_fixo_container / 100 as vl_desp_prev_perc_fixo, vl_custo_prev_real * (1 + (perc_fixo_container / 100)) as vl_tot_perc_fixo, vl_custo_prev_real * (1 + (perc_fixo_container / 100)) / ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as vl_unit_perc_fixo, ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as probe_inner_ratio FROM pub.item_container_custos item_custo , pub.versoes_item_custo_container versao, pub.itens_container, pub.itens_proc_compra itens_pedido WHERE 1=0 AND (versao.versao_id = item_custo.versao_id and  item_custo.item_container_id = itens_container.item_container_id and  itens_pedido.item_proc_compra_id = itens_container.item_proc_compra_id and  versao.versao_id = 123)",
+      "querySha256": "a110a0dd0ab9d06f3630e87c5c0f10f8008e5ba1a7d54fa7fd6f93215faca1e7"
+    },
+    {
+      "case": "dolar_physical_expression_metadata",
+      "currency": "dolar",
+      "sourceGrid": "sources/scriptcase/ciw-completion-linked-20261028/cons_item_container_custos_comparacao_dolar/cons_item_container_custos_comparacao_dolar_grid.class.php",
+      "sourceGridSha256": "297bb945f86e9fb42f3e1ebbffd002c95d1e99d36776f166e13bdd74bcccdf3c",
+      "sourceIndex": "sources/scriptcase/ciw-completion-linked-20261028/cons_item_container_custos_comparacao_dolar/index.php",
+      "sourceIndexSha256": "f524998bb6ccbcc89f3fbc46f5fc9072b13102f9df90d9f6f3dc17f2e01a1d58",
+      "sourceSelectLine": 793,
+      "sourceTablesLine": 1160,
+      "sourceWhereLiteral": "$_SESSION['sc_session'][$this->Ini->sc_page]['cons_item_container_custos_comparacao_dolar']['where_orig'] = \" where (versao.versao_id = item_custo.versao_id and  item_custo.item_container_id = itens_container.item_container_id and  itens_pedido.item_proc_compra_id = itens_container.item_proc_compra_id and  versao.versao_id = \" . $_SESSION['versao_corrente'] . \")\";",
+      "scopeSubstitution": "Literal session-selected version placeholder replaced with closed integer123; WHERE1=0 ensures zero business rows, not an observed positive identity.",
+      "sourceProjectionCount": 14,
+      "extraProjection": {
+        "alias": "probe_inner_ratio",
+        "expressionLiteral": "((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar)",
+        "reason": "Exact inner subexpression of both source unit divisions; metadata only, no new business formula."
+      },
+      "query": "SELECT itens_pedido.codigo_erp as itens_pedido_codigo_erp, itens_pedido.descricao as itens_pedido_descricao, item_custo.qt_alocada as qt_alocada, item_custo.qt_confirm_emb as qt_confirm_emb, item_custo.vl_custo_prev_dolar as item_custo_vl_custo_prev_dolar, item_custo.vl_desp_prev_dolar as item_custo_vl_desp_prev_dolar, vl_custo_prev_dolar + vl_desp_prev_dolar as vl_tot_prev, item_custo.vl_unit_prev_dolar as item_custo_vl_unit_prev_dolar, item_custo.vl_desp_prev_dolar_sem_distr_cus as cmp_maior_30_1, vl_custo_prev_dolar + vl_desp_prev_dolar_sem_distr_cus as vl_tot_sem_distr_custo, (vl_custo_prev_dolar + vl_desp_prev_dolar_sem_distr_cus) / ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as vl_unit_sem_distr_custo, vl_custo_prev_dolar * perc_fixo_container / 100 as vl_desp_prev_perc_fixo, vl_custo_prev_dolar * (1 + (perc_fixo_container / 100)) as vl_tot_perc_fixo, vl_custo_prev_dolar * (1 + (perc_fixo_container / 100)) / ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as vl_unit_perc_fixo, ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as probe_inner_ratio FROM pub.item_container_custos item_custo , pub.versoes_item_custo_container versao, pub.itens_container, pub.itens_proc_compra itens_pedido WHERE 1=0 AND (versao.versao_id = item_custo.versao_id and  item_custo.item_container_id = itens_container.item_container_id and  itens_pedido.item_proc_compra_id = itens_container.item_proc_compra_id and  versao.versao_id = 123)",
+      "querySha256": "7d4e2529da8b8ea263751ace865efb4959099451d899192c1a19edbef6160537"
+    }
+  ]
+}

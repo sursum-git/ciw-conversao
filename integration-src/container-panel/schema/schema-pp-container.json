@@ -1,0 +1,684 @@
+{
+  "database": "espec",
+  "table": "pp-container",
+  "fields": [
+    {
+      "name": "cod-estabel",
+      "type": "character",
+      "format": "X(3)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "nr-container",
+      "type": "integer",
+      "format": ">>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "num-pedido",
+      "type": "integer",
+      "format": ">>>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "nome-ab-forn",
+      "type": "character",
+      "format": "X(12)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod-emit-forn",
+      "type": "integer",
+      "format": ">>>>>>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "comprador",
+      "type": "character",
+      "format": "X(12)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "narrativa",
+      "type": "character",
+      "format": "X(100)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "usuario",
+      "type": "character",
+      "format": "X(12)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dt-compra",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dt-prev-chegada",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dt-recebimento",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "situacao",
+      "type": "integer",
+      "format": "9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "char-1",
+      "type": "character",
+      "format": "x(100)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dec-1",
+      "type": "decimal",
+      "format": "->>>>>>>>>>>9.99999999",
+      "decimals": 8,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "int-1",
+      "type": "integer",
+      "format": "->>>>>>>>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log-1",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "data-1",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vlr-frete",
+      "type": "decimal",
+      "format": ">>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vlr-seguro",
+      "type": "decimal",
+      "format": ">>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vlr-despesas",
+      "type": "decimal",
+      "format": ">>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "exclusivo",
+      "type": "logical",
+      "format": "yes\/no",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vl-dolar-venda",
+      "type": "decimal",
+      "format": ">>9.999999",
+      "decimals": 5,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vl-dolar-compra",
+      "type": "decimal",
+      "format": ">>9.999999",
+      "decimals": 5,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_liberar_custo_realizado",
+      "type": "logical",
+      "format": "yes\/no",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "medidas_container",
+      "type": "character",
+      "format": "x(20)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dt_prev_embarque",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dt_real_embarque",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "ind_dt_embarque",
+      "type": "integer",
+      "format": ">9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "situacao_container_id",
+      "type": "integer",
+      "format": "->,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "ind_dt_prev_chegada",
+      "type": "integer",
+      "format": ">9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_pagto_final",
+      "type": "logical",
+      "format": "yes\/no",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_agente_cargas",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_armador",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_tipo_calculo",
+      "type": "integer",
+      "format": "9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "perc_custo",
+      "type": "decimal",
+      "format": ">>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vl_dolar_di",
+      "type": "decimal",
+      "format": ">>,>>9.99999",
+      "decimals": 5,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_gerar_saldo_a_pagar",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "Sim",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_gerar_distr_custo",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "Sim",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "ordem_busca_dolar_compra",
+      "type": "character",
+      "format": "x(20)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "ordem_busca_dolar_di",
+      "type": "character",
+      "format": "x(20)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_tipo_proj_dolar",
+      "type": "integer",
+      "format": "->,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vl_proj_dolar",
+      "type": "decimal",
+      "format": ">9.99999",
+      "decimals": 5,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_versao_custo_desatualizada",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "Sim",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dt_hr_ult_alt_versao_custo",
+      "type": "datetime",
+      "format": "99\/99\/9999 HH:MM:SS",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "ptax",
+      "type": "decimal",
+      "format": ">>9.999999",
+      "decimals": 5,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod-depos",
+      "type": "character",
+      "format": "x(8)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dt_prev_chegada_loja",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "estacao",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "num_origem",
+      "type": "integer",
+      "format": ">9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_rota_indefinida",
+      "type": "logical",
+      "format": "yes\/no",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    }
+  ],
+  "indexes": [
+    {
+      "name": "indice1",
+      "unique": true,
+      "primary": true,
+      "fields": [
+        "nr-container"
+      ]
+    },
+    {
+      "name": "ind_dt_prev_chegada",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "dt-prev-chegada"
+      ]
+    },
+    {
+      "name": "ind_dt_recbto",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "dt-recebimento",
+        "dt-prev-chegada",
+        "nr-container"
+      ]
+    },
+    {
+      "name": "ind_fornec",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod-emit-forn",
+        "nr-container"
+      ]
+    },
+    {
+      "name": "ind_origem",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "num_origem",
+        "nr-container"
+      ]
+    },
+    {
+      "name": "ind_situacao",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "situacao",
+        "nr-container"
+      ]
+    },
+    {
+      "name": "ind_sit_container",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "situacao_container_id"
+      ]
+    },
+    {
+      "name": "ind_versao_custo_desatu",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "log_versao_custo_desatualizada",
+        "nr-container"
+      ]
+    }
+  ],
+  "triggers": [
+    {
+      "event": "DELETE",
+      "procedure": "estrg\\tdpp001.p"
+    }
+  ]
+}

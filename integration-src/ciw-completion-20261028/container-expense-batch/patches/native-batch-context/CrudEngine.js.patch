@@ -1,0 +1,10 @@
+--- D:\opencode\construtor-pg\src\crud-engine\CrudEngine.js
++++ D:\opencode\construtor-pg\src\crud-engine\CrudEngine.js
+@@ -196,6 +196,7 @@
+         deferInitialRead: shouldDeferInitialRead,
+         initialFilters: this.currentFilters,
+         initialNavigationState: this.navigationGridState,
++        contextValues: this.contextValues || {},
+         handlers: {
+           create: () => this.openCreate(),
+           view: (id, options) => this.openRecord("view", id, options),

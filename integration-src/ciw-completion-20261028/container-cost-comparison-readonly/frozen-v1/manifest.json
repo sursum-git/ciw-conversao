@@ -1,0 +1,465 @@
+{
+  "status": "CANDIDATE_READY_FOR_REVIEW_HELD_GATES",
+  "domain": "container-cost-comparison-readonly",
+  "programCodesReserved": [
+    "op1040",
+    "op1041"
+  ],
+  "resources": [
+    "container_custos_comparacao_real",
+    "container_custos_comparacao_dolar"
+  ],
+  "metadataAdditions": 4,
+  "newAblPrograms": 4,
+  "newAblIncludes": 1,
+  "newPhpHelpers": 1,
+  "canonicalWrites": false,
+  "networkOrSqlByExecutor": false,
+  "official12_2ProductionCandidate": "PENDING_ROOT",
+  "baselineFiles": [
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwCadastrosCrud.p",
+      "baselineFile": "baseline-exact/CiwCadastrosCrud.p",
+      "baselineSha256": "c82a5a7e481886b2d8559e057c3fd8f8ad4f4e66f7eae466d16f043350ed803e",
+      "candidateFile": "candidate-exact/CiwCadastrosCrud.p",
+      "candidateSha256": "060cb5886c23a561fe676e463d9e745ca96900401717db0e69e30ea69bf2bea0"
+    },
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwErpReadService.p",
+      "baselineFile": "baseline-exact/CiwErpReadService.p",
+      "baselineSha256": "c734eda627f6c9289a7ff69a79d13ce696db5dc2204b74dae7e3d78690d86d76",
+      "candidateFile": "candidate-exact/CiwErpReadService.p",
+      "candidateSha256": "9f6827ac2bfaa5f34888ea19e24cd9519a725af52082ffc1d8ef6abfd8210ca5"
+    },
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersVersionHistoryLabels.p",
+      "baselineFile": "baseline-exact/ContainersVersionHistoryLabels.p",
+      "baselineSha256": "9bfe21dc6ff9d86105d7602d376a2adc3cc3b9fe61783a68f7d1cd03f9d100bb",
+      "candidateFile": "candidate-exact/ContainersVersionHistoryLabels.p",
+      "candidateSha256": "bce8fc89f40c69d3407fd6e5e789dfd6ee84d6191eeeffd1da131a7e886678b8"
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeApiEntityActionService.php",
+      "baselineFile": "baseline-exact/RuntimeApiEntityActionService.php",
+      "baselineSha256": "399cf18a00bca42875c2a35c648eaa4021029b4e3473b872b16f2e62865c96d2",
+      "candidateFile": "candidate-exact/RuntimeApiEntityActionService.php",
+      "candidateSha256": "71c7156db97b1fba159771c542cd49012fcd1317026ad5a7a906ec17c7681bf2"
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeCiwErpQuery.php",
+      "baselineFile": "baseline-exact/RuntimeCiwErpQuery.php",
+      "baselineSha256": "b83ce35195bd138416b2db57824431a54d48b26b9ab1a38eb5aa754a2457bea4",
+      "candidateFile": "candidate-exact/RuntimeCiwErpQuery.php",
+      "candidateSha256": "27665bb23f5dc827dcc2bc85e288dc89ee26d0f8bc1eb647145a890a6dfdb831"
+    }
+  ],
+  "files": [
+    {
+      "path": "abl/ContainersVersionComparisonApi.p",
+      "sha256": "71040ad5ada2480aa0d386a10d507853d176dd6aac6679ebc5532a596953ca7a",
+      "bytes": 2469
+    },
+    {
+      "path": "abl/ContainersVersionComparisonMaterializer.p",
+      "sha256": "e997fce0d59d9664fc053eca332914295140f71574216340f070cd4db2ae537b",
+      "bytes": 8232
+    },
+    {
+      "path": "abl/ContainersVersionComparisonProjection.p",
+      "sha256": "146472ab7c98938a105e5f6653a7eb9799da18bf26722ca4bdaa43d24ec808ff",
+      "bytes": 5649
+    },
+    {
+      "path": "abl/ContainersVersionComparisonService.p",
+      "sha256": "a5618108eda35bd542754ac156b86983add93318cdf2413e7c087b954f87e65c",
+      "bytes": 7620
+    },
+    {
+      "path": "baseline-exact/CiwCadastrosCrud.p",
+      "sha256": "c82a5a7e481886b2d8559e057c3fd8f8ad4f4e66f7eae466d16f043350ed803e",
+      "bytes": 17226
+    },
+    {
+      "path": "baseline-exact/CiwErpReadService.p",
+      "sha256": "c734eda627f6c9289a7ff69a79d13ce696db5dc2204b74dae7e3d78690d86d76",
+      "bytes": 30575
+    },
+    {
+      "path": "baseline-exact/ContainersVersionHistoryLabels.p",
+      "sha256": "9bfe21dc6ff9d86105d7602d376a2adc3cc3b9fe61783a68f7d1cd03f9d100bb",
+      "bytes": 3757
+    },
+    {
+      "path": "baseline-exact/RuntimeApiEntityActionService.php",
+      "sha256": "399cf18a00bca42875c2a35c648eaa4021029b4e3473b872b16f2e62865c96d2",
+      "bytes": 125722
+    },
+    {
+      "path": "baseline-exact/RuntimeCiwErpQuery.php",
+      "sha256": "b83ce35195bd138416b2db57824431a54d48b26b9ab1a38eb5aa754a2457bea4",
+      "bytes": 15065
+    },
+    {
+      "path": "baselines-discovery.json",
+      "sha256": "482e5fb710d9fe2847d12a5d2a7233311a70f94ce148a63f8204c8b1a7343e33",
+      "bytes": 506
+    },
+    {
+      "path": "baselines.json",
+      "sha256": "7d6cc935a626aaea9279a0e6f22cddebb336a4c1cdab8e3fd8c14b42d066090d",
+      "bytes": 2405
+    },
+    {
+      "path": "candidate-exact/CiwCadastrosCrud.p",
+      "sha256": "060cb5886c23a561fe676e463d9e745ca96900401717db0e69e30ea69bf2bea0",
+      "bytes": 17677
+    },
+    {
+      "path": "candidate-exact/CiwErpReadService.p",
+      "sha256": "9f6827ac2bfaa5f34888ea19e24cd9519a725af52082ffc1d8ef6abfd8210ca5",
+      "bytes": 32141
+    },
+    {
+      "path": "candidate-exact/ContainersVersionHistoryLabels.p",
+      "sha256": "bce8fc89f40c69d3407fd6e5e789dfd6ee84d6191eeeffd1da131a7e886678b8",
+      "bytes": 4107
+    },
+    {
+      "path": "candidate-exact/RuntimeApiEntityActionService.php",
+      "sha256": "71c7156db97b1fba159771c542cd49012fcd1317026ad5a7a906ec17c7681bf2",
+      "bytes": 126567
+    },
+    {
+      "path": "candidate-exact/RuntimeCiwErpQuery.php",
+      "sha256": "27665bb23f5dc827dcc2bc85e288dc89ee26d0f8bc1eb647145a890a6dfdb831",
+      "bytes": 15423
+    },
+    {
+      "path": "DESIGN.md",
+      "sha256": "04f5399a59fbc019ab6f30825e8ee3e0358df70a7228f776bc87ecbfddf737df",
+      "bytes": 4331
+    },
+    {
+      "path": "evidence/compile-service-current.log",
+      "sha256": "4437c049a6c91fbfcc47a7cb6b84a941c6c2c6e760cb3954317d02d7f82409ef",
+      "bytes": 386
+    },
+    {
+      "path": "evidence/local-evidence.json",
+      "sha256": "54b284e4cea7c4a3acdb6109710e82914cf7ef53b4aff713cac51043881136dc",
+      "bytes": 35509
+    },
+    {
+      "path": "evidence/native-validation.json",
+      "sha256": "4701116c43b80ea76cc86718729b1fe37b45b0dff0c87ebe3776e2d8c9b58b24",
+      "bytes": 4533
+    },
+    {
+      "path": "evidence/php-full.log",
+      "sha256": "6044602f42f249c6ddef89ab03f65a567f4b81db2033934cbb559aed5706ffd8",
+      "bytes": 1514
+    },
+    {
+      "path": "evidence/php-full.xml",
+      "sha256": "f85f84328424200845bcc75aa2adfa527a4ba5e836a981002d38a371b61fe18a",
+      "bytes": 350972
+    },
+    {
+      "path": "evidence/php-get-binding-red.log",
+      "sha256": "725d2251105c7a751474e3ad41c3f0d0141b2532de3eefe0c1c8d873743bfcdb",
+      "bytes": 1526
+    },
+    {
+      "path": "evidence/sql-null-zero-red.log",
+      "sha256": "4276f4a9b074dc1e3e4ffd557c2046b78e4cc7bb09065c8cc3cef0c35749f8f1",
+      "bytes": 698
+    },
+    {
+      "path": "evidence/sql-observed-red.log",
+      "sha256": "a90cab020296d185286b8da36d88d7e7dc55a864d64f71ab000fca95d9849ced",
+      "bytes": 950
+    },
+    {
+      "path": "includes/ContainersVersionComparisonTable.i",
+      "sha256": "71895e8fe06bff39219d0f4491a300e47a956125d07a491babea94d16d307199",
+      "bytes": 927
+    },
+    {
+      "path": "metadata/api-source-additions.json",
+      "sha256": "deab2263f7a55791a8dc95d15bc05f14750516405bf6ff334a714c9957591382",
+      "bytes": 2129
+    },
+    {
+      "path": "metadata/container_custos_comparacao_dolar-builder-draft.json",
+      "sha256": "0d65e009f5c73b293273ee0438338a5cf1b46b15647bf9d4307b3c0ee2a06cbd",
+      "bytes": 13635
+    },
+    {
+      "path": "metadata/container_custos_comparacao_real-builder-draft.json",
+      "sha256": "fbfb56bf643f5c0c7133c6e52883e30af1882a3fec51fc25d63112dc04204c6c",
+      "bytes": 13629
+    },
+    {
+      "path": "metadata/LIMITS.json",
+      "sha256": "b26eefbcf2a8ca9a67909e903eea286958d6f0b7fa58dd52348e970df08de22f",
+      "bytes": 1022
+    },
+    {
+      "path": "metadata/parent-additions.json",
+      "sha256": "4ce489537e94178e43184f9457f176dad903ba17da6faa9d2f0b77d3c723ea06",
+      "bytes": 1749
+    },
+    {
+      "path": "php/RuntimeCiwComparisonRead.php",
+      "sha256": "115fedfa064cdebfadd7dc1a5cc7ed6b29d0cc9024ed025b433ba73781e24246",
+      "bytes": 4372
+    },
+    {
+      "path": "README.md",
+      "sha256": "c092e01741edb30c1a49172f980ef80fad186463ef11d939b624a069a9d6a5de",
+      "bytes": 3534
+    },
+    {
+      "path": "REVIEW.md",
+      "sha256": "bd0ba3b155863b9870315da97f5c14b1169409120f15915a333b051d25a2209b",
+      "bytes": 1687
+    },
+    {
+      "path": "shared-byte-plan.json",
+      "sha256": "68413bfb21ed0e0dac5a607bb89e847c413e89068b0ab71da3ffb50c3506b5c3",
+      "bytes": 26710
+    },
+    {
+      "path": "shared-transport-byte-plan.json",
+      "sha256": "015bb5fbb78ddea8225b47aad8fba69cbe26477271ded5f7aca969ad9a4524a0",
+      "bytes": 7412
+    },
+    {
+      "path": "SOURCE_CONTRACT.json",
+      "sha256": "053f07115cae76d43771343f473f8b18918ad476026d7295770967903b6230d1",
+      "bytes": 6825
+    },
+    {
+      "path": "SOURCE_PRESENTATION_CONTRACT.json",
+      "sha256": "6d74bca428fd280f12a56c43a75d2bc77b9ebeb57e80f0cf1580ed478e048886",
+      "bytes": 5716
+    },
+    {
+      "path": "sql-operand-metadata-request-v1.json",
+      "sha256": "c7900f2c631ae446ebe8beeefa45fd1c29c35da2aa52e2b70e89cbb1e17ca448",
+      "bytes": 3121
+    },
+    {
+      "path": "sql-physical-expression-metadata-request-v1.json",
+      "sha256": "ee2575ba7dd70217754520c2d61da0969d0f403d8cd8558b84ed26edd254ce71",
+      "bytes": 8053
+    },
+    {
+      "path": "sql-source-derived-fixture-v1.json",
+      "sha256": "c9da5e858ce3128cf34c41d6e363ee32897603c2eb173afc7785c65d2896a8b5",
+      "bytes": 74359
+    },
+    {
+      "path": "sql-source-derived-fixture-v2.json",
+      "sha256": "8c9e15ed6f87ca344d0c81d972facb2e5d5b81d19ef28f9cb91dd8c6ba5be903",
+      "bytes": 76954
+    },
+    {
+      "path": "SQL_TYPING_CONTRACT.json",
+      "sha256": "31b27e54af79b65e61282181676438bf503d5071ee0181a3c1799fac73fc8a06",
+      "bytes": 5083
+    },
+    {
+      "path": "test-inputs/CiwCadastrosCrud.p",
+      "sha256": "c82a5a7e481886b2d8559e057c3fd8f8ad4f4e66f7eae466d16f043350ed803e",
+      "bytes": 17226
+    },
+    {
+      "path": "test-inputs/CiwErpReadService.p",
+      "sha256": "c734eda627f6c9289a7ff69a79d13ce696db5dc2204b74dae7e3d78690d86d76",
+      "bytes": 30575
+    },
+    {
+      "path": "test-inputs/ContainersCustoCalculator.p",
+      "sha256": "9ba548fb0c49f7448b944a47a883200738ba7faf4f0d8111f13c08cb765ee6ac",
+      "bytes": 23352
+    },
+    {
+      "path": "test-inputs/ContainersVersionHistoryLabels.p",
+      "sha256": "9bfe21dc6ff9d86105d7602d376a2adc3cc3b9fe61783a68f7d1cd03f9d100bb",
+      "bytes": 3757
+    },
+    {
+      "path": "test-inputs/ContainersVersionService.p",
+      "sha256": "beeda66faf880b271263ac98617046a0ecb1790c994ef576153fd9343885e590",
+      "bytes": 47711
+    },
+    {
+      "path": "test-inputs/sursum-api/includes/PurchaseItemSnapshot.i",
+      "sha256": "f7e81fbcd3fbc53f124c60d99c3065b73e2d876665ce900f8772ed1f25d7350d",
+      "bytes": 4464
+    },
+    {
+      "path": "test-inputs/sursum-api/includes/PurchaseItemValueRules.i",
+      "sha256": "1ae6949d39fa07286e0e1c76776b9bb508de6715d1494858d7ac53c1d591c894",
+      "bytes": 3932
+    },
+    {
+      "path": "test-inputs/sursum-api/includes/PurchaseOrderSnapshot.i",
+      "sha256": "98b8da213a666f328747d0698608954ab646ef60fc2c86e313f6d156b3fa573a",
+      "bytes": 1687
+    },
+    {
+      "path": "test-list.json",
+      "sha256": "9410be99353c3e66bceb421ba7cdc6200784b39a4f3863b6f14e9caed6829f8f",
+      "bytes": 4729
+    },
+    {
+      "path": "tests/abl/ComparisonCoreFixture.i",
+      "sha256": "bb0f0fabcbab26e837f921233f0747b698ea5d4e112de8f7ca4c17897f1f2c7a",
+      "bytes": 1519
+    },
+    {
+      "path": "tests/abl/ComparisonItemJoinTest.p",
+      "sha256": "75941bea44db5a4ed932ae57cf8f511b3b67451e7e30f0b761756eb61860ddd0",
+      "bytes": 3059
+    },
+    {
+      "path": "tests/abl/ComparisonMaterializerTest.p",
+      "sha256": "d073735845417381ad0b836a0c7294af7efc95ecd1f78081ca2fb1ce4f8ce910",
+      "bytes": 4909
+    },
+    {
+      "path": "tests/abl/ComparisonProjectionTest.p",
+      "sha256": "03b7d72f2fa06ee1696a1b0a9021f43463053e2716cb764ed6c45eef5374d080",
+      "bytes": 4313
+    },
+    {
+      "path": "tests/abl/ComparisonReaderTest.p",
+      "sha256": "f647e5d6532d98b41368007f9da60af87e71f09488555932327fd9db23131adc",
+      "bytes": 4146
+    },
+    {
+      "path": "tests/abl/ComparisonRoundingEvidenceTest.p",
+      "sha256": "cb540ecb3abe3ce444bd0e3c7e50ed60f0d48109de073214faa061950479f99d",
+      "bytes": 4568
+    },
+    {
+      "path": "tests/abl/ComparisonServiceTest.p",
+      "sha256": "63624f73d79923bff0aaae4d94bd38bc6c4b7e6de3036540e1cc38163d244f06",
+      "bytes": 6857
+    },
+    {
+      "path": "tests/abl/ComparisonSnapshotTestTables.i",
+      "sha256": "24480f748f0b71bf28b27ef4abf117540238ebc8cdf992a4e883940ab907262d",
+      "bytes": 2145
+    },
+    {
+      "path": "tests/abl/ComparisonSqlObservedTest.p",
+      "sha256": "8afda4db9e164cad170352eef47c4ea4e9ad8ad94eb07e381bf6f8beb0f70f3d",
+      "bytes": 3117
+    },
+    {
+      "path": "tests/fixtures/sql-observed-v2.json",
+      "sha256": "8120333e07f6124901766a904b5ef2e0a3807242e44d7e170a521d15f2ecea09",
+      "bytes": 33043
+    },
+    {
+      "path": "tests/native-preview.cjs",
+      "sha256": "84a6d5e11ce981eed363a9bb51b67c1bc479d4eb020dab9b47f252cbd59178a5",
+      "bytes": 2648
+    },
+    {
+      "path": "tests/php/ComparisonBuilderNativeTest.php",
+      "sha256": "c3ef5543fb4a48b284986accc154d429b79559f082d6eaf89828c345e4b7ea5a",
+      "bytes": 3852
+    },
+    {
+      "path": "tests/php/reader-row.json",
+      "sha256": "692c6e7ace05312e9248e3e975d7fd3a5c0e43f51af6de027848bf740b19352f",
+      "bytes": 623
+    },
+    {
+      "path": "tests/php/runtime-bootstrap.php",
+      "sha256": "50a4d8d583a0e1a94de7a71a210c422dbebf109c8287d02ce4d78941dc0c9bf4",
+      "bytes": 345
+    },
+    {
+      "path": "tests/php/RuntimeCiwComparisonReadIntegrationTest.php",
+      "sha256": "a8a08d5d2ca6409c67b137569c0798d952efa0b9826b5086f49e510527c40218",
+      "bytes": 9566
+    },
+    {
+      "path": "tests/prepare-local.ps1",
+      "sha256": "f9f4ab64d05807e19e0b09ce542824bf569b4ffc8154fe89b4b1a7991d5b7ce5",
+      "bytes": 2593
+    },
+    {
+      "path": "tests/regression-list.json",
+      "sha256": "d913afe823c8141dbf57d4d43d8c192d163e6fb7b13d5c8dc1568196a37ab211",
+      "bytes": 2352
+    },
+    {
+      "path": "tests/run-local-itemjoin.ps1",
+      "sha256": "c417527a9bd54d22e3aac17fe80f6739766ca502d3d96e3a2ab395021ff8bdeb",
+      "bytes": 2566
+    },
+    {
+      "path": "tests/run-local-materializer.ps1",
+      "sha256": "8fc616d26cc77a5f226986933fe5a1da19a76af05d847a3060c57220d2121bb6",
+      "bytes": 2586
+    },
+    {
+      "path": "tests/run-local-projection.ps1",
+      "sha256": "f66b4e5794e423cd84e97c3a6fcb5f0446a865eaeaa691cf7118c24e80a14a42",
+      "bytes": 2518
+    },
+    {
+      "path": "tests/run-local-reader.ps1",
+      "sha256": "b6a51b243b6a482a799be4c7a9207b1025222ec77b6379f65754ffa84c9cdec3",
+      "bytes": 2607
+    },
+    {
+      "path": "tests/run-local-regressions.ps1",
+      "sha256": "b3ea0a6dbce671e1914f0694ab52e3767bb377c2a8eaf46cb66df1d4ab08b4ff",
+      "bytes": 2903
+    },
+    {
+      "path": "tests/run-local-rounding.ps1",
+      "sha256": "ccbba37ed43f6c77dc505be0a36fc2e6856d1ba8609f5b350df2c466d2e940ea",
+      "bytes": 2516
+    },
+    {
+      "path": "tests/run-local-service.ps1",
+      "sha256": "2d166f603f0494e6fe67e08032b83261f131f3401d9bfd756b29a33cbb380742",
+      "bytes": 2658
+    },
+    {
+      "path": "tests/run-local-sql-observed.ps1",
+      "sha256": "d2410387da3552059c3768258572d5428f05ce06387f35b779bb73c20bb25257",
+      "bytes": 2586
+    }
+  ],
+  "fileCount": 77,
+  "evidence": {
+    "localCompiles12_8NumDbs0": 8,
+    "newChecksPerCombination": 377,
+    "regressionChecksPerCombination": 495,
+    "ttChecks": 3488,
+    "ttLogs": 72,
+    "phpTests": 899,
+    "phpAssertions": 5988,
+    "builderDrafts": 2,
+    "nativeStructuralValid": true,
+    "numericFiltersFunctional": false
+  },
+  "gates": [
+    "SQL precision overflow boundaries and physical dynamic optimizer/NULL-zero validation; current evidence is metadata plus closed synthetic source vectors",
+    "Native numeric filters currently generated text/contains: central separate companion required before publication (12 fields each draft)",
+    "Central consultar requires existing pp-container, unlike source joins: orphan-version policy/seam review required before full parity claim",
+    "Fresh current source and parent export before additive proposal; no old catalog overwrite",
+    "Official12.2/PASOE/native by root"
+  ],
+  "metadataAuthPolicy": "Preserve current actual auth in memory; add four operations only after fresh export and all runtime gates. No grants.",
+  "sharedComposition": "Five exact candidates, 17 semantic hunks; preserve current op1055 additions on future manager composition; no whole-file overwrite."
+}

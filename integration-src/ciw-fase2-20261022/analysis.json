@@ -1,0 +1,133 @@
+{
+  "date": "2026-10-22",
+  "state": "published-and-validated MED queries and purchase payment contextual selector; remaining callers/origins partial",
+  "applications": {
+    "cons_nota_fiscal": {
+      "table": "pub.nota-fiscal",
+      "origin": "MED explicita; ems2med.nota-fiscal, oito campos mais chave natural completa.",
+      "fixedPredicate": "nat-operacao inicia com 3",
+      "fields": [
+        "nr-nota-fis",
+        "cod-emitente",
+        "nat-operacao",
+        "dt-emis-nota",
+        "vl-tot-nota",
+        "vl-mercad",
+        "val-desp-outros",
+        "val-desp-outros-inf"
+      ],
+      "identity": "Validar chave completa estabelecimento/serie/numero; numero isolado nao identifica NF.",
+      "scope": "Consulta ERP; nao confundir com API WP de NF/devolucoes de outra frente.",
+      "sourceEvidence": [
+        "sources/scriptcase/phase2/cons_nota_fiscal/index.php:3392",
+        "sources/scriptcase/phase2/cons_nota_fiscal/index.php:1814",
+        "sources/scriptcase/phase2/cons_nota_fiscal/cons_nota_fiscal_grid.class.php:885"
+      ]
+    },
+    "cons_tit_ap": {
+      "table": "pub.tit_ap",
+      "origin": "MED explicita; ems5.tit_ap com cod_empresa=500 obtido do cadastro empresas EMS2=5.",
+      "fixedPredicate": "log_tit_ap_estordo = false e ind_tip_espec_docto inicia com antecipa; confirmar ramos de selecao antes de generalizar",
+      "fields": [
+        "cod_estab",
+        "cod_espec_docto",
+        "cod_ser_docto",
+        "cdn_fornecedor",
+        "cod_tit_ap",
+        "cod_parcela",
+        "dat_emis_docto",
+        "dat_vencto_tit_ap",
+        "cod_indic_econ",
+        "val_origin_tit_ap",
+        "cod_empresa",
+        "num_id_tit_ap"
+      ],
+      "identity": "Validar unicidade no escopo empresarial e de estabelecimento; reutilizar identidade financeira existente para vinculos.",
+      "scope": "Consulta mais seletor de associacao/desvinculacao de pagamentos de container ou processo de compra. Nao duplicar writers existentes; pedidos de importacao sao outra etapa.",
+      "sourceEvidence": [
+        "sources/scriptcase/phase2/cons_tit_ap/cons_tit_ap_grid.class.php:555",
+        "sources/scriptcase/phase2/cons_tit_ap/cons_tit_ap_grid.class.php:1015",
+        "sources/scriptcase/phase2/cons_tit_ap/index.php:7931",
+        "sources/scriptcase/phase2/cons_tit_ap/index.php:7936"
+      ]
+    }
+  },
+  "sharedPrograms": {
+    "impostos": "sursum-api/programs/ContainersImpostosService.p",
+    "custo_container": "sursum-api/programs/ContainersCustoCalculator.p",
+    "coleta_custos": "sursum-api/programs/ContainersCustoReadService.p",
+    "custo_item": "sursum-api/programs/ContainersItemCustoCalculator.p",
+    "fechamento_item": "sursum-api/programs/ContainersItemCustoCloseService.p",
+    "versoes": "sursum-api/programs/ContainersVersionService.p",
+    "adaptador_versoes": "sursum-api/programs/ContainersVersaoCostAdapter.p",
+    "pagamentos": "sursum-api/programs/ContainersPagamentosCrudService.p",
+    "totais_pagamentos": "sursum-api/programs/ContainersPagamentoTotalsService.p",
+    "rateio_financeiro_itens": "sursum-api/programs/ContainersItensFinanceiroService.p",
+    "regras_cabecalho": "sursum-api/programs/ContainersCabecalhoRules.p",
+    "pagamentos_processos_compra": "sursum-api/programs/PurchasePaymentsService.p"
+  },
+  "rules": [
+    "Business formulas belong to reusable ABL programs, never copies per API or frontend.",
+    "Caller owns root transaction; shared rules participate without committing independently; actor and before/after from confirmed transaction.",
+    "Reuse OO query engine for paging/filtering where viable; current PHP API reader fetches whole external list then filters/pages locally, unsuitable for unrestricted ERP tables.",
+    "Do not infer IMA or silently substitute MED; company selector core exists but has not been activated.",
+    "Preserve current publications, permissions and Conta corrente fornecedor exclusion."
+  ],
+  "pendingQuestion": null,
+  "remoteSourceStatus": "Six current source files rechecked via SFTP22/10: equivalent after applying the same original sensitive-literal sanitizer. Four raw hashes differ only because analysis copies were sanitized. Private source-recheck.json success=true; no PHP execution.",
+  "sourceHashes": {
+    "sources\\scriptcase\\phase2\\cons_nota_fiscal\\cons_nota_fiscal.php": "b860bd4d7494f4dfc54fe766227591c1c929ef09844ef2d4b8ed2cd40a06d9cf",
+    "sources\\scriptcase\\phase2\\cons_nota_fiscal\\cons_nota_fiscal_grid.class.php": "45dfd2c590cac184a1fc29caa735444116b0981660b349b5e52573d5c9ce21ea",
+    "sources\\scriptcase\\phase2\\cons_nota_fiscal\\index.php": "263927ef0eae8d66d494ec62d2348366737f0e41a82cfdcfb15f3831eb462bfe",
+    "sources\\scriptcase\\phase2\\cons_tit_ap\\cons_tit_ap.php": "598c287cb4a02157ab50bdd130843c936253ffab4989138ee14f25a9b4ac3d6a",
+    "sources\\scriptcase\\phase2\\cons_tit_ap\\cons_tit_ap_grid.class.php": "88d563f77aa4da59341c3d59904ac4052201162915156d602f7166d53cfa31c2",
+    "sources\\scriptcase\\phase2\\cons_tit_ap\\index.php": "83f36156376d764db6e6b3ceafe3d74d72feaf4a902b5875555d9b488197fa5a"
+  },
+  "productFilesChanged": true,
+  "businessWritesExecuted": true,
+  "companyDecision": {
+    "userAnswer": "MED inicialmente, com origem explicita na tela",
+    "ems2": 5,
+    "ems5": 500,
+    "validatedUsing": "existing ciw.empresas read"
+  },
+  "newScreens": [
+    "ciw.notas-fiscais-med",
+    "ciw.titulos-pagar-med"
+  ],
+  "validation": {
+    "officialCompiler": "OpenEdge12.2/.42",
+    "ablChecksPerCultureCodepage": 47,
+    "cultures": [
+      "AMERICAN",
+      "EUROPEAN"
+    ],
+    "codepages": [
+      "UTF-8",
+      "ISO8859-1"
+    ],
+    "phpTests": 622,
+    "phpAssertions": 3688,
+    "nativeDefinitionValidator": true,
+    "runtimeReadGetFiltersPaging": true,
+    "nativeGridDetailEdge": true
+  },
+  "dedicatedReaderReason": "OO dynamic query engine existing accepts flat AND filters and returns hasMore, not exact total; no trusted external buffer ABI for TT. One shared reader for both closed resources adds nested filters, exact total and server paging without per-table copies or business calculations.",
+  "purchasePaymentContext": {
+    "published": true,
+    "origin": "MED",
+    "screens": [
+      "ciw.processos-compra-financeiro-med",
+      "ciw.proc-compra-pagamentos"
+    ],
+    "documentation": "docs/ciw-processos-compra-pagamentos-2026-10-22.md",
+    "businessFixtureValidatedAndCleaned": true,
+    "existingTitlesUnchanged": true,
+    "sharedFinancialWriter": "ContainersItensFinanceiroService.p",
+    "sharedPaymentTotals": "ContainersPagamentoTotalsService.p",
+    "audit": "native transaction logs with authenticated user and before/after images",
+    "fullPurchaseCrudConverted": false,
+    "otherCallersOriginsPending": true
+  },
+  "businessWritesScope": "Only explicitly authorized new purchase fixture2147000104/items2147000201,2147000202; associations/unlinks and exact-owned cleanup completed; existing ERP titles readonly and unchanged."
+}

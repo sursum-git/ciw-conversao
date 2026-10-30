@@ -1,0 +1,17 @@
+{
+  "notPublished": true,
+  "noGrants": true,
+  "defaultSort": "PK ASC is a stable pagination extension; source initializes order_grid empty, no source default sorting asserted.",
+  "quantityPresentation": {
+    "real": "n2 matches physical SQL quantity scale2. Legacy raw driver text has no explicit numeric formatter; exact padding/text equivalence is not proved.",
+    "dolar": "n2 as source"
+  },
+  "gates": [
+    "SQL precision overflow boundaries and physical dynamic optimizer/NULL-zero validation; current evidence is metadata plus closed synthetic source vectors",
+    "Central consultar requires existing pp-container, unlike source joins: orphan-version policy/seam review required before full parity claim",
+    "Fresh current source and parent export before additive proposal; no old catalog overwrite",
+    "Official12.2/PASOE/native by root",
+    "Builder205e private candidate verified12numeric filters/draft; integrate its own release before metadata; canonical72c6 unchanged",
+    "NF12 same-file candidates not integrated at capture: rebase by actual12 canonical hashes before official13 integration"
+  ]
+}

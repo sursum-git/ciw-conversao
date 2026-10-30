@@ -1,0 +1,50 @@
+{
+  "target": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/source-132-current-after6.json",
+  "baselineSha256": "5246dbeb34d0c1d4501b4e179646bb4a58ec9406bbba2efc9a2f39891461d039",
+  "sourceCode": "motor_progress_ciw_cadastros",
+  "expectedOperationCount": 132,
+  "resultOperationCount": 134,
+  "preserveGlobalAuthentication": true,
+  "rootCompositionRequired": true,
+  "operations": [
+    {
+      "op": "add",
+      "path": "/operations/-",
+      "value": {
+        "code": "item_custos_manual_read",
+        "name": "Custos manuais dos itens — read",
+        "type": "list",
+        "method": "POST",
+        "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+        "headers": [],
+        "queryParams": [],
+        "requestContextFields": [],
+        "bodyTemplate": {
+          "resource": "item_custos_manual",
+          "operation": "read"
+        },
+        "itemsPath": "data",
+        "totalPath": "total"
+      }
+    },
+    {
+      "op": "add",
+      "path": "/operations/-",
+      "value": {
+        "code": "item_custos_manual_get",
+        "name": "Custos manuais dos itens — get",
+        "type": "detail",
+        "method": "POST",
+        "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+        "headers": [],
+        "queryParams": [],
+        "requestContextFields": [],
+        "bodyTemplate": {
+          "resource": "item_custos_manual",
+          "operation": "get"
+        },
+        "itemPath": "data"
+      }
+    }
+  ]
+}

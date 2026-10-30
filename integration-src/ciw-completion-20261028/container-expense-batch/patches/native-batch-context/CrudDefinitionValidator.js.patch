@@ -1,0 +1,22 @@
+--- D:\opencode\construtor-pg\src\crud-engine\CrudDefinitionValidator.js
++++ D:\opencode\construtor-pg\src\crud-engine\CrudDefinitionValidator.js
+@@ -121,6 +121,19 @@
+         if (!fields[item.field] || ["integer", "string"].indexOf(fields[item.field].type) === -1) { errors.push("Contexto exige campo integer ou string existente."); }
+         ["filter", "createDefault", "readonly", "required"].forEach((key) => { if (item[key] != null && typeof item[key] !== "boolean") { errors.push("Contexto exige propriedades booleanas."); } });
+       });
++      const snapshot = definition.grid && definition.grid.editing && definition.grid.editing.snapshot;
++      if (snapshot != null) {
++        if (closed(snapshot, ["originalFields", "contextFields"], "grid.editing.snapshot")) {
++          if (definition.grid.editing.mode !== "batch") { errors.push("Snapshot exige modo batch."); }
++          ["originalFields", "contextFields"].forEach((key) => {
++            const names = snapshot[key];
++            if (!Array.isArray(names) || !names.length || names.length > 64 || new Set(names).size !== names.length || names.some((name) => typeof name !== "string" || !fields[name] || ["integer","decimal","number","boolean","string","text","date","datetime"].indexOf(fields[name].type) === -1)) { errors.push("Campos de snapshot invalidos."); }
++          });
++          global.CrudUtils.ensureArray(snapshot.contextFields).forEach((name) => {
++            if (!global.CrudUtils.ensureArray(definition.contextFields).some((item) => item.field === name && item.required && item.readonly)) { errors.push("Snapshot exige contexto obrigatorio readonly."); }
++          });
++        }
++      }
+       global.CrudUtils.ensureArray(definition.grid && definition.grid.rowLinks).forEach((link) => {
+         if (!closed(link, ["id", "label", "screenId", "parameters", "position", "icon", "iconOnly"], "rowLinks")) { return; }
+         if (!identifier.test(link.id || "") || !link.label || !/^[A-Za-z0-9][A-Za-z0-9_.-]*$/.test(link.screenId || "") || !Array.isArray(link.parameters)) { errors.push("Link de linha invalido."); }

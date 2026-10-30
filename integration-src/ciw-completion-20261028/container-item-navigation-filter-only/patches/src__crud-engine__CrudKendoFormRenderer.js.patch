@@ -1,0 +1,12 @@
+--- baseline/src/crud-engine/CrudKendoFormRenderer.js
++++ candidate/src/crud-engine/CrudKendoFormRenderer.js
+@@ -2259,7 +2259,8 @@
+ 
+     getRemoteOptionsContext() {
+       const result = {};
+-      global.CrudUtils.ensureArray(this.definition.contextFields).forEach((item) => {
++      global.CrudUtils.ensureArray(this.definition.contextFields).forEach((item) => {
++        if (item.filterOnly === true) { return; }
+         const raw = (this.contextValues || {})[item.field];
+         if (raw == null || raw === "") {
+           if (item.required) { throw global.CrudUtils.makeError("CRUD_OPTIONS_CONTEXT_REQUIRED", "Informe o contexto de " + item.field + "."); }

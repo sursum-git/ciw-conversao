@@ -1,0 +1,64 @@
+{
+  "sourceCode": "motor_progress_ciw_cadastros",
+  "status": "ADDITIVE_ONLY_REQUIRES_FINAL_SOURCE_EXPORT_HASH",
+  "operations": [
+    {
+      "code": "import_descontos_geral_read",
+      "name": "Descontos de importação — consulta geral — read",
+      "type": "list",
+      "method": "POST",
+      "path": "/SursumPrograms/ciw-cadastros",
+      "bodyTemplate": {
+        "resource": "import_descontos_geral",
+        "operation": "read"
+      },
+      "requestContextFields": [],
+      "itemsPath": "data",
+      "totalPath": "total"
+    },
+    {
+      "code": "import_descontos_geral_get",
+      "name": "Descontos de importação — consulta geral — get",
+      "type": "get",
+      "method": "POST",
+      "path": "/SursumPrograms/ciw-cadastros",
+      "bodyTemplate": {
+        "resource": "import_descontos_geral",
+        "operation": "get"
+      },
+      "requestContextFields": [],
+      "itemPath": "data"
+    },
+    {
+      "code": "import_descontos_lancamentos_read",
+      "name": "Utilização do desconto de importação — read",
+      "type": "list",
+      "method": "POST",
+      "path": "/SursumPrograms/ciw-cadastros",
+      "bodyTemplate": {
+        "resource": "import_descontos_lancamentos",
+        "operation": "read"
+      },
+      "requestContextFields": [
+        "desconto_importacao_id"
+      ],
+      "itemsPath": "data",
+      "totalPath": "total"
+    },
+    {
+      "code": "import_descontos_lancamentos_get",
+      "name": "Utilização do desconto de importação — get",
+      "type": "get",
+      "method": "POST",
+      "path": "/SursumPrograms/ciw-cadastros",
+      "bodyTemplate": {
+        "resource": "import_descontos_lancamentos",
+        "operation": "get"
+      },
+      "requestContextFields": [
+        "desconto_importacao_id"
+      ],
+      "itemPath": "data"
+    }
+  ]
+}

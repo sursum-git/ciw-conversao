@@ -1,0 +1,143 @@
+{
+  "success": true,
+  "diagnosticVersion": "12.8",
+  "official122Required": true,
+  "compileCount": 7,
+  "numDbs": 0,
+  "newChecksPerCombination": 32,
+  "regressionsPerCombination": 79,
+  "totalChecks": 444,
+  "logCount": 16,
+  "networkExecuted": false,
+  "businessWrites": false,
+  "logs": [
+    {
+      "suite": "SupplierDiscountReadTest.p",
+      "cpinternal": "UTF-8",
+      "culture": "american",
+      "checks": 32,
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\supplier-discounts-readonly\\local\\matrix\\UTF-8-american\\SupplierDiscountReadTest\\supplier-discounts-tests.log",
+      "sha256": "0ae011f133baeefb85dcf9c16673d55705cae3129308e3efc0c7738cf394c32e"
+    },
+    {
+      "suite": "ImportDiscountsCollectorTest.p",
+      "cpinternal": "UTF-8",
+      "culture": "american",
+      "checks": 18,
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\supplier-discounts-readonly\\local\\matrix\\UTF-8-american\\ImportDiscountsCollectorTest\\collector-tests.log",
+      "sha256": "9988bcf654f5c7f9f2fc4a4e57dded9864dcef580b5a8100f8a6831b5de08772"
+    },
+    {
+      "suite": "ImportDiscountsReadTest.p",
+      "cpinternal": "UTF-8",
+      "culture": "american",
+      "checks": 44,
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\supplier-discounts-readonly\\local\\matrix\\UTF-8-american\\ImportDiscountsReadTest\\read-tests.log",
+      "sha256": "8e5d32672f37bd99778e89b5d8b1ebddccec25f6add51c3830b3d72a055209c1"
+    },
+    {
+      "suite": "ImportDiscountsLabelsTest.p",
+      "cpinternal": "UTF-8",
+      "culture": "american",
+      "checks": 17,
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\supplier-discounts-readonly\\local\\matrix\\UTF-8-american\\ImportDiscountsLabelsTest\\discount-labels-tests.log",
+      "sha256": "0c3a9f134b185e352b043508dfa0e8b635a9de4e4ae54e658b61768359955cd3"
+    },
+    {
+      "suite": "SupplierDiscountReadTest.p",
+      "cpinternal": "UTF-8",
+      "culture": "european",
+      "checks": 32,
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\supplier-discounts-readonly\\local\\matrix\\UTF-8-european\\SupplierDiscountReadTest\\supplier-discounts-tests.log",
+      "sha256": "0ae011f133baeefb85dcf9c16673d55705cae3129308e3efc0c7738cf394c32e"
+    },
+    {
+      "suite": "ImportDiscountsCollectorTest.p",
+      "cpinternal": "UTF-8",
+      "culture": "european",
+      "checks": 18,
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\supplier-discounts-readonly\\local\\matrix\\UTF-8-european\\ImportDiscountsCollectorTest\\collector-tests.log",
+      "sha256": "9988bcf654f5c7f9f2fc4a4e57dded9864dcef580b5a8100f8a6831b5de08772"
+    },
+    {
+      "suite": "ImportDiscountsReadTest.p",
+      "cpinternal": "UTF-8",
+      "culture": "european",
+      "checks": 44,
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\supplier-discounts-readonly\\local\\matrix\\UTF-8-european\\ImportDiscountsReadTest\\read-tests.log",
+      "sha256": "8e5d32672f37bd99778e89b5d8b1ebddccec25f6add51c3830b3d72a055209c1"
+    },
+    {
+      "suite": "ImportDiscountsLabelsTest.p",
+      "cpinternal": "UTF-8",
+      "culture": "european",
+      "checks": 17,
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\supplier-discounts-readonly\\local\\matrix\\UTF-8-european\\ImportDiscountsLabelsTest\\discount-labels-tests.log",
+      "sha256": "0c3a9f134b185e352b043508dfa0e8b635a9de4e4ae54e658b61768359955cd3"
+    },
+    {
+      "suite": "SupplierDiscountReadTest.p",
+      "cpinternal": "ISO8859-1",
+      "culture": "american",
+      "checks": 32,
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\supplier-discounts-readonly\\local\\matrix\\ISO8859-1-american\\SupplierDiscountReadTest\\supplier-discounts-tests.log",
+      "sha256": "0ae011f133baeefb85dcf9c16673d55705cae3129308e3efc0c7738cf394c32e"
+    },
+    {
+      "suite": "ImportDiscountsCollectorTest.p",
+      "cpinternal": "ISO8859-1",
+      "culture": "american",
+      "checks": 18,
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\supplier-discounts-readonly\\local\\matrix\\ISO8859-1-american\\ImportDiscountsCollectorTest\\collector-tests.log",
+      "sha256": "9988bcf654f5c7f9f2fc4a4e57dded9864dcef580b5a8100f8a6831b5de08772"
+    },
+    {
+      "suite": "ImportDiscountsReadTest.p",
+      "cpinternal": "ISO8859-1",
+      "culture": "american",
+      "checks": 44,
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\supplier-discounts-readonly\\local\\matrix\\ISO8859-1-american\\ImportDiscountsReadTest\\read-tests.log",
+      "sha256": "8e5d32672f37bd99778e89b5d8b1ebddccec25f6add51c3830b3d72a055209c1"
+    },
+    {
+      "suite": "ImportDiscountsLabelsTest.p",
+      "cpinternal": "ISO8859-1",
+      "culture": "american",
+      "checks": 17,
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\supplier-discounts-readonly\\local\\matrix\\ISO8859-1-american\\ImportDiscountsLabelsTest\\discount-labels-tests.log",
+      "sha256": "0c3a9f134b185e352b043508dfa0e8b635a9de4e4ae54e658b61768359955cd3"
+    },
+    {
+      "suite": "SupplierDiscountReadTest.p",
+      "cpinternal": "ISO8859-1",
+      "culture": "european",
+      "checks": 32,
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\supplier-discounts-readonly\\local\\matrix\\ISO8859-1-european\\SupplierDiscountReadTest\\supplier-discounts-tests.log",
+      "sha256": "0ae011f133baeefb85dcf9c16673d55705cae3129308e3efc0c7738cf394c32e"
+    },
+    {
+      "suite": "ImportDiscountsCollectorTest.p",
+      "cpinternal": "ISO8859-1",
+      "culture": "european",
+      "checks": 18,
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\supplier-discounts-readonly\\local\\matrix\\ISO8859-1-european\\ImportDiscountsCollectorTest\\collector-tests.log",
+      "sha256": "9988bcf654f5c7f9f2fc4a4e57dded9864dcef580b5a8100f8a6831b5de08772"
+    },
+    {
+      "suite": "ImportDiscountsReadTest.p",
+      "cpinternal": "ISO8859-1",
+      "culture": "european",
+      "checks": 44,
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\supplier-discounts-readonly\\local\\matrix\\ISO8859-1-european\\ImportDiscountsReadTest\\read-tests.log",
+      "sha256": "8e5d32672f37bd99778e89b5d8b1ebddccec25f6add51c3830b3d72a055209c1"
+    },
+    {
+      "suite": "ImportDiscountsLabelsTest.p",
+      "cpinternal": "ISO8859-1",
+      "culture": "european",
+      "checks": 17,
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\supplier-discounts-readonly\\local\\matrix\\ISO8859-1-european\\ImportDiscountsLabelsTest\\discount-labels-tests.log",
+      "sha256": "0c3a9f134b185e352b043508dfa0e8b635a9de4e4ae54e658b61768359955cd3"
+    }
+  ]
+}

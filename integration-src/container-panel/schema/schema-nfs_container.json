@@ -1,0 +1,111 @@
+{
+  "database": "espec",
+  "table": "nfs_container",
+  "fields": [
+    {
+      "name": "documento",
+      "type": "character",
+      "format": "x(20)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "serie",
+      "type": "character",
+      "format": "x(8)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "estab",
+      "type": "character",
+      "format": "x(3)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "nat_operacao",
+      "type": "character",
+      "format": "x(20)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_emitente",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "container_id",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    }
+  ],
+  "indexes": [
+    {
+      "name": "ind_cod_emitente",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod_emitente"
+      ]
+    },
+    {
+      "name": "ind_estab",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "estab"
+      ]
+    },
+    {
+      "name": "ind_nfs_container",
+      "unique": true,
+      "primary": true,
+      "fields": [
+        "documento",
+        "serie",
+        "estab",
+        "nat_operacao",
+        "cod_emitente",
+        "container_id"
+      ]
+    }
+  ],
+  "triggers": [
+  ]
+}

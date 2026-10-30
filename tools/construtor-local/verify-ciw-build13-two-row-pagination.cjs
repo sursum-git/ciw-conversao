@@ -1,0 +1,19 @@
+'use strict';
+// Uses exactly one already observed two-row version; no further candidate scan.
+const c=require('./purchase-payments-builder-common.cjs'),p=require('./prepare-ciw-build13-metadata.cjs'),v=require('./verify-ciw-build13-pasoe.cjs');
+async function main(){
+ c.assert.deepEqual(process.argv.slice(2),['--verify-readonly-two-row-pagination']);p.evidence(true);
+ const prior=c.path.join(p.r,'build13-pagination-complement/proof.json');c.assert.equal(c.sha(prior),'bbc81f2d7557a5a15965d55d260363777e62cb6371818f167c8cfdc6459c2dd2');
+ const observed=c.readJson(prior).observed.find(x=>x.container_id===333426&&x.versao_id===2347&&x.total===2);c.assert.ok(observed);
+ const context={container_id:observed.container_id,versao_id:observed.versao_id},dir=c.path.join(p.r,'build13-two-row-pagination');c.assert.ok(!c.fs.existsSync(dir),'NO_REPLAY');c.fs.mkdirSync(dir);
+ const cfg=c.readJson(c.path.join(p.root,'.runtime/ciw-cadastros-20261020/private/connection.json'));c.assert.equal(cfg.baseUrl,'http://127.0.0.1:19910/med/web');c.assert.ok(cfg.integrationToken);
+ const save=(name,value)=>{const text=JSON.stringify(value,null,2)+'\n';c.assert.ok(!text.includes(cfg.integrationToken));c.fs.writeFileSync(c.path.join(dir,name),text,{flag:'wx'});};let calls=0;save('attempt.json',{state:'STARTED',toolSha256:c.sha(__filename),businessWrites:false});
+ try{
+  const results=await c.session(async()=>{
+   async function call(resource,body){c.assert.ok(v.resources.includes(resource)&&['read','get'].includes(body.operation)&&calls<8);calls++;const response=await fetch(cfg.baseUrl+'/SursumPrograms/ciw-cadastros',{method:'POST',headers:{'Content-Type':'application/json','X-Sursum-User':'admin','X-Ciw-Cadastros-Token':cfg.integrationToken},body:JSON.stringify({resource,...body,...context}),signal:AbortSignal.timeout(30000)});c.assert.equal(response.status,200);const value=await response.json();save('response-'+calls+'-private.json',{resource,request:{...body,...context},response:value});return value;}
+   const result=[];for(const resource of v.resources){const base={operation:'read',take:1,sort:[{field:'item_container_custo_id',dir:'asc'}]},first=await call(resource,{...base,skip:0}),second=await call(resource,{...base,skip:1}),after=await call(resource,{...base,skip:2});v.page(first,context,1);v.page(second,context,1,1);v.page(after,context,1,2);c.assert.equal(first.total,2);c.assert.equal(second.total,2);c.assert.equal(after.total,2);c.assert.equal(second.data.length,1);c.assert.equal(after.data.length,0);c.assert.notEqual(first.data[0].record_key,second.data[0].record_key);c.assert.ok(first.data[0].item_container_custo_id<second.data[0].item_container_custo_id);const selected=second.data[0],detail=await call(resource,{operation:'get',id:selected.record_key,record_key:selected.record_key});c.assert.equal(detail.success,true);v.row(detail.data,context);c.assert.deepEqual(detail.data,selected);result.push({resource,total:2,pageSize:1,nonemptySecondPage:true,disjointOrderedPages:true,tailIsSecondPage:true,beyondEmpty:true,secondPageGetEqual:true});}return result;
+  });
+  save('proof.json',{success:true,readOnly:true,state:'PROVED',nonemptySecondPage:true,results,calls,observedProofSha256:c.sha(prior),activeManifestSha256:c.sha(c.path.join(p.r,'runtime-build13-v4/active-manifest.json')),toolSha256:c.sha(__filename),completedAtUtc:new Date().toISOString(),businessWrites:false,catalogWrites:false,processRuns:false});console.log(JSON.stringify({success:true,state:'PROVED',currencies:results.length,calls,nonemptySecondPage:true,proofSha256:c.sha(c.path.join(dir,'proof.json'))}));
+ }catch(error){save('failure.json',{success:false,code:error.code??'CHECK_FAILED',calls,businessWrites:false});throw error;}finally{cfg.integrationToken=undefined;}
+}
+if(require.main===module)main().catch(()=>{console.error('BUILD13_TWO_ROW_PAGINATION_FAILED; inspect journal without replay');process.exitCode=1;});

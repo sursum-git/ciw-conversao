@@ -1,0 +1,43 @@
+{
+  "status": "MED_AVAILABLE_NF_READONLY_CANDIDATE",
+  "files": [
+    {
+      "path": "D:/opencode/conversao-sc/sources/scriptcase/ciw-completion-next19c-20261028/bl_selecao_nf/index.php",
+      "sha256": "4bd8b86de9bf9060cf4a1d54cea3835f0455319a3820e59a71ee132ea77a3a2c"
+    },
+    {
+      "path": "D:/opencode/conversao-sc/sources/scriptcase/containers/bl_selecionado_nf/index.php",
+      "sha256": "c8ad7d0d57631752287e78d252d952c396e21e12e9ab05462be590208d3cc26e"
+    },
+    {
+      "path": "D:/opencode/conversao-sc/sources/scriptcase/containers/cons_docum_est_importacao/index.php",
+      "sha256": "d4e9850d4cb6539b7ed0b72a8b3293ebd686fbb8d17385875592fd31d1eb1d70"
+    },
+    {
+      "path": "D:/opencode/conversao-sc/sources/scriptcase/containers/cons_docum_est_importacao/cons_docum_est_importacao_grid.class.php",
+      "sha256": "7963715015afc98d07c9b47321831f61055f0bb0402f99cda3f697bbd96a651c"
+    },
+    {
+      "path": "D:/opencode/conversao-sc/integration-src/container-panel/schema/schema-nfs_container.json",
+      "sha256": "90f3993a38dff44110e47861f77096755f7494981619206e4381a7fc581adaab"
+    },
+    {
+      "path": "D:/opencode/conversao-sc/integration-src/container-panel/schema/schema-pp-container.json",
+      "sha256": "c8034298dd1e210827826c069647fcc1446143552751e77a2ee9661e81a1d813"
+    },
+    {
+      "path": "D:/opencode/conversao-sc/integration-src/container-panel/schema/ems2med/schema-docum-est.json",
+      "sha256": "5afd92449a21c376fdcdb041de63864220a91f2b113a7a60e0063b30f941541b"
+    }
+  ],
+  "originScopePartial": true,
+  "scope": "MED available read/get only; IMA and association/unassociation are not converted in this package.",
+  "realSourceAction": "bl_selecao_nf nominal desassociar opens available documents and enables Associar NF Importação",
+  "query": "nat-operacao begins3 AND header supplier AND header establishment AND idi-sit-nf-eletro=3; every document linked to this CID is excluded by document only.",
+  "nullProof": "Native PHP interpolation unit test plus explicit SQL three-valued truth model; no SQL/ODBC execution claimed.",
+  "collationGate": "422 if no exact-byte exclusion resolves a potential case/edge-space/Unicode comparison; no TRIM/case normalization for inclusion.",
+  "sql1040_1041_1048GatesChanged": false,
+  "centralProjection": "NfRow/NfKey/AddField/AcceptRow unchanged byte-for-byte",
+  "inventoryChanged": false,
+  "businessExecuted": false
+}

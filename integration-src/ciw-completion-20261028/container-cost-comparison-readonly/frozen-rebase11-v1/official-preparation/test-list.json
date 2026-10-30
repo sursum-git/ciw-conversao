@@ -1,0 +1,135 @@
+[
+  {
+    "file": "ComparisonProjectionTest.p",
+    "sha256": "03b7d72f2fa06ee1696a1b0a9021f43463053e2716cb764ed6c45eef5374d080",
+    "output": "comparison-projection-tests.log",
+    "checks": 26,
+    "kind": "new"
+  },
+  {
+    "file": "ComparisonRoundingEvidenceTest.p",
+    "sha256": "cb540ecb3abe3ce444bd0e3c7e50ed60f0d48109de073214faa061950479f99d",
+    "output": "comparison-rounding-tests.log",
+    "checks": 21,
+    "kind": "new"
+  },
+  {
+    "file": "ComparisonItemJoinTest.p",
+    "sha256": "75941bea44db5a4ed932ae57cf8f511b3b67451e7e30f0b761756eb61860ddd0",
+    "output": "comparison-itemjoin-tests.log",
+    "checks": 10,
+    "kind": "new"
+  },
+  {
+    "file": "ComparisonMaterializerTest.p",
+    "sha256": "d073735845417381ad0b836a0c7294af7efc95ecd1f78081ca2fb1ce4f8ce910",
+    "output": "comparison-materializer-tests.log",
+    "checks": 14,
+    "kind": "new"
+  },
+  {
+    "file": "ComparisonReaderTest.p",
+    "sha256": "f647e5d6532d98b41368007f9da60af87e71f09488555932327fd9db23131adc",
+    "output": "comparison-reader-tests.log",
+    "checks": 13,
+    "kind": "new"
+  },
+  {
+    "file": "ComparisonSqlObservedTest.p",
+    "sha256": "8afda4db9e164cad170352eef47c4ea4e9ad8ad94eb07e381bf6f8beb0f70f3d",
+    "output": "comparison-sql-observed-tests.log",
+    "checks": 274,
+    "kind": "new"
+  },
+  {
+    "file": "ComparisonServiceTest.p",
+    "sha256": "952af6d8f1ff1cdf5eb88d1eb83ab4590a0605df63447cd437ab3909ebef38e8",
+    "output": "comparison-service-tests.log",
+    "checks": 21,
+    "kind": "new"
+  },
+  {
+    "file": "ContainersVersionHistoryTest.p",
+    "sha256": "e9cde6bcf0b4a5942c7bb991800be9b5220c233d284d905324044517808b5075",
+    "output": "container-version-history-tests.log",
+    "checks": 38,
+    "kind": "regression"
+  },
+  {
+    "file": "ContainersVersionTest.p",
+    "sha256": "80504be79a48caf04126b5a196441ae17730d4b409f273855f027d967f905f9f",
+    "output": "containers-version-tests-{culture}.log",
+    "checks": 189,
+    "kind": "regression"
+  },
+  {
+    "file": "CiwErpReadTest.p",
+    "sha256": "321e247e04e397c8fde6541bdb0c6fda06a67f27d47d7496b52b5fa9cae82a34",
+    "output": "erp-read-{culture}.log",
+    "checks": 47,
+    "kind": "regression"
+  },
+  {
+    "file": "PurchaseItemsReadTest.p",
+    "sha256": "a8c05e089db3aaed7bc4a5ea97ae5fd28e4b1298b0032d78924e7d85094def7c",
+    "output": "purchase-item-read-{culture}.log",
+    "checks": 9,
+    "kind": "regression"
+  },
+  {
+    "file": "ContainersVersionAuxHistoryTest.p",
+    "sha256": "b2194fabceea481a7b482be23ce826fab859d519aa10c87de48aa0b4a3111060",
+    "output": "container-version-aux-history-tests.log",
+    "checks": 28,
+    "kind": "regression"
+  },
+  {
+    "file": "ImportDiscountsLabelsTest.p",
+    "sha256": "71a08b4c66f434bd1ccd596c7b6b618ec678d615b7469e021bfe8275946c9ef0",
+    "output": "discount-labels-tests.log",
+    "checks": 17,
+    "kind": "regression"
+  },
+  {
+    "file": "ImportDiscountsReadTest.p",
+    "sha256": "cc83171fa68ddc298d674e03b4e9f935318acaa5a5c56393de5a9534c65ff1b0",
+    "output": "read-tests.log",
+    "checks": 44,
+    "kind": "regression"
+  },
+  {
+    "file": "CostDistributionEligibleTest.p",
+    "sha256": "2b2b086f7591bc726e13d8f94c86aea680a9acc4e4bfada21c999d8c4af5b05b",
+    "output": "eligible-tests.log",
+    "checks": 33,
+    "kind": "regression"
+  },
+  {
+    "file": "CostDistributionLedgerTest.p",
+    "sha256": "a168ddcc4a6fb3d5bb4d52c71cfc97399254e7da7f76f85470c0f970aca41d67",
+    "output": "ledger-tests.log",
+    "checks": 31,
+    "kind": "regression"
+  },
+  {
+    "file": "ItemCostManualReadTest.p",
+    "sha256": "724b45dace64b64f6ce51723d75d42966b6c845694c43619259cbca0441cfaad",
+    "output": "item-manual-{culture}.log",
+    "checks": 24,
+    "kind": "regression"
+  },
+  {
+    "file": "SampleContainerItemsTest.p",
+    "sha256": "edd7e959c258a6dcf8f8a78bd9c89070e22210ce9d04f8c3e55272219973c88a",
+    "output": "sample-tests.log",
+    "checks": 35,
+    "kind": "regression"
+  },
+  {
+    "file": "ExpenseTaxRelationsReadTest.p",
+    "sha256": "963675398b7fbd708401cb8335569006060c1f43d718b8de42d2002cdec1dc80",
+    "output": "expense-tax-relations-{culture}.log",
+    "checks": 49,
+    "kind": "regression"
+  }
+]

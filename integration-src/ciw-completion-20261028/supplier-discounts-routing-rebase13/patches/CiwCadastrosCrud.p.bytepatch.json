@@ -1,0 +1,33 @@
+{
+  "relative": "programs/CiwCadastrosCrud.p",
+  "canonical": "D:\\opencode\\motor-progress\\v2\\sursum-api\\programs\\CiwCadastrosCrud.p",
+  "baselineSha256": "325746bfbf416dab5b5b05614e937bd9d45203240f215cd779484584a28a427b",
+  "candidateSha256": "f65eb57f049a1ed69a734c2a9c0c9d3358dc972b91a33e7ab9f416d99b52ee6a",
+  "hunks": [
+    {
+      "baselineStart": 5363,
+      "baselineEnd": 5444,
+      "candidateStart": 5363,
+      "candidateEnd": 5482,
+      "beforeBase64": "ICBXSEVOICJpbXBvcnRfZGVzY29udG9zX2dlcmFsIiBPUiBXSEVOICJpbXBvcnRfZGVzY29udG9zX2xhbmNhbWVudG9zIiBUSEVOIERPOg0K",
+      "afterBase64": "ICBXSEVOICJpbXBvcnRfZGVzY29udG9zX2dlcmFsIiBPUiBXSEVOICJpbXBvcnRfZGVzY29udG9zX2xhbmNhbWVudG9zIiBPUiBXSEVOICJpbXBvcnRfZGVzY29udG9zX2Zvcm5lY2Vkb3IiIFRIRU4gRE86DQo="
+    }
+  ],
+  "unchangedRanges": [
+    {
+      "baselineStart": 0,
+      "baselineEnd": 5363,
+      "candidateStart": 0,
+      "candidateEnd": 5363,
+      "sha256": "740cbc0717d9d1565d5f2f5e863796f1fe4b88821fd889fc4cf8dcefb1bc9a11"
+    },
+    {
+      "baselineStart": 5444,
+      "baselineEnd": 18306,
+      "candidateStart": 5482,
+      "candidateEnd": 18344,
+      "sha256": "781dc180c7768d27afd44a3c0bd7926ad929683bff587fa96a817b9a84674bcf"
+    }
+  ],
+  "applyOnlyByExactBaseline": true
+}

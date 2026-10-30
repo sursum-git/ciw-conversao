@@ -1,0 +1,28 @@
+{
+  "target": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/official-build3/op1003-program-after.json",
+  "baselineSha256": "a656a2c5e9c34ee12cc223b78155dcab6a664770f81bf0a4229e06b705195de9",
+  "targetProgram": "op1003",
+  "baselineVersion": "1.0.2",
+  "targetPointer": "/versions/0/builderConfig",
+  "applyToCloneForNewVersion": true,
+  "preserveExistingVersion": true,
+  "rebaseRequiredIf1042Published": true,
+  "operations": [
+    {
+      "op": "add",
+      "path": "/rowLinks/-",
+      "value": {
+        "id": "calcular_impostos",
+        "label": "Calcular impostos",
+        "screenId": "ciw.container-calcular-impostos",
+        "parameters": [
+          {
+            "field": "container_id",
+            "sourceField": "container_id"
+          }
+        ],
+        "position": "end"
+      }
+    }
+  ]
+}

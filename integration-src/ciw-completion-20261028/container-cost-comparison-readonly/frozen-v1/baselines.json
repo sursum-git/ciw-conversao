@@ -1,0 +1,43 @@
+{
+  "files": [
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwCadastrosCrud.p",
+      "baselineFile": "baseline-exact/CiwCadastrosCrud.p",
+      "baselineSha256": "c82a5a7e481886b2d8559e057c3fd8f8ad4f4e66f7eae466d16f043350ed803e",
+      "candidateFile": "candidate-exact/CiwCadastrosCrud.p",
+      "candidateSha256": "060cb5886c23a561fe676e463d9e745ca96900401717db0e69e30ea69bf2bea0"
+    },
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwErpReadService.p",
+      "baselineFile": "baseline-exact/CiwErpReadService.p",
+      "baselineSha256": "c734eda627f6c9289a7ff69a79d13ce696db5dc2204b74dae7e3d78690d86d76",
+      "candidateFile": "candidate-exact/CiwErpReadService.p",
+      "candidateSha256": "9f6827ac2bfaa5f34888ea19e24cd9519a725af52082ffc1d8ef6abfd8210ca5"
+    },
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersVersionHistoryLabels.p",
+      "baselineFile": "baseline-exact/ContainersVersionHistoryLabels.p",
+      "baselineSha256": "9bfe21dc6ff9d86105d7602d376a2adc3cc3b9fe61783a68f7d1cd03f9d100bb",
+      "candidateFile": "candidate-exact/ContainersVersionHistoryLabels.p",
+      "candidateSha256": "bce8fc89f40c69d3407fd6e5e789dfd6ee84d6191eeeffd1da131a7e886678b8"
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeApiEntityActionService.php",
+      "baselineFile": "baseline-exact/RuntimeApiEntityActionService.php",
+      "baselineSha256": "399cf18a00bca42875c2a35c648eaa4021029b4e3473b872b16f2e62865c96d2",
+      "candidateFile": "candidate-exact/RuntimeApiEntityActionService.php",
+      "candidateSha256": "71c7156db97b1fba159771c542cd49012fcd1317026ad5a7a906ec17c7681bf2"
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeCiwErpQuery.php",
+      "baselineFile": "baseline-exact/RuntimeCiwErpQuery.php",
+      "baselineSha256": "b83ce35195bd138416b2db57824431a54d48b26b9ab1a38eb5aa754a2457bea4",
+      "candidateFile": "candidate-exact/RuntimeCiwErpQuery.php",
+      "candidateSha256": "27665bb23f5dc827dcc2bc85e288dc89ee26d0f8bc1eb647145a890a6dfdb831"
+    }
+  ],
+  "sharedPatch": "shared-byte-plan.json",
+  "canonicalWrites": false,
+  "metadataBaseline": "Current source/parent export required before additive integration; old exports are evidence only.",
+  "preserveFiscal1055": true
+}

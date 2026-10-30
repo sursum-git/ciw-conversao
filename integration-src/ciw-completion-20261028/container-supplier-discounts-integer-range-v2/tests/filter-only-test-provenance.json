@@ -1,0 +1,16 @@
+[
+  {
+    "original": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\tests\\native-boundaries.test.cjs",
+    "originalSha256": "d9ea5a5182e61bb1dd5d623c4b05c0a340438ac08ba98ef13c030f6362e63c44",
+    "copy": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\tests\\filter-only-native-boundaries.test.cjs",
+    "sha256": "339735eb9a5caae95e88b92f23549a4ff76eddfc7f3ef667a10782d2c5a86a18",
+    "delta": "default receipt output path only; root resolves current domain candidate"
+  },
+  {
+    "original": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\tests\\native-filter-only.test.cjs",
+    "originalSha256": "a2d094f30f190fa6b791dc45e639214b62e69300d7620b95aa273c7b7275b29d",
+    "copy": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\tests\\filter-only-native-filter-only.test.cjs",
+    "sha256": "08421a464efe09d64165d91bbb4c44a07c95efbee2978d9bf35d1f042abe8f2f",
+    "delta": "default receipt output path only; root resolves current domain candidate"
+  }
+]

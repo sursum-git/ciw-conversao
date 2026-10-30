@@ -1,0 +1,36 @@
+[
+  {
+    "source": "D:\\opencode\\motor-progress\\v2\\sursum-api\\programs\\CiwCadastrosCrud.p",
+    "candidate": "integration-src\\purchase-items\\CiwCadastrosCrud.p",
+    "sha256": "2532f2e3fa60a7fe36a8995ff7adbea18a02f1930938c08acde32638f6f855db",
+    "currentCanonicalSha256": "2532f2e3fa60a7fe36a8995ff7adbea18a02f1930938c08acde32638f6f855db",
+    "canonicalUnchanged": true,
+    "candidateSha256": "2388680d5433b6b347f44ac700b62a98c0ef2555d63ca219296cc429b73b60ab",
+    "priorSha256": "9a2d0cf4648e3ebd5746b1232e5b425b84a4bb13cb39314dcc015963d26692ad",
+    "concurrentChangePreserved": "estoque_termos branch; readonly options exception scoped only to new purchase item resource"
+  },
+  {
+    "source": "D:\\opencode\\motor-progress\\v2\\sursum-api\\programs\\CiwErpReadService.p",
+    "candidate": "integration-src\\purchase-items\\CiwErpReadService.p",
+    "sha256": "087f2a64fcd8050ab3e2b68ea9753fa861e6d8385e35065b2027e66eef847afa",
+    "currentCanonicalSha256": "087f2a64fcd8050ab3e2b68ea9753fa861e6d8385e35065b2027e66eef847afa",
+    "canonicalUnchanged": true,
+    "candidateSha256": "374a3d13e27d30b7eb42c518b441f0b969f79c02fc7b4ba2e0cb0c8864d40331"
+  },
+  {
+    "source": "D:\\opencode\\motor-progress\\v2\\sursum-api\\programs\\ContainersItensFinanceiroService.p",
+    "candidate": "integration-src\\purchase-items\\ContainersItensFinanceiroService.p",
+    "sha256": "b3a9acbf48b6e469de5f7c99611e6d5df1c6d3a490edf54e0102ad1231843c39",
+    "currentCanonicalSha256": "b3a9acbf48b6e469de5f7c99611e6d5df1c6d3a490edf54e0102ad1231843c39",
+    "canonicalUnchanged": true,
+    "candidateSha256": "973f14ff63314ae2ef2928eb28c9311c4cdc34e620d5a0369863939da7a65fc3"
+  },
+  {
+    "source": "D:\\opencode\\motor-progress\\v2\\sursum-api\\programs\\ContainersItensRuntime.p",
+    "candidate": "integration-src\\purchase-items\\ContainersItensRuntime.p",
+    "sha256": "1de35bbc0f1629af3529543aed809bdf537cdb3727ae554f39e1467dce2185d2",
+    "currentCanonicalSha256": "1de35bbc0f1629af3529543aed809bdf537cdb3727ae554f39e1467dce2185d2",
+    "canonicalUnchanged": true,
+    "candidateSha256": "20a4a9c1ea32589e206d662b1bfacab70bd982d017f2b8a32761638f128b3aef"
+  }
+]

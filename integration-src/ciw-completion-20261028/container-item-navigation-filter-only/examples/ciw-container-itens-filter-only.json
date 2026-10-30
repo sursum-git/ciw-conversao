@@ -1,0 +1,2927 @@
+{
+    "schemaVersion": "1.0",
+    "pageType": "crud",
+    "screenId": "ciw.container-itens",
+    "program": {
+        "id": "op1002",
+        "module": "operacional",
+        "entity": "container_itens_progress",
+        "title": "Itens do Container",
+        "version": "1.0.2",
+        "subtitle": "Manutenção e alocação de itens existentes de pedidos de importação",
+        "icon": null,
+        "permission": "container_itens_progress.read",
+        "programOrigin": "standard",
+        "ownerScope": "system",
+        "customizationPolicy": "overlay_only",
+        "subscriberId": null,
+        "baseProgramCode": null,
+        "baseProgramVersionId": null,
+        "upgradeFrozen": false,
+        "frozenReason": null,
+        "publicationPolicy": {
+            "allowedDatabaseEnvironments": []
+        }
+    },
+    "permissions": {
+        "read": "container_itens_progress.read",
+        "create": "container_itens_progress.create",
+        "edit": "container_itens_progress.edit",
+        "delete": "container_itens_progress.delete",
+        "saveLayout": "user.preferences"
+    },
+    "dataSource": {
+        "api": {
+            "read": {
+                "endpointId": "read",
+                "method": "POST"
+            },
+            "get": {
+                "endpointId": "get",
+                "method": "POST"
+            },
+            "create": {
+                "endpointId": "create",
+                "method": "POST"
+            },
+            "update": {
+                "endpointId": "update",
+                "method": "POST"
+            },
+            "delete": {
+                "endpointId": "delete",
+                "method": "POST"
+            },
+            "options.item_proc_compra_id": {
+                "endpointId": "options.item_proc_compra_id",
+                "method": "POST"
+            },
+            "saveLayout": {
+                "endpointId": "saveLayout",
+                "method": "POST"
+            },
+            "restoreLayout": {
+                "endpointId": "restoreLayout",
+                "method": "POST"
+            },
+            "saveSort": {
+                "endpointId": "saveSort",
+                "method": "POST"
+            },
+            "deleteSort": {
+                "endpointId": "deleteSort",
+                "method": "POST"
+            },
+            "saveGroup": {
+                "endpointId": "saveGroup",
+                "method": "POST"
+            },
+            "deleteGroup": {
+                "endpointId": "deleteGroup",
+                "method": "POST"
+            },
+            "saveFilter": {
+                "endpointId": "saveFilter",
+                "method": "POST"
+            },
+            "deleteFilter": {
+                "endpointId": "deleteFilter",
+                "method": "POST"
+            },
+            "lookupFrequent": {
+                "endpointId": "lookupFrequent",
+                "method": "POST"
+            },
+            "recordLookupUsage": {
+                "endpointId": "recordLookupUsage",
+                "method": "POST"
+            },
+            "saveMobileTemplate": {
+                "endpointId": "saveMobileTemplate",
+                "method": "POST"
+            },
+            "deleteMobileTemplate": {
+                "endpointId": "deleteMobileTemplate",
+                "method": "POST"
+            }
+        }
+    },
+    "runtime": {
+        "entityCode": "container_itens_progress",
+        "programId": "op1002",
+        "mode": "api-crud",
+        "lock": {
+            "enabled": false,
+            "modes": [
+                "edit",
+                "delete"
+            ]
+        },
+        "messages": {
+            "enabled": false,
+            "pollIntervalSeconds": 30,
+            "events": {
+                "enabled": false
+            }
+        }
+    },
+    "contextFields": [
+        {
+            "field": "container_id",
+            "filter": true,
+            "createDefault": true,
+            "readonly": true,
+            "required": true
+        },
+        {
+            "field": "item_container_id",
+            "filter": true,
+            "createDefault": false,
+            "readonly": true,
+            "required": false,
+            "filterOnly": true
+        }
+    ],
+    "dataModel": {
+        "primaryKey": "item_container_id",
+        "fields": {
+            "item_container_id": {
+                "label": "Item do container",
+                "type": "integer",
+                "nullable": false,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "item_container_id"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_itens_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "item_container_id",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": true
+                }
+            },
+            "container_id": {
+                "label": "Nr.Container",
+                "type": "integer",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "container_id"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_itens_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "container_id",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false
+                }
+            },
+            "item_proc_compra_id": {
+                "label": "Item do pedido de importação",
+                "type": "integer",
+                "nullable": false,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "item_proc_compra_id"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_itens_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "item_proc_compra_id",
+                        "critical": true
+                    }
+                ],
+                "optionsSource": {
+                    "endpointId": "options.item_proc_compra_id",
+                    "copyFields": [
+                        "saldo_disponivel_texto"
+                    ]
+                },
+                "editor": "dropdown",
+                "readonlyOnEdit": true,
+                "validation": {
+                    "required": true
+                }
+            },
+            "qt_alocada": {
+                "label": "Quantidade alocada",
+                "type": "number",
+                "nullable": false,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "qt_alocada"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_itens_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "number"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "numeric"
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "qt_alocada",
+                        "critical": true
+                    }
+                ],
+                "decimals": 2,
+                "format": "n2",
+                "validation": {
+                    "required": true
+                },
+                "min": 0.01
+            },
+            "qt_confirm_emb": {
+                "label": "Quantidade confirmada no embarque",
+                "type": "number",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "qt_confirm_emb"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_itens_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "number"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "numeric"
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "qt_confirm_emb",
+                        "critical": true
+                    }
+                ],
+                "decimals": 2,
+                "format": "n2",
+                "validation": {
+                    "required": false
+                }
+            },
+            "qt_recbto_fisico": {
+                "label": "Quantidade recebida",
+                "type": "number",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "qt_recbto_fisico"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_itens_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "number"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "numeric"
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "qt_recbto_fisico",
+                        "critical": true
+                    }
+                ],
+                "decimals": 2,
+                "format": "n2",
+                "validation": {
+                    "required": false
+                }
+            },
+            "log_rec_doc_prazo_emb": {
+                "label": "Documento recebido no prazo?",
+                "type": "boolean",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "log_rec_doc_prazo_emb"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_itens_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "boolean"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "boolean"
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "log_rec_doc_prazo_emb",
+                        "critical": true
+                    }
+                ],
+                "validation": {
+                    "required": false
+                }
+            },
+            "observacao": {
+                "label": "Observação",
+                "type": "text",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "observacao"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_itens_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "text"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "string"
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tamanho",
+                        "value": "160"
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "observacao",
+                        "critical": true
+                    }
+                ],
+                "validation": {
+                    "required": false,
+                    "maxLength": 160
+                }
+            },
+            "cod_tipo_calculo": {
+                "label": "Tipo de cálculo",
+                "type": "integer",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "cod_tipo_calculo"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_itens_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "cod_tipo_calculo",
+                        "critical": true
+                    }
+                ],
+                "validation": {
+                    "required": false
+                }
+            },
+            "perc_custo": {
+                "label": "perc custo",
+                "type": "number",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "perc_custo"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_itens_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "number"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "numeric"
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "perc_custo",
+                        "critical": true
+                    }
+                ],
+                "decimals": 2,
+                "format": "n2",
+                "validation": {
+                    "required": false
+                }
+            },
+            "log_calc_icms": {
+                "label": "Calcular ICMS?",
+                "type": "boolean",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "log_calc_icms"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_itens_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "boolean"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "boolean"
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "log_calc_icms",
+                        "critical": true
+                    }
+                ],
+                "validation": {
+                    "required": false
+                }
+            },
+            "log_calc_ipi": {
+                "label": "Calcular IPI?",
+                "type": "boolean",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "log_calc_ipi"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_itens_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "boolean"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "boolean"
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "log_calc_ipi",
+                        "critical": true
+                    }
+                ],
+                "validation": {
+                    "required": false
+                }
+            },
+            "perc_icms": {
+                "label": "ICMS (%)",
+                "type": "number",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "perc_icms"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_itens_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "number"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "numeric"
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "perc_icms",
+                        "critical": true
+                    }
+                ],
+                "decimals": 2,
+                "format": "n2",
+                "validation": {
+                    "required": false
+                }
+            },
+            "perc_ipi": {
+                "label": "IPI (%)",
+                "type": "number",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "perc_ipi"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_itens_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "number"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "numeric"
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "perc_ipi",
+                        "critical": true
+                    }
+                ],
+                "decimals": 2,
+                "format": "n2",
+                "validation": {
+                    "required": false
+                }
+            },
+            "preco_liquida_ima": {
+                "label": "Preço de liquidação IMA",
+                "type": "number",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "preco_liquida_ima"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_itens_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "number"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "numeric"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "preco_liquida_ima",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "decimals": 2,
+                "format": "n2",
+                "validation": {
+                    "required": false
+                }
+            },
+            "descricao_item": {
+                "label": "Descrição do item",
+                "type": "text",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "descricao_item"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_itens_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "text"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "string"
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tamanho",
+                        "value": "160"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "descricao_item",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false,
+                    "maxLength": 160
+                }
+            },
+            "codigo_erp": {
+                "label": "Código ERP",
+                "type": "text",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "codigo_erp"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_itens_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "text"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "string"
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tamanho",
+                        "value": "160"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "codigo_erp",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false,
+                    "maxLength": 160
+                }
+            },
+            "unid_medida": {
+                "label": "Unidade",
+                "type": "text",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "unid_medida"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_itens_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "text"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "string"
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tamanho",
+                        "value": "160"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "unid_medida",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false,
+                    "maxLength": 160
+                }
+            },
+            "proc_compra_id": {
+                "label": "Pedido de importação",
+                "type": "integer",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "proc_compra_id"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_itens_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "proc_compra_id",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false
+                }
+            },
+            "cod_proc_fornec": {
+                "label": "Pedido do fornecedor",
+                "type": "text",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "cod_proc_fornec"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_itens_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "text"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "string"
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tamanho",
+                        "value": "160"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "cod_proc_fornec",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false,
+                    "maxLength": 160
+                }
+            },
+            "fornecedor_id": {
+                "label": "Fornecedor do pedido",
+                "type": "integer",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "fornecedor_id"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_itens_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "fornecedor_id",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false
+                }
+            },
+            "empresa_pedido_id": {
+                "label": "Empresa do pedido",
+                "type": "integer",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "empresa_pedido_id"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_itens_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "empresa_pedido_id",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false
+                }
+            },
+            "saldo_disponivel_texto": {
+                "label": "Saldo disponível para alocação",
+                "type": "text",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "saldo_disponivel_texto"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_itens_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "text"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "string"
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tamanho",
+                        "value": "160"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "saldo_disponivel_texto",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false,
+                    "maxLength": 160
+                }
+            }
+        }
+    },
+    "crud": {
+        "query": {
+            "pageSize": 30,
+            "defaultSort": [
+                {
+                    "field": "item_container_id",
+                    "dir": "asc"
+                }
+            ],
+            "defaultPageSize": 30
+        },
+        "filter": {
+            "type": "window",
+            "mode": "basic",
+            "title": "Filtros",
+            "openOnLoad": false,
+            "showAppliedFilters": true,
+            "fields": [
+                {
+                    "id": "item_container_id",
+                    "field": "item_container_id",
+                    "label": "Item do container",
+                    "type": "integer",
+                    "operator": "eq",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "eq"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "item_container_id"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_itens_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "integer"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "integer"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "item_container_id",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "codigo_erp",
+                    "field": "codigo_erp",
+                    "label": "Código ERP",
+                    "type": "text",
+                    "operator": "contains",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "contains"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "codigo_erp"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_itens_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "text"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "string"
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tamanho",
+                            "value": "160"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "codigo_erp",
+                            "critical": true
+                        }
+                    ]
+                }
+            ]
+        },
+        "grid": {
+            "editing": {
+                "mode": "form"
+            },
+            "pageable": true,
+            "sortable": true,
+            "filterable": false,
+            "groupable": false,
+            "resizable": true,
+            "reorderable": true,
+            "columnMenu": true,
+            "toolbar": [
+                {
+                    "id": "create",
+                    "label": "Incluir",
+                    "action": "create",
+                    "icon": "plus",
+                    "permission": "create"
+                },
+                {
+                    "id": "filters",
+                    "label": "Filtros",
+                    "action": "filters",
+                    "icon": "filter"
+                },
+                {
+                    "id": "refresh",
+                    "label": "Atualizar",
+                    "action": "refresh",
+                    "icon": "arrow-rotate-cw"
+                },
+                {
+                    "id": "layout",
+                    "label": "Leiaute",
+                    "action": "layout",
+                    "icon": "columns",
+                    "permission": "saveLayout"
+                }
+            ],
+            "columns": [
+                {
+                    "field": "item_container_id",
+                    "title": "Item do container",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "item_container_id"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_itens_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "integer"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "integer"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "item_container_id",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "codigo_erp",
+                    "title": "Código ERP",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "220"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "codigo_erp"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_itens_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "text"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "string"
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tamanho",
+                            "value": "160"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "codigo_erp",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "descricao_item",
+                    "title": "Descrição do item",
+                    "width": 280,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "220"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "descricao_item"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_itens_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "text"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "string"
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tamanho",
+                            "value": "160"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "descricao_item",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "unid_medida",
+                    "title": "Unidade",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "220"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "unid_medida"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_itens_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "text"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "string"
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tamanho",
+                            "value": "160"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "unid_medida",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "proc_compra_id",
+                    "title": "Pedido de importação",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "proc_compra_id"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_itens_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "integer"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "integer"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "proc_compra_id",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "cod_proc_fornec",
+                    "title": "Pedido do fornecedor",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "220"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "cod_proc_fornec"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_itens_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "text"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "string"
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tamanho",
+                            "value": "160"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "cod_proc_fornec",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "qt_alocada",
+                    "title": "Quantidade alocada",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "qt_alocada"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_itens_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "qt_alocada",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "qt_confirm_emb",
+                    "title": "Quantidade confirmada no embarque",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "qt_confirm_emb"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_itens_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "qt_confirm_emb",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "qt_recbto_fisico",
+                    "title": "Quantidade recebida",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "qt_recbto_fisico"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_itens_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "qt_recbto_fisico",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "log_rec_doc_prazo_emb",
+                    "title": "Documento recebido no prazo?",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "log_rec_doc_prazo_emb"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_itens_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "boolean"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "boolean"
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "log_rec_doc_prazo_emb",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "cod_tipo_calculo",
+                    "title": "Tipo de cálculo",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "cod_tipo_calculo"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_itens_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "integer"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "integer"
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "cod_tipo_calculo",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "perc_custo",
+                    "title": "perc custo",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "perc_custo"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_itens_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "perc_custo",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "log_calc_icms",
+                    "title": "Calcular ICMS?",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "log_calc_icms"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_itens_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "boolean"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "boolean"
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "log_calc_icms",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "perc_icms",
+                    "title": "ICMS (%)",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "perc_icms"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_itens_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "perc_icms",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "log_calc_ipi",
+                    "title": "Calcular IPI?",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "log_calc_ipi"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_itens_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "boolean"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "boolean"
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "log_calc_ipi",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "perc_ipi",
+                    "title": "IPI (%)",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "perc_ipi"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_itens_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "perc_ipi",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "preco_liquida_ima",
+                    "title": "Preço de liquidação IMA",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "preco_liquida_ima"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_itens_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "preco_liquida_ima",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "observacao",
+                    "title": "Observação",
+                    "width": 160,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "220"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "observacao"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_itens_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "text"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "string"
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tamanho",
+                            "value": "160"
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "observacao",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                }
+            ],
+            "rowActions": [
+                {
+                    "id": "view",
+                    "label": "Visualizar",
+                    "action": "view",
+                    "icon": "eye",
+                    "permission": "read"
+                },
+                {
+                    "id": "edit",
+                    "label": "Alterar",
+                    "action": "edit",
+                    "icon": "pencil",
+                    "permission": "edit"
+                },
+                {
+                    "id": "delete",
+                    "label": "Excluir",
+                    "action": "delete",
+                    "icon": "trash",
+                    "permission": "delete"
+                }
+            ],
+            "rowLinks": [
+                {
+                    "id": "item_pedido",
+                    "label": "Item do pedido",
+                    "screenId": "ciw.proc-compra-itens",
+                    "parameters": [
+                        {
+                            "field": "proc_compra_id",
+                            "sourceField": "proc_compra_id"
+                        },
+                        {
+                            "field": "item_proc_compra_id",
+                            "sourceField": "item_proc_compra_id"
+                        }
+                    ],
+                    "position": "start"
+                }
+            ],
+            "bulkActions": {
+                "enabled": false,
+                "actions": []
+            },
+            "print": {
+                "enabled": false,
+                "options": []
+            }
+        },
+        "form": {
+            "id": "ciw-container-itens-form",
+            "mode": "popup",
+            "layout": "tabs",
+            "maximizeForm": true,
+            "title": {
+                "create": "Incluir itens do container",
+                "view": "Detalhe de itens do container",
+                "edit": "Alterar itens do container",
+                "delete": "Excluir itens do container"
+            },
+            "behavior": {
+                "closeOnSave": true,
+                "closeOnCancel": true
+            },
+            "tabs": [
+                {
+                    "id": "geral",
+                    "title": "Geral",
+                    "sections": [
+                        {
+                            "id": "principal",
+                            "title": "Principal",
+                            "columns": 2,
+                            "fields": [
+                                {
+                                    "field": "item_container_id",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "container_id",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "item_proc_compra_id"
+                                },
+                                {
+                                    "field": "qt_alocada"
+                                },
+                                {
+                                    "field": "qt_confirm_emb"
+                                },
+                                {
+                                    "field": "qt_recbto_fisico"
+                                },
+                                {
+                                    "field": "log_rec_doc_prazo_emb"
+                                },
+                                {
+                                    "field": "observacao"
+                                },
+                                {
+                                    "field": "cod_tipo_calculo"
+                                },
+                                {
+                                    "field": "perc_custo"
+                                },
+                                {
+                                    "field": "log_calc_icms"
+                                },
+                                {
+                                    "field": "log_calc_ipi"
+                                },
+                                {
+                                    "field": "perc_icms"
+                                },
+                                {
+                                    "field": "perc_ipi"
+                                },
+                                {
+                                    "field": "preco_liquida_ima",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "descricao_item",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "codigo_erp",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "unid_medida",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "proc_compra_id",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "cod_proc_fornec",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "fornecedor_id",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "empresa_pedido_id",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "saldo_disponivel_texto",
+                                    "readonly": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "fields": [
+                {
+                    "field": "item_container_id",
+                    "readonly": true
+                },
+                {
+                    "field": "container_id",
+                    "readonly": true
+                },
+                {
+                    "field": "item_proc_compra_id"
+                },
+                {
+                    "field": "qt_alocada"
+                },
+                {
+                    "field": "qt_confirm_emb"
+                },
+                {
+                    "field": "qt_recbto_fisico"
+                },
+                {
+                    "field": "log_rec_doc_prazo_emb"
+                },
+                {
+                    "field": "observacao"
+                },
+                {
+                    "field": "cod_tipo_calculo"
+                },
+                {
+                    "field": "perc_custo"
+                },
+                {
+                    "field": "log_calc_icms"
+                },
+                {
+                    "field": "log_calc_ipi"
+                },
+                {
+                    "field": "perc_icms"
+                },
+                {
+                    "field": "perc_ipi"
+                },
+                {
+                    "field": "preco_liquida_ima",
+                    "readonly": true
+                },
+                {
+                    "field": "descricao_item",
+                    "readonly": true
+                },
+                {
+                    "field": "codigo_erp",
+                    "readonly": true
+                },
+                {
+                    "field": "unid_medida",
+                    "readonly": true
+                },
+                {
+                    "field": "proc_compra_id",
+                    "readonly": true
+                },
+                {
+                    "field": "cod_proc_fornec",
+                    "readonly": true
+                },
+                {
+                    "field": "fornecedor_id",
+                    "readonly": true
+                },
+                {
+                    "field": "empresa_pedido_id",
+                    "readonly": true
+                },
+                {
+                    "field": "saldo_disponivel_texto",
+                    "readonly": true
+                }
+            ],
+            "logs": {
+                "enabled": false
+            },
+            "print": {
+                "enabled": false,
+                "options": []
+            },
+            "otherActions": {
+                "enabled": false,
+                "actions": []
+            }
+        },
+        "userLayout": {
+            "enabled": true,
+            "storageKey": "ciw-container-itens-layout"
+        }
+    }
+}

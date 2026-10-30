@@ -1,0 +1,121 @@
+{
+  "package": "container-expense-batch-preflight/replay-actual-config",
+  "version": "1.1",
+  "status": "candidate-ready-central-TT-green-proposal-not-authorized",
+  "businessExecuted": false,
+  "numDbs": 0,
+  "canonicalFilesChanged": false,
+  "frozenPreflightV1_1Changed": false,
+  "officialCompileRequiredForReplay": true,
+  "testCommand": "powershell -NoProfile -ExecutionPolicy Bypass -File integration-src/ciw-completion-20261028/container-expense-batch-preflight/replay-actual-config/run.ps1",
+  "receiptCommand": "python integration-src/ciw-completion-20261028/container-expense-batch-preflight/replay-actual-config/proposal.py",
+  "localEvidence": {
+    "openedge": "12.8",
+    "checks": 150,
+    "combinations": 4,
+    "codepages": [
+      "UTF-8",
+      "ISO8859-1"
+    ],
+    "cultures": [
+      "AMERICAN",
+      "EUROPEAN"
+    ],
+    "quoteFixtures": [
+      1,
+      7.123
+    ],
+    "maxFiscalRows": 5,
+    "maxTotalExpenses": 7,
+    "maxMemories": 4
+  },
+  "caps": {
+    "fiscalRows": 20,
+    "totalExpenses": 22,
+    "memories": 4
+  },
+  "gates": [
+    "root official12.2 replay compile if required; local12.8 is not official",
+    "human authorization of exact private proposal hash before any real mutation or grant",
+    "recheck CID absence/config/IMA/auth/context/real quote collector",
+    "cleanup fixed canonical API only; verified current trigger closure does not claim current deletion execution"
+  ],
+  "verificationPath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-expense-batch-preflight/replay-actual-config/verification-v1.1.json",
+  "verificationSha256": "3cbd2e246744fbae7586fef69306b0944cbe92b64c1967dce27b9529fabc691f",
+  "proposalPath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-expense-batch-preflight/replay-actual-config/proposal-private-v1.1.json",
+  "proposalSha256": "a74be1b238e7ce0911512f7ac3127dd7405543962c77f2f846d8117d7aca86d3",
+  "captureSha256": "3d5b67d00b9d38495018db1c485a6db37424c422289ade0ae230fdd88ff98a3c",
+  "cleanupProofSha256": "a5ecfe188f3b825f9342ac0ff1ca88625ed2846da6273ac3053cc61aa80110b5",
+  "baselines": [
+    {
+      "path": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersDespesasCrudService.p",
+      "sha256": "53b333a8c504fddd20e4f37474bffa4fcec0b8dbcf0c46de34bcb8ef22463096"
+    },
+    {
+      "path": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersDespesasBatchService.p",
+      "sha256": "5dcb7e0d2fd2f0e0426622c48f7735253341413cbc7f36630b386c40a8ab19d2"
+    },
+    {
+      "path": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersImpostosService.p",
+      "sha256": "7c2f1ce11dd750531a79ad67386f691a02f9244700fcc1a9b59ff83c8e28b669"
+    },
+    {
+      "path": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwTaxAmount.p",
+      "sha256": "d362796564f5875f77acb8bf9cef4f167203db3f977208b4666c62505845d70d"
+    },
+    {
+      "path": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwErpReadService.p",
+      "sha256": "33d24e2f8ab0208841ddfacb8319c4f2e9bd0f242aee7672add6b02950a49921"
+    },
+    {
+      "path": "D:/opencode/motor-progress/v2/sursum-api/includes/PurchaseOrderSnapshot.i",
+      "sha256": "98b8da213a666f328747d0698608954ab646ef60fc2c86e313f6d156b3fa573a"
+    },
+    {
+      "path": "D:/opencode/motor-progress/v2/sursum-api/includes/PurchaseItemSnapshot.i",
+      "sha256": "f7e81fbcd3fbc53f124c60d99c3065b73e2d876665ce900f8772ed1f25d7350d"
+    },
+    {
+      "path": "D:/opencode/motor-progress/v2/sursum-api/includes/PurchaseItemValueRules.i",
+      "sha256": "1ae6949d39fa07286e0e1c76776b9bb508de6715d1494858d7ac53c1d591c894"
+    },
+    {
+      "path": "D:/opencode/motor-progress/v2/sursum-api/includes/PurchaseJsonContract.i",
+      "sha256": "5a15f9429a83f9781a250ed3fc2ae9a855fb5d639e91a1afdeb8a99836c25935"
+    },
+    {
+      "path": "D:/opencode/motor-progress/v2/sursum-api/includes/ContainerExpenseBatchSnapshot.i",
+      "sha256": "5e4a204ab904d8c6e277281c6c2c7923c193f9d6c36c3ce971017c444b35c75b"
+    },
+    {
+      "path": "D:/opencode/motor-progress/v2/tests/abl/container-panel/ContainersDespesasCrudTest.p",
+      "sha256": "d54b3fdaa0331b117c664fd948ae26c56bc8b9e4ee3537848a9443dfb298f0f5"
+    }
+  ],
+  "files": [
+    {
+      "path": "freeze.py",
+      "sha256": "5458f14aaf67c9595896af63df43ec653ebc2c82e9e10d0fe9b53a631803c258"
+    },
+    {
+      "path": "prepare.py",
+      "sha256": "8fcc111821fd28288dd138c679688de6a14d3069a11bf6a359ef554c3607fa8f"
+    },
+    {
+      "path": "proposal.py",
+      "sha256": "0f051a372f5b4c30b5c1421bf248eadad23cf1be43365bbcc742b17de7df99c9"
+    },
+    {
+      "path": "REAL-1042-PROPOSAL.md",
+      "sha256": "02594bf4b0d99aa7d35c9a72db5dfdb9be42d48d995b766e6c342e501a6ca500"
+    },
+    {
+      "path": "ReplayTests.i",
+      "sha256": "d7b897537375524ddf871b215c22f4275e03ea76fdd8e4a04ff8a7b2095ef76c"
+    },
+    {
+      "path": "run.ps1",
+      "sha256": "e2e561bbff313aad981f1c2b1d8cf60bd06b31852b699fa9080bba12d1fe1a0f"
+    }
+  ]
+}

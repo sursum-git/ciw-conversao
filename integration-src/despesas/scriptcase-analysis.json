@@ -1,0 +1,145 @@
+{
+  "status": "analise estatica dos PHP publicados locais; nao representa schema confirmado, API criada ou tela publicada",
+  "sourceRoot": "sources/scriptcase/despesas",
+  "scope": ["grid_despesas", "form_despesas", "grid_empresas_despesa", "form_empresas_despesa"],
+  "dictionaryCrossCheck": {
+    "sources": ["schema/schema-despesas.json", "schema/schema-empresas_despesa.json"],
+    "integerFlags": ["despesas.log_imposto", "empresas_despesa.log_ativo", "empresas_despesa.log_custo"],
+    "logicalFlags": ["despesas.log_calculada", "despesas.log_vl_prod_base_calculo", "despesas.log_calc_por_item"],
+    "legacyPercCusto": "INTEGER inicial0; manter em update e criar0",
+    "physicalDecimalScale": {
+      "validatedBy": "Fluxo principal, consulta real OpenEdge12.2/espec em15/10/2026; atributo de armazenamento DECIMALS",
+      "despesas.perc_calculo": 2,
+      "empresas_despesa.vl_padrao": 2,
+      "empresas_despesa.percentual": 2,
+      "empresas_despesa.percentual_custo": 4,
+      "decision": "Nao alterar schema. UI/API devem usar MINIMUM(escala Scriptcase, buffer-field:DECIMALS). Recusar casas excedentes antes da escrita, sem arredondar silenciosamente. FORMAT com4casas nao prova armazenamento4. As propriedades scale dos campos abaixo descrevem a origem Scriptcase; effectiveApiScale registra o contrato final."
+    },
+    "initials": "Dicionario inicia numericos em0 e logicos emNao; difere da primeira opcao Sim exibida pelo HTML sem selecao. Tipos logicos devem viajar como JSON boolean; flags INTEGER como number0/1.",
+    "integrity": "Ambas tabelas somente indice primario unico pelo ID; unique empresa+despesa e regra da aplicacao e precisa verificacao transacional no servico. Nenhum campo mandatory, trigger ou validation do dicionario informado.",
+    "lengths": "FORMAT x(50) de descricao e x(20) de cod_nat_operacao sao apresentacao; aplicar limites Scriptcase100 e12 respectivamente."
+  },
+  "evidenceNotation": "caminhos relativos a sourceRoot; linhas de arquivos PHP publicados",
+  "shared": {
+    "formMode": "registro individual; Grid_editavel=false nos dois formularios",
+    "required": "Nao ha Campos_Falta[] nos validadores destas aplicacoes; required condicional bilateral de custo descrito abaixo. Nao converter ausencia de required em permissao para FK inexistente.",
+    "logicalOptions": [{"value": 1, "label": "Sim"}, {"value": 0, "label": "Nao"}],
+    "defaults": "Novo inicializa campos em string vazia, exceto despesa_id contextual de empresas_despesa. Combos logicos sem opcao vazia mostram primeira opcao Sim quando nao ha selecao explicita. Nao ha default de negocio explicito para true. Numericos/logicos vazios sao coercidos a zero ao persistir.",
+    "numbers": "UI proibe negativos; decimais localizados pela configuracao de sessao. Nao ha limite de percentual <=100, nem percentual >0 para campos gerais.",
+    "transactions": "Pai e relacoes multiselect sao gravados na mesma transacao Db BeginTrans/CommitTrans; falha de SQL chama NM_rollback_db.",
+    "audit": "Ambos possuem geracao de log insert/update/delete com chaves e campos anteriores/novos; form_despesas possui botao bt_log para consulta de logs.",
+    "evidence": ["form_despesas/form_despesas_apl.php:101", "form_empresas_despesa/form_empresas_despesa_apl.php:105", "form_despesas/form_despesas_apl.php:5673", "form_empresas_despesa/form_empresas_despesa_apl.php:5900", "form_despesas/form_despesas_apl.php:4390", "form_empresas_despesa/form_empresas_despesa_apl.php:4547", "form_empresas_despesa/form_empresas_despesa_apl.php:4531"]
+  },
+  "despesas": {
+    "table": "PUB.despesas",
+    "key": "despesa_id",
+    "fields": [
+      {"name":"despesa_id","ui":"label/hidden; readonly e oculto por padrao","type":"integer","required":false,"generated":"max(despesa_id)+1","serverValidation":{"digits":11,"decimals":0,"negative":false},"evidence":["form_despesas/form_despesas_form0.php:1286","form_despesas/form_despesas_form0.php:1310","form_despesas/form_despesas_apl.php:2174","form_despesas/form_despesas_apl.php:4825"]},
+      {"name":"descricao","ui":"text","type":"string","maxLength":100,"required":false,"newValue":"","evidence":["form_despesas/form_despesas_form0.php:1377","form_despesas/form_despesas_apl.php:2210"]},
+      {"name":"log_imposto","ui":"select","type":"logical 1/0","required":false,"evidence":["form_despesas/form_despesas_form0.php:1446","form_despesas/form_despesas_apl.php:7360"]},
+      {"name":"ordem","label":"Ordem","ui":"integer text","type":"integer","maxLength":4,"minimum":0,"required":false,"emptyPersistedAs":0,"evidence":["form_despesas/form_despesas_form0.php:1513","form_despesas/form_despesas_apl.php:2295"]},
+      {"name":"log_calculada","label":"Calculada?","ui":"select","type":"logical 1/0","required":false,"evidence":["form_despesas/form_despesas_form0.php:1583","form_despesas/form_despesas_apl.php:7369"]},
+      {"name":"log_vl_prod_base_calculo","label":"Vl.Produto Faz Parte da Base de Calculo ?","ui":"select","type":"logical 1/0","required":false,"visibleWhen":"log_calculada != 0","evidence":["form_despesas/form_despesas_form0.php:1658","form_despesas/form_despesas_apl.php:6163"]},
+      {"name":"perc_calculo","label":"% Calculo","ui":"decimal text","type":"decimal","uiMaxLength":19,"integerDigits":15,"scale":4,"physicalScale":2,"effectiveApiScale":2,"serverMaxLengthIncludingPoint":20,"minimum":0,"manualDecimals":true,"required":false,"emptyPersistedAs":0,"visibleWhen":"log_calculada != 0","evidence":["form_despesas/form_despesas_form0.php:1725","form_despesas/form_despesas_apl.php:2406","form_despesas/form_despesas_apl.php:2422"]},
+      {"name":"log_calc_por_item","label":"Calculada Por Item?","ui":"select","type":"logical 1/0","required":false,"evidence":["form_despesas/form_despesas_form0.php:1795","form_despesas/form_despesas_apl.php:7387"]},
+      {"name":"ind_imposto","label":"Imposto","ui":"select com opcao vazia","type":"integer option","required":false,"emptyPersistedAs":0,"options":[{"value":1,"label":"II"},{"value":2,"label":"ICMS"},{"value":3,"label":"IPI"},{"value":4,"label":"PIS"},{"value":5,"label":"COFINS"}],"evidence":["form_despesas/form_despesas_apl.php:7396","form_despesas/form_despesas_form0.php:1894","form_despesas/form_despesas_apl.php:4424"]},
+      {"name":"md_relacs_desp","label":"Desp. Base Calculo","ui":"checkbox multiselect","type":"integer array relation; nao e coluna de despesas","required":false,"visibleWhen":"bloco1 mostrado por log_calculada != 0","evidence":["form_despesas/form_despesas_form0.php:2087","form_despesas/form_despesas_apl.php:6169"]}
+    ],
+    "relation": {
+      "field":"md_relacs_desp",
+      "table":"PUB.relacs_desp_calculada",
+      "columns":["relac_desp_calculada_id","despesa_id","despesa_id_base"],
+      "lookup":"select despesa_id, descricao from PUB.despesas where despesa_id <> atual order by descricao",
+      "lookupRestrictions":"Exclui apenas a propria despesa; nao filtra log_imposto, log_calculada ou ordem; nao ha verificacao de ciclo indireto.",
+      "read":"Converte despesa_id_base das linhas cujo despesa_id=atual em selecoes; separador interno @?@.",
+      "create":"Insere uma relacao para cada selecionada.",
+      "update":"Compara conjunto atual vs selecao; remove ausentes e insere novas; preserva iguais.",
+      "delete":"Remove relacoes cujo despesa_id=atual antes de remover pai; nao remove referencias inversas despesa_id_base.",
+      "relationId":"Gerador especifico presente somente nos ramos postgres/mssql; caminho generico de insert omite ID. Conferir schema Progress e gerar ID no servico ABL.",
+      "evidence":["form_despesas/form_despesas_apl.php:3542","form_despesas/form_despesas_apl.php:4667","form_despesas/form_despesas_apl.php:4731","form_despesas/form_despesas_apl.php:4766","form_despesas/form_despesas_apl.php:5008","form_despesas/form_despesas_apl.php:5100","form_despesas/form_despesas_apl.php:5630"]
+    },
+    "events": [
+      {"name":"localTratarExibicao","triggers":["inicio","onLoad","recarga","log_calculada onChange","log_imposto onChange"],"behavior":"Esconde perc_calculo, log_vl_prod_base_calculo e bloco1; se log_calculada !=0 mostra os tres. A funcao nao depende de log_imposto, nao limpa valores ocultos e nao altera log_calculada.","evidence":["form_despesas/form_despesas_apl.php:1085","form_despesas/form_despesas_apl.php:1306","form_despesas/form_despesas_apl.php:3768","form_despesas/form_despesas_apl.php:6156","form_despesas/form_despesas_apl.php:6182","form_despesas/form_despesas_apl.php:6215"]}
+    ],
+    "deleteBlockedBy": [
+      {"table":"PUB.empresas_despesa","field":"despesa_custo_id","reason":"Despesa utilizada como custo de um imposto","evidence":"form_despesas/form_despesas_apl.php:3990"},
+      {"table":"PUB.despesas_proc_compra","field":"despesa_id","evidence":"form_despesas/form_despesas_apl.php:4061"},
+      {"table":"PUB.despesas_container","field":"despesa_id","evidence":"form_despesas/form_despesas_apl.php:4132"},
+      {"table":"PUB.despesas_impostos","field":"imposto_id","evidence":"form_despesas/form_despesas_apl.php:4203"},
+      {"table":"PUB.item_container_custo_despesas","field":"despesa_id","reason":"Historico de custo gravado","evidence":"form_despesas/form_despesas_apl.php:4274"}
+    ],
+    "deleteGapsInSource":"Nao encontrei bloqueio de empresas_despesa.despesa_id, despesas_impostos.despesa_id ou relacs_desp_calculada.despesa_id_base. Nao inferir cascata automatica. Validar relacoes e politica de integridade no backend.",
+    "selectionValidation":"md_relacs_desp array valida itens contra lookup da sessao. Selects logicos e ind_imposto tem validadores sem restricao de dominio explicita. Converter para dominios estritos na nova API.",
+    "uniqueness":"Apenas chave despesa_id checada; nenhuma unique de descricao localizada."
+  },
+  "empresasDespesa": {
+    "table":"PUB.empresas_despesa",
+    "key":"empresa_despesa_id",
+    "context":"despesa_id_corrente vem do grid_despesas e restringe grid, lookup e default de criacao. desc_despesa_corrente e apenas titulo.",
+    "fields": [
+      {"name":"empresa_despesa_id","ui":"label/hidden; readonly e oculto por padrao","type":"integer","required":false,"generated":"max(empresa_despesa_id)+1","serverValidation":{"digits":4,"decimals":0,"negative":false},"evidence":["form_empresas_despesa/form_empresas_despesa_form0.php:1173","form_empresas_despesa/form_empresas_despesa_apl.php:2334","form_empresas_despesa/form_empresas_despesa_apl.php:5025"]},
+      {"name":"despesa_id","ui":"select","type":"integer FK","required":false,"newValue":"despesa_id_corrente","lookup":"PUB.despesas somente despesa_id=despesa_id_corrente, descricao order by descricao","evidence":["form_empresas_despesa/form_empresas_despesa_form0.php:1276","form_empresas_despesa/form_empresas_despesa_apl.php:5902"]},
+      {"name":"empresa_id","ui":"select sem opcao vazia","type":"integer FK","required":false,"lookup":"PUB.empresas empresa_id,nome order by nome; todas empresas","evidence":["form_empresas_despesa/form_empresas_despesa_form0.php:1456"]},
+      {"name":"codigo_desp_erp","ui":"integer text","type":"integer","maxLength":11,"minimum":0,"required":false,"emptyPersistedAs":0,"evidence":["form_empresas_despesa/form_empresas_despesa_form0.php:1629","form_empresas_despesa/form_empresas_despesa_apl.php:2459"]},
+      {"name":"log_ativo","ui":"select","type":"logical 1/0","required":false,"evidence":["form_empresas_despesa/form_empresas_despesa_form0.php:1680"]},
+      {"name":"vl_padrao","ui":"decimal text","type":"decimal","integerDigits":8,"scale":2,"physicalScale":2,"effectiveApiScale":2,"uiMaxLength":10,"serverMaxLengthIncludingPoint":11,"minimum":0,"required":false,"enabledWhen":"despesa contextual log_imposto !=1","emptyPersistedAs":0,"evidence":["form_empresas_despesa/form_empresas_despesa_form0.php:1729","form_empresas_despesa/form_empresas_despesa_apl.php:2561"]},
+      {"name":"percentual","label":"Percentual Imposto","ui":"decimal text","type":"decimal","integerDigits":6,"scale":4,"physicalScale":2,"effectiveApiScale":2,"uiMaxLength":10,"serverMaxLengthIncludingPoint":11,"minimum":0,"required":false,"enabledWhen":"despesa contextual log_imposto=1","emptyPersistedAs":0,"evidence":["form_empresas_despesa/form_empresas_despesa_form0.php:1796","form_empresas_despesa/form_empresas_despesa_apl.php:2638"]},
+      {"name":"cod_nat_operacao","ui":"text","type":"string","maxLength":12,"required":false,"enabledWhen":"despesa contextual log_imposto=1","newValue":"","evidence":["form_empresas_despesa/form_empresas_despesa_form0.php:1839","form_empresas_despesa/form_empresas_despesa_apl.php:2674"]},
+      {"name":"log_custo","label":"Considera no Custo?","ui":"select","type":"logical 1/0","required":false,"evidence":["form_empresas_despesa/form_empresas_despesa_form0.php:1890"]},
+      {"name":"percentual_custo","label":"% Custo","ui":"decimal text","type":"decimal","integerDigits":4,"scale":4,"physicalScale":4,"effectiveApiScale":4,"uiMaxLength":8,"serverMaxLengthIncludingPoint":9,"minimum":0,"required":"quando despesa_custo_id preenchido","enabledWhen":"despesa contextual log_imposto=1","emptyPersistedAs":0,"evidence":["form_empresas_despesa/form_empresas_despesa_form0.php:1963","form_empresas_despesa/form_empresas_despesa_apl.php:2775","form_empresas_despesa/form_empresas_despesa_apl.php:2250"]},
+      {"name":"despesa_custo_id","label":"Despesa Custo","ui":"select com opcao vazia","type":"integer FK","required":"quando percentual_custo nao vazio e nao zero","lookup":"PUB.despesas log_imposto=0 order by descricao","enabledWhen":"despesa contextual log_imposto=1","emptyPersistedAs":0,"evidence":["form_empresas_despesa/form_empresas_despesa_form0.php:2038","form_empresas_despesa/form_empresas_despesa_apl.php:2231"]},
+      {"name":"impostos","ui":"checkbox multiselect","type":"integer array relation; nao e coluna empresas_despesa","required":false,"lookup":"PUB.despesas log_imposto=1 e despesa_id <> atual order by descricao","evidence":["form_empresas_despesa/form_empresas_despesa_form0.php:2287","form_empresas_despesa/form_empresas_despesa_form0.php:2361"]},
+      {"name":"perc_custo","ui":"ausente do form0 e validadores; coluna carregada e gravada","type":"numeric; escala nao estabelecida pela UI","required":false,"newValue":"","emptyPersistedAs":0,"migrationNote":"Preservar valor existente em update; nao confundir com percentual_custo. Campo legado invisivel nao deve ser zerado pelo novo cliente.","evidence":["form_empresas_despesa/form_empresas_despesa_apl.php:4546","form_empresas_despesa/form_empresas_despesa_apl.php:4754","form_empresas_despesa/form_empresas_despesa_apl.php:5820","form_empresas_despesa/form_empresas_despesa_apl.php:5916"]}
+    ],
+    "activeRules": [
+      {"rule":"Unique empresa_id + despesa_id na inclusao e atualizacao; update exclui o proprio empresa_despesa_id","evidence":["form_empresas_despesa/form_empresas_despesa_apl.php:4682","form_empresas_despesa/form_empresas_despesa_apl.php:5069"]},
+      {"rule":"percentual_custo !=0/vazio exige despesa_custo_id !=0/vazio e vice-versa; nao depende de log_custo nem log_imposto","evidence":["form_empresas_despesa/form_empresas_despesa_apl.php:2231","form_empresas_despesa/form_empresas_despesa_apl.php:2250"]},
+      {"rule":"OnLoad busca log_imposto da despesa contextual. Se imposto, desabilita vl_padrao e habilita percentual, percentual_custo, cod_nat_operacao, despesa_custo_id; caso contrario inverte. Nao limpa campos desabilitados. log_custo e impostos permanecem habilitados.","evidence":["form_empresas_despesa/form_empresas_despesa_apl.php:4355","form_empresas_despesa/form_empresas_despesa_apl.php:6278"]},
+      {"rule":"despesa_id, empresa_id, despesa_custo_id e impostos validam pertencimento a lookup de sessao quando valor presente; nao ha exigencia estatica de preenchimento","evidence":["form_empresas_despesa/form_empresas_despesa_apl.php:2368","form_empresas_despesa/form_empresas_despesa_apl.php:2400","form_empresas_despesa/form_empresas_despesa_apl.php:2802","form_empresas_despesa/form_empresas_despesa_apl.php:2834"]}
+    ],
+    "inactiveHelper": {
+      "name":"localValidarValoresImposto",
+      "status":"Definida em desktop e mobile; nenhuma chamada encontrada em toda a copia dessas aplicacoes.",
+      "codeBehavior":"Se imposto, recusa percentual>0 junto com cod_nat_operacao nao vazio (nao exige ao menos um). Se nao imposto, recusaria vl_padrao zero/vazio. Como nao e chamada, nao tratar essas regras como validacao ativa do legado.",
+      "evidence":["form_empresas_despesa/form_empresas_despesa_apl.php:6313","form_empresas_despesa/form_empresas_despesa_apl.php:6319","form_empresas_despesa/form_empresas_despesa_apl.php:6340"]
+    },
+    "relation": {
+      "field":"impostos",
+      "table":"PUB.despesas_impostos",
+      "columns":["despesa_id","imposto_id","empresa_id"],
+      "scope":"par despesa_id e empresa_id; imposto_id recebe cada item selecionado",
+      "read":"Busca linhas do par atual e monta selecao pelo imposto_id",
+      "create":"Insere uma linha para cada selecionado",
+      "update":"Diff das triplas; exclui ausentes e insere novas. Atenção: consulta usa par atual; mudar empresa/despesa pode deixar relacoes do par anterior. Nova API deve migrar ou bloquear alteracao das chaves.",
+      "delete":"Exclui despesas_impostos do par antes de excluir empresas_despesa",
+      "evidence":["form_empresas_despesa/form_empresas_despesa_apl.php:4878","form_empresas_despesa/form_empresas_despesa_apl.php:4931","form_empresas_despesa/form_empresas_despesa_apl.php:4943","form_empresas_despesa/form_empresas_despesa_apl.php:4966","form_empresas_despesa/form_empresas_despesa_apl.php:5231","form_empresas_despesa/form_empresas_despesa_apl.php:5323","form_empresas_despesa/form_empresas_despesa_apl.php:5857"]
+    },
+    "deleteDependencies":"Nenhuma verificacao adicional de dependencias localizada no formulario; somente limpeza de despesas_impostos do par."
+  },
+  "grids": {
+    "grid_despesas": {
+      "table":"pub.despesas",
+      "queryFields":["despesa_id","descricao","log_imposto"],
+      "uiFields":["despesa_id","descricao","log_imposto","emp (link Empresas)"],
+      "linkEdit":"form_despesas com chave despesa_id; novo individual",
+      "linkEmpresas":{"target":"grid_empresas_despesa","defaultWindow":"_blank","context":["despesa_id_corrente=despesa_id","desc_despesa_corrente=descricao"]},
+      "evidence":["grid_despesas/index.php:1197","grid_despesas/grid_despesas_grid.class.php:817","grid_despesas/grid_despesas_grid.class.php:3869","grid_despesas/grid_despesas_grid.class.php:3886"]
+    },
+    "grid_empresas_despesa": {
+      "table":"pub.empresas_despesa",
+      "queryFields":["codigo_desp_erp","empresa_id","log_ativo","vl_padrao","percentual","cod_nat_operacao","despesa_id","empresa_despesa_id"],
+      "despesaIdHidden":true,
+      "filter":"where despesa_id=despesa_id_corrente; contexto obrigatorio para listar corretamente",
+      "title":"Valores por Empresa - Despesa <id> - <descricao>",
+      "linkEdit":"form_empresas_despesa com empresa_despesa_id; novo individual e contexto preservado",
+      "evidence":["grid_empresas_despesa/index.php:1188","grid_empresas_despesa/index.php:3347","grid_empresas_despesa/grid_empresas_despesa_grid.class.php:697","grid_empresas_despesa/grid_empresas_despesa_grid.class.php:839","grid_empresas_despesa/grid_empresas_despesa_grid.class.php:1105"]
+    }
+  },
+  "notInferred": [
+    "Schema Progress, indices e obrigatoriedade do banco requerem dicionario real.",
+    "Nao inferir calculo automatico de impostos/custos: o cadastro guarda configuracoes; biblioteca extensa embutida no formulario possui auxiliares nao necessariamente chamadas.",
+    "Nao inferir que log_imposto torna ind_imposto obrigatorio ou limpa calculos; isso nao consta nos eventos ativos.",
+    "Nao inferir dominio de percentual <=100 ou ordenacao de calculo por ordem; nao ha validacao dessas regras nesta origem.",
+    "Nao houve execucao de PHP, consulta de banco, gravacao de negocio, SSH, compilacao ou publicacao nesta analise."
+  ]
+}

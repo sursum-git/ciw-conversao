@@ -1,0 +1,10 @@
+--- a/includes/ImportDiscountsReadTables.i
++++ b/includes/ImportDiscountsReadTables.i
+@@ -12,6 +12,7 @@
+  FIELD vl_real_autorizado AS DECIMAL DECIMALS 2
+  FIELD vl_dolar_autorizado AS DECIMAL DECIMALS 2
+  FIELD dt_autorizacao AS DATE
++ FIELD arquivo AS CHARACTER INITIAL ?
+  FIELD vl_utiliz AS DECIMAL DECIMALS 10
+  FIELD vl_utiliz_detalhe AS DECIMAL DECIMALS 10
+  FIELD vl_saldo AS DECIMAL DECIMALS 10

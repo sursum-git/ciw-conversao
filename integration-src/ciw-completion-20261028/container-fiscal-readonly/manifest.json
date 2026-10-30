@@ -1,0 +1,248 @@
+{
+  "package": "container-fiscal-readonly",
+  "freezeVersion": 2,
+  "previousManifestSha256": "eb7e4ebb519f894be76727aae5d45f4b82696420e511adb1b1ffc3235ebc8e22",
+  "status": "candidate-ready-local",
+  "freezeUtc": "2026-10-28T18:32:10.295921+00:00",
+  "files": [
+    {
+      "path": "abl/ContainerFiscalReadOnlyApi.p",
+      "sha256": "3e7f6a891d5d814580b4a92f3816627a272244de257b94ed17211e6e508b80b2",
+      "bytes": 1812
+    },
+    {
+      "path": "abl/ContainerFiscalReadOnlyService.p",
+      "sha256": "de136bc7a45446236bd66bc7b49bb37e10128a3581d3d9015128da74ed277fe1",
+      "bytes": 7537
+    },
+    {
+      "path": "metadata/api-source-additions.json",
+      "sha256": "4ed50aa10cbae08211fb463f04ecab35c330ea47f7bc8ed105999826e0375896",
+      "bytes": 2072
+    },
+    {
+      "path": "metadata/op1033-builder-draft.json",
+      "sha256": "ff7bcc2e87e8075d4a842b5cd60d07e545bd1d904f81f778fb7b2872db1ff288",
+      "bytes": 7415
+    },
+    {
+      "path": "metadata/op1034-builder-draft.json",
+      "sha256": "df4a6dc1338016a99f7c581677f91b20ab9fc65e6b3546d294f70ffd874e2ad4",
+      "bytes": 6490
+    },
+    {
+      "path": "patches/CiwCadastrosCrud.p.patch",
+      "sha256": "46dede0d5121aa30da671dc143bfe7fc1a2f20577072dcaede3ade96f0e31110",
+      "bytes": 912
+    },
+    {
+      "path": "patches/CiwErpReadService.p.patch",
+      "sha256": "9de93799696b03ff71e0940816bbad0bd573bc72766f21f0a2ef8ea13217397f",
+      "bytes": 4168
+    },
+    {
+      "path": "patches/parent-navigation.json",
+      "sha256": "6234a81e646d58989536b3e8fedb342bd5bc55a6f86d578c2a00bc3ceb452b28",
+      "bytes": 1028
+    },
+    {
+      "path": "patches/patch-plan.json",
+      "sha256": "04e4eb1700655c6a11203b7d09eeb49e1c1f7c0d8b6444dff9677363dd59d7fd",
+      "bytes": 6070
+    },
+    {
+      "path": "patches/RuntimeApiEntityActionService.php.patch",
+      "sha256": "b6aebe749c66bf7f073fbf3c214b0a7efca391eec3b3789fa24dea3d94325624",
+      "bytes": 2016
+    },
+    {
+      "path": "patches/RuntimeCiwErpQuery.php.patch",
+      "sha256": "c1d7b8967e382f72c448082b80eaa65ec5eca85fdfb3c01d0ea116a9b38466c2",
+      "bytes": 4703
+    },
+    {
+      "path": "patches/source-operations.json",
+      "sha256": "d76084b4c82ffdbde6f6c0e473bf1c55b1ddd14cedb67da98ff7f1bc2d66f2e3",
+      "bytes": 2826
+    },
+    {
+      "path": "PLAN.md",
+      "sha256": "49d38de6a24bd7abd6589e3bd4c131020baa6b99f5a8b7eccc992e0bb4e2ee35",
+      "bytes": 5094
+    },
+    {
+      "path": "tests/ContainerFiscalReadOnlyTest.p",
+      "sha256": "610ffd056667746235844a89e6124257d579e47ea74d5708f5243384b846c620",
+      "bytes": 9780
+    },
+    {
+      "path": "tests/freeze.py",
+      "sha256": "40a25a07105ccaeb447e8cbbdc83c4b504223faba70701e813d3797999a5f54c",
+      "bytes": 6610
+    },
+    {
+      "path": "tests/prepare-candidates.py",
+      "sha256": "f7a86010e6fe740aaabd3ef20daa4e4d10fe96875b5c6a51e0eb2bd07ea616dd",
+      "bytes": 11736
+    },
+    {
+      "path": "tests/prepare-stage.py",
+      "sha256": "2168bd3e16ffbd780c57cb2cd5fa584370a8741f6155533c3352854fb9f49ee8",
+      "bytes": 3578
+    },
+    {
+      "path": "tests/preview-native.php",
+      "sha256": "8d280a9bcf4211d58f7d0978c72a5cceda7810ea470afb52981ed5d2d7ae0ce1",
+      "bytes": 3583
+    },
+    {
+      "path": "tests/run-local.ps1",
+      "sha256": "607fa244d504a29676c5e85676a8c81b7a1f8fbc42f16c2738d84356637b2bb1",
+      "bytes": 3173
+    },
+    {
+      "path": "tests/RuntimeContainerFiscalReadOnlyQueryTest.php",
+      "sha256": "514e1bae2c5a21a11b1165ac69be0c01c2a5002bf12765f4c6980c0d62d543ea",
+      "bytes": 5011
+    },
+    {
+      "path": "tests/RuntimeContainerFiscalReadPageTest.php",
+      "sha256": "1845131088d1a56e33f709379925e940b083b4ef5f161999f30ab9774f2a6b96",
+      "bytes": 6131
+    },
+    {
+      "path": "tests/validate-native.cjs",
+      "sha256": "d933d45c3a91a931df0f836bcb91e02fc34abb255e8357b5183b02d2265b370d",
+      "bytes": 3633
+    },
+    {
+      "path": "tests/verify-all.ps1",
+      "sha256": "4315cd63bbe02fcbe9fb1e55247e6a21ffdf9a76bd81805289ae79504082f3ad",
+      "bytes": 1298
+    }
+  ],
+  "newCanonicalTargets": [
+    {
+      "candidate": "abl/ContainerFiscalReadOnlyApi.p",
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainerFiscalReadOnlyApi.p"
+    },
+    {
+      "candidate": "abl/ContainerFiscalReadOnlyService.p",
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainerFiscalReadOnlyService.p"
+    }
+  ],
+  "signatures": {
+    "ContainerFiscalReadOnlyApi.p": "INPUT JsonObject, OUTPUT JsonObject",
+    "ContainerFiscalReadOnlyService.p": "INPUT HANDLE phContainers,phCalcs,phExpenses; INPUT JsonObject; OUTPUT JsonObject"
+  },
+  "sharedBaselines": [
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwErpReadService.p",
+      "baselineSha256": "60646d2d519b7b880a38173a02551815fda823e926097e5636542ea3ba9958a2"
+    },
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwCadastrosCrud.p",
+      "baselineSha256": "625a3154435b2ae28127ba7209ed35a1b8c1eb4d2830f4487a32139f7112c728"
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeCiwErpQuery.php",
+      "baselineSha256": "13d240f5b1030fb8678e13811338e95d6b19ea571472dd2a62d4d29335498ad2"
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeApiEntityActionService.php",
+      "baselineSha256": "ac07816fbaa0c2b91027b2dbc6e38008f649ccd7fb85e4be6ba23df2820b3ac0"
+    },
+    {
+      "target": "D:/opencode/construtor-pg/integrations/ciw-container-painel/despesas-1.0.1-builder-draft-candidate.json",
+      "baselineSha256": "6cc9b5fd8f8716e56437f44395053763683aad757041af606a28593313a18ff4"
+    }
+  ],
+  "sourceBaseline": {
+    "baselinePath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/source-118-before.json",
+    "baselineSha256": "2bbff65351a30f396a163ee3b2e60c6208e22ed5bbc95e719ac1732f9ec3a098",
+    "baselineOperations": 118,
+    "resultOperations": 122
+  },
+  "schemaEvidence": [
+    {
+      "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/schema/schema-calcs_imp_container.json",
+      "sha256": "b00dd3b8f3f7ed8452168c3c3fce31726d09c4eeca7287440969c31cee665089",
+      "fields": 6,
+      "indexes": 3
+    },
+    {
+      "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/schema/schema-despesas_container.json",
+      "sha256": "8328dab88c34a735c3088ba268fee9c3949fe4f4cd6296a215de185f6377b67b",
+      "fields": 14,
+      "indexes": 5
+    }
+  ],
+  "legacyEvidence": [
+    {
+      "path": "D:/opencode/conversao-sc/sources/scriptcase/containers/cons_calcs_imp_container/cons_calcs_imp_container_grid.class.php",
+      "sha256": "6bda7402edb165320fb0e9ffb3c26a1a416d06e3862f533af7db284a668ccfef",
+      "lines": "608,750-770"
+    },
+    {
+      "path": "D:/opencode/conversao-sc/sources/scriptcase/containers/cons_despesas_container_memoria_calculo/cons_despesas_container_memoria_calculo_grid.class.php",
+      "sha256": "029d001f6292320c031df9a88b8ff1f63f6ea3ae9e6d50a65926cac084c409c3",
+      "lines": "596,735-755"
+    },
+    {
+      "path": "D:/opencode/conversao-sc/sources/scriptcase/containers/grid_despesas_container/grid_despesas_container_grid.class.php",
+      "sha256": "d3022408ff0094b847667495532ba2ddda4bf80a9462d59d26aebf8d111e0833",
+      "lines": "3970-4000"
+    }
+  ],
+  "tests": {
+    "compiler": "local OpenEdge12.8 only; not official12.2 proof",
+    "compiles": 8,
+    "ablPerCombination": {
+      "fiscal": 41,
+      "erpRegression": 47,
+      "itemRegression": 9
+    },
+    "combinations": [
+      "UTF8/AMERICAN",
+      "UTF8/EUROPEAN",
+      "ISO8859-1/AMERICAN",
+      "ISO8859-1/EUROPEAN"
+    ],
+    "phpRoutingChecks": 56,
+    "phpRealReadPathChecks": 36,
+    "nativeJsChecks": 30,
+    "nativeBuilderScreens": 2,
+    "sourcePreviousOperationsPreserved": 118,
+    "NUM_DBS": 0
+  },
+  "command": "powershell -NoProfile -ExecutionPolicy Bypass -File integration-src/ciw-completion-20261028/container-fiscal-readonly/tests/verify-all.ps1",
+  "limits": {
+    "maxTake": 200,
+    "maxSkip": 100000,
+    "maxCollection": 50000,
+    "maxCollectionMilliseconds": 10000,
+    "stopAfterSeconds": 10,
+    "normalSelectedCardinality": "0/1; missing selected context record returns404",
+    "timeoutTest": "guard reviewed; forced wall-clock expiration not exercised"
+  },
+  "gates": [
+    "Manager review/rebase shared patches against current SHA256; merge only deltas",
+    "Official .42/OpenEdge12.2 compile and TT tests four encoding/culture combinations",
+    "Canonical integration and source118+4 preserve all existing operations/authHeaders",
+    "Publish approved official12.2 artifacts only to sursum-api/med; validate read/get/negatives in PASOE9911",
+    "Native publication and contextual UI/Logs validation; access grants require separately authorized scope"
+  ],
+  "operationalWrites": false,
+  "canonicalFilesModified": false,
+  "remoteCompilePerformed": false,
+  "published": false,
+  "grants": false,
+  "DDL": false,
+  "businessTests": false,
+  "limitations": [
+    "Intermediate expense memory link may appear even when no memory/calculation exists: explicit readonly extension, no literal visual-parity claim",
+    "No global container history endpoint/tab; both screens require selected legacy PK plus container",
+    "ISO DATETIME string preserves physical local value and milliseconds; no timezone invented",
+    "No full51k result/forced timeout assertion; tests confirm selected PK prevents unrelated history widening"
+  ]
+}

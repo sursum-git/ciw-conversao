@@ -1,0 +1,169 @@
+{
+  "state": "CANDIDATE_LOCAL_12_8_VERIFIED_NOT_OFFICIAL_12_2_NOT_PUBLISHED",
+  "scope": "signals-global",
+  "destination": {
+    "instance": "sursum-api",
+    "context": "med",
+    "port": 9911,
+    "compiler": "OpenEdge12.2@192.168.0.42"
+  },
+  "programs": [
+    "PurchaseSignalContainerRules.p",
+    "PurchaseSignalsCollector.p",
+    "PurchaseSignalsService.p",
+    "PurchaseSignalsGlobalService.p",
+    "PurchaseSignalsGlobalApi.p"
+  ],
+  "sharedDependencies": [
+    "PurchaseSignalRules.p",
+    "CiwMedCompanyContext.p",
+    "CiwErpReadService.p",
+    "PurchaseJsonContract.i",
+    "PurchaseOrderContext.i",
+    "PurchaseOrderSnapshot.i",
+    "PurchaseItemSnapshot.i",
+    "PurchaseItemValueRules.i"
+  ],
+  "patches": [
+    {
+      "file": "patches/CiwCadastrosCrud.p.json",
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwCadastrosCrud.p",
+      "operation": "insertBefore",
+      "baselineSHA256": "85bf40bde18b8fa036cc08f61ebe730dcf177fe84fbb4505e6a840d41581cf7f"
+    },
+    {
+      "file": "patches/CiwErpReadService.p.json",
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwErpReadService.p",
+      "operation": "insertBefore",
+      "baselineSHA256": "acca30907d892181796e40cdc8b41409f7870f5d8c8ed6c3e6bfddb2f7cd30ef"
+    },
+    {
+      "file": "patches/PurchaseSignalsService.p.json",
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/PurchaseSignalsService.p",
+      "operation": "replaceFile",
+      "baselineSHA256": "f98158cb3ea0a2cb2bd7c954de547861491dff1e632a07a1c4487c3c1cc5bcdc"
+    },
+    {
+      "file": "patches/RuntimeApiEntityActionService.php.json",
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeApiEntityActionService.php",
+      "operation": "insertBefore",
+      "baselineSHA256": "a1553414fcee213e3563131a7e12b13ce3b85a9b79b3ffab7b001b6b9c04526f"
+    },
+    {
+      "file": "patches/RuntimeCiwErpQuery.php.json",
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeCiwErpQuery.php",
+      "operation": "replaceMany",
+      "baselineSHA256": "315f28cd985d77b92e1126f290e044f7081bc9ee94875b9796c8b223726d4104"
+    }
+  ],
+  "metadata": [
+    "metadata/sinalizadores-importacao-med-builder-draft.json",
+    "metadata/alertas-importacao-med-builder-draft.json",
+    "metadata/api-source-additions.json"
+  ],
+  "sourceBaseline": "810c6557b1684b03c35cf6901ea95cfa54262c341a91e308ef5975dd75bd2e28",
+  "noBusinessWrites": true,
+  "noDdl": true,
+  "noGrants": true,
+  "includes": [
+    "PurchaseSignalsTable.i"
+  ],
+  "collectorABI": [
+    "INPUT phOrders HANDLE",
+    "INPUT phCompanies HANDLE",
+    "INPUT phItems HANDLE",
+    "INPUT phPayments HANDLE",
+    "INPUT phSignals HANDLE",
+    "INPUT pdToday DATE",
+    "INPUT piScanBudget INTEGER",
+    "INPUT piStarted INTEGER",
+    "INPUT poRequest JsonObject",
+    "OUTPUT poResponse JsonObject",
+    "OUTPUT TABLE ttSignalRead",
+    "OUTPUT piProcess INTEGER",
+    "OUTPUT piScanned INTEGER"
+  ],
+  "tests": [
+    {
+      "path": "tests/PurchaseSignalContainerRulesTest.p",
+      "checks": 13,
+      "log": "container-rule.log"
+    },
+    {
+      "path": "tests/PurchaseSignalsGlobalServiceTest.p",
+      "checks": 55,
+      "log": "global-service.log"
+    },
+    {
+      "canonical": "D:/opencode/motor-progress/v2/tests/abl/purchase-signals/PurchaseSignalsServiceTest.p",
+      "checks": 34,
+      "log": "signals-service-{culture}.log"
+    }
+  ],
+  "files": [
+    {
+      "path": "abl/PurchaseSignalContainerRules.p",
+      "sha256": "545156e9efe187bdf691937fb7381b637d47fd85254c6d9ba1b60217172df4f4"
+    },
+    {
+      "path": "abl/PurchaseSignalsCollector.p",
+      "sha256": "168c22a825ae486b3244bd3cc6c69028492b2c1e1ab90edda3d1b560b3122cdb"
+    },
+    {
+      "path": "abl/PurchaseSignalsGlobalApi.p",
+      "sha256": "bd06696450e3ce34073159a4536940b9b2a295485f90a750bae7ea774ba03783"
+    },
+    {
+      "path": "abl/PurchaseSignalsGlobalService.p",
+      "sha256": "7cedfcb36d74d3586c914ccfec933f211599cb05bdaf1b175337bd6e8a15fecb"
+    },
+    {
+      "path": "abl/PurchaseSignalsService.p",
+      "sha256": "1db1293fc45e4d45d2e193d83dbb8a3a905452082ca7ebbf522c41ec2787cd12"
+    },
+    {
+      "path": "includes/PurchaseSignalsTable.i",
+      "sha256": "6cea7c794796806f5a0f184f2f355c8e3c88b26937111b877ba579fe9daa0c90"
+    },
+    {
+      "path": "metadata/alertas-importacao-med-builder-draft.json",
+      "sha256": "78e8253b803625c288357ec3a017f7890ac536578a7b9a1558c2e0b7c1447223"
+    },
+    {
+      "path": "metadata/api-source-additions.json",
+      "sha256": "28b8c74dd8e573baa2dbfc2e0f438d4389492b4d2ddb9d15db3b38af14ca8beb"
+    },
+    {
+      "path": "metadata/sinalizadores-importacao-med-builder-draft.json",
+      "sha256": "7fb30bdb0f6502225859ec4b0b330351fafd000ee4fbac8a649874f850e185fd"
+    },
+    {
+      "path": "tests/CompileAndRun.p",
+      "sha256": "9a0c5940b9e5adbd9b731b7e6d174218a3d2390fdc1e39f3760d5bc07fb24aa7"
+    },
+    {
+      "path": "tests/PurchaseSignalContainerRulesTest.p",
+      "sha256": "83a4143f1cb07930ff64ca92ebed426b293c1ceb2237a4f05c94c52f5cec2d1c"
+    },
+    {
+      "path": "tests/PurchaseSignalsGlobalServiceTest.p",
+      "sha256": "054e9ce1071f780c0aa2573bb46ec47376109f012b1991253d07116c2250a1b6"
+    }
+  ],
+  "excludeFromPublication": [
+    "local-stage/**",
+    "local-validation/**",
+    "tests/**",
+    "prepare.cjs",
+    "extract-collector.cjs",
+    "finalize-manifest.cjs",
+    "tests/patched-*.php"
+  ],
+  "officialValidationRequired": [
+    "OpenEdge12.2 compiler at .42, API/dispatcher against real schema",
+    "TT NUM-DBS0 UTF8/ISO8859-1 x AMERICAN/EUROPEAN",
+    "Independent review of shared patches",
+    "PASOE sursum-api/med/9911 read/get/filter/paging/context/negatives/regressions",
+    "Native runtime and LDAP UI with authorised permissions"
+  ]
+}

@@ -1,0 +1,11 @@
+--- D:\opencode\construtor-pg\backend\src\Runtime\ScreenDefinitionService.php
++++ D:\opencode\construtor-pg\backend\src\Runtime\ScreenDefinitionService.php
+@@ -73,7 +73,7 @@
+             $definition = $this->withTransactionLogs($definition, $screen->getScreenId());
+             $definition['crud']['userLayout'] = $this->layouts->buildUserLayout($screen->getScreenId());
+         }
+-        if (($definition['pageType'] ?? '') === 'process' && in_array($definition['program']['entity'] ?? '', ['container_processos_progress', 'container_alocacao_progress'], true)) {
++        if (($definition['pageType'] ?? '') === 'process' && in_array($definition['program']['entity'] ?? '', ['container_processos_progress', 'container_alocacao_progress', 'container_despesas_selecao_progress'], true)) {
+             $definition['logs'] = ['enabled'=>$this->canReadLogsTarget('admin.logs-transacoes') && ($this->auditAccess?->canViewScreen($screenId) ?? true), 'mode'=>'recordEvents',
+                 'documentId'=>'runtime.transaction-events', 'screenId'=>'ciw.container-painel', 'contextField'=>'container_id', 'requiresRecord'=>true, 'title'=>'Logs'];
+         }

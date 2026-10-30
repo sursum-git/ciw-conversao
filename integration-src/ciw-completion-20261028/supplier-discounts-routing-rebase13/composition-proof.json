@@ -1,0 +1,211 @@
+{
+  "success": true,
+  "canonical13PreservedOutsideExactEdits": true,
+  "current13ManifestSha256": "f24fc810ac250d4f4ac389ed5d6caa1152cef6dd59f9f45485800c7d38f01a2d",
+  "files": [
+    {
+      "relative": "programs/ImportDiscountsCollector.p",
+      "baselineSha256": "710e829b911874ce17f9976bcd478d558594fb49db5eeadffdd04a588c8c51f5",
+      "candidateSha256": "f9ae15850d6dd54072ee6601fac12e4f477c3e95c3660372c7d16cd4523bd5eb",
+      "frozenOriginalBaselineEqual": true,
+      "rebaseEdits": [
+        {
+          "kind": "unique old byte block",
+          "originalFrozenOffset": 614,
+          "current13Offset": 614,
+          "oldSha256": "eeb220204b07611905b2ef0c64b4adba012c27c22fdad810f5291a0fa30e4718",
+          "newSha256": "042ff95285dd30fc9bb32c6b4d8e05877f07c6937f7d5a88f3ed30b87c7d0676"
+        }
+      ],
+      "fuzzyMatching": false
+    },
+    {
+      "relative": "programs/ImportDiscountsReadService.p",
+      "baselineSha256": "ad50ae2fc4a6ae5f0c4045912443f0895b9c24afb673fb3c06ebcb1a4fe3a148",
+      "candidateSha256": "bfd6ff61b0f2e8dc8c0934a37e8830066b9d520f39e87afaa1490c6a8c1c0c90",
+      "frozenOriginalBaselineEqual": true,
+      "rebaseEdits": [
+        {
+          "kind": "exact 120-byte surrounding anchor",
+          "originalFrozenOffset": 1215,
+          "current13Offset": 1215,
+          "oldSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "newSha256": "5d7278dbbc43256015e80f553aef9030e75b6f24cc7353485275efa46fde6d64"
+        },
+        {
+          "kind": "exact 120-byte surrounding anchor",
+          "originalFrozenOffset": 2168,
+          "current13Offset": 2168,
+          "oldSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "newSha256": "4e93259f77a05ec41bb6e9566b0fdcc7e3e135017d94723d3557b20d671486a1"
+        },
+        {
+          "kind": "unique old byte block",
+          "originalFrozenOffset": 2288,
+          "current13Offset": 2288,
+          "oldSha256": "46af890e8e83bc2ebca754980f622dcd1c424df7b55adf3cf42f8d4eacd68b41",
+          "newSha256": "6d0c4043bfe56285a1c4bdfa251c65757152aea48dd7f1307d45eb379f98fdc2"
+        },
+        {
+          "kind": "exact 120-byte surrounding anchor",
+          "originalFrozenOffset": 2477,
+          "current13Offset": 2477,
+          "oldSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "newSha256": "cb6aa2cb0fc3c07846410ab85828b6256629200527a6adc29beaf7a23fa671b5"
+        },
+        {
+          "kind": "exact 120-byte surrounding anchor",
+          "originalFrozenOffset": 2904,
+          "current13Offset": 2904,
+          "oldSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "newSha256": "2dd85855ce48ea1b4181ffdc2a2a6898c5d7a7ef99b2b9eb0c364fdd6ecb6580"
+        },
+        {
+          "kind": "unique old byte block",
+          "originalFrozenOffset": 3173,
+          "current13Offset": 3173,
+          "oldSha256": "717e615b991418bf27b20227dd8b816b230e7859a0dfcf39b337f6d68007cfe5",
+          "newSha256": "913093fcf33f3af5965470afca235c7334d7a60d6d5a1c6adf2aa566f00edba5"
+        },
+        {
+          "kind": "unique old byte block",
+          "originalFrozenOffset": 3436,
+          "current13Offset": 3436,
+          "oldSha256": "a59387121b2017a9023cccbf119392678915fdc428e738dceca9b75933616382",
+          "newSha256": "6847c66d2f6e59b9b8470141e09210f1d78a688914bf9a30d264a89c4849e13c"
+        },
+        {
+          "kind": "exact 120-byte surrounding anchor",
+          "originalFrozenOffset": 3988,
+          "current13Offset": 3988,
+          "oldSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "newSha256": "3e4652c6bc921b2d22eaaa7043c81d08d76584a888614c6db9060a1c8404d71e"
+        },
+        {
+          "kind": "exact 120-byte surrounding anchor",
+          "originalFrozenOffset": 5548,
+          "current13Offset": 5548,
+          "oldSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "newSha256": "1a4496d2c90598a00f1624ee35287a58464027c0bd8ce8a5beed7de7af1a7412"
+        }
+      ],
+      "fuzzyMatching": false
+    },
+    {
+      "relative": "programs/ImportDiscountsReadApi.p",
+      "baselineSha256": "d5c88dab039cff35166eeb2b8905554999513e13945295d6d5b619004dbd9407",
+      "candidateSha256": "0e9cfb342b287b63e7e5665b85a9ea86b8577a90d167ca87f1bcb585731c2649",
+      "frozenOriginalBaselineEqual": true,
+      "rebaseEdits": [
+        {
+          "kind": "unique old byte block",
+          "originalFrozenOffset": 1147,
+          "current13Offset": 1147,
+          "oldSha256": "3d3f8831ed3b1c0467a403494c28787be9bd8910958f18bbf0b66cb0d0462d4c",
+          "newSha256": "c1340076891dfc4f316e336217a4db494829f2d4393caddca0e8ef12c3d0af33"
+        },
+        {
+          "kind": "unique old byte block",
+          "originalFrozenOffset": 1624,
+          "current13Offset": 1624,
+          "oldSha256": "a3e6aea13f37e6538b66b5ef4b53ad45cd8330997836ce3f87fdd0d6d39948ca",
+          "newSha256": "feaff93a6688c971af63bdc8a79feca189f0f165500a07cb6a5d63eaa07a4649"
+        }
+      ],
+      "fuzzyMatching": false
+    },
+    {
+      "relative": "programs/CiwErpReadService.p",
+      "baselineSha256": "8ecee3d853961e297598d533844da711c3f0dca058d7b4c35125fa8575b3581e",
+      "candidateSha256": "3eab006f6b1c579d75ba77ae2becbcd47af664f9a64124f2abadd16373de51e3",
+      "frozenOriginalBaselineEqual": false,
+      "rebaseEdits": [
+        {
+          "kind": "exact 120-byte surrounding anchor",
+          "originalFrozenOffset": 13224,
+          "current13Offset": 14443,
+          "oldSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "newSha256": "5493f06cd4bdd0c546a0e94ac5dd378b2a487f4886625dc9b8ecbc125bc2b51e"
+        }
+      ],
+      "fuzzyMatching": false
+    },
+    {
+      "relative": "programs/CiwCadastrosCrud.p",
+      "baselineSha256": "325746bfbf416dab5b5b05614e937bd9d45203240f215cd779484584a28a427b",
+      "candidateSha256": "f65eb57f049a1ed69a734c2a9c0c9d3358dc972b91a33e7ab9f416d99b52ee6a",
+      "frozenOriginalBaselineEqual": false,
+      "rebaseEdits": [
+        {
+          "kind": "unique old byte block",
+          "originalFrozenOffset": 4912,
+          "current13Offset": 5363,
+          "oldSha256": "caf7b00cb9d92029bade2010fa9aa95ace7d7f81dbde8e38c60caa86b309feab",
+          "newSha256": "4a981d2e36d40468b9c3e1278d8a402623b92fe18c6d12387ccc415dd0000a38"
+        }
+      ],
+      "fuzzyMatching": false
+    },
+    {
+      "relative": "includes/ImportDiscountsReadTables.i",
+      "baselineSha256": "f1d31239a2f8c669218af4d7f968f45b8600bd4a12dd7a087e043b0726b1fbc1",
+      "candidateSha256": "340f3fe91a4e1c76a971221df1f84f8b6f9e6c1974f4b31dbf6baca31d2f7c16",
+      "frozenOriginalBaselineEqual": true,
+      "rebaseEdits": [
+        {
+          "kind": "exact 120-byte surrounding anchor",
+          "originalFrozenOffset": 529,
+          "current13Offset": 529,
+          "oldSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "newSha256": "e3179579650f3728407ebe9bd02b8d75a5f311e2376ef2b7d2804220bac60410"
+        }
+      ],
+      "fuzzyMatching": false
+    },
+    {
+      "relative": "backend/src/Runtime/RuntimeImportDiscountRead.php",
+      "baselineSha256": "da183dfadf900d516a577495d8348293c0aa1a9b36954cde50de9be819cd0197",
+      "candidateSha256": "d89428668214f8901cd02a32176200afa3433f645fddd3cf42cd749e8545893a",
+      "frozenOriginalBaselineEqual": true,
+      "rebaseEdits": [],
+      "fuzzyMatching": false
+    },
+    {
+      "relative": "backend/src/Runtime/RuntimeCiwErpQuery.php",
+      "baselineSha256": "ec83a005dfaf87ed7e6bcebd03b5b2c221f39ea0d8f0c72a34a67c62aef46b44",
+      "candidateSha256": "6944cf73a6b1179532f3a3190a7bf2e1bff9a5f62c5b0ce4a104f62c01dde84e",
+      "frozenOriginalBaselineEqual": false,
+      "rebaseEdits": [
+        {
+          "kind": "exact literal registry prefix",
+          "anchorSha256": "25d125772fd9178a52bf934e41e678fecbecf8c8b6fdc12dffde33fb0db664ca",
+          "priorRegistryBytesPreserved": true
+        }
+      ],
+      "fuzzyMatching": false
+    },
+    {
+      "relative": "backend/src/Runtime/RuntimeApiEntityActionService.php",
+      "baselineSha256": "d5413e3085c445107aedc22d8c07a374259dc056ef5550cccf0c7d8dc388a7bb",
+      "candidateSha256": "79a0d97fb32d3af7e4569239b120d9c9f0ce65a5240e1a9c5a6b5659c867ac5e",
+      "frozenOriginalBaselineEqual": false,
+      "rebaseEdits": [
+        {
+          "kind": "unique old byte block",
+          "originalFrozenOffset": 55657,
+          "current13Offset": 56701,
+          "oldSha256": "c50a7f4d593237ba616caabf05cb3a124ca03fdd053565705f39b57ed846947f",
+          "newSha256": "6a738fb91a2d942687e48d5af6a10bbbde63bfad9e3440183e89ff09d0a819a6"
+        },
+        {
+          "kind": "supplier-only read error envelope closure",
+          "rootReviewRequired": true,
+          "legacyResourcesBehaviorUnchanged": true
+        }
+      ],
+      "fuzzyMatching": false
+    }
+  ],
+  "networkExecuted": false,
+  "canonicalWrites": false
+}

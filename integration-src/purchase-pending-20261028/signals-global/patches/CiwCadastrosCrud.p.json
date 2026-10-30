@@ -1,0 +1,7 @@
+{
+  "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwCadastrosCrud.p",
+  "baselineSHA256": "85bf40bde18b8fa036cc08f61ebe730dcf177fe84fbb4505e6a840d41581cf7f",
+  "operation": "insertBefore",
+  "anchor": "  WHEN \"proc_compra_alertas\" THEN DO:",
+  "insertion": "  WHEN \"proc_compra_sinalizadores\" OR WHEN \"proc_compra_sinalizados\" THEN DO:\n   cService=SEARCH(\"sursum-api/programs/PurchaseSignalsGlobalApi.r\").\n   IF cService=? THEN UNDO, THROW NEW Progress.Lang.AppError(\"Signal global API unavailable\",1).\n   RUN VALUE(cService)(poRequest,OUTPUT poResponse). RETURN.\n  END.\n"
+}

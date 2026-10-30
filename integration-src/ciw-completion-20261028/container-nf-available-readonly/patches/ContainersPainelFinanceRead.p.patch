@@ -1,0 +1,14 @@
+--- D:/opencode/motor-progress/v2/sursum-api/programs/ContainersPainelFinanceRead.p
++++ D:/opencode/motor-progress/v2/sursum-api/programs/ContainersPainelFinanceRead.p
+@@ -101,8 +101,10 @@
+  IF poRequest:GetCharacter("operation")<>"read" AND poRequest:GetCharacter("operation")<>"get" THEN DO:
+   RUN Fail("CONTAINER_OPERATION_INVALID","A consulta aceita somente read e get.",422). RETURN.
+  END.
+- IF cResource="nfs" THEN DO:
++ IF cResource="nfs" OR cResource="nfs-disponiveis" THEN DO:
+   cEstab=hContainer:BUFFER-FIELD("cod-estabel"):BUFFER-VALUE.
++  IF cResource="nfs-disponiveis" THEN
++   IF cEstab=? OR NOT cEstab BEGINS "5" THEN DO: RUN Fail("CONTAINER_NF_MED_REQUIRED","NFs disponiveis exigem container MED.",422). RETURN. END.
+   IF cEstab=? OR LENGTH(cEstab)=0 THEN DO: RUN Fail("CONTAINER_COMPANY_CONTEXT","Estabelecimento nao configurado.",422). RETURN. END.
+   CASE SUBSTRING(cEstab,1,1):
+    WHEN "5" THEN DO:

@@ -1,0 +1,9 @@
+# Quantidades por período MED
+
+Decisão humana call_77b2faee9f5b45839d2748051fa22dfb: preservar exatamente a comparação do Scriptcase. O prazo soma somente no limite inferior; o limite superior compara o término sem prazo. O fallback exibido continua máxima produção+30, distinto do parâmetro qt_dias_calc_cheg_ped/padrão60.
+
+Reutilizar coleta em um programa único: extrair o corpo coletor existente para PurchaseImportQuantitiesCollector.p e esquema compartilhado PurchaseImportQuantitiesTable.i; manter PurchaseImportQuantitiesService.p como adaptador compatível do leitor atual. Datas auxiliares de produção ficam internas e não alteram o DTO base. A nova projeção usa o mesmo avaliador de quantidades e leitor tipado; regras de período e normalização de filtros ficam separadas.
+
+Frontend existente por JSON; nova consulta MED somente read/get. Campos dt_registro/dt_recebimento/dt_prev_chegada recebem faixas inclusivas completas, ou nenhum período; filtros de período sob OR são recusados, demais filtros seguem leitor existente. UNION das duas condições de origem, com deduplicação pela projeção original de17campos, sem acrescentar IDs físicos à igualdade. Chave opaca determinística pelo conteúdo, sem links arbitrários para registros agrupados. Não há manutenção nesta consulta; logs técnicos nativos e auditoria dos cadastros anteriores permanecem.
+
+MED fixa por resolvedor existente, nenhum SQL/empresa/programa/relógio do cliente; parâmetros pela include IMA semcache. Preservar limites200/página,50mil leituras/10s e falha fechada; datasISO/nulos/inteiros semcasasdecimais. Compilar .42/OE12.2 e validar exclusivamente sursum-api/med9911. Preservar baselines dos projetos sujos porhash/backup; não criar branch/commit/push neste workspace de integração. Controles permanece final. Nenhuma escrita operacional/DDL nesta entrega. Nova permissão read humana somente após publicação e validação concretas.

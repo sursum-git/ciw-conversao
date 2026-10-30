@@ -1,0 +1,113 @@
+{
+  "status": "REVIEW_READY_AUDIT_ONLY",
+  "inventoryMutation": false,
+  "newProgramCodes": [],
+  "actions": [
+    {
+      "sourceAction": "grid / SELECT e contexto",
+      "sourceBehavior": "`grid.class.php:900,1101–1123`: seis colunas físicas de `pub.itens_container`, `container_id=container_corrente`; PK `item_container_id`.",
+      "existingProductEvidence": "`ContainersPainelReadService.p:172–186,222–223`: mesmos seis campos, mais manutenção e lookups; API fixa pai/PK e JSON1002 exige contexto.",
+      "reconciliation": "Coberto na leitura de alocação; não equivale aos valores calculados abaixo."
+    },
+    {
+      "sourceAction": "grid / quantidades",
+      "sourceBehavior": "Alocada, confirmada, recebida físicas; `onRecord:4465–4509` acrescenta saldo calculado.",
+      "existingProductEvidence": "1002 mantém quantidades;1008/custo itens expõe `qt_saldo` do Calculator comum.",
+      "reconciliation": "Reconciliável entre duas abas; não exigir embarcada≤alocada por inferência."
+    },
+    {
+      "sourceAction": "grid / previsão e realizado",
+      "sourceBehavior": "`onScriptinit:559–572` chama `calcularCustoGeralItem(...,'tributado',true,false)` uma vez; `onRecord` encontra o item na lista.",
+      "existingProductEvidence": "`ContainersCustoReadService` coleta e chama `ContainersCustoCalculator`;1008 projeta os onze campos mapeados abaixo.",
+      "reconciliation": "Serviços reutilizados; não cabe outro coletor/calculador. Paridade integral depende das diferenças declaradas."
+    },
+    {
+      "sourceAction": "grid / moeda",
+      "sourceBehavior": "Vazia→Dolar (`grid:556–559`); botões dólar/real em `index:7415–7428` e evento seguinte, via `bl_chama_grid_itens_container`, mantendo pai na sessão.",
+      "existingProductEvidence": "Serviço de custos aceita somente `real`/`dolar` (`:246–253`), porém oito operações do JSON `cost-api-source.json` fixam `moeda=real`. Campo `moeda` no grid é saída.",
+      "reconciliation": "**Lacuna nativa comprovada no JSON pinado:** falta seleção/requisição USD; não é resolvida por filtro local sobre coluna."
+    },
+    {
+      "sourceAction": "grid / liberação de realizado",
+      "sourceBehavior": "`grid:560,630–645`; consulta `pp-container.log_liberar_custo_realizado` em`:20383–20399`; oculta/exibe **vl_custo_real,vl_unit,vl_merc,vl_desp**, mantendo outros campos.",
+      "existingProductEvidence": "`ContainersCustoReadService` não referencia essa flag;1008 exibe os campos realizados.",
+      "reconciliation": "**Diferença de fidelidade:** condicional não preservada na projeção/metadados inspecionados. Não se conclui falha de autorização por essa comparação de UI."
+    },
+    {
+      "sourceAction": "grid / descrição",
+      "sourceBehavior": "`onRecord:4467–4475`: descrição do pedido + descrição ERP via helper; pedido aparece ID+descrição. Helper ERP`:12705` faz UNION MED/IMA e escolhe retorno legado.",
+      "existingProductEvidence": "1002 fornece descrição do pedido/código ERP/ID do processo/código do fornecedor;1008 fornece descrição do item do pedido e IDs.",
+      "reconciliation": "Cobertura dos identificadores; apresentação combinada/descrição ERP não comprovada. Não escolher MED ou IMA arbitrariamente."
+    },
+    {
+      "sourceAction": "grid / cabeçalho financeiro",
+      "sourceBehavior": "`grid:575–622`: FOB USD, pago USD, crédito utilizado USD, desconto utilizado USD, saldo USD, dólar médio.",
+      "existingProductEvidence": "Resumo/Rastro reutilizam memória e totais centrais; resumo contém pagamentos USD/saldo/dólar médio e rastro total tributado.",
+      "reconciliation": "Parcial: os seis valores não estão apresentados juntos no JSON pinado. Conferir exposição das duas deduções antes de declarar equivalência. Não reconstituir fórmula no frontend."
+    },
+    {
+      "sourceAction": "grid / editar ou excluir alocação",
+      "sourceBehavior": "`grid:4571–4620` abre `form_itens_container` por PK; grid não contém evento próprio de UPDATE/DELETE de item.",
+      "existingProductEvidence": "1002 create/update/delete; CrudService allowlist11campos, pai/item do pedido imutáveis, lock/saldo e guards. Recibos17/10 confirmam fluxo e limpeza.",
+      "reconciliation": "Coberto pela manutenção existente, com proteções novas explicitadas abaixo. Não criar writer a partir do grid."
+    },
+    {
+      "sourceAction": "grid / selecionar itens de pedidos",
+      "sourceBehavior": "`grid:6600–6610,7140` abre `control_selec_proc_compra`; controle→grid seleção→helper de criação (fontes colaterais).",
+      "existingProductEvidence": "1025 seleciona1–25IDs globais, calcula saldo no servidor, reaproveita CrudService e Balance; prova26/10 inclui repetição idempotente e rollback.",
+      "reconciliation": "Coberto como fluxo nativo consolidado; nenhuma igualdade empresa/fornecedor inventada."
+    },
+    {
+      "sourceAction": "grid / abrir item do pedido",
+      "sourceBehavior": "`grid:4823–4842`: item_proc_compra_id para formulário de pedido, update permitido, insert/delete negados nesse link.",
+      "existingProductEvidence": "`ciw.proc-compra-itens` já existe e exige proc_compra_id;1002/1008 trazem ambos IDs, mas `rowLinks=[]` nos dois JSONs auditados.",
+      "reconciliation": "**Lacuna de navegação direta pinada.** Novo link pode reutilizar página existente; ações da página alvo e permissões precisam preservar o significado, não copiar flags Scriptcase para relaxar acesso."
+    },
+    {
+      "sourceAction": "grid / calcular custo item",
+      "sourceBehavior": "`grid:6630–6638`: navega para `bl_item_custos`, container via parâmetro, confirmação; não grava pelo grid.",
+      "existingProductEvidence": "Processos existentes Gerar Versão/Fechar Custos e Calculator unitário compartilhado.",
+      "reconciliation": "Destino funcional existente; esta auditoria não alega igualdade de toda a sequência do wizard. Não criar processo paralelo."
+    },
+    {
+      "sourceAction": "grid / Versões de Custo",
+      "sourceBehavior": "Botão nomeado/hint em index1156; `grid:6645` tem ação literal `;`; JS `SC_btn_1` vazio`:8332`.",
+      "existingProductEvidence": "Abas Versões Custo e Gerar Versão do painel existentes.",
+      "reconciliation": "Não tratar o texto/hint do botão como chamada gravadora ou navegação executável. Produto atual já oferece acesso explícito."
+    },
+    {
+      "sourceAction": "grid / auditoria",
+      "sourceBehavior": "SELECT e eventos de apresentação não emitem imagens confirmadas de write; grid contém biblioteca copiada com SQL de vários domínios.",
+      "existingProductEvidence": "CrudService`:268–278` só confirma na raiz; lote agrega pendingChanges e emite audit póscommit; RuntimeContainerAudit e AllocationAudit validam rota/contexto/imagens e usam logs nativos.",
+      "reconciliation": "Cobertura de autoria/antes/depois das ações reais, comprovada por recibos. SQL presente numa função copiada não prova chamada ativa pelo grid."
+    },
+    {
+      "sourceAction": "bl_criar_itens_container / evento",
+      "sourceBehavior": "`index:2706–2711`: lê `proc_compra_id_corrente`, imprime `proc.compra:` e devolve sessão; **nenhum SELECT/INSERT/UPDATE/DELETE de negócio**. Launcher apenas include index.",
+      "existingProductEvidence": "Fluxos1002/1025 realmente criam/alocam; não se atribui essa criação ao blank.",
+      "reconciliation": "**Reconciliação proposta: auxiliar diagnóstico sem writer.** Não substituir eco por criação nem publicar programa novo. O framework ainda abre conexões e pode registrar acesso genérico."
+    },
+    {
+      "sourceAction": "bl_voltar_selecao_ped_importacao / evento",
+      "sourceBehavior": "`index:2702–2707`: redireciona `grid_procs_compra`, target `_parent`, argumentos vazios; não lê/apaga/reverte itens.",
+      "existingProductEvidence": "Consulta nativa de pedidos existente; seleção atual está no processo1025/painel.",
+      "reconciliation": "**Reconciliação proposta: retorno de navegação, sem negócio.** Retorno exato dentro de1025 não comprovado; não traduzir “voltar” como estorno/desalocação."
+    }
+  ],
+  "productPatchPrepared": false,
+  "freshExportRequired": [
+    "op1008 program/entity and cost source",
+    "op1002 program/entity",
+    "ciw.proc-compra-itens target current definition"
+  ],
+  "preservedFreezes": [
+    {
+      "path": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-v1/manifest.json",
+      "sha256": "1649c47f1fce03cbf5d9428a3c8cb1f2118d2aa34ac6b9550182a81cb13444da"
+    },
+    {
+      "path": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/manifest.json",
+      "sha256": "17acb3059051f6eb87f3aef20ba1f7c79aae6de05c52d208dd8748a350a2d6e0"
+    }
+  ]
+}

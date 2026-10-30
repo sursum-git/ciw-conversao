@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit cacheResult="false"><testsuites><testsuite name="NormalizedDependentEnumsAndLegacyBuilder">
+<file>NormalizedDependentOptionsTest.php</file>
+<file>D:/opencode/construtor-pg/backend/tests/Builder/ProgramBuilderProcessOptionsTest.php</file>
+<file>D:/opencode/construtor-pg/backend/tests/Builder/ProgramBuilderApiProcessOptInTest.php</file>
+<file>D:/opencode/construtor-pg/backend/tests/ProgramBuilderProcessCollectionTest.php</file>
+<file>D:/opencode/construtor-pg/backend/tests/Builder/ProgramBuilderCrudOptionsTest.php</file>
+<file>D:/opencode/construtor-pg/backend/tests/Builder/ProgramBuilderServicePublishFlowTest.php</file>
+</testsuite></testsuites></phpunit>

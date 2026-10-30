@@ -1,0 +1,69 @@
+{
+  "database": "espec",
+  "table": "user-web",
+  "fields": [
+    {
+      "name": "Login",
+      "type": "character",
+      "format": "X(20)",
+      "mandatory": false,
+      "extent": 0
+    },
+    {
+      "name": "usuario",
+      "type": "character",
+      "format": "x(12)",
+      "mandatory": true,
+      "extent": 0
+    },
+    {
+      "name": "ativo",
+      "type": "logical",
+      "format": "Sim/Não",
+      "mandatory": false,
+      "extent": 0
+    },
+    {
+      "name": "tp-usuario",
+      "type": "integer",
+      "format": "9",
+      "mandatory": false,
+      "extent": 0
+    },
+    {
+      "name": "id",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "mandatory": false,
+      "extent": 0
+    }
+  ],
+  "indexes": [
+    {
+      "name": "ind_id",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "id"
+      ]
+    },
+    {
+      "name": "primario",
+      "unique": true,
+      "primary": true,
+      "fields": [
+        "Login"
+      ]
+    },
+    {
+      "name": "tpusuario",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "Login",
+        "gr-usuario"
+      ]
+    }
+  ],
+  "evidence": "ReadCiwAccessSchema.p executado OpenEdge12.2 no .42; somente dicionario"
+}

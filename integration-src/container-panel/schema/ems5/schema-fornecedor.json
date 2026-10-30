@@ -1,0 +1,576 @@
+{
+  "database": "ems5",
+  "table": "fornecedor",
+  "fields": [
+    {
+      "name": "cod_empresa",
+      "type": "character",
+      "format": "x(3)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": "can-find(empresa where empresa.cod_empresa = fornecedor.cod_empresa)",
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cdn_fornecedor",
+      "type": "integer",
+      "format": ">>>,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "nom_pessoa",
+      "type": "character",
+      "format": "x(40)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": "fornecedor.nom_pessoa <> \"\"",
+      "triggers": [
+      ]
+    },
+    {
+      "name": "num_pessoa",
+      "type": "integer",
+      "format": ">>>,>>>,>>9",
+      "decimals": null,
+      "initial": "?",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "nom_abrev",
+      "type": "character",
+      "format": "x(15)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": "fornecedor.nom_abrev <> \"\"",
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_pais",
+      "type": "character",
+      "format": "x(3)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": "can-find(pais where pais.cod_pais = fornecedor.cod_pais)",
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_id_feder",
+      "type": "character",
+      "format": "x(20)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_grp_fornec",
+      "type": "character",
+      "format": "x(4)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_tip_fornec",
+      "type": "character",
+      "format": "x(8)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dat_impl_fornec",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": "today",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_ems_20_atlzdo",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_livre_1",
+      "type": "character",
+      "format": "x(100)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_livre_1",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "num_livre_1",
+      "type": "integer",
+      "format": ">>>>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val_livre_1",
+      "type": "decimal",
+      "format": ">>>,>>>,>>9.9999",
+      "decimals": 4,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dat_livre_1",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": "today",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_cr_pis",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_control_inss",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_cr_cofins",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cdn_classif_fornec",
+      "type": "integer",
+      "format": ">>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_retenc_impto_pagto",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_livre_2",
+      "type": "character",
+      "format": "x(100)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dat_livre_2",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_livre_2",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "num_livre_2",
+      "type": "integer",
+      "format": ">>>>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val_livre_2",
+      "type": "decimal",
+      "format": ">>>,>>>,>>9.9999",
+      "decimals": 4,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cdd_version",
+      "type": "decimal",
+      "format": ">>>,>>>,>>>,>>9",
+      "decimals": 0,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_replic_emit_hcm",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "yes",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_replic_emit_gps",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "yes",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_replic_emit_crm",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "yes",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_replic_emit_financ",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "yes",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_replic_emit_erp",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "yes",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cdn_categ",
+      "type": "integer",
+      "format": "999",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_soc_propriet",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_darf_simples",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_matricula",
+      "type": "character",
+      "format": "x(30)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    }
+  ],
+  "indexes": [
+    {
+      "name": "frncdr_empresa_dat_impl",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod_empresa",
+        "dat_impl_fornec"
+      ]
+    },
+    {
+      "name": "frncdr_empr_pessoa",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod_empresa",
+        "num_pessoa"
+      ]
+    },
+    {
+      "name": "frncdr_fornecedor_ems2",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cdn_fornecedor"
+      ]
+    },
+    {
+      "name": "frncdr_grp_fornec",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod_grp_fornec"
+      ]
+    },
+    {
+      "name": "frncdr_id",
+      "unique": true,
+      "primary": true,
+      "fields": [
+        "cod_empresa",
+        "cdn_fornecedor"
+      ]
+    },
+    {
+      "name": "frncdr_id_feder",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod_empresa",
+        "cod_pais",
+        "cod_id_feder"
+      ]
+    },
+    {
+      "name": "frncdr_nom_abrev",
+      "unique": true,
+      "primary": false,
+      "fields": [
+        "cod_empresa",
+        "nom_abrev"
+      ]
+    },
+    {
+      "name": "frncdr_nom_abrev_ems2",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "nom_abrev"
+      ]
+    },
+    {
+      "name": "frncdr_nom_pessoa",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod_empresa",
+        "nom_pessoa"
+      ]
+    },
+    {
+      "name": "frncdr_nom_pessoa_ems2",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "nom_pessoa"
+      ]
+    },
+    {
+      "name": "frncdr_nom_pessoa_word",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "nom_pessoa"
+      ]
+    },
+    {
+      "name": "frncdr_num_pessoa",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "num_pessoa"
+      ]
+    },
+    {
+      "name": "frncdr_pais_id_feder_ems2",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod_pais",
+        "cod_id_feder"
+      ]
+    },
+    {
+      "name": "frncdr_tipo_fornec",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod_empresa",
+        "cod_tip_fornec",
+        "cdn_fornecedor"
+      ]
+    }
+  ],
+  "triggers": [
+    {
+      "event": "create",
+      "procedure": "database\/tguni\/tcp\/tcuni007.p"
+    },
+    {
+      "event": "delete",
+      "procedure": "database\/tguni\/tdp\/tduni007.p"
+    },
+    {
+      "event": "write",
+      "procedure": "database\/tguni\/twp\/twuni007.p"
+    }
+  ]
+}

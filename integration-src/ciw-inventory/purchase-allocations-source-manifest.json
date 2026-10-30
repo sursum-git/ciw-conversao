@@ -1,0 +1,36 @@
+{
+  "scope": [
+    "cons_itens_compra_alocado"
+  ],
+  "analysis_copies": true,
+  "files": [
+    {
+      "application": "cons_itens_compra_alocado",
+      "file": "cons_itens_compra_alocado.php",
+      "remote_sha256": "e00e562635a23170b6a2729d5a2d064acdfe8f9a4ecb843ac7ff5a6fb96fcd67",
+      "copied_sha256": "e00e562635a23170b6a2729d5a2d064acdfe8f9a4ecb843ac7ff5a6fb96fcd67",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_itens_compra_alocado",
+      "file": "cons_itens_compra_alocado_grid.class.php",
+      "remote_sha256": "ab24bef6b624bd3cb35070f279fbe7203ded353143ef56f9819ed7b642fdc4fb",
+      "copied_sha256": "6ff51da8d4d40685cb8eae8e0cea823f0d4f4de24373fbf7d090a826f5b336ec",
+      "sensitive_literals_omitted": 5
+    },
+    {
+      "application": "cons_itens_compra_alocado",
+      "file": "cons_itens_compra_alocado_lookup.class.php",
+      "remote_sha256": "e045dcba1b59537b03409ddd2e59979a9e894d9d938d03fb8ef6a54f0f0c326b",
+      "copied_sha256": "e045dcba1b59537b03409ddd2e59979a9e894d9d938d03fb8ef6a54f0f0c326b",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_itens_compra_alocado",
+      "file": "index.php",
+      "remote_sha256": "f5e6485ab1ec687e922441fc674960a19cb396e49cb64244844b63571ad90ef9",
+      "copied_sha256": "7256c8781629f3b88b8d2586763f9e3eb4d562de15ff3c59927d4c92ff1bc332",
+      "sensitive_literals_omitted": 21
+    }
+  ]
+}

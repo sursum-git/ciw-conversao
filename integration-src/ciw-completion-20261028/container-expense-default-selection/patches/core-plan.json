@@ -1,0 +1,191 @@
+{
+  "requiresPredecessorManifestSha256": "b1235ab3d39a9c930abd12f7a05a9674cad4149ac9765169eb6d3b6b940ce5c3",
+  "predecessorBaselines": [
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersImpostosService.p",
+      "canonicalBaselineSha256": "2bcc14896963cd5b6ed09bbabbdce52d7eb389298b7ef1958a51f3083d4e841c",
+      "predecessorManifest": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-tax-only/frozen-v1/manifest.json",
+      "predecessorAlreadyIntegrated": true,
+      "expectedFutureBaselineSha256": "5773023b822d6b4810c6d75580c87a8a8f20d33a0aeb9a08e72bbab2c9cea492"
+    },
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/includes/ContainerProcessBoundary.i",
+      "canonicalBaselineSha256": "a7b5cdca15862746c8781aeaefd15d5291aa0f3261d11e6b363afeebb81167fb",
+      "predecessorManifest": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-tax-only/frozen-v1/manifest.json",
+      "predecessorAlreadyIntegrated": true,
+      "expectedFutureBaselineSha256": "a7b5cdca15862746c8781aeaefd15d5291aa0f3261d11e6b363afeebb81167fb"
+    },
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersProcessosService.p",
+      "canonicalBaselineSha256": "658ef1dd90e97e0c1e101c5562a0162c34a9db557358695d4c2025ef23ad6918",
+      "predecessorManifest": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-tax-only/frozen-v1/manifest.json",
+      "predecessorAlreadyIntegrated": true,
+      "expectedFutureBaselineSha256": "658ef1dd90e97e0c1e101c5562a0162c34a9db557358695d4c2025ef23ad6918"
+    },
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersProcessos.p",
+      "canonicalBaselineSha256": "3a635efa5dc2db6e1ecc8068bed8647e6eabc2d5c61c8761c35ad166efe674ae",
+      "predecessorManifest": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-tax-only/frozen-v1/manifest.json",
+      "predecessorAlreadyIntegrated": true,
+      "expectedFutureBaselineSha256": "3a635efa5dc2db6e1ecc8068bed8647e6eabc2d5c61c8761c35ad166efe674ae"
+    }
+  ],
+  "textPatches": [
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersImpostosService.p",
+      "baselineSha256": "2bcc14896963cd5b6ed09bbabbdce52d7eb389298b7ef1958a51f3083d4e841c",
+      "baselineIsFuture1043": false,
+      "changes": [
+        {
+          "old": " FIELD id AS INTEGER FIELD ordinal AS INTEGER FIELD tax AS INTEGER FIELD calculated AS LOGICAL",
+          "new": " FIELD id AS INTEGER FIELD ordinal AS INTEGER FIELD tax AS INTEGER FIELD calculated AS LOGICAL FIELD description AS CHARACTER"
+        },
+        {
+          "old": "DEFINE TEMP-TABLE ttLink NO-UNDO FIELD id AS INTEGER FIELD percentage AS DECIMAL DECIMALS 10",
+          "new": "DEFINE TEMP-TABLE ttLink NO-UNDO FIELD id AS INTEGER FIELD percentage AS DECIMAL DECIMALS 10 FIELD active AS INTEGER FIELD defaultValue AS DECIMAL DECIMALS 10"
+        },
+        {
+          "old": " FIELD changed AS LOGICAL FIELD useNewCalc AS LOGICAL",
+          "new": " FIELD used AS LOGICAL FIELD changed AS LOGICAL FIELD useNewCalc AS LOGICAL"
+        },
+        {
+          "old": "DEFINE BUFFER bWork FOR ttWork.",
+          "new": "DEFINE BUFFER bWork FOR ttWork.\nDEFINE BUFFER bLink FOR ttLink.\nDEFINE TEMP-TABLE ttSelected NO-UNDO FIELD id AS INTEGER FIELD ordinal AS INTEGER FIELD calculated AS LOGICAL INDEX pk IS PRIMARY UNIQUE id.\nDEFINE TEMP-TABLE ttSelectionOrder NO-UNDO FIELD id AS INTEGER FIELD position AS INTEGER INDEX pk IS PRIMARY UNIQUE id.\nDEFINE VARIABLE lSelectedCalculated AS LOGICAL NO-UNDO."
+        },
+        {
+          "old": " IF cOperation=\"calcular_impostos\" AND NOT hq:QUERY-OFF-END THEN DO:",
+          "new": " IF (cOperation=\"calcular_impostos\" OR cOperation=\"selecionar_despesas\" OR cOperation=\"opcoes_despesas_selecao\") AND NOT hq:QUERY-OFF-END THEN DO:"
+        },
+        {
+          "old": " cPrefix=phContainer:BUFFER-FIELD(\"cod-estabel\"):BUFFER-VALUE.\n IF cPrefix=? OR LENGTH(cPrefix)=0 THEN RUN Fail(\"CONTAINER_COMPANY_CONTEXT\",\"Estabelecimento invalido.\",422).\n cPrefix=SUBSTRING(cPrefix,1,1). IF INDEX(\"0123456789\",cPrefix)=0 THEN RUN Fail(\"CONTAINER_COMPANY_CONTEXT\",\"Estabelecimento invalido.\",422).\n RUN Open(phEmpresas,phEmpresas:NAME + \".cod_emp_ems2 = \" + cPrefix,\"BY \" + phEmpresas:NAME + \".empresa_id\",FALSE).\n DO WHILE NOT hq:QUERY-OFF-END:\n  companyCount=companyCount + 1. iCompany=phEmpresas:BUFFER-FIELD(\"empresa_id\"):BUFFER-VALUE. RUN Next.\n END.\n IF companyCount<>1 OR iCompany=? THEN RUN Fail(\"CONTAINER_COMPANY_CONTEXT\",\"Empresa ausente ou ambigua.\",422).\n",
+          "new": " RUN LoadCompany.\n"
+        },
+        {
+          "old": " /* Catalog/configuration locks precede the persistent expense locks. */\n RUN Open(phDefs,\"TRUE\",\"BY \" + phDefs:NAME + \".despesa_id\",FALSE).\n DO WHILE NOT hq:QUERY-OFF-END:\n  CREATE ttDef.\n  ASSIGN ttDef.id=phDefs:BUFFER-FIELD(\"despesa_id\"):BUFFER-VALUE ttDef.ordinal=phDefs:BUFFER-FIELD(\"ordem\"):BUFFER-VALUE\n   ttDef.tax=phDefs:BUFFER-FIELD(\"log_imposto\"):BUFFER-VALUE ttDef.calculated=phDefs:BUFFER-FIELD(\"log_calculada\"):BUFFER-VALUE\n   ttDef.productBase=phDefs:BUFFER-FIELD(\"log_vl_prod_base_calculo\"):BUFFER-VALUE ttDef.perItem=phDefs:BUFFER-FIELD(\"log_calc_por_item\"):BUFFER-VALUE\n   ttDef.taxType=phDefs:BUFFER-FIELD(\"ind_imposto\"):BUFFER-VALUE ttDef.percentage=phDefs:BUFFER-FIELD(\"perc_calculo\"):BUFFER-VALUE.\n  IF ttDef.taxType=3 THEN DO: IF iIpiId<>0 THEN RUN Fail(\"CONTAINER_TAX_CONFIG\",\"Mais de uma despesa IPI configurada.\",422). iIpiId=ttDef.id. END.\n  RUN Next.\n END.\n RUN Open(phLinks,phLinks:NAME + \".empresa_id = \" + Num(iCompany),\"BY \" + phLinks:NAME + \".empresa_despesa_id\",FALSE).\n DO WHILE NOT hq:QUERY-OFF-END:\n  idValue=phLinks:BUFFER-FIELD(\"despesa_id\"):BUFFER-VALUE.\n  IF idValue=? OR CAN-FIND(FIRST ttLink WHERE ttLink.id=idValue) THEN RUN Fail(\"CONTAINER_TAX_CONFIG\",\"Vinculo empresa/despesa duplicado ou invalido.\",422).\n  IF NOT CAN-FIND(FIRST ttDef WHERE ttDef.id=idValue) THEN RUN Fail(\"CONTAINER_TAX_CONFIG\",\"Despesa do vinculo nao encontrada.\",422).\n  CREATE ttLink. ASSIGN ttLink.id=idValue ttLink.percentage=phLinks:BUFFER-FIELD(\"percentual\"):BUFFER-VALUE\n   ttLink.costId=phLinks:BUFFER-FIELD(\"despesa_custo_id\"):BUFFER-VALUE ttLink.costPercentage=phLinks:BUFFER-FIELD(\"percentual_custo\"):BUFFER-VALUE.\n  RUN Next.\n END.\n RUN Open(phTaxBases,phTaxBases:NAME + \".empresa_id = \" + Num(iCompany),\"BY \" + phTaxBases:NAME + \".imposto_id BY \" + phTaxBases:NAME + \".despesa_id\",FALSE).\n DO WHILE NOT hq:QUERY-OFF-END:\n  CREATE ttBase. ASSIGN ttBase.taxId=phTaxBases:BUFFER-FIELD(\"imposto_id\"):BUFFER-VALUE ttBase.baseId=phTaxBases:BUFFER-FIELD(\"despesa_id\"):BUFFER-VALUE. RUN Next.\n END.\n RUN Open(phRelations,\"TRUE\",\"BY \" + phRelations:NAME + \".despesa_id BY \" + phRelations:NAME + \".despesa_id_base\",FALSE).\n DO WHILE NOT hq:QUERY-OFF-END:\n  CREATE ttRel. ASSIGN ttRel.id=phRelations:BUFFER-FIELD(\"despesa_id\"):BUFFER-VALUE ttRel.baseId=phRelations:BUFFER-FIELD(\"despesa_id_base\"):BUFFER-VALUE. RUN Next.\n END.\n",
+          "new": " RUN LoadCatalog.\n"
+        },
+        {
+          "old": "PROCEDURE UpsertPlan:",
+          "new": "PROCEDURE LoadCompany:\n DEFINE VARIABLE companyCount AS INTEGER NO-UNDO.\n cPrefix=phContainer:BUFFER-FIELD(\"cod-estabel\"):BUFFER-VALUE.\n IF cPrefix=? OR LENGTH(cPrefix)=0 THEN RUN Fail(\"CONTAINER_COMPANY_CONTEXT\",\"Estabelecimento invalido.\",422).\n IF (cOperation=\"selecionar_despesas\" OR cOperation=\"opcoes_despesas_selecao\") AND NOT cPrefix BEGINS \"5\" THEN RUN Fail(\"CONTAINER_SELECTION_MED_REQUIRED\",\"Selecao exige container MED sob lock.\",422).\n cPrefix=SUBSTRING(cPrefix,1,1). IF INDEX(\"0123456789\",cPrefix)=0 THEN RUN Fail(\"CONTAINER_COMPANY_CONTEXT\",\"Estabelecimento invalido.\",422).\n RUN Open(phEmpresas,phEmpresas:NAME + \".cod_emp_ems2 = \" + cPrefix,\"BY \" + phEmpresas:NAME + \".empresa_id\",FALSE).\n DO WHILE NOT hq:QUERY-OFF-END:\n  companyCount=companyCount + 1. iCompany=phEmpresas:BUFFER-FIELD(\"empresa_id\"):BUFFER-VALUE. RUN Next.\n END.\n IF companyCount<>1 OR iCompany=? THEN RUN Fail(\"CONTAINER_COMPANY_CONTEXT\",\"Empresa ausente ou ambigua.\",422).\nEND PROCEDURE.\nPROCEDURE LoadCatalog:\n DEFINE VARIABLE idValue AS INTEGER NO-UNDO.\n /* Catalog/configuration locks precede the persistent expense locks. */\n RUN Open(phDefs,\"TRUE\",\"BY \" + phDefs:NAME + \".despesa_id\",FALSE).\n DO WHILE NOT hq:QUERY-OFF-END:\n  CREATE ttDef.\n  ASSIGN ttDef.id=phDefs:BUFFER-FIELD(\"despesa_id\"):BUFFER-VALUE ttDef.ordinal=phDefs:BUFFER-FIELD(\"ordem\"):BUFFER-VALUE\n   ttDef.tax=phDefs:BUFFER-FIELD(\"log_imposto\"):BUFFER-VALUE ttDef.calculated=phDefs:BUFFER-FIELD(\"log_calculada\"):BUFFER-VALUE\n   ttDef.productBase=phDefs:BUFFER-FIELD(\"log_vl_prod_base_calculo\"):BUFFER-VALUE ttDef.perItem=phDefs:BUFFER-FIELD(\"log_calc_por_item\"):BUFFER-VALUE\n   ttDef.taxType=phDefs:BUFFER-FIELD(\"ind_imposto\"):BUFFER-VALUE ttDef.percentage=phDefs:BUFFER-FIELD(\"perc_calculo\"):BUFFER-VALUE.\n  IF ttDef.taxType=3 THEN DO: IF iIpiId<>0 THEN RUN Fail(\"CONTAINER_TAX_CONFIG\",\"Mais de uma despesa IPI configurada.\",422). iIpiId=ttDef.id. END.\n  IF cOperation=\"selecionar_despesas\" OR cOperation=\"opcoes_despesas_selecao\" THEN ttDef.description=phDefs:BUFFER-FIELD(\"descricao\"):BUFFER-VALUE.\n  RUN Next.\n END.\n RUN Open(phLinks,phLinks:NAME + \".empresa_id = \" + Num(iCompany),\"BY \" + phLinks:NAME + \".empresa_despesa_id\",FALSE).\n DO WHILE NOT hq:QUERY-OFF-END:\n  idValue=phLinks:BUFFER-FIELD(\"despesa_id\"):BUFFER-VALUE.\n  IF idValue=? OR CAN-FIND(FIRST ttLink WHERE ttLink.id=idValue) THEN RUN Fail(\"CONTAINER_TAX_CONFIG\",\"Vinculo empresa/despesa duplicado ou invalido.\",422).\n  IF NOT CAN-FIND(FIRST ttDef WHERE ttDef.id=idValue) THEN RUN Fail(\"CONTAINER_TAX_CONFIG\",\"Despesa do vinculo nao encontrada.\",422).\n  CREATE ttLink. ASSIGN ttLink.id=idValue ttLink.percentage=phLinks:BUFFER-FIELD(\"percentual\"):BUFFER-VALUE\n   ttLink.costId=phLinks:BUFFER-FIELD(\"despesa_custo_id\"):BUFFER-VALUE ttLink.costPercentage=phLinks:BUFFER-FIELD(\"percentual_custo\"):BUFFER-VALUE.\n  IF cOperation=\"selecionar_despesas\" OR cOperation=\"opcoes_despesas_selecao\" THEN ASSIGN ttLink.active=phLinks:BUFFER-FIELD(\"log_ativo\"):BUFFER-VALUE ttLink.defaultValue=phLinks:BUFFER-FIELD(\"vl_padrao\"):BUFFER-VALUE.\n  RUN Next.\n END.\n RUN Open(phTaxBases,phTaxBases:NAME + \".empresa_id = \" + Num(iCompany),\"BY \" + phTaxBases:NAME + \".imposto_id BY \" + phTaxBases:NAME + \".despesa_id\",FALSE).\n DO WHILE NOT hq:QUERY-OFF-END:\n  CREATE ttBase. ASSIGN ttBase.taxId=phTaxBases:BUFFER-FIELD(\"imposto_id\"):BUFFER-VALUE ttBase.baseId=phTaxBases:BUFFER-FIELD(\"despesa_id\"):BUFFER-VALUE. RUN Next.\n END.\n RUN Open(phRelations,\"TRUE\",\"BY \" + phRelations:NAME + \".despesa_id BY \" + phRelations:NAME + \".despesa_id_base\",FALSE).\n DO WHILE NOT hq:QUERY-OFF-END:\n  CREATE ttRel. ASSIGN ttRel.id=phRelations:BUFFER-FIELD(\"despesa_id\"):BUFFER-VALUE ttRel.baseId=phRelations:BUFFER-FIELD(\"despesa_id_base\"):BUFFER-VALUE. RUN Next.\n END.\nEND PROCEDURE.\n{sursum-api/includes/ContainerExpenseDefaultsPlan.i}\nPROCEDURE UpsertPlan:"
+        },
+        {
+          "old": "  joBefore:Add(Num(ttExpense.id),Snapshot(phExpenses,",
+          "new": "  IF cOperation=\"selecionar_despesas\" THEN ASSIGN ttExpense.used=phExpenses:BUFFER-FIELD(\"log_utilizado\"):BUFFER-VALUE ttExpense.percentage=phExpenses:BUFFER-FIELD(\"perc_calc\"):BUFFER-VALUE ttExpense.memoryText=phExpenses:BUFFER-FIELD(\"memoria_calculo\"):BUFFER-VALUE.\n  joBefore:Add(Num(ttExpense.id),Snapshot(phExpenses,"
+        },
+        {
+          "old": "  ttExpense.percentage=percentage ttExpense.calcId=0 ttExpense.useNewCalc=useCalc ttExpense.memoryText=memoryText ttExpense.changed=TRUE.",
+          "new": "  ttExpense.percentage=percentage ttExpense.calcId=0 ttExpense.useNewCalc=useCalc ttExpense.memoryText=memoryText ttExpense.changed=TRUE.\n IF cOperation=\"selecionar_despesas\" THEN ttExpense.ledgerId=0."
+        },
+        {
+          "old": " FOR EACH ttExpense WHERE ttExpense.manual=FALSE:\n  FIND ttDef",
+          "new": " FOR EACH ttExpense WHERE ttExpense.manual=FALSE:\n  IF cOperation=\"selecionar_despesas\" AND lSelectedCalculated AND NOT CAN-FIND(FIRST ttSelected WHERE ttSelected.id=ttExpense.expenseId AND ttSelected.calculated) THEN NEXT.\n  FIND ttDef"
+        },
+        {
+          "old": "CREATE ttWork. ASSIGN ttWork.kind=\"calculated\" ttWork.id=ttDef.id ttWork.ordinal=ttDef.ordinal.",
+          "new": "CREATE ttWork. ASSIGN ttWork.kind=\"calculated\" ttWork.id=ttDef.id ttWork.ordinal=ttDef.ordinal.\n   IF cOperation=\"selecionar_despesas\" THEN DO: FIND ttSelectionOrder WHERE ttSelectionOrder.id=ttDef.id. ttWork.ordinal=ttSelectionOrder.position. END."
+        },
+        {
+          "old": "   FOR EACH ttRel WHERE ttRel.id=ttWork.id:\n    IF CAN-FIND",
+          "new": "   IF cOperation<>\"selecionar_despesas\" THEN FOR EACH ttRel WHERE ttRel.id=ttWork.id:\n    IF CAN-FIND"
+        },
+        {
+          "old": " IF cOperation=\"sincronizar\" OR cOperation=\"calcular_impostos\" THEN DO:\n  RUN NextCalculoId",
+          "new": " IF cOperation=\"sincronizar\" OR cOperation=\"calcular_impostos\" OR cOperation=\"selecionar_despesas\" THEN DO:\n  RUN NextCalculoId"
+        },
+        {
+          "old": "phExpenses:BUFFER-FIELD(\"calc_imp_container_id\"):BUFFER-VALUE=IF ttExpense.useNewCalc THEN iCalcId ELSE 0",
+          "new": "phExpenses:BUFFER-FIELD(\"calc_imp_container_id\"):BUFFER-VALUE=IF ttExpense.useNewCalc THEN iCalcId ELSE (IF cOperation=\"selecionar_despesas\" THEN ttExpense.calcId ELSE 0)"
+        },
+        {
+          "old": "phExpenses:BUFFER-FIELD(\"cta_corren_custo_distr_id\"):BUFFER-VALUE=0 phExpenses:BUFFER-FIELD(\"perc_calc\"):BUFFER-VALUE=ttExpense.percentage",
+          "new": "phExpenses:BUFFER-FIELD(\"cta_corren_custo_distr_id\"):BUFFER-VALUE=(IF cOperation=\"selecionar_despesas\" THEN ttExpense.ledgerId ELSE 0) phExpenses:BUFFER-FIELD(\"perc_calc\"):BUFFER-VALUE=ttExpense.percentage"
+        },
+        {
+          "old": "  IF NOT phExpenses:BUFFER-VALIDATE() THEN UNDO, THROW NEW Progress.Lang.AppError(\"Expense validation failed.\",0).",
+          "new": "  IF cOperation=\"selecionar_despesas\" THEN phExpenses:BUFFER-FIELD(\"log_utilizado\"):BUFFER-VALUE=ttExpense.used.\n  IF NOT phExpenses:BUFFER-VALIDATE() THEN UNDO, THROW NEW Progress.Lang.AppError(\"Expense validation failed.\",0)."
+        },
+        {
+          "old": " AND cOperation<>\"atualizar_despesas_calculadas\" THEN RUN Fail",
+          "new": " AND cOperation<>\"selecionar_despesas\" AND cOperation<>\"opcoes_despesas_selecao\" AND cOperation<>\"atualizar_despesas_calculadas\" THEN RUN Fail"
+        },
+        {
+          "old": "IF cField<>\"operation\" AND cField<>\"container_id\" THEN RUN Fail",
+          "new": "IF cField<>\"operation\" AND cField<>\"container_id\" AND NOT (cOperation=\"selecionar_despesas\" AND cField=\"despesa_ids\") AND NOT ((cOperation=\"selecionar_despesas\" OR cOperation=\"opcoes_despesas_selecao\") AND (cField=\"ordem_campo\" OR cField=\"ordem_direcao\")) THEN RUN Fail"
+        },
+        {
+          "old": " joBefore=NEW JsonObject(). jaSteps=NEW JsonArray().",
+          "new": " IF cOperation=\"selecionar_despesas\" THEN RUN DefaultsSelectionInput.\n joBefore=NEW JsonObject(). jaSteps=NEW JsonArray()."
+        },
+        {
+          "old": "Num(iContainer),TRUE) THEN RUN Fail(\"CONTAINER_NOT_FOUND\"",
+          "new": "Num(iContainer),cOperation<>\"opcoes_despesas_selecao\") THEN RUN Fail(\"CONTAINER_NOT_FOUND\""
+        },
+        {
+          "old": "  IF cOperation=\"calcular_impostos\" THEN DO:\n   iTaxOnlyStarted=ETIME.",
+          "new": "  IF cOperation=\"calcular_impostos\" OR cOperation=\"selecionar_despesas\" OR cOperation=\"opcoes_despesas_selecao\" THEN DO:\n   iTaxOnlyStarted=ETIME."
+        },
+        {
+          "old": " /* Standalone: the real transaction ended. Nested: only the caller can confirm. */",
+          "new": " IF cOperation=\"opcoes_despesas_selecao\" THEN RETURN.\n /* Standalone: the real transaction ended. Nested: only the caller can confirm. */"
+        },
+        {
+          "old": "PROCEDURE FiscalPlan:\n RUN CheckInputs. RUN LoadState.",
+          "new": "PROCEDURE FiscalPlan:\n IF cOperation=\"opcoes_despesas_selecao\" THEN DO:\n  RUN DefaultsPolicy. RUN LoadCompany. RUN LoadCatalog. RUN DefaultsBuildOrder. RUN DefaultsOptions. RETURN.\n END.\n RUN CheckInputs. RUN LoadState."
+        },
+        {
+          "old": " ELSE IF cOperation=\"calcular_impostos\" THEN RUN TaxPlan.",
+          "new": " ELSE IF cOperation=\"calcular_impostos\" THEN RUN TaxPlan.\n ELSE IF cOperation=\"selecionar_despesas\" THEN DO: RUN DefaultsBuildOrder. RUN DefaultsPlan. RUN CalculatedPlan. RUN TaxPlan. RUN IpiPlan. END."
+        }
+      ]
+    },
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/includes/ContainerProcessBoundary.i",
+      "baselineSha256": "a7b5cdca15862746c8781aeaefd15d5291aa0f3261d11e6b363afeebb81167fb",
+      "baselineIsFuture1043": false,
+      "changes": [
+        {
+          "old": " ELSE IF resourceValue<>\"impostos\" OR (operationValue<>\"sincronizar\" AND operationValue<>\"calcular_impostos\") THEN",
+          "new": " ELSE IF resourceValue=\"despesas-selecao\" AND operationValue=\"options\" THEN fieldsValue=fieldsValue + \",ordem_campo,ordem_direcao\".\n ELSE IF resourceValue=\"impostos\" AND operationValue=\"selecionar_despesas\" THEN DO:\n  fieldsValue=fieldsValue + \",despesa_ids,ordem_campo,ordem_direcao\".\n  IF NOT requestValue:Has(\"despesa_ids\") THEN UNDO, THROW NEW Progress.Lang.AppError(\"Selecao obrigatoria.\",1).\n  IF requestValue:GetType(\"despesa_ids\")<>JsonDataType:ARRAY THEN UNDO, THROW NEW Progress.Lang.AppError(\"Selecao invalida.\",1).\n  IF requestValue:GetJsonArray(\"despesa_ids\"):Length<1 OR requestValue:GetJsonArray(\"despesa_ids\"):Length>100 THEN UNDO, THROW NEW Progress.Lang.AppError(\"Selecione de1a100despesas.\",1).\n END.\n ELSE IF resourceValue<>\"impostos\" OR (operationValue<>\"sincronizar\" AND operationValue<>\"calcular_impostos\") THEN"
+        }
+      ]
+    },
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersProcessosService.p",
+      "baselineSha256": "658ef1dd90e97e0c1e101c5562a0162c34a9db557358695d4c2025ef23ad6918",
+      "baselineIsFuture1043": false,
+      "changes": [
+        {
+          "old": " rootTransaction: DO TRANSACTION ON ERROR UNDO, THROW:",
+          "new": " IF op=\"options\" THEN DO:\n  clean:Set(\"operation\",\"opcoes_despesas_selecao\").\n  RUN VALUE(servicePath)(phFiscal[1],phFiscal[2],phFiscal[3],phFiscal[4],phFiscal[5],phFiscal[6],phFiscal[7],phFiscal[8],phFiscal[9],phFiscal[10],phFiscal[11],phHeaderRuntime,policy,?,clean,OUTPUT poResponse).\n  RETURN.\n END.\n rootTransaction: DO TRANSACTION ON ERROR UNDO, THROW:"
+        },
+        {
+          "old": "  IF op=\"calcular_impostos\" THEN DO:",
+          "new": "  IF op=\"calcular_impostos\" OR op=\"selecionar_despesas\" THEN DO:"
+        },
+        {
+          "old": "  IF op=\"sincronizar\" OR op=\"calcular_impostos\" THEN DO:",
+          "new": "  IF op=\"sincronizar\" OR op=\"calcular_impostos\" OR op=\"selecionar_despesas\" THEN DO:"
+        },
+        {
+          "old": "IF op=\"calcular_impostos\" THEN poResponse:Add(\"committed\",TRUE).",
+          "new": "IF op=\"calcular_impostos\" OR op=\"selecionar_despesas\" THEN poResponse:Add(\"committed\",TRUE)."
+        },
+        {
+          "old": "(IF op=\"calcular_impostos\" THEN \"impostos calculados; memoria \" ELSE \"impostos sincronizados; memoria \")",
+          "new": "(IF op=\"calcular_impostos\" THEN \"impostos calculados; memoria \" ELSE IF op=\"selecionar_despesas\" THEN \"defaults e despesas selecionadas processados; memoria \" ELSE \"impostos sincronizados; memoria \")"
+        }
+      ]
+    },
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersProcessos.p",
+      "baselineSha256": "3a635efa5dc2db6e1ecc8068bed8647e6eabc2d5c61c8761c35ad166efe674ae",
+      "baselineIsFuture1043": false,
+      "changes": [
+        {
+          "old": " IF op=\"calcular_impostos\" AND NOT cEstab BEGINS \"5\" THEN",
+          "new": " IF (op=\"calcular_impostos\" OR op=\"selecionar_despesas\" OR op=\"options\") AND NOT cEstab BEGINS \"5\" THEN"
+        }
+      ]
+    }
+  ]
+}

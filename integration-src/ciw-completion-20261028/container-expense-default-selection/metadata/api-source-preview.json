@@ -1,0 +1,165 @@
+{
+  "code": "motor_progress_container_processos",
+  "name": "Motor Progress — Processos do Container",
+  "baseUrl": "http://127.0.0.1:19910/med/web",
+  "responseContract": "sursum-programs",
+  "operations": [
+    {
+      "code": "painel_read",
+      "name": "Painel do Container — Consultar",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/containers-painel",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "read",
+        "resource": "painel"
+      },
+      "requestContextFields": [
+        "container_id"
+      ],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": null
+    },
+    {
+      "code": "painel_get",
+      "name": "Painel do Container — Detalhar",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/containers-painel",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "get",
+        "resource": "painel"
+      },
+      "requestContextFields": [
+        "container_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "gerar_versao",
+      "allowProcess": true,
+      "name": "Gerar versão de custo",
+      "type": "custom",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/containers-processos",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "versoes",
+        "operation": "gerar"
+      },
+      "requestContextFields": [
+        "container_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "fechar_custos",
+      "allowProcess": true,
+      "name": "Fechar custos dos itens",
+      "type": "custom",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/containers-processos",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "custos",
+        "operation": "fechar"
+      },
+      "requestContextFields": [
+        "container_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "sincronizar_impostos",
+      "allowProcess": true,
+      "name": "Sincronizar impostos",
+      "type": "custom",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/containers-processos",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "impostos",
+        "operation": "sincronizar"
+      },
+      "requestContextFields": [
+        "container_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "calcular_impostos",
+      "allowProcess": true,
+      "name": "Calcular somente impostos do container MED",
+      "type": "custom",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/containers-processos",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "impostos",
+        "operation": "calcular_impostos"
+      },
+      "requestContextFields": [
+        "container_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "despesas_selecao_opcoes",
+      "name": "Selecionar despesas do container MED — options",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/containers-processos",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "despesas-selecao",
+        "operation": "options"
+      },
+      "requestContextFields": [
+        "container_id"
+      ],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "selecionar_despesas",
+      "name": "Selecionar despesas do container MED — selecionar_despesas",
+      "type": "custom",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/containers-processos",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "impostos",
+        "operation": "selecionar_despesas"
+      },
+      "requestContextFields": [
+        "container_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null,
+      "allowProcess": true
+    }
+  ]
+}

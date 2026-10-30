@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "database": "espec",
+  "updatedAt": "15/10/2026 09:25:55,738-03:00",
+  "table": "coloracoes",
+  "tableLastUpdate": "",
+  "data": [
+    {
+      "name": "coloracao_id",
+      "database": "espec",
+      "type": "integer",
+      "label": "ID",
+      "format": ">,>>>,>>9",
+      "viewAs": "",
+      "listExpression": "",
+      "options": [],
+      "mandatory": false,
+      "extent": 0,
+      "indices": "primario"
+    },
+    {
+      "name": "descricao",
+      "database": "espec",
+      "type": "character",
+      "label": "Descri��o",
+      "format": "x(50)",
+      "viewAs": "",
+      "listExpression": "",
+      "options": [],
+      "mandatory": false,
+      "extent": 0,
+      "indices": ""
+    },
+    {
+      "name": "log_inativo",
+      "database": "espec",
+      "type": "logical",
+      "label": "Inativo?",
+      "format": "sim/n�o",
+      "viewAs": "",
+      "listExpression": "",
+      "options": [],
+      "mandatory": false,
+      "extent": 0,
+      "indices": ""
+    }
+  ]
+}

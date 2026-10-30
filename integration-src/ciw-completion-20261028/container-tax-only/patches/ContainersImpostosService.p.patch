@@ -1,0 +1,74 @@
+--- D:\opencode\motor-progress\v2\sursum-api\programs\ContainersImpostosService.p
++++ D:\opencode\motor-progress\v2\sursum-api\programs\ContainersImpostosService.p
+@@ -91,6 +91,9 @@
+ DEFINE VARIABLE joOld AS JsonObject NO-UNDO.
+ DEFINE VARIABLE cMemory AS CHARACTER NO-UNDO.
+ DEFINE VARIABLE lcMemory AS LONGCHAR NO-UNDO.
++DEFINE VARIABLE iTaxOnlyRows AS INTEGER NO-UNDO.
++DEFINE VARIABLE iTaxOnlyStarted AS INTEGER NO-UNDO.
++DEFINE VARIABLE lTaxOnlyCompleted AS LOGICAL NO-UNDO.
+ 
+ FUNCTION Num RETURNS CHARACTER (v AS INTEGER): RETURN TRIM(STRING(v,"->>>>>>>>>9")). END FUNCTION.
+ FUNCTION Id RETURNS INTEGER (o AS JsonObject,f AS CHARACTER):
+@@ -140,6 +143,10 @@
+  hq:GET-NEXT(IF lWriteQuery THEN EXCLUSIVE-LOCK ELSE SHARE-LOCK,NO-WAIT) NO-ERROR. RUN CheckQuery.
+ END PROCEDURE.
+ PROCEDURE CheckQuery:
++ IF cOperation="calcular_impostos" AND NOT hq:QUERY-OFF-END THEN DO:
++  iTaxOnlyRows=iTaxOnlyRows + 1.
++  IF iTaxOnlyRows>50000 OR ETIME - iTaxOnlyStarted>10000 THEN RUN Fail("CONTAINER_TAX_LIMIT","Limite do comando fiscal excedido.",503).
++ END.
+  IF hqBuffer:LOCKED THEN RUN Fail("CONTAINER_BUSY","Registro em uso. Tente novamente.",409).
+  IF ERROR-STATUS:ERROR THEN UNDO, THROW NEW Progress.Lang.AppError("Query read failed.",0).
+ END PROCEDURE.
+@@ -431,7 +438,7 @@
+ END PROCEDURE.
+ PROCEDURE PersistPlan:
+  DEFINE VARIABLE oldRow AS JsonObject NO-UNDO.
+- IF cOperation="sincronizar" THEN DO:
++ IF cOperation="sincronizar" OR cOperation="calcular_impostos" THEN DO:
+   RUN NextCalculoId IN phIdProvider (OUTPUT iCalcId).
+   IF iCalcId=? OR iCalcId<1 THEN RUN Fail("CONTAINER_SEQUENCE_INVALID","Sequencia do calculo invalida.",409).
+   IF NOT phCalcs:BUFFER-CREATE() THEN UNDO, THROW NEW Progress.Lang.AppError("Calculation creation failed.",0).
+@@ -478,17 +485,21 @@
+  IF NOT poRequest:Has("operation") THEN RUN Fail("CONTAINER_OPERATION_INVALID","Informe operacao fiscal.",422).
+  IF poRequest:GetType("operation")<>JsonDataType:STRING THEN RUN Fail("CONTAINER_OPERATION_INVALID","Operacao fiscal invalida.",422).
+  cOperation=poRequest:GetCharacter("operation").
+- IF cOperation<>"sincronizar" AND cOperation<>"atualizar_despesas_calculadas" THEN RUN Fail("CONTAINER_OPERATION_INVALID","Operacao fiscal invalida.",422).
++ IF cOperation<>"sincronizar" AND cOperation<>"calcular_impostos" AND cOperation<>"atualizar_despesas_calculadas" THEN RUN Fail("CONTAINER_OPERATION_INVALID","Operacao fiscal invalida.",422).
+  cNames=poRequest:GetNames().
+  DO i=1 TO EXTENT(cNames): cField=cNames[i]. IF cField<>"operation" AND cField<>"container_id" THEN RUN Fail("CONTAINER_VALIDATION","Campo nao permitido na operacao fiscal.",422). END.
+  iContainer=Id(poRequest,"container_id"). IF iContainer=? THEN RUN Fail("CONTAINER_VALIDATION","Container deve ser inteiro positivo valido.",422).
+  joBefore=NEW JsonObject(). jaSteps=NEW JsonArray(). jaEvents=NEW JsonArray(). jaWarnings=NEW JsonArray().
+  DO TRANSACTION ON ERROR UNDO, THROW:
+   IF NOT Found(phContainer,phContainer:NAME + ".nr-container = " + Num(iContainer),TRUE) THEN RUN Fail("CONTAINER_NOT_FOUND","Container nao encontrado.",404).
+-  RUN CheckInputs. RUN LoadState.
+-  IF cOperation="sincronizar" THEN DO: RUN TaxPlan. RUN IpiPlan. END.
+-  ELSE RUN CalculatedPlan.
+-  RUN PersistPlan.
++  IF cOperation="calcular_impostos" THEN DO:
++   iTaxOnlyStarted=ETIME.
++   DO STOP-AFTER 10 ON STOP UNDO, LEAVE:
++    RUN FiscalPlan. lTaxOnlyCompleted=TRUE.
++   END.
++   IF NOT lTaxOnlyCompleted THEN RUN Fail("CONTAINER_TAX_LIMIT","Tempo limite do comando fiscal excedido.",503).
++  END.
++  ELSE RUN FiscalPlan.
+  END.
+  /* Standalone: the real transaction ended. Nested: only the caller can confirm. */
+  joData=NEW JsonObject(). joData:Add("container_id",iContainer). joData:Add("calc_imp_container_id",iCalcId).
+@@ -517,6 +528,14 @@
+   END.
+  END FINALLY.
+ END.
++/* One shared planner/persister path. The new command deliberately skips IPI. */
++PROCEDURE FiscalPlan:
++ RUN CheckInputs. RUN LoadState.
++ IF cOperation="sincronizar" THEN DO: RUN TaxPlan. RUN IpiPlan. END.
++ ELSE IF cOperation="calcular_impostos" THEN RUN TaxPlan.
++ ELSE RUN CalculatedPlan.
++ RUN PersistPlan.
++END PROCEDURE.
+ PROCEDURE BuildError:
+  DEFINE INPUT PARAMETER code AS CHARACTER NO-UNDO. DEFINE INPUT PARAMETER messageText AS CHARACTER NO-UNDO. DEFINE INPUT PARAMETER statusCode AS INTEGER NO-UNDO.
+  DEFINE VARIABLE e AS JsonObject NO-UNDO.

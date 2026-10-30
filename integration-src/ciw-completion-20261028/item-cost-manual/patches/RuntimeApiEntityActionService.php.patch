@@ -1,0 +1,26 @@
+--- D:/opencode/construtor-pg/backend/src/Runtime/RuntimeApiEntityActionService.php
++++ D:/opencode/construtor-pg/backend/src/Runtime/RuntimeApiEntityActionService.php
+@@ -922,6 +922,7 @@
+ 
+         }
+ 
++        if (RuntimeItemCostManualRead::supports($definition)) { RuntimeItemCostManualRead::readResponse($body); }
+         $containerFiscalKey = match ($definition['entityCode'] ?? null) {
+             'container_calculos_impostos_med_progress' => 'calc_imp_container_id',
+             'container_despesa_memoria_med_progress' => 'despesa_container_id',
+@@ -999,6 +1000,7 @@
+         if (RuntimeContainerExpenseBatch::supports($definition)) { return $this->containerExpenseBatchRequest($definition,[],$payload,'get'); }
+ 
+         $id = $this->extractRecordId($definition, $payload);
++        if (RuntimeItemCostManualRead::supports($definition)) { RuntimeItemCostManualRead::getRequest($definition,$payload,$id); }
+         if (RuntimeImportDiscountRead::supports($definition)) { RuntimeImportDiscountRead::submittedAliases($payload,$id); }
+         if (RuntimeCostDistributionRead::supports($definition)) { RuntimeCostDistributionRead::submittedAliases($payload,$id); }
+         if (RuntimeCostDistributionLedgerRead::supports($definition)) { RuntimeCostDistributionLedgerRead::submittedAliases($payload,$id); }
+@@ -1065,6 +1067,7 @@
+                 if (($response['body']['success']??null)!==true || isset($response['body']['error'])) { throw new RuntimeHttpException('COST_DISTRIBUTION_RESPONSE_INVALID','Resposta de distribuição inválida.',502); }
+                 RuntimeCostDistributionLedgerRead::assertRow($item,$context,$id);
+             }
++            if (RuntimeItemCostManualRead::supports($definition)) { RuntimeItemCostManualRead::getResponse($response['body'],$item,$id); }
+             $mapped = $this->enrichRows($definition, [$this->mapItem($definition, $item)])[0] ?? [];
+ 
+             ApiRequestContext::assertRows([$mapped], $context);

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="App\Tests\Builder\ApiOperationTypeRegistryTest" file="D:\opencode\conversao-sc\integration-src\ciw-completion-20261028\sample-container-items-readonly\operation-type-fix\tests\ApiOperationTypeRegistryTest.php" tests="3" assertions="13" errors="0" failures="1" skipped="0" time="0.025341">
+    <testcase name="testSampleGetRemainsDetailWithSameReadGetBody" file="D:\opencode\conversao-sc\integration-src\ciw-completion-20261028\sample-container-items-readonly\operation-type-fix\tests\ApiOperationTypeRegistryTest.php" line="8" class="App\Tests\Builder\ApiOperationTypeRegistryTest" classname="App.Tests.Builder.ApiOperationTypeRegistryTest" assertions="3" time="0.022527">
+      <failure type="PHPUnit\Framework\ExpectationFailedException">App\Tests\Builder\ApiOperationTypeRegistryTest::testSampleGetRemainsDetailWithSameReadGetBody&#13;
+Failed asserting that two strings are identical.
+--- Expected
++++ Actual
+@@ @@
+-'detail'
++'custom'
+&#13;
+D:\opencode\conversao-sc\integration-src\ciw-completion-20261028\sample-container-items-readonly\operation-type-fix\tests\ApiOperationTypeRegistryTest.php:9</failure>
+    </testcase>
+    <testcase name="testUncorrectedGetTypeSilentlyNormalizesToCustom" file="D:\opencode\conversao-sc\integration-src\ciw-completion-20261028\sample-container-items-readonly\operation-type-fix\tests\ApiOperationTypeRegistryTest.php" line="13" class="App\Tests\Builder\ApiOperationTypeRegistryTest" classname="App.Tests.Builder.ApiOperationTypeRegistryTest" assertions="3" time="0.001333"/>
+    <testcase name="testSelectionOptionsAndProcessTypesRemainClosedAndPreserved" file="D:\opencode\conversao-sc\integration-src\ciw-completion-20261028\sample-container-items-readonly\operation-type-fix\tests\ApiOperationTypeRegistryTest.php" line="16" class="App\Tests\Builder\ApiOperationTypeRegistryTest" classname="App.Tests.Builder.ApiOperationTypeRegistryTest" assertions="7" time="0.001482"/>
+  </testsuite>
+</testsuites>

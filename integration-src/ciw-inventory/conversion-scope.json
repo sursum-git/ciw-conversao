@@ -1,0 +1,25 @@
+{
+  "scope": "CIW",
+  "execution_order": "phases_ascending",
+  "requested_on": "2026-10-16",
+  "temporarily_deferred_menu_items": [
+    {
+      "menu_section": "Tarefas",
+      "label": "Conta corrente fornecedor",
+      "reason": "Exclusão temporária solicitada explicitamente pelo usuário.",
+      "technical_target": null,
+      "target_resolution": "Pendente de leitura do cadastro dinâmico ticontrole.itens_menu; não inferir destino só pelo nome de aplicação.",
+      "guard": "Não converter nem publicar o item ou seu fluxo específico até identificar o destino ou receber nova orientação. A exclusão não suspende automaticamente todos os serviços financeiros compartilhados."
+    }
+  ],
+  "preserve_existing_publications": true,
+  "preserve_historical_data": true,
+  "no_commit_push_schema_reseed": true,
+  "current_stage": "phase1b_cadastros_conversion_permissions_deferred_by_user",
+  "priority_override": {
+    "date": "2026-10-20",
+    "instruction": "Converter outras aplicacoes e deixar permissoes por ultimo",
+    "permissions_integration": "deferred_to_final_stage",
+    "preserve_existing_authentication_and_controls": true
+  }
+}

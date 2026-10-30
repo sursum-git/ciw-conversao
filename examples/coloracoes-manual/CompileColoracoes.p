@@ -1,0 +1,12 @@
+/* Somente staging do compilador 12.2. Nao publicar este runner. */
+DEFINE VARIABLE i AS INTEGER NO-UNDO.
+OUTPUT TO "compile-coloracoes.log".
+PUT UNFORMATTED "OpenEdge " PROVERSION SKIP.
+COMPILE "ConsultarColoracoesManual.p" SAVE NO-ERROR.
+PUT UNFORMATTED "ConsultarColoracoesManual.p COMPILER:ERROR=" COMPILER:ERROR SKIP.
+DO i = 1 TO ERROR-STATUS:NUM-MESSAGES:
+    PUT UNFORMATTED ERROR-STATUS:GET-MESSAGE(i) SKIP.
+END.
+PUT UNFORMATTED (IF COMPILER:ERROR THEN "FAIL: compile" ELSE "PASS: compile 12.2 coloracoes") SKIP.
+OUTPUT CLOSE.
+QUIT.

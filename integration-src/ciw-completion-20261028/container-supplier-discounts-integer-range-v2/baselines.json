@@ -1,0 +1,63 @@
+{
+  "predecessorManifest": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\frozen-v1\\manifest.json",
+  "predecessorManifestSha256": "e2787dfe2f59cb5fd393c75f6db00fab308b93874c2a11317acb188d97bb3b8a",
+  "files": [
+    {
+      "relative": "backend/src/Builder/ProgramBuilderService.php",
+      "source": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\candidate\\backend\\src\\Builder\\ProgramBuilderService.php",
+      "futureCanonical": "D:\\opencode\\construtor-pg\\backend\\src\\Builder\\ProgramBuilderService.php",
+      "baselineSha256": "a58a98b85127c85377b1592c2f6bde38b0a8bf78ce86d343bed239cf084e0401",
+      "predecessor": "filterOnly e2787dfe"
+    },
+    {
+      "relative": "src/page-engine/PageDefinitionNormalizer.js",
+      "source": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\candidate\\src\\page-engine\\PageDefinitionNormalizer.js",
+      "futureCanonical": "D:\\opencode\\construtor-pg\\src\\page-engine\\PageDefinitionNormalizer.js",
+      "baselineSha256": "fb8a5b4612e4c5b7c839712d582515214022df809d86083dfb2c2d158868d533",
+      "predecessor": "filterOnly e2787dfe"
+    },
+    {
+      "relative": "src/crud-engine/CrudDefinitionValidator.js",
+      "source": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\candidate\\src\\crud-engine\\CrudDefinitionValidator.js",
+      "futureCanonical": "D:\\opencode\\construtor-pg\\src\\crud-engine\\CrudDefinitionValidator.js",
+      "baselineSha256": "a42792d03c65ef1e9b7c2a1b21f32c834861d63347789cde7e1e68202c6dfa0a",
+      "predecessor": "filterOnly e2787dfe"
+    },
+    {
+      "relative": "src/crud-engine/CrudEngine.js",
+      "source": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\candidate\\src\\crud-engine\\CrudEngine.js",
+      "futureCanonical": "D:\\opencode\\construtor-pg\\src\\crud-engine\\CrudEngine.js",
+      "baselineSha256": "ae49f19edb1cc37fd7725c86ce85300b07868d693cc72a2f27a64f716d233d81",
+      "predecessor": "filterOnly e2787dfe"
+    },
+    {
+      "relative": "src/crud-engine/CrudKendoFormRenderer.js",
+      "source": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\candidate\\src\\crud-engine\\CrudKendoFormRenderer.js",
+      "futureCanonical": "D:\\opencode\\construtor-pg\\src\\crud-engine\\CrudKendoFormRenderer.js",
+      "baselineSha256": "430173106a0c9b420f346ab007f423cce4791821122ebec406bdc425e432338e",
+      "predecessor": "filterOnly e2787dfe"
+    },
+    {
+      "relative": "public/metadata/schemas/crud-definition-v1.schema.json",
+      "source": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\candidate\\public\\metadata\\schemas\\crud-definition-v1.schema.json",
+      "futureCanonical": "D:\\opencode\\construtor-pg\\public\\metadata\\schemas\\crud-definition-v1.schema.json",
+      "baselineSha256": "c8631a7a5ca50cf4d7911ed1fc372a81b10a5f9011ec366f632e1ecdbf33a8b0",
+      "predecessor": "filterOnly e2787dfe"
+    },
+    {
+      "relative": "src/crud-engine/CrudKendoGridRenderer.js",
+      "source": "D:\\opencode\\construtor-pg\\src\\crud-engine\\CrudKendoGridRenderer.js",
+      "futureCanonical": "D:\\opencode\\construtor-pg\\src\\crud-engine\\CrudKendoGridRenderer.js",
+      "baselineSha256": "e8c1211702ad756a5f55e74952fda3530b39cc70de1229cd6eb86e45165c223c",
+      "predecessor": "current canonical; no filterOnly change"
+    },
+    {
+      "relative": "backend/src/Runtime/RuntimeImportDiscountRead.php",
+      "source": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\supplier-discounts-readonly\\frozen-v1\\candidate-exact\\RuntimeImportDiscountRead.php",
+      "futureCanonical": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeImportDiscountRead.php",
+      "baselineSha256": "5e5d142c103c93b192123e104215ce7a2d186fe817465ba8c3198556caf668f3",
+      "currentCanonical13Sha256": "da183dfadf900d516a577495d8348293c0aa1a9b36954cde50de9be819cd0197",
+      "predecessor": "supplier1056 frozen candidate; root must compose future baseline first; no old Action/Query overlay"
+    }
+  ]
+}

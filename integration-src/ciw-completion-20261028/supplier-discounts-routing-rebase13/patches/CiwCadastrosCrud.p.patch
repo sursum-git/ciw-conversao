@@ -1,0 +1,11 @@
+--- a/programs/CiwCadastrosCrud.p
++++ b/programs/CiwCadastrosCrud.p
+@@ -78,7 +78,7 @@
+    IF cService=? THEN UNDO, THROW NEW Progress.Lang.AppError("Consulta de itens de amostra indisponivel.",1).
+    RUN VALUE(cService)(poRequest,OUTPUT poResponse). RETURN.
+   END.
+-  WHEN "import_descontos_geral" OR WHEN "import_descontos_lancamentos" THEN DO:
++  WHEN "import_descontos_geral" OR WHEN "import_descontos_lancamentos" OR WHEN "import_descontos_fornecedor" THEN DO:
+    cService=SEARCH("sursum-api/programs/ImportDiscountsReadApi.r").
+    IF cService=? THEN UNDO, THROW NEW Progress.Lang.AppError("Consulta de descontos indisponivel.",1).
+    RUN VALUE(cService)(poRequest,OUTPUT poResponse). RETURN.

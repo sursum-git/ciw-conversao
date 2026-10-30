@@ -1,0 +1,52 @@
+[
+  {
+    "candidate": "D:\\opencode\\conversao-sc\\integration-src\\purchase-items\\PurchaseItemsApi.p",
+    "sha256": "3a11d66026e5abb2ce800b43490be01de30ff59830764637dbbf8f9e16340b54",
+    "canonicalRelative": "sursum-api/programs/PurchaseItemsApi.p"
+  },
+  {
+    "candidate": "D:\\opencode\\conversao-sc\\integration-src\\purchase-items\\PurchaseItemsService.p",
+    "sha256": "eef52188b0934a8cc1a167fc784beb160714cbaeb2ad390f1248f1746e3dcbae",
+    "canonicalRelative": "sursum-api/programs/PurchaseItemsService.p"
+  },
+  {
+    "candidate": "D:\\opencode\\conversao-sc\\integration-src\\purchase-items\\PurchaseItemIdService.p",
+    "sha256": "2bec48ea321a61651e16322da819d18d8f47bca3bf7f330a5f256321b2a14c96",
+    "canonicalRelative": "sursum-api/programs/PurchaseItemIdService.p"
+  },
+  {
+    "candidate": "D:\\opencode\\conversao-sc\\integration-src\\purchase-items\\ContainersItensFinanceiroService.p",
+    "sha256": "973f14ff63314ae2ef2928eb28c9311c4cdc34e620d5a0369863939da7a65fc3",
+    "canonicalRelative": "sursum-api/programs/ContainersItensFinanceiroService.p"
+  },
+  {
+    "candidate": "D:\\opencode\\conversao-sc\\integration-src\\purchase-items\\ContainersItensRuntime.p",
+    "sha256": "20a4a9c1ea32589e206d662b1bfacab70bd982d017f2b8a32761638f128b3aef",
+    "canonicalRelative": "sursum-api/programs/ContainersItensRuntime.p"
+  },
+  {
+    "candidate": "D:\\opencode\\conversao-sc\\integration-src\\purchase-items\\CiwErpReadService.p",
+    "sha256": "374a3d13e27d30b7eb42c518b441f0b969f79c02fc7b4ba2e0cb0c8864d40331",
+    "canonicalRelative": "sursum-api/programs/CiwErpReadService.p"
+  },
+  {
+    "candidate": "D:\\opencode\\conversao-sc\\integration-src\\purchase-items\\CiwCadastrosCrud.p",
+    "sha256": "2388680d5433b6b347f44ac700b62a98c0ef2555d63ca219296cc429b73b60ab",
+    "canonicalRelative": "sursum-api/programs/CiwCadastrosCrud.p"
+  },
+  {
+    "candidate": "D:\\opencode\\conversao-sc\\integration-src\\purchase-items\\sursum-api\\includes\\PurchaseItemSnapshot.i",
+    "sha256": "f7e81fbcd3fbc53f124c60d99c3065b73e2d876665ce900f8772ed1f25d7350d",
+    "canonicalRelative": "sursum-api/includes/PurchaseItemSnapshot.i"
+  },
+  {
+    "candidate": "D:\\opencode\\conversao-sc\\integration-src\\purchase-items\\sursum-api\\includes\\PurchaseItemsReadBuffer.i",
+    "sha256": "ed977f03a856adb2f5582565b4e0a45a9520961b8262cc1d54f18d70b5b4c70f",
+    "canonicalRelative": "sursum-api/includes/PurchaseItemsReadBuffer.i"
+  },
+  {
+    "candidate": "D:\\opencode\\conversao-sc\\integration-src\\purchase-items\\sursum-api\\includes\\PurchaseItemValueRules.i",
+    "sha256": "1ae6949d39fa07286e0e1c76776b9bb508de6715d1494858d7ac53c1d591c894",
+    "canonicalRelative": "sursum-api/includes/PurchaseItemValueRules.i"
+  }
+]

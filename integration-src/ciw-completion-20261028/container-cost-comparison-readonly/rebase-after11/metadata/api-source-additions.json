@@ -1,0 +1,73 @@
+{
+  "sourceCode": "motor_progress_ciw_cadastros",
+  "status": "HELD_SQL_PARITY_AND_CURRENT_EXPORT_REQUIRED",
+  "preserveActualAuthentication": true,
+  "operations": [
+    {
+      "code": "container_custos_comparacao_real_read",
+      "name": "Comparação histórica de custos — BRL — read",
+      "type": "list",
+      "method": "POST",
+      "path": "/SursumPrograms/ciw-cadastros",
+      "bodyTemplate": {
+        "resource": "container_custos_comparacao_real",
+        "operation": "read"
+      },
+      "requestContextFields": [
+        "container_id",
+        "versao_id"
+      ],
+      "itemsPath": "data",
+      "totalPath": "total"
+    },
+    {
+      "code": "container_custos_comparacao_real_get",
+      "name": "Comparação histórica de custos — BRL — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "/SursumPrograms/ciw-cadastros",
+      "bodyTemplate": {
+        "resource": "container_custos_comparacao_real",
+        "operation": "get"
+      },
+      "requestContextFields": [
+        "container_id",
+        "versao_id"
+      ],
+      "itemPath": "data"
+    },
+    {
+      "code": "container_custos_comparacao_dolar_read",
+      "name": "Comparação histórica de custos — USD — read",
+      "type": "list",
+      "method": "POST",
+      "path": "/SursumPrograms/ciw-cadastros",
+      "bodyTemplate": {
+        "resource": "container_custos_comparacao_dolar",
+        "operation": "read"
+      },
+      "requestContextFields": [
+        "container_id",
+        "versao_id"
+      ],
+      "itemsPath": "data",
+      "totalPath": "total"
+    },
+    {
+      "code": "container_custos_comparacao_dolar_get",
+      "name": "Comparação histórica de custos — USD — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "/SursumPrograms/ciw-cadastros",
+      "bodyTemplate": {
+        "resource": "container_custos_comparacao_dolar",
+        "operation": "get"
+      },
+      "requestContextFields": [
+        "container_id",
+        "versao_id"
+      ],
+      "itemPath": "data"
+    }
+  ]
+}

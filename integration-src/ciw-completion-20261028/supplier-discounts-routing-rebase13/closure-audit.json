@@ -1,0 +1,134 @@
+{
+  "success": true,
+  "scope": "1056 read routing composition only; no official14 generated",
+  "currentCanonicalAbiConsumers": [
+    "ImportDiscountsCollector.p",
+    "ImportDiscountsReadService.p"
+  ],
+  "newAbiConsumers": [
+    "ImportDiscountsSupplierCollector.p"
+  ],
+  "privateTtSchemaChange": "arquivo field added; compile/deploy all3 TT consumers together",
+  "publicFacadeAbiUnchanged": true,
+  "canonicalApiWrapperHandles": 6,
+  "productionPrograms": [
+    "CiwCadastrosCrud.p",
+    "CiwErpReadService.p",
+    "ImportDiscountsCollector.p",
+    "ImportDiscountsReadApi.p",
+    "ImportDiscountsReadService.p",
+    "ImportDiscountsSupplierCollector.p"
+  ],
+  "productionIncludes": [
+    "ImportDiscountsCollectorBody.i",
+    "ImportDiscountsReadTables.i"
+  ],
+  "stableDependencies": [
+    {
+      "path": "D:\\opencode\\motor-progress\\v2\\sursum-api\\programs\\ContainersVersionHistoryLabels.p",
+      "sha256": "bce8fc89f40c69d3407fd6e5e789dfd6ee84d6191eeeffd1da131a7e886678b8",
+      "publicationChangeRequired": false
+    }
+  ],
+  "suggestedOfficialCompileInputs": [
+    "CiwCadastrosCrud.p",
+    "CiwErpReadService.p",
+    "ImportDiscountsCollector.p",
+    "ImportDiscountsReadApi.p",
+    "ImportDiscountsReadService.p",
+    "ImportDiscountsSupplierCollector.p",
+    "ContainersVersionHistoryLabels.p",
+    "SupplierDiscountReadTest.p",
+    "ImportDiscountsCollectorTest.p",
+    "ImportDiscountsReadTest.p",
+    "ImportDiscountsLabelsTest.p"
+  ],
+  "officialScopeDecisionRootRequired": true,
+  "unrelatedDispatcherRoutes": "all bytes outside one supplier resource alias hunk unchanged; existing late-bound targets are not rewritten/recompiled by this proposal",
+  "uniqueCollectorBody": {
+    "path": "candidate/includes/ImportDiscountsCollectorBody.i",
+    "sha256": "1f3fbee2ed7cb6618138ff364d691697c084b09c6d5b3083382781cb2edf9bac",
+    "frozenOriginalByteEqual": true
+  },
+  "current13RegistryAllOldEntriesPreserved": true,
+  "helperSha256": "d89428668214f8901cd02a32176200afa3433f645fddd3cf42cd749e8545893a",
+  "futureBuilderSha256": "c0653c409de42dc98a9904c6b3bf4d86217e71d49445374700c30060093ba123",
+  "sources": [
+    {
+      "relative": "programs/ImportDiscountsCollector.p",
+      "baselineSha256": "710e829b911874ce17f9976bcd478d558594fb49db5eeadffdd04a588c8c51f5",
+      "candidateSha256": "f9ae15850d6dd54072ee6601fac12e4f477c3e95c3660372c7d16cd4523bd5eb",
+      "originalFrozenCandidateByteEqual": true,
+      "facadeParameterAbiUnchanged": true,
+      "needs13Rebase": false
+    },
+    {
+      "relative": "programs/ImportDiscountsReadService.p",
+      "baselineSha256": "ad50ae2fc4a6ae5f0c4045912443f0895b9c24afb673fb3c06ebcb1a4fe3a148",
+      "candidateSha256": "bfd6ff61b0f2e8dc8c0934a37e8830066b9d520f39e87afaa1490c6a8c1c0c90",
+      "originalFrozenCandidateByteEqual": true,
+      "facadeParameterAbiUnchanged": true,
+      "needs13Rebase": false
+    },
+    {
+      "relative": "programs/ImportDiscountsReadApi.p",
+      "baselineSha256": "d5c88dab039cff35166eeb2b8905554999513e13945295d6d5b619004dbd9407",
+      "candidateSha256": "0e9cfb342b287b63e7e5665b85a9ea86b8577a90d167ca87f1bcb585731c2649",
+      "originalFrozenCandidateByteEqual": true,
+      "facadeParameterAbiUnchanged": true,
+      "needs13Rebase": false
+    },
+    {
+      "relative": "programs/CiwErpReadService.p",
+      "baselineSha256": "8ecee3d853961e297598d533844da711c3f0dca058d7b4c35125fa8575b3581e",
+      "candidateSha256": "3eab006f6b1c579d75ba77ae2becbcd47af664f9a64124f2abadd16373de51e3",
+      "originalFrozenCandidateByteEqual": false,
+      "facadeParameterAbiUnchanged": true,
+      "needs13Rebase": true
+    },
+    {
+      "relative": "programs/CiwCadastrosCrud.p",
+      "baselineSha256": "325746bfbf416dab5b5b05614e937bd9d45203240f215cd779484584a28a427b",
+      "candidateSha256": "f65eb57f049a1ed69a734c2a9c0c9d3358dc972b91a33e7ab9f416d99b52ee6a",
+      "originalFrozenCandidateByteEqual": false,
+      "facadeParameterAbiUnchanged": true,
+      "needs13Rebase": true
+    },
+    {
+      "relative": "includes/ImportDiscountsReadTables.i",
+      "baselineSha256": "f1d31239a2f8c669218af4d7f968f45b8600bd4a12dd7a087e043b0726b1fbc1",
+      "candidateSha256": "340f3fe91a4e1c76a971221df1f84f8b6f9e6c1974f4b31dbf6baca31d2f7c16",
+      "originalFrozenCandidateByteEqual": true,
+      "facadeParameterAbiUnchanged": null,
+      "needs13Rebase": false
+    },
+    {
+      "relative": "backend/src/Runtime/RuntimeImportDiscountRead.php",
+      "baselineSha256": "da183dfadf900d516a577495d8348293c0aa1a9b36954cde50de9be819cd0197",
+      "candidateSha256": "d89428668214f8901cd02a32176200afa3433f645fddd3cf42cd749e8545893a",
+      "originalFrozenCandidateByteEqual": false,
+      "facadeParameterAbiUnchanged": null,
+      "needs13Rebase": false
+    },
+    {
+      "relative": "backend/src/Runtime/RuntimeCiwErpQuery.php",
+      "baselineSha256": "ec83a005dfaf87ed7e6bcebd03b5b2c221f39ea0d8f0c72a34a67c62aef46b44",
+      "candidateSha256": "6944cf73a6b1179532f3a3190a7bf2e1bff9a5f62c5b0ce4a104f62c01dde84e",
+      "originalFrozenCandidateByteEqual": false,
+      "facadeParameterAbiUnchanged": null,
+      "needs13Rebase": true
+    },
+    {
+      "relative": "backend/src/Runtime/RuntimeApiEntityActionService.php",
+      "baselineSha256": "d5413e3085c445107aedc22d8c07a374259dc056ef5550cccf0c7d8dc388a7bb",
+      "candidateSha256": "79a0d97fb32d3af7e4569239b120d9c9f0ce65a5240e1a9c5a6b5659c867ac5e",
+      "originalFrozenCandidateByteEqual": false,
+      "facadeParameterAbiUnchanged": null,
+      "needs13Rebase": true
+    }
+  ],
+  "official122Required": true,
+  "runtimePublicationPerformed": false,
+  "networkExecuted": false,
+  "businessWrites": false
+}

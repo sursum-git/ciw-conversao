@@ -1,0 +1,25 @@
+--- a/src/crud-engine/CrudEngine.js
++++ b/src/crud-engine/CrudEngine.js
+@@ -1381,6 +1381,7 @@
+       const supplied = this.options.contextValues || {};
+       global.CrudUtils.ensureArray(this.definition.contextFields).forEach((item) => {
+         const raw = supplied[item.field];
++        const range = Object.prototype.hasOwnProperty.call(item, "integerRange") ? global.PageDefinitionNormalizer.integerContextRange(this.definition, item) : null;
+         if (item.filterOnly === true && Object.prototype.hasOwnProperty.call(supplied, item.field) && (raw == null || raw === "")) { throw global.CrudUtils.makeError("CRUD_CONTEXT_INVALID", "Selecao informada invalida: " + item.field + "."); }
+         if (raw == null || raw === "") {
+           if (item.required) { throw global.CrudUtils.makeError("CRUD_CONTEXT_REQUIRED", "Informe o contexto de " + item.field + "."); }
+@@ -1390,8 +1391,14 @@
+         const type = field && field.type;
+         let value = raw;
+         if (type === "integer") {
++          if (range) {
++            const canonical = typeof raw === "number" && Number.isInteger(raw) || typeof raw === "string" && /^(?:0|-[1-9][0-9]*|[1-9][0-9]*)$/.test(raw);
++            if (!canonical || !Number.isInteger(Number(raw)) || Number(raw) < range.min || Number(raw) > range.max) { throw global.CrudUtils.makeError("CRUD_CONTEXT_INVALID", "Contexto inteiro fora da faixa: " + item.field + "."); }
++            value = Number(raw);
++          } else {
+           if (!/^[1-9][0-9]*$/.test(String(raw)) || Number(raw) > 2147483647) { throw global.CrudUtils.makeError("CRUD_CONTEXT_INVALID", "Contexto invalido: " + item.field + "."); }
+           value = Number(raw);
++          }
+         } else if (type === "string") {
+           const maximum = field.validation && field.validation.maxLength || 160;
+           if (typeof raw !== "string" || !raw.trim() || raw.length > maximum || /[\u0000-\u001f\u007f]/.test(raw) ||

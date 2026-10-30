@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="phpunit-bootstrap.php" cacheDirectory="D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-expense-default-selection/phpunit-cache" colors="false" failOnWarning="true">
+ <testsuites><testsuite name="Selection1047AndNativeRegressions">
+  <file>RuntimeExpenseSelectionTest.php</file><file>NativeLookupParametersTest.php</file>
+  <file>NativeLookupPageTypeGuardTest.php</file>
+  <file>D:/opencode/construtor-pg/backend/tests/Builder/ProgramBuilderProcessOptionsTest.php</file>
+  <file>D:/opencode/construtor-pg/backend/tests/Builder/ProgramBuilderApiProcessOptInTest.php</file>
+  <file>D:/opencode/construtor-pg/backend/tests/ProgramBuilderProcessCollectionTest.php</file>
+  <file>D:/opencode/construtor-pg/backend/tests/RuntimeProcessIntegerCollectionTest.php</file>
+  <file>D:/opencode/construtor-pg/backend/tests/Runtime/RuntimeApiOptionsContextTest.php</file>
+  <file>D:/opencode/construtor-pg/backend/tests/Runtime/RuntimeApiProcessTest.php</file>
+  <file>D:/opencode/construtor-pg/backend/tests/RuntimePurchaseExpenseOptionsTest.php</file>
+  <file>D:/opencode/construtor-pg/backend/tests/RuntimePurchaseExpenseAuditTest.php</file>
+  <file>D:/opencode/construtor-pg/backend/tests/RuntimePurchaseTaxAuditTest.php</file>
+  <file>D:/opencode/construtor-pg/backend/tests/RuntimeContainerAllocationAuditTest.php</file>
+  <file>D:/opencode/construtor-pg/backend/tests/RuntimePurchaseExpenseProcessTest.php</file>
+  <file>D:/opencode/construtor-pg/backend/tests/RuntimePurchaseTaxProcessTest.php</file>
+  <file>D:/opencode/construtor-pg/backend/tests/RuntimeContainerAllocationProcessTest.php</file>
+  <file>D:/opencode/construtor-pg/backend/tests/Runtime/RuntimeApiEntityBatchTest.php</file>
+  <file>D:/opencode/construtor-pg/backend/tests/Builder/ProgramBuilderCrudOptionsTest.php</file>
+  <file>D:/opencode/construtor-pg/backend/tests/Builder/ProgramBuilderServicePublishFlowTest.php</file>
+  <file>D:/opencode/construtor-pg/backend/tests/Runtime/RuntimeContainerAuditImportTest.php</file>
+  <file>D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-tax-only/tests/RuntimeContainerTaxOnlyProcessTest.php</file>
+ </testsuite></testsuites>
+</phpunit>

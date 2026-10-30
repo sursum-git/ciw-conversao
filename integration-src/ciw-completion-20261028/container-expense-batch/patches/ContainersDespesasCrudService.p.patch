@@ -1,0 +1,61 @@
+--- D:\opencode\motor-progress\v2\sursum-api\programs\ContainersDespesasCrudService.p
++++ D:\opencode\motor-progress\v2\sursum-api\programs\ContainersDespesasCrudService.p
+@@ -16,6 +16,8 @@
+ DEFINE INPUT PARAMETER poPolicy AS JsonObject NO-UNDO.
+ DEFINE INPUT PARAMETER poRequest AS JsonObject NO-UNDO.
+ DEFINE OUTPUT PARAMETER poResponse AS JsonObject NO-UNDO.
++DEFINE VARIABLE oBatchExpected AS JsonObject NO-UNDO.
++{sursum-api/includes/ContainerExpenseBatchSnapshot.i}
+ DEFINE TEMP-TABLE ttRow NO-UNDO
+  FIELD ordinal AS INTEGER FIELD id AS INTEGER FIELD recordRow AS ROWID
+  INDEX pk IS PRIMARY UNIQUE ordinal INDEX idIndex id.
+@@ -159,6 +161,18 @@
+   END.
+   ELSE IF oRow:Has("values") THEN UNDO, THROW NEW Progress.Lang.AppError("values nao permitido.",1).
+  END.
++ IF VALID-OBJECT(poPolicy) THEN IF poPolicy:Has("batch_expected_before") THEN DO:
++  IF NOT lBatch OR poPolicy:GetType("batch_expected_before")<>JsonDataType:OBJECT THEN UNDO, THROW NEW Progress.Lang.AppError("Expected images require private batch opt-in.",1).
++  oBatchExpected=poPolicy:GetJsonObject("batch_expected_before"). EXTENT(cNames)=?. cNames=oBatchExpected:GetNames().
++  IF EXTENT(cNames)<>oRows:Length THEN UNDO, THROW NEW Progress.Lang.AppError("Complete batch expected images required.",1).
++  FOR EACH ttRow:
++   cField=TRIM(STRING(ttRow.id,"->>>>>>>>>9")).
++   IF NOT oBatchExpected:Has(cField) OR oBatchExpected:GetType(cField)<>JsonDataType:OBJECT THEN UNDO, THROW NEW Progress.Lang.AppError("Expected row missing.",1).
++   oRow=oBatchExpected:GetJsonObject(cField).
++   IF NOT ExpenseBatchImageValid(oRow) THEN UNDO, THROW NEW Progress.Lang.AppError("Invalid physical expected image.",1).
++   IF oRow:GetInteger("despesa_container_id")<>ttRow.id OR oRow:GetInteger("container_id")<>iContainer THEN UNDO, THROW NEW Progress.Lang.AppError("Expected identity differs.",1).
++  END.
++ END.
+  cFailure="CONTAINER_EXPENSE_CONFIGURATION".
+  IF NOT VALID-HANDLE(phContainer) OR NOT VALID-HANDLE(phEmpresas) OR NOT VALID-HANDLE(phDefs) OR NOT VALID-HANDLE(phLinks) OR NOT VALID-HANDLE(phExpenses) THEN UNDO, THROW NEW Progress.Lang.AppError("Buffers fixos indisponiveis.",1).
+  IF cOperation="get" THEN DO:
+@@ -199,6 +213,10 @@
+    IF NOT phContainer:LOCKED THEN cFailure="CONTAINER_NOT_FOUND". UNDO, THROW NEW Progress.Lang.AppError("Container ausente ou em uso.",1).
+   END.
+   oMasterBefore=Snapshot(phContainer). cPrefix=phContainer:BUFFER-FIELD("cod-estabel"):BUFFER-VALUE.
++  IF VALID-OBJECT(oBatchExpected) THEN DO:
++   cFailure="CONTAINER_EXPENSE_COMPANY".
++   IF cPrefix=? OR NOT cPrefix BEGINS "5" THEN UNDO, THROW NEW Progress.Lang.AppError("Native expense batch requires locked MED owner.",1).
++  END.
+   cFailure="CONTAINER_EXPENSE_COMPANY".
+   IF cPrefix=? OR LENGTH(cPrefix)=0 THEN UNDO, THROW NEW Progress.Lang.AppError("Estabelecimento invalido.",1).
+   cPrefix=SUBSTRING(cPrefix,1,1). IF cPrefix<>"1" AND cPrefix<>"5" THEN UNDO, THROW NEW Progress.Lang.AppError("Empresa ERP invalida.",1).
+@@ -218,6 +236,10 @@
+     END.
+     ttRow.recordRow=phExpenses:ROWID. oBefore=Snapshot(phExpenses). oProposed=CAST(oBefore:Clone(),JsonObject).
+    END.
++   IF VALID-OBJECT(oBatchExpected) THEN DO:
++    cFailure="CONTAINER_EXPENSE_CHANGED".
++    IF NOT ExpenseBatchImageSame(oBefore,oBatchExpected:GetJsonObject(TRIM(STRING(ttRow.id,"->>>>>>>>>9")))) THEN UNDO, THROW NEW Progress.Lang.AppError("Despesa alterada; recarregue o lote.",1).
++   END.
+    oBeforeRows[ttRow.ordinal]=oBefore.
+    IF NOT lDelete THEN DO:
+     oValues=oValuesRows[ttRow.ordinal]. EXTENT(cNames)=?. cNames=oValues:GetNames().
+@@ -289,7 +311,7 @@
+  CATCH e AS Progress.Lang.Error:
+   poResponse=NEW JsonObject(). oRow=NEW JsonObject(). poResponse:Add("success",FALSE).
+   oRow:Add("code",cFailure). oRow:Add("message",e:GetMessage(1)).
+-  oRow:Add("status",IF Exact(cFailure,"CONTAINER_NOT_FOUND,CONTAINER_EXPENSE_NOT_FOUND") THEN 404 ELSE IF Exact(cFailure,"CONTAINER_BUSY,CONTAINER_EXPENSE_PERSISTENCE,CONTAINER_TRANSACTION_CONTEXT") THEN 409 ELSE IF cFailure="CONTAINER_EXPENSE_CONFIGURATION" THEN 500 ELSE IF cFailure="CONTAINER_IDENTITY_REQUIRED" THEN 401 ELSE 422).
++  oRow:Add("status",IF Exact(cFailure,"CONTAINER_NOT_FOUND,CONTAINER_EXPENSE_NOT_FOUND") THEN 404 ELSE IF Exact(cFailure,"CONTAINER_BUSY,CONTAINER_EXPENSE_PERSISTENCE,CONTAINER_TRANSACTION_CONTEXT,CONTAINER_EXPENSE_CHANGED") THEN 409 ELSE IF cFailure="CONTAINER_EXPENSE_CONFIGURATION" THEN 500 ELSE IF cFailure="CONTAINER_IDENTITY_REQUIRED" THEN 401 ELSE 422).
+   poResponse:Add("error",oRow).
+  END CATCH.
+  FINALLY:

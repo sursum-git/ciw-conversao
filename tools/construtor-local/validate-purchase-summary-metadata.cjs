@@ -1,0 +1,12 @@
+'use strict';
+const c=require('./purchase-payments-builder-common.cjs'),vm=require('node:vm');
+const state=c.path.join(c.root,'.runtime/purchase-summary-20261023'),meta=c.path.join(c.root,'integration-src/purchase-summary/metadata'),pre=c.readJson(c.path.join(state,'preflight.json'));
+const child=c.readJson(c.path.join(meta,'proc-compra-resumo-builder-draft.json')),parent=c.readJson(c.path.join(meta,'processos-compra-med-builder-draft.json'));
+c.assert.equal(child.entityDraft.fields.length,6);c.assert.equal(child.programDraft.programCode,pre.crudProgramCode);c.assert.equal(child.programDraft.allowCreate,false);c.assert.equal(child.programDraft.allowUpdate,false);c.assert.equal(child.programDraft.allowDelete,false);
+for(const f of child.entityDraft.fields){c.assert.equal(f.readonlyField,true);c.assert.equal(f.options.writable,false);if(f.dataType==='integer'){c.assert.equal(f.options.decimals,0);c.assert.equal(f.options.format,'n0');}}
+c.assert.equal(parent.programDraft.version,'1.0.5');c.assert.equal(parent.programDraft.formOptions.tabs.length,8);c.assert.deepEqual(parent.programDraft.formOptions.tabs.slice(0,7).map(x=>x.id),pre.parent.crud.form.tabs.map(x=>x.id));
+const ops=c.readJson(c.path.join(meta,'api-source-additions.json')).operations;c.assert.equal(ops.length,2);for(const o of ops){c.assert.equal(o.bodyTemplate.resource,'proc_compra_resumo');c.assert.deepEqual(o.requestContextFields,['proc_compra_id']);c.assert.ok(['read','get'].includes(o.bodyTemplate.operation));}
+const scope={console,URL,window:null,jQuery:()=>{throw Error('DOM_NOT_EXPECTED');},location:{href:c.base,origin:c.base}};scope.window=scope;vm.createContext(scope);
+for(const file of ['src/page-engine/PageDefinitionNormalizer.js','src/crud-engine/CrudUtils.js','src/crud-engine/CrudDefinitionValidator.js','src/crud-engine/CrudKendoFormRenderer.js'])vm.runInContext(c.fs.readFileSync(c.path.join('D:/opencode/construtor-pg',file),'utf8'),scope,{filename:file});
+for(const name of ['metadata-preview.json','parent-metadata-preview.json'])new scope.CrudDefinitionValidator().validate(c.readJson(c.path.join(state,name)));
+c.fs.writeFileSync(c.path.join(state,'metadata-js-validation.json'),JSON.stringify({success:true,readonly:true,fields:6,parentTabs:8,previousTabsPreserved:7,operations:2,businessWrites:false},null,2));console.log('PASS native readonly summary6fields/parent8tabs validators; previous7tabs preserved');

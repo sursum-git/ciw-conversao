@@ -1,0 +1,39 @@
+--- D:/opencode/construtor-pg/backend/src/Runtime/RuntimeApiEntityActionService.php
++++ D:/opencode/construtor-pg/backend/src/Runtime/RuntimeApiEntityActionService.php
+@@ -59,6 +59,7 @@
+         $operation = trim((string) ($config['operation'] ?? $payload['operation'] ?? $endpointId));
+ 
+         $definition = $this->resolveDefinition($entityCode);
++        if (RuntimeContainerNfAvailableRead::supports($definition) && !in_array($operation,["read","get"],true)) { throw new RuntimeHttpException("CONTAINER_NF_READ_ONLY","NFs disponiveis permitem somente consulta.",405); }
+ 
+         if (RuntimePurchaseContextAudit::supports($definition) && in_array($operation,['create','update','delete','get','download'],true)) {
+ 
+@@ -850,10 +851,11 @@
+ 
+         $startedAt = microtime(true);
+ 
+-        $context = ApiRequestContext::resolve($definition, $definition['apiSource']['listEndpoint'], $payload);
++        $context = RuntimeContainerNfAvailableRead::supports($definition) ? RuntimeContainerNfAvailableRead::request($definition,$definition['apiSource']['listEndpoint'],$payload,"read") : ApiRequestContext::resolve($definition, $definition['apiSource']['listEndpoint'], $payload);
+ 
+         $response = $this->requestEndpoint($definition, $definition['apiSource']['listEndpoint'], $definition['apiSource']['authHeaders'], [], $context ?: null);
+ 
++        if (RuntimeContainerNfAvailableRead::supports($definition)) { RuntimeContainerNfAvailableRead::response($response['body'],$response['body']['data']??null,$context); }
+         $items = $this->extractItems($response['body'], (string) $definition['apiSource']['listResponse']['itemsPath']);
+ 
+         $data = array_map(fn (mixed $item): array => $this->mapItem($definition, is_array($item) ? $item : []), $items);
+@@ -1017,6 +1019,7 @@
+         if (RuntimeContainerExpenseBatch::supports($definition)) { return $this->containerExpenseBatchRequest($definition,[],$payload,'get'); }
+ 
+         $id = $this->extractRecordId($definition, $payload);
++        if (RuntimeContainerNfAvailableRead::supports($definition)) { RuntimeContainerNfAvailableRead::request($definition,$definition['apiSource']['detailEndpoint']??[],$payload,"get",$id); }
+         if (RuntimeItemCostManualRead::supports($definition)) { RuntimeItemCostManualRead::getRequest($definition,$payload,$id); }
+         if (RuntimeSampleContainerItemsRead::supports($definition)) { RuntimeSampleContainerItemsRead::submittedAliases($payload,$id); }
+         if (RuntimeImportDiscountRead::supports($definition)) { RuntimeImportDiscountRead::submittedAliases($payload,$id); }
+@@ -1054,6 +1057,7 @@
+             $path = (string) ($definition['apiSource']['detailResponse']['itemPath'] ?? '$');
+ 
+             $item = $this->extractByPath($response['body'], $path);
++            if (RuntimeContainerNfAvailableRead::supports($definition)) { RuntimeContainerNfAvailableRead::response($response['body'],$item,$context,$id); }
+ 
+             if ((RuntimePurchaseContextAudit::supports($definition) && (($response['body']['success']??null)!==true || isset($response['body']['error']) || !RuntimePurchaseContextAudit::dataRow($item,$definition) || $item[$definition['primaryKey']]!==$id)) || RuntimePurchaseOrderAudit::supports($definition) && !RuntimePurchaseOrderAudit::dataRow($item)) {
+ 

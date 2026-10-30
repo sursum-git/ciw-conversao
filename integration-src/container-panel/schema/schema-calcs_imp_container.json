@@ -1,0 +1,106 @@
+{
+  "database": "espec",
+  "table": "calcs_imp_container",
+  "fields": [
+    {
+      "name": "container_id",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dt_hr_calculo",
+      "type": "datetime",
+      "format": "99\/99\/9999 HH:MM:SS",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "usuario_id",
+      "type": "integer",
+      "format": ">>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "memoria_calculo",
+      "type": "integer",
+      "format": "->,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "calc_imp_container_id",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "desc_memoria_calc",
+      "type": "character",
+      "format": "x(8000)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    }
+  ],
+  "indexes": [
+    {
+      "name": "ind_calcs_imp_container",
+      "unique": true,
+      "primary": true,
+      "fields": [
+        "calc_imp_container_id"
+      ]
+    },
+    {
+      "name": "ind_container",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "container_id"
+      ]
+    },
+    {
+      "name": "ind_usuario",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "usuario_id"
+      ]
+    }
+  ],
+  "triggers": [
+  ]
+}

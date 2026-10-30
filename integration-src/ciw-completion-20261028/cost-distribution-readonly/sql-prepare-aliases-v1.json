@@ -1,0 +1,279 @@
+{
+  "version": 1,
+  "purpose": "op1048-literal-legacy-branches3-4-alias-SQL_PREPARE-only",
+  "source": {
+    "path": "sources/scriptcase/ciw-completion-next20-20261028/cons_cta_corren_custo_distr/cons_cta_corren_custo_distr_grid.class.php",
+    "sha256": "0ee3e749c5b83d342d27723893469926c71d1dd4b90886886ed9a694a94d662d",
+    "function": "calcularSaldoAnteriorDistrCusto",
+    "lines": [
+      7983,
+      8105
+    ],
+    "functionSha256": "8e6498429718ccb0c5d594d94502607b47324912a637a7086d58239e358621f3",
+    "aliasMapsLines": [
+      7999,
+      8015
+    ]
+  },
+  "policy": {
+    "fixedDsn": "espec_pro",
+    "processOnlyOdbcIni": "/etc/odbc.ini",
+    "prepareOnly": true,
+    "executeAllowed": false,
+    "businessValuesProjected": false,
+    "businessWrites": false,
+    "networkByCandidate": false,
+    "ddl": false,
+    "timeoutSeconds": 10,
+    "noProfileFallback": true,
+    "caseCount": 6,
+    "bindings": []
+  },
+  "literalAliasMap": [
+    {
+      "aliasLiteral": "TIPO_MOVTO",
+      "generalReplacementLiteral": "cod_tipo_movto",
+      "manualReplacementLiteral": "cod_tipo_movto"
+    },
+    {
+      "aliasLiteral": "VALOR",
+      "generalReplacementLiteral": "vl_lancto",
+      "manualReplacementLiteral": "vl_lancto"
+    },
+    {
+      "aliasLiteral": "COD_PROC_FORNEC_PEDIDO",
+      "generalReplacementLiteral": "pc.cod_proc_fornec",
+      "manualReplacementLiteral": "' '"
+    },
+    {
+      "aliasLiteral": "CODIGO_ERP",
+      "generalReplacementLiteral": "ipc.codigo_erp",
+      "manualReplacementLiteral": "' '"
+    },
+    {
+      "aliasLiteral": "DESCRICAO_ITEM",
+      "generalReplacementLiteral": "ipc.descricao",
+      "manualReplacementLiteral": "' '"
+    },
+    {
+      "aliasLiteral": "CONTAINER",
+      "generalReplacementLiteral": "ic.container_id",
+      "manualReplacementLiteral": "versao.container_id"
+    },
+    {
+      "aliasLiteral": "\r\n                    SITUACAO_CONTAINER",
+      "generalReplacementLiteral": "\r\n                     container.situacao",
+      "manualReplacementLiteral": "' '"
+    },
+    {
+      "aliasLiteral": "SIT_ACOMP_CONTAINER",
+      "generalReplacementLiteral": "container.situacao_container_id",
+      "manualReplacementLiteral": "' '"
+    },
+    {
+      "aliasLiteral": "COD_EMIT_FORN",
+      "generalReplacementLiteral": "container.\"cod-emit-forn\"",
+      "manualReplacementLiteral": "' '"
+    },
+    {
+      "aliasLiteral": "FORNEC_PI",
+      "generalReplacementLiteral": "pc.fornecedor_id",
+      "manualReplacementLiteral": "' '"
+    },
+    {
+      "aliasLiteral": "DT_REGISTRO_PEDIDO",
+      "generalReplacementLiteral": "\r\n                     pc.dt_registro",
+      "manualReplacementLiteral": "' '"
+    },
+    {
+      "aliasLiteral": "\r\n                    DT_PREV_CHEGADA",
+      "generalReplacementLiteral": "container.\"dt-prev-chegada\"",
+      "manualReplacementLiteral": "' '"
+    },
+    {
+      "aliasLiteral": "DT_RECBTO",
+      "generalReplacementLiteral": "container.\"dt-recebimento\"",
+      "manualReplacementLiteral": "' '"
+    },
+    {
+      "aliasLiteral": "ID",
+      "generalReplacementLiteral": "\r\n                     custo_distr.cta_corren_custo_distr_id",
+      "manualReplacementLiteral": "\r\n    custo_distr.cta_corren_custo_distr_id"
+    }
+  ],
+  "caseMap": [
+    {
+      "case": "branch_3_container",
+      "branch": 3,
+      "filter": "container",
+      "querySha256": "f90b581ade78fcaae3645a5a63487cf9efe4591530ce63e9dfbf523f3769e461"
+    },
+    {
+      "case": "branch_3_codigo_erp",
+      "branch": 3,
+      "filter": "codigo_erp",
+      "querySha256": "17a5497aa75c0db582f9701b64e4c8edfa07788f3375586d022045fe1697e6c0"
+    },
+    {
+      "case": "branch_3_fornec_pi",
+      "branch": 3,
+      "filter": "fornec_pi",
+      "querySha256": "9577a6af4d7725d2b5433b0647c676187238323e1bf7976d1b9160fd2eaeafd6"
+    },
+    {
+      "case": "branch_4_container",
+      "branch": 4,
+      "filter": "container",
+      "querySha256": "14fd474fc58c59341c50ecba9dcb32cae67452a6a4bb752ea15dfa1768cda66f"
+    },
+    {
+      "case": "branch_4_codigo_erp",
+      "branch": 4,
+      "filter": "codigo_erp",
+      "querySha256": "dec26f1528ec4bdd1fa2bed4204f90bb89e1f0cee60a0e177f6917d116f7ac47"
+    },
+    {
+      "case": "branch_4_fornec_pi",
+      "branch": 4,
+      "filter": "fornec_pi",
+      "querySha256": "c187df9f182a671398a976fa73b39f0c490f5421b767162b3664be92218e216b"
+    }
+  ],
+  "cases": [
+    {
+      "case": "branch_3_container",
+      "sourceBranch": 3,
+      "sourceLines": [
+        8052,
+        8058
+      ],
+      "filterName": "container",
+      "legacyWhereInput": "where CONTAINER = 123",
+      "whereAfterLegacyExplode": " CONTAINER = 123",
+      "replacementVariable": "$condSubst",
+      "substitutedCondition": " ic.container_id = 123",
+      "declaredAliases": [
+        "custo_distr",
+        "ic"
+      ],
+      "query": " \r\n     SELECT   data,   sum(custo_distr.vl_lancto) as valor\r\n     FROM \r\n     PUB.cta_corren_custo_distr custo_distr\r\n     inner join pub.itens_container ic on custo_distr.item_container_id = ic.item_container_id     \r\n     where custo_distr.cod_tipo_movto = 2              \r\n     and  ic.container_id = 123\r\n     group by data\r\n     ",
+      "querySha256": "f90b581ade78fcaae3645a5a63487cf9efe4591530ce63e9dfbf523f3769e461",
+      "expectedResult": "UNOBSERVED_ROOT_SQL_PREPARE_ONLY",
+      "execute": false
+    },
+    {
+      "case": "branch_3_codigo_erp",
+      "sourceBranch": 3,
+      "sourceLines": [
+        8052,
+        8058
+      ],
+      "filterName": "codigo_erp",
+      "legacyWhereInput": "where CODIGO_ERP = 'SYNTHETIC'",
+      "whereAfterLegacyExplode": " CODIGO_ERP = 'SYNTHETIC'",
+      "replacementVariable": "$condSubst",
+      "substitutedCondition": " ipc.codigo_erp = 'SYNTHETIC'",
+      "declaredAliases": [
+        "custo_distr",
+        "ic"
+      ],
+      "query": " \r\n     SELECT   data,   sum(custo_distr.vl_lancto) as valor\r\n     FROM \r\n     PUB.cta_corren_custo_distr custo_distr\r\n     inner join pub.itens_container ic on custo_distr.item_container_id = ic.item_container_id     \r\n     where custo_distr.cod_tipo_movto = 2              \r\n     and  ipc.codigo_erp = 'SYNTHETIC'\r\n     group by data\r\n     ",
+      "querySha256": "17a5497aa75c0db582f9701b64e4c8edfa07788f3375586d022045fe1697e6c0",
+      "expectedResult": "UNOBSERVED_ROOT_SQL_PREPARE_ONLY",
+      "execute": false
+    },
+    {
+      "case": "branch_3_fornec_pi",
+      "sourceBranch": 3,
+      "sourceLines": [
+        8052,
+        8058
+      ],
+      "filterName": "fornec_pi",
+      "legacyWhereInput": "where FORNEC_PI = 456",
+      "whereAfterLegacyExplode": " FORNEC_PI = 456",
+      "replacementVariable": "$condSubst",
+      "substitutedCondition": " pc.fornecedor_id = 456",
+      "declaredAliases": [
+        "custo_distr",
+        "ic"
+      ],
+      "query": " \r\n     SELECT   data,   sum(custo_distr.vl_lancto) as valor\r\n     FROM \r\n     PUB.cta_corren_custo_distr custo_distr\r\n     inner join pub.itens_container ic on custo_distr.item_container_id = ic.item_container_id     \r\n     where custo_distr.cod_tipo_movto = 2              \r\n     and  pc.fornecedor_id = 456\r\n     group by data\r\n     ",
+      "querySha256": "9577a6af4d7725d2b5433b0647c676187238323e1bf7976d1b9160fd2eaeafd6",
+      "expectedResult": "UNOBSERVED_ROOT_SQL_PREPARE_ONLY",
+      "execute": false
+    },
+    {
+      "case": "branch_4_container",
+      "sourceBranch": 4,
+      "sourceLines": [
+        8060,
+        8067
+      ],
+      "filterName": "container",
+      "legacyWhereInput": "where CONTAINER = 123",
+      "whereAfterLegacyExplode": " CONTAINER = 123",
+      "replacementVariable": "$condSubstTipoMovtoManual",
+      "substitutedCondition": " versao.container_id = 123",
+      "declaredAliases": [
+        "custo_distr",
+        "icc",
+        "versao"
+      ],
+      "query": " \r\n     SELECT   data,   sum(custo_distr.vl_lancto) as valor\r\n     FROM \r\n     PUB.cta_corren_custo_distr custo_distr\r\n     inner join pub.item_container_custos icc on icc.item_container_custo_id = custo_distr.item_container_custo_id\r\n     inner join pub.versoes_item_custo_container versao on versao.versao_id = icc.versao_id\r\n     where custo_distr.cod_tipo_movto = 2    \r\n     and  versao.container_id = 123\r\n     group by data\r\n     ",
+      "querySha256": "14fd474fc58c59341c50ecba9dcb32cae67452a6a4bb752ea15dfa1768cda66f",
+      "expectedResult": "UNOBSERVED_ROOT_SQL_PREPARE_ONLY",
+      "execute": false
+    },
+    {
+      "case": "branch_4_codigo_erp",
+      "sourceBranch": 4,
+      "sourceLines": [
+        8060,
+        8067
+      ],
+      "filterName": "codigo_erp",
+      "legacyWhereInput": "where CODIGO_ERP = 'SYNTHETIC'",
+      "whereAfterLegacyExplode": " CODIGO_ERP = 'SYNTHETIC'",
+      "replacementVariable": "$condSubstTipoMovtoManual",
+      "substitutedCondition": " ' ' = 'SYNTHETIC'",
+      "declaredAliases": [
+        "custo_distr",
+        "icc",
+        "versao"
+      ],
+      "query": " \r\n     SELECT   data,   sum(custo_distr.vl_lancto) as valor\r\n     FROM \r\n     PUB.cta_corren_custo_distr custo_distr\r\n     inner join pub.item_container_custos icc on icc.item_container_custo_id = custo_distr.item_container_custo_id\r\n     inner join pub.versoes_item_custo_container versao on versao.versao_id = icc.versao_id\r\n     where custo_distr.cod_tipo_movto = 2    \r\n     and  ' ' = 'SYNTHETIC'\r\n     group by data\r\n     ",
+      "querySha256": "dec26f1528ec4bdd1fa2bed4204f90bb89e1f0cee60a0e177f6917d116f7ac47",
+      "expectedResult": "UNOBSERVED_ROOT_SQL_PREPARE_ONLY",
+      "execute": false
+    },
+    {
+      "case": "branch_4_fornec_pi",
+      "sourceBranch": 4,
+      "sourceLines": [
+        8060,
+        8067
+      ],
+      "filterName": "fornec_pi",
+      "legacyWhereInput": "where FORNEC_PI = 456",
+      "whereAfterLegacyExplode": " FORNEC_PI = 456",
+      "replacementVariable": "$condSubstTipoMovtoManual",
+      "substitutedCondition": " ' ' = 456",
+      "declaredAliases": [
+        "custo_distr",
+        "icc",
+        "versao"
+      ],
+      "query": " \r\n     SELECT   data,   sum(custo_distr.vl_lancto) as valor\r\n     FROM \r\n     PUB.cta_corren_custo_distr custo_distr\r\n     inner join pub.item_container_custos icc on icc.item_container_custo_id = custo_distr.item_container_custo_id\r\n     inner join pub.versoes_item_custo_container versao on versao.versao_id = icc.versao_id\r\n     where custo_distr.cod_tipo_movto = 2    \r\n     and  ' ' = 456\r\n     group by data\r\n     ",
+      "querySha256": "c187df9f182a671398a976fa73b39f0c490f5421b767162b3664be92218e216b",
+      "expectedResult": "UNOBSERVED_ROOT_SQL_PREPARE_ONLY",
+      "execute": false
+    }
+  ],
+  "notes": [
+    "Whitespace and case of each list element are preserved; no trim/alias repair is applied.",
+    "Conditions are synthetic closed literals. They are not evidence that IDs exist; never execute these SELECTs.",
+    "Standalone branch text is extracted from the legacy UNION; source SQL uses UNION, not UNION ALL.",
+    "No expected diagnostic or SQL result is invented; root records PREPARE outcome only."
+  ]
+}

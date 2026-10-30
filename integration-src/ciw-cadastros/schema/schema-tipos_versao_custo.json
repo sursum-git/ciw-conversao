@@ -1,0 +1,42 @@
+{
+  "database": "espec",
+  "table": "tipos_versao_custo",
+  "fields": [
+    {
+      "name": "tipo_versao_custo_id",
+      "type": "integer",
+      "format": ">>9",
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "descricao",
+      "type": "character",
+      "format": "x(100)",
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    }
+  ],
+  "indexes": [
+    {
+      "name": "primario",
+      "unique": true,
+      "primary": true,
+      "fields": [
+        "tipo_versao_custo_id"
+      ]
+    }
+  ],
+  "triggers": [
+  ],
+  "tipoAnexoIdTables": [
+  ]
+}

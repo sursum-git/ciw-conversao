@@ -1,0 +1,24 @@
+{
+  "syntheticFixturesOnly": true,
+  "numDbs": 0,
+  "rows": [
+    {
+      "kind": "zero",
+      "sourceTtJson": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\supplier-discounts-readonly\\local\\matrix\\UTF-8-american\\SupplierDiscountReadTest\\supplier-zero-actual.json",
+      "sourceSha256": "e532a13576d58abcae4625f1d6aed4add4dab6108424e827041ea3233006a57f",
+      "rowFixture": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\supplier-discounts-readonly\\tests\\php\\reader-zero-row.json",
+      "fixtureSha256": "e8c12fdd95b7ed844c76c7160a2f35694a4a1069728b77ac4ec616d57bcafe4a",
+      "owner": 0,
+      "discountPk": 0
+    },
+    {
+      "kind": "negative",
+      "sourceTtJson": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\supplier-discounts-readonly\\local\\matrix\\UTF-8-american\\SupplierDiscountReadTest\\supplier-negative-actual.json",
+      "sourceSha256": "48feaac78c288e2c70b58102f1adafbd84447ea8ca9bed7b894809e993a7e543",
+      "rowFixture": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\supplier-discounts-readonly\\tests\\php\\reader-negative-row.json",
+      "fixtureSha256": "78b8cb682c4f67192de4d0f19bc227436487257426f27dc97d4b5b88fcb85710",
+      "owner": -9,
+      "discountPk": -1
+    }
+  ]
+}

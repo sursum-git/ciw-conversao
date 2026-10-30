@@ -1,0 +1,91 @@
+--- D:\opencode\construtor-pg\public\metadata\schemas\crud-definition-v1.schema.json
++++ D:\opencode\construtor-pg\public\metadata\schemas\crud-definition-v1.schema.json
+@@ -874,22 +874,72 @@
+         "columns"
+       ],
+       "properties": {
+-        "editing": {
+-          "type": "object",
+-          "properties": {
+-            "mode": {
+-              "type": "string",
+-              "enum": [
+-                "form",
+-                "batch"
+-              ],
+-              "default": "form"
+-            }
+-          },
+-          "required": [
+-            "mode"
+-          ],
+-          "additionalProperties": false
++        "editing": {
++          "type": "object",
++          "properties": {
++            "mode": {
++              "type": "string",
++              "enum": [
++                "form",
++                "batch"
++              ],
++              "default": "form"
++            },
++            "snapshot": {
++              "type": "object",
++              "properties": {
++                "originalFields": {
++                  "type": "array",
++                  "minItems": 1,
++                  "maxItems": 64,
++                  "uniqueItems": true,
++                  "items": {
++                    "type": "string",
++                    "minLength": 1,
++                    "maxLength": 128,
++                    "pattern": "^[A-Za-z_][A-Za-z0-9_.-]*$"
++                  }
++                },
++                "contextFields": {
++                  "type": "array",
++                  "minItems": 1,
++                  "maxItems": 64,
++                  "uniqueItems": true,
++                  "items": {
++                    "type": "string",
++                    "minLength": 1,
++                    "maxLength": 128,
++                    "pattern": "^[A-Za-z_][A-Za-z0-9_.-]*$"
++                  }
++                }
++              },
++              "required": [
++                "originalFields",
++                "contextFields"
++              ],
++              "additionalProperties": false
++            }
++          },
++          "required": [
++            "mode"
++          ],
++          "additionalProperties": false,
++          "allOf": [
++            {
++              "if": {
++                "required": [
++                  "snapshot"
++                ]
++              },
++              "then": {
++                "properties": {
++                  "mode": {
++                    "const": "batch"
++                  }
++                }
++              }
++            }
++          ]
+         },
+         "id": {
+           "type": "string"

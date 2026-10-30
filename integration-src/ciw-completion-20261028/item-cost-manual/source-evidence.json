@@ -1,0 +1,117 @@
+[
+  {
+    "path": "D:/opencode/conversao-sc/sources/scriptcase/ciw-completion-next20b-20261028/cons_item_custos/cons_item_custos.php",
+    "sha256": "fd1da366c17bfe169dfa478139f20c58f3e6a73d01eb1af591e822e860de5e77",
+    "role": "sanitized active source; event/SQL ranges described in AUDIT.md"
+  },
+  {
+    "path": "D:/opencode/conversao-sc/sources/scriptcase/ciw-completion-next20b-20261028/cons_item_custos/cons_item_custos_grid.class.php",
+    "sha256": "235c883c5415f9cf1f7113ec8e704636b3fb2220a7335b4e68ef79a675b7dbd9",
+    "role": "sanitized active source; event/SQL ranges described in AUDIT.md"
+  },
+  {
+    "path": "D:/opencode/conversao-sc/sources/scriptcase/ciw-completion-next20b-20261028/cons_item_custos/cons_item_custos_lookup.class.php",
+    "sha256": "44428bdea1eb75d572b42d70f8092c38bf0aacc524772f0ada9653539fd9a44b",
+    "role": "sanitized active source; event/SQL ranges described in AUDIT.md"
+  },
+  {
+    "path": "D:/opencode/conversao-sc/sources/scriptcase/ciw-completion-next20b-20261028/cons_item_custos/cons_item_custos_pesq.class.php",
+    "sha256": "36793865367f8f0ba2937e0297f3e3eee86ab7800350690230d8cd6d836d4a12",
+    "role": "sanitized active source; event/SQL ranges described in AUDIT.md"
+  },
+  {
+    "path": "D:/opencode/conversao-sc/sources/scriptcase/ciw-completion-next20b-20261028/cons_item_custos/index.php",
+    "sha256": "daf6c3cfce69987f3a45a41e7b4a60afde11bc6a4974df0eb64dc1d9f8c424f3",
+    "role": "sanitized active source; event/SQL ranges described in AUDIT.md"
+  },
+  {
+    "path": "D:/opencode/conversao-sc/sources/scriptcase/ciw-completion-next20b-20261028/form_item_custos_manual/form_item_custos_manual.php",
+    "sha256": "a959531e0fa62bf1ca4bece6d1803765553ebaba82b213f241398caf78a7c1b7",
+    "role": "sanitized active source; event/SQL ranges described in AUDIT.md"
+  },
+  {
+    "path": "D:/opencode/conversao-sc/sources/scriptcase/ciw-completion-next20b-20261028/form_item_custos_manual/form_item_custos_manual_apl.php",
+    "sha256": "89605832fd739399097f6a913ff01fa7e014228e2127b7dcd366a293315560fb",
+    "role": "sanitized active source; event/SQL ranges described in AUDIT.md"
+  },
+  {
+    "path": "D:/opencode/conversao-sc/sources/scriptcase/ciw-completion-next20b-20261028/form_item_custos_manual/form_item_custos_manual_form0.php",
+    "sha256": "cfb0736e127b764a79c4d893e3aa72def06ca017669ff82cba8125ba654a3b6a",
+    "role": "sanitized active source; event/SQL ranges described in AUDIT.md"
+  },
+  {
+    "path": "D:/opencode/conversao-sc/sources/scriptcase/ciw-completion-next20b-20261028/form_item_custos_manual/index.php",
+    "sha256": "93b68a967205ec8fa708ad424cdc18f8711cc163cd9c6725656aac7edb42f4e7",
+    "role": "sanitized active source; event/SQL ranges described in AUDIT.md"
+  },
+  {
+    "path": "D:/opencode/conversao-sc/sources/scriptcase/ciw-completion-next20b-20261028/form_item_custos/form_item_custos.php",
+    "sha256": "5f2ad980b5979cc2e4bf8a4a77a0bff3130b02cc82f95e2843c31a9921d10ceb",
+    "role": "sanitized active source; event/SQL ranges described in AUDIT.md"
+  },
+  {
+    "path": "D:/opencode/conversao-sc/sources/scriptcase/ciw-completion-next20b-20261028/form_item_custos/form_item_custos_apl.php",
+    "sha256": "69ee864594c240318598d85f3a220a7613d5a5bbe547362a6ec194a442d43d31",
+    "role": "sanitized active source; event/SQL ranges described in AUDIT.md"
+  },
+  {
+    "path": "D:/opencode/conversao-sc/sources/scriptcase/ciw-completion-next20b-20261028/form_item_custos/form_item_custos_form0.php",
+    "sha256": "bdde4d50b72bb8ba734e74e92ff7dbdb1c9f583929d887bb2c253231d688b9c8",
+    "role": "sanitized active source; event/SQL ranges described in AUDIT.md"
+  },
+  {
+    "path": "D:/opencode/conversao-sc/sources/scriptcase/ciw-completion-next20b-20261028/form_item_custos/index.php",
+    "sha256": "fd2a90b073079742e861c7422b563910dcb8edf1c13ddf24d7a9c28f0c356933",
+    "role": "sanitized active source; event/SQL ranges described in AUDIT.md"
+  },
+  {
+    "path": "D:/opencode/conversao-sc/sources/scriptcase/ciw-completion-next20b-20261028/bl_seleciona_form_item_custos/bl_seleciona_form_item_custos.php",
+    "sha256": "3c90777edb1e96c6445b65ba73c05809c2d2ec6f40e51e666cb5d22ade5d3bc2",
+    "role": "sanitized active source; event/SQL ranges described in AUDIT.md"
+  },
+  {
+    "path": "D:/opencode/conversao-sc/sources/scriptcase/ciw-completion-next20b-20261028/bl_seleciona_form_item_custos/index.php",
+    "sha256": "46ff029ff128efd8ba2be30de3fce77d6deb90a2b0c33429b94fc923f9c23cdb",
+    "role": "sanitized active source; event/SQL ranges described in AUDIT.md"
+  },
+  {
+    "path": "D:/opencode/conversao-sc/integration-src/container-panel/schema/espec/schema-item_custos.json",
+    "sha256": "74c43ad91e30f8c8e333f0eb4c3ee942e987ce605d7a4971084dac09b8beb56c",
+    "role": "local physical dictionary; no new schema inferred"
+  },
+  {
+    "path": "D:/opencode/conversao-sc/integration-src/container-panel/schema/ems2ima/schema-saldo-estoq.json",
+    "sha256": "95b6747d4cfc09c1e9be1cc4f8f0487893239c96dedf4ac01720aede71611f23",
+    "role": "local physical dictionary; no new schema inferred"
+  },
+  {
+    "path": "D:/opencode/conversao-sc/integration-src/container-panel/schema/ems2med/schema-saldo-estoq.json",
+    "sha256": "b958d0d243caba6db60197d8178d513214621a9edcb402179a9f0c242b3e5aa5",
+    "role": "local physical dictionary; no new schema inferred"
+  },
+  {
+    "path": "D:/opencode/conversao-sc/integration-src/container-panel/schema/espec/schema-locais_estoq_portal.json",
+    "sha256": "62029b94589f1c66b4a8cacc8005119af367d5836b5b0ab6324a52efef6c63c8",
+    "role": "local physical dictionary; no new schema inferred"
+  },
+  {
+    "path": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersItemCustoInputsService.p",
+    "sha256": "40f0f9c88808aae394e957fa6f40d23e3d26a9a8c888edf9f1e8adc4ae2e7eca",
+    "role": "existing central implementation audited; unchanged"
+  },
+  {
+    "path": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersItemCustoCalculator.p",
+    "sha256": "3b40de7a2f7c28d47b1144e4be962f76865fba7ebed91c9517918182f7b57c18",
+    "role": "existing central implementation audited; unchanged"
+  },
+  {
+    "path": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersItemCustoCloseService.p",
+    "sha256": "ce0397f148c04d59090684876e0e43493a441c57b18dfa05fdbcf6ff4d3b05a5",
+    "role": "existing central implementation audited; unchanged"
+  },
+  {
+    "path": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersVersionRuntime.p",
+    "sha256": "d6779fa920e5d6a204070d8b1dc99b99d557df27ba8c9d50047b20c57f575b8d",
+    "role": "existing central implementation audited; unchanged"
+  }
+]

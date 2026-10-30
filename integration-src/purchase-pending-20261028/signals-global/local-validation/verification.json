@@ -1,0 +1,65 @@
+{
+  "compiler": "OpenEdge12.8 C:/Progress/OpenEdge",
+  "officialCompiler": false,
+  "published": false,
+  "businessWrites": false,
+  "cases": [
+    {
+      "codepage": "UTF-8",
+      "culture": "AMERICAN",
+      "compiledEntries": 10,
+      "checks": 102,
+      "numDbs": 0
+    },
+    {
+      "codepage": "UTF-8",
+      "culture": "EUROPEAN",
+      "compiledEntries": 10,
+      "checks": 102,
+      "numDbs": 0
+    },
+    {
+      "codepage": "ISO8859-1",
+      "culture": "AMERICAN",
+      "compiledEntries": 10,
+      "checks": 102,
+      "numDbs": 0
+    },
+    {
+      "codepage": "ISO8859-1",
+      "culture": "EUROPEAN",
+      "compiledEntries": 10,
+      "checks": 102,
+      "numDbs": 0
+    }
+  ],
+  "phpTransportChecks": 33,
+  "nativeMetadataAndMixedLinkChecks": 11,
+  "builderPhpPreviews": 2,
+  "sourceHashes": [
+    {
+      "path": "abl/PurchaseSignalContainerRules.p",
+      "sha256": "545156e9efe187bdf691937fb7381b637d47fd85254c6d9ba1b60217172df4f4"
+    },
+    {
+      "path": "abl/PurchaseSignalsCollector.p",
+      "sha256": "168c22a825ae486b3244bd3cc6c69028492b2c1e1ab90edda3d1b560b3122cdb"
+    },
+    {
+      "path": "abl/PurchaseSignalsGlobalApi.p",
+      "sha256": "bd06696450e3ce34073159a4536940b9b2a295485f90a750bae7ea774ba03783"
+    },
+    {
+      "path": "abl/PurchaseSignalsGlobalService.p",
+      "sha256": "7cedfcb36d74d3586c914ccfec933f211599cb05bdaf1b175337bd6e8a15fecb"
+    },
+    {
+      "path": "abl/PurchaseSignalsService.p",
+      "sha256": "1db1293fc45e4d45d2e193d83dbb8a3a905452082ca7ebbf522c41ec2787cd12"
+    },
+    {
+      "path": "includes/PurchaseSignalsTable.i",
+      "sha256": "6cea7c794796806f5a0f184f2f355c8e3c88b26937111b877ba579fe9daa0c90"
+    }
+  ]
+}

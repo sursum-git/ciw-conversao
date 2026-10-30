@@ -1,0 +1,12 @@
+.css_container_id_label, .css_container_id_label:hover {text-align:right;vertical-align:middle;justify-content:right;font-weight:bold;}
+.css_container_id_grid_line, .css_container_id_grid_line:hover {vertical-align: top;text-align: right;}
+.css_dt_prev_embarque_label, .css_dt_prev_embarque_label:hover {text-align:center;vertical-align:middle;justify-content:center;font-weight:bold;}
+.css_dt_prev_embarque_grid_line, .css_dt_prev_embarque_grid_line:hover {vertical-align: top;text-align: center;}
+.css_dt_real_embarque_label, .css_dt_real_embarque_label:hover {text-align:center;vertical-align:middle;justify-content:center;font-weight:bold;}
+.css_dt_real_embarque_grid_line, .css_dt_real_embarque_grid_line:hover {vertical-align: top;text-align: center;}
+.css_dt_prev_desembarque_label, .css_dt_prev_desembarque_label:hover {text-align:center;vertical-align:middle;justify-content:center;font-weight:bold;}
+.css_dt_prev_desembarque_grid_line, .css_dt_prev_desembarque_grid_line:hover {vertical-align: top;text-align: center;}
+.css_dt_real_desembarque_label, .css_dt_real_desembarque_label:hover {text-align:center;vertical-align:middle;justify-content:center;font-weight:bold;}
+.css_dt_real_desembarque_grid_line, .css_dt_real_desembarque_grid_line:hover {vertical-align: top;text-align: center;}
+.css_dt_chegada_loja_label, .css_dt_chegada_loja_label:hover {text-align:center;vertical-align:middle;justify-content:center;font-weight:bold;}
+.css_dt_chegada_loja_grid_line, .css_dt_chegada_loja_grid_line:hover {vertical-align: top;text-align: center;}

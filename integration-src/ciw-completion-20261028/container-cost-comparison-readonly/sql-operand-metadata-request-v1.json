@@ -1,0 +1,103 @@
+{
+  "version": 1,
+  "purpose": "metadata-only SQL precision/scale for exact source comparison operands",
+  "policy": {
+    "fixedDsn": "espec_pro",
+    "fixedLogicalDatabase": "espec",
+    "processOnlyOdbcIni": "/etc/odbc.ini",
+    "metadataOnly": true,
+    "businessRead": false,
+    "businessWrite": false,
+    "sqlExecute": false,
+    "freeSql": false,
+    "fallbackProfile": false,
+    "maxColumns": 9,
+    "timeoutSeconds": 10,
+    "credentialOutput": false
+  },
+  "method": "SQLColumns or root-owned equivalent DESCRIBE; exact-name filtering after any pattern matching",
+  "requestedOutput": [
+    "schema",
+    "table",
+    "column",
+    "dataType",
+    "precision",
+    "scale"
+  ],
+  "columns": [
+    {
+      "schema": "PUB",
+      "table": "item_container_custos",
+      "column": "vl_custo_prev_real"
+    },
+    {
+      "schema": "PUB",
+      "table": "item_container_custos",
+      "column": "vl_desp_prev_real"
+    },
+    {
+      "schema": "PUB",
+      "table": "item_container_custos",
+      "column": "vl_unit_prev"
+    },
+    {
+      "schema": "PUB",
+      "table": "item_container_custos",
+      "column": "vl_desp_prev_real_sem_distr_cust"
+    },
+    {
+      "schema": "PUB",
+      "table": "item_container_custos",
+      "column": "vl_custo_prev_dolar"
+    },
+    {
+      "schema": "PUB",
+      "table": "item_container_custos",
+      "column": "vl_desp_prev_dolar"
+    },
+    {
+      "schema": "PUB",
+      "table": "item_container_custos",
+      "column": "vl_unit_prev_dolar"
+    },
+    {
+      "schema": "PUB",
+      "table": "item_container_custos",
+      "column": "vl_desp_prev_dolar_sem_distr_cus"
+    },
+    {
+      "schema": "PUB",
+      "table": "versoes_item_custo_container",
+      "column": "perc_fixo_container"
+    }
+  ],
+  "sourceContract": {
+    "path": "integration-src/ciw-completion-20261028/container-cost-comparison-readonly/SOURCE_CONTRACT.json",
+    "sha256": "053f07115cae76d43771343f473f8b18918ad476026d7295770967903b6230d1"
+  },
+  "schemas": [
+    {
+      "path": "integration-src/container-panel/schema/espec/schema-item_container_custos.json",
+      "sha256": "783ddf50126989ec695abe0a2ef05a24fd8b7575469fd96950a797a1d92f975b"
+    },
+    {
+      "path": "integration-src/container-panel/schema/schema-versoes_item_custo_container.json",
+      "sha256": "992ddf29ca7da2ea957373d23ae43f0842201024854c9a85e111a0e02fe7274e"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/schema/schema-item_container_custos.json",
+      "sha256": "a1048e1d15a9064ff19e644fc50170c764a5e720f6efc317394f1ce7fdd51fef"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/schema/schema-versoes_item_custo_container.json",
+      "sha256": "b6887fe66273933da35450e84f09f9e8f4ee8c02ed011c479a54e47b01eb833d"
+    }
+  ],
+  "notAssumed": [
+    "ABL format is not SQL precision/scale",
+    "repository ABL decimals are not sufficient proof of SQL numeric promotion",
+    "no UNION type anchor or altered casts without proof"
+  ],
+  "queries": [],
+  "executedByCandidate": false
+}

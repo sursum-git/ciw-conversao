@@ -1,0 +1,10 @@
+ADD TABLE "user-web"
+ AREA "Schema Area"
+ADD FIELD "Login" OF "user-web" AS character
+ADD FIELD "tp-usuario" OF "user-web" AS integer
+ADD FIELD "nome-ab-cli" OF "user-web" AS character
+ADD TABLE "repres"
+ AREA "Schema Area"
+ADD FIELD "nome-abrev" OF "repres" AS character
+ADD FIELD "cod-rep" OF "repres" AS integer
+.

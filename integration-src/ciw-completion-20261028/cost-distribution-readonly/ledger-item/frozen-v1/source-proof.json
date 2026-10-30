@@ -1,0 +1,57 @@
+{
+  "files": [
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/cons_cta_corren_distr_item_container/index.php",
+      "sha256": "610c2f1521ecddcb9edd94fc98b88a4a70d042f420e5b6c2bb95d66d64dfee96"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/cons_cta_corren_distr_item_container/cons_cta_corren_distr_item_container_grid.class.php",
+      "sha256": "87b8d21fc97cd20a90ad52a5e32fce2d9c46e181ebfc930c1bf65deee793606a"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/cons_cta_corren_distr_item_container/cons_cta_corren_distr_item_container_lookup.class.php",
+      "sha256": "c248eb46bc5dc1dd3fedf8c268115e49e58d32fc6c9f1d2880fa59a5666e9a9f"
+    },
+    {
+      "path": "sources/scriptcase/containers/ctrl_simul_distr_custo/ctrl_simul_distr_custo_js0.php",
+      "sha256": "eaf358ca0b971890c3c575eb335538646e557c1b40fcb7f6a94fb5c001e3fd33"
+    },
+    {
+      "path": "integration-src/container-panel/schema/schema-cta_corren_custo_distr.json",
+      "sha256": "242720286412b66c1a705f36251569ce7b18960baf9962908f3f6417481748e3"
+    }
+  ],
+  "origin": {
+    "app": "cons_cta_corren_distr_item_container",
+    "from": "index.php:1160",
+    "context": "index.php:3599",
+    "columns": "grid.class.php:833",
+    "lookup": "empty lookup class; no description invented",
+    "caller": "ctrl_simul_distr_custo_js0.php:90",
+    "where": "item_container_id = item_container_corrente",
+    "selected": [
+      "cta_corren_custo_distr_id",
+      "data",
+      "historico",
+      "vl_lancto",
+      "login",
+      "item_container_custo_id",
+      "item_container_id",
+      "cod_tipo_movto"
+    ],
+    "physicalPrimaryKey": "cta_corren_custo_distr_id",
+    "recordKey": [
+      "item_container_id",
+      "cta_corren_custo_distr_id"
+    ],
+    "sourceHasParentJoin": false
+  },
+  "outside": [
+    "writer",
+    "saldo",
+    "rateio",
+    "despesa_container_id ninth nonselected physical field",
+    "published simulator link change requires current export"
+  ],
+  "converted": false
+}

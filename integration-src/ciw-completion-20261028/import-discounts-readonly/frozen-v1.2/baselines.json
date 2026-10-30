@@ -1,0 +1,43 @@
+{
+  "status": "POST_BUILD6_REBASED_EXACT_BYTES_NOT_APPLIED",
+  "canonicalWrites": false,
+  "baselines": [
+    {
+      "target": "D:\\opencode\\motor-progress\\v2\\sursum-api\\programs\\CiwErpReadService.p",
+      "baselineSha256": "2a2111dc9fa56459b0f42796e837675b56921b852d5e012c43f4e71a8b35e1d8",
+      "candidateSha256": "500aa6dc47e9f0ecffa86dd3c4dcc7aa51ce0b3087a18aa209979e2ca8d376bf",
+      "exactCandidate": "candidate-exact/CiwErpReadService.p",
+      "patch": "patches/CiwErpReadService.p.patch",
+      "baselineKind": "Current stable integrated6, exact byte edits preserve tax1043/lookup/aux/batch"
+    },
+    {
+      "target": "D:\\opencode\\motor-progress\\v2\\sursum-api\\programs\\CiwCadastrosCrud.p",
+      "baselineSha256": "a167b039396533829ede08ab1569215f27b0c6b643af30b6bbe6ae60c8b893b1",
+      "candidateSha256": "7c0e717180db8d877ad8536119898dfd5577f4466951f179f9d99a787960cd65",
+      "exactCandidate": "candidate-exact/CiwCadastrosCrud.p",
+      "patch": "patches/CiwCadastrosCrud.p.patch",
+      "baselineKind": "Current stable integrated6, exact byte edits preserve tax1043/lookup/aux/batch"
+    },
+    {
+      "target": "D:\\opencode\\construtor-pg\\backend\\src\\Runtime\\RuntimeCiwErpQuery.php",
+      "baselineSha256": "076d9f9b7dc324743191f9ccada5b43e7c3461cdaaa8506d92fb297ce520a116",
+      "candidateSha256": "65aa509cc3d2459771fd229cc31e65bd545644da331411dd01152b77475639a8",
+      "exactCandidate": "candidate-exact/RuntimeCiwErpQuery.php",
+      "patch": "patches/RuntimeCiwErpQuery.php.patch",
+      "baselineKind": "Current stable integrated6, exact byte edits preserve tax1043/lookup/aux/batch"
+    },
+    {
+      "target": "D:\\opencode\\construtor-pg\\backend\\src\\Runtime\\RuntimeApiEntityActionService.php",
+      "baselineSha256": "cd7d6cb032f250c8ef69909033009d4210873c9c0bc811e5ded2b8d2e0c557fa",
+      "candidateSha256": "c34b1cea17c910e97031f5a08e3bd0a4e3b3a26b6ec5ac69f23833812e999a6d",
+      "exactCandidate": "candidate-exact/RuntimeApiEntityActionService.php",
+      "patch": "patches/RuntimeApiEntityActionService.php.patch",
+      "baselineKind": "Current stable integrated6, exact byte edits preserve tax1043/lookup/aux/batch"
+    }
+  ],
+  "newPhpFile": {
+    "source": "php/RuntimeImportDiscountRead.php",
+    "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeImportDiscountRead.php",
+    "sha256": "da183dfadf900d516a577495d8348293c0aa1a9b36954cde50de9be819cd0197"
+  }
+}

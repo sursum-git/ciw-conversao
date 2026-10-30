@@ -1,0 +1,20 @@
+--- a/backend/src/Runtime/RuntimeApiEntityActionService.php
++++ b/backend/src/Runtime/RuntimeApiEntityActionService.php
+@@ -989,6 +989,7 @@
+         }
+ 
+         if (RuntimeImportDiscountRead::supports($definition)) {
++            if (RuntimeImportDiscountRead::isSupplier($definition) && isset($body['error'])) { throw new RuntimeHttpException('CIW_ERP_RESPONSE_INVALID','Resposta da consulta ERP MED invalida.',502); }
+             foreach ($body['data'] as $row) { RuntimeImportDiscountRead::assertRow($definition,$row,$query); }
+         }
+         if (RuntimeCostDistributionRead::supports($definition)) {
+@@ -1111,7 +1112,8 @@
+             }
+             $mapped = $this->enrichRows($definition, [$this->mapItem($definition, $item)])[0] ?? [];
+ 
+-            ApiRequestContext::assertRows([$mapped], $context);
++            if (RuntimeImportDiscountRead::isSupplier($definition)) { RuntimeImportDiscountRead::assertRow($definition,$mapped,$context,$id); }
++            else { ApiRequestContext::assertRows([$mapped], $context); }
+ 
+             $this->transactions->log($definition['entityCode'] . '.api.get', 'Detalhe de entidade API consultado.', after: $mapped, metadata: [
+ 

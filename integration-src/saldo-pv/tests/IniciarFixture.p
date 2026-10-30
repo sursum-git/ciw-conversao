@@ -1,0 +1,7 @@
+IF NUM-DBS <> 1 OR INDEX(PDBNAME(1), "saldo-pv-fixture") = 0 THEN QUIT.
+CREATE ALIAS ems2med FOR DATABASE saldofixture.
+CREATE ALIAS espec FOR DATABASE saldofixture.
+IF OS-GETENV("SALDO_PV_INCLUDE_ROOT") <> ? THEN
+    PROPATH = PROPATH + "," + OS-GETENV("SALDO_PV_INCLUDE_ROOT").
+RUN tests/ValidarFixture.p.
+QUIT.

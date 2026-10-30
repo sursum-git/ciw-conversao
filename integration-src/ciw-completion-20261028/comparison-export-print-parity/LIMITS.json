@@ -1,0 +1,288 @@
+{
+  "at": "2026-10-29T03:04:54.471097+00:00",
+  "success": true,
+  "scope": "Static source and actual local native-generated definition audit only",
+  "applications": [
+    {
+      "application": "cons_item_container_custos_comparacao_real",
+      "sourceFiles": [
+        {
+          "path": "sources\\scriptcase\\ciw-completion-linked-20261028\\cons_item_container_custos_comparacao_real\\cons_item_container_custos_comparacao_real_grid.class.php",
+          "sha256": "cb3ba3c4b138e959a75ebc36c4aef585f460eef0aa8153d819ca8ed299cfb595"
+        },
+        {
+          "path": "sources\\scriptcase\\ciw-completion-linked-20261028\\cons_item_container_custos_comparacao_real\\index.php",
+          "sha256": "70e6ab06b3c0d9a279f37bc6ba30930f0f6abee552f6e4c53fe9b4fca2dc4496"
+        }
+      ],
+      "legacySourceEvidence": [
+        {
+          "action": "pdf",
+          "line": 369,
+          "statement": "$this->nmgp_botoes['pdf'] = \"on\";",
+          "scope": "generated default, before possible runtime overrides"
+        },
+        {
+          "action": "xls",
+          "line": 370,
+          "statement": "$this->nmgp_botoes['xls'] = \"on\";",
+          "scope": "generated default, before possible runtime overrides"
+        },
+        {
+          "action": "xml",
+          "line": 371,
+          "statement": "$this->nmgp_botoes['xml'] = \"on\";",
+          "scope": "generated default, before possible runtime overrides"
+        },
+        {
+          "action": "json",
+          "line": 372,
+          "statement": "$this->nmgp_botoes['json'] = \"on\";",
+          "scope": "generated default, before possible runtime overrides"
+        },
+        {
+          "action": "csv",
+          "line": 373,
+          "statement": "$this->nmgp_botoes['csv'] = \"on\";",
+          "scope": "generated default, before possible runtime overrides"
+        },
+        {
+          "action": "rtf",
+          "line": 374,
+          "statement": "$this->nmgp_botoes['rtf'] = \"on\";",
+          "scope": "generated default, before possible runtime overrides"
+        },
+        {
+          "action": "word",
+          "line": 375,
+          "statement": "$this->nmgp_botoes['word'] = \"on\";",
+          "scope": "generated default, before possible runtime overrides"
+        },
+        {
+          "action": "doc",
+          "line": 376,
+          "statement": "$this->nmgp_botoes['doc'] = \"on\";",
+          "scope": "generated default, before possible runtime overrides"
+        },
+        {
+          "action": "export",
+          "line": 377,
+          "statement": "$this->nmgp_botoes['export'] = \"on\";",
+          "scope": "generated default, before possible runtime overrides"
+        },
+        {
+          "action": "print",
+          "line": 378,
+          "statement": "$this->nmgp_botoes['print'] = \"on\";",
+          "scope": "generated default, before possible runtime overrides"
+        },
+        {
+          "action": "html",
+          "line": 379,
+          "statement": "$this->nmgp_botoes['html'] = \"on\";",
+          "scope": "generated default, before possible runtime overrides"
+        },
+        {
+          "action": "fullQueryExecute",
+          "lines": [
+            871
+          ],
+          "scope": "static generated code, not legacy execution proof"
+        },
+        {
+          "action": "pdfOrFullBranch",
+          "lines": [
+            868,
+            3803
+          ],
+          "scope": "static generated code, not legacy execution proof"
+        },
+        {
+          "action": "allRowsResolvesToCount",
+          "lines": [
+            727
+          ],
+          "scope": "static generated code, not legacy execution proof"
+        },
+        {
+          "action": "selectLimitOtherBranch",
+          "lines": [
+            876
+          ],
+          "scope": "static generated code, not legacy execution proof"
+        },
+        {
+          "action": "printLineLimitDefaultZero",
+          "lines": [
+            969
+          ],
+          "file": "index.php"
+        }
+      ],
+      "nativeGeneratedEvidence": {
+        "path": ".runtime\\ciw-completion-20261028\\official-build13-v3\\local\\native-real.json",
+        "sha256": "5e67f18d22a84699fed381653156ba250eaee1dbe6f482fe0e51c2dc29994cd0",
+        "toolbarIds": [
+          "filters",
+          "refresh",
+          "layout"
+        ],
+        "gridPrintEnabled": false,
+        "formPrintEnabled": false,
+        "scope": "local generated schema/prototype metadata evidence, not DOM/widget or human permission proof"
+      },
+      "gap": "Native query/read/get/sort/filter/paging does not implement generated legacy export/print actions. No whole-origin conversion closure."
+    },
+    {
+      "application": "cons_item_container_custos_comparacao_dolar",
+      "sourceFiles": [
+        {
+          "path": "sources\\scriptcase\\ciw-completion-linked-20261028\\cons_item_container_custos_comparacao_dolar\\cons_item_container_custos_comparacao_dolar_grid.class.php",
+          "sha256": "297bb945f86e9fb42f3e1ebbffd002c95d1e99d36776f166e13bdd74bcccdf3c"
+        },
+        {
+          "path": "sources\\scriptcase\\ciw-completion-linked-20261028\\cons_item_container_custos_comparacao_dolar\\index.php",
+          "sha256": "f524998bb6ccbcc89f3fbc46f5fc9072b13102f9df90d9f6f3dc17f2e01a1d58"
+        }
+      ],
+      "legacySourceEvidence": [
+        {
+          "action": "pdf",
+          "line": 369,
+          "statement": "$this->nmgp_botoes['pdf'] = \"on\";",
+          "scope": "generated default, before possible runtime overrides"
+        },
+        {
+          "action": "xls",
+          "line": 370,
+          "statement": "$this->nmgp_botoes['xls'] = \"on\";",
+          "scope": "generated default, before possible runtime overrides"
+        },
+        {
+          "action": "xml",
+          "line": 371,
+          "statement": "$this->nmgp_botoes['xml'] = \"on\";",
+          "scope": "generated default, before possible runtime overrides"
+        },
+        {
+          "action": "json",
+          "line": 372,
+          "statement": "$this->nmgp_botoes['json'] = \"on\";",
+          "scope": "generated default, before possible runtime overrides"
+        },
+        {
+          "action": "csv",
+          "line": 373,
+          "statement": "$this->nmgp_botoes['csv'] = \"on\";",
+          "scope": "generated default, before possible runtime overrides"
+        },
+        {
+          "action": "rtf",
+          "line": 374,
+          "statement": "$this->nmgp_botoes['rtf'] = \"on\";",
+          "scope": "generated default, before possible runtime overrides"
+        },
+        {
+          "action": "word",
+          "line": 375,
+          "statement": "$this->nmgp_botoes['word'] = \"on\";",
+          "scope": "generated default, before possible runtime overrides"
+        },
+        {
+          "action": "doc",
+          "line": 376,
+          "statement": "$this->nmgp_botoes['doc'] = \"on\";",
+          "scope": "generated default, before possible runtime overrides"
+        },
+        {
+          "action": "export",
+          "line": 377,
+          "statement": "$this->nmgp_botoes['export'] = \"on\";",
+          "scope": "generated default, before possible runtime overrides"
+        },
+        {
+          "action": "print",
+          "line": 378,
+          "statement": "$this->nmgp_botoes['print'] = \"on\";",
+          "scope": "generated default, before possible runtime overrides"
+        },
+        {
+          "action": "html",
+          "line": 379,
+          "statement": "$this->nmgp_botoes['html'] = \"on\";",
+          "scope": "generated default, before possible runtime overrides"
+        },
+        {
+          "action": "fullQueryExecute",
+          "lines": [
+            871
+          ],
+          "scope": "static generated code, not legacy execution proof"
+        },
+        {
+          "action": "pdfOrFullBranch",
+          "lines": [
+            868,
+            3789
+          ],
+          "scope": "static generated code, not legacy execution proof"
+        },
+        {
+          "action": "allRowsResolvesToCount",
+          "lines": [
+            727
+          ],
+          "scope": "static generated code, not legacy execution proof"
+        },
+        {
+          "action": "selectLimitOtherBranch",
+          "lines": [
+            876
+          ],
+          "scope": "static generated code, not legacy execution proof"
+        },
+        {
+          "action": "printLineLimitDefaultZero",
+          "lines": [
+            969
+          ],
+          "file": "index.php"
+        }
+      ],
+      "nativeGeneratedEvidence": {
+        "path": ".runtime\\ciw-completion-20261028\\official-build13-v3\\local\\native-dolar.json",
+        "sha256": "b04d1bee98aaf81d0747b25c6d2ea9e395f6c371786e88f0bc25cc66414b0889",
+        "toolbarIds": [
+          "filters",
+          "refresh",
+          "layout"
+        ],
+        "gridPrintEnabled": false,
+        "formPrintEnabled": false,
+        "scope": "local generated schema/prototype metadata evidence, not DOM/widget or human permission proof"
+      },
+      "gap": "Native query/read/get/sort/filter/paging does not implement generated legacy export/print actions. No whole-origin conversion closure."
+    }
+  ],
+  "nativeApiLimits": {
+    "takeMax": 200,
+    "sourceRowsMax": 50000,
+    "budgetSeconds": 10,
+    "sourceBudgetDoesNotAuthorizeBulkExport": true
+  },
+  "legacyMoreThan200ExportExecuted": false,
+  "legacyRuntimeToolbarPermissionVerified": false,
+  "exportArtifactContentsVerified": false,
+  "scriptcasePhpExecuted": false,
+  "networkExecuted": false,
+  "businessWrites": false,
+  "canonicalOrInventoryWrites": false,
+  "gates": [
+    "Source defaults enable eleven export/print actions; runtime overrides/per-user effective toolbar still unproved",
+    "Legacy PDF/FULL branch executes full query and all-row count path exists; no productive legacy export was executed",
+    "New readonly API/native metadata currently omits export and print; this functional gap survives read/get/paging success",
+    "Do not raise page/source budgets to imply export parity; design reusable native export/print separately if required",
+    "Do not mark either Scriptcase origin Converted from query publication alone",
+    "Current PASOE87total1 proves page requests/beyondempty, not a nonempty second page; bounded real multipage companion pending"
+  ]
+}

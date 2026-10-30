@@ -1,0 +1,34 @@
+{
+  "scope": "Internal TT ABI includes arquivo; existing JSON resources retain old field list; all direct TT consumers must compile and deploy coherently",
+  "canonicalDirectConsumers": [
+    "ImportDiscountsCollector.p",
+    "ImportDiscountsReadService.p"
+  ],
+  "newDirectConsumers": [
+    "ImportDiscountsSupplierCollector.p"
+  ],
+  "allDirectConsumers": [
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\supplier-discounts-readonly\\candidate-exact\\ImportDiscountsCollector.p",
+      "sha256": "f9ae15850d6dd54072ee6601fac12e4f477c3e95c3660372c7d16cd4523bd5eb"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\supplier-discounts-readonly\\candidate-exact\\ImportDiscountsReadService.p",
+      "sha256": "bfd6ff61b0f2e8dc8c0934a37e8830066b9d520f39e87afaa1490c6a8c1c0c90"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\supplier-discounts-readonly\\abl\\ImportDiscountsSupplierCollector.p",
+      "sha256": "68ca05e69624bf2b46778a23104079e577f177fa8223a2ec2132efa4dddad294"
+    }
+  ],
+  "table": {
+    "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\supplier-discounts-readonly\\candidate-exact\\ImportDiscountsReadTables.i",
+    "sha256": "340f3fe91a4e1c76a971221df1f84f8b6f9e6c1974f4b31dbf6baca31d2f7c16"
+  },
+  "uniqueCollectorBody": {
+    "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\supplier-discounts-readonly\\includes\\ImportDiscountsCollectorBody.i",
+    "sha256": "1f3fbee2ed7cb6618138ff364d691697c084b09c6d5b3083382781cb2edf9bac"
+  },
+  "localOnly": true,
+  "official122Required": true
+}

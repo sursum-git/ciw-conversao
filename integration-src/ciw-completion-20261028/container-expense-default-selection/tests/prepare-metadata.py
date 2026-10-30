@@ -1,0 +1,30 @@
+from pathlib import Path
+import json,hashlib,copy
+root=Path(__file__).resolve().parents[1];w=root.parents[2];out=root/'metadata';out.mkdir(exist_ok=True)
+def write(name,data):(out/name).write_text(json.dumps(data,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+before=w/'.runtime/ciw-completion-20261028/official-build6-v2/tax-only-metadata/source-six-current.json';export=json.loads(before.read_text(encoding='utf-8-sig'));assert len(export['operations'])==6
+assert not export.get('authHeaders')and all(not op.get('headers')for op in export['operations'])
+source={key:export[key]for key in ['code','name','baseUrl','responseContract','operations']}
+operations=[]
+for code,kind,resource,op in [('despesas_selecao_opcoes','list','despesas-selecao','options'),('selecionar_despesas','custom','impostos','selecionar_despesas')]:
+ operation={'code':code,'name':'Selecionar despesas do container MED — '+op,'type':kind,'method':'POST','path':source['baseUrl']+'/SursumPrograms/containers-processos','headers':[],'queryParams':[],'bodyTemplate':{'resource':resource,'operation':op},'requestContextFields':['container_id'],'itemsPath':'data'if kind=='list'else None,'itemPath':'data'if kind=='custom'else None,'totalPath':'total'if kind=='list'else None}
+ if kind=='custom':operation['allowProcess']=True
+ operations.append(operation)
+preview=copy.deepcopy(source);preview['operations'].extend(operations);write('api-source-preview.json',preview)
+write('source-addition.json',{'target':before.as_posix(),'baselineIsFuture1043':False,'baselineSha256':hashlib.sha256(before.read_bytes()).hexdigest(),'sourceCode':source['code'],'preserveGlobalAuthentication':True,'expectedOperationCount':6,'resultOperationCount':8,'operations':[{'op':'add','path':'/operations/-','value':op}for op in operations]})
+fields=[]
+def field(code,label,kind,required,readonly,options):
+ fields.append({'code':code,'label':label,'dataType':kind,'primaryKey':code=='container_id','required':required,'readonlyField':readonly,'apiJsonPath':code,'apiWritePath':code,'apiShowInGrid':False,'apiShowInForm':True,'apiShowInFilter':False,'position':len(fields)*10+10,'options':{'readonly':readonly,'writable':not readonly,**options}})
+field('container_id','Container MED','integer',True,True,{})
+field('ordem_campo','Ordenar despesas por','string',True,False,{'editor':'dropdown','defaultValue':'ordem','options':[{'value':v,'text':t}for v,t in [('ordem','Ordem'),('despesa_id','Despesa'),('log_calculada','Calculada'),('perc_calculo','Percentual')]]})
+field('ordem_direcao','Direcao','string',True,False,{'editor':'dropdown','defaultValue':'asc','options':[{'value':'asc','text':'Crescente'},{'value':'desc','text':'Decrescente'}]})
+field('despesa_ids','Despesas prioritarias','json',True,False,{'api':{'collection':{'itemType':'integer'},'optionsSource':{'operationCode':'despesas_selecao_opcoes','valueField':'despesa_id','textField':'label','parameterFields':['ordem_campo','ordem_direcao']}}})
+program={'programCode':'op1047','programTitle':'Gerar e selecionar despesas do container MED','module':'operacional','pageType':'process','builderEntityCode':'container_despesas_selecao_progress','screenId':'ciw.container-selecionar-despesas','version':'1.0.0','subtitle':'Os defaults ativos de TODAS as despesas nao tributarias serao sincronizados, inclusive as nao selecionadas. A selecao marca prioridades e limita calculadas; sem calculadas selecionadas, todas nao manuais sao recalculadas.','permissionPrefix':'container_despesas_selecao_progress','programOrigin':'standard','ownerScope':'system','allowCreate':False,'allowUpdate':False,'allowDelete':False,'contextFields':[{'field':'container_id','required':True,'readonly':True}],'processOptions':{'operationCode':'selecionar_despesas','parameterFields':['ordem_campo','ordem_direcao','despesa_ids'],'confirmation':{'message':'Sincronizar os defaults de TODAS as despesas ativas nao tributarias, inclusive as nao selecionadas, marcar somente as selecionadas e calcular despesas/impostos deste container? Se nao houver calculadas na selecao, todas as nao manuais serao avaliadas.','confirmText':'Gerar despesas'}},'changeSummary':'Selecao ativa cons_selec_despesas; ordem fechada e validada no servidor, rotinas centrais e transacao unica.'}
+program['subtitle']='Defaults de todas as despesas ativas; selecao limita as calculadas.'
+write('selection-builder-draft.json',{'entityDraft':{'code':'container_despesas_selecao_progress','name':'Selecao de despesas do container MED','entityType':'api','createPhysicalTable':False,'structureType':'main','structureModuleCode':'operacional','structureBaseNumber':1047,'apiSourceCode':source['code'],'apiListOperationCode':'painel_read','apiDetailOperationCode':'painel_get','fields':fields},'programDraft':program})
+parent=w/'.runtime/ciw-completion-20261028/official-build6-v2/tax-only-metadata/op1003-after.json';p=json.loads(parent.read_text(encoding='utf-8-sig'));index=next(i for i,v in enumerate(p['versions'])if v['version']=='1.0.3')
+link={'id':'selecionar_despesas','label':'Gerar despesas','screenId':program['screenId'],'parameters':[{'field':'container_id','sourceField':'container_id'}],'position':'end'}
+config=p['versions'][index]['builderConfig'];assert {link['id']for link in config['rowLinks']}=={'memoria_calculo','calcular_impostos'}
+write('parent-navigation.json',{'target':parent.as_posix(),'baselineSha256':hashlib.sha256(parent.read_bytes()).hexdigest(),'builderConfigBaselineSha256':hashlib.sha256(json.dumps(config,sort_keys=True,separators=(',',':'),ensure_ascii=False).encode()).hexdigest(),'targetProgram':'op1003','baselineVersion':'1.0.3','targetPointer':f'/versions/{index}/builderConfig','applyToCloneForNewVersion':True,'preserveExistingVersion':True,'rebaseRequiredAfter1042And1043':False,'liveSnapshotMustStillMatchBeforeApply':True,'operations':[{'op':'add','path':'/rowLinks/-','value':link}]})
+preview=copy.deepcopy(config);preview['rowLinks'].append(link);write('parent-builderConfig-preview.json',preview)
+print('Prepared selection op1047 metadata, real source6->8 and published parent1.0.3 additive patch')

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="App\Tests\Builder\SupplierDiscountNativeTest" file="D:\opencode\conversao-sc\integration-src\ciw-completion-20261028\supplier-discounts-readonly\tests\php\SupplierDiscountNativeTest.php" tests="2" assertions="601" errors="0" failures="0" skipped="0" time="0.068744">
+    <testcase name="testActualRegistryPreservesAll144AndDetailBody" file="D:\opencode\conversao-sc\integration-src\ciw-completion-20261028\supplier-discounts-readonly\tests\php\SupplierDiscountNativeTest.php" line="15" class="App\Tests\Builder\SupplierDiscountNativeTest" classname="App.Tests.Builder.SupplierDiscountNativeTest" assertions="588" time="0.019895"/>
+    <testcase name="testActualExternalDraftRemainsReadonlySupplierAndSource15Fields" file="D:\opencode\conversao-sc\integration-src\ciw-completion-20261028\supplier-discounts-readonly\tests\php\SupplierDiscountNativeTest.php" line="20" class="App\Tests\Builder\SupplierDiscountNativeTest" classname="App.Tests.Builder.SupplierDiscountNativeTest" assertions="13" time="0.048849"/>
+  </testsuite>
+</testsuites>

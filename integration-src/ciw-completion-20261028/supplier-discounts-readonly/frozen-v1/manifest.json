@@ -1,0 +1,479 @@
+{
+  "state": "FROZEN_CANDIDATE_REVIEW_HELD_NATIVE_AND_OFFICIAL_GATES",
+  "version": "supplier-discounts-v1",
+  "scope": {
+    "programCode": "op1056",
+    "resource": "import_descontos_fornecedor",
+    "entity": "descontos_importacao_fornecedor_progress",
+    "source": "cons_desc_geral_fornec",
+    "readOnly": true,
+    "supplierContext": "required signed int32 fornecedor_id; legacy fornec_id mapped explicitly",
+    "sourceProjectionFields": 15,
+    "physicalIdentityHidden": "desconto_importacao_id",
+    "download": false
+  },
+  "sharedFiles": 9,
+  "sharedHunks": 23,
+  "newProductionFiles": [
+    "abl/ImportDiscountsSupplierCollector.p",
+    "includes/ImportDiscountsCollectorBody.i"
+  ],
+  "internalTableAbiChanged": true,
+  "oldFacadeParameterAbiChanged": false,
+  "existing1045And1046JsonUnchanged": true,
+  "uniqueFinancialCollector": true,
+  "tests": {
+    "localAblDiagnosticVersion": "12.8",
+    "localCompiles": 7,
+    "ttChecks": 444,
+    "ttLogs": 16,
+    "combinations": 4,
+    "numDbs": 0,
+    "newTtChecksPerCombination": 32,
+    "regressionChecksPerCombination": 79,
+    "fullPhpTests": 1002,
+    "fullPhpAssertions": 7807,
+    "loadedAppDefinitions": 277,
+    "outsideStage": [],
+    "realNativeBuilderTests": 2,
+    "realNativeBuilderAssertions": 601,
+    "runtimeNewTests": 14,
+    "runtimeNewAssertions": 183,
+    "nativeAjvContextChecks": 24
+  },
+  "gates": [
+    "Independent manager review",
+    "Official OpenEdge12.2 physical compile and all TT consumers together, root only",
+    "Real PASOE fixed sameMED read/get/negative validation, root only",
+    "Fresh source export after1055, additive2 list/detail operations and preserve actual auth/config",
+    "Optional native signed integerRange companion: current CrudEngine rejects0/negative valid supplier IDs",
+    "Separate central decimal native filter companion: Builder72c6 currently generates text/contains"
+  ],
+  "canonicalWrites": false,
+  "catalogWrites": false,
+  "networkExecuted": false,
+  "businessWrites": false,
+  "grants": false,
+  "files": [
+    {
+      "path": "abl/ImportDiscountsSupplierCollector.p",
+      "sha256": "68ca05e69624bf2b46778a23104079e577f177fa8223a2ec2132efa4dddad294",
+      "bytes": 726
+    },
+    {
+      "path": "baseline-exact/CiwCadastrosCrud.p",
+      "sha256": "5717308a591f27516341ded859ce669b4c3fab95199f93b06bae655080cf75c3",
+      "bytes": 17855
+    },
+    {
+      "path": "baseline-exact/CiwErpReadService.p",
+      "sha256": "e330e9adcf4377f09d822e2423f7262d05428ca78172667ff61a20df669711ed",
+      "bytes": 31707
+    },
+    {
+      "path": "baseline-exact/ImportDiscountsCollector.p",
+      "sha256": "710e829b911874ce17f9976bcd478d558594fb49db5eeadffdd04a588c8c51f5",
+      "bytes": 5690
+    },
+    {
+      "path": "baseline-exact/ImportDiscountsReadApi.p",
+      "sha256": "d5c88dab039cff35166eeb2b8905554999513e13945295d6d5b619004dbd9407",
+      "bytes": 3121
+    },
+    {
+      "path": "baseline-exact/ImportDiscountsReadService.p",
+      "sha256": "ad50ae2fc4a6ae5f0c4045912443f0895b9c24afb673fb3c06ebcb1a4fe3a148",
+      "bytes": 6788
+    },
+    {
+      "path": "baseline-exact/ImportDiscountsReadTables.i",
+      "sha256": "f1d31239a2f8c669218af4d7f968f45b8600bd4a12dd7a087e043b0726b1fbc1",
+      "bytes": 1255
+    },
+    {
+      "path": "baseline-exact/RuntimeApiEntityActionService.php",
+      "sha256": "5f7591ae378c46c0c865c04cb03afaeb9c76fa31dbf329e5661851942ccfc7c6",
+      "bytes": 126266
+    },
+    {
+      "path": "baseline-exact/RuntimeCiwErpQuery.php",
+      "sha256": "ee404b000f78b9ff0d482ccf9e735fcd483d196b30811b53b422d4587c819da5",
+      "bytes": 15258
+    },
+    {
+      "path": "baseline-exact/RuntimeImportDiscountRead.php",
+      "sha256": "da183dfadf900d516a577495d8348293c0aa1a9b36954cde50de9be819cd0197",
+      "bytes": 3166
+    },
+    {
+      "path": "baselines.json",
+      "sha256": "a924b2d5149a66c007f57ae541c3fcf6a84eee9a986e2908d93d176d6acecace",
+      "bytes": 2579
+    },
+    {
+      "path": "candidate-exact/CiwCadastrosCrud.p",
+      "sha256": "5a71b1c62df7e9351279654563f36e059d153e6b6bc1a177060eae215710da30",
+      "bytes": 17893
+    },
+    {
+      "path": "candidate-exact/CiwErpReadService.p",
+      "sha256": "b1c87a6a21ad5b2728aa6ad4431b56aae90dd643beef78f2c9702724a4e1d5d8",
+      "bytes": 32176
+    },
+    {
+      "path": "candidate-exact/ImportDiscountsCollector.p",
+      "sha256": "f9ae15850d6dd54072ee6601fac12e4f477c3e95c3660372c7d16cd4523bd5eb",
+      "bytes": 726
+    },
+    {
+      "path": "candidate-exact/ImportDiscountsReadApi.p",
+      "sha256": "0e9cfb342b287b63e7e5665b85a9ea86b8577a90d167ca87f1bcb585731c2649",
+      "bytes": 3215
+    },
+    {
+      "path": "candidate-exact/ImportDiscountsReadService.p",
+      "sha256": "bfd6ff61b0f2e8dc8c0934a37e8830066b9d520f39e87afaa1490c6a8c1c0c90",
+      "bytes": 7860
+    },
+    {
+      "path": "candidate-exact/ImportDiscountsReadTables.i",
+      "sha256": "340f3fe91a4e1c76a971221df1f84f8b6f9e6c1974f4b31dbf6baca31d2f7c16",
+      "bytes": 1293
+    },
+    {
+      "path": "candidate-exact/RuntimeApiEntityActionService.php",
+      "sha256": "9644d7dfa05b5c77567a7faf02e2a236e280f9950a303c83d7f84e52894d46ec",
+      "bytes": 126420
+    },
+    {
+      "path": "candidate-exact/RuntimeCiwErpQuery.php",
+      "sha256": "7e3d9f1359d550e06179b5943fc9dad75f2aa2959c9cb62fd2d9aaa253ac0cc6",
+      "bytes": 15332
+    },
+    {
+      "path": "candidate-exact/RuntimeImportDiscountRead.php",
+      "sha256": "5e5d142c103c93b192123e104215ce7a2d186fe817465ba8c3198556caf668f3",
+      "bytes": 7471
+    },
+    {
+      "path": "includes/ImportDiscountsCollectorBody.i",
+      "sha256": "1f3fbee2ed7cb6618138ff364d691697c084b09c6d5b3083382781cb2edf9bac",
+      "bytes": 5264
+    },
+    {
+      "path": "metadata/api-source-additions.json",
+      "sha256": "7f22cc3c1ba18d4ba04578a4c53611e7f7d43631173b29d1d4d1e6bae941e560",
+      "bytes": 1183
+    },
+    {
+      "path": "metadata/navigation-source-map.json",
+      "sha256": "1e33b9edb0b98e0d4b9f1785273d88428a3e35ebea2bf9f4bf46edf3395eca07",
+      "bytes": 407
+    },
+    {
+      "path": "metadata/source-proposal.json",
+      "sha256": "767bb411679d5153913e557fb858cf2bbb6036260a67f3d73d7fc7501c224132",
+      "bytes": 1658
+    },
+    {
+      "path": "metadata/supplier-builder-draft.json",
+      "sha256": "61572bcac4c91bba102819a93116ae85256f665c044e70df472676c7b974bb79",
+      "bytes": 16393
+    },
+    {
+      "path": "patches/patch-plan.json",
+      "sha256": "7fae6079de227d83a103d1cf2284258d68464539f5cb0459c7fe5c9a10254bae",
+      "bytes": 47806
+    },
+    {
+      "path": "proofs/abi-closure.json",
+      "sha256": "5230c669dcd6ad1e6a496349ac9ebae23482e3c48cb356c4860e35b210c80e4a",
+      "bytes": 1743
+    },
+    {
+      "path": "proofs/abl-local-proof.json",
+      "sha256": "3546358f1b5eed8d81d960a4e6be3a44d5a4662a24974236e983e654e6da31b3",
+      "bytes": 7058
+    },
+    {
+      "path": "proofs/full-php/php-full.log",
+      "sha256": "471dacf797e680df644f668ce3d830467e0049220f26edf1bd95db57b1e48d80",
+      "bytes": 1676
+    },
+    {
+      "path": "proofs/full-php/php-full.xml",
+      "sha256": "6a592a6904bbba39bf7ce536aac55eb313d157280756580051eccda0a0408a1e",
+      "bytes": 399624
+    },
+    {
+      "path": "proofs/full-php/php-stage-loader-proof.json",
+      "sha256": "99b08121dd940d1d2c88766f1712f5fa57c61d8911b92e397ea08a5d649ad5f1",
+      "bytes": 106889
+    },
+    {
+      "path": "proofs/full-stage-source-manifest.json",
+      "sha256": "33f19272f53e09fd7eabd99a235fa9e59351f12c2e6fa40a9c8476bc6111a84b",
+      "bytes": 64527
+    },
+    {
+      "path": "proofs/local/compile-candidate.log",
+      "sha256": "67f553c7dcfba466c0738d01dc8ea1bab13a6cb5d8825d020f58ba858544cee5",
+      "bytes": 258
+    },
+    {
+      "path": "proofs/local/matrix/ISO8859-1-american/ImportDiscountsCollectorTest/collector-tests.log",
+      "sha256": "9988bcf654f5c7f9f2fc4a4e57dded9864dcef580b5a8100f8a6831b5de08772",
+      "bytes": 18
+    },
+    {
+      "path": "proofs/local/matrix/ISO8859-1-american/ImportDiscountsLabelsTest/discount-labels-tests.log",
+      "sha256": "0c3a9f134b185e352b043508dfa0e8b635a9de4e4ae54e658b61768359955cd3",
+      "bytes": 18
+    },
+    {
+      "path": "proofs/local/matrix/ISO8859-1-american/ImportDiscountsReadTest/read-tests.log",
+      "sha256": "8e5d32672f37bd99778e89b5d8b1ebddccec25f6add51c3830b3d72a055209c1",
+      "bytes": 18
+    },
+    {
+      "path": "proofs/local/matrix/ISO8859-1-american/SupplierDiscountReadTest/supplier-discounts-tests.log",
+      "sha256": "0ae011f133baeefb85dcf9c16673d55705cae3129308e3efc0c7738cf394c32e",
+      "bytes": 16
+    },
+    {
+      "path": "proofs/local/matrix/ISO8859-1-european/ImportDiscountsCollectorTest/collector-tests.log",
+      "sha256": "9988bcf654f5c7f9f2fc4a4e57dded9864dcef580b5a8100f8a6831b5de08772",
+      "bytes": 18
+    },
+    {
+      "path": "proofs/local/matrix/ISO8859-1-european/ImportDiscountsLabelsTest/discount-labels-tests.log",
+      "sha256": "0c3a9f134b185e352b043508dfa0e8b635a9de4e4ae54e658b61768359955cd3",
+      "bytes": 18
+    },
+    {
+      "path": "proofs/local/matrix/ISO8859-1-european/ImportDiscountsReadTest/read-tests.log",
+      "sha256": "8e5d32672f37bd99778e89b5d8b1ebddccec25f6add51c3830b3d72a055209c1",
+      "bytes": 18
+    },
+    {
+      "path": "proofs/local/matrix/ISO8859-1-european/SupplierDiscountReadTest/supplier-discounts-tests.log",
+      "sha256": "0ae011f133baeefb85dcf9c16673d55705cae3129308e3efc0c7738cf394c32e",
+      "bytes": 16
+    },
+    {
+      "path": "proofs/local/matrix/UTF-8-american/ImportDiscountsCollectorTest/collector-tests.log",
+      "sha256": "9988bcf654f5c7f9f2fc4a4e57dded9864dcef580b5a8100f8a6831b5de08772",
+      "bytes": 18
+    },
+    {
+      "path": "proofs/local/matrix/UTF-8-american/ImportDiscountsLabelsTest/discount-labels-tests.log",
+      "sha256": "0c3a9f134b185e352b043508dfa0e8b635a9de4e4ae54e658b61768359955cd3",
+      "bytes": 18
+    },
+    {
+      "path": "proofs/local/matrix/UTF-8-american/ImportDiscountsReadTest/read-tests.log",
+      "sha256": "8e5d32672f37bd99778e89b5d8b1ebddccec25f6add51c3830b3d72a055209c1",
+      "bytes": 18
+    },
+    {
+      "path": "proofs/local/matrix/UTF-8-american/SupplierDiscountReadTest/supplier-discounts-tests.log",
+      "sha256": "0ae011f133baeefb85dcf9c16673d55705cae3129308e3efc0c7738cf394c32e",
+      "bytes": 16
+    },
+    {
+      "path": "proofs/local/matrix/UTF-8-european/ImportDiscountsCollectorTest/collector-tests.log",
+      "sha256": "9988bcf654f5c7f9f2fc4a4e57dded9864dcef580b5a8100f8a6831b5de08772",
+      "bytes": 18
+    },
+    {
+      "path": "proofs/local/matrix/UTF-8-european/ImportDiscountsLabelsTest/discount-labels-tests.log",
+      "sha256": "0c3a9f134b185e352b043508dfa0e8b635a9de4e4ae54e658b61768359955cd3",
+      "bytes": 18
+    },
+    {
+      "path": "proofs/local/matrix/UTF-8-european/ImportDiscountsReadTest/read-tests.log",
+      "sha256": "8e5d32672f37bd99778e89b5d8b1ebddccec25f6add51c3830b3d72a055209c1",
+      "bytes": 18
+    },
+    {
+      "path": "proofs/local/matrix/UTF-8-european/SupplierDiscountReadTest/supplier-discounts-tests.log",
+      "sha256": "0ae011f133baeefb85dcf9c16673d55705cae3129308e3efc0c7738cf394c32e",
+      "bytes": 16
+    },
+    {
+      "path": "proofs/local/supplier-red.log",
+      "sha256": "4b3ce668993c256438f798fc9eda0f0a11a92e3d3ec3bc1a40b269e30e641120",
+      "bytes": 54
+    },
+    {
+      "path": "proofs/native-builder.log",
+      "sha256": "f262abd58870a3d6dd9e81fc25cd467148e8151ff4bf05d53746246decc17716",
+      "bytes": 237
+    },
+    {
+      "path": "proofs/native-builder.xml",
+      "sha256": "27636ef9d631b38f59d75dfaad01b7808727c270bc8584b2cbc8d71193b643b0",
+      "bytes": 1111
+    },
+    {
+      "path": "proofs/native-context-proof.json",
+      "sha256": "70c6451956d093ae45a54d701626161899162dee98bdb2c0989d26f66443aa5b",
+      "bytes": 2210
+    },
+    {
+      "path": "proofs/native-preview.json",
+      "sha256": "d9815327e08a439fb59b6eec3364f73e8b74be614b21ae459b931b53e8eaed57",
+      "bytes": 165466
+    },
+    {
+      "path": "proofs/normalizer-proof.json",
+      "sha256": "d35f2aad1a36a8fc71cf687a4f55f258481136dd156a777672be84ac2db8e38d",
+      "bytes": 603
+    },
+    {
+      "path": "proofs/patch-proof.json",
+      "sha256": "ea2b05c838b8170f38e0ba852d89988c33c21d675da5b2ed922d8bcb8083bb53",
+      "bytes": 452
+    },
+    {
+      "path": "proofs/php-green.log",
+      "sha256": "2bb7982a1829f584b389a79c192d29ea7376f36c0e74efd224d8441100a049d4",
+      "bytes": 238
+    },
+    {
+      "path": "proofs/php-green.xml",
+      "sha256": "f46fa8db34f2266512f61fc79b16599238f1ef3a459c044f7e83c5c374716180",
+      "bytes": 5363
+    },
+    {
+      "path": "proofs/php-red.log",
+      "sha256": "c4cafa585e27a0127950e833955bb9aabb6fd90ed34476b452ddcd3d3b28cf69",
+      "bytes": 569
+    },
+    {
+      "path": "proofs/tt-php-bridge.json",
+      "sha256": "12e8641d36a04bac48896cb3940e6e01fe6d9db45d3b7bc367ff76d98729b34b",
+      "bytes": 1327
+    },
+    {
+      "path": "REVIEW.md",
+      "sha256": "846d9e8eef6b3b13683bcd4ce87f4bf11160ca91da10cc6c51bcf4cc75c6434e",
+      "bytes": 4313
+    },
+    {
+      "path": "SOURCE_PROOF.json",
+      "sha256": "5414c2930e41fb0dd5359b17d12eb193ee0a78645edf321fdb6aeebcb89b093d",
+      "bytes": 4384
+    },
+    {
+      "path": "test-inputs/ContainersVersionHistoryLabels.p",
+      "sha256": "9bfe21dc6ff9d86105d7602d376a2adc3cc3b9fe61783a68f7d1cd03f9d100bb",
+      "bytes": 3757
+    },
+    {
+      "path": "test-inputs/sursum-api/includes/PurchaseItemSnapshot.i",
+      "sha256": "f7e81fbcd3fbc53f124c60d99c3065b73e2d876665ce900f8772ed1f25d7350d",
+      "bytes": 4464
+    },
+    {
+      "path": "test-inputs/sursum-api/includes/PurchaseItemValueRules.i",
+      "sha256": "1ae6949d39fa07286e0e1c76776b9bb508de6715d1494858d7ac53c1d591c894",
+      "bytes": 3932
+    },
+    {
+      "path": "test-inputs/sursum-api/includes/PurchaseOrderSnapshot.i",
+      "sha256": "98b8da213a666f328747d0698608954ab646ef60fc2c86e313f6d156b3fa573a",
+      "bytes": 1687
+    },
+    {
+      "path": "tests/abl/ImportDiscountCurrentFixtures.i",
+      "sha256": "5057a938491603a8ab25ca1608a995edb761d53a54f193283601b2d533e1590f",
+      "bytes": 711
+    },
+    {
+      "path": "tests/abl/ImportDiscountsCollectorTest.p",
+      "sha256": "209803792a2e745037d972d2127a8e201d80f66d639991377384323eb86c27e6",
+      "bytes": 5839
+    },
+    {
+      "path": "tests/abl/ImportDiscountsLabelsTest.p",
+      "sha256": "71a08b4c66f434bd1ccd596c7b6b618ec678d615b7469e021bfe8275946c9ef0",
+      "bytes": 6112
+    },
+    {
+      "path": "tests/abl/ImportDiscountSourceFixtures.i",
+      "sha256": "076f38cb3427a465a871cc1789880948ada244367afebe4df2976f245f362f4e",
+      "bytes": 898
+    },
+    {
+      "path": "tests/abl/ImportDiscountsReadTest.p",
+      "sha256": "cc83171fa68ddc298d674e03b4e9f935318acaa5a5c56393de5a9534c65ff1b0",
+      "bytes": 11642
+    },
+    {
+      "path": "tests/abl/SupplierDiscountReadTest.p",
+      "sha256": "8b7dd57907dd55920d351605b1824d2d910dbcd11aad7f1f02768a84f1a46a6b",
+      "bytes": 9442
+    },
+    {
+      "path": "tests/build-patches.py",
+      "sha256": "9c2729f5d117fc284a9e6aac57ef8213528d0fde2a788f9879f339c2ba29b732",
+      "bytes": 2857
+    },
+    {
+      "path": "tests/freeze.py",
+      "sha256": "2c437a9234ca79c6e3a9752653d395fc2d47088007329a6c685f0702ab3339bf",
+      "bytes": 4875
+    },
+    {
+      "path": "tests/native-context.cjs",
+      "sha256": "4d1261af574a89b5059abe73b34f99f0defd3eb0803215e3e297279af011aca8",
+      "bytes": 4517
+    },
+    {
+      "path": "tests/php/reader-negative-row.json",
+      "sha256": "78b8cb682c4f67192de4d0f19bc227436487257426f27dc97d4b5b88fcb85710",
+      "bytes": 634
+    },
+    {
+      "path": "tests/php/reader-row.json",
+      "sha256": "ed9e9bfecd6ac929b5ac344e0ea06de8ddaddb6d76fbfdf8e265e838513107c1",
+      "bytes": 670
+    },
+    {
+      "path": "tests/php/reader-zero-row.json",
+      "sha256": "e8c12fdd95b7ed844c76c7160a2f35694a4a1069728b77ac4ec616d57bcafe4a",
+      "bytes": 625
+    },
+    {
+      "path": "tests/php/runtime-bootstrap.php",
+      "sha256": "e49ede80a2799776a0c3a3c1ec63d4160fb4d517e37a968f2a1fe3a1ea4f1319",
+      "bytes": 258
+    },
+    {
+      "path": "tests/php/SupplierDiscountNativeTest.php",
+      "sha256": "498f2954554833a8a23631998b34c687ecb91059e7c236e49601e2e41e09cc3e",
+      "bytes": 5610
+    },
+    {
+      "path": "tests/php/SupplierDiscountRuntimeTest.php",
+      "sha256": "2c7ccac5b615e4db2c3897163635bc7b47646469dffcf76a3cae504f64a01bfe",
+      "bytes": 12003
+    },
+    {
+      "path": "tests/prepare-verification.py",
+      "sha256": "e343d0574e0e5ecf073f4040b6330d05af051e84005f84de81f4d8677f35c85b",
+      "bytes": 3226
+    },
+    {
+      "path": "tests/run-abl-local.py",
+      "sha256": "cf20c96ec97d7fc7e5d54277da45bea7c5453bacf433ddc03afe3891b00abb56",
+      "bytes": 2736
+    },
+    {
+      "path": "tests/verify-frozen.py",
+      "sha256": "b6ab1cdaae83c39477a2f71ac7b75eaa1b9a3571f03dc16b97b1fd905107694a",
+      "bytes": 1058
+    }
+  ]
+}

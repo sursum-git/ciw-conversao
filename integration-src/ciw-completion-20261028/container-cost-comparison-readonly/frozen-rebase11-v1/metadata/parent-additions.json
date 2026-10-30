@@ -1,0 +1,62 @@
+{
+  "status": "ADDITIVE_ONLY_FRESH_PARENT_EXPORT_REQUIRED",
+  "programCode": "op1005",
+  "screenId": "ciw.container-versoes-custo",
+  "lastObservedEvidence": {
+    "path": ".runtime/ciw-completion-20261028/official-build5-v6/op1005-parent-draft.json",
+    "sha256": "1079ed9e0404325c059ab7edc315ba4921e2a146dcab2d24c05f46f0866e3e10",
+    "version": "1.0.2",
+    "existingLinkIds": [
+      "itens_historicos",
+      "payments_historicos",
+      "nfs_historicos",
+      "discounts_historicos",
+      "expenses_historicos"
+    ]
+  },
+  "preserveExistingLinks": true,
+  "preserveActualAuthentication": true,
+  "onlyAfterAllRuntimeGatesPass": true,
+  "operations": [
+    {
+      "op": "add",
+      "path": "/programDraft/rowLinks/-",
+      "value": {
+        "id": "comparacao_custos_real",
+        "label": "Comparação histórica BRL",
+        "screenId": "ciw.container-custos-comparacao-real",
+        "parameters": [
+          {
+            "field": "container_id",
+            "sourceField": "container_id"
+          },
+          {
+            "field": "versao_id",
+            "sourceField": "versao_id"
+          }
+        ],
+        "position": "end"
+      }
+    },
+    {
+      "op": "add",
+      "path": "/programDraft/rowLinks/-",
+      "value": {
+        "id": "comparacao_custos_dolar",
+        "label": "Comparação histórica USD",
+        "screenId": "ciw.container-custos-comparacao-dolar",
+        "parameters": [
+          {
+            "field": "container_id",
+            "sourceField": "container_id"
+          },
+          {
+            "field": "versao_id",
+            "sourceField": "versao_id"
+          }
+        ],
+        "position": "end"
+      }
+    }
+  ]
+}

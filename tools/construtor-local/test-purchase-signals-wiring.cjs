@@ -1,0 +1,11 @@
+'use strict';
+const fs=require('node:fs'),assert=require('node:assert/strict');
+const root='integration-src/purchase-signals/abl/',api=fs.readFileSync(root+'PurchaseSignalsApi.p','utf8'),service=fs.readFileSync(root+'PurchaseSignalsService.p','utf8'),rules=fs.readFileSync(root+'PurchaseSignalRules.p','utf8'),dispatch=fs.readFileSync(root+'CiwCadastrosCrud.p','utf8');
+assert.match(api,/Remove\('resource'\)/,'Dispatcher resource must be removed before the closed service');
+for(const table of ['procs_compra','empresas','itens_proc_compra','pagtos_proc_compra','sinalizadores_importacao'])assert.ok(api.includes("'espec."+table+"'"));
+assert.match(api,/hSignals,TODAY,cleanRequest,OUTPUT poResponse/);
+assert.ok(dispatch.includes('WHEN "proc_compra_alertas" THEN DO:'));assert.ok(dispatch.includes('PurchaseSignalsApi.r'));
+assert.ok(service.includes('{sursum-api/includes/PurchaseOrderContext.i}'));assert.ok(service.includes("PurchaseSignalRules.r"));assert.ok(service.includes("CiwErpReadService.r"));assert.ok(service.includes("IF LOOKUP(op,'read,get')=0"));assert.ok(service.includes('scanned>50000'));
+for(const text of [api,service,rules])assert.ok(!/BUFFER-(CREATE|DELETE)|DO TRANSACTION|DYNAMIC-NEXT-VALUE/i.test(text));
+assert.ok(rules.includes('strictGreater AND pdToday>dueDate'));assert.ok(rules.includes('finishedDate=? AND receivedDate<>?'));
+console.log('PASS fixed readonly bindings/clock/resource/context/shared rules-reader; no business writers');

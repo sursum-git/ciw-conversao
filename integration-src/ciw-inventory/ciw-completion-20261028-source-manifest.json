@@ -1,0 +1,36 @@
+{
+  "scope": [
+    "cons_det_versoes_item_custo_container"
+  ],
+  "analysis_copies": true,
+  "files": [
+    {
+      "application": "cons_det_versoes_item_custo_container",
+      "file": "cons_det_versoes_item_custo_container.php",
+      "remote_sha256": "254e8eb81051acff5767e4fd4641136bd5654ea57287e531b6fa45bda00e857c",
+      "copied_sha256": "254e8eb81051acff5767e4fd4641136bd5654ea57287e531b6fa45bda00e857c",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_det_versoes_item_custo_container",
+      "file": "cons_det_versoes_item_custo_container_grid.class.php",
+      "remote_sha256": "da5943a74f0fde0ecc8026b961874b6c9e5cf63e7352a739a2f1757b7852815f",
+      "copied_sha256": "7faad5675f5d30e563c7cee08a93cdc2018bc8950eb1af5125bc139c9202f8a4",
+      "sensitive_literals_omitted": 3
+    },
+    {
+      "application": "cons_det_versoes_item_custo_container",
+      "file": "cons_det_versoes_item_custo_container_lookup.class.php",
+      "remote_sha256": "ec001596f8d0113ffbfe9fccebd76d6e448932d6bb2a87b946853b37d1581743",
+      "copied_sha256": "ec001596f8d0113ffbfe9fccebd76d6e448932d6bb2a87b946853b37d1581743",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_det_versoes_item_custo_container",
+      "file": "index.php",
+      "remote_sha256": "fbd55c68851810ec578f000f1edd0de48e5482f8c002e9c661cb19b2fdcbb6ab",
+      "copied_sha256": "eac663eb0d63a972ab4533353035836790a213d5b2b02b4a762c378cebe7de29",
+      "sensitive_literals_omitted": 21
+    }
+  ]
+}

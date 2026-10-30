@@ -1,0 +1,87 @@
+ADD TABLE "docum-est"
+  AREA "Schema Area"
+ADD FIELD "nro-docto" OF "docum-est" AS character
+ADD FIELD "serie-docto" OF "docum-est" AS character
+ADD FIELD "cod-emitente" OF "docum-est" AS integer
+ADD FIELD "tot-valor" OF "docum-est" AS decimal
+  DECIMALS 10
+ADD FIELD "esp-docto" OF "docum-est" AS integer
+ADD FIELD "cod-estabel" OF "docum-est" AS character
+ADD FIELD "cidade" OF "docum-est" AS character
+ADD FIELD "uf" OF "docum-est" AS character
+ADD FIELD "dt-trans" OF "docum-est" AS date
+ADD FIELD "dt-emissao" OF "docum-est" AS date
+ADD FIELD "nat-operacao" OF "docum-est" AS character
+ADD TABLE "natur-oper"
+  AREA "Schema Area"
+ADD FIELD "nat-operacao" OF "natur-oper" AS character
+ADD FIELD "tipo-compra" OF "natur-oper" AS integer
+ADD FIELD "tp-rec-desp" OF "natur-oper" AS integer
+ADD TABLE "devol-cli"
+  AREA "Schema Area"
+ADD FIELD "cod-estabel" OF "devol-cli" AS character
+ADD FIELD "cod-emitente" OF "devol-cli" AS integer
+ADD FIELD "nro-docto" OF "devol-cli" AS character
+ADD FIELD "serie-docto" OF "devol-cli" AS character
+ADD FIELD "nat-operacao" OF "devol-cli" AS character
+ADD FIELD "serie" OF "devol-cli" AS character
+ADD FIELD "nr-nota-fis" OF "devol-cli" AS character
+ADD FIELD "codigo-rejei" OF "devol-cli" AS integer
+ADD TABLE "nota-fiscal"
+  AREA "Schema Area"
+ADD FIELD "cod-estabel" OF "nota-fiscal" AS character
+ADD FIELD "cod-emitente" OF "nota-fiscal" AS integer
+ADD FIELD "nr-nota-fis" OF "nota-fiscal" AS character
+ADD FIELD "serie" OF "nota-fiscal" AS character
+ADD FIELD "nr-pedcli" OF "nota-fiscal" AS character
+ADD FIELD "nome-ab-cli" OF "nota-fiscal" AS character
+ADD FIELD "cod-rep" OF "nota-fiscal" AS integer
+ADD FIELD "no-ab-reppri" OF "nota-fiscal" AS character
+ADD FIELD "dt-emis-nota" OF "nota-fiscal" AS date
+ADD FIELD "dt-cancela" OF "nota-fiscal" AS date
+ADD FIELD "idi-sit-nf-eletro" OF "nota-fiscal" AS integer
+ADD FIELD "estado" OF "nota-fiscal" AS character
+ADD FIELD "cidade" OF "nota-fiscal" AS character
+ADD FIELD "vl-tot-nota" OF "nota-fiscal" AS decimal
+  DECIMALS 10
+ADD FIELD "val-desconto-total" OF "nota-fiscal" AS decimal
+  DECIMALS 10
+ADD FIELD "nat-operacao" OF "nota-fiscal" AS character
+ADD FIELD "esp-docto" OF "nota-fiscal" AS integer
+ADD TABLE "ped-venda"
+  AREA "Schema Area"
+ADD FIELD "nr-pedcli" OF "ped-venda" AS character
+ADD FIELD "nome-abrev" OF "ped-venda" AS character
+ADD FIELD "nr-pedido" OF "ped-venda" AS integer
+ADD FIELD "cod-priori" OF "ped-venda" AS integer
+ADD TABLE "ped-repre"
+  AREA "Schema Area"
+ADD FIELD "nr-pedido" OF "ped-repre" AS integer
+ADD FIELD "nome-ab-rep" OF "ped-repre" AS character
+ADD FIELD "perc-comis" OF "ped-repre" AS decimal
+  DECIMALS 10
+ADD TABLE "ped-venda-ext"
+  AREA "Schema Area"
+ADD FIELD "cod-estabel" OF "ped-venda-ext" AS character
+ADD FIELD "nr-pedido" OF "ped-venda-ext" AS integer
+ADD FIELD "preposto" OF "ped-venda-ext" AS character
+ADD TABLE "cod-rejeicao"
+  AREA "Schema Area"
+ADD FIELD "codigo-rejei" OF "cod-rejeicao" AS integer
+ADD FIELD "descricao" OF "cod-rejeicao" AS character
+ADD TABLE "it-nota-fisc"
+  AREA "Schema Area"
+ADD FIELD "cod-estabel" OF "it-nota-fisc" AS character
+ADD FIELD "serie" OF "it-nota-fisc" AS character
+ADD FIELD "nr-nota-fis" OF "it-nota-fisc" AS character
+ADD FIELD "char-2" OF "it-nota-fisc" AS character
+ADD TABLE "user-web"
+  AREA "Schema Area"
+ADD FIELD "Login" OF "user-web" AS character
+ADD FIELD "tp-usuario" OF "user-web" AS integer
+ADD FIELD "nome-ab-cli" OF "user-web" AS character
+ADD TABLE "repres"
+  AREA "Schema Area"
+ADD FIELD "nome-abrev" OF "repres" AS character
+ADD FIELD "cod-rep" OF "repres" AS integer
+.

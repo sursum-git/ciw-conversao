@@ -1,0 +1,164 @@
+--- D:/opencode/motor-progress/v2/sursum-api/programs/ContainersPainelFinanceReadService.p
++++ D:/opencode/motor-progress/v2/sursum-api/programs/ContainersPainelFinanceReadService.p
+@@ -50,6 +50,11 @@
+ DEFINE VARIABLE iSelectedTitle AS INTEGER NO-UNDO.
+ DEFINE VARIABLE cOptionError AS CHARACTER NO-UNDO.
+ DEFINE VARIABLE cOptionMessage AS CHARACTER NO-UNDO.
++DEFINE TEMP-TABLE ttNfExcluded NO-UNDO FIELD documentValue AS CHARACTER FIELD documentHash AS CHARACTER CASE-SENSITIVE INDEX pk IS PRIMARY UNIQUE documentHash.
++DEFINE VARIABLE iNfStarted AS INTEGER NO-UNDO.
++DEFINE VARIABLE iNfReads AS INTEGER NO-UNDO.
++DEFINE VARIABLE cNfError AS CHARACTER NO-UNDO.
++DEFINE VARIABLE iNfStatus AS INTEGER NO-UNDO.
+ 
+ FUNCTION FindFirst RETURNS LOGICAL (phBuffer AS HANDLE,pcCondition AS CHARACTER):
+   DEFINE VARIABLE lValue AS LOGICAL NO-UNDO.
+@@ -273,6 +278,90 @@
+     IF cOperation="read" THEN jaRows:Add(joRow).
+     ELSE ASSIGN joSelected=joRow lMatched=TRUE.
+   END.
++END PROCEDURE.
++/* Same NF row/key mapper as linked NFs; only this new read selection differs. */
++FUNCTION NfDocumentHash RETURNS CHARACTER (pcValue AS CHARACTER):
++ DEFINE VARIABLE hashValue AS CHARACTER NO-UNDO.
++ hashValue=CAPS(HEX-ENCODE(MESSAGE-DIGEST("SHA-256",pcValue))).
++ RETURN hashValue.
++END FUNCTION.
++FUNCTION NfDocumentAmbiguous RETURNS LOGICAL (pcValue AS CHARACTER):
++ DEFINE VARIABLE k AS INTEGER NO-UNDO.
++ IF pcValue=? OR LENGTH(pcValue)=0 THEN RETURN FALSE.
++ /* A refusal gate, never a normalization or a substitute SQL collation. */
++ IF INDEX(CHR(9) + CHR(10) + CHR(13) + " ",SUBSTRING(pcValue,1,1))>0
++  OR INDEX(CHR(9) + CHR(10) + CHR(13) + " ",SUBSTRING(pcValue,LENGTH(pcValue),1))>0 THEN RETURN TRUE.
++ DO k=1 TO LENGTH(pcValue): IF ASC(SUBSTRING(pcValue,k,1))>127 THEN RETURN TRUE. END.
++ RETURN FALSE.
++END FUNCTION.
++PROCEDURE NfFail:
++ DEFINE INPUT PARAMETER codeValue AS CHARACTER NO-UNDO.
++ DEFINE INPUT PARAMETER statusValue AS INTEGER NO-UNDO.
++ ASSIGN cNfError=codeValue iNfStatus=statusValue.
++ UNDO, THROW NEW Progress.Lang.AppError("Available NF selection refused.",1).
++END PROCEDURE.
++PROCEDURE NfReadBound:
++ IF ETIME - iNfStarted>=10000 OR iNfReads>=50000 THEN RUN NfFail("CONTAINER_NF_QUERY_LIMIT",503).
++ iNfReads=iNfReads + 1.
++END PROCEDURE.
++PROCEDURE AvailableNfs:
++ DEFINE VARIABLE supplierValue AS INTEGER NO-UNDO.
++ DEFINE VARIABLE estabValue AS CHARACTER NO-UNDO.
++ DEFINE VARIABLE cNfDocument AS CHARACTER NO-UNDO.
++ DEFINE VARIABLE countRows AS INTEGER NO-UNDO.
++ DEFINE VARIABLE hasExclusions AS LOGICAL NO-UNDO.
++ DEFINE VARIABLE hasAmbiguousExclusions AS LOGICAL NO-UNDO.
++ DEFINE VARIABLE excluded AS LOGICAL NO-UNDO.
++ DEFINE VARIABLE documentHashValue AS CHARACTER NO-UNDO.
++ DEFINE VARIABLE finished AS LOGICAL NO-UNDO.
++ supplierValue=phContainer:BUFFER-FIELD("cod-emit-forn"):BUFFER-VALUE.
++ estabValue=phContainer:BUFFER-FIELD("cod-estabel"):BUFFER-VALUE.
++ IF supplierValue=? THEN RUN NfFail("CONTAINER_NF_SUPPLIER_REQUIRED",422).
++ ASSIGN iNfStarted=ETIME iNfReads=0.
++ DO STOP-AFTER 10 ON STOP UNDO, LEAVE:
++  RUN OpenQuery(hLinks,phNfs,phNfs:NAME + ".container_id=" + TRIM(STRING(iContainer)),"").
++  DO WHILE NOT hLinks:QUERY-OFF-END:
++   RUN NfReadBound.
++   cNfDocument=phNfs:BUFFER-FIELD("documento"):BUFFER-VALUE.
++   /* The source interpolates PHP NULL as an empty SQL string, with no TRIM. */
++   IF cNfDocument=? THEN cNfDocument="".
++   documentHashValue=NfDocumentHash(cNfDocument).
++   IF NOT CAN-FIND(ttNfExcluded WHERE ttNfExcluded.documentHash=documentHashValue) THEN DO:
++    CREATE ttNfExcluded. ASSIGN ttNfExcluded.documentHash=documentHashValue ttNfExcluded.documentValue=cNfDocument. RELEASE ttNfExcluded.
++   END.
++   IF NfDocumentAmbiguous(cNfDocument) THEN hasAmbiguousExclusions=TRUE.
++   hasExclusions=TRUE. hLinks:GET-NEXT().
++  END.
++  hLinks:QUERY-CLOSE().
++  cWhere=phDocumEst:NAME + ".cod-estabel=" + AblQuote(estabValue)
++   + " AND " + phDocumEst:NAME + ".cod-emitente=" + TRIM(STRING(supplierValue))
++   + " AND " + phDocumEst:NAME + ".nat-operacao BEGINS ~"3~""
++   + " AND " + phDocumEst:NAME + ".idi-sit-nf-eletro=3".
++  RUN OpenQuery(hDocuments,phDocumEst,cWhere,"BY " + phDocumEst:NAME + ".nro-docto BY " + phDocumEst:NAME + ".serie-docto BY " + phDocumEst:NAME + ".nat-operacao").
++  DO WHILE NOT hDocuments:QUERY-OFF-END AND NOT lMatched:
++   RUN NfReadBound.
++   cNfDocument=phDocumEst:BUFFER-FIELD("nro-docto"):BUFFER-VALUE.
++   excluded=FALSE.
++   IF hasExclusions THEN DO:
++    /* SQL <> any associated document excludes an unknown candidate value. */
++    IF cNfDocument=? THEN excluded=TRUE.
++    ELSE DO:
++     documentHashValue=NfDocumentHash(cNfDocument).
++     IF CAN-FIND(ttNfExcluded WHERE ttNfExcluded.documentHash=documentHashValue) THEN excluded=TRUE.
++     ELSE IF hasAmbiguousExclusions OR NfDocumentAmbiguous(cNfDocument)
++      OR CAN-FIND(ttNfExcluded WHERE ttNfExcluded.documentValue=cNfDocument) THEN RUN NfFail("CONTAINER_NF_COLLATION_UNPROVEN",422).
++    END.
++   END.
++   IF NOT excluded THEN DO:
++    countRows=countRows + 1.
++    IF countRows>200 THEN RUN NfFail("CONTAINER_NF_QUERY_LIMIT",503).
++    RUN NfRow(TRUE,OUTPUT joRow). RUN AcceptRow(joRow).
++   END.
++   hDocuments:GET-NEXT().
++  END.
++  hDocuments:QUERY-CLOSE(). finished=TRUE.
++ END.
++ IF NOT finished OR ETIME - iNfStarted>=10000 THEN RUN NfFail("CONTAINER_NF_QUERY_LIMIT",503).
+ END PROCEDURE.
+ PROCEDURE OpenQuery:
+   DEFINE INPUT PARAMETER phQuery AS HANDLE NO-UNDO.
+@@ -479,6 +568,7 @@
+     WHEN "pagamentos" THEN cKeyField="pagamento_key".
+     WHEN "pagamentos-disponiveis" THEN cKeyField="value".
+     WHEN "nfs" THEN cKeyField="nf_key".
++    WHEN "nfs-disponiveis" THEN cKeyField="nf_key".
+     OTHERWISE DO: RUN Fail("CONTAINER_RESOURCE_INVALID","Recurso invalido.",422). RETURN. END.
+   END CASE.
+   cNames=poRequest:GetNames().
+@@ -500,6 +590,7 @@
+     IF poRequest:GetType("id")<>JsonDataType:STRING THEN DO: RUN Fail("CONTAINER_VALIDATION","Chave invalida.",422). RETURN. END.
+     cId=poRequest:GetCharacter("id").
+     IF NOT ValidKey(cId) THEN DO: RUN Fail("CONTAINER_VALIDATION","Chave invalida.",422). RETURN. END.
++    IF cResource="nfs-disponiveis" AND cId<>("nf_" + CAPS(SUBSTRING(cId,4))) THEN DO: RUN Fail("CONTAINER_VALIDATION","Chave invalida.",422). RETURN. END.
+     IF poRequest:Has(cKeyField) THEN DO:
+       IF poRequest:GetType(cKeyField)<>JsonDataType:STRING THEN DO: RUN Fail("CONTAINER_VALIDATION","Alias da chave invalido.",422). RETURN. END.
+       IF poRequest:GetCharacter(cKeyField)<>cId THEN DO: RUN Fail("CONTAINER_VALIDATION","Alias da chave conflitante.",422). RETURN. END.
+@@ -509,9 +600,15 @@
+   IF NOT FindFirst(phContainer,phContainer:NAME + ".nr-container = " + TRIM(STRING(iContainer))) THEN DO:
+     RUN Fail("CONTAINER_NOT_FOUND","Container nao encontrado.",404). RETURN.
+   END.
++  IF cResource="nfs-disponiveis" THEN DO:
++    cPrefix=phContainer:BUFFER-FIELD("cod-estabel"):BUFFER-VALUE.
++    IF cPrefix=? OR NOT cPrefix BEGINS "5" THEN DO: RUN Fail("CONTAINER_NF_MED_REQUIRED","NFs disponiveis exigem container MED.",422). RETURN. END.
++  END.
++  ELSE DO:
+   IF NOT VALID-HANDLE(phEmpresas) THEN UNDO, THROW NEW Progress.Lang.AppError("Missing company buffer.",0).
+   RUN CompanyContext.
+   IF cCompany="" THEN DO: RUN Fail("CONTAINER_COMPANY_CONTEXT","Empresa do estabelecimento ausente ou ambigua.",422). RETURN. END.
++  END.
+   jaRows=NEW JsonArray().
+   CREATE QUERY hLinks. CREATE QUERY hDocuments.
+   IF cResource="pagamentos" OR cResource="pagamentos-disponiveis" THEN DO:
+@@ -546,6 +643,8 @@
+   ELSE DO:
+     IF NOT VALID-HANDLE(phNfs) OR NOT VALID-HANDLE(phDocumEst) THEN
+       UNDO, THROW NEW Progress.Lang.AppError("Missing NF buffers.",0).
++    IF cResource="nfs-disponiveis" THEN RUN AvailableNfs.
++    ELSE DO:
+     RUN OpenQuery(hLinks,phNfs,phNfs:NAME + ".container_id = " + TRIM(STRING(iContainer)),"BY " + phNfs:NAME + ".documento BY "
+       + phNfs:NAME + ".serie BY " + phNfs:NAME + ".estab BY " + phNfs:NAME + ".nat_operacao BY " + phNfs:NAME + ".cod_emitente").
+     DO WHILE NOT hLinks:QUERY-OFF-END AND NOT lMatched:
+@@ -563,6 +662,7 @@
+       IF NOT lFound THEN DO: RUN NfRow(FALSE,OUTPUT joRow). RUN AcceptRow(joRow). END.
+       hLinks:GET-NEXT().
+     END.
++    END.
+   END.
+   IF cOperation="get" THEN DO:
+     IF NOT lMatched THEN DO: RUN Fail("CONTAINER_CHILD_NOT_FOUND","Registro nao encontrado neste container.",404). RETURN. END.
+@@ -570,7 +670,8 @@
+   END.
+   ELSE DO: poResponse:Add("success",TRUE). poResponse:Add("data",jaRows). END.
+   CATCH e AS Progress.Lang.Error:
+-    IF cResource="pagamentos-disponiveis" AND cOptionError<>"" THEN RUN Fail(cOptionError,cOptionMessage,422).
++    IF cResource="nfs-disponiveis" AND cNfError<>"" THEN RUN Fail(cNfError,"Consulta de NFs disponiveis recusada; contexto ou limite invalido.",iNfStatus).
++    ELSE IF cResource="pagamentos-disponiveis" AND cOptionError<>"" THEN RUN Fail(cOptionError,cOptionMessage,422).
+     ELSE RUN Fail("CONTAINER_INTERNAL","Nao foi possivel consultar dados financeiros do container.",500).
+   END CATCH.
+   FINALLY:

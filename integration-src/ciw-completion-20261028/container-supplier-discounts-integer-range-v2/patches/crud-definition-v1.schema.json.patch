@@ -1,0 +1,42 @@
+--- a/public/metadata/schemas/crud-definition-v1.schema.json
++++ b/public/metadata/schemas/crud-definition-v1.schema.json
+@@ -11,6 +11,17 @@
+     "dataSource",
+     "dataModel",
+     "crud"
++  ],
++  "allOf": [
++    {
++      "if": {"required": ["contextFields"], "properties": {"contextFields": {"contains": {"type": "object", "required": ["integerRange"]}}}},
++      "then": {
++        "properties": {
++          "permissions": {"required": ["create", "edit", "delete"], "properties": {"create": {"const": false}, "edit": {"const": false}, "delete": {"const": false}}},
++          "dataModel": {"properties": {"fields": {"additionalProperties": {"not": {"anyOf": [{"required": ["optionsSource"]}, {"required": ["attachment"]}, {"required": ["editor"], "properties": {"editor": {"const": "file"}}}]}}}}}
++        }
++      }
++    }
+   ],
+   "properties": {
+     "contextFields": {
+@@ -2777,6 +2788,10 @@
+         },
+         "filterOnly": {
+           "type": "boolean"
++        },
++        "integerRange": {
++          "type": "object", "required": ["min", "max"], "additionalProperties": false,
++          "properties": {"min": {"type": "integer", "minimum": -2147483648, "maximum": 2147483647}, "max": {"type": "integer", "minimum": -2147483648, "maximum": 2147483647}}
+         }
+       },
+       "allOf": [
+@@ -2786,6 +2801,10 @@
+             "required": ["filter", "required", "readonly", "createDefault"],
+             "properties": {"filter": {"const": true}, "required": {"const": false}, "readonly": {"const": true}, "createDefault": {"const": false}}
+           }
++        },
++        {
++          "if": {"required": ["integerRange"]},
++          "then": {"required": ["field", "required", "readonly", "filter", "createDefault"], "properties": {"required": {"const": true}, "readonly": {"const": true}, "filter": {"const": true}, "createDefault": {"const": false}}}
+         }
+       ],
+       "additionalProperties": false

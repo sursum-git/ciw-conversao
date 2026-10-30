@@ -1,0 +1,81 @@
+{
+  "sourceFiles": [
+    {
+      "path": "sources/scriptcase/ciw-completion-next20b-20261028/cons_desc_geral_fornec/cons_desc_geral_fornec.php",
+      "sha256": "a16982d44de89d5ef011265ec033c32b2fa40a8fa251ddb75ff9fd32142ddde0"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20b-20261028/cons_desc_geral_fornec/cons_desc_geral_fornec_grid.class.php",
+      "sha256": "5b83ca23857d544551e48f3dd70105d31bc63b3f172dc6c11d3120b3b38fdda5"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20b-20261028/cons_desc_geral_fornec/cons_desc_geral_fornec_lookup.class.php",
+      "sha256": "a108a0a1db8705b75939bf49c45dad4fac9e585d118cd7e6dfb106c1935439fa"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20b-20261028/cons_desc_geral_fornec/index.php",
+      "sha256": "2db47e021c67360defd1ec99014fb41608bb4cf383b0af8e750b1cac7da7b7e7"
+    }
+  ],
+  "activeSql": {
+    "line": 828,
+    "phpLiteral": "\"SELECT item_container_id, fornecedor_id, motivo_desconto_id, descricao, log_credito, vl_dolar, vl_real, vl_cotacao_dolar, cod_tipo, vl_real_autorizado, vl_dolar_autorizado, dt_autorizacao, VL_UTILIZ, VL_SALDO, arquivo from (SELECT    desconto_importacao_id,    motivo_desconto_id,    descricao,    log_credito,    vl_dolar,    vl_real,    vl_cotacao_dolar,    item_container_id,    cod_tipo,    fornecedor_id,    vl_real_autorizado,    vl_dolar_autorizado,    dt_autorizacao,    coalesce((select sum(valor_utilizado) from pub.cta_corren_desconto cta    where cta.desconto_importacao_id = descontos.desconto_importacao_id        ),0) as vl_utiliz, vl_dolar_autorizado -    coalesce((select sum(valor_utilizado) from pub.cta_corren_desconto cta    where cta.desconto_importacao_id = descontos.desconto_importacao_id        ),0)      as vl_saldo,     arquivo FROM    PUB.descontos_importacao descontos WHERE    descontos.fornecedor_id = \" . $_SESSION['fornec_id'] . \") nm_sel_esp\";",
+    "outerProjections": [
+      "item_container_id",
+      "fornecedor_id",
+      "motivo_desconto_id",
+      "descricao",
+      "log_credito",
+      "vl_dolar",
+      "vl_real",
+      "vl_cotacao_dolar",
+      "cod_tipo",
+      "vl_real_autorizado",
+      "vl_dolar_autorizado",
+      "dt_autorizacao",
+      "vl_utiliz",
+      "vl_saldo",
+      "arquivo"
+    ],
+    "innerIdentity": "desconto_importacao_id",
+    "distinctOrGroupBy": false,
+    "supplierPredicate": "descontos.fornecedor_id = $_SESSION['fornec_id']"
+  },
+  "caller": {
+    "path": "sources/scriptcase/ciw-completion-next20d-20261028/cons_cta_corren_fornec_imp_saldos/cons_cta_corren_fornec_imp_saldos_grid.class.php",
+    "sha256": "f4bad854e6528ed08408e5000aa20857a8f655facdbf232e11126eb993c84410",
+    "lines": [
+      4328,
+      4343,
+      4345
+    ],
+    "parameter": "fornec_id",
+    "sourceField": "fornecedor_id",
+    "trigger": "vl_desc_autorizado link",
+    "sourceMenuRetirementDoesNotEstablishThisScreenRetirement": true
+  },
+  "schema": {
+    "path": "integration-src/container-panel/schema/schema-descontos_importacao.json",
+    "sha256": "2898444db0b91153ece70f3c3c16c7d1f96feae5ab298907f2ac0350e87d12d5",
+    "supplierType": "integer",
+    "supplierMandatory": false,
+    "supplierInitial": "0",
+    "supplierValidation": null,
+    "supplierIndexUnique": false,
+    "physicalPrimaryKey": [
+      "desconto_importacao_id"
+    ]
+  },
+  "gapComparedWith1045": [
+    "Global resource rejects context; optional filter is not an enforced supplier boundary",
+    "Collector selects only global/discount PK; must scope supplier before aggregate/page/budget",
+    "arquivo is in source15 but not old collector/reader shape",
+    "Generic ApiRequestContext accepts positive IDs only; source supplier INT has no positive constraint"
+  ],
+  "reuse": "One collector body/unique existing SUM/COALESCE/saldo mapper, old ABI facade kept; new fixed supplier facade. Shared reader/helper/API reused.",
+  "scope": "readonly query; no DML/download/writer/FK-existence or MED rule invented; arquivo text only, legacy doc link deferred",
+  "proposedContext": "required signed int32 fornecedor_id; nonNULL; keep duplicates by hidden physical discount PK, never item_container_id PK",
+  "programCode": "op1056",
+  "resource": "import_descontos_fornecedor",
+  "entity": "descontos_importacao_fornecedor_progress"
+}

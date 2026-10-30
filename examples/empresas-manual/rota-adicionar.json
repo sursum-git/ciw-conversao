@@ -1,0 +1,5 @@
+{
+  "route": "/SursumPrograms/empresas-consulta-manual",
+  "method": "POST",
+  "program": "sursum-api/programs/ConsultarEmpresasManual.p"
+}

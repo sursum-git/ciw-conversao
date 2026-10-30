@@ -1,0 +1,7 @@
+{
+  "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeApiEntityActionService.php",
+  "baselineSHA256": "a1553414fcee213e3563131a7e12b13ce3b85a9b79b3ffab7b001b6b9c04526f",
+  "operation": "insertBefore",
+  "anchor": "        if (($definition['entityCode'] ?? null) === 'proc_compra_quantidades_progress') {",
+  "insertion": "        if (($definition['entityCode'] ?? null) === 'proc_compra_sinalizados_med_progress') {\n            ApiRequestContext::assertRows($body['data'], ['sinaliz_imp_id' => $query['sinaliz_imp_id']]);\n        }\n\n"
+}

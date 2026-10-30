@@ -1,0 +1,12 @@
+{
+    "success": true,
+    "fields": 9,
+    "dtoFields": 9,
+    "readOnlySummary": true,
+    "formTabs": [
+        "alerta"
+    ],
+    "apiOperations": 4,
+    "databaseWrites": false,
+    "networkRequests": false
+}

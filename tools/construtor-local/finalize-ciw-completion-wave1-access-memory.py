@@ -1,0 +1,39 @@
+"""Record the exact consumed3read authorization and real LDAP UI verification."""
+from pathlib import Path
+import hashlib,json,re,shutil
+r=Path(__file__).resolve().parents[2];s=r/'.runtime/ciw-completion-20261028';b=s/'official-build3';a=s/'wave1-access';load=lambda p:json.loads(p.read_text(encoding='utf-8-sig'));sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+proof=load(a/'verified.json');gate=load(a/'authorization.json');assert proof['success'] and proof['sessionsVerified']==4 and gate['authorized']is False and gate['consumed']is True and gate['humanApprovalReference']=='call_5111d629eb42427c81f8fccf247bd988'
+images=['ui-memory-granted.jpg','ui-fiscal-granted.jpg','ui-fiscal-detail-readonly.jpg','ui-version-parent-link.jpg','ui-history-granted.jpg','ui-history-detail-readonly.jpg'];assert all((b/n).is_file()for n in images)
+ui=dict(success=True,user='tadeu.parreiras',provider='ldap',children=3,memoryExpenseId=42784,calculationId=46714,containerId=332526,versionId=2354,historicalItemId=7035,contextLinks=True,fiscalDetailReadonly=True,historicalCompositeKeyVisualizar=True,historicalDetailReadonly=True,integerIdsNoDecimals=True,businessWrites=False,temporaryAgentTabsClosed=['31','32'],userTabsPreserved=['1','2','26'],images=images,limitations=['Legacy fiscal HTML shown escaped as text; no arbitrary HTML renderer','Historical mojibake retained as stored','Lookup/auxiliary/comparison fidelity tracked separately; whole legacy origin not closed by this increment'])
+(b/'ui-verification.json').write_text(json.dumps(ui,indent=2)+'\n')
+backup=s/'memory-wave1-access-backup';backup.mkdir()
+note='''## Acesso wave1 concluído — autorização consumida e UI LDAP
+
+**Estado prevalente:** as três reads wave1 foram autorizadas pelo humano em `call_5111d629eb42427c81f8fccf247bd988`, aplicadas uma vez e conferidas. SOMENTE container_calculos_impostos_med_progress.read, container_despesa_memoria_med_progress.read e container_versoes_historico_med_progress.read para tadeu.parreiras. Assinatura nativa, demais permissões e quatro snapshots LDAP244/246/249/368 preservados. wave1-access/{applied,verified,authorization}.json; authorized=false/consumed=true. NÃO pedir/conceder novamente; não autoriza acessos das novas1036–39/1042 ou teste comercial.
+
+UI LDAP real: despesas→memória42784→cálculo46714, sempreCID332526; fiscal lista+Visualizar readonly. Versões1.0.1→itens históricos da versão2354/item7035, lista+Visualizar com chave JSON composta íntegra, formulário readonly. IDs inteiros sem decimais. Seis imagens e ui-verification.json no official-build3. Tabs temporárias31/32 encerradas, usertabs1/2/26 preservadas. Memória fiscal HTML legada é exibida como texto escapado; não foi ativado HTML arbitrário. Conteúdo histórico com mojibake foi preservado. Lookup/filhas/comparações continuam na fila; não declarar a família histórica inteira concluída.
+
+Inventário reconciliado por root:62Convertido/8Preparado/200origensnãoencerradas,257origensintactas. Somente bl_sincronizar_impostos foi promovido após evento ativo+recibos de teste/limpeza+catálogo atual comprovados; outras4sóremaining corrigido. inventory-reconciliation-5-applied.json. Novos20fontes pendentes coletados/sanitizados: sources/scriptcase/ciw-completion-next20-20261028,82arquivos/281literaisomitidos. Não foi executadoPHPlegado.
+
+Próxima compilação emexecução: **official-build5-v6**, sessãoSSH48103. Não duplicar/reiniciar enquanto ativa. Build5 original/v2/v3/v4 cancelados ANTESSSH. **v5 executouSSH e falhou** em28compilesbons/29ºBatchApi porNet.URI12886;0TT,0canônicos,0publicação. v6 é reparoSÓharness com OpenEdge.Net.pl gui/tty DAinstalação12.2 noPROPATH,65sources/62produto+testsiguais/16candidatosbyteiguais; root/manager885PHP5841stagedpass, local683checks×4/40TT. Oficial planeja43compiles COM1espec10012 somenteesquema e40execuçõesTT SEMbanco. **Ainda não alegar oficialGREEN/integrar/publicar5** até baixar e verificarlogs; review/hashrelease em5-v6/manager-review-final.json, root-preflight.json. Fonte atual124/pais1003v1.0.2 e1005v1.0.1 continuambaselinepois5nãointegrado.
+
+Gerente segueativo; executores agora1047seleçãodespesas e1045/46descontosRO.1043tax-only congeladorevisado219TT×4, nãooficial, precisa rebasepós1042. Lookups históricos congeladosseparados nãoentram5.1047preservaordemlegada via polí ticaprivada no plannerúnico, enumfechadoordenação baseadofonte, seleção1..100; fallbackvazio sósubsetcalculado. Customsort/NULL/tiessemprova permanecemgates; não duplicarfórmula nem mudar callersantigos. GoalglobalACTIVE/ControlesFINAL.
+
+'''.replace('polí tica','política')
+detail=r/'context/CIW_COMPLETION_GOAL_2026-10-28.md';text=detail.read_text(encoding='utf-8-sig');assert '## Acesso wave1 concluído'not in text;shutil.copy2(detail,backup/detail.name);detail.write_text(text.replace('## Estado atual wave1 — metadados publicados',note+'## Estado atual wave1 — metadados publicados',1),encoding='utf-8')
+paths=[r/'context/PROJECT_CONTEXT.md',r/'context/RETOMADA_2026-10-16.md',Path('D:/opencode/construtor-pg/CONTEXTO_PROJETO.md'),Path('D:/opencode/motor-progress/v2/context/PROJECT_CONTEXT.md')]
+marker='''<!-- BEGIN CIW_COMPLETION_GOAL_20261028 -->
+## Objetivo global CIW ATIVO — wave1 acesso/UI concluídos
+
+Ler PRIMEIRO **D:/opencode/conversao-sc/context/CIW_COMPLETION_GOAL_2026-10-28.md**, seção Acesso wave1 concluído. Objetivo amplo comgerente/executores continua,ControlesFINAL.5filtros1.0.1/UI e3consultas1033–35+2paísLINKS publicados (fonte124/1003v1.0.2/1005v1.0.1); build3oficial1536checks+build4fix128/PASOE3read-get15negativas/runtimeGREEN.
+
+**3READSwave1 AUTORIZADAS/APLICADAS/VERIFICADAS/CONSUMIDAS** call_5111d629eb42427c81f8fccf247bd988; somenteTadeu/cálculos fiscais/memória/históricoitens,4LDAPsnapshots/otherpermissionspreservados. UI LDAP3telas/links/detalhesreadonly/chaveJSON comprovada;tabs31/32fechadas, user1/2/26preservadas. NÃOpedir/aplicar novamente. HTMLfiscallegado mostradoescapado/mojibakepreservado, próximaslookup/filhas/comparações ainda pendentes; não declarar família inteira concluída.
+
+**OFICIAL5-v6 EMEXECUÇÃO sessão48103** (43compiles COM1espec/esquema,40TT SEMdb previstos). NÃOduplicar/reiniciar. v5chegouSSHefalhou Net.URI12886 porharnesssemNet.pl;0TT/0integração/0pub. v6reparaSÓ3harness,62prod/testfonts e16candidatosidênticos; local683×4/PHP8855841/revisãosemP1P2, masoficial5AINDApendente. Baselineatual124/paiscitados;9ABLs/includes+PHP/JS+rota1042sócandidatos. Próximo:esperar48103/conferir43/40logs;integrar/publicar/validaraux4+batch, testescomerciais/grantsnovos sóautorizados.1043revisado/1047seleçãoe1045/46descontosemexecuçãoTT. Inventário62Converted/200nãoencerradas,20novasfontessanitizadas. Túnel9080/19910→9910MESMAsursum-api/med, nunca9921fallback. Semcommit/push/segredos.
+<!-- END CIW_COMPLETION_GOAL_20261028 -->'''.replace('2paísLINKS','2linksnospaís').replace('2linksnospaís','2linksnospais')
+receipts=[]
+for i,p in enumerate(paths):
+ raw=p.read_bytes();t=raw.decode('utf-8-sig');assert t.count('<!-- BEGIN CIW_COMPLETION_GOAL_20261028 -->')==1;shutil.copy2(p,backup/(str(i)+'-'+p.name));p.write_text(re.sub(r'<!-- BEGIN CIW_COMPLETION_GOAL_20261028 -->.*?<!-- END CIW_COMPLETION_GOAL_20261028 -->',lambda _:marker,t,count=1,flags=re.S),encoding='utf-8');receipts.append(dict(path=str(p),before=hashlib.sha256(raw).hexdigest(),after=sha(p)))
+(s/'memory-wave1-access.json').write_text(json.dumps(dict(success=True,goal='ACTIVE',accessAddedOnly=proof['addedOnly'],uiVerified=True,files=receipts),indent=2)+'\n')
+active=load(s/'ROOT_ACTIVE.json');active.update(humanAccess='COMPLETED_EXACT3READS_AUTHCONSUMED_UI_VERIFIED',officialBuild5='RUNNING5v6_SSH48103',next='Wait official5v6 same48103; inspect43compiles40TT; integrate/publish/validate; broadgoalACTIVE');(s/'ROOT_ACTIVE.json').write_text(json.dumps(active,indent=2)+'\n')
+print('PASS3readgrantsconsumed/UIverified/4memories; official5v6running48103; globalgoalACTIVE')

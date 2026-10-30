@@ -1,0 +1,9 @@
+[
+  {
+    "code": 1049,
+    "entity": "custo_distribuicao_itens_aptos_progress",
+    "resource": "custo_distribuicao_itens_aptos",
+    "screen": "ciw.custo-distribuicao-itens-aptos",
+    "name": "Itens aptos à distribuição de custo"
+  }
+]

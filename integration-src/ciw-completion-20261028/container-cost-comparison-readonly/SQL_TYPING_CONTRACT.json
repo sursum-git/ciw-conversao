@@ -1,0 +1,206 @@
+{
+  "physicalProof": {
+    "path": ".runtime/ciw-completion-20261028/sql-comparison-expression-metadata-v1.json",
+    "sha256": "7c7eeb34b077cf422f4050bc0903298fdd5e8c3a64aba12b79b2f56f7fb5ac8d",
+    "preparedQueries": 2,
+    "executed": false,
+    "fetchedBusinessRows": 0
+  },
+  "projectionSharedByBothCurrencies": true,
+  "intermediateRatioScale": 8,
+  "outputUnitScale": 8,
+  "fixedExpenseScale": 8,
+  "fixedTotalScale": {
+    "real": 10,
+    "dolar": 13
+  },
+  "rule": "Round inner division to its declared SQL scale8 before the two outer divisions; round each outer unit and fixed expense to declared8. Do not round fixed total to8 or use UI2 as calculation precision.",
+  "scope": "Physical SQL result metadata plus 14 synthetic source DERIVED queries/24 result rows. Not a proof of SQL optimizer behavior on all physical values, numeric overflow edges or concurrent changes.",
+  "sourceContractSha256": "053f07115cae76d43771343f473f8b18918ad476026d7295770967903b6230d1",
+  "currencies": {
+    "real": [
+      {
+        "name": "ITENS_PEDIDO_CODIGO_ERP",
+        "type": "varchar",
+        "precision": 40,
+        "scale": 0
+      },
+      {
+        "name": "ITENS_PEDIDO_DESCRICAO",
+        "type": "varchar",
+        "precision": 300,
+        "scale": 0
+      },
+      {
+        "name": "QT_ALOCADA",
+        "type": "numeric",
+        "precision": 17,
+        "scale": 2
+      },
+      {
+        "name": "QT_CONFIRM_EMB",
+        "type": "numeric",
+        "precision": 17,
+        "scale": 2
+      },
+      {
+        "name": "ITEM_CUSTO_VL_CUSTO_PREV_REAL",
+        "type": "numeric",
+        "precision": 17,
+        "scale": 2
+      },
+      {
+        "name": "ITEM_CUSTO_VL_DESP_PREV_REAL",
+        "type": "numeric",
+        "precision": 17,
+        "scale": 2
+      },
+      {
+        "name": "VL_TOT_PREV",
+        "type": "numeric",
+        "precision": 18,
+        "scale": 2
+      },
+      {
+        "name": "ITEM_CUSTO_VL_UNIT_PREV",
+        "type": "numeric",
+        "precision": 17,
+        "scale": 5
+      },
+      {
+        "name": "CMP_MAIOR_30_1",
+        "type": "numeric",
+        "precision": 17,
+        "scale": 2
+      },
+      {
+        "name": "VL_TOT_SEM_DISTR_CUSTO",
+        "type": "numeric",
+        "precision": 18,
+        "scale": 2
+      },
+      {
+        "name": "VL_UNIT_SEM_DISTR_CUSTO",
+        "type": "numeric",
+        "precision": 26,
+        "scale": 8
+      },
+      {
+        "name": "VL_DESP_PREV_PERC_FIXO",
+        "type": "numeric",
+        "precision": 39,
+        "scale": 8
+      },
+      {
+        "name": "VL_TOT_PERC_FIXO",
+        "type": "numeric",
+        "precision": 42,
+        "scale": 10
+      },
+      {
+        "name": "VL_UNIT_PERC_FIXO",
+        "type": "numeric",
+        "precision": 41,
+        "scale": 8
+      },
+      {
+        "name": "PROBE_INNER_RATIO",
+        "type": "numeric",
+        "precision": 25,
+        "scale": 8
+      }
+    ],
+    "dolar": [
+      {
+        "name": "ITENS_PEDIDO_CODIGO_ERP",
+        "type": "varchar",
+        "precision": 40,
+        "scale": 0
+      },
+      {
+        "name": "ITENS_PEDIDO_DESCRICAO",
+        "type": "varchar",
+        "precision": 300,
+        "scale": 0
+      },
+      {
+        "name": "QT_ALOCADA",
+        "type": "numeric",
+        "precision": 17,
+        "scale": 2
+      },
+      {
+        "name": "QT_CONFIRM_EMB",
+        "type": "numeric",
+        "precision": 17,
+        "scale": 2
+      },
+      {
+        "name": "ITEM_CUSTO_VL_CUSTO_PREV_DOLAR",
+        "type": "numeric",
+        "precision": 17,
+        "scale": 5
+      },
+      {
+        "name": "ITEM_CUSTO_VL_DESP_PREV_DOLAR",
+        "type": "numeric",
+        "precision": 17,
+        "scale": 2
+      },
+      {
+        "name": "VL_TOT_PREV",
+        "type": "numeric",
+        "precision": 21,
+        "scale": 5
+      },
+      {
+        "name": "ITEM_CUSTO_VL_UNIT_PREV_DOLAR",
+        "type": "numeric",
+        "precision": 25,
+        "scale": 5
+      },
+      {
+        "name": "CMP_MAIOR_30_1",
+        "type": "numeric",
+        "precision": 17,
+        "scale": 2
+      },
+      {
+        "name": "VL_TOT_SEM_DISTR_CUSTO",
+        "type": "numeric",
+        "precision": 21,
+        "scale": 5
+      },
+      {
+        "name": "VL_UNIT_SEM_DISTR_CUSTO",
+        "type": "numeric",
+        "precision": 30,
+        "scale": 8
+      },
+      {
+        "name": "VL_DESP_PREV_PERC_FIXO",
+        "type": "numeric",
+        "precision": 36,
+        "scale": 8
+      },
+      {
+        "name": "VL_TOT_PERC_FIXO",
+        "type": "numeric",
+        "precision": 42,
+        "scale": 13
+      },
+      {
+        "name": "VL_UNIT_PERC_FIXO",
+        "type": "numeric",
+        "precision": 38,
+        "scale": 8
+      },
+      {
+        "name": "PROBE_INNER_RATIO",
+        "type": "numeric",
+        "precision": 29,
+        "scale": 8
+      }
+    ]
+  }
+}

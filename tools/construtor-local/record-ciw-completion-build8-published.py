@@ -1,0 +1,51 @@
+"""Record the completed publication8 in all project entry points and archive metadata."""
+from pathlib import Path
+import hashlib,json,shutil,re
+R=Path(__file__).resolve().parents[2];S=R/'.runtime/ciw-completion-20261028';B=S/'official-build8';M=S/'build8-metadata-publication-preparation'
+load=lambda p:json.loads(p.read_text(encoding='utf-8-sig'))
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+official=load(B/'official-compile-verification.json');active=load(B/'active-manifest.json');meta=load(M/'metadata-publication.json');native=load(B/'runtime-read-proof.json');pasoe=load(B/'pasoe-read-proof.json')
+assert official['success']and official['totalChecks']==4664 and active['success']and active['medWebRestored']and active['imaWebUnchanged']
+assert meta['success']and meta['cadastrosOperations']==144 and meta['processOperations']==8 and native['success']and native['optionsRequests']==8 and pasoe['allPositiveGetsProved']
+assert not native['processRuns']and not meta['humanPermissionsChanged']
+backup=S/'memory-build8-published-backup';assert not backup.exists();backup.mkdir()
+detail=R/'context/CIW_COMPLETION_GOAL_2026-10-28.md';shutil.copy2(detail,backup/detail.name)
+paragraph='''## Build8 publicado e validado — seleção de despesas e duas consultas
+
+**Estado prevalente: CONCLUÍDOS compilação, integração, publicação, metadados e validação nativa8.** Não repetir85040(compilação),55827(publicação),97103(metadados) ou95791(runtime). OpenEdge12.2/.42:74compilações/84logsTT/4.664checks(1.166×4)/NUMDBS0nos testes; compilação com1especsomenteesquema. Release8ec63cbce134d78555896dda56522140e0d781d6418b0ba92dfff5831a9b0a85/223pins/110fontes, revisão952PHP6.351. Integração24canônicos+5exemplos porbytes/hash/backup, f2271050preservado. Publicados19artefatos emsursum-api/MED pelo share137; transporteMEDrestaurado8,728s, sessões139/140/141recarregadas no mesmoagente, estadoWEBIMA preservado. Arquivos compartilhados podem ser lidos por outrasinstâncias. Semrotas/PROPATH/auth/DDL/grantsfuncionais/negócio alterados.
+
+Telas PUBLICADAS1.0.0: **op1047/ciw.container-selecionar-despesas**(container_despesas_selecao_progress), **op1051/ciw.item-custos-manuais**(item_custos_manual_progress), **op1052/ciw.itens-container-amostra**(item_container_amostra_progress). Paiop1003/ciw.container-despesas1.0.3→1.0.4: somente versão+linkcontextualGerardespesas, WHOLEpreviewcomparado/zerooutroscamposignorados. Metadatarelease4b26fb0e...; fontecadastros140→144 eprocessos6→8, todasoperaçõesanteriores/conexões/auth preservadas. Trêsentidadesnovas, grants/locksdeautoria4fases revogados/liberados. Outrostelas/processos preservados.
+
+PASOE real: duaslistas eDOISGETspositivos, paginação/ordenação/filtroPK/contradição/aliases/20negativos/auth2 passaram. Totais observados1202custosmanuais/19amostras não são invariantes. Runtime nativo: doisCrudDefinitionValidator/list/get/filtrosPK; ProcessDefinitionValidator; opçõesreadonlypositivas8combinações deordenação/contextoobrigatório/enuminválido422; linkpai/source144e8. **Nenhumrun1047executado**, nenhumregistrocriado/alterado/excluído para testar. Auditoria comusuário/imagens antes/depois e rollback do comando comprovada porTT; teste operacional positivo1047 permanecependente/autorização própria necessária. Não dizerprocessooperacionaltestado. Novasduasreads8 e container_despesas_selecao_progress.read/.process aindaNÃOsolicitadas/concedidas; deixaracessosparafinal. Quatroreads7solicitadas e4AUX/1042perms/cenário aindaaguardamrespostas;3readsW1consumidas.
+
+1047reusa ContainerExpenseDefaultsPlan.i eTaxPlan/PersistPlan/IPI existentes, respeitando empresa docontainer/ordemlegada/subconjunto calculado/fallbacktodas. Não duplicafórmulas. O P1descartedeenums no normalizeEntityPayload foi corrigido no companion62f57a0f.../Builder72c6... com4hunks/reversãoexata; helperestrito compartilhado entre normalização/validação apenasparâmetrosAPIstring/dropdownreferenciados emoptionsSource.parameterFields. normalizeOptionItems geral/guardprocess-only preservados; entrada REALvalidateExternalDraft/roundtrip epublicação real passaram. Dados1051sãoconsultaGLOBALtipo1/23físicos+chave; writersmanuaislegados continuamparciais, nãoconvertidos porsemelhança.1052consultaGLOBALtrêsjoins eambassituações=3, quatrocolunas+chave; não éopainelMEDcontextual.
+
+Recibos oficiais em official-build8/{official-compile-verification,canonical-manifest,active-manifest,publication-attempt,pasoe-read-proof,runtime-read-proof}.json; metadados em build8-metadata-publication-preparation/{metadata-publication,parent-preview-proof,native-governance-owners,publication-started}.json. Referênciascanônicas deJSON em D:/opencode/construtor-pg/integrations/ciw-completion-20261028-wave4; **jáaplicadas/NÃOreimportar**, não substituirautenticação a partir deDTOsanitizado. Exemplo/docsparidade integrados; candidatoKendo testado, acesso file://canônico bloqueado porpolíticabrowsersemcontorno. NãoalegarUI LDAP8: semnovasreadsfuncionais concedidas.
+
+**Anexos: gate deacervo real, nãorepetir probes.** Trêsprobesprivados12.2ROconcluídos(49935/7041/65585), último146referênciasMED. Stat3314encontrou0arquivos/146ausentes no rootconfiguradoqueexiste/nãosymlink/matchedlegado. Questionado usuário poroutrapasta/backup, aguardaresposta. Downloadcandidato revisado continuaNÃOativado, positivoarquivoNÃOprovado; nãoadivinharpath/nãofuzzy/nãocriararquivos. Campoausente doReaderantigo nãoimplicaausênciadearquivo; statliteral éaprovaatual.
+
+Próximos:1053seletorNFcontextualreadonly(reusoContainersPainelFinance; exportheadersatual container-header-current efinance-current); associação/desvinculação/DELETEparcialPK continuamseparadas.1054cotação diária, preservarDATAHOJE nolegado eobserved_date como referência semmudarimport-bc; esquemaEMS2/5 e30/31slots precisamprova antesadapterphysical, semhooklogin/escritareal. Inventário262/62Convertido/200nãoencerrado/17famílias; disponibilidade176fontessubstantivos/23semPHP/1wrapperincompleto. ControlesFINAL;GLOBALACTIVE. SQLgates1040/41/48 mantidos(v6inconclusivo/semSQLliteral), nãoatribuirVPN. Coleta20dconcluída20apps77files383omitidos. Semsegredos/commit/push.
+
+'''
+text=detail.read_text(encoding='utf-8-sig');anchor='## Retomada seguinte — composição8 retida e preflight de anexos';assert paragraph.strip()not in text and anchor in text;detail.write_text(text.replace(anchor,paragraph+anchor,1),encoding='utf-8')
+marker='''<!-- BEGIN CIW_COMPLETION_GOAL_20261028 -->
+
+## Objetivo global CIW ATIVO — build8 publicado e validado
+
+Ler PRIMEIRO D:/opencode/conversao-sc/context/CIW_COMPLETION_GOAL_2026-10-28.md, seção Build8publicado. Oficial12.2/.42:74compiles/84TT/4.664checks/NUMDBS0;24canônicos+5exemplos/19artefatosPUBLICADOS. MEDrestaurado8,728s/sessões139–141/IMAestado preservado. NÃOrepetir85040/55827/97103/95791.
+
+PUBLICADOS op1047seleçãodespesas/op1051custosmanuaisRO/op1052amostrasGLOBALRO1.0.0; pai1003v1.0.4somenteversion+link. Fontescadastros144/process8/old140e6/authpreservados.2GETsreaisPASOE+nativo/filtros eopções1047readonly8ordenações/contextonegativosPASS. Nenhumrun1047/businesswrite; positivooperacional eacessosprópriospendentes. Helpernormalizer1047strict72c6/f2271050preservados; FULL952/6351. Memórias históricas anteriores supersedidas por8.
+
+3readsW1jáconsumidas;4AUX/4reads7/1042perms+cenário aguardamrespostas. Novas2reads8/1047readprocess NÃOSOLICITADAS/concedidas, deixaracessosfinal. AnexosROcandidato:146refsMED com0arquivosfísicos; perguntalocal/backupAGUARDA, nãoativar/nãorepetir3probes. Próximos1053NFseletor/1054cotação diária reutilizáveis. Inventário262/62Convertido/200nãoencerrado/176fontessubstantivos;ControlesFINAL/GLOBALACTIVE. Túnel9080/19910→9910MESMAsursum-api/MED9911. Semsegredos/DDL/commit/push.
+
+<!-- END CIW_COMPLETION_GOAL_20261028 -->'''
+paths=[R/'context/PROJECT_CONTEXT.md',R/'context/RETOMADA_2026-10-16.md',Path('D:/opencode/construtor-pg/CONTEXTO_PROJETO.md'),Path('D:/opencode/motor-progress/v2/context/PROJECT_CONTEXT.md')];files=[]
+for index,path in enumerate(paths):
+ raw=path.read_bytes();text=raw.decode('utf-8-sig');pattern=r'<!-- BEGIN CIW_COMPLETION_GOAL_20261028 -->.*?<!-- END CIW_COMPLETION_GOAL_20261028 -->';assert len(re.findall(pattern,text,re.S))==1;shutil.copy2(path,backup/(str(index)+'-'+path.name));path.write_text(re.sub(pattern,lambda _:marker,text,count=1,flags=re.S),encoding='utf-8');files.append(dict(path=str(path),before=hashlib.sha256(raw).hexdigest(),after=sha(path)))
+archive=Path('D:/opencode/construtor-pg/integrations/ciw-completion-20261028-wave4');assert not archive.exists();archive.mkdir()
+selected=[(B/'metadata'/name,name)for name in ['selection-builder-draft.json','builder-draft.json','item_container_amostra-builder-draft.json','cadastros-source-additions.json','process-source-additions.json']]+[(M/'op1003-parent-draft.json','op1003-parent-draft.json')]
+for source,name in selected:shutil.copy2(source,archive/name)
+(archive/'README.md').write_text('# Referências CIW8 — publicadas\n\nTrês telas1.0.0/op1047,1051,1052; pai1003v1.0.4. Fontescadastros144/process8. Jáaplicadas pelo Builder governado; NÃOreimportar nem substituir fonte global/auth por estes JSONs sanitizados. Processo1047nãoexecutado emdadosreais; acessos humanos não concedidos. Recibos completos no workspaceconversao-sc/.runtime/ciw-completion-20261028/official-build8 ebuild8-metadata-publication-preparation.\n',encoding='utf-8')
+work=load(S/'ROOT_ACTIVE.json');work.update(officialBuild8='COMPLETED122_74_4664_CANONICAL24_EXAMPLES5_RUNTIME19_MED_RESTORED',metadata8='PUBLISHED3SCREENS1000_PARENT1003V104_SOURCE144_PROCESS8',runtime8='2READS_GET_FILTERS_NATIVE_VALIDATORS_1047OPTIONS8_NO_RUN',attachmentRoot='CORPUS146MISSING_WAIT_USER_LOCATION_NO_MORE_PROBES',next='1053NFselector_and1054dailyquotes;awaitoldgrants/batch/corpusanswers;globalACTIVE');(S/'ROOT_ACTIVE.json').write_text(json.dumps(work,indent=2)+'\n')
+(S/'memory-build8-published.json').write_text(json.dumps(dict(success=True,files=files,archive=str(archive),officialChecks=4664,runtimePublished=True,metadataPublished=True,processRuns=False,businessWrites=False,humanGrants=False,goal='ACTIVE'),indent=2)+'\n')
+print('PASS4contextmarkers/detail+publishedJSONarchive;8complete/readoptionsonly;goalACTIVE')

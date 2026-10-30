@@ -1,0 +1,186 @@
+{
+  "status": "SOURCE_EVIDENCE",
+  "currencies": {
+    "real": {
+      "gridSha256": "cb3ba3c4b138e959a75ebc36c4aef585f460eef0aa8153d819ca8ed299cfb595",
+      "numericFields": [
+        {
+          "renderer": "NM_grid_qt_alocada",
+          "line": 3934,
+          "numericFormatter": false,
+          "fractionDigits": null,
+          "rawNotRounded": true
+        },
+        {
+          "renderer": "NM_grid_qt_confirm_emb",
+          "line": 3961,
+          "numericFormatter": false,
+          "fractionDigits": null,
+          "rawNotRounded": true
+        },
+        {
+          "renderer": "NM_grid_item_custo_vl_custo_prev_real",
+          "line": 3988,
+          "numericFormatter": true,
+          "fractionDigits": 2,
+          "rawNotRounded": false
+        },
+        {
+          "renderer": "NM_grid_item_custo_vl_desp_prev_real",
+          "line": 4019,
+          "numericFormatter": true,
+          "fractionDigits": 2,
+          "rawNotRounded": false
+        },
+        {
+          "renderer": "NM_grid_vl_tot_prev",
+          "line": 4050,
+          "numericFormatter": true,
+          "fractionDigits": 2,
+          "rawNotRounded": false
+        },
+        {
+          "renderer": "NM_grid_item_custo_vl_unit_prev",
+          "line": 4081,
+          "numericFormatter": true,
+          "fractionDigits": 2,
+          "rawNotRounded": false
+        },
+        {
+          "renderer": "NM_grid_item_custo_vl_desp_prev_real_sem_distr_cust",
+          "line": 4112,
+          "numericFormatter": true,
+          "fractionDigits": 2,
+          "rawNotRounded": false
+        },
+        {
+          "renderer": "NM_grid_vl_tot_sem_distr_custo",
+          "line": 4143,
+          "numericFormatter": true,
+          "fractionDigits": 2,
+          "rawNotRounded": false
+        },
+        {
+          "renderer": "NM_grid_vl_unit_sem_distr_custo",
+          "line": 4174,
+          "numericFormatter": true,
+          "fractionDigits": 2,
+          "rawNotRounded": false
+        },
+        {
+          "renderer": "NM_grid_vl_desp_prev_perc_fixo",
+          "line": 4205,
+          "numericFormatter": true,
+          "fractionDigits": 2,
+          "rawNotRounded": false
+        },
+        {
+          "renderer": "NM_grid_vl_tot_perc_fixo",
+          "line": 4236,
+          "numericFormatter": true,
+          "fractionDigits": 2,
+          "rawNotRounded": false
+        },
+        {
+          "renderer": "NM_grid_vl_unit_perc_fixo",
+          "line": 4267,
+          "numericFormatter": true,
+          "fractionDigits": 2,
+          "rawNotRounded": false
+        }
+      ],
+      "notes": "NULL/empty through NM_encode/sc_strip dependency is not proof of raw zero; no business rounding from presentation."
+    },
+    "dolar": {
+      "gridSha256": "297bb945f86e9fb42f3e1ebbffd002c95d1e99d36776f166e13bdd74bcccdf3c",
+      "numericFields": [
+        {
+          "renderer": "NM_grid_qt_alocada",
+          "line": 3920,
+          "numericFormatter": true,
+          "fractionDigits": 2,
+          "rawNotRounded": false
+        },
+        {
+          "renderer": "NM_grid_qt_confirm_emb",
+          "line": 3951,
+          "numericFormatter": true,
+          "fractionDigits": 2,
+          "rawNotRounded": false
+        },
+        {
+          "renderer": "NM_grid_item_custo_vl_custo_prev_dolar",
+          "line": 3982,
+          "numericFormatter": true,
+          "fractionDigits": 2,
+          "rawNotRounded": false
+        },
+        {
+          "renderer": "NM_grid_item_custo_vl_desp_prev_dolar",
+          "line": 4013,
+          "numericFormatter": true,
+          "fractionDigits": 2,
+          "rawNotRounded": false
+        },
+        {
+          "renderer": "NM_grid_vl_tot_prev",
+          "line": 4044,
+          "numericFormatter": true,
+          "fractionDigits": 2,
+          "rawNotRounded": false
+        },
+        {
+          "renderer": "NM_grid_item_custo_vl_unit_prev_dolar",
+          "line": 4075,
+          "numericFormatter": true,
+          "fractionDigits": 2,
+          "rawNotRounded": false
+        },
+        {
+          "renderer": "NM_grid_item_custo_vl_desp_prev_dolar_sem_distr_cus",
+          "line": 4106,
+          "numericFormatter": true,
+          "fractionDigits": 2,
+          "rawNotRounded": false
+        },
+        {
+          "renderer": "NM_grid_vl_tot_sem_distr_custo",
+          "line": 4137,
+          "numericFormatter": true,
+          "fractionDigits": 2,
+          "rawNotRounded": false
+        },
+        {
+          "renderer": "NM_grid_vl_unit_sem_distr_custo",
+          "line": 4168,
+          "numericFormatter": true,
+          "fractionDigits": 2,
+          "rawNotRounded": false
+        },
+        {
+          "renderer": "NM_grid_vl_desp_prev_perc_fixo",
+          "line": 4199,
+          "numericFormatter": true,
+          "fractionDigits": 2,
+          "rawNotRounded": false
+        },
+        {
+          "renderer": "NM_grid_vl_tot_perc_fixo",
+          "line": 4230,
+          "numericFormatter": true,
+          "fractionDigits": 2,
+          "rawNotRounded": false
+        },
+        {
+          "renderer": "NM_grid_vl_unit_perc_fixo",
+          "line": 4261,
+          "numericFormatter": true,
+          "fractionDigits": 2,
+          "rawNotRounded": false
+        }
+      ],
+      "notes": "NULL/empty through NM_encode/sc_strip dependency is not proof of raw zero; no business rounding from presentation."
+    }
+  },
+  "sourceContractV1Unchanged": "053f07115cae76d43771343f473f8b18918ad476026d7295770967903b6230d1"
+}

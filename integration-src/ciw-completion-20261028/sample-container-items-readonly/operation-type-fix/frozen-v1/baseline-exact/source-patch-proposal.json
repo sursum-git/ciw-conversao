@@ -1,0 +1,48 @@
+{
+  "status": "GATED_REBASE_PUBLISHED140_REQUIRED_DO_NOT_APPLY_ON132",
+  "sourceCode": "motor_progress_ciw_cadastros",
+  "evidenceBaselinePath": ".runtime/ciw-completion-20261028/source-132-current-after6.json",
+  "evidenceBaselineSha256": "5246dbeb34d0c1d4501b4e179646bb4a58ec9406bbba2efc9a2f39891461d039",
+  "evidenceOperations": 132,
+  "expectedNextPublishedOperations": 140,
+  "proposedFollowingOperations": 142,
+  "preserveActualAuthentication": true,
+  "replaceSourceFromSanitizedDTO": false,
+  "operations": [
+    {
+      "op": "add",
+      "path": "/operations/-",
+      "value": {
+        "code": "item_container_amostra_read",
+        "name": "Itens de containers de amostra — read",
+        "type": "list",
+        "method": "POST",
+        "path": "/SursumPrograms/ciw-cadastros",
+        "bodyTemplate": {
+          "resource": "item_container_amostra",
+          "operation": "read"
+        },
+        "requestContextFields": [],
+        "itemsPath": "data",
+        "totalPath": "total"
+      }
+    },
+    {
+      "op": "add",
+      "path": "/operations/-",
+      "value": {
+        "code": "item_container_amostra_get",
+        "name": "Itens de containers de amostra — get",
+        "type": "get",
+        "method": "POST",
+        "path": "/SursumPrograms/ciw-cadastros",
+        "bodyTemplate": {
+          "resource": "item_container_amostra",
+          "operation": "get"
+        },
+        "requestContextFields": [],
+        "itemPath": "data"
+      }
+    }
+  ]
+}

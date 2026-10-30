@@ -1,0 +1,114 @@
+{
+  "date": "2026-10-28",
+  "reviewer": "samples_executor",
+  "scope": "signal-config candidate; independent read-only review",
+  "candidateFiles": [
+    {
+      "path": "D:/opencode/conversao-sc/integration-src/purchase-pending-20261028/signal-config/prepare.php",
+      "sha256": "73feddbfb08138beb901f7abfe5fbc960393ae86ff069fa6386f55bfdf301bf3"
+    },
+    {
+      "path": "D:/opencode/conversao-sc/integration-src/purchase-pending-20261028/signal-config/README.md",
+      "sha256": "a2971fa95ce74b7bd34e817179416cc8e44edee7dd17a05174b9884ce04ffd52"
+    },
+    {
+      "path": "D:/opencode/conversao-sc/integration-src/purchase-pending-20261028/signal-config/abl/PurchaseSignalConfigApi.p",
+      "sha256": "d77f6cf270b98e9932e96e0e801cc7041b35ef294ff5831d2bc034e805ce72ef"
+    },
+    {
+      "path": "D:/opencode/conversao-sc/integration-src/purchase-pending-20261028/signal-config/abl/PurchaseSignalConfigService.p",
+      "sha256": "7386f09e79cae130967f8cb9bf7bc7fe60e07ffc9fe5b69fb24661735db37e54"
+    },
+    {
+      "path": "D:/opencode/conversao-sc/integration-src/purchase-pending-20261028/signal-config/metadata/api-source-additions.json",
+      "sha256": "e054fb729a5b8c35cb7343630e60082e524534634e9df23650b17a759c6a533b"
+    },
+    {
+      "path": "D:/opencode/conversao-sc/integration-src/purchase-pending-20261028/signal-config/metadata/sinalizadores-importacao-builder-draft.json",
+      "sha256": "97bbca1949dd13182fc6e43ccc3cff4a091835a06939d97a9d0b6593663b341a"
+    },
+    {
+      "path": "D:/opencode/conversao-sc/integration-src/purchase-pending-20261028/signal-config/patches/integration.json",
+      "sha256": "541d9ac49934f8a932cf4e1a28053cda441b251f6ed82f52d08fc88c2472d398"
+    },
+    {
+      "path": "D:/opencode/conversao-sc/integration-src/purchase-pending-20261028/signal-config/php/RuntimeApiEntityActionService.php",
+      "sha256": "d1e75f6f8a06ed552ecc0f05bb77a51d9fe11582c84f9f756b20ade8328683cf"
+    },
+    {
+      "path": "D:/opencode/conversao-sc/integration-src/purchase-pending-20261028/signal-config/php/RuntimeCiwCadastroAudit.php",
+      "sha256": "5e90e544977ee4bd0a1798c25e70146231ff8b01f94ec47a0769b0c702d0241e"
+    },
+    {
+      "path": "D:/opencode/conversao-sc/integration-src/purchase-pending-20261028/signal-config/tests/audit.php",
+      "sha256": "6cafb0278cb099d7ab20ed93b70f9d58ef33fccc0e5ae95829363bd208693780"
+    },
+    {
+      "path": "D:/opencode/conversao-sc/integration-src/purchase-pending-20261028/signal-config/tests/PurchaseSignalConfigServiceTest.p",
+      "sha256": "a3dac9261852f88ff7bb9b6c4730441107d2fda0b9f707cb08ffe1a10c7db0f5"
+    }
+  ],
+  "status": "CHANGES_REQUESTED",
+  "findings": [
+    {
+      "id": "SC-P2-01",
+      "priority": 2,
+      "title": "Usar gridEditMode aceito pelo Builder",
+      "file": "integration-src/purchase-pending-20261028/signal-config/prepare.php",
+      "sourceAnchor": "program['gridEditMode']='popup'",
+      "body": "O candidato define gridEditMode popup. ProgramBuilderService::normalizeGridEditMode aceita somente form/batch; a criação da versão falha422 antes de publicar. Usar form e conservar formOptions.mode popup.",
+      "verification": "Reproduzido em PHP por Reflection read-only em review-signal-config-probes.php: popup recusado; form e batch aceitos.",
+      "reference": "D:/opencode/construtor-pg/backend/src/Builder/ProgramBuilderService.php:3400"
+    },
+    {
+      "id": "SC-P2-02",
+      "priority": 2,
+      "title": "Preservar domínio0..9999 para dias novos",
+      "file": "integration-src/purchase-pending-20261028/signal-config/abl/PurchaseSignalConfigService.p",
+      "sourceAnchor": "IF op=update AND poRequest:Has(qt_dias_alerta)",
+      "body": "O wrapper só recusa NULL; o core valida INTEGER32, permitindo negativos e10000..2147483647. O legado permite inteiro semnegativo de quatrodígitos. Um update fora do domínio passa e altera as datas dos alertas. Validar somente valor novo entre0e9999, preservar originalhistórico, adicionar min/maxUI e TT -1/0/9999/10000.",
+      "verification": "Análise estática do wrapper+core e fontelegado; compilação/execuçãoABL12.2 pendente.",
+      "reference": "sources/scriptcase/purchase-signals/form_PUB_sinalizadores_importacao/form_PUB_sinalizadores_importacao_apl.php:2064;form0.php:1336"
+    },
+    {
+      "id": "SC-P2-03",
+      "priority": 2,
+      "title": "Manter Nome e Título obrigatórios em novos valores",
+      "file": "integration-src/purchase-pending-20261028/signal-config/abl/PurchaseSignalConfigService.p",
+      "sourceAnchor": "policy fields nome,titulo",
+      "body": "Nome e Título são obrigatórios no formulário legado. O candidato gera requiredfalse e o core aceita vazio/NULL. É possível apagar os rótulos obrigatórios. Recusar valores novos nulos/vazios de nome/titulo no wrapper e requiredtrueUI; não rejeitar imagens históricas de original pela nova regra.",
+      "verification": "Análise estática dos validadores legado, política ABL e metadados.",
+      "reference": "sources/scriptcase/purchase-signals/form_PUB_sinalizadores_importacao/form_PUB_sinalizadores_importacao_apl.php:1910"
+    },
+    {
+      "id": "SC-P2-04",
+      "priority": 2,
+      "title": "Exigir transação raiz antes de update",
+      "file": "integration-src/purchase-pending-20261028/signal-config/abl/PurchaseSignalConfigService.p",
+      "sourceAnchor": "RUN VALUE(corePath)",
+      "body": "O contrato da tarefa exige raiz; wrapper e core não recusam TRANSACTION preexistente. Core DO TRANSACTION pode participar de transação externa e retornar success/audit antes do commit, seguido de rollback pelo chamador. Adicionar guarda409 no wrapper antes da delegação e provar por TT dentro de DO TRANSACTION.",
+      "verification": "Análise decontroleABL; reprodução12.2 pendente, semexecução remota pelo revisor.",
+      "reference": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwCadastroCoreService.p:273"
+    }
+  ],
+  "positiveEvidence": [
+    "PHP lint:prepare.php e dois candidatosPHP semerros",
+    "tests/audit.php executado:PASS25checks",
+    "Perfil fechado5campos/imagens completas porcampo",
+    "Recurso e operação audit restritosupdate/fonteMED; envelopeextraactor recusado",
+    "Wrapper fecha top-level porCOMPARE RAW e id1..5 emget/update",
+    "Core já implementa concorrência porimagemoriginal, NO-WAIT, before/after e rollback"
+  ],
+  "limitations": [
+    "Semcompilação nemexecuçãoABL12.2 nesta revisão",
+    "SemPASOE,grant,DDL,registrocomercial oupublicação",
+    "Read delega allrows; se tabela ganhar IDexterno fora1..5, não filtra; contrato read5regras deve ser esclarecido/guardado. Não classificado comoP1/P2 pela ausência de cenário físico adicional."
+  ],
+  "mutations": {
+    "candidateChanged": false,
+    "canonicalChanged": false,
+    "businessWrites": 0,
+    "ddl": 0,
+    "grants": 0
+  }
+}

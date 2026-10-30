@@ -1,0 +1,59 @@
+{
+  "providerType": "generic",
+  "code": "motor_progress_container_despesas_lote",
+  "name": "Motor Progress — Manutencao rapida de despesas",
+  "status": "active",
+  "baseUrl": "http://127.0.0.1:19910/med/web",
+  "authMode": "header_static",
+  "authHeaders": {},
+  "timeoutSeconds": 25,
+  "responseContract": "sursum-programs",
+  "operations": [
+    {
+      "code": "despesas_lote_read",
+      "name": "Manutencao rapida — read",
+      "type": "list",
+      "method": "POST",
+      "path": "/SursumPrograms/containers-despesas-lote",
+      "requestContextFields": [
+        "container_id"
+      ],
+      "bodyTemplate": {
+        "resource": "container-despesas-lote",
+        "operation": "read"
+      },
+      "itemsPath": "data",
+      "totalPath": "total"
+    },
+    {
+      "code": "despesas_lote_get",
+      "name": "Manutencao rapida — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "/SursumPrograms/containers-despesas-lote",
+      "requestContextFields": [
+        "container_id"
+      ],
+      "bodyTemplate": {
+        "resource": "container-despesas-lote",
+        "operation": "get"
+      },
+      "itemPath": "data"
+    },
+    {
+      "code": "despesas_lote_batch",
+      "name": "Manutencao rapida — batch",
+      "type": "batch",
+      "method": "POST",
+      "path": "/SursumPrograms/containers-despesas-lote",
+      "requestContextFields": [
+        "container_id"
+      ],
+      "bodyTemplate": {
+        "resource": "container-despesas-lote",
+        "operation": "batch"
+      },
+      "itemsPath": "data"
+    }
+  ]
+}

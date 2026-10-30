@@ -1,0 +1,110 @@
+{
+  "origin": "https://imaonline.imatextil.com.br/iol/bl_pag_ini_ger/",
+  "observedOn": "2026-10-16",
+  "status": "publicado_validado_pasoe_ui",
+  "design": "docs/superpowers/specs/2026-10-16-iol-inicial-gerencial-design.md",
+  "plan": "docs/superpowers/plans/2026-10-16-iol-inicial-gerencial.md",
+  "identityDecision": {
+    "confirmedByUser": true,
+    "strategy": "same_login",
+    "source": "login autenticado do construtor, encaminhado exclusivamente pelo backend",
+    "resolution": "user-web e representante/hierarquia IMA pelo mesmo login",
+    "missingIdentityBehavior": "bloquear indicadores restritos; nunca ampliar para escopo geral"
+  },
+  "published": true,
+  "authenticatedSessionVerified": true,
+  "constraints": [
+    "Reutilizar construtor-pg por metadados JSON",
+    "Nao alterar Kendo nem criar frontend paralelo",
+    "Nao tratar valores observados sem sessao como dados validados",
+    "Conferir calculos e escopo autenticado no fonte antes da implementacao"
+  ],
+  "blocks": [
+    {
+      "title": "Meta de Faturamento",
+      "details": [
+        "Mostrar/ocultar indicadores",
+        "Meta mensal e faturado",
+        "Metas loja: vendido e ideal",
+        "Dias uteis restantes",
+        "Percentuais por vendedor"
+      ]
+    },
+    {
+      "title": "Avaliação Gerencial",
+      "target": "../cons_ped_aprov_gerencial"
+    },
+    {
+      "title": "Tabela de Preços - Estoque",
+      "target": "../cons_tb_preco_estoque"
+    },
+    {
+      "title": "Tabela de Preços - Programado",
+      "target": "../cons_tb_preco_prog_container"
+    },
+    {
+      "title": "Pedidos Em Aberto",
+      "target": "../bl_painel_inicial_repres_ped_wp"
+    },
+    {
+      "title": "Rastreamento de Pedidos",
+      "target": "../rastreamento_pedidos_venda"
+    },
+    {
+      "title": "Promoções e informações ativas",
+      "target": "../bl_noticias_ativas"
+    },
+    {
+      "title": "Abertura de crédito de cliente",
+      "target": "../_lib/file/docnoticias/PAC_.rtf"
+    },
+    {
+      "title": "Solicitação de não conformidade",
+      "target": "../_lib/file/docnoticias/RNC.rtf"
+    },
+    {
+      "title": "Materiais de Apoio",
+      "target": "../bl_arquivos_estilo/bl_arquivos_estilo.php"
+    },
+    {
+      "title": "Item Certificação",
+      "target": "../cons_item_certificacao"
+    }
+  ],
+  "sourceWarnings": [
+    "Undefined variable: fatTotLiq",
+    "Undefined variable: metaQuinz"
+  ],
+  "sourceAccess": {
+    "host": "192.168.0.170",
+    "candidateDirectory": "/var/www/clients/client1/web2/web/iol/bl_pag_ini_ger",
+    "directoryVerified": true,
+    "sshKeyAuthentication": "failed_password_auth_succeeded",
+    "localDirectory": "sources/scriptcase/iol/bl_pag_ini_ger",
+    "manifest": "integration-src/iol-pagina-inicial-gerencial/source-manifest.json",
+    "requiredFiles": [
+      "index.php",
+      "bl_pag_ini_ger.php",
+      "includes e bibliotecas chamados pelos eventos ativos"
+    ]
+  },
+  "confirmedRules": {
+    "activeEvent": "index.php:6184 onExecute",
+    "monthlyNet": "getDadosFatsRepres: faturamento menos devolucoes; espec.fats_repres com transacoes.ind_sit_transacao=1, estabelecimentos 5 e 505",
+    "access": "tipoUsuario 3/4 usa lista gerencial; tipo 2 vendedor usa representante corrente; derivar identidade do backend autenticado",
+    "targets": "espec.metas_repres, metas_gerencial e metas_geral conforme perfil/hierarquia",
+    "storeTarget": "getMetasGerentes(11130,mes,ano) / 2",
+    "storeSales": "MED notas fiscais; percentual geral da loja usa vendas sem subtrair devolucoes no evento ativo",
+    "sellerPercentage": "(venda + descontoVenda - devolucao - descontoDevolucao) / meta * 100; arredondar inteiro; ordem decrescente",
+    "sellers": "usuarios_grupos.cod_grupo=2 e user-web.ativo=1; representante resolvido pelo login/nome-abrev",
+    "workingDays": "diasUteisMes exclui fins de semana e exige getUtilizDiaCalend=1; dia corrente conta como passado",
+    "managementPendingOrders": "espec.peds_web.ind_sit_ped_web=8 com escopo de login/lista",
+    "openOrders": "MED ped-venda com ped-repre; cod-sit-ped fora de 3/6; PE completo ou PI; excluir fulano"
+  },
+  "nextStep": "Usuario revisa plano e escolhe execucao nesta conversa ou por subagentes; implementar, compilar 12.2 e validar no PASOE real e na interface.",
+  "screenId": "iol.inicial-gerencial",
+  "programCode": "op1012",
+  "version": "1.0.0",
+  "validatedLogin": "tasilpar",
+  "validationReport": "docs/integracao-iol-inicial-gerencial-validacao.md"
+}

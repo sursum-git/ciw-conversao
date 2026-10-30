@@ -1,0 +1,172 @@
+{
+  "scope": [
+    "bl_lib_container",
+    "bl_buscarCotacaoVendaContainer",
+    "bl_getCotacaoEms2",
+    "bl_getCpsTbs",
+    "bl_getMovtoEstoqPorData",
+    "bl_pegar_dolar",
+    "bl_sincr_cotacao",
+    "bl_calcular_impostos_container",
+    "bl_criar_despesas_container",
+    "bl_funcoes_rateio_despesas_item",
+    "bl_sincrIpiItensContainer"
+  ],
+  "analysis_copies": true,
+  "files": [
+    {
+      "application": "bl_lib_container",
+      "file": "bl_lib_container.php",
+      "remote_sha256": "0eeb4713ced2b79a4bc93f33e0a6d45e2e787f177b76dfad016cda03c3c52492",
+      "copied_sha256": "0eeb4713ced2b79a4bc93f33e0a6d45e2e787f177b76dfad016cda03c3c52492",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_lib_container",
+      "file": "index.php",
+      "remote_sha256": "a04ca517832ad7d7c4706fb3cc3e9b43bf27cedb6c72c7fcdaf92a90f87ad402",
+      "copied_sha256": "5a741e35d6dd65a4da3cefb68da2fad01b91de58621c055fecad35836c617d10",
+      "sensitive_literals_omitted": 17
+    },
+    {
+      "application": "bl_buscarCotacaoVendaContainer",
+      "file": "bl_buscarCotacaoVendaContainer.php",
+      "remote_sha256": "2f2c027782d8455dd70e5bab0e2afbfbb6f17ac85754a491e9cb4a3c2901f180",
+      "copied_sha256": "2f2c027782d8455dd70e5bab0e2afbfbb6f17ac85754a491e9cb4a3c2901f180",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_buscarCotacaoVendaContainer",
+      "file": "index.php",
+      "remote_sha256": "fcdd5a6b3b8242f14369e90738aac3609bf1f2142e441281ea9f1bb4c1cd6525",
+      "copied_sha256": "50c40d1a25f62fcba7c8aa16b7351d05327ee554c65e1b99b97567896ea9e76c",
+      "sensitive_literals_omitted": 17
+    },
+    {
+      "application": "bl_getCotacaoEms2",
+      "file": "bl_getCotacaoEms2.php",
+      "remote_sha256": "7d2488fb94f214e8ec9d24df2657746da2eec88d018c62b312f6af8715f075ad",
+      "copied_sha256": "7d2488fb94f214e8ec9d24df2657746da2eec88d018c62b312f6af8715f075ad",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_getCotacaoEms2",
+      "file": "index.php",
+      "remote_sha256": "fcb1eab80dbc75a476f486e9c19f7b754fd7542978e2361664cb8e8993e29262",
+      "copied_sha256": "d70f79bc9606fa3454d19d482df829008e3fbb10eb3c11bb67a090b80ecac500",
+      "sensitive_literals_omitted": 17
+    },
+    {
+      "application": "bl_getCpsTbs",
+      "file": "bl_getCpsTbs.php",
+      "remote_sha256": "ab8a1563daa546d284112632088bf13c978368d71e24f9dff3d508425ef50765",
+      "copied_sha256": "ab8a1563daa546d284112632088bf13c978368d71e24f9dff3d508425ef50765",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_getCpsTbs",
+      "file": "index.php",
+      "remote_sha256": "b669cf966f6b363160f4b8fe61880222d5707b017e67d1a5d512d39df00ca9e7",
+      "copied_sha256": "5aaf4de76326dba571f3ec17f8cf54edaf3cbcf16942ca70b27c5954af889af9",
+      "sensitive_literals_omitted": 15
+    },
+    {
+      "application": "bl_getMovtoEstoqPorData",
+      "file": "bl_getMovtoEstoqPorData.php",
+      "remote_sha256": "14b80e872239dda1853743d2a91745785183abfe611261248a6b9ffaffc98566",
+      "copied_sha256": "14b80e872239dda1853743d2a91745785183abfe611261248a6b9ffaffc98566",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_getMovtoEstoqPorData",
+      "file": "index.php",
+      "remote_sha256": "c1056ce773c39aafe1bad8d98553baed776f98366d28304aeb59c8122366d61f",
+      "copied_sha256": "8eb2b370e836d7a2051ffd5e6821350d611918c873ca0f1d489c4c65b7a9643b",
+      "sensitive_literals_omitted": 15
+    },
+    {
+      "application": "bl_pegar_dolar",
+      "file": "bl_pegar_dolar.php",
+      "remote_sha256": "0411b841adb6dc83f73842e77d5a16dfb4e3689d4e8412707331899358c67a87",
+      "copied_sha256": "0411b841adb6dc83f73842e77d5a16dfb4e3689d4e8412707331899358c67a87",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_pegar_dolar",
+      "file": "index.php",
+      "remote_sha256": "c9445a93a61ac4605375fbc14daee1ab44d53e85bf14c082d67fc103b366d0d2",
+      "copied_sha256": "4c98d1383174c03a827d5eca33eefe5321be3c928c0f9e6e0d0b6deb18a09a9a",
+      "sensitive_literals_omitted": 17
+    },
+    {
+      "application": "bl_sincr_cotacao",
+      "file": "bl_sincr_cotacao.php",
+      "remote_sha256": "e8216c29a3b62bf7b5c6d6c0cd6e9c996c5ea6e0041f72f9dd5c1988df2ec62e",
+      "copied_sha256": "e8216c29a3b62bf7b5c6d6c0cd6e9c996c5ea6e0041f72f9dd5c1988df2ec62e",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_sincr_cotacao",
+      "file": "index.php",
+      "remote_sha256": "44d7bb93f3bafc527617e0e193862df5afb5c70f0c8aa8950da80df43ee60564",
+      "copied_sha256": "e711cff204daca9d2ee841a4270977e2e3757e2ade0b62e5721eae5f25248526",
+      "sensitive_literals_omitted": 17
+    },
+    {
+      "application": "bl_calcular_impostos_container",
+      "file": "bl_calcular_impostos_container.php",
+      "remote_sha256": "8b667bdc4e21042aa94906e5bdf017c71165873667d31797818894fc8cd8fdd5",
+      "copied_sha256": "8b667bdc4e21042aa94906e5bdf017c71165873667d31797818894fc8cd8fdd5",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_calcular_impostos_container",
+      "file": "index.php",
+      "remote_sha256": "037aa91759ecdbf77c3c9f5afd14c779859b6626dca64f0db4d9627740d0c7c7",
+      "copied_sha256": "525f1c892fdb58b892c91eb8134044af703ebf403e90ee9c67ba392c63f63481",
+      "sensitive_literals_omitted": 16
+    },
+    {
+      "application": "bl_criar_despesas_container",
+      "file": "bl_criar_despesas_container.php",
+      "remote_sha256": "9a5536d233d32cccdf909f172515a65f5c37566976acb221337b9775569fb75d",
+      "copied_sha256": "9a5536d233d32cccdf909f172515a65f5c37566976acb221337b9775569fb75d",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_criar_despesas_container",
+      "file": "index.php",
+      "remote_sha256": "122a46b22f05b509b7c2950c9b7c9b2db41005a139def6e86b417308beea07a5",
+      "copied_sha256": "6d1c70a41eaceec667cb3570f0c13151666e76d8e64fa2b23be25548d8d18e9c",
+      "sensitive_literals_omitted": 17
+    },
+    {
+      "application": "bl_funcoes_rateio_despesas_item",
+      "file": "bl_funcoes_rateio_despesas_item.php",
+      "remote_sha256": "cad810b0a966acacc5bd63655c18100d0fb576e6dd56d0d59b02142b029e93bd",
+      "copied_sha256": "cad810b0a966acacc5bd63655c18100d0fb576e6dd56d0d59b02142b029e93bd",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_funcoes_rateio_despesas_item",
+      "file": "index.php",
+      "remote_sha256": "736d4c39d31268679eac32e8118584c46e9bb4183b85fdf63cad75b57c442f1e",
+      "copied_sha256": "cd244e922f80dc19888ab3e78a20aa8a228785783e3d36fb4fb2694728d057ed",
+      "sensitive_literals_omitted": 15
+    },
+    {
+      "application": "bl_sincrIpiItensContainer",
+      "file": "bl_sincrIpiItensContainer.php",
+      "remote_sha256": "96ffa468e324626e502f4f7689a42001b33a59079a55ead1554ecd756612237a",
+      "copied_sha256": "96ffa468e324626e502f4f7689a42001b33a59079a55ead1554ecd756612237a",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_sincrIpiItensContainer",
+      "file": "index.php",
+      "remote_sha256": "5e2966eda1146ea60327b4bae5e4a1148b15792fe4de28d2e1aaf975cfe18ded",
+      "copied_sha256": "1aaf7d840d34cafc04cb2eb5e1e20de613eacf140b7034ec1d96f7a61ad37f6b",
+      "sensitive_literals_omitted": 17
+    }
+  ]
+}

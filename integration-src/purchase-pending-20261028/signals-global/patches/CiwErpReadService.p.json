@@ -1,0 +1,7 @@
+{
+  "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwErpReadService.p",
+  "baselineSHA256": "acca30907d892181796e40cdc8b41409f7870f5d8c8ed6c3e6bfddb2f7cd30ef",
+  "operation": "insertBefore",
+  "anchor": "  WHEN 'proc_compra_alertas' THEN DO:",
+  "insertion": "  WHEN 'proc_compra_sinalizadores' THEN DO:\n   ASSIGN cFieldList='sinaliz_imp_id,tipo_registro,nome_alerta,titulo_configurado,descricao_alerta,dias_alerta,quantidade,data_consulta' cAliasList=cFieldList cKeyList='sinaliz_imp_id' baseWhere='TRUE'.\n  END.\n  WHEN 'proc_compra_sinalizados' THEN DO:\n   ASSIGN cFieldList='sinaliz_imp_id,proc_compra_id,item_proc_compra_id,container_id,tipo_registro,nome_alerta,titulo_configurado,descricao_alerta,dias_alerta,data_base,data_alerta,data_consulta,cod_proc_fornec,fornecedor_id,item_descricao,codigo_erp,link_proc_compra_id,link_container_id' cAliasList=cFieldList cKeyList='sinaliz_imp_id,tipo_registro,proc_compra_id,item_proc_compra_id,container_id' baseWhere='TRUE'.\n  END.\n"
+}

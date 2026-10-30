@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-21",
+  "instance": "sursum-api/med",
+  "resources": [
+    {
+      "resource": "hist_cotacoes_bc",
+      "screenId": "ciw.cotacoes-bc",
+      "programCode": "cd0103",
+      "version": "1.0.1",
+      "applications": [
+        "cons_hist_cotacoes_bc",
+        "form_hist_cotacoes_bc"
+      ],
+      "runtimeCrudValidated": true,
+      "auditValidated": true,
+      "visualValidation": "pending",
+      "automaticBcProcessConverted": true,
+      "realSeries9999WriteExecuted": false,
+      "evidence": "docs/ciw-cotacoes-bc-validacao-2026-10-21.md; OpenEdge12.2/.42:81checks por cultura/codepage; PHP566/3413; read/get/filtros/paginacao, CRUD manual, conflito/precisao,3eventos comator/imagens, LogsExclusao e cleanup; invalidacao9999/rollback somenteTT. Complemento: docs/ciw-banco-central-client-2026-10-21.md; processo nativo e cliente PHP publicados, serie1 fixa, TLS real,107checks/cultura/codepage,PHP612/3643, sem gravacao automatica real."
+    }
+  ],
+  "automaticProcess": {
+    "published": true,
+    "applications": [
+      "bl_atu_dolar_dia"
+    ],
+    "screenId": "ciw.cotacoes-bc-buscar",
+    "programCode": "cd0104",
+    "version": "1.0.0",
+    "runtimeDefinitionValidated": true,
+    "nativeJsValidatorPassed": true,
+    "realBcClientValidated": true,
+    "realAutomaticWriteExecuted": false,
+    "visualValidation": "pending",
+    "evidence": "docs/ciw-banco-central-client-2026-10-21.md; cliente PHP injetado no runtime consultou BC real com TLS, contrato/auditoria emTTs e suite PHP, definicao/atalhos/recusas HTTP validados."
+  }
+}

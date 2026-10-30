@@ -1,0 +1,418 @@
+{
+  "scope": [
+    "bl_pp_container",
+    "form_PUB_pp_container",
+    "cons_ped_container",
+    "cons_item_container_amostra",
+    "cons_anexos_container",
+    "bl_chama_grid_itens_container_comparacao",
+    "bl_selecao_nf",
+    "cons_pp_it_container",
+    "form_pp_container_cotacoes",
+    "bl_criar_itens_container",
+    "bl_voltar_selecao_ped_importacao",
+    "form_cons_fornec_imp",
+    "bl_cons_controle_importacao",
+    "bl_cons_planilha",
+    "bl_resumo",
+    "bl_selec_vendas_container",
+    "cons_pedidos_por_item_ref_container",
+    "cons_planilha",
+    "menu_vendas_container"
+  ],
+  "analysis_copies": true,
+  "files": [
+    {
+      "application": "bl_pp_container",
+      "file": "bl_pp_container.php",
+      "remote_sha256": "73a0a11c341a3f1190e192a7e775c2fb4c8f3e5465c22f7ca9bab27b4d426f63",
+      "copied_sha256": "73a0a11c341a3f1190e192a7e775c2fb4c8f3e5465c22f7ca9bab27b4d426f63",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_pp_container",
+      "file": "index.php",
+      "remote_sha256": "1c5a93dc15042320c43ef98a9121a737936b49496e5e518d33c7aeff5109e295",
+      "copied_sha256": "219d82a195d99a38c2476a3601a1565f8d071a8825e8411e0a5667c26ab58585",
+      "sensitive_literals_omitted": 1
+    },
+    {
+      "application": "form_PUB_pp_container",
+      "file": "form_PUB_pp_container.php",
+      "remote_sha256": "50355415072f9d9b48e74da1c6a6e91f5b8b9e57d06a3b61470863a8331eb1ac",
+      "copied_sha256": "50355415072f9d9b48e74da1c6a6e91f5b8b9e57d06a3b61470863a8331eb1ac",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "form_PUB_pp_container",
+      "file": "form_PUB_pp_container_apl.php",
+      "remote_sha256": "5428baf78e6fb4145f03cd2bdfd2dcdd271c68736a163410782c2cbf80a082ec",
+      "copied_sha256": "4c7a2b0da2283e75dd89592ab2276bcba38969c628576346b1f8b0e94e62b17d",
+      "sensitive_literals_omitted": 4
+    },
+    {
+      "application": "form_PUB_pp_container",
+      "file": "form_PUB_pp_container_form0.php",
+      "remote_sha256": "8d5df0854c7c7234ef26ab10e85e4a8312ce5f9ddef1c0bb6d640879aeb03dca",
+      "copied_sha256": "861b5c5c80459804e777bf13dd613438fd8fb89fbcd19eed65e034e725713db0",
+      "sensitive_literals_omitted": 3
+    },
+    {
+      "application": "form_PUB_pp_container",
+      "file": "index.php",
+      "remote_sha256": "664785b1d375c1e8c7ef906172ba19ebca86360f4a0a43af4a1da4981f3a6d32",
+      "copied_sha256": "20e317be28af5ae77b66569d551f625b62c1cdcf57e71743ec72bae8cfa9eb0e",
+      "sensitive_literals_omitted": 2
+    },
+    {
+      "application": "cons_ped_container",
+      "file": "cons_ped_container.php",
+      "remote_sha256": "6532a044f913500c514da6e538658fb23d56855609f101f3dd157daf74f25036",
+      "copied_sha256": "6532a044f913500c514da6e538658fb23d56855609f101f3dd157daf74f25036",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_item_container_amostra",
+      "file": "cons_item_container_amostra.php",
+      "remote_sha256": "5ce05a9ad2babb2f772b584bdbe28c81fd60aec4179bafd2a8ff88b7166e773f",
+      "copied_sha256": "5ce05a9ad2babb2f772b584bdbe28c81fd60aec4179bafd2a8ff88b7166e773f",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_item_container_amostra",
+      "file": "cons_item_container_amostra_grid.class.php",
+      "remote_sha256": "1e8e67351eaca85891c5ff44fde12b7e18a478d82c2f684429eaa58439ee54b1",
+      "copied_sha256": "41d47a3c98bd1ca8b0dcc0f2d1d3ed537b15d6df20cc1a7810e3e1c9552f0571",
+      "sensitive_literals_omitted": 4
+    },
+    {
+      "application": "cons_item_container_amostra",
+      "file": "cons_item_container_amostra_lookup.class.php",
+      "remote_sha256": "e017c37f19a21cf8b6e5fe8b6b8063ee8dbba8fa6a5901222aed59a5657c0e27",
+      "copied_sha256": "e017c37f19a21cf8b6e5fe8b6b8063ee8dbba8fa6a5901222aed59a5657c0e27",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_item_container_amostra",
+      "file": "index.php",
+      "remote_sha256": "e89403bc7b6e832a52d3d83175e219ba4e57c84f1d2b0085ce6c7e3157740f4f",
+      "copied_sha256": "f2a0d9f3e1db963eefb12ed0287786f22294848ff3cfa83fc101a2e7e2ecaaa7",
+      "sensitive_literals_omitted": 7
+    },
+    {
+      "application": "cons_anexos_container",
+      "file": "cons_anexos_container.php",
+      "remote_sha256": "edf1188e1fc58729004f7683952e0396a38cecddbdebf1b28a104e0548a77f04",
+      "copied_sha256": "edf1188e1fc58729004f7683952e0396a38cecddbdebf1b28a104e0548a77f04",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_anexos_container",
+      "file": "cons_anexos_container_grid.class.php",
+      "remote_sha256": "15e9cee5ccd07d035dd4a9563c4edf188c4727d4080a979f0bf8eef60d5e4599",
+      "copied_sha256": "6a75d8b9272e8f6aa65aef5336dd5a197cd6be19f4e969e93ed567728bd3ab4f",
+      "sensitive_literals_omitted": 4
+    },
+    {
+      "application": "cons_anexos_container",
+      "file": "cons_anexos_container_lookup.class.php",
+      "remote_sha256": "648ab6e19d6e0109f1c06deae752cd4a6bb5aee0b4770ebe1f3a09f97f95e8f9",
+      "copied_sha256": "648ab6e19d6e0109f1c06deae752cd4a6bb5aee0b4770ebe1f3a09f97f95e8f9",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_anexos_container",
+      "file": "index.php",
+      "remote_sha256": "e58f2e82f3e338de61e7006dcb6d73f9a85311e8c10a3fca53ab637670c8d114",
+      "copied_sha256": "1d3a8ea4177b799ba88c51fced63853a4ca7252cf7a1a3152fb330be5cc0a337",
+      "sensitive_literals_omitted": 7
+    },
+    {
+      "application": "bl_chama_grid_itens_container_comparacao",
+      "file": "bl_chama_grid_itens_container_comparacao.php",
+      "remote_sha256": "51d601066a5bf46a63db96810d2cb99fe15bf91de9cc15ccb05afa23598a84e0",
+      "copied_sha256": "51d601066a5bf46a63db96810d2cb99fe15bf91de9cc15ccb05afa23598a84e0",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_chama_grid_itens_container_comparacao",
+      "file": "index.php",
+      "remote_sha256": "8fe0244d8f5c388559a14f9727c4ed0a19392ec491d3c3612d337a00cc19bada",
+      "copied_sha256": "dedf81871718b0c5416a8647d1c1882620924c72aff3ab78e98741daf651eeb0",
+      "sensitive_literals_omitted": 2
+    },
+    {
+      "application": "bl_selecao_nf",
+      "file": "bl_selecao_nf.php",
+      "remote_sha256": "225bf3309281b1e3fc83401fcf8daf9e0cf37d2126f364c35719a38fa44de666",
+      "copied_sha256": "225bf3309281b1e3fc83401fcf8daf9e0cf37d2126f364c35719a38fa44de666",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_selecao_nf",
+      "file": "index.php",
+      "remote_sha256": "568f742cb37c206436bcf77c426a2aca1ad8ebba307975fdb229fbdf7012000e",
+      "copied_sha256": "4bd8b86de9bf9060cf4a1d54cea3835f0455319a3820e59a71ee132ea77a3a2c",
+      "sensitive_literals_omitted": 17
+    },
+    {
+      "application": "cons_pp_it_container",
+      "file": "cons_pp_it_container.php",
+      "remote_sha256": "022319ed1709713a7fccc68018768635e45a7d30003c252190d49f93b08e26f2",
+      "copied_sha256": "022319ed1709713a7fccc68018768635e45a7d30003c252190d49f93b08e26f2",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_pp_it_container",
+      "file": "cons_pp_it_container_grid.class.php",
+      "remote_sha256": "e63aa2bdd0123ade25758209f4a0097497954c2a46d6cfd2b56dd0788e7aa240",
+      "copied_sha256": "7cdafb136f9c78576747b8e5e186711f77ef2d493d778de0f3aac606566a28d2",
+      "sensitive_literals_omitted": 4
+    },
+    {
+      "application": "cons_pp_it_container",
+      "file": "cons_pp_it_container_lookup.class.php",
+      "remote_sha256": "734d0761f2580aedb1c7eb31be1553442117235550d6d2f18906d93aae938f71",
+      "copied_sha256": "734d0761f2580aedb1c7eb31be1553442117235550d6d2f18906d93aae938f71",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_pp_it_container",
+      "file": "cons_pp_it_container_pesq.class.php",
+      "remote_sha256": "6eb6b67661bf95b11f8adf27c01484d023e082bf8a48a78dbd4d786fcc7c4416",
+      "copied_sha256": "394ee8187968cf4170c21ce044a45e4bd1914b68843c1b0989953d146a940368",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_pp_it_container",
+      "file": "index.php",
+      "remote_sha256": "1c8a0de6ff58d3137b0b4ce098564832d2d6a4f354e84d6769f22a2f3fbb0ada",
+      "copied_sha256": "7b5274aea2c1e248aec2516a80d8b0f2220b316b2ebb433c4b3db1785f2f6859",
+      "sensitive_literals_omitted": 7
+    },
+    {
+      "application": "form_pp_container_cotacoes",
+      "file": "form_pp_container_cotacoes.php",
+      "remote_sha256": "152f94bf243bb6d9f8c00d37fc834e57214361c03dbca85309872b9de7024388",
+      "copied_sha256": "152f94bf243bb6d9f8c00d37fc834e57214361c03dbca85309872b9de7024388",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "form_pp_container_cotacoes",
+      "file": "form_pp_container_cotacoes_apl.php",
+      "remote_sha256": "1b9040deeaaf8abdcbaabe7b65dafb0e07ba08ab4d174a7462706af201deef10",
+      "copied_sha256": "e5a28e085f153e553c9cc2447f58cf09e4ac60150d579e73006281233a968b84",
+      "sensitive_literals_omitted": 5
+    },
+    {
+      "application": "form_pp_container_cotacoes",
+      "file": "form_pp_container_cotacoes_form0.php",
+      "remote_sha256": "b8513eb99f63c993c99da42f22ba68754fc9ad6cb378007d0d9bea2466bc9b3b",
+      "copied_sha256": "38b9334cbf2236d10ac8178eccc56cb0556eaaca6dc7e60ac34ff7aadffba459",
+      "sensitive_literals_omitted": 2
+    },
+    {
+      "application": "form_pp_container_cotacoes",
+      "file": "index.php",
+      "remote_sha256": "fe4955ae67cc5b4ac2b1819edd0ec177fd1341a6564496895fab3f282081494a",
+      "copied_sha256": "595c93b9d3b0ce3e8a2a38d80cb905fd24f30f2e638cf9174504abd37663a000",
+      "sensitive_literals_omitted": 17
+    },
+    {
+      "application": "bl_criar_itens_container",
+      "file": "bl_criar_itens_container.php",
+      "remote_sha256": "8c1c5a8e4dc7ed7a4cd42638a11eede519f3e77c84e354eabd1a2af7c1a8c625",
+      "copied_sha256": "8c1c5a8e4dc7ed7a4cd42638a11eede519f3e77c84e354eabd1a2af7c1a8c625",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_criar_itens_container",
+      "file": "index.php",
+      "remote_sha256": "b1fb0d42050d5b4f6f39ede73d9098695755e1377a9a5f04af7188a7273e6bc3",
+      "copied_sha256": "10c9b02b72e2b7174bbb128260b8d0f6c3158f19ee6bf41b05e78ed0192f1e23",
+      "sensitive_literals_omitted": 2
+    },
+    {
+      "application": "bl_voltar_selecao_ped_importacao",
+      "file": "bl_voltar_selecao_ped_importacao.php",
+      "remote_sha256": "138b800fbe4395ca2c80b0a1e0299757f94677db80927021ce4da8d1e3f5064c",
+      "copied_sha256": "138b800fbe4395ca2c80b0a1e0299757f94677db80927021ce4da8d1e3f5064c",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_voltar_selecao_ped_importacao",
+      "file": "index.php",
+      "remote_sha256": "5b5d3758061ab168fbc3520da8586d4466c99b9e350d40c0d48c61afe367b6a9",
+      "copied_sha256": "b6747a507207dc74b911d127a7cdb0a32631c407bc17aa50f588e3aaf2e2d394",
+      "sensitive_literals_omitted": 2
+    },
+    {
+      "application": "form_cons_fornec_imp",
+      "file": "form_cons_fornec_imp.php",
+      "remote_sha256": "67f3e1388f8de01cd4376c62f00be3e55b5151f65b887a585cb1eeb172e8b962",
+      "copied_sha256": "67f3e1388f8de01cd4376c62f00be3e55b5151f65b887a585cb1eeb172e8b962",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "form_cons_fornec_imp",
+      "file": "form_cons_fornec_imp_apl.php",
+      "remote_sha256": "452af67c55e239bc9b5209de3cb3288cbd37139d21f2de13a08c29ed9082438e",
+      "copied_sha256": "c161791c36a749572fb53c4cb6457cf3b9b11d462b1fde552cd3878765e0327d",
+      "sensitive_literals_omitted": 5
+    },
+    {
+      "application": "form_cons_fornec_imp",
+      "file": "form_cons_fornec_imp_form0.php",
+      "remote_sha256": "ada8e16776d3c746a5bdee14f53a08675bba50c7742e82dd2aa36dfe57cb7563",
+      "copied_sha256": "254371efc3b9fe126d5b2a8e17961a973a2f34082dff542af1c401eda8b4e2ea",
+      "sensitive_literals_omitted": 2
+    },
+    {
+      "application": "form_cons_fornec_imp",
+      "file": "index.php",
+      "remote_sha256": "4d92cb52252b015e99e2cb2f3504cfe93f5cd2e631156d467e5764558b1ab90a",
+      "copied_sha256": "2373664df7477bf5df7f7d234e1429a3d6be7c68daebf6bccdd49cd1b8dcaf34",
+      "sensitive_literals_omitted": 15
+    },
+    {
+      "application": "bl_cons_controle_importacao",
+      "file": "bl_cons_controle_importacao.php",
+      "remote_sha256": "7bf349e9405bc18fbef619835520f4539d2011122eefd81356c2246530294845",
+      "copied_sha256": "7bf349e9405bc18fbef619835520f4539d2011122eefd81356c2246530294845",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_cons_controle_importacao",
+      "file": "index.php",
+      "remote_sha256": "d0dfccada9873d38f45a23552a7f7942283a0ace8c4e70561a647da5e03b42a0",
+      "copied_sha256": "982e3cb286545571cd8fd3507f9a1eadd7afba72c6e7c08c64e5f3b662b55f5d",
+      "sensitive_literals_omitted": 17
+    },
+    {
+      "application": "bl_cons_planilha",
+      "file": "bl_cons_planilha.php",
+      "remote_sha256": "f02a1ed0f28e3d76fe8bd4d32b312f27a8f244721fc8bfa25b5dd8857d69cbcf",
+      "copied_sha256": "f02a1ed0f28e3d76fe8bd4d32b312f27a8f244721fc8bfa25b5dd8857d69cbcf",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_cons_planilha",
+      "file": "index.php",
+      "remote_sha256": "40109efccaf461e43fcbab0fc9a77cdea1e2853e1f6c9960c7e800088e654880",
+      "copied_sha256": "de1e97821e83e4c428df404e3fbe7d4d4504c622676b3a9cd942187c7d2a1885",
+      "sensitive_literals_omitted": 15
+    },
+    {
+      "application": "bl_resumo",
+      "file": "bl_resumo.php",
+      "remote_sha256": "9797653df7e9dfaadf6203501322bfd3bc03c6ee5bd943ea29a590d8baf45c11",
+      "copied_sha256": "9797653df7e9dfaadf6203501322bfd3bc03c6ee5bd943ea29a590d8baf45c11",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_resumo",
+      "file": "index.php",
+      "remote_sha256": "1b1510bb0db781f1dd8d4c14f622e848829b3f606df8790758057686421abc1f",
+      "copied_sha256": "8d1ce2ff375c325f656f5e08e2c7dfdde5d16668ba65f9b8c0adfd8a06c41675",
+      "sensitive_literals_omitted": 16
+    },
+    {
+      "application": "bl_selec_vendas_container",
+      "file": "bl_selec_vendas_container.php",
+      "remote_sha256": "7509030b28f50236db184b6183ac75580a11ba4207452d5d1b2da6f7866d9543",
+      "copied_sha256": "7509030b28f50236db184b6183ac75580a11ba4207452d5d1b2da6f7866d9543",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_selec_vendas_container",
+      "file": "index.php",
+      "remote_sha256": "6d52e101b6e71aebff7ae08f649ba0133b85b1e07a53ffb5b35fb5dc813f1d06",
+      "copied_sha256": "51d84fdfac7c22696b814dd8a9c0f43bd1a03ee6c03c89329ee493f18013a4b8",
+      "sensitive_literals_omitted": 2
+    },
+    {
+      "application": "cons_pedidos_por_item_ref_container",
+      "file": "cons_pedidos_por_item_ref_container.php",
+      "remote_sha256": "8a8024074779ccc89a59612d4a87ae75f1fdea2e871ab4c66ff425d4f90acacc",
+      "copied_sha256": "8a8024074779ccc89a59612d4a87ae75f1fdea2e871ab4c66ff425d4f90acacc",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_pedidos_por_item_ref_container",
+      "file": "cons_pedidos_por_item_ref_container_grid.class.php",
+      "remote_sha256": "c3d9104e6b1d5efcf4a162653ef8301a266571d31a47ed5e8d60582a227d5f77",
+      "copied_sha256": "e482427a77d8820d3238f02d07ba0831c5779221a2c9131e8a92c70a0838234f",
+      "sensitive_literals_omitted": 4
+    },
+    {
+      "application": "cons_pedidos_por_item_ref_container",
+      "file": "cons_pedidos_por_item_ref_container_lookup.class.php",
+      "remote_sha256": "a2a6154d216a13fa5e8e3be71c0c4e84ba5756004259bb699c6f32fd1829473b",
+      "copied_sha256": "a2a6154d216a13fa5e8e3be71c0c4e84ba5756004259bb699c6f32fd1829473b",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_pedidos_por_item_ref_container",
+      "file": "cons_pedidos_por_item_ref_container_pesq.class.php",
+      "remote_sha256": "61ee9fdff1d03ba39b7ce259d18783901bff6b0efe88fe14141dd168fab6ee9c",
+      "copied_sha256": "9762356bdbac5fd4015a4c86c42ad771fb0adf6d89d68095f1114e0f31048592",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_pedidos_por_item_ref_container",
+      "file": "index.php",
+      "remote_sha256": "d0df7bab76cbfbb2ba3edd4be82c3db11231f44ab368af838e59b402182f7c39",
+      "copied_sha256": "e0ca86d8b9848155d7231f400d2a530d07962d4252d234e92191b9b910390430",
+      "sensitive_literals_omitted": 8
+    },
+    {
+      "application": "cons_planilha",
+      "file": "cons_planilha.php",
+      "remote_sha256": "59d0b0320fbb73138fc618fdc479ba5ffb604cb3e526482216ee4ed66f2cdb3f",
+      "copied_sha256": "59d0b0320fbb73138fc618fdc479ba5ffb604cb3e526482216ee4ed66f2cdb3f",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_planilha",
+      "file": "cons_planilha_grid.class.php",
+      "remote_sha256": "fc6703ce1d3f69b252a7fc8fbf1f559e2c045bc5b387a627cbd14d28d5b9868e",
+      "copied_sha256": "ae98b9a357d82813203e9e9db62dc6e495f083ba63e773e17074b8d61607a809",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_planilha",
+      "file": "cons_planilha_lookup.class.php",
+      "remote_sha256": "e9431f3d1c9939db2739245b017fcf63230842953ecf2522f7f43d01f79adc23",
+      "copied_sha256": "e9431f3d1c9939db2739245b017fcf63230842953ecf2522f7f43d01f79adc23",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_planilha",
+      "file": "cons_planilha_pesq.class.php",
+      "remote_sha256": "71124be01149dcccde26f5898d031de3b760e9ca21298e69d0a351494313e34a",
+      "copied_sha256": "828c2834b38920161a95f88376e9c30e75bbbf1a8979c736bb090f17b01d73d4",
+      "sensitive_literals_omitted": 2
+    },
+    {
+      "application": "cons_planilha",
+      "file": "index.php",
+      "remote_sha256": "6fd4b2b2f5952798e55f61a022710e9e16e0276a8b65ab25cca18f9ea0597984",
+      "copied_sha256": "6af334dc803a99192711bd15dcc54c35bcf25cee004f899622f9efa9b5c19e82",
+      "sensitive_literals_omitted": 8
+    },
+    {
+      "application": "menu_vendas_container",
+      "file": "index.php",
+      "remote_sha256": "6d98226d8d8171dfd78f017010c3c21290ee63ea379c03194dc58c9634a56d6d",
+      "copied_sha256": "545a3fd3e7982de7d4633159c9060176c74bd3ca51f834e573286e561f0b2537",
+      "sensitive_literals_omitted": 1
+    },
+    {
+      "application": "menu_vendas_container",
+      "file": "menu_vendas_container.php",
+      "remote_sha256": "32831cf4e997d20728b442ff960a2802a9e58d5f7f688f88d13097bd6887ffa7",
+      "copied_sha256": "32831cf4e997d20728b442ff960a2802a9e58d5f7f688f88d13097bd6887ffa7",
+      "sensitive_literals_omitted": 0
+    }
+  ]
+}

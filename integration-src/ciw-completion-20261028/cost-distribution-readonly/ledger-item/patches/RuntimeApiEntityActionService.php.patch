@@ -1,0 +1,42 @@
+diff --git a/RuntimeApiEntityActionService.php b/RuntimeApiEntityActionService.php
+index 76e1590..cdf52ee 100644
+--- a/RuntimeApiEntityActionService.php
++++ b/RuntimeApiEntityActionService.php
+@@ -968,6 +968,9 @@ class RuntimeApiEntityActionService
+             ApiRequestContext::assertRows($body['data'], ['proc_compra_id' => $query['proc_compra_id']]);
+         }
+ 
++        if (RuntimeCostDistributionLedgerRead::supports($definition)) {
++            foreach ($body['data'] as $row) { RuntimeCostDistributionLedgerRead::assertRow($row,$query); }
++        }
+         $data = array_map(fn (array $row): array => $this->mapItem($definition, $row), $body['data']);
+ 
+         $this->transactions->log($definition['entityCode'] . '.api.read', 'Consulta ERP MED executada com paginação no servidor.', metadata: [
+@@ -990,6 +993,7 @@ class RuntimeApiEntityActionService
+         if (RuntimeContainerExpenseBatch::supports($definition)) { return $this->containerExpenseBatchRequest($definition,[],$payload,'get'); }
+ 
+         $id = $this->extractRecordId($definition, $payload);
++        if (RuntimeCostDistributionLedgerRead::supports($definition)) { RuntimeCostDistributionLedgerRead::submittedAliases($payload,$id); }
+ 
+         if (in_array($definition['entityCode'] ?? null, ['container_versoes_historico_med_progress','container_versao_pagtos_historico_med_progress','container_versao_nfs_historico_med_progress','container_versao_descontos_historico_med_progress','container_versao_despesas_historico_med_progress'], true)) {
+             foreach ([$payload, is_array($payload['record'] ?? null) ? $payload['record'] : []] as $submitted) {
+@@ -1007,7 +1011,7 @@ class RuntimeApiEntityActionService
+ 
+             [$id] = $this->purchaseOrderIdentity($definition, $detailEndpoint, 'get', is_array($payload['record'] ?? null) ? $payload['record'] : [], $id, $payload['id'] ?? null);
+ 
+-            $context = ApiRequestContext::resolve($definition, $detailEndpoint, $payload);
++            $context = RuntimeCostDistributionLedgerRead::supports($definition) ? RuntimeCostDistributionLedgerRead::resolveContext($definition,$detailEndpoint,$payload) : ApiRequestContext::resolve($definition, $detailEndpoint, $payload);
+ 
+             $startedAt = microtime(true);
+ 
+@@ -1041,6 +1045,10 @@ class RuntimeApiEntityActionService
+ 
+             }
+ 
++            if (RuntimeCostDistributionLedgerRead::supports($definition)) {
++                if (($response['body']['success']??null)!==true || isset($response['body']['error'])) { throw new RuntimeHttpException('COST_DISTRIBUTION_RESPONSE_INVALID','Resposta de distribuição inválida.',502); }
++                RuntimeCostDistributionLedgerRead::assertRow($item,$context,$id);
++            }
+             $mapped = $this->enrichRows($definition, [$this->mapItem($definition, $item)])[0] ?? [];
+ 
+             ApiRequestContext::assertRows([$mapped], $context);

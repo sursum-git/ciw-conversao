@@ -1,0 +1,12 @@
+{
+  "database": "espec",
+  "table": "user-web",
+  "evidence": "ReadCiwAuthenticationSchema.p executado no OpenEdge12.2/.42 em17/10/2026",
+  "business_records_read": false,
+  "databaseCodepage": "ISO8859-1",
+  "fields": [
+    {"name": "Login", "type": "character", "extent": 0},
+    {"name": "senha", "type": "character", "extent": 0},
+    {"name": "ativo", "type": "logical", "extent": 0}
+  ]
+}

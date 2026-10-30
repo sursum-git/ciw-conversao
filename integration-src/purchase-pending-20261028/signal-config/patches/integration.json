@@ -1,0 +1,43 @@
+{
+    "status": "CANDIDATE_NOT_APPLIED",
+    "patches": [
+        {
+            "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeCiwCadastroAudit.php",
+            "baselineSha256": "4fb4fb595c0ddb87f6da9e3917e44f6ec9ab3614560a39d80e8ce62c6a7942bc",
+            "candidate": "php/RuntimeCiwCadastroAudit.php",
+            "candidateSha256": "5e90e544977ee4bd0a1798c25e70146231ff8b01f94ec47a0769b0c702d0241e",
+            "replacements": [
+                {
+                    "find": "  'formatos_amostra'=>",
+                    "replace": "  'sinalizadores_importacao'=>['sinaliz_imp_id',['sinaliz_imp_id'=>'integer','nome'=>'string','titulo'=>'string','descricao'=>'string','qt_dias_alerta'=>'integer'],['nome'=>100,'titulo'=>300,'descricao'=>600]],\n  'formatos_amostra'=>"
+                },
+                {
+                    "find": "   $body=$endpoint['bodyTemplate']??null;",
+                    "replace": "   if($name==='sinalizadores_importacao'&&$operation!=='update')return null;\n   $body=$endpoint['bodyTemplate']??null;"
+                },
+                {
+                    "find": "if($type==='string'&&(!is_string($value)||mb_strlen($value)>$maxLength))return false;",
+                    "replace": "if($type==='string'&&(!is_string($value)||mb_strlen($value)>(is_array($maxLength)?($maxLength[$name]??0):$maxLength)))return false;"
+                }
+            ]
+        },
+        {
+            "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwCadastrosCrud.p",
+            "baselineSha256": "85bf40bde18b8fa036cc08f61ebe730dcf177fe84fbb4505e6a840d41581cf7f",
+            "anchor": "  WHEN \"formatos_amostra\" THEN DO:",
+            "insertBefore": "  WHEN \"sinalizadores_importacao\" THEN DO:\n   cService=SEARCH(\"sursum-api/programs/PurchaseSignalConfigApi.r\").\n   IF cService=? THEN UNDO,THROW NEW Progress.Lang.AppError(\"Sinalizadores indisponiveis\",0).\n   RUN VALUE(cService)(INPUT poRequest,OUTPUT poResponse).\n   RETURN.\n  END.\n"
+        },
+        {
+            "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeApiEntityActionService.php",
+            "baselineSha256": "a1553414fcee213e3563131a7e12b13ce3b85a9b79b3ffab7b001b6b9c04526f",
+            "candidate": "php/RuntimeApiEntityActionService.php",
+            "candidateSha256": "d1e75f6f8a06ed552ecc0f05bb77a51d9fe11582c84f9f756b20ade8328683cf",
+            "replacements": [
+                {
+                    "find": "['empresas', 'tipos_anexo', 'coloracoes', 'situacoes_container', 'tipos_versao_custo', 'motivos_desconto', 'formatos_amostra']",
+                    "replace": "['empresas', 'tipos_anexo', 'coloracoes', 'situacoes_container', 'tipos_versao_custo', 'motivos_desconto', 'formatos_amostra', 'sinalizadores_importacao']"
+                }
+            ]
+        }
+    ]
+}

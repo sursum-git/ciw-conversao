@@ -1,0 +1,147 @@
+{
+  "status": "CANDIDATE_READY_REQUIRES_ROOT_COMPOSITION_REBASE_AND_OFFICIAL",
+  "scope": "op1050 original eight-field item-owned read only",
+  "files": [
+    {
+      "path": "abl/CostDistributionLedgerCollector.p",
+      "sha256": "03cf680d0f6e8a9be892ec5ac6e7b0553e820591cbe652d3e8477687937b42d1",
+      "bytes": 2985
+    },
+    {
+      "path": "abl/CostDistributionLedgerReadApi.p",
+      "sha256": "9f2b4e87e41ad48a178150c2e4c5fd147a47d814dd0b3e681f4bcab937136a42",
+      "bytes": 1869
+    },
+    {
+      "path": "abl/CostDistributionLedgerReadService.p",
+      "sha256": "3db516e5ef52dd874ac3e5a5a7894fa86f278aa9a9df6ae597ba3ab6c3a0e3b2",
+      "bytes": 3921
+    },
+    {
+      "path": "baselines.json",
+      "sha256": "bb80024e8c4881755afcb2673674ac2d1a2b500e200bad1214f95703f1eea52c",
+      "bytes": 1483
+    },
+    {
+      "path": "includes/CostDistributionLedgerTable.i",
+      "sha256": "084ca89e33c18fcba7ea3cf96ec213046056c0db52b74c924a4b7fc977745323",
+      "bytes": 394
+    },
+    {
+      "path": "metadata/api-source-additions.json",
+      "sha256": "cc5e16ca40dbef5971dfc97072db2d8ca2ec1334f7eb7a22702acc8c4dc8d827",
+      "bytes": 1091
+    },
+    {
+      "path": "metadata/custo_distribuicao_lancamentos_item-builder-draft.json",
+      "sha256": "c26b2c9c39c0744d6879e43a4b4bcfe71dafe9d5cf363b8cee28268276517ffb",
+      "bytes": 6768
+    },
+    {
+      "path": "metadata/op1049-link-proposal.json",
+      "sha256": "a5fee6011e1a04330deda4a18362ef58dd0d62dd87a8110bee491b1db8626177",
+      "bytes": 611
+    },
+    {
+      "path": "metadata/source-patch.json",
+      "sha256": "323d0e304131b6aa097ad460ae1dde245a8f90d5deac242dd85f4c8548d941a0",
+      "bytes": 1534
+    },
+    {
+      "path": "patches/CiwCadastrosCrud.p.patch",
+      "sha256": "b42abaa4115ea846e6f36fd6e651cdf5887dfbac36245a84b650b3c00632decb",
+      "bytes": 1032
+    },
+    {
+      "path": "patches/CiwErpReadService.p.patch",
+      "sha256": "902585ca862bb2e41b72f85ea6bf89b430e2e9d50697da8b28cdad0b67bd00b5",
+      "bytes": 1437
+    },
+    {
+      "path": "patches/RuntimeApiEntityActionService.php.patch",
+      "sha256": "2f997d5980c5591f0295613a23cfe0d207932d485651e6cedfb982e5e283d400",
+      "bytes": 2912
+    },
+    {
+      "path": "patches/RuntimeCiwErpQuery.php.patch",
+      "sha256": "67388bc3fd3255d2754bef7b01331ed4c827fdd470691cf05d6a41d9ee37b02b",
+      "bytes": 5197
+    },
+    {
+      "path": "php/RuntimeCostDistributionLedgerRead.php",
+      "sha256": "8cd734ac03e410d9cb5bf6a230e5f1ccd9b8352d633dc2accf274474c6e1657a",
+      "bytes": 2595
+    },
+    {
+      "path": "PLAN.md",
+      "sha256": "d3b9add9d702a5d7d33f0f77b8ca16506015362270d4240d8d61646a63b8732a",
+      "bytes": 1247
+    },
+    {
+      "path": "README.md",
+      "sha256": "68226f0f77bcfb61903ecbffaf3bb30a290aea475d6c2fae68272fabd848dad9",
+      "bytes": 2912
+    },
+    {
+      "path": "source-proof.json",
+      "sha256": "0be0d07485e254ad3ea5f603d0d01b18b65c1b97a11f191ebab8d393097583b3",
+      "bytes": 2053
+    },
+    {
+      "path": "tests/abl/CostDistributionLedgerTest.p",
+      "sha256": "a168ddcc4a6fb3d5bb4d52c71cfc97399254e7da7f76f85470c0f970aca41d67",
+      "bytes": 7347
+    },
+    {
+      "path": "tests/abl/LedgerFixtures.i",
+      "sha256": "99401916bd23c998e28de730cf5e3b2d235b17248298343da4615cf98a05ed6a",
+      "bytes": 403
+    },
+    {
+      "path": "tests/CostDistributionLedgerBuilderNativeTest.php",
+      "sha256": "fe21a3026934d30ebdeca0f3bc54c477ea161246f19583811cc7163ed69de977",
+      "bytes": 2278
+    },
+    {
+      "path": "tests/native-preview.cjs",
+      "sha256": "cbdd0e21341193f7f6ff4d63565f7f71cab76155c0fbcaf349a52550bd179e27",
+      "bytes": 965
+    },
+    {
+      "path": "tests/runtime-bootstrap.php",
+      "sha256": "e69b7c59472454414da837391839fa5e114f7cb7c9764bc47bfe707ff864f38c",
+      "bytes": 377
+    },
+    {
+      "path": "tests/RuntimeCostDistributionLedgerIntegrationTest.php",
+      "sha256": "e4240b06e2c89117eed570cfb10113ff61574f1f3c023d3596ce57e97b8fcb6e",
+      "bytes": 5553
+    },
+    {
+      "path": "views.json",
+      "sha256": "feaab52c8301422093214b68163cdd32ac4902ddba6bb339d59a8cb034434c4c",
+      "bytes": 259
+    }
+  ],
+  "validation": {
+    "localOpenEdge": "12.8 development only",
+    "compilesPerCodepage": 6,
+    "ttChecks": 31,
+    "combinations": 4,
+    "phpTests": 6,
+    "phpAssertions": 35,
+    "builderTests": 1,
+    "builderAssertions": 4,
+    "nativeValidator": true
+  },
+  "gates": [
+    "compose hunks/source with1049 and discounts or rebase after integration",
+    "official12.2",
+    "same MED PASOE",
+    "actual parent export before link change",
+    "read permission authorization"
+  ],
+  "canonicalWrites": false,
+  "published": false,
+  "converted": false
+}

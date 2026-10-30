@@ -1,0 +1,46 @@
+ADD TABLE "user-web"
+  AREA "Schema Area"
+ADD FIELD "Login" OF "user-web" AS character
+ADD FIELD "usuario" OF "user-web" AS character
+ADD FIELD "tp-usuario" OF "user-web" AS integer
+ADD FIELD "ativo" OF "user-web" AS logical
+ADD TABLE "ped-venda"
+  AREA "Schema Area"
+ADD FIELD "nr-pedido" OF "ped-venda" AS integer
+ADD FIELD "no-ab-reppri" OF "ped-venda" AS character
+ADD TABLE "ped-repre"
+  AREA "Schema Area"
+ADD FIELD "nr-pedido" OF "ped-repre" AS integer
+ADD FIELD "nome-ab-rep" OF "ped-repre" AS character
+ADD TABLE "repres"
+  AREA "Schema Area"
+ADD FIELD "cod-rep" OF "repres" AS integer
+ADD FIELD "nome-abrev" OF "repres" AS character
+ADD TABLE "cm-ext-repres"
+  AREA "Schema Area"
+ADD FIELD "cod-rep" OF "cm-ext-repres" AS integer
+ADD FIELD "tp-aplic-comis" OF "cm-ext-repres" AS integer
+ADD TABLE "cm-hierarquia"
+  AREA "Schema Area"
+ADD FIELD "cod-rep" OF "cm-hierarquia" AS integer
+ADD FIELD "cod-depend" OF "cm-hierarquia" AS integer
+ADD TABLE "usuarios_grupos"
+  AREA "Schema Area"
+ADD FIELD "login_usuario" OF "usuarios_grupos" AS character
+ADD FIELD "cod_grupo" OF "usuarios_grupos" AS integer
+ADD TABLE "restrs_clientes_usuario"
+  AREA "Schema Area"
+ADD FIELD "login" OF "restrs_clientes_usuario" AS character
+ADD FIELD "restrs_clientes_usuario_id" OF "restrs_clientes_usuario" AS integer
+ADD FIELD "ind_segur_cli_ativo" OF "restrs_clientes_usuario" AS integer
+ADD TABLE "repres_restr_cliente_usuario"
+  AREA "Schema Area"
+ADD FIELD "restr_cliente_usuario_id" OF "repres_restr_cliente_usuario" AS integer
+ADD FIELD "cod_repres" OF "repres_restr_cliente_usuario" AS integer
+ADD TABLE "nota-fiscal"
+  AREA "Schema Area"
+ADD FIELD "cod-estabel" OF "nota-fiscal" AS character
+ADD FIELD "serie" OF "nota-fiscal" AS character
+ADD FIELD "nr-nota-fis" OF "nota-fiscal" AS character
+ADD FIELD "no-ab-reppri" OF "nota-fiscal" AS character
+.

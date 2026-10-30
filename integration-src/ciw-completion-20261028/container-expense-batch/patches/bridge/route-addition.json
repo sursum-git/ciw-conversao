@@ -1,0 +1,15 @@
+{
+  "target": "D:/opencode/motor-progress/v2/conf-web-handler/program-routes.json",
+  "baselineSha256": "4f70f87269b0c661108c3dd8aac4e3ed2b57eb5ca3b40306f1d9c36025fc374e",
+  "operations": [
+    {
+      "op": "add",
+      "path": "/routes/-",
+      "value": {
+        "route": "/SursumPrograms/containers-despesas-lote",
+        "method": "POST",
+        "program": "sursum-api/programs/ContainersDespesasBatchApi.p"
+      }
+    }
+  ]
+}

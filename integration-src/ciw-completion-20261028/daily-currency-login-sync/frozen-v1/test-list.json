@@ -1,0 +1,59 @@
+{
+  "abl": [
+    {
+      "name": "DailyCurrencyHistoryCollectorTest.p",
+      "source": "tests/abl/DailyCurrencyHistoryCollectorTest.p",
+      "sha256": "aa1d624f669decc30ec79a12d2ac1d6d0f1070478b68e3f8b18f247e0a15ce40",
+      "expectedChecks": 25,
+      "numDbs": 0
+    },
+    {
+      "name": "CurrencyHistoryParticipantTest.p",
+      "source": "tests/abl/CurrencyHistoryParticipantTest.p",
+      "sha256": "09c8ff512a5333d848cdd365e639871b67b5a45e85f2e1f6caf3fdb18e4a8212",
+      "expectedChecks": 18,
+      "numDbs": 0
+    },
+    {
+      "name": "CiwCotacoesTest.p",
+      "source": "test-inputs/CiwCotacoesTest.p",
+      "sha256": "2dd84d8d32acb42961edf77efad93ab80fc9ddc43a740a9c03d61502f104835f",
+      "expectedChecks": 107,
+      "numDbs": 0
+    },
+    {
+      "name": "DailyCurrencyErpParticipantTest.p",
+      "source": "tests/abl/DailyCurrencyErpParticipantTest.p",
+      "sha256": "d4aa0a662349797bee7d18d79e82ca821e7f772f848379739786f0d4d457394f",
+      "expectedChecks": 103,
+      "numDbs": 0
+    },
+    {
+      "name": "CurrencyDailyRootTransactionTest.p",
+      "source": "tests/abl/CurrencyDailyRootTransactionTest.p",
+      "sha256": "577cd0fbf5f9358b1ab71ad353b9286dfcf82057b53a590c09dc2c5f53b69a39",
+      "expectedChecks": 15,
+      "numDbs": 0
+    }
+  ],
+  "ttTotalPerCombination": 268,
+  "ttTotalChecks": 1072,
+  "ttLogs": 20,
+  "developmentCompiler": "12.8-only",
+  "official12_2": "NOT_RUN_BY_EXECUTOR",
+  "compileEntries": 10,
+  "php": {
+    "tests": 903,
+    "assertions": 5962,
+    "errors": 0,
+    "failures": 0
+  },
+  "phpCanonicalBaseline": {
+    "tests": 885,
+    "assertions": 5841
+  },
+  "phpCandidateIncrement": {
+    "tests": 18,
+    "assertions": 121
+  }
+}

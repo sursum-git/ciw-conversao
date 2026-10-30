@@ -1,0 +1,95 @@
+{
+  "requiresPredecessorManifestSha256": "b1235ab3d39a9c930abd12f7a05a9674cad4149ac9765169eb6d3b6b940ce5c3",
+  "rootAuthorizedRebase": "integrated7;1043 preserved plus readonly1045/46/49/50",
+  "officialManifestPath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/official-build7/canonical-manifest.json",
+  "officialManifestSha256": "f37042f8ef9fc6def93896a350f315ec70ea7532edd5842c47180e7a1a2f9212",
+  "predecessorBaselines": [
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeContainerAudit.php",
+      "canonicalCurrentSha256": "700bea4e36a10576f0ccaf74a5c611a01354d2975221fd0d4e32d3974d7f85d1",
+      "original1043BaselineSha256": "1b5ef784ec816e8b9e27570a6bea97f8dc8f82beadcb77de8e745f3349e0256a",
+      "expectedFuture1043Sha256": "78f85737f7ba7db409583cc81d750e2db7f5d3d62ee909f699175c4f3e3fb79a",
+      "predecessorAlreadyIntegrated": true,
+      "rebase1043ByExactAnchors": false
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeApiEntityActionService.php",
+      "canonicalCurrentSha256": "6f52ddca37b15b3494989b71b6f7ac05ce3b73c31d4562db62a61edd48ed51ff",
+      "original1043BaselineSha256": "4fad16103637b00a0c424f947441c21105c411f9232f84ca55f9a9b0201c1530",
+      "expectedFuture1043Sha256": "dec38c6d99781c263e27811c379e398b6c643970f1cfea12187583f1f3a7487c",
+      "predecessorAlreadyIntegrated": true,
+      "rebase1043ByExactAnchors": false
+    }
+  ],
+  "textPatches": [
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeContainerAudit.php",
+      "baselineSha256": "700bea4e36a10576f0ccaf74a5c611a01354d2975221fd0d4e32d3974d7f85d1",
+      "baselineIsFuture1043": false,
+      "changes": [
+        {
+          "old": "'container_processos_progress','container_itens_progress'",
+          "new": "'container_processos_progress','container_despesas_selecao_progress','container_itens_progress'"
+        },
+        {
+          "old": "            'container_processos_progress' => ['motor_progress_container_processos','containers-processos','container_id','container_processes'],",
+          "new": "            'container_processos_progress' => ['motor_progress_container_processos','containers-processos','container_id','container_processes'],\n            'container_despesas_selecao_progress' => ['motor_progress_container_processos','containers-processos','container_id','container_processes'],"
+        },
+        {
+          "old": "'calcular_impostos'=>'impostos'",
+          "new": "'calcular_impostos'=>'impostos','selecionar_despesas'=>'impostos'"
+        }
+      ]
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeApiEntityActionService.php",
+      "baselineSha256": "6f52ddca37b15b3494989b71b6f7ac05ce3b73c31d4562db62a61edd48ed51ff",
+      "baselineIsFuture1043": false,
+      "changes": [
+        {
+          "old": "        $allocationProcess = RuntimeContainerAllocationAudit::supports($definition);",
+          "new": "        $expenseDefaults=RuntimeContainerExpenseDefaultsAudit::supports($definition);$expenseDefaultsActor=null;\n        if ($expenseDefaults) {\n            $order=array_intersect_key($requestData,array_flip(RuntimeContainerExpenseDefaultsAudit::PARAMETERS));\n            if (!RuntimeContainerExpenseDefaultsAudit::binding($definition,$endpoint,'process') || $names!==['ordem_campo','ordem_direcao','despesa_ids'] || !RuntimeContainerExpenseDefaultsAudit::order($order) || !RuntimeProgressAuditSchema::exact($requestData,['container_id','ordem_campo','ordem_direcao','despesa_ids'])) { $invalid('Selecao exige contexto, IDs e ordenacao fechados.'); }\n            $expenseDefaultsActor=$this->attachmentActor();\n        }\n        $allocationProcess = RuntimeContainerAllocationAudit::supports($definition);"
+        },
+        {
+          "old": "            if ($containerTaxOnly && ($response['body']['committed'] ?? null) !== true)",
+          "new": "            if ($expenseDefaults && ($response['body']['committed']??null)!==true) { throw new RuntimeHttpException('CONTAINER_SELECTION_UNCONFIRMED','Selecao nao confirmada. Consulte a transacao antes de repetir.',502); }\n            if ($containerTaxOnly && ($response['body']['committed'] ?? null) !== true)"
+        },
+        {
+          "old": "!($containerTaxOnly && ($response['body']['committed']??null)===true)",
+          "new": "!(($containerTaxOnly || $expenseDefaults) && ($response['body']['committed']??null)===true)"
+        },
+        {
+          "old": "            if ($containerTaxOnly) { $audit = RuntimeContainerTaxAudit::inspect($definition,$endpoint,$response['body'],$context,$containerTaxActor); }",
+          "new": "            if ($containerTaxOnly) { $audit = RuntimeContainerTaxAudit::inspect($definition,$endpoint,$response['body'],$context,$containerTaxActor); }\n            if ($expenseDefaults) { $audit=RuntimeContainerExpenseDefaultsAudit::inspect($definition,$endpoint,$response['body'],$context,$expenseDefaultsActor); }"
+        },
+        {
+          "old": "        $allowedContext = ['entityCode', 'operation', 'actionId', 'programId', 'permissionPrefix', 'traceability', '_runtime', '_runtimeEndpoint', 'id', 'context'];",
+          "new": "        $allowedContext = ['entityCode', 'operation', 'actionId', 'programId', 'permissionPrefix', 'traceability', '_runtime', '_runtimeEndpoint', 'id', 'context'];\n        if (RuntimeContainerExpenseDefaultsAudit::supports($definition)) { $allowedContext[]='parameters'; }"
+        },
+        {
+          "old": "        $context = ApiRequestContext::resolve($definition, $endpoint, $payload);\n\n        $requestData = $context ?: null;",
+          "new": "        $expenseDefaults=RuntimeContainerExpenseDefaultsAudit::supports($definition);\n        if ($expenseDefaults && (!RuntimeContainerExpenseDefaultsAudit::binding($definition,$endpoint,'options') || ($config['lookupParameterFields']??null)!==RuntimeContainerExpenseDefaultsAudit::PARAMETERS || ($source['parameterFields']??null)!==RuntimeContainerExpenseDefaultsAudit::PARAMETERS || !RuntimeContainerExpenseDefaultsAudit::order($payload['parameters']??null))) { throw new RuntimeHttpException('CONTAINER_SELECTION_OPTIONS_INVALID','Opcoes exigem contexto e os dois enums assinados.',422); }\n        $context = ApiRequestContext::resolve($definition, $endpoint, $expenseDefaults ? ['context'=>$payload['context']??[]] : $payload);\n\n        $requestData = $context ?: null;\n        if($expenseDefaults){$requestData+=$payload['parameters'];}"
+        },
+        {
+          "old": "        if (RuntimePurchaseItemAudit::supports($definition) || RuntimePurchaseExpenseAudit::supports($definition)) {\n",
+          "new": "        if (RuntimeContainerExpenseDefaultsAudit::supports($definition) && !RuntimeContainerExpenseDefaultsAudit::options($response['body'],$context)) { throw new RuntimeHttpException('CONTAINER_SELECTION_OPTIONS_RESPONSE','Resposta de selecao invalida ou fora do contexto.',502); }\n        if (RuntimePurchaseItemAudit::supports($definition) || RuntimePurchaseExpenseAudit::supports($definition)) {\n"
+        },
+        {
+          "old": "        return ['data' => $result];\n\n    }\n\n\n\n    private function containerExpenseBatchRequest",
+          "new": "        if (RuntimeContainerExpenseDefaultsAudit::supports($definition)) { $this->transactions->log($definition['entityCode'].'.api.options','Consulta tecnica de despesas selecionaveis.',metadata:['technical'=>true,'itemsCount'=>count($result),'containerContext'=>['version'=>1,'source'=>'runtime-validated-context','containerId'=>$context['container_id']]]); }\n        return ['data' => $result];\n\n    }\n\n\n\n    private function containerExpenseBatchRequest"
+        }
+      ]
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/ScreenDefinitionService.php",
+      "baselineSha256": "647758b5d04e3ebd5407496d5df6c1f754a09ec99b875efe3eae932b5bec08af",
+      "baselineIsFuture1043": false,
+      "changes": [
+        {
+          "old": "['container_processos_progress', 'container_alocacao_progress']",
+          "new": "['container_processos_progress', 'container_alocacao_progress', 'container_despesas_selecao_progress']"
+        }
+      ]
+    }
+  ]
+}

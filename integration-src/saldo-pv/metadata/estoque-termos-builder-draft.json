@@ -1,0 +1,121 @@
+{
+  "entityDraft": {
+    "code": "estoque_termos_busca_progress",
+    "name": "Correções da pesquisa de estoque",
+    "entityType": "api",
+    "structureModuleCode": "cadastros",
+    "structureType": "main",
+    "structureBaseNumber": 190,
+    "createPhysicalTable": false,
+    "apiSourceCode": "motor_progress_estoque_termos",
+    "fields": [
+      {
+        "code": "termo_digitado",
+        "label": "Termo interno",
+        "dataType": "string",
+        "primaryKey": true,
+        "required": false,
+        "position": 10,
+        "readonlyField": true,
+        "apiJsonPath": "termo_digitado",
+        "apiWritePath": "termo_digitado",
+        "apiShowInForm": false,
+        "apiShowInGrid": false,
+        "apiShowInFilter": false,
+        "options": {
+          "readonly": true,
+          "writable": false
+        },
+        "length": 50
+      },
+      {
+        "code": "digitado",
+        "label": "Digitado",
+        "dataType": "string",
+        "primaryKey": false,
+        "required": true,
+        "position": 20,
+        "readonlyField": false,
+        "apiJsonPath": "termo_digitado",
+        "apiWritePath": "digitado",
+        "apiShowInForm": true,
+        "apiShowInGrid": true,
+        "apiShowInFilter": true,
+        "options": {
+          "readonlyOnEdit": true
+        },
+        "length": 50
+      },
+      {
+        "code": "termo_pesquisa",
+        "label": "Pesquisar como",
+        "dataType": "string",
+        "primaryKey": false,
+        "required": true,
+        "position": 30,
+        "readonlyField": false,
+        "apiJsonPath": "termo_pesquisa",
+        "apiWritePath": "termo_pesquisa",
+        "apiShowInForm": true,
+        "apiShowInGrid": true,
+        "apiShowInFilter": true,
+        "options": {},
+        "length": 100
+      },
+      {
+        "code": "ativo",
+        "label": "Ativo",
+        "dataType": "boolean",
+        "primaryKey": false,
+        "required": true,
+        "position": 40,
+        "readonlyField": false,
+        "apiJsonPath": "ativo",
+        "apiWritePath": "ativo",
+        "apiShowInForm": true,
+        "apiShowInGrid": true,
+        "apiShowInFilter": true,
+        "options": {},
+        "defaultValue": true
+      },
+      {
+        "code": "row_stamp",
+        "label": "Estado original",
+        "dataType": "string",
+        "primaryKey": false,
+        "required": false,
+        "position": 50,
+        "readonlyField": false,
+        "apiJsonPath": "row_stamp",
+        "apiWritePath": "row_stamp",
+        "apiShowInForm": false,
+        "apiShowInGrid": false,
+        "apiShowInFilter": false,
+        "options": {},
+        "length": 64
+      }
+    ],
+    "apiListOperationCode": "estoque_termos_read",
+    "apiDetailOperationCode": "estoque_termos_get",
+    "apiCreateOperationCode": "estoque_termos_create",
+    "apiUpdateOperationCode": "estoque_termos_update",
+    "apiDeleteOperationCode": "estoque_termos_delete"
+  },
+  "programDraft": {
+    "programCode": "cd0190",
+    "programTitle": "Correções da pesquisa de estoque",
+    "module": "cadastros",
+    "builderEntityCode": "estoque_termos_busca_progress",
+    "pageType": "crud",
+    "gridEditMode": "form",
+    "screenId": "iol.estoque-termos-busca",
+    "version": "1.0.0",
+    "programOrigin": "standard",
+    "ownerScope": "system",
+    "allowCreate": true,
+    "allowUpdate": true,
+    "allowDelete": true,
+    "permissionPrefix": "estoque_termos_busca_progress",
+    "subtitle": "Equivalências usadas somente quando a seleção normal não encontra itens"
+  }
+}

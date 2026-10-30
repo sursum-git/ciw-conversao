@@ -1,0 +1,17 @@
+--- a/RuntimeCiwCotacaoAudit.php
++++ b/RuntimeCiwCotacaoAudit.php
+@@ -11,6 +11,14 @@
+   $a=$body['audit']??null;
+   if(!self::binding($d,$e,$operation))return $no('unsupported_binding');
+   foreach(self::FIELDS as $name=>$type)if(($d['fields'][$name]['dataType']??null)!==$type||($d['fields'][$name]['jsonPath']??null)!==$name)return $no('invalid_definition');
++  return self::inspectTransaction($body,$operation,$expectedId);
++ }
++ /** Internal participant schema only; HTTP inspect retains binding/definition guards. */
++ public static function inspectTransaction(array $body,string $operation,mixed $expectedId):array
++ {
++  $no=static fn(string $why):array=>['before'=>[],'after'=>[],'events'=>[],'metadata'=>['available'=>false,'reason'=>$why]];
++  if(!in_array($operation,['create','update','delete','import-bc'],true))return $no('invalid_operation');
++  $a=$body['audit']??null;
+   if(!is_array($a)||array_diff(array_keys($a),['version','source','resource','operation','recordId','before','after','changes'])||($a['version']??null)!==1||($a['source']??null)!=='progress-transaction'||($a['resource']??null)!=='hist_cotacoes_bc'||($a['operation']??null)!==$operation
+    ||!self::id($a['recordId']??null)||$expectedId!==null&&(string)$expectedId!==(string)$a['recordId']||!is_array($a['before']??null)||!is_array($a['after']??null)
+    ||!is_array($a['changes']??null)||!array_is_list($a['changes'])||count($a['changes'])>50000)return $no('invalid');

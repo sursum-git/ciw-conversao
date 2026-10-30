@@ -1,0 +1,8 @@
+{
+    "scope": "schema_only",
+    "writes": false,
+    "columns": [],
+    "indexes": [],
+    "references": [],
+    "triggers": []
+}

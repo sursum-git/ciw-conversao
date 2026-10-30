@@ -1,0 +1,1675 @@
+{
+    "success": true,
+    "loadedAppDefinitions": 278,
+    "outsideStage": [],
+    "files": [
+        {
+            "class": "App\\Attachments\\AttachmentFilePolicy",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Attachments/AttachmentFilePolicy.php",
+            "sha256": "ce1f056e6c236d2a289bcd480140d4930792e94ab08c68c5a597bec1fecfd1c3",
+            "staged": true
+        },
+        {
+            "class": "App\\Attachments\\AttachmentPolicyViolation",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Attachments/AttachmentPolicyViolation.php",
+            "sha256": "8e685e12d6fc4409c28d5287c7aa5e396ef005031b14a65ad12564cc2a25fd0b",
+            "staged": true
+        },
+        {
+            "class": "App\\Attachments\\AttachmentStorageBroker",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Attachments/AttachmentStorageBroker.php",
+            "sha256": "7232f1e771ebaa3d528882579a32b08c14601f3564db0341a19e6267a243d739",
+            "staged": true
+        },
+        {
+            "class": "App\\Attachments\\AttachmentStorageConfiguration",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Attachments/AttachmentStorageConfiguration.php",
+            "sha256": "a81a76364c5065b1067dc8e648d920f8d4b1c946e6bb882102d8111508f32310",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\RuntimeUserSession",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/RuntimeUserSession.php",
+            "sha256": "05169b99c27983b826987b97e92b1a755cd546ec759d4cc00d7aaefe80151cae",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\AuthUser",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/AuthUser.php",
+            "sha256": "575dbfb7a47aa7bc26e1234b4c8bb2fd882e092a8e6b3594e5d0d72e2cdd6861",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\AuthUserRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/AuthUserRepository.php",
+            "sha256": "1ce8debae33deac19d74b9940392482327f96a7d176d9d8a8a4664313a8c45b6",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\RuntimeUserSessionRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/RuntimeUserSessionRepository.php",
+            "sha256": "62067e04f11e8643f2e44fdc7fd711a3ad3549e12436f0a869afc1863ad10dbb",
+            "staged": true
+        },
+        {
+            "class": "App\\Auth\\AuthenticatedSessionResolver",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Auth/AuthenticatedSessionResolver.php",
+            "sha256": "27a90a2a5c43a89ae742bddebafb4d1641585d35feb31f09daa087dfc1d3852f",
+            "staged": true
+        },
+        {
+            "class": "App\\System\\SystemParameterResolver",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/System/SystemParameterResolver.php",
+            "sha256": "c7ea93cc5e409331c963c148ac0a0339437264f620c098cfc34b989309b80cc4",
+            "staged": true
+        },
+        {
+            "class": "App\\Auth\\AuthService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Auth/AuthService.php",
+            "sha256": "6393bfb45ff05d87452eb8a5c1a1bdd0e6b524a2ed944be006ec18bd0f80f25f",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\AuthProviderConfigRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/AuthProviderConfigRepository.php",
+            "sha256": "52098fc4b6cb09349af87a9103b79f4b2ce0763fcc75503e58f1da743e3ed22b",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\AuthRememberTokenRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/AuthRememberTokenRepository.php",
+            "sha256": "0230c41f9a6e812d2fcf3d2b7e71719e71c9f6b13a27e47bfa3d4b29be42bc10",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\AuthSubscriberRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/AuthSubscriberRepository.php",
+            "sha256": "06ce1d03d45b903398c4687de27da87cd97146448b47639d42c6fc3ceef35698",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\AuthUserSubscriberRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/AuthUserSubscriberRepository.php",
+            "sha256": "309e59d36ff2c60dcd4250c1191edb0a82296f0d596247f7b840456992975a56",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\AuthLoginChallengeRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/AuthLoginChallengeRepository.php",
+            "sha256": "f7b9d3eae58ac26ecdd2bed6b2c2b64110443ae1556340f8ed5415f1a41c33da",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\AuthPasswordResetTokenRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/AuthPasswordResetTokenRepository.php",
+            "sha256": "bb1ec3793f3e37bd5bb4a742d6b92a8d084127a129e97bd15f06dc15f8c005a4",
+            "staged": true
+        },
+        {
+            "class": "App\\Auth\\AuthProviderRegistry",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Auth/AuthProviderRegistry.php",
+            "sha256": "5c776829c57896f89e6d806ea7fedda42aabb8103ca7cdd78628f9b7d50cd72c",
+            "staged": true
+        },
+        {
+            "class": "App\\Auth\\AuthenticatedUser",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Auth/AuthenticatedUser.php",
+            "sha256": "54b859082579ffb11af79de2851f6bbf2f313d11b4cd96436d7432af6ebb88ff",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeHttpException",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeHttpException.php",
+            "sha256": "9ac7eb0e8b43d9bd2489841587c0bffc6859504040f60a622789fe64400fc160",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\AuthPasswordResetToken",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/AuthPasswordResetToken.php",
+            "sha256": "83b6cf8824f4e2933e9c42c82f7f58e4bf1ebc420bb1b41d342f0dc036bec5cf",
+            "staged": true
+        },
+        {
+            "class": "App\\Auth\\PasswordPolicy",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Auth/PasswordPolicy.php",
+            "sha256": "fb01b8dfc2596eac85e56ef590f5a1c095e85ba8d67fd43052d082361ffb0682",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\AuthSubscriber",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/AuthSubscriber.php",
+            "sha256": "1c02647e776a7694ad0204f0dadb5f12f7d97eea7127aecb85c890d4aa5b9549",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\AuthUserSubscriber",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/AuthUserSubscriber.php",
+            "sha256": "8a9386a01631208aa800bee452a09f5b7cdcb7d1e53eef88249043e2da220635",
+            "staged": true
+        },
+        {
+            "class": "App\\Command\\CreateSubscriberCommand",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Command/CreateSubscriberCommand.php",
+            "sha256": "20f645b230a7bc52ab3bb89c4ffafb924142e135a291002e84b17fbb6abb6e7d",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\StructuralIntegrityService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/StructuralIntegrityService.php",
+            "sha256": "7f82a2b92e212199557f2de6bcd2356f98097275e0ed70121339fe0e02efddd2",
+            "staged": true
+        },
+        {
+            "class": "App\\Install\\SystemInstallService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Install/SystemInstallService.php",
+            "sha256": "c6149833110437cbbc9d8d040f52073e1fc525914cb3dbd61532a6ed94aa4a69",
+            "staged": true
+        },
+        {
+            "class": "App\\Install\\InstallationActivationService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Install/InstallationActivationService.php",
+            "sha256": "0bfb2af2ec73e55b6a0d71502f9e81a2d9aa46338ef85efbd9dc881cd807badc",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\AuthRememberToken",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/AuthRememberToken.php",
+            "sha256": "630b3b80cec6f9d4585762ae56e8187a36ff1c38b947bc5989910d8d06b363d6",
+            "staged": true
+        },
+        {
+            "class": "App\\Auth\\ImaUserWebAuthProvider",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Auth/ImaUserWebAuthProvider.php",
+            "sha256": "60fd70fa664b322369a1424e751a72e148f15710377f1c412bbeeba349ed2497",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\AuthProviderConfig",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/AuthProviderConfig.php",
+            "sha256": "2a01b8d4fed22a8e2c188e411ca9657635649324381897fd0a7e4d355c6290aa",
+            "staged": true
+        },
+        {
+            "class": "App\\Auth\\ImaUserWebClient",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Auth/ImaUserWebClient.php",
+            "sha256": "5ac38361f8b6b8104d75c0753ce1874e1499bb140c99a1c920cde5c01c568130",
+            "staged": true
+        },
+        {
+            "class": "App\\Auth\\ImaUserWebProviderConfiguration",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Auth/ImaUserWebProviderConfiguration.php",
+            "sha256": "9bf904a2e314e93dec026f3a161c43922d180ac67c5b7bb3769de782fc57afe0",
+            "staged": true
+        },
+        {
+            "class": "App\\Auth\\ImaUserWebProviderRegistration",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Auth/ImaUserWebProviderRegistration.php",
+            "sha256": "bbfaacb762977bda98fff9b2c8a8262ae788368e66e9f6ddb8b75817f47ab38a",
+            "staged": true
+        },
+        {
+            "class": "App\\Command\\ConfigureImaUserWebProviderCommand",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Command/ConfigureImaUserWebProviderCommand.php",
+            "sha256": "c393ab74d6f0339a0e30a2e0ae98064702cbfe40d28ac652d7cab056d1e4e036",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeTransactionService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeTransactionService.php",
+            "sha256": "10b3b5fd0cbf4222befdbf5bda29ad0b7d8463e0e2147bee750e6b52f29e53f9",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\RuntimeTransaction",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/RuntimeTransaction.php",
+            "sha256": "7aaee3fd10549be3f8d970bcf0aff88b3ac3a1e418fc7702d7df1f88dcb07308",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\BuilderEntity",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/BuilderEntity.php",
+            "sha256": "264b4b0f02137805ba27f974f88ff4fb51d8f7c7557c8425310f390c80f73120",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\BuilderField",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/BuilderField.php",
+            "sha256": "83b7e4a347ce31c6bf1b8c6e567657b265341784989f624050132cb762473c40",
+            "staged": true
+        },
+        {
+            "class": "App\\Builder\\AnalyticsApiDashboardConfig",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Builder/AnalyticsApiDashboardConfig.php",
+            "sha256": "d41225de74404e11f27eb3f27b600373703ba80353ba3c6d0841e652ba1bfa94",
+            "staged": true
+        },
+        {
+            "class": "App\\Builder\\ApiCompanyContextValidator",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Builder/ApiCompanyContextValidator.php",
+            "sha256": "a6bd825aad4622742e9d6ab2b52130ba87c63c5e0205886c2ff767242a3be2d7",
+            "staged": true
+        },
+        {
+            "class": "App\\Builder\\ProgramBuilderService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Builder/ProgramBuilderService.php",
+            "sha256": "205ebd14329f8e8896d07c07716939db8a12d58345fecf76cab5252f4e0694a7",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\BuilderApiSource",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/BuilderApiSource.php",
+            "sha256": "79301eead74dab1c97782a29c0fea3a27ce2eaf66adfb2487805d127a5854d4e",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\BuilderApiSourceRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/BuilderApiSourceRepository.php",
+            "sha256": "1c069fde8863ddc1590c3ca61fbcf3955e41bdbbb27173491790d3493899086a",
+            "staged": true
+        },
+        {
+            "class": "App\\Builder\\BuilderAiService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Builder/BuilderAiService.php",
+            "sha256": "61007c873e12ea37bb114a46de72f2b14ff1eff254eb0a58328e0019d460d920",
+            "staged": true
+        },
+        {
+            "class": "App\\Builder\\BuilderAiSettingsService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Builder/BuilderAiSettingsService.php",
+            "sha256": "8c503296da1a2f956eccc97c94db06b663d32191da84a2662b25fc2dc8709620",
+            "staged": true
+        },
+        {
+            "class": "App\\Builder\\ExternalBuilderContextService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Builder/ExternalBuilderContextService.php",
+            "sha256": "81556528c636409be193e3fc53bf9e3dbe32d0d308b2d4245482e7ebd0ef03b9",
+            "staged": true
+        },
+        {
+            "class": "App\\Builder\\BuilderAiSessionService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Builder/BuilderAiSessionService.php",
+            "sha256": "d3a8969d364535ec48b961d929ad27c39257a561174bbb7647fcc3512b5cc936",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\RuntimeAiSession",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/RuntimeAiSession.php",
+            "sha256": "cc6226aa45e96e38dde0e7b2bb8661472b2b012308c7e807fe468f23b9f08ba5",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\RuntimeAiSessionRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/RuntimeAiSessionRepository.php",
+            "sha256": "b328affa0ff4474904eaef656db52dc86fed33a9fe68d7bff9a7f8279b648069",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\PermissionResolver",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/PermissionResolver.php",
+            "sha256": "b43c0f66c0b932aac496d2cdb4c6fc6124031f8aa40bf2dca7708fbdfd0c9202",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\RuntimeAiMessageRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/RuntimeAiMessageRepository.php",
+            "sha256": "e305c8dc8a50b81a071e382bb113bafac3ff529768536ba045d6d176f75d7d52",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\BuilderEntityVersion",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/BuilderEntityVersion.php",
+            "sha256": "6ae74b765fded91f4ac0d7fbf766472edeb0e3d840c3d968f938ff7e6ade8255",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\BuilderEntityVersionRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/BuilderEntityVersionRepository.php",
+            "sha256": "d5374ce741a5ecbc6a2d731ec206b3190f14ddda5e47514fa07f1742de2a6ef5",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\BuilderEntityRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/BuilderEntityRepository.php",
+            "sha256": "c04db0baeabecc2cc758b91f0996b3eea87a3cfaf516c0f1333991a918fbb5b9",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\BuilderModuleRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/BuilderModuleRepository.php",
+            "sha256": "3b1d0c41d04d3e69d6519ed72ab9dcc950343266fa21c25c44a18698dcce3d8f",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\BuilderModule",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/BuilderModule.php",
+            "sha256": "900ca72625c3a5ea4a5c78e1b3d64e2a57627f674945d508fd1025107cbac0ea",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\BuilderEditorLockRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/BuilderEditorLockRepository.php",
+            "sha256": "e557249e59aa930f90efe45c45a5cca8a941741e124d6df5e2f6583fde5cab4a",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\BuilderFieldRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/BuilderFieldRepository.php",
+            "sha256": "8ff818ff0ab0c60fcc0e96d8dacd8df0100f836f40db3df416692670b8a054b6",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\BuilderProgramVersionRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/BuilderProgramVersionRepository.php",
+            "sha256": "b6467df66560cadd7c8cf5b4d0e59435495284d46393459f8027563e6d71f408",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\ProgramRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/ProgramRepository.php",
+            "sha256": "d488690b1adb29817c4490f588175b14acaf471cd90ec3ff3af1fa4adc15281e",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\ScreenDefinitionRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/ScreenDefinitionRepository.php",
+            "sha256": "d35190368db2bd210181bf78732a6c2ed964d7069e47b1fd2d23809b806fbae9",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\RuntimeEndpointRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/RuntimeEndpointRepository.php",
+            "sha256": "b3a383720204204595a98bfd11a64350ca4d2ee7bb4bd03b3672e7051dffe81c",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\ProgramGovernanceService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/ProgramGovernanceService.php",
+            "sha256": "e0a189f05eefb46703bcb9944bfac8ad80d10154548490a366fde597019a7c62",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\ProgramOverlayService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/ProgramOverlayService.php",
+            "sha256": "4739c7da045cb13913364c41b1fba706288ecb9092a095b858a2f933a05773f1",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeNotificationService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeNotificationService.php",
+            "sha256": "cdc296ee823614ba5aecf8a02f65a1d24a704d530f2e0e9174c05ffafd598aa8",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeEnvironmentIdentityResolver",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeEnvironmentIdentityResolver.php",
+            "sha256": "5aa82ae50fef87cfca5fc81adbbcc5dcae5926a8dd8ac83834565afc0172f405",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeSessionGuard",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeSessionGuard.php",
+            "sha256": "674fd360b77d87717d2cf3003e47c78839034e4134e86196722bbd4f1d8b6816",
+            "staged": true
+        },
+        {
+            "class": "App\\Odoo\\OdooClient",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Odoo/OdooClient.php",
+            "sha256": "215d201313ac9bbb1a8066775d1aebea29b279d6be836d566f1749e4f98c7021",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeEventService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeEventService.php",
+            "sha256": "d474d24bf310b5438c95da7ca5397027db56089cec8aa7f4c721600e6f46191f",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\BuilderProgramVersion",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/BuilderProgramVersion.php",
+            "sha256": "20c1a99ef87a606885d00e4bdbaf6dff81481d7d5403a3900865ccbf09c8ed50",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimePurchaseAttachmentAudit",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimePurchaseAttachmentAudit.php",
+            "sha256": "3e4fe5c101bf83f6c056137f026ade74abe1040efe9af04466c7a9058f36733e",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\RuntimeEndpoint",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/RuntimeEndpoint.php",
+            "sha256": "02f6e117d543b68ffc2c88ffb5f71d3ff09eb99159ea743d9b83ae98ff123ae3",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\RuntimeEvent",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/RuntimeEvent.php",
+            "sha256": "8e3fa5dcda942381f8835526aeb3cd1c30ec0034a67c0f96fd9884f4f1540864",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\Program",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/Program.php",
+            "sha256": "6ca28f75fd7d7cda94d851e255e6478e6da81914d2e40421f1e94a3c58898203",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\SystemRecordIntegrityRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/SystemRecordIntegrityRepository.php",
+            "sha256": "b4b48ed6b182d2a1147e1ec524b32f8062d10d8707715b943ad3458b60787af7",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\BuilderEntitySituationRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/BuilderEntitySituationRepository.php",
+            "sha256": "6096a3304b45eb0b14be9127442ead216503142f6185d16c0fa2407765cace60",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\BuilderEntitySituationTransitionRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/BuilderEntitySituationTransitionRepository.php",
+            "sha256": "3a9713e9904e13c61eae7dbb0cf64cd128e0bac5a2a20cd0e95150d753d36d5b",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\RuntimeLockPolicyRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/RuntimeLockPolicyRepository.php",
+            "sha256": "c13a9f543d5afaeaae4908cadb21c19f44ecdf2dba4344ee1fe15bf75644b55c",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\BuilderProgramOverlayRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/BuilderProgramOverlayRepository.php",
+            "sha256": "84a88cc73e9d558e312a0eb4b1cfcca3733003606d80f33ff7b8fb294ea230f7",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\BuilderProgramOverlayVersionRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/BuilderProgramOverlayVersionRepository.php",
+            "sha256": "03ed6a34fab15e124e3faafee35b82079ae577a0b3420c824f4e56d3115f78ac",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\ProgramChangeRequestRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/ProgramChangeRequestRepository.php",
+            "sha256": "b87f37f15f100abe25e4311217444ab193a459620e208caf508c2aa713c7e740",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\ProgramChangeGrantRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/ProgramChangeGrantRepository.php",
+            "sha256": "01e7d573d02043e2c3af1fd26970bb602622efb505e1b1e5f9815a77cef319f2",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\ProgramPublicationApprovalRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/ProgramPublicationApprovalRepository.php",
+            "sha256": "79d9509120c82449f74a29f4bc4591b6097d03d1764313c1d3d8ade957705ac6",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\ProgramTestExecutionRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/ProgramTestExecutionRepository.php",
+            "sha256": "9809cc593689deb97a01b7b319d11ee9fcd18bc51528efb80ff3425a4b0438cf",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\ImportExportMappingRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/ImportExportMappingRepository.php",
+            "sha256": "46544abbe796386087335b2cad760736ee4aa520824d663a5b51201b712e9f5c",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\ImportExportMappingVersionRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/ImportExportMappingVersionRepository.php",
+            "sha256": "f321d2ef1d86358a455c8c240e66dc5d33f951620b619785368488fd5186fb74",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\ImportExportScheduleRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/ImportExportScheduleRepository.php",
+            "sha256": "3d086493d7c1d54c365d117f4e73928b60e9aad31e2dcad51571a48edde6d83d",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\SystemOptionListRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/SystemOptionListRepository.php",
+            "sha256": "25a67795682a5f11e51807dd1a05574558272fefcd34a855d3bc6bfc9809c76d",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\SystemOptionRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/SystemOptionRepository.php",
+            "sha256": "51ea0f5336a7fc9744ec7dd9ce3b9d4c559f014262fb0d3a5a8a0fb07ec3dbc8",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\SystemParameterRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/SystemParameterRepository.php",
+            "sha256": "70c7dafb65a28064d23116645cef1d461d6fd2256f7cb58f1f0ef7f8ae525827",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\SystemParameterValueRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/SystemParameterValueRepository.php",
+            "sha256": "110155c2ae5f1b96e7957267b2a5b8671d50c6ddbdfc8ccb633d546a569e3abe",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\SystemLiteralTranslationRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/SystemLiteralTranslationRepository.php",
+            "sha256": "f3386f1c640593e5190ea364dbf68bd3af0bcd2413f1e678c9dfe0af2da8d1a9",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\SystemRecordIntegrity",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/SystemRecordIntegrity.php",
+            "sha256": "d18cd5b67994632e97716cd909cc04fa1244068a555dbae290aa8c3e34e052ce",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\ScreenDefinition",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/ScreenDefinition.php",
+            "sha256": "11d01865c472ed722802ebdf2de33517ec0b6de61f995ca67adbb4e2bb472ce3",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\ProgramChangeGrant",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/ProgramChangeGrant.php",
+            "sha256": "1c52b41cf78402accf25b22b00e897a37a863695d86382b7978cbf97695627d8",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\ProgramChangeRequest",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/ProgramChangeRequest.php",
+            "sha256": "adba832934893ceb44631d2abe99e635ae2ecad8281f62baab60af9a3ae04d65",
+            "staged": true
+        },
+        {
+            "class": "App\\Ciw\\BancoCentralSgsClient",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Ciw/BancoCentralSgsClient.php",
+            "sha256": "912a16638b468e2dfb19af6b5b32cb339b51a2eddfce07c7bfc1f73b37e3b75a",
+            "staged": true
+        },
+        {
+            "class": "App\\Ciw\\CiwSubjectResolver",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Ciw/CiwSubjectResolver.php",
+            "sha256": "e81926e7d018500b4361ea5a3551eb8c35e39bb3f2778fff91ba0ab4ec6bcd9b",
+            "staged": true
+        },
+        {
+            "class": "App\\Ciw\\CiwAccessService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Ciw/CiwAccessService.php",
+            "sha256": "2be1ef5d48a35915abcd032507813cb00cd0e0b77841675af89c0136e1eb3f2a",
+            "staged": true
+        },
+        {
+            "class": "App\\Ciw\\CiwColoracoesPolicy",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Ciw/CiwColoracoesPolicy.php",
+            "sha256": "00a7a94e7ecab05fded0295db423e6c7d9a71d04f49c3b72389997f1c9b60eb8",
+            "staged": true
+        },
+        {
+            "class": "App\\Ciw\\CiwIdentityRegistration",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Ciw/CiwIdentityRegistration.php",
+            "sha256": "170d03c23d4211d09dbf61ea7f9e6a4261c67e24d9d7ad7cb3f3fcb4b1b65102",
+            "staged": true
+        },
+        {
+            "class": "App\\Ciw\\CiwProgressIdentityClient",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Ciw/CiwProgressIdentityClient.php",
+            "sha256": "d522de63d1f36609e977bea1977fda3597c53c3c7971c947ad3246739a2e09f6",
+            "staged": true
+        },
+        {
+            "class": "App\\Ciw\\CiwSqlConnectionConfiguration",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Ciw/CiwSqlConnectionConfiguration.php",
+            "sha256": "db213ff0816e4271ba6b36f6b5c3c36af2629e3ee99e6ba3452fbaca573565e8",
+            "staged": true
+        },
+        {
+            "class": "App\\Ciw\\CiwSqlTunnelOwnership",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Ciw/CiwSqlTunnelOwnership.php",
+            "sha256": "d843b844bb5b4d86e8cb34657ae64c38c5c331c104ef25035abd23cc68374d1e",
+            "staged": true
+        },
+        {
+            "class": "App\\Ciw\\PdoCiwSqlGrantReader",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Ciw/PdoCiwSqlGrantReader.php",
+            "sha256": "7eb6478eaf72d7baf48798a9bd334c6f846dfe3fb0ba4374aa35a175f84b1124",
+            "staged": true
+        },
+        {
+            "class": "App\\Command\\ConfigureCiwIdentityCommand",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Command/ConfigureCiwIdentityCommand.php",
+            "sha256": "ecea8fcd08370352712e1ac2d256937ffa858217e97e654fa0402619640fbc2b",
+            "staged": true
+        },
+        {
+            "class": "App\\Controller\\CiwAccessController",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Controller/CiwAccessController.php",
+            "sha256": "b17d9411e0d52428f9c414bd5823559c684ee005da717dd47a6cb59d72221368",
+            "staged": true
+        },
+        {
+            "class": "App\\ImportExport\\ImportExportEncodingHelper",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/ImportExport/ImportExportEncodingHelper.php",
+            "sha256": "b6b6e24e0383457b5a094d03df947ebf8cca6429b71ed359b832b4b82a7b8321",
+            "staged": true
+        },
+        {
+            "class": "App\\ImportExport\\ImportExportValueMapper",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/ImportExport/ImportExportValueMapper.php",
+            "sha256": "564c009dfeded89776ec4480fbd555eaf525748f6ac2a2d1b97f42ee624d440e",
+            "staged": true
+        },
+        {
+            "class": "App\\ImportExport\\ImportExportTxtLayoutRenderer",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/ImportExport/ImportExportTxtLayoutRenderer.php",
+            "sha256": "721cd9823b9792f09a2cc18a7a0b98de8096e34bfc02fd87836da45489dae58f",
+            "staged": true
+        },
+        {
+            "class": "App\\ImportExport\\ImportExportXmlRenderer",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/ImportExport/ImportExportXmlRenderer.php",
+            "sha256": "541e8b3a7bd7b32d64e1a0c1bdc6f828152ce49f7caea622a9eec99c924a5869",
+            "staged": true
+        },
+        {
+            "class": "App\\ImportExport\\ImportExportSourceLoader",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/ImportExport/ImportExportSourceLoader.php",
+            "sha256": "85f6e039ddfba3a554ca36f1676f302b53be1606151b67610d626ed0a554f0b1",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeEntityActionService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeEntityActionService.php",
+            "sha256": "9eda11a47b3f3316d93773438709b94718efcf2611dc824d4c85d004c43a7906",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeApiEntityActionService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeApiEntityActionService.php",
+            "sha256": "318dbb703520869aa83115a4957888789d149671a28a48d697d084cf2156a5cb",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeOdooEntityActionService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeOdooEntityActionService.php",
+            "sha256": "9a98a2fa6281e5df16c8798d4fe23f01093ee52d1198569f92426cc06f18db41",
+            "staged": true
+        },
+        {
+            "class": "App\\ImportExport\\ImportExportDestinationWriter",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/ImportExport/ImportExportDestinationWriter.php",
+            "sha256": "7ead9826967373c60ca74d5ae083c579ccb5883a4a008a16c8dedf349caeda82",
+            "staged": true
+        },
+        {
+            "class": "App\\ImportExport\\ImportExportMappingService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/ImportExport/ImportExportMappingService.php",
+            "sha256": "ded2ef28cb04ee5f5d0e90dc2c367814701bbc6bd1bc2836dc3cdc88767679bb",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\ImportExportExecutionRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/ImportExportExecutionRepository.php",
+            "sha256": "4e529f4d93c56b233b737c5216cde3838b7f4e4a5a2e8a3dd137e118a5719383",
+            "staged": true
+        },
+        {
+            "class": "App\\Odoo\\OdooExecutionContext",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Odoo/OdooExecutionContext.php",
+            "sha256": "7595a847a56803b75747c3bfd70e55e0b206855622b9d625b8d4abae8d411434",
+            "staged": true
+        },
+        {
+            "class": "App\\Printing\\Report\\InternalReportPdfGenerator",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Printing/Report/InternalReportPdfGenerator.php",
+            "sha256": "93a89d9651f86fe813e6f1128b95ba9460e3910e602b94ca3861129664dc3c5a",
+            "staged": true
+        },
+        {
+            "class": "App\\Printing\\Report\\AbstractCallbackReportGenerator",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Printing/Report/AbstractCallbackReportGenerator.php",
+            "sha256": "5d7fa63e8b86aeccf8fa35b9f802fa0183a24f53e32b61777a826a4beb4cf8e0",
+            "staged": true
+        },
+        {
+            "class": "App\\Printing\\Delivery\\DownloadArtifactDelivery",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Printing/Delivery/DownloadArtifactDelivery.php",
+            "sha256": "9069c91e4a8fdda76a2183bcc48e615a22b67d45d313105bdee2ba107641f838",
+            "staged": true
+        },
+        {
+            "class": "App\\Printing\\DTO\\ReportRequest",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Printing/DTO/ReportRequest.php",
+            "sha256": "dfc852036585ccfb1a189a7673b16a6b4b6b2808eb0087be846aed3d11c48df2",
+            "staged": true
+        },
+        {
+            "class": "App\\Printing\\DTO\\ReportResult",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Printing/DTO/ReportResult.php",
+            "sha256": "f5bbfa7f24a8a79a074a9b7fa9f3e05bf286309611bb57bc15b887ba774a33c6",
+            "staged": true
+        },
+        {
+            "class": "App\\Printing\\Enum\\ContentType",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Printing/Enum/ContentType.php",
+            "sha256": "0de9ce3f9379bdde74c3970fce304bf3d69b588cedf5215d9cd53e3270f40c54",
+            "staged": true
+        },
+        {
+            "class": "App\\Printing\\Delivery\\QzTrayArtifactDelivery",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Printing/Delivery/QzTrayArtifactDelivery.php",
+            "sha256": "694adb66a1fcb8eb83dfd511890cfa404de7de7dbc01202837d6ed10e11912cc",
+            "staged": true
+        },
+        {
+            "class": "App\\Printing\\Template\\SimpleTemplateRenderer",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Printing/Template/SimpleTemplateRenderer.php",
+            "sha256": "aaf16098314c43c1bcc3a2855e3eea69230c2f5441f2f520c12ee9b3acc6f93c",
+            "staged": true
+        },
+        {
+            "class": "App\\Printing\\Exception\\InvalidTemplateException",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Printing/Exception/InvalidTemplateException.php",
+            "sha256": "256c20ffc560e37e93d7a4ee929ee0765b8e897d424150b53705a5398461b484",
+            "staged": true
+        },
+        {
+            "class": "App\\Printing\\Exception\\PrintingException",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Printing/Exception/PrintingException.php",
+            "sha256": "1e8c20ef3081b29ec00366f0fcc648399cd86f1ac25014236bba6985883e9440",
+            "staged": true
+        },
+        {
+            "class": "App\\Printing\\Transport\\NullPrinterTransport",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Printing/Transport/NullPrinterTransport.php",
+            "sha256": "0624ed4ccde4e88f52244943d88642f112f01eaeb5127fd8a37c809af5e7d17f",
+            "staged": true
+        },
+        {
+            "class": "App\\Printing\\DTO\\PrintJob",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Printing/DTO/PrintJob.php",
+            "sha256": "64d8323388bf5a864099e2e09e13be2af49dd26682639205f7bb9ab0640caeae",
+            "staged": true
+        },
+        {
+            "class": "App\\Printing\\Enum\\PrinterLanguage",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Printing/Enum/PrinterLanguage.php",
+            "sha256": "619a9b69f0e8be8fcd7bafd8b8d1cf49fd9422ac2d5f67042d038a6ead927f1f",
+            "staged": true
+        },
+        {
+            "class": "App\\Printing\\DTO\\PrinterConfig",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Printing/DTO/PrinterConfig.php",
+            "sha256": "3ce44dc1144ff9ecd86b84d9ccd8f3ead2ea2c73a6a1b5cb932b31e7f6986618",
+            "staged": true
+        },
+        {
+            "class": "App\\Privacy\\PrivacySubjectRequestService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Privacy/PrivacySubjectRequestService.php",
+            "sha256": "750aaf192a84dfad4f591c1815ee14d9fb19b066a7cfc530ec68966040f9298f",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeProcessLookupPolicy",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeProcessLookupPolicy.php",
+            "sha256": "1d951f160be0af979de1f94f47a1c9b63309163c7eb0a37803fd058d13501c3a",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeEntityDefinitionResolver",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeEntityDefinitionResolver.php",
+            "sha256": "27e1df8286269a3df7254ae2c33cad7f47da51d8257c6f3fd6f8415f31ac2339",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeSituationService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeSituationService.php",
+            "sha256": "9bf1314c8a3f210dcefc65b21978f297755302311ff8f13ee01b3d593bdd264d",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeEntityVersionService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeEntityVersionService.php",
+            "sha256": "1aea1a57d3213e61653bcfc899788634f2ea3234e7a1522b2791563685742a48",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeCustomCodeService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeCustomCodeService.php",
+            "sha256": "41a4d42ee3f4e40cd229a21deceb270941f730fd8db591c6c1c7d1feba792d95",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeLockService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeLockService.php",
+            "sha256": "5d0f8580d6f64c651c5834171242302f92d62a3ae762b99fbdcbe7916204891e",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeConcurrencyGuard",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeConcurrencyGuard.php",
+            "sha256": "ea41c1a0e97c06a1c71e8d073f4f09aac534d427d4d9b6226604152707e06097",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeBusinessRuleRegistry",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeBusinessRuleRegistry.php",
+            "sha256": "204bd0da7c85c3617b9265b650c86b29d34e40992424eb4c0df5efd71167a704",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeConfiguredRuleExecutor",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeConfiguredRuleExecutor.php",
+            "sha256": "971e2d1f8e8503b87bc0f15abad20e966183677ee41bb7c04469def998bf2607",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeAuditAccessPolicy",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeAuditAccessPolicy.php",
+            "sha256": "c75a8ba44000c01e13a0e5d94df2371be95659b8405726f6819c4fa0e24193e3",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeContainerAudit",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeContainerAudit.php",
+            "sha256": "3cd4448cd1a28b61a42cce9003e84d434a1e58c7b11c1a89599456f5e8d6931b",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeContainerAllocationAudit",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeContainerAllocationAudit.php",
+            "sha256": "ed0e7955ba79fc9e38a78bfcc9b0346242d0581d2db5f379b99879294af653f2",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeProgressAuditSchema",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeProgressAuditSchema.php",
+            "sha256": "c4b9ae1baae8108e2fbc91c68f4ec8d0e9e5031a6a1ad0282f3e8806ad49b22e",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeExecutionContext",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeExecutionContext.php",
+            "sha256": "1c9f22540c3e7e6ac5eb1619e0e189fed579cce6c8700536a0b2781001994006",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeExternalJsonClient",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeExternalJsonClient.php",
+            "sha256": "2db96cdb9c99cd53c80f5537c2ddef017b35db885b7ddba83c78f423d7e9168f",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeContainerExpenseDefaultsAudit",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeContainerExpenseDefaultsAudit.php",
+            "sha256": "e3229be6b584f8e53e38243d6f003f9b3f45b48d2f7aaefc9b792e3b16c26c9d",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\ApiRequestContext",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/ApiRequestContext.php",
+            "sha256": "8f788e9627204786fba769c083d2845fe1ff5bdd4561607727fb853e95b23918",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeContainerTaxAudit",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeContainerTaxAudit.php",
+            "sha256": "fbbac1ba035a56928227ab3b5d3609a78ab97fe0f046138eeb3c35808e730790",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimePurchaseExpenseAudit",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimePurchaseExpenseAudit.php",
+            "sha256": "7edd5931965ee7e78418412b2c3fc1165ed2b324e32f85d11145891bb6a08c50",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeCiwCotacaoAudit",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeCiwCotacaoAudit.php",
+            "sha256": "bace517346f4f3282d659a98be5c6f6e028491948fb1346afc7128a8d4ed2336",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimePurchaseContextAudit",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimePurchaseContextAudit.php",
+            "sha256": "2e638a96424fa5d38b12174c022e78ce70bdaacbb527f90032b0cec07b1b6d80",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\RuntimeTransactionLog",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/RuntimeTransactionLog.php",
+            "sha256": "6b7b86cb83e27dfa91e81960b6afbe4fba4fe1b62cc424f58340df9a1e3f7589",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimePurchaseOrderAudit",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimePurchaseOrderAudit.php",
+            "sha256": "ba2386d9d71a8532139f77b07f4c474f06d1969a2436c237196bf084d6e38b26",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimePurchaseContextPayload",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimePurchaseContextPayload.php",
+            "sha256": "764f91fd8a10110fbcdfe58a364b76be4d5b59873d6905d70225d2c447d03912",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimePurchaseSampleAudit",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimePurchaseSampleAudit.php",
+            "sha256": "cbbb7695391780d64e38ff1da5718cb711c792fa2f382cadb6d73d252ff6fe92",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeCiwErpQuery",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeCiwErpQuery.php",
+            "sha256": "e05186618557fa692190e1f573b9b11d2f7013c8b281338d864c6750767fe5eb",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeExpenseTaxRelationsRead",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeExpenseTaxRelationsRead.php",
+            "sha256": "9999a613925d9b36d22c1c98ae648fa1566802633259e6aa92f8b22f51aea8e4",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeCiwComparisonRead",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeCiwComparisonRead.php",
+            "sha256": "115fedfa064cdebfadd7dc1a5cc7ed6b29d0cc9024ed025b433ba73781e24246",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeSampleContainerItemsRead",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeSampleContainerItemsRead.php",
+            "sha256": "e2b0f5683aadff8ab24c90d71f6976321bbdeb0ce11b638cd54de31878dda173",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeImportDiscountRead",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeImportDiscountRead.php",
+            "sha256": "da183dfadf900d516a577495d8348293c0aa1a9b36954cde50de9be819cd0197",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeCostDistributionRead",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeCostDistributionRead.php",
+            "sha256": "eb33d141610deae16638e1d61e175391ce6a7261e0981982c9d7db3950a37257",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeCostDistributionLedgerRead",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeCostDistributionLedgerRead.php",
+            "sha256": "f2273437e55865d3ba66ea5fbea0e96d7aa01ea2bd7c6e0bc2bde906ae7e457c",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimePurchaseItemAudit",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimePurchaseItemAudit.php",
+            "sha256": "7469b045e0219b9a7de69d317b28e98c8863278e59845fbd8b6a49a97b9497fd",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeContainerNfAvailableRead",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeContainerNfAvailableRead.php",
+            "sha256": "6015b42bebe3c7a883c54f31d7d76e41ee9bb89538b29c2b9234ba6ea991f9d3",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimePurchasePaymentAudit",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimePurchasePaymentAudit.php",
+            "sha256": "a9ca0050cc1b9a2a7c9c58dcc3eea0cf6a6b7aee29a6c95f03276c6ebeddc251",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeContainerExpenseBatch",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeContainerExpenseBatch.php",
+            "sha256": "b2de2ed168fabd929bf47a5abc0a07af965fc4cd350591d7119f7f206b6a19b7",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeItemCostManualRead",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeItemCostManualRead.php",
+            "sha256": "946490ec5c2ebdd22933370a82909c4ca5bbe1cc163b859647e29350d3aa734f",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeFileTransferContext",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeFileTransferContext.php",
+            "sha256": "30c79c8a5fecaf140227549e5aecafe248c5c8012799110efd47293a8a10e2e2",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeAttachmentWriteCoordinator",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeAttachmentWriteCoordinator.php",
+            "sha256": "02041b559ca2ecbadd61a8d09870fd34744c0cf4fe0bd4b0adf095aac6e541b1",
+            "staged": true
+        },
+        {
+            "class": "App\\Attachments\\AttachmentStorageClient",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Attachments/AttachmentStorageClient.php",
+            "sha256": "0ba35c21666e739e9c5f9922b1c0d8279e5523d1cbc4db52dbdc7decf70f1fe5",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimePurchaseTaxAudit",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimePurchaseTaxAudit.php",
+            "sha256": "1fce7cc119487dd46d3c54ea34949d829eac1e164f185e78e392ac24961d47ff",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\ApiCompanyAuditClassifier",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/ApiCompanyAuditClassifier.php",
+            "sha256": "2f647c6f5b4fb68734944a199adb9f06b3079a80e64834637df7538234048978",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\PublishedModuleCatalog",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/PublishedModuleCatalog.php",
+            "sha256": "09edda2322853273d926f551628969135ec05ee91944a3dcc2b180716d180f64",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\ApiCompanyBindingRegistry",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/ApiCompanyBindingRegistry.php",
+            "sha256": "8a00d4889966f79fe72a7be472b3b742801fd2a831ef5a908ea618c939d03646",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeLivePermissionResolver",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeLivePermissionResolver.php",
+            "sha256": "136017b23119213453193dccc6fa31410a1abecca3ee12ca16c243003af107f3",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\ApiCompanyContextResolver",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/ApiCompanyContextResolver.php",
+            "sha256": "87bc1f8bc3b5e0e297efbb636bc84baee4e34fb72fbca3411e7d709e7b93cf48",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\ApiCompanyContext",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/ApiCompanyContext.php",
+            "sha256": "063b9958501d22762bd15b8c23297f3ecbc7d70ac903ef60621b42fb4694528f",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\HomeRuntimeHandler",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/HomeRuntimeHandler.php",
+            "sha256": "6826a64f7cea09b4f016555b7fab4350e751930f201cb497ade237df4fd6f5b6",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\HomeSupportService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/HomeSupportService.php",
+            "sha256": "f2ee57f855d7c133a62d12fb2fecfa82c7e50a5d96e05378b05a7a1a4093605f",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\RuntimeUserMessage",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/RuntimeUserMessage.php",
+            "sha256": "4dc93896fb39387e8a9ef1fdb19153b21ce74bd169f3e2926857b3b7b7a70b7a",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\RuntimeUserMessageRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/RuntimeUserMessageRepository.php",
+            "sha256": "13905791abdbc6c2ac19f2da479d6f2a0ef2eade498e903f3f47aad87ba196ee",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\BuilderProgramOverlay",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/BuilderProgramOverlay.php",
+            "sha256": "872956883f2f1bebadb43e40ac8846075084da5902ad816955b88ab9b3c1086c",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\BuilderProgramOverlayVersion",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/BuilderProgramOverlayVersion.php",
+            "sha256": "72f398bfa7f1de22d7f84cda992fc39e142bae5a1c880f7cad64038b80c1c453",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\ProgramCustomizationResolver",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/ProgramCustomizationResolver.php",
+            "sha256": "afae07b20b490353b5bee60f23e48a688a72450a5f4fe20a0a683bd31e853742",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\GovernanceRetentionPolicyService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/GovernanceRetentionPolicyService.php",
+            "sha256": "ce2fe3d75c0ed970ce79dc1ca9c683c77b3ba0f7c46141e22baca1ee07fe0ed2",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\ProgramGovernanceRetentionHistoryService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/ProgramGovernanceRetentionHistoryService.php",
+            "sha256": "a87dc07ca93dc3dfede431690e3369d23b303520ee4c59d9752c6fcf8836105a",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\BuilderEditorLock",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/BuilderEditorLock.php",
+            "sha256": "27e0d1f6bba687ddd97f7ece63627ad9cbfcbb92db0fb41581355704208a180e",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\ProgramPublicationApproval",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/ProgramPublicationApproval.php",
+            "sha256": "03365455b4507ca042d3d0858a9aafd8e26ec4a964947f01f68f3704374cee84",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\ProgramTestExecution",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/ProgramTestExecution.php",
+            "sha256": "8fef7084336db2ebf6fc143f6d4b5889ddcc8225b5d7b62335b78290895f7020",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeAnalyticsApiDatasetService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeAnalyticsApiDatasetService.php",
+            "sha256": "c5d12eaae56764f01ec85b598c0208915bfc71d2b0c2ecfe7d7c005d6b2c0e7d",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeAnalyticsService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeAnalyticsService.php",
+            "sha256": "e1bad7ab4daedbca9457c827610bb228f60a3c8cf85febed79f84fd22689116c",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeAnalyticsAuditStore",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeAnalyticsAuditStore.php",
+            "sha256": "f7c1a044f0e06c6d6c2e24b58aa89b94fdbd337aaef254da33ece051e40ff6bb",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeAnalyticsPipelineStore",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeAnalyticsPipelineStore.php",
+            "sha256": "6f0f21cc568c6ef320162e8a6a19137b5104186eb4ee9875b42c33e0e42c2e7e",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeAnalyticsPipelineService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeAnalyticsPipelineService.php",
+            "sha256": "f698530b5cc39a75825015d8b5be2c5bd8340cf859463afdca6c0f0e8b4674a2",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeAnalyticsPipelineAdminService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeAnalyticsPipelineAdminService.php",
+            "sha256": "ba223e9fc418e9c03970348e4c006425169bcddd903b7344bc09441d619120d0",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeEstoqueTermoAudit",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeEstoqueTermoAudit.php",
+            "sha256": "b87df57ff8b1993291ac11f5076211ec8cff34d95a8495154c59ee41016ce114",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeCiwParametroAudit",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeCiwParametroAudit.php",
+            "sha256": "bf14485e6ad2a0ec813e57c930695ba2a977231da41c181e70fc245c433880f5",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeCiwCadastroAudit",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeCiwCadastroAudit.php",
+            "sha256": "a95953d34b99a5725b74b40d0f2cd20990fc6aa2e245672cad79c6806fcd5ab2",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeAuditAccessScope",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeAuditAccessScope.php",
+            "sha256": "2e523b4abc78a36d0f557cd79897ab55711fcc46b52f4d57f7d71550fcbf07ea",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\ApiCompanyRequestAdapter",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/ApiCompanyRequestAdapter.php",
+            "sha256": "89281a26e6873d28d23b0c10f383355b562cc918e2cfd94241aecceb1e4d84e6",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeEndpointDispatcher",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeEndpointDispatcher.php",
+            "sha256": "1788ee477d05d80ef4e314dac7c8d89892565e933a0c400d81c82f6c11c938e8",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\ClienteRuntimeHandler",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/ClienteRuntimeHandler.php",
+            "sha256": "503d36a8234f08c25d7e084265a41876cc94e51418f52e87a96e149278b985fc",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeProcessHandler",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeProcessHandler.php",
+            "sha256": "54d50bc345e89b4290add1633bff38297c250237df931cc744d85bd05b9b382e",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\UserLayoutService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/UserLayoutService.php",
+            "sha256": "38b7d2f43c8337cc898bb8f972e807ccab476795efe5184e9c8019e6a77c1024",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeSystemHandler",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeSystemHandler.php",
+            "sha256": "5788e6f71d5ddd3c764b25c666d1a8fa2250f632cabcfd9382f7c36675eaa40f",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeAnalyticsEndpointHandler",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeAnalyticsEndpointHandler.php",
+            "sha256": "d3f3a5aeac8d6fb3d9e68fdaa9a4389bc70d3c371bb00bd159b97ade26ac29b1",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeReportEndpointHandler",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeReportEndpointHandler.php",
+            "sha256": "e3617464aeb10ab97fdcd6382f4d38c3929fe566b8c7e5ed8381af8c54e99d00",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeSpecialDocumentEndpointHandler",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeSpecialDocumentEndpointHandler.php",
+            "sha256": "bfa1d11c7214086f68245e594240b4ea7f27872298892fcca33069688a63125e",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeRegulatedDocumentEndpointHandler",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeRegulatedDocumentEndpointHandler.php",
+            "sha256": "13655efc8918c0100d3472c9379becb6cf8d91f9bd4c7263ff4736f4291ced20",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeJobEnqueueService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeJobEnqueueService.php",
+            "sha256": "b5e794ef07e9676a72dcf76bb1cfd50fddffbe946882cd633209d6091227fbdc",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeMasterDetailActionService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeMasterDetailActionService.php",
+            "sha256": "6976c29b32f8f7fc108747b658e7a3b665c1862b71e38a5ac399888ee66f4ebe",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeAsyncJobService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeAsyncJobService.php",
+            "sha256": "c57bffe7b710ebbe58a03edd36e2c68fb4769e0521eb411bf23992d7a17a8622",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeAuditResourceGuard",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeAuditResourceGuard.php",
+            "sha256": "94bc42fc4ec6b9987b5955d8096fb2121ffa88cf58b45a6f0dbede2abc882214",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\ScreenDefinitionService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/ScreenDefinitionService.php",
+            "sha256": "accaa7aa35f5037d9af28de9b169c6f95a366af27ab27123cd270f10f6653f47",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeMetadataSanitizer",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeMetadataSanitizer.php",
+            "sha256": "4839dbab18d5eb4608a7ebb24e3d7ccbe940dd683d1f629756a375f25520bed9",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeMessageService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeMessageService.php",
+            "sha256": "b51658027f59f8bdc9c511343ab48ef81bba90bf993d81a8aeb4560d0f317ced",
+            "staged": true
+        },
+        {
+            "class": "App\\Controller\\RuntimeController",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Controller/RuntimeController.php",
+            "sha256": "04e3e3ed5ede0e85e63dac4e97305052e1ef1eef87a321a0943c0b8d48d4c55a",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeLiteralService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeLiteralService.php",
+            "sha256": "5c7d7db44dde031f8659b2b6729b0b504e2035a8ef5c6b820ccd4202f696df60",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeConfiguredJobScheduler",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeConfiguredJobScheduler.php",
+            "sha256": "fc7ee8794477d222f6975914568443b827061fc1a1f74a5c1940b39d856d1944",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeBusinessRuleContext",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeBusinessRuleContext.php",
+            "sha256": "6c2f114429c3befd8dde8c411af2d6f0587e51411c574b48aedeebfec2dc28f8",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeValidationException",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeValidationException.php",
+            "sha256": "085ee57fce5eee887b941e7e2d99fec1033b7296580383ef6fb2c5d324b30c50",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeRegulatedDocumentStore",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeRegulatedDocumentStore.php",
+            "sha256": "1341a0034d05b188b831e3fbda5691d0435705eed51547538611ce0634a680df",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeRegulatedDocumentService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeRegulatedDocumentService.php",
+            "sha256": "f21222c3213fc7c38a4536ae2e3422e7150cba7f17af18da988c3481a4ff4bc5",
+            "staged": true
+        },
+        {
+            "class": "App\\Printing\\Document\\InternalRegulatedDocumentPdfGenerator",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Printing/Document/InternalRegulatedDocumentPdfGenerator.php",
+            "sha256": "e84926ac3b49202671ae46e68f3810d896825354d4e7afcffc8b736117389890",
+            "staged": true
+        },
+        {
+            "class": "App\\Printing\\Document\\AbstractCallbackDocumentArtifactGenerator",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Printing/Document/AbstractCallbackDocumentArtifactGenerator.php",
+            "sha256": "a61d3865f570be2a2a05fb8188296c548e4814e3557a789bdbbbde7d7988e25e",
+            "staged": true
+        },
+        {
+            "class": "App\\Printing\\DTO\\DocumentArtifactRequest",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Printing/DTO/DocumentArtifactRequest.php",
+            "sha256": "7df7be890a3bb4650b2fe752ac39ff32b0eb2467d9a839d8a191733f385d7988",
+            "staged": true
+        },
+        {
+            "class": "App\\Printing\\DTO\\PrintResult",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Printing/DTO/PrintResult.php",
+            "sha256": "70b647d6286890d0216d3f84a997d46b6722f5a389d5a469cba1669e161f85ad",
+            "staged": true
+        },
+        {
+            "class": "App\\Printing\\Enum\\PrintStatus",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Printing/Enum/PrintStatus.php",
+            "sha256": "538934128e696435fbb3607282bd551f3574cb93055b235eba157a1b9e109394",
+            "staged": true
+        },
+        {
+            "class": "App\\Printing\\Document\\InternalRegulatedDocumentHtmlGenerator",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Printing/Document/InternalRegulatedDocumentHtmlGenerator.php",
+            "sha256": "fef26ed3971205dd422d23d1280b27bd717a25bd9f1f808ef8e9895763d148a9",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeReportAuthenticityService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeReportAuthenticityService.php",
+            "sha256": "88d4d77b00764f9a5ad1099e7f719a36324763e550c6ff27f79816c56d7dbfac",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeReportService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeReportService.php",
+            "sha256": "ca657c063dd14c60662b5ce587582546c3c4dbc79ad7820bc10d9ad6cb2e13ad",
+            "staged": true
+        },
+        {
+            "class": "App\\Printing\\Report\\InternalReportCsvGenerator",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Printing/Report/InternalReportCsvGenerator.php",
+            "sha256": "84456d4dd8d4a1940e7cc84810b40e812ff8708a9214577de031f068abcd0396",
+            "staged": true
+        },
+        {
+            "class": "App\\Printing\\Report\\InternalReportXlsxGenerator",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Printing/Report/InternalReportXlsxGenerator.php",
+            "sha256": "fe7bdcf7b8f2e7adaa38ecc7b612ef993ee24f4a9a01d787a17850372ded9782",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\RuntimeSpecialDocumentService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/RuntimeSpecialDocumentService.php",
+            "sha256": "65b44c5e300a2d33456126029fa5a9ee553899532eea39c48210de1647228c6e",
+            "staged": true
+        },
+        {
+            "class": "App\\Printing\\Document\\InternalSpecialDocumentPdfGenerator",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Printing/Document/InternalSpecialDocumentPdfGenerator.php",
+            "sha256": "ebdfd13b170ad8f5b767bee25bcb90acaef5b6a2f65040bbf5571b8b0f5bb13c",
+            "staged": true
+        },
+        {
+            "class": "App\\Printing\\Document\\InternalSpecialDocumentHtmlGenerator",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Printing/Document/InternalSpecialDocumentHtmlGenerator.php",
+            "sha256": "7a2cec5873f667b5d5f6788b282906c7bc366ff6bb77590ba29303cca7d2f753",
+            "staged": true
+        },
+        {
+            "class": "App\\Admin\\AdminCrudDefinitionFactory",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Admin/AdminCrudDefinitionFactory.php",
+            "sha256": "1f5db651c900c7e80db94df5aa59df50af327bd30fd19591de1678607dadf92c",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\SystemUpdateManifestRulesValidator",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/SystemUpdateManifestRulesValidator.php",
+            "sha256": "730e2e47cae4956e9e887309d2ec942dd54c04b227591184e7c48497b229aafb",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\SystemUpdateStepCatalog",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/SystemUpdateStepCatalog.php",
+            "sha256": "ebc44007902a5fed6d285ce0c1af5cd6685ae95ee03d861d2f2f1a774b4da38e",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\SystemUpdateRelease",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/SystemUpdateRelease.php",
+            "sha256": "baf08c224df48f8d3ae90d8f2e85545750ec378e24e49bfa90411a8808173417",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\SystemUpdateExecutionRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/SystemUpdateExecutionRepository.php",
+            "sha256": "02472404a32e6e57550f09257b72ec7c3eb05ff5555be034e45ccfc5be469073",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\SystemUpdateReleaseRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/SystemUpdateReleaseRepository.php",
+            "sha256": "5f8e1d75c46602a150a3ae8d929d05960f202cb253294384b6dcee4e1f6ffe58",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\SystemUpdateConsentRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/SystemUpdateConsentRepository.php",
+            "sha256": "951934611619599a29af79a23cc290167b2746689c77b3df37c23776318bd43b",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\SystemUpdateTenantActivationRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/SystemUpdateTenantActivationRepository.php",
+            "sha256": "fe83c0e7721ff41c2a64cd9a8f2b44effd857417e8ebe8f6b1242142b9e2aa7e",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\DeploymentModeResolver",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/DeploymentModeResolver.php",
+            "sha256": "a1a31543aad116dc0c1bdca6f00bc5388c8546815e6372248fc5bb1730465970",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\CentralControlResolver",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/CentralControlResolver.php",
+            "sha256": "c468951aed1feecca6cac18abfe81ed51b7b9d06d2ea7d40e606f77166597a7b",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\SystemUpdateService",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/SystemUpdateService.php",
+            "sha256": "7aa885b7fcaaa8a75a7d97efe163584a0729b3a1a7cc8cac95a73b2419514ee2",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\SystemUpdateManifestLoader",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/SystemUpdateManifestLoader.php",
+            "sha256": "803b2d78502109d16d7af9cc398c4404b1b118d2d8fa03658e3bc012f755f6a2",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\RuntimeAsyncJobRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/RuntimeAsyncJobRepository.php",
+            "sha256": "810b8110887433a62eee2b856b0567d101875a6c27bc6e6a7a03e47ca2294085",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\SystemVersionResolver",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/SystemVersionResolver.php",
+            "sha256": "7351fa76a8844e75b4fbffd92f49c9bd4abc2cc9fd155cac91c1a80511f40064",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\SystemUpdateStepRunner",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/SystemUpdateStepRunner.php",
+            "sha256": "84447a1c0f8fc4b9ccae9c24732552dd2492588d4524d80538372c946ad9fbd4",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\SystemUpdatePackageDownloader",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/SystemUpdatePackageDownloader.php",
+            "sha256": "78d97f19b4944757bbc7fd97343f585fd4fa9258d67bdadd658359b12465c64f",
+            "staged": true
+        },
+        {
+            "class": "App\\Runtime\\SystemUpdateOrchestratorClient",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Runtime/SystemUpdateOrchestratorClient.php",
+            "sha256": "37c54f9e1a31f21b691cffba7223aa49e60726690cccf59b3ff11bb23b9f77d9",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\SystemUpdateTenantActivation",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/SystemUpdateTenantActivation.php",
+            "sha256": "f0a9726b0b3a7b2fc2837f74422910c184edf3a7e0d66ec6c0d23d659ffb9ce7",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\UserLookupUsageRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/UserLookupUsageRepository.php",
+            "sha256": "625d5610ea9dca2ccb357373989bbe14f75332625a3c4fc91c1832a02450b160",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\UserLookupUsage",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/UserLookupUsage.php",
+            "sha256": "88efe015fa5b5c94509104ce9571e814cecf0526a881d78d8a3e7f33d60acec8",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\UserGridLayoutPreferenceRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/UserGridLayoutPreferenceRepository.php",
+            "sha256": "4c813f00f6aad8cb5f56c8b705f493a064a7625f84a4e22fda40257e1f7ad41c",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\UserSortPreferenceRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/UserSortPreferenceRepository.php",
+            "sha256": "d6b89ffa8800a1375e33b3eb5a91a47f4b1232a24da98f23d0e8b4351b587d2e",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\UserGroupPreferenceRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/UserGroupPreferenceRepository.php",
+            "sha256": "7726078fbd4317ea3b4361f2e8bdb02876a96a71262977f21d86713e724dd43c",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\UserFilterPreferenceRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/UserFilterPreferenceRepository.php",
+            "sha256": "f281ed8124b466d0bceac592b49777020a4da3b632c38dea4b6a8c49d382f312",
+            "staged": true
+        },
+        {
+            "class": "App\\Repository\\UserMobileGridTemplatePreferenceRepository",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Repository/UserMobileGridTemplatePreferenceRepository.php",
+            "sha256": "583ceccc04a74d735b49bb866d9f9321b44ae753b2b5c57c3cd3395b0e34f06f",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\SystemParameter",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/SystemParameter.php",
+            "sha256": "9aea02c98e7af608f01c30c3c1af6124b400f44773a864ab7f783424760ac2a4",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\SystemParameterValue",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/SystemParameterValue.php",
+            "sha256": "d6c63ba5083ec78a571058ff91d1f57f00b4cc87e8c9f447ca76155ee9c3d778",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\SystemOptionList",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/SystemOptionList.php",
+            "sha256": "20507057f4986bd43446b46c696ec8406e4f29561700c11f6732bd95c5f0636c",
+            "staged": true
+        },
+        {
+            "class": "App\\Entity\\SystemOption",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Entity/SystemOption.php",
+            "sha256": "e5ce1b7dc5a84ef205f2158020fb1a3c6e981d862fd485acc7adef68de989c06",
+            "staged": true
+        },
+        {
+            "class": "App\\Auth\\ImaUserWebClientInterface",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Auth/ImaUserWebClientInterface.php",
+            "sha256": "bfd945b1c338a2fe9130d762ca558846f3060991bf60b953a1274e430b950571",
+            "staged": true
+        },
+        {
+            "class": "App\\Auth\\AuthProviderInterface",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Auth/AuthProviderInterface.php",
+            "sha256": "8099c6f5bab1e95abb539a1c2d4428df98cb4f598ec3c3875ae23cccbb312946",
+            "staged": true
+        },
+        {
+            "class": "App\\Ciw\\CiwProgressIdentityClientInterface",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Ciw/CiwProgressIdentityClientInterface.php",
+            "sha256": "d1efb50d334f466f2d9911c3d32ed97c1569fc71850d5ff26775fdfa4624870a",
+            "staged": true
+        },
+        {
+            "class": "App\\Ciw\\CiwSqlGrantReaderInterface",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Ciw/CiwSqlGrantReaderInterface.php",
+            "sha256": "2f16e6068ae2fd55f77cf1ec28df59bdf6e8063ff809de281b977f5c2129a334",
+            "staged": true
+        },
+        {
+            "class": "App\\Printing\\Contract\\ReportGeneratorInterface",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Printing/Contract/ReportGeneratorInterface.php",
+            "sha256": "c10d481af7178ae768c0b422eaabd03c67cd8f4bb8140cdbeaf147f59407c326",
+            "staged": true
+        },
+        {
+            "class": "App\\Printing\\Contract\\TemplateRendererInterface",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Printing/Contract/TemplateRendererInterface.php",
+            "sha256": "71725b5fcadbdd310afa70b8ec7e64bc336b82f43d080d02f21b6f7a6b805c65",
+            "staged": true
+        },
+        {
+            "class": "App\\Printing\\Contract\\PrinterTransportInterface",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Printing/Contract/PrinterTransportInterface.php",
+            "sha256": "c1258bf171b9e5696a20534bba12380c69d0dd24903e7aca5775b02fe6a94cba",
+            "staged": true
+        },
+        {
+            "class": "App\\Printing\\Contract\\DocumentArtifactGeneratorInterface",
+            "file": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/comparison-after11/full-php/backend-stage/backend/src/Printing/Contract/DocumentArtifactGeneratorInterface.php",
+            "sha256": "4d4074a83fd75138382b2273dc00dca0f86a4da05a25b32556d46f6d37bcd36d",
+            "staged": true
+        }
+    ]
+}

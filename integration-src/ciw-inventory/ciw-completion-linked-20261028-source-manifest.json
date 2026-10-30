@@ -1,0 +1,354 @@
+{
+  "scope": [
+    "cons_item_container_custo_pgtos",
+    "cons_item_container_custos",
+    "cons_item_container_custos_comparacao_real",
+    "cons_item_container_custos_comparacao_dolar",
+    "cons_item_container_custo_despesas",
+    "cons_item_container_custo_nfs",
+    "cons_item_container_custo_descontos",
+    "grid_desenhos",
+    "form_desenhos",
+    "grid_tipos_desenho",
+    "form_tipos_desenho"
+  ],
+  "analysis_copies": true,
+  "files": [
+    {
+      "application": "cons_item_container_custo_pgtos",
+      "file": "cons_item_container_custo_pgtos.php",
+      "remote_sha256": "2f1cc22aad46b7d15369bc271bbb064bc7453c6b6107818ebc28199d767d8625",
+      "copied_sha256": "2f1cc22aad46b7d15369bc271bbb064bc7453c6b6107818ebc28199d767d8625",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_item_container_custo_pgtos",
+      "file": "cons_item_container_custo_pgtos_grid.class.php",
+      "remote_sha256": "569c8907ec2167ff019b495fb6cd6cae20d01bdac0d604e68079314641fbbdfd",
+      "copied_sha256": "11af0657697707a9526b64ad5554975ffc7180f1546f6676ff0126bd567653e0",
+      "sensitive_literals_omitted": 5
+    },
+    {
+      "application": "cons_item_container_custo_pgtos",
+      "file": "cons_item_container_custo_pgtos_lookup.class.php",
+      "remote_sha256": "5c20a95358bbea18f8e0d5187b5a9bbaf2c132f7a9def0c3fe10710dc5221a97",
+      "copied_sha256": "5c20a95358bbea18f8e0d5187b5a9bbaf2c132f7a9def0c3fe10710dc5221a97",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_item_container_custo_pgtos",
+      "file": "index.php",
+      "remote_sha256": "1e7ba4f4fa969514f7a655edb3da2a0cdc703f40e265efe2a2831aa84d9df8be",
+      "copied_sha256": "2ccb78a6f27a1837a67c7dcf58f1cbedce1476aa8fd47b1996d1d1da3b812b47",
+      "sensitive_literals_omitted": 21
+    },
+    {
+      "application": "cons_item_container_custos",
+      "file": "cons_item_container_custos.php",
+      "remote_sha256": "b66eb3facef61baa11df4657ee143a2aac2178d8389c38e0b1846cebb459c793",
+      "copied_sha256": "b66eb3facef61baa11df4657ee143a2aac2178d8389c38e0b1846cebb459c793",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_item_container_custos",
+      "file": "cons_item_container_custos_grid.class.php",
+      "remote_sha256": "e8903462ef2341ff2e9701dae9f6d78293ff57e58ce3eba5a20e5e5014d9b75a",
+      "copied_sha256": "589cdf4f459d1d3c7c702a8ed55990b7e9ded9ae2e0e627538c8350235e5bb7e",
+      "sensitive_literals_omitted": 4
+    },
+    {
+      "application": "cons_item_container_custos",
+      "file": "cons_item_container_custos_lookup.class.php",
+      "remote_sha256": "e6c5a7c965604312f1a98238640415137e7dfbc9fa7bb87db720d6600c3ecc23",
+      "copied_sha256": "e6c5a7c965604312f1a98238640415137e7dfbc9fa7bb87db720d6600c3ecc23",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_item_container_custos",
+      "file": "index.php",
+      "remote_sha256": "696b1b06078b7b83e65aeb1c01795daa0377f8d4921e000eb2e828355951119d",
+      "copied_sha256": "3bb4395789af1a0f10bf77954a8a5a5753aa284937ef3396cf9d36b94fd684ab",
+      "sensitive_literals_omitted": 7
+    },
+    {
+      "application": "cons_item_container_custos_comparacao_real",
+      "file": "cons_item_container_custos_comparacao_real.php",
+      "remote_sha256": "316cddebca151c596c54ed36d4088a7d829b7d97c7dc643c87ba1f11a07bffd0",
+      "copied_sha256": "316cddebca151c596c54ed36d4088a7d829b7d97c7dc643c87ba1f11a07bffd0",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_item_container_custos_comparacao_real",
+      "file": "cons_item_container_custos_comparacao_real_grid.class.php",
+      "remote_sha256": "29c4cfe22bff613865b2ce91001f229de51ad2fd4abd59997e24df4d7a6c267c",
+      "copied_sha256": "cb3ba3c4b138e959a75ebc36c4aef585f460eef0aa8153d819ca8ed299cfb595",
+      "sensitive_literals_omitted": 4
+    },
+    {
+      "application": "cons_item_container_custos_comparacao_real",
+      "file": "cons_item_container_custos_comparacao_real_lookup.class.php",
+      "remote_sha256": "2e62300d7a45ffe636786453df8c2d5accba43511c53fc28c52d625cf3cddb39",
+      "copied_sha256": "2e62300d7a45ffe636786453df8c2d5accba43511c53fc28c52d625cf3cddb39",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_item_container_custos_comparacao_real",
+      "file": "index.php",
+      "remote_sha256": "51ecf5773b1976c8919120d5d9ad1ce9e516507226d6f6ae64429c1398255c03",
+      "copied_sha256": "70e6ab06b3c0d9a279f37bc6ba30930f0f6abee552f6e4c53fe9b4fca2dc4496",
+      "sensitive_literals_omitted": 7
+    },
+    {
+      "application": "cons_item_container_custos_comparacao_dolar",
+      "file": "cons_item_container_custos_comparacao_dolar.php",
+      "remote_sha256": "9079281b5fdac01e6a3c8dd34e741e66ded3526f93df68eebaee34864d2b2236",
+      "copied_sha256": "9079281b5fdac01e6a3c8dd34e741e66ded3526f93df68eebaee34864d2b2236",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_item_container_custos_comparacao_dolar",
+      "file": "cons_item_container_custos_comparacao_dolar_grid.class.php",
+      "remote_sha256": "dcab002bf57e6b993cb0ca69b44c93f244232211ec644effce769fcf01a5acda",
+      "copied_sha256": "297bb945f86e9fb42f3e1ebbffd002c95d1e99d36776f166e13bdd74bcccdf3c",
+      "sensitive_literals_omitted": 4
+    },
+    {
+      "application": "cons_item_container_custos_comparacao_dolar",
+      "file": "cons_item_container_custos_comparacao_dolar_lookup.class.php",
+      "remote_sha256": "2b0d1c30172a083f2259c430a687bda034a7436b75c5dd139d3980e8f6a99f5e",
+      "copied_sha256": "2b0d1c30172a083f2259c430a687bda034a7436b75c5dd139d3980e8f6a99f5e",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_item_container_custos_comparacao_dolar",
+      "file": "index.php",
+      "remote_sha256": "85efe468d2ff3345455dbed1178271b7ae7697743a025f79a8ea83f47de37c67",
+      "copied_sha256": "f524998bb6ccbcc89f3fbc46f5fc9072b13102f9df90d9f6f3dc17f2e01a1d58",
+      "sensitive_literals_omitted": 7
+    },
+    {
+      "application": "cons_item_container_custo_despesas",
+      "file": "cons_item_container_custo_despesas.php",
+      "remote_sha256": "83a0c169bffa08f11a187d7ff7722465d1333469b5216836e98ae1f11120a576",
+      "copied_sha256": "83a0c169bffa08f11a187d7ff7722465d1333469b5216836e98ae1f11120a576",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_item_container_custo_despesas",
+      "file": "cons_item_container_custo_despesas_grid.class.php",
+      "remote_sha256": "8b747afca5921eecb61efc9a189b3d8f7d1ea7405b369ceade2d7cc0b0b929be",
+      "copied_sha256": "d2844775b0529b3cbf9eba5d1bff28f3a1467fb082ba3d444a0f1ab7cf15bff0",
+      "sensitive_literals_omitted": 5
+    },
+    {
+      "application": "cons_item_container_custo_despesas",
+      "file": "cons_item_container_custo_despesas_lookup.class.php",
+      "remote_sha256": "50537e58dafdae4c432c76ba1eda8f2c5499b51cb97fe88ba1e089bf8e81ad7a",
+      "copied_sha256": "50537e58dafdae4c432c76ba1eda8f2c5499b51cb97fe88ba1e089bf8e81ad7a",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_item_container_custo_despesas",
+      "file": "index.php",
+      "remote_sha256": "5b8001e9fa4b2474359c2039779165c1aee52beefe966e58de9265fc60224ebe",
+      "copied_sha256": "ef810f715de521b016420a05db9a9a649dabd61407e9c55a107523931238d00a",
+      "sensitive_literals_omitted": 19
+    },
+    {
+      "application": "cons_item_container_custo_nfs",
+      "file": "cons_item_container_custo_nfs.php",
+      "remote_sha256": "9351f6e605cda4f09421232154e268024dc5f83bf2d5e278746cfdaebb35beba",
+      "copied_sha256": "9351f6e605cda4f09421232154e268024dc5f83bf2d5e278746cfdaebb35beba",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_item_container_custo_nfs",
+      "file": "cons_item_container_custo_nfs_grid.class.php",
+      "remote_sha256": "2f09f10f4da831e603e64ce6fe7125375d08db45c5857766344aea50caff98b7",
+      "copied_sha256": "1015195c35bb339db45c2868b3ee7122aada7a38f50d52cd2f4338f98858e14e",
+      "sensitive_literals_omitted": 4
+    },
+    {
+      "application": "cons_item_container_custo_nfs",
+      "file": "cons_item_container_custo_nfs_lookup.class.php",
+      "remote_sha256": "768b6feff1c0bc0c78098a2818195f042143d5ec48167847d68b95d63659cf23",
+      "copied_sha256": "768b6feff1c0bc0c78098a2818195f042143d5ec48167847d68b95d63659cf23",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_item_container_custo_nfs",
+      "file": "index.php",
+      "remote_sha256": "db4e3da04b0e20d3dad90ff3d1b2d7a41ddf19deb63ccd20b9b3ae76b4bf1e01",
+      "copied_sha256": "ea6989ad9af8bbdd86a410876380fbf7291e9fecd25bd59df9ff64401a2cd29c",
+      "sensitive_literals_omitted": 8
+    },
+    {
+      "application": "cons_item_container_custo_descontos",
+      "file": "cons_item_container_custo_descontos.php",
+      "remote_sha256": "5bef84184f753b2342cf93a0a97a9fb41e8b233c965572229816d2980b1f1aab",
+      "copied_sha256": "5bef84184f753b2342cf93a0a97a9fb41e8b233c965572229816d2980b1f1aab",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_item_container_custo_descontos",
+      "file": "cons_item_container_custo_descontos_grid.class.php",
+      "remote_sha256": "3a50dcae90928522f71cf1528d9cafeca09e0e85015dc12bf28692516785ba23",
+      "copied_sha256": "cad9b4753a8cf3baaeb829b385fa5a47a5f8f7552826f257549f826f2a173a95",
+      "sensitive_literals_omitted": 5
+    },
+    {
+      "application": "cons_item_container_custo_descontos",
+      "file": "cons_item_container_custo_descontos_lookup.class.php",
+      "remote_sha256": "080bfc3fdf1413fd0fa218058e2dd553f28dfc6f2a6de32204c2248b5b116236",
+      "copied_sha256": "080bfc3fdf1413fd0fa218058e2dd553f28dfc6f2a6de32204c2248b5b116236",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_item_container_custo_descontos",
+      "file": "index.php",
+      "remote_sha256": "6113deaeb41593f9c6988b12a2c741b07ee8576e3387d7f73207134134c20e87",
+      "copied_sha256": "5d7f0f3d3eac3ba39d8f9e9e4454d7f17e50b04a8ce652401baf2fdbbc731191",
+      "sensitive_literals_omitted": 21
+    },
+    {
+      "application": "grid_desenhos",
+      "file": "grid_desenhos.php",
+      "remote_sha256": "d4efd54fb1c0ef030bc9c1385f33af01fd6eb9270a66cda1f99e02562710ef38",
+      "copied_sha256": "d4efd54fb1c0ef030bc9c1385f33af01fd6eb9270a66cda1f99e02562710ef38",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "grid_desenhos",
+      "file": "grid_desenhos_det.class.php",
+      "remote_sha256": "56ec635f1813bbf38a7ba2a6aaa06552ecc9704e987d5f91475d1a9582c9b97d",
+      "copied_sha256": "56ec635f1813bbf38a7ba2a6aaa06552ecc9704e987d5f91475d1a9582c9b97d",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "grid_desenhos",
+      "file": "grid_desenhos_grid.class.php",
+      "remote_sha256": "c7c8fb4cb76a8f42b249f82213a57062f8d83d3aa0ce3c5e96564d7466c5bcd0",
+      "copied_sha256": "422c652949e98ac0304d077156e84f97634352c244375d73199d9e43c805ed09",
+      "sensitive_literals_omitted": 4
+    },
+    {
+      "application": "grid_desenhos",
+      "file": "grid_desenhos_lookup.class.php",
+      "remote_sha256": "e37e9666815a6d5a7d7786952ae4ec82814c062f11b18b7702b8ee7bef43743a",
+      "copied_sha256": "e37e9666815a6d5a7d7786952ae4ec82814c062f11b18b7702b8ee7bef43743a",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "grid_desenhos",
+      "file": "grid_desenhos_pesq.class.php",
+      "remote_sha256": "c181018c7164ba49d612a025fc1168a5bb06466c668c0a80ad881ab40a6f0ae6",
+      "copied_sha256": "fc48c1c896539cbfbb6c76afb8808bacec41cab8f79612da5c456ef074d9f853",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "grid_desenhos",
+      "file": "index.php",
+      "remote_sha256": "3996bfd61e42bbd17a394bc3a32cf8b9d2c36aaa92b8197f66f850e615c06bf7",
+      "copied_sha256": "65641eb8aaa78b7f2c68785fa5ecec4c20824419cbe84a4f07ffbd9eb293ca4f",
+      "sensitive_literals_omitted": 9
+    },
+    {
+      "application": "form_desenhos",
+      "file": "form_desenhos.php",
+      "remote_sha256": "87b4208833a71490288e5dd9488a1f57c4a0ca204d130639917bae93769a6bbd",
+      "copied_sha256": "87b4208833a71490288e5dd9488a1f57c4a0ca204d130639917bae93769a6bbd",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "form_desenhos",
+      "file": "form_desenhos_apl.php",
+      "remote_sha256": "c87c8d315c06e1547046c44d7eba7126b7a32cd21e56548361f0e9e10a5fefc4",
+      "copied_sha256": "68ac28a69606ac44b95f873e393939a1996569a0f59d98d9106ff4ccfc4d9930",
+      "sensitive_literals_omitted": 2
+    },
+    {
+      "application": "form_desenhos",
+      "file": "form_desenhos_form0.php",
+      "remote_sha256": "008e8b5bb8f2cb8d5131df90e6e6fe62b60efd98448408fb5a31ad1c1a52db6b",
+      "copied_sha256": "e3a1c1d71506369c32a77bc54808814d35f9d3359db7c9cc5d4de7af841b0f76",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "form_desenhos",
+      "file": "index.php",
+      "remote_sha256": "9dbe0b02bf7d595132dbf844875bea8f7d5bd4f2a8462ce7bf97935fc33d3c23",
+      "copied_sha256": "9a82ca2799c6abb437c295fb61eeeec6ea2345d78737dd73b14ffdbd34bd0ac2",
+      "sensitive_literals_omitted": 2
+    },
+    {
+      "application": "grid_tipos_desenho",
+      "file": "grid_tipos_desenho.php",
+      "remote_sha256": "9e2c11a81e3a4924d2d33eb30605145877ee0743a2817819b88eb1bd9d33f0db",
+      "copied_sha256": "9e2c11a81e3a4924d2d33eb30605145877ee0743a2817819b88eb1bd9d33f0db",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "grid_tipos_desenho",
+      "file": "grid_tipos_desenho_det.class.php",
+      "remote_sha256": "a43cc18eab53ae27f54f77a810b4a0c2a339a9b73f8fb39645b93f8b7ffc683f",
+      "copied_sha256": "a43cc18eab53ae27f54f77a810b4a0c2a339a9b73f8fb39645b93f8b7ffc683f",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "grid_tipos_desenho",
+      "file": "grid_tipos_desenho_grid.class.php",
+      "remote_sha256": "72f0db48a3015549bf15daa1a295bbd94dbac0920c035779c3d87ca6b1394014",
+      "copied_sha256": "0539417fe15c4449406b162264d5a262d3486294220e58b9adb7924e71a8c573",
+      "sensitive_literals_omitted": 4
+    },
+    {
+      "application": "grid_tipos_desenho",
+      "file": "grid_tipos_desenho_lookup.class.php",
+      "remote_sha256": "05021ad875643854347518a2dd16e7bad4f7a4cf8e45bf4bcc5c48974c29ce2c",
+      "copied_sha256": "05021ad875643854347518a2dd16e7bad4f7a4cf8e45bf4bcc5c48974c29ce2c",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "grid_tipos_desenho",
+      "file": "grid_tipos_desenho_pesq.class.php",
+      "remote_sha256": "ff543be89c41ea0358d8ee23e2c18d554ae5c03c59a3b59f7a78ced9fb4686ec",
+      "copied_sha256": "0c2e44b2eb802a6d58eae23cf6791c504c44bbceb170820f22641abd76443a1f",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "grid_tipos_desenho",
+      "file": "index.php",
+      "remote_sha256": "b27f2195542ea89e450a29eab7dcad954ea71b1fd0ad3b4e1941f8a3afb686f5",
+      "copied_sha256": "c21849ed7e67b445999692797acd7ef7809b0dafc75f76fd80496f92f23a390f",
+      "sensitive_literals_omitted": 9
+    },
+    {
+      "application": "form_tipos_desenho",
+      "file": "form_tipos_desenho.php",
+      "remote_sha256": "da34f36e242599de6c167919544b29dc72b7eaa8b7190d92f63326ea075b54c1",
+      "copied_sha256": "da34f36e242599de6c167919544b29dc72b7eaa8b7190d92f63326ea075b54c1",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "form_tipos_desenho",
+      "file": "form_tipos_desenho_apl.php",
+      "remote_sha256": "a6221c712b6eaad705a0b6af8eee136362f9697f6c6622fbc2f85eafad5b81a8",
+      "copied_sha256": "86f46ffed42599eb9e32bad5932a0f2126ede5f6f7b5aa9dcdc14b8365b2ad8e",
+      "sensitive_literals_omitted": 2
+    },
+    {
+      "application": "form_tipos_desenho",
+      "file": "form_tipos_desenho_form0.php",
+      "remote_sha256": "3f99879792338ed0660fde2aa488e3005556d13357466f0ee306ea020d562cbd",
+      "copied_sha256": "f5f7a330f60123b5f4342f7147745768e72d9590b6201ed970049377ad8c251a",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "form_tipos_desenho",
+      "file": "index.php",
+      "remote_sha256": "e17fe9e5d39e1fe4ec7f7863618cc6a5abdfd42512a4bbcd530d7dcc46ffafe0",
+      "copied_sha256": "db55ace7da5dac6a4864e1ba945826c2ba79bf5c1974905584ab5ad239f82296",
+      "sensitive_literals_omitted": 2
+    }
+  ]
+}

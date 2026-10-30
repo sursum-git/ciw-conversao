@@ -1,0 +1,12 @@
+--- baseline/src/crud-engine/CrudDefinitionValidator.js
++++ candidate/src/crud-engine/CrudDefinitionValidator.js
+@@ -117,7 +117,8 @@
+       };
+       const identifier = /^[A-Za-z_][A-Za-z0-9_]*$/;
+       global.CrudUtils.ensureArray(definition.contextFields).forEach((item) => {
+-        if (!closed(item, ["field", "filter", "createDefault", "readonly", "required"], "contextFields")) { return; }
++        if (!closed(item, ["field", "filter", "createDefault", "readonly", "required", "filterOnly"], "contextFields")) { return; }
++        if (Object.prototype.hasOwnProperty.call(item, "filterOnly") && (typeof item.filterOnly !== "boolean" || (item.filterOnly && (definition.pageType !== "crud" || !fields[item.field] || fields[item.field].type !== "integer" || item.required !== false || item.filter !== true || item.readonly !== true || item.createDefault !== false)))) { errors.push("filterOnly exige contexto integer opcional readonly, filtro ativo e sem default de criacao."); }
+         if (!fields[item.field] || ["integer", "string"].indexOf(fields[item.field].type) === -1) { errors.push("Contexto exige campo integer ou string existente."); }
+         ["filter", "createDefault", "readonly", "required"].forEach((key) => { if (item[key] != null && typeof item[key] !== "boolean") { errors.push("Contexto exige propriedades booleanas."); } });
+       });

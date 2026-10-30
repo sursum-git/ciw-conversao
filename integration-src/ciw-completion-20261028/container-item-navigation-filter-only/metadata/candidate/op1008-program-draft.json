@@ -1,0 +1,277 @@
+{
+  "programCode": "op1008",
+  "programTitle": "Custos dos Itens",
+  "module": "operacional",
+  "pageType": "crud",
+  "builderEntityCode": "container_custo_itens_progress",
+  "screenId": "ciw.container-custos-itens",
+  "version": "1.0.1",
+  "subtitle": "Custos dos Itens",
+  "icon": null,
+  "permissionPrefix": "container_custo_itens_progress",
+  "gridEditMode": "form",
+  "crudOptions": {
+    "pageSize": 30,
+    "gridFields": [
+      {
+        "field": "item_container_id",
+        "hidden": false,
+        "width": 170
+      },
+      {
+        "field": "descricao",
+        "hidden": false,
+        "width": 300
+      },
+      {
+        "field": "codigo_erp",
+        "hidden": false,
+        "width": 170
+      },
+      {
+        "field": "item_proc_compra_id",
+        "hidden": true,
+        "width": 170
+      },
+      {
+        "field": "proc_compra_id",
+        "hidden": true,
+        "width": 170
+      },
+      {
+        "field": "qt_alocada",
+        "hidden": false,
+        "width": 170
+      },
+      {
+        "field": "qt_confirm_emb",
+        "hidden": true,
+        "width": 170
+      },
+      {
+        "field": "qt_recbto_fisico",
+        "hidden": true,
+        "width": 170
+      },
+      {
+        "field": "qt_saldo",
+        "hidden": true,
+        "width": 170
+      },
+      {
+        "field": "quantidade_base",
+        "hidden": true,
+        "width": 170
+      },
+      {
+        "field": "dolar_medio",
+        "hidden": false,
+        "width": 170
+      },
+      {
+        "field": "vl_desp_prev",
+        "hidden": true,
+        "width": 170
+      },
+      {
+        "field": "vl_desp_prev_sem_distr_custo",
+        "hidden": true,
+        "width": 170
+      },
+      {
+        "field": "vl_merc_prev",
+        "hidden": true,
+        "width": 170
+      },
+      {
+        "field": "vl_total_prev",
+        "hidden": false,
+        "width": 170
+      },
+      {
+        "field": "vl_total_prev_sem_distr_custo",
+        "hidden": true,
+        "width": 170
+      },
+      {
+        "field": "vl_unit_prev",
+        "hidden": false,
+        "width": 170
+      },
+      {
+        "field": "vl_unit_prev_sem_distr_custo",
+        "hidden": true,
+        "width": 170
+      },
+      {
+        "field": "peso_rateio",
+        "hidden": true,
+        "width": 170
+      },
+      {
+        "field": "vl_desp_real",
+        "hidden": true,
+        "width": 170
+      },
+      {
+        "field": "vl_merc_real",
+        "hidden": true,
+        "width": 170
+      },
+      {
+        "field": "vl_desc_item",
+        "hidden": true,
+        "width": 170
+      },
+      {
+        "field": "vl_desc_container",
+        "hidden": true,
+        "width": 170
+      },
+      {
+        "field": "vl_total_real",
+        "hidden": false,
+        "width": 170
+      },
+      {
+        "field": "vl_unit_real",
+        "hidden": false,
+        "width": 170
+      },
+      {
+        "field": "vl_unit_prev_versao",
+        "hidden": true,
+        "width": 170
+      },
+      {
+        "field": "vl_unit_real_versao",
+        "hidden": true,
+        "width": 170
+      },
+      {
+        "field": "actual_source",
+        "hidden": false,
+        "width": 170
+      },
+      {
+        "field": "moeda",
+        "hidden": false,
+        "width": 170
+      },
+      {
+        "field": "ultima_versao_id",
+        "hidden": true,
+        "width": 170
+      },
+      {
+        "field": "versao_desatualizada",
+        "hidden": true,
+        "width": 170
+      },
+      {
+        "field": "calculation_source",
+        "hidden": true,
+        "width": 170
+      },
+      {
+        "field": "calculation_warning",
+        "hidden": false,
+        "width": 300
+      },
+      {
+        "field": "quotation_date",
+        "hidden": true,
+        "width": 170
+      },
+      {
+        "field": "quotation_latest_date",
+        "hidden": true,
+        "width": 170
+      },
+      {
+        "field": "quotation_warning",
+        "hidden": true,
+        "width": 170
+      }
+    ],
+    "filterFields": [
+      "item_container_id",
+      "descricao",
+      "codigo_erp"
+    ],
+    "defaultSort": [
+      {
+        "field": "item_container_id",
+        "dir": "asc"
+      }
+    ]
+  },
+  "processOptions": null,
+  "formOptions": null,
+  "rowLinks": [
+    {
+      "id": "item_pedido",
+      "label": "Item do pedido",
+      "screenId": "ciw.proc-compra-itens",
+      "parameters": [
+        {
+          "field": "proc_compra_id",
+          "sourceField": "proc_compra_id"
+        },
+        {
+          "field": "item_proc_compra_id",
+          "sourceField": "item_proc_compra_id"
+        }
+      ],
+      "position": "start"
+    },
+    {
+      "id": "manutencao_item",
+      "label": "Manutenção da alocação",
+      "screenId": "ciw.container-itens",
+      "parameters": [
+        {
+          "field": "container_id",
+          "sourceField": "container_id"
+        },
+        {
+          "field": "item_container_id",
+          "sourceField": "item_container_id"
+        }
+      ],
+      "position": "start"
+    }
+  ],
+  "contextFields": [
+    {
+      "field": "container_id",
+      "filter": true,
+      "createDefault": true,
+      "readonly": true,
+      "required": true
+    }
+  ],
+  "allowCreate": false,
+  "allowUpdate": false,
+  "allowDelete": false,
+  "changeSummary": "Navegação contextual para o item exato, sem encaminhar a seleção ao contexto externo; ações e permissões nativas preservadas.",
+  "programOrigin": "standard",
+  "ownerScope": "system",
+  "customizationPolicy": "overlay_only",
+  "subscriberId": null,
+  "baseProgramCode": null,
+  "baseProgramVersionId": null,
+  "upgradeFrozen": false,
+  "frozenReason": null,
+  "publicationPolicy": {
+    "allowedDatabaseEnvironments": []
+  },
+  "analyticsConfig": null,
+  "reportConfig": null,
+  "specialDocumentConfig": null,
+  "regulatedDocumentConfig": null,
+  "masterDetailConfig": null,
+  "customMode": null,
+  "customEntryUrl": null,
+  "customFrameTitle": null
+}

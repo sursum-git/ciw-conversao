@@ -1,0 +1,387 @@
+{
+  "entityDraft": {
+    "code": "container_despesas_lote_progress",
+    "name": "Manutencao rapida de despesas do container MED",
+    "entityType": "api",
+    "createPhysicalTable": false,
+    "structureModuleCode": "operacional",
+    "structureType": "main",
+    "structureBaseNumber": 1042,
+    "apiSourceCode": "motor_progress_container_despesas_lote",
+    "apiListOperationCode": "despesas_lote_read",
+    "apiDetailOperationCode": "despesas_lote_get",
+    "apiBatchOperationCode": "despesas_lote_batch",
+    "apiCreateOperationCode": "",
+    "apiUpdateOperationCode": "",
+    "apiDeleteOperationCode": "",
+    "fields": [
+      {
+        "code": "despesa_container_id",
+        "label": "Despesa do container",
+        "dataType": "integer",
+        "primaryKey": true,
+        "required": true,
+        "readonlyField": true,
+        "apiJsonPath": "despesa_container_id",
+        "apiWritePath": "despesa_container_id",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": false,
+        "position": 0,
+        "options": {
+          "readonly": true,
+          "writable": false
+        }
+      },
+      {
+        "code": "despesa_id",
+        "label": "Despesa",
+        "dataType": "integer",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "apiJsonPath": "despesa_id",
+        "apiWritePath": "values.despesa_id",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": false,
+        "position": 10,
+        "options": {
+          "readonly": true,
+          "writable": false
+        }
+      },
+      {
+        "code": "vl_prev",
+        "label": "Valor previsto",
+        "dataType": "decimal",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": false,
+        "apiJsonPath": "vl_prev",
+        "apiWritePath": "values.vl_prev",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": false,
+        "position": 20,
+        "options": {
+          "readonly": false,
+          "writable": true
+        },
+        "scale": 2
+      },
+      {
+        "code": "container_id",
+        "label": "Nr.Container",
+        "dataType": "integer",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "apiJsonPath": "container_id",
+        "apiWritePath": "container_id",
+        "apiShowInGrid": false,
+        "apiShowInForm": true,
+        "apiShowInFilter": false,
+        "position": 30,
+        "options": {
+          "readonly": true,
+          "writable": false
+        }
+      },
+      {
+        "code": "calc_imp_container_id",
+        "label": "Cálculo de imposto",
+        "dataType": "integer",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "apiJsonPath": "calc_imp_container_id",
+        "apiWritePath": "calc_imp_container_id",
+        "apiShowInGrid": false,
+        "apiShowInForm": true,
+        "apiShowInFilter": false,
+        "position": 40,
+        "options": {
+          "readonly": true,
+          "writable": false
+        }
+      },
+      {
+        "code": "vl_base_imp",
+        "label": "Base de impostos",
+        "dataType": "decimal",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": false,
+        "apiJsonPath": "vl_base_imp",
+        "apiWritePath": "values.vl_base_imp",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": false,
+        "position": 50,
+        "options": {
+          "readonly": false,
+          "writable": true
+        },
+        "scale": 2
+      },
+      {
+        "code": "vl_negociado",
+        "label": "Valor negociado",
+        "dataType": "decimal",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "apiJsonPath": "vl_negociado",
+        "apiWritePath": "values.vl_negociado",
+        "apiShowInGrid": false,
+        "apiShowInForm": true,
+        "apiShowInFilter": false,
+        "position": 60,
+        "options": {
+          "readonly": true,
+          "writable": false
+        },
+        "scale": 2
+      },
+      {
+        "code": "vl_proforma",
+        "label": "Valor pró-forma",
+        "dataType": "decimal",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "apiJsonPath": "vl_proforma",
+        "apiWritePath": "vl_proforma",
+        "apiShowInGrid": false,
+        "apiShowInForm": true,
+        "apiShowInFilter": false,
+        "position": 70,
+        "options": {
+          "readonly": true,
+          "writable": false
+        },
+        "scale": 2
+      },
+      {
+        "code": "cta_corren_custo_distr_id",
+        "label": "Distribuição de custo",
+        "dataType": "integer",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "apiJsonPath": "cta_corren_custo_distr_id",
+        "apiWritePath": "cta_corren_custo_distr_id",
+        "apiShowInGrid": false,
+        "apiShowInForm": true,
+        "apiShowInFilter": false,
+        "position": 80,
+        "options": {
+          "readonly": true,
+          "writable": false
+        }
+      },
+      {
+        "code": "log_utilizado",
+        "label": "Utilizado?",
+        "dataType": "boolean",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "apiJsonPath": "log_utilizado",
+        "apiWritePath": "log_utilizado",
+        "apiShowInGrid": false,
+        "apiShowInForm": true,
+        "apiShowInFilter": false,
+        "position": 90,
+        "options": {
+          "readonly": true,
+          "writable": false
+        }
+      },
+      {
+        "code": "log_manual",
+        "label": "Manual?",
+        "dataType": "boolean",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": false,
+        "apiJsonPath": "log_manual",
+        "apiWritePath": "values.log_manual",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": false,
+        "position": 100,
+        "options": {
+          "readonly": false,
+          "writable": true
+        }
+      },
+      {
+        "code": "perc_calc",
+        "label": "Percentual de cálculo",
+        "dataType": "decimal",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "apiJsonPath": "perc_calc",
+        "apiWritePath": "values.perc_calc",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": false,
+        "position": 110,
+        "options": {
+          "readonly": true,
+          "writable": false
+        },
+        "scale": 2
+      },
+      {
+        "code": "memoria_calculo",
+        "label": "memoria calculo",
+        "dataType": "string",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "apiJsonPath": "memoria_calculo",
+        "apiWritePath": "memoria_calculo",
+        "apiShowInGrid": false,
+        "apiShowInForm": true,
+        "apiShowInFilter": false,
+        "position": 120,
+        "options": {
+          "readonly": true,
+          "writable": false
+        }
+      },
+      {
+        "code": "item_container_id",
+        "label": "Item do container",
+        "dataType": "integer",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "apiJsonPath": "item_container_id",
+        "apiWritePath": "item_container_id",
+        "apiShowInGrid": false,
+        "apiShowInForm": true,
+        "apiShowInFilter": false,
+        "position": 130,
+        "options": {
+          "readonly": true,
+          "writable": false
+        }
+      }
+    ]
+  },
+  "programDraft": {
+    "programCode": "op1042",
+    "programTitle": "Manutencao rapida de despesas",
+    "module": "operacional",
+    "builderEntityCode": "container_despesas_lote_progress",
+    "pageType": "crud",
+    "gridEditMode": "batch",
+    "screenId": "ciw.container-despesas-lote",
+    "version": "1.0.0",
+    "programOrigin": "standard",
+    "ownerScope": "system",
+    "allowCreate": false,
+    "allowUpdate": true,
+    "allowDelete": true,
+    "permissionPrefix": "container_despesas_lote_progress",
+    "subtitle": "Salve alteracoes ou exclusoes em lotes separados. Container MED.",
+    "contextFields": [
+      {
+        "field": "container_id",
+        "filter": true,
+        "createDefault": false,
+        "readonly": true,
+        "required": true
+      }
+    ],
+    "rowLinks": [],
+    "crudOptions": {
+      "pageSize": 50,
+      "batchSnapshot": {
+        "originalFields": [
+          "despesa_container_id",
+          "despesa_id",
+          "vl_prev",
+          "container_id",
+          "calc_imp_container_id",
+          "vl_base_imp",
+          "vl_negociado",
+          "vl_proforma",
+          "cta_corren_custo_distr_id",
+          "log_utilizado",
+          "log_manual",
+          "perc_calc",
+          "memoria_calculo",
+          "item_container_id"
+        ],
+        "contextFields": [
+          "container_id"
+        ]
+      },
+      "gridFields": [
+        {
+          "field": "despesa_container_id"
+        },
+        {
+          "field": "despesa_id"
+        },
+        {
+          "field": "vl_prev"
+        },
+        {
+          "field": "vl_base_imp"
+        },
+        {
+          "field": "log_manual"
+        },
+        {
+          "field": "perc_calc"
+        }
+      ],
+      "filterFields": [],
+      "defaultSort": [
+        {
+          "field": "despesa_container_id",
+          "dir": "asc"
+        }
+      ]
+    },
+    "formOptions": {
+      "mode": "popup",
+      "tabs": [
+        {
+          "id": "despesa",
+          "title": "Despesa",
+          "sections": [
+            {
+              "id": "dados",
+              "title": "Valores persistidos",
+              "columns": 2,
+              "fields": [
+                "despesa_container_id",
+                "despesa_id",
+                "vl_prev",
+                "container_id",
+                "calc_imp_container_id",
+                "vl_base_imp",
+                "vl_negociado",
+                "vl_proforma",
+                "cta_corren_custo_distr_id",
+                "log_utilizado",
+                "log_manual",
+                "perc_calc",
+                "memoria_calculo",
+                "item_container_id"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "canonical": "D:\\opencode\\construtor-pg\\src\\crud-engine\\CrudKendoFormRenderer.js",
+  "relative": "src/crud-engine/CrudKendoFormRenderer.js",
+  "baselineSha256": "d3028663b4c006771f7b8eac06d12ff7398c3e73a5c58391c328070a9d1047d9",
+  "candidateSha256": "430173106a0c9b420f346ab007f423cce4791821122ebec406bdc425e432338e",
+  "edits": [
+    {
+      "start": 86963,
+      "end": 87049,
+      "beforeBase64": "ICAgICAgZ2xvYmFsLkNydWRVdGlscy5lbnN1cmVBcnJheSh0aGlzLmRlZmluaXRpb24uY29udGV4dEZpZWxkcykuZm9yRWFjaCgoaXRlbSkgPT4gewo=",
+      "afterBase64": "ICAgICAgZ2xvYmFsLkNydWRVdGlscy5lbnN1cmVBcnJheSh0aGlzLmRlZmluaXRpb24uY29udGV4dEZpZWxkcykuZm9yRWFjaCgoaXRlbSkgPT4gew0KICAgICAgICBpZiAoaXRlbS5maWx0ZXJPbmx5ID09PSB0cnVlKSB7IHJldHVybjsgfQo="
+    }
+  ],
+  "unchangedByteRanges": [
+    {
+      "baselineStart": 0,
+      "candidateStart": 0,
+      "bytes": 86963,
+      "sha256": "68c79ba4c164e34c9b808cd38533e14cdaade50e2ee05b71a1866b0087c66c15"
+    },
+    {
+      "baselineStart": 87049,
+      "candidateStart": 87100,
+      "bytes": 58052,
+      "sha256": "a1b30b5693887277d36552e19992bfcdbd3c6de35a0d525b5f0f6dd7e7fe1474"
+    }
+  ],
+  "roundTripExact": true,
+  "role": "native-runtime-capability"
+}

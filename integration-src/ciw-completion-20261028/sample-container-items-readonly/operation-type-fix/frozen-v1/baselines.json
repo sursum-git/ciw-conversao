@@ -1,0 +1,31 @@
+{
+  "requiresOriginalManifestSha256": "cf8ffcdc871acf3ea3c11b643cffb4523f1255b1c354e18aa3ecba9472224f04",
+  "source140RebaseGatePreserved": true,
+  "canonicalWrites": false,
+  "baselines": [
+    {
+      "source": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\sample-container-items-readonly\\frozen-v1/metadata/api-source-additions.json",
+      "baselineSha256": "e86ecd6d8179cd228d0d36c0663677caa3199eb39f295fc332058ebbe88d18fc",
+      "candidate": "metadata/api-source-additions.json",
+      "candidateSha256": "4a7cb3437a80fa79ba261d07906bb7e649214e1b430c1b63f165f5b37c9da58a",
+      "changedSpan": {
+        "startByte": 674,
+        "oldBytes": 13,
+        "newBytes": 16
+      },
+      "onlyChange": "registry type get -> detail; operation code/body remains get"
+    },
+    {
+      "source": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\sample-container-items-readonly\\frozen-v1/metadata/source-patch-proposal.json",
+      "baselineSha256": "c50fb6d8b2ade06f648ce360539ff30d3e363322c12b39494c8617711101709c",
+      "candidate": "metadata/source-patch-proposal.json",
+      "candidateSha256": "c37ed38f3e1f742e3adcb4a229bc329a2bdda7a0e1b12af8bb22513de20effe3",
+      "changedSpan": {
+        "startByte": 1204,
+        "oldBytes": 13,
+        "newBytes": 16
+      },
+      "onlyChange": "registry type get -> detail; operation code/body remains get"
+    }
+  ]
+}

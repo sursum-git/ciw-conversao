@@ -1,0 +1,178 @@
+{
+  "programCode": "op1002",
+  "programTitle": "Itens do Container",
+  "module": "operacional",
+  "pageType": "crud",
+  "builderEntityCode": "container_itens_progress",
+  "screenId": "ciw.container-itens",
+  "version": "1.0.2",
+  "subtitle": "Manutenção e alocação de itens existentes de pedidos de importação",
+  "icon": null,
+  "permissionPrefix": "container_itens_progress",
+  "gridEditMode": "form",
+  "crudOptions": {
+    "pageSize": 30,
+    "gridFields": [
+      {
+        "field": "item_container_id",
+        "hidden": false,
+        "width": 160
+      },
+      {
+        "field": "codigo_erp",
+        "hidden": false,
+        "width": 160
+      },
+      {
+        "field": "descricao_item",
+        "hidden": false,
+        "width": 280
+      },
+      {
+        "field": "unid_medida",
+        "hidden": false,
+        "width": 160
+      },
+      {
+        "field": "proc_compra_id",
+        "hidden": false,
+        "width": 160
+      },
+      {
+        "field": "cod_proc_fornec",
+        "hidden": false,
+        "width": 160
+      },
+      {
+        "field": "qt_alocada",
+        "hidden": false,
+        "width": 160
+      },
+      {
+        "field": "qt_confirm_emb",
+        "hidden": false,
+        "width": 160
+      },
+      {
+        "field": "qt_recbto_fisico",
+        "hidden": false,
+        "width": 160
+      },
+      {
+        "field": "log_rec_doc_prazo_emb",
+        "hidden": false,
+        "width": 160
+      },
+      {
+        "field": "cod_tipo_calculo",
+        "hidden": false,
+        "width": 160
+      },
+      {
+        "field": "perc_custo",
+        "hidden": false,
+        "width": 160
+      },
+      {
+        "field": "log_calc_icms",
+        "hidden": false,
+        "width": 160
+      },
+      {
+        "field": "perc_icms",
+        "hidden": false,
+        "width": 160
+      },
+      {
+        "field": "log_calc_ipi",
+        "hidden": false,
+        "width": 160
+      },
+      {
+        "field": "perc_ipi",
+        "hidden": false,
+        "width": 160
+      },
+      {
+        "field": "preco_liquida_ima",
+        "hidden": false,
+        "width": 160
+      },
+      {
+        "field": "observacao",
+        "hidden": false,
+        "width": 160
+      }
+    ],
+    "filterFields": [
+      "item_container_id",
+      "codigo_erp"
+    ],
+    "defaultSort": [
+      {
+        "field": "item_container_id",
+        "dir": "asc"
+      }
+    ]
+  },
+  "processOptions": null,
+  "formOptions": null,
+  "rowLinks": [
+    {
+      "id": "item_pedido",
+      "label": "Item do pedido",
+      "screenId": "ciw.proc-compra-itens",
+      "parameters": [
+        {
+          "field": "proc_compra_id",
+          "sourceField": "proc_compra_id"
+        },
+        {
+          "field": "item_proc_compra_id",
+          "sourceField": "item_proc_compra_id"
+        }
+      ],
+      "position": "start"
+    }
+  ],
+  "contextFields": [
+    {
+      "field": "container_id",
+      "filter": true,
+      "createDefault": true,
+      "readonly": true,
+      "required": true
+    },
+    {
+      "field": "item_container_id",
+      "filter": true,
+      "createDefault": false,
+      "readonly": true,
+      "required": false,
+      "filterOnly": true
+    }
+  ],
+  "allowCreate": true,
+  "allowUpdate": true,
+  "allowDelete": true,
+  "changeSummary": "Navegação contextual para o item exato, sem encaminhar a seleção ao contexto externo; ações e permissões nativas preservadas.",
+  "programOrigin": "standard",
+  "ownerScope": "system",
+  "customizationPolicy": "overlay_only",
+  "subscriberId": null,
+  "baseProgramCode": null,
+  "baseProgramVersionId": null,
+  "upgradeFrozen": false,
+  "frozenReason": null,
+  "publicationPolicy": {
+    "allowedDatabaseEnvironments": []
+  },
+  "analyticsConfig": null,
+  "reportConfig": null,
+  "specialDocumentConfig": null,
+  "regulatedDocumentConfig": null,
+  "masterDetailConfig": null,
+  "customMode": null,
+  "customEntryUrl": null,
+  "customFrameTitle": null
+}

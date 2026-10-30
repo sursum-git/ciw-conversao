@@ -1,0 +1,26 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const root='D:/opencode/construtor-pg',base='D:/opencode/conversao-sc';
+const scope={console,URL,URLSearchParams,window:null,jQuery:()=>{throw Error('No DOM expected');},location:{href:'http://localhost/app.html',origin:'http://localhost'}};
+scope.window=scope;vm.createContext(scope);
+for(const p of ['src/page-engine/PageDefinitionNormalizer.js','src/crud-engine/CrudUtils.js','src/crud-engine/CrudDefinitionValidator.js','src/crud-engine/CrudKendoFormRenderer.js','src/crud-engine/CrudKendoGridRenderer.js','src/crud-engine/CrudEngine.js'])vm.runInContext(fs.readFileSync(root+'/'+p,'utf8'),scope,{filename:p});
+const state=base+'/.runtime/ciw-completion-20261028/container-version-history';
+const definition=new scope.PageDefinitionNormalizer().normalize(JSON.parse(fs.readFileSync(state+'/manager-preview-v1.json','utf8')));
+new scope.CrudDefinitionValidator().validate(definition);
+const patch=JSON.parse(fs.readFileSync(base+'/integration-src/ciw-completion-20261028/container-version-history/frozen-v1/metadata/parent-patch.json','utf8'));
+const link=patch.operations.find(p=>p.path==='/programDraft/rowLinks/-').value;
+const renderer=Object.create(scope.CrudKendoGridRenderer.prototype);
+const html=renderer.buildRowLinkHtml(link,{container_id:100,versao_id:11});
+const url=new URL(html.match(/href="([^"]+)"/)[1].replaceAll('&amp;','&'),'http://localhost');
+assert.equal(url.searchParams.get('screenId'),definition.screenId);
+const engine=Object.create(scope.CrudEngine.prototype);engine.definition=definition;
+engine.options={contextValues:Object.fromEntries([...url.searchParams].filter(([k])=>k.startsWith('context__')).map(([k,v])=>[k.slice(9),v]))};
+engine.initializeNavigationContext();
+assert.equal(engine.contextValues.container_id,100);assert.equal(engine.contextValues.versao_id,11);
+const filters=engine.withContextFilters([]);
+assert.ok(filters.some(x=>x.field==='container_id'&&x.value===100));
+assert.ok(filters.some(x=>x.field==='versao_id'&&x.value===11));
+for(const contextValues of [{container_id:'100'},{versao_id:'11'},{container_id:'100',versao_id:'1e1'}]){engine.options={contextValues};assert.throws(()=>engine.initializeNavigationContext());}
+assert.equal(definition.permissions.create,false);assert.equal(definition.permissions.edit,false);assert.equal(definition.permissions.delete,false);
+assert.equal(definition.dataModel.primaryKey,'record_key');
+assert.equal(definition.query.defaultSort[0].field,'qt_embarcada');
+console.log('PASS independent native Builder/validator/link/context/readonly checks=13');

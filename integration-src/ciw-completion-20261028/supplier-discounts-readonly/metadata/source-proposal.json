@@ -1,0 +1,50 @@
+{
+  "target": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-current\\sources-current.json",
+  "baselineSha256": "38c47d34491c42bbe24f683f74fef5e065aa8188c73378556176872fe68de5ee",
+  "baselineCount": 144,
+  "actualSourceRequiredBeforeIntegration": true,
+  "gate": "Root1055 publishes144\u2192146 independently; rebase by new current export; never overwrite actual auth/config or old operations",
+  "operations": [
+    {
+      "op": "append",
+      "value": {
+        "code": "import_descontos_fornecedor_read",
+        "name": "Descontos por fornecedor \u2014 read",
+        "type": "list",
+        "method": "POST",
+        "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+        "headers": [],
+        "queryParams": [],
+        "bodyTemplate": {
+          "resource": "import_descontos_fornecedor",
+          "operation": "read"
+        },
+        "requestContextFields": [
+          "fornecedor_id"
+        ],
+        "itemsPath": "data",
+        "totalPath": "total"
+      }
+    },
+    {
+      "op": "append",
+      "value": {
+        "code": "import_descontos_fornecedor_get",
+        "name": "Descontos por fornecedor \u2014 get",
+        "type": "detail",
+        "method": "POST",
+        "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+        "headers": [],
+        "queryParams": [],
+        "bodyTemplate": {
+          "resource": "import_descontos_fornecedor",
+          "operation": "get"
+        },
+        "requestContextFields": [
+          "fornecedor_id"
+        ],
+        "itemPath": "data"
+      }
+    }
+  ]
+}

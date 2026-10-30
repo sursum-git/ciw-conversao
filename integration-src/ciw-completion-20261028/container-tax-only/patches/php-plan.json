@@ -1,0 +1,36 @@
+{
+  "textPatches": [
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeContainerAudit.php",
+      "baselineSha256": "1b5ef784ec816e8b9e27570a6bea97f8dc8f82beadcb77de8e745f3349e0256a",
+      "changes": [
+        {
+          "old": "'sincronizar'=>'impostos'",
+          "new": "'sincronizar'=>'impostos','calcular_impostos'=>'impostos'"
+        }
+      ]
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeApiEntityActionService.php",
+      "baselineSha256": "4fad16103637b00a0c424f947441c21105c411f9232f84ca55f9a9b0201c1530",
+      "changes": [
+        {
+          "old": "        $allocationProcess = RuntimeContainerAllocationAudit::supports($definition);",
+          "new": "        $containerTaxOnly = RuntimeContainerTaxAudit::selected($operation);\n        $containerTaxActor = null;\n        if ($containerTaxOnly) {\n            if (!RuntimeContainerTaxAudit::binding($definition, $endpoint) || $names !== [] || $requestData !== $context) { $invalid('Calculo fiscal exige operacao fixa e somente contexto do container.'); }\n            $containerTaxActor = $this->attachmentActor();\n        }\n        $allocationProcess = RuntimeContainerAllocationAudit::supports($definition);"
+        },
+        {
+          "old": "            if ($allocationProcess && ($response['body']['committed'] ?? null) !== true)",
+          "new": "            if ($containerTaxOnly && ($response['body']['committed'] ?? null) !== true) { throw new RuntimeHttpException('CONTAINER_TAX_UNCONFIRMED','Calculo fiscal nao confirmado. Consulte a transacao antes de repetir.',502); }\n            if ($allocationProcess && ($response['body']['committed'] ?? null) !== true)"
+        },
+        {
+          "old": "            if (!$allocationProcess && (($response['body']['success'] ?? true) === false || isset($response['body']['error'])))",
+          "new": "            if (!$allocationProcess && !($containerTaxOnly && ($response['body']['committed']??null)===true) && (($response['body']['success'] ?? true) === false || isset($response['body']['error'])))"
+        },
+        {
+          "old": "            if (RuntimeCiwCotacaoAudit::isImportEndpoint($definition, $endpoint)) {\n",
+          "new": "            if ($containerTaxOnly) { $audit = RuntimeContainerTaxAudit::inspect($definition,$endpoint,$response['body'],$context,$containerTaxActor); }\n            if (RuntimeCiwCotacaoAudit::isImportEndpoint($definition, $endpoint)) {\n"
+        }
+      ]
+    }
+  ]
+}

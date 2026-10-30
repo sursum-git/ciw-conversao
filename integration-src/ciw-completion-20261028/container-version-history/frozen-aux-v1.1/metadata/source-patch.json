@@ -1,0 +1,173 @@
+{
+  "sourceCode": "motor_progress_ciw_cadastros",
+  "baselinePath": ".runtime/ciw-completion-20261028/official-build3/source-124-after.json",
+  "baselineSha256": "382ab3163f9553ccb8121025252b1f0ea9e71e0e988074d04c4f581f6a25b8c4",
+  "baselineOperations": 124,
+  "preserveAllExisting": true,
+  "operations": [
+    {
+      "op": "add",
+      "path": "/operations/-",
+      "value": {
+        "code": "container_versao_pagtos_historico_med_read",
+        "name": "Pagamentos históricos da versão — read",
+        "type": "list",
+        "method": "POST",
+        "path": "/SursumPrograms/ciw-cadastros",
+        "bodyTemplate": {
+          "resource": "container_versao_pagtos_historico_med",
+          "operation": "read"
+        },
+        "requestContextFields": [
+          "container_id",
+          "versao_id"
+        ],
+        "itemsPath": "data",
+        "totalPath": "total"
+      }
+    },
+    {
+      "op": "add",
+      "path": "/operations/-",
+      "value": {
+        "code": "container_versao_pagtos_historico_med_get",
+        "name": "Pagamentos históricos da versão — get",
+        "type": "detail",
+        "method": "POST",
+        "path": "/SursumPrograms/ciw-cadastros",
+        "bodyTemplate": {
+          "resource": "container_versao_pagtos_historico_med",
+          "operation": "get"
+        },
+        "requestContextFields": [
+          "container_id",
+          "versao_id"
+        ],
+        "itemPath": "data"
+      }
+    },
+    {
+      "op": "add",
+      "path": "/operations/-",
+      "value": {
+        "code": "container_versao_nfs_historico_med_read",
+        "name": "NFs históricas da versão — read",
+        "type": "list",
+        "method": "POST",
+        "path": "/SursumPrograms/ciw-cadastros",
+        "bodyTemplate": {
+          "resource": "container_versao_nfs_historico_med",
+          "operation": "read"
+        },
+        "requestContextFields": [
+          "container_id",
+          "versao_id"
+        ],
+        "itemsPath": "data",
+        "totalPath": "total"
+      }
+    },
+    {
+      "op": "add",
+      "path": "/operations/-",
+      "value": {
+        "code": "container_versao_nfs_historico_med_get",
+        "name": "NFs históricas da versão — get",
+        "type": "detail",
+        "method": "POST",
+        "path": "/SursumPrograms/ciw-cadastros",
+        "bodyTemplate": {
+          "resource": "container_versao_nfs_historico_med",
+          "operation": "get"
+        },
+        "requestContextFields": [
+          "container_id",
+          "versao_id"
+        ],
+        "itemPath": "data"
+      }
+    },
+    {
+      "op": "add",
+      "path": "/operations/-",
+      "value": {
+        "code": "container_versao_descontos_historico_med_read",
+        "name": "Descontos históricos da versão — read",
+        "type": "list",
+        "method": "POST",
+        "path": "/SursumPrograms/ciw-cadastros",
+        "bodyTemplate": {
+          "resource": "container_versao_descontos_historico_med",
+          "operation": "read"
+        },
+        "requestContextFields": [
+          "container_id",
+          "versao_id"
+        ],
+        "itemsPath": "data",
+        "totalPath": "total"
+      }
+    },
+    {
+      "op": "add",
+      "path": "/operations/-",
+      "value": {
+        "code": "container_versao_descontos_historico_med_get",
+        "name": "Descontos históricos da versão — get",
+        "type": "detail",
+        "method": "POST",
+        "path": "/SursumPrograms/ciw-cadastros",
+        "bodyTemplate": {
+          "resource": "container_versao_descontos_historico_med",
+          "operation": "get"
+        },
+        "requestContextFields": [
+          "container_id",
+          "versao_id"
+        ],
+        "itemPath": "data"
+      }
+    },
+    {
+      "op": "add",
+      "path": "/operations/-",
+      "value": {
+        "code": "container_versao_despesas_historico_med_read",
+        "name": "Despesas históricas da versão — read",
+        "type": "list",
+        "method": "POST",
+        "path": "/SursumPrograms/ciw-cadastros",
+        "bodyTemplate": {
+          "resource": "container_versao_despesas_historico_med",
+          "operation": "read"
+        },
+        "requestContextFields": [
+          "container_id",
+          "versao_id"
+        ],
+        "itemsPath": "data",
+        "totalPath": "total"
+      }
+    },
+    {
+      "op": "add",
+      "path": "/operations/-",
+      "value": {
+        "code": "container_versao_despesas_historico_med_get",
+        "name": "Despesas históricas da versão — get",
+        "type": "detail",
+        "method": "POST",
+        "path": "/SursumPrograms/ciw-cadastros",
+        "bodyTemplate": {
+          "resource": "container_versao_despesas_historico_med",
+          "operation": "get"
+        },
+        "requestContextFields": [
+          "container_id",
+          "versao_id"
+        ],
+        "itemPath": "data"
+      }
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+--- D:\opencode\construtor-pg\src\process-engine\ProcessEngine.js
++++ D:\opencode\construtor-pg\src\process-engine\ProcessEngine.js
+@@ -211,6 +211,7 @@
+       this.renderParameters(screen);
+       this.renderProcessingPanel(screen);
+       this.renderResultPanel(screen);
++      this.bindLookupParameterChanges();
+       this.optionsPromise=this.loadParameterOptions();
+     }
+ 
+@@ -281,6 +282,27 @@
+       this.fieldInputs[field.name] = input;
+     }
+ 
++    bindLookupParameterChanges() {
++      const fields=global.CrudUtils.ensureArray(this.definition.process.parameters.fields);
++      const names=new Set();fields.forEach(field=>(field.optionsSource && field.optionsSource.parameterFields || []).forEach(name=>names.add(name)));
++      names.forEach(name=>{const widget=this.fieldWidgets[name];if(widget){widget.bind('change',()=>{this.optionsPromise=this.loadParameterOptions();});}});
++    }
++
++    lookupParametersMatch(parameters) {
++      const fields=global.CrudUtils.ensureArray(this.definition.process.parameters.fields);
++      for(const field of fields) {
++        const names=field.optionsSource && field.optionsSource.parameterFields;if(!names){continue;}
++        if(this.optionsLoading || this.optionsFailed){return false;}
++        const confirmed=this.lookupParameterValues && this.lookupParameterValues[field.field || field.name || field.id];
++        if(!confirmed){return false;}
++        for(const name of names) {
++          const parameter=fields.find(item=>(item.field || item.name || item.id)===name);
++          if(parameters[name]!==confirmed[name] || this.getFieldValue(this.normalizeField(parameter))!==confirmed[name]){return false;}
++        }
++      }
++      return true;
++    }
++
+     loadParameterOptions() {
+       if(this.destroyed) {return Promise.resolve(false);}
+       const generation=this.optionsGeneration=(this.optionsGeneration || 0)+1;
+@@ -292,11 +314,21 @@
+         const source=field.optionsSource,endpoint=this.definition.api[source.endpointId],widget=this.fieldWidgets[field.field || field.name || field.id];
+         if(!endpoint || endpoint.method!=='POST' || !endpoint.url || source.endpointId!=='options.'+(field.field || field.name || field.id) || !widget){return Promise.reject(global.CrudUtils.makeError('PROCESS_OPTIONS_INVALID','Consulta de selecao indisponivel.'));}
+         widget.enable(false);
+-        return Promise.resolve(this.httpClient.request({url:endpoint.url,method:'POST',data:{context:Object.assign({},this.contextValues)}})).then(response=>{
++        const requestData={context:Object.assign({},this.contextValues)};
++        if(source.parameterFields) {
++          requestData.parameters={};
++          try { source.parameterFields.forEach(name=>{const parameter=this.definition.process.parameters.fields.find(item=>(item.field || item.name || item.id)===name),value=this.getFieldValue(this.normalizeField(parameter));if(!parameter.options.some(option=>option.value===value)){throw global.CrudUtils.makeError('PROCESS_OPTIONS_INVALID','Parametro fora do enum.');}requestData.parameters[name]=value;}); }
++          catch(error) { return Promise.reject(error); }
++        }
++        return Promise.resolve(this.httpClient.request({url:endpoint.url,method:'POST',data:requestData})).then(response=>{
+           if(this.destroyed || generation!==this.optionsGeneration) {return;}
+           const rows=response && response.data;if(!Array.isArray(rows) || rows.length>5000){throw global.CrudUtils.makeError('PROCESS_OPTIONS_INVALID','Resposta da selecao invalida.');}
+           const ids=new Set();const data=rows.map(row=>{if(!row || !Number.isInteger(row.value) || row.value<1 || row.value>2147483647 || ids.has(row.value) || typeof row.text!=='string' || row.text.length>4000){throw global.CrudUtils.makeError('PROCESS_OPTIONS_INVALID','Opcao de selecao invalida.');}ids.add(row.value);return {value:row.value,text:row.text};});
+-          widget.dataSource.data(data);widget.enable(!field.readonly);
++          if(source.parameterFields){
++            const previous=widget.value();widget.dataSource.data(data);widget.value(previous.filter(id=>ids.has(Number(id))));
++            this.lookupParameterValues=this.lookupParameterValues || {};this.lookupParameterValues[field.field || field.name || field.id]=Object.assign({},requestData.parameters);
++          }else{widget.dataSource.data(data);}
++          widget.enable(!field.readonly);
+         });
+       });
+       return Promise.all(tasks).then(()=>{if(this.destroyed || generation!==this.optionsGeneration){return false;}this.optionsLoading=false;enableButton();return true;}).catch(error=>{if(this.destroyed || generation!==this.optionsGeneration){return false;}this.optionsLoading=false;this.optionsFailed=true;fields.forEach(field=>{const w=this.fieldWidgets[field.field || field.name || field.id];if(w){w.enable(false);}});enableButton();this.renderProcessError(error);return false;});
+@@ -407,6 +439,7 @@
+     }
+ 
+     sendProcessRequest(endpoint, parameters) {
++      if (!this.lookupParametersMatch(parameters.values)) {return Promise.resolve(false);}
+       if (this.destroyed || this.isProcessing) { return Promise.resolve(false); }
+       this.setProcessing(true, this.definition.process.wait.message || "Processando...");
+       this.clearResult();

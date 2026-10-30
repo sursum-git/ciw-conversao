@@ -1,0 +1,39 @@
+{
+  "entityReference": {
+    "code": "container_processos_progress",
+    "preserveExisting": true,
+    "createPhysicalTable": false
+  },
+  "programDraft": {
+    "programCode": "op1043",
+    "programTitle": "Calcular impostos do container MED",
+    "module": "operacional",
+    "pageType": "process",
+    "builderEntityCode": "container_processos_progress",
+    "screenId": "ciw.container-calcular-impostos",
+    "version": "1.0.0",
+    "subtitle": "Abrir exibe o contexto. Processar exige confirmacao.",
+    "permissionPrefix": "container_calcular_impostos_progress",
+    "programOrigin": "standard",
+    "ownerScope": "system",
+    "allowCreate": false,
+    "allowUpdate": false,
+    "allowDelete": false,
+    "contextFields": [
+      {
+        "field": "container_id",
+        "required": true,
+        "readonly": true
+      }
+    ],
+    "processOptions": {
+      "operationCode": "calcular_impostos",
+      "parameterFields": [],
+      "confirmation": {
+        "message": "Calcula e grava somente impostos e despesas fiscais deste container MED. Confirma o calculo?",
+        "confirmText": "Calcular impostos"
+      }
+    },
+    "changeSummary": "Origem bl_calcular_impostos_container: TaxPlan/PersistPlan centrais; preserva IPI, itens, despesas calculadas e cabecalho."
+  }
+}

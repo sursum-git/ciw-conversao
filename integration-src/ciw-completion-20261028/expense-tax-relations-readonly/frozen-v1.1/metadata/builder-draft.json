@@ -1,0 +1,159 @@
+{
+  "entityDraft": {
+    "code": "despesas_impostos_geral_progress",
+    "name": "Relacoes globais despesa/imposto",
+    "entityType": "api",
+    "createPhysicalTable": false,
+    "structureType": "main",
+    "structureModuleCode": "operacional",
+    "structureBaseNumber": 1055,
+    "apiSourceCode": "motor_progress_ciw_cadastros",
+    "apiListOperationCode": "despesas_impostos_geral_read",
+    "apiDetailOperationCode": "despesas_impostos_geral_get",
+    "fields": [
+      {
+        "code": "despesa_id",
+        "label": "Despesa Id",
+        "dataType": "integer",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "apiJsonPath": "despesa_id",
+        "apiWritePath": "despesa_id",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "position": 10,
+        "options": {
+          "readonly": true,
+          "writable": false
+        }
+      },
+      {
+        "code": "imposto_id",
+        "label": "Imposto Id",
+        "dataType": "integer",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "apiJsonPath": "imposto_id",
+        "apiWritePath": "imposto_id",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "position": 20,
+        "options": {
+          "readonly": true,
+          "writable": false
+        }
+      },
+      {
+        "code": "empresa_id",
+        "label": "Empresa Id",
+        "dataType": "integer",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "apiJsonPath": "empresa_id",
+        "apiWritePath": "empresa_id",
+        "apiShowInGrid": false,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "position": 30,
+        "options": {
+          "readonly": true,
+          "writable": false
+        }
+      },
+      {
+        "code": "record_key",
+        "label": "Identidade da relacao",
+        "dataType": "string",
+        "length": 2048,
+        "primaryKey": true,
+        "required": true,
+        "readonlyField": true,
+        "apiJsonPath": "record_key",
+        "apiWritePath": "record_key",
+        "apiShowInGrid": false,
+        "apiShowInForm": false,
+        "apiShowInFilter": false,
+        "position": 40,
+        "options": {
+          "readonly": true,
+          "writable": false
+        }
+      }
+    ]
+  },
+  "programDraft": {
+    "programCode": "op1055",
+    "programTitle": "Relacoes de despesas e impostos",
+    "module": "operacional",
+    "pageType": "crud",
+    "builderEntityCode": "despesas_impostos_geral_progress",
+    "screenId": "ciw.despesas-impostos-geral",
+    "version": "1.0.0",
+    "subtitle": "Consulta global. Consulte a empresa no detalhe de cada relacao.",
+    "permissionPrefix": "despesas_impostos_geral_progress",
+    "programOrigin": "standard",
+    "ownerScope": "system",
+    "allowCreate": false,
+    "allowUpdate": false,
+    "allowDelete": false,
+    "contextFields": [],
+    "rowLinks": [],
+    "changeSummary": "Consulta global readonly das relacoes fisicas; empresa preservada na identidade. O formulario de manutencao continua fora deste escopo.",
+    "crudOptions": {
+      "filterFields": [
+        "despesa_id",
+        "imposto_id",
+        "empresa_id"
+      ],
+      "gridFields": [
+        {
+          "field": "despesa_id"
+        },
+        {
+          "field": "imposto_id"
+        }
+      ],
+      "pageSize": 50,
+      "defaultSort": [
+        {
+          "field": "despesa_id",
+          "dir": "asc"
+        },
+        {
+          "field": "imposto_id",
+          "dir": "asc"
+        },
+        {
+          "field": "empresa_id",
+          "dir": "asc"
+        }
+      ]
+    },
+    "formOptions": {
+      "mode": "popup",
+      "tabs": [
+        {
+          "id": "relacao",
+          "title": "Relacao",
+          "sections": [
+            {
+              "id": "dados",
+              "title": "Identificacao",
+              "columns": 2,
+              "fields": [
+                "despesa_id",
+                "imposto_id",
+                "empresa_id"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+--- D:/opencode/motor-progress/v2/sursum-api/programs/CiwErpReadService.p
++++ D:/opencode/motor-progress/v2/sursum-api/programs/CiwErpReadService.p
+@@ -181,6 +181,7 @@
+    WHEN 'DECIMAL' THEN o:Add(nameValue,DECIMAL(f:BUFFER-VALUE)).
+    WHEN 'DATE' THEN o:Add(nameValue,ISO-DATE(DATE(f:BUFFER-VALUE))).
+    WHEN 'LOGICAL' THEN o:Add(nameValue,LOGICAL(f:BUFFER-VALUE)).
++   WHEN 'DATETIME' THEN DO: IF pcResource<>'item_custos_manual' THEN RUN Fail('CIW_ERP_SCHEMA_INVALID',503). o:Add(nameValue,ISO-DATE(DATETIME(f:BUFFER-VALUE))). END.
+    OTHERWISE RUN Fail('CIW_ERP_SCHEMA_INVALID',503).
+   END CASE.
+   IF LOOKUP(nameValue,cKeyList)>0 THEN DO:
+@@ -198,6 +199,7 @@
+  IF NOT VALID-HANDLE(phData) OR NOT VALID-OBJECT(poRequest) THEN RUN Fail('CIW_ERP_UNAVAILABLE',503).
+  CREATE BUFFER b FOR TABLE phData BUFFER-NAME 'bCiwErpRead'.
+  CASE pcResource:
++  WHEN 'item_custos_manual' THEN ASSIGN cFieldList='item_custo_id,dt_hr_custo,vl_unit_novo,dt_referencia,caminho_arquivo,cod_tipo_custo,memoria_calculo,it_codigo,qt_estoque,qt_nf_mae,qt_etiq_container,qt_etiq_branco,qt_etiq_outros_container,vl_unit_anterior,cod_situacao,cod_usuario,qt_estoque_selecionado,it_codigo_media,qt_estoque_media,vl_unit_media,vl_unit_container,qt_container,media_custo_id' cAliasList=cFieldList cKeyList='item_custo_id' baseWhere=b:NAME + '.cod_tipo_custo = 1'.
+   WHEN 'import_descontos_geral' THEN ASSIGN cFieldList='desconto_importacao_id,motivo_desconto_id,descricao,log_credito,vl_dolar,vl_real,vl_cotacao_dolar,item_container_id,cod_tipo,fornecedor_id,vl_real_autorizado,vl_dolar_autorizado,dt_autorizacao,vl_utiliz,vl_utiliz_detalhe,vl_saldo,item_codigo_erp_atual,item_descricao_atual,fornecedor_nome_abrev_atual,motivo_descricao_atual' cAliasList=cFieldList cKeyList='desconto_importacao_id' baseWhere='TRUE'.
+   WHEN 'import_descontos_lancamentos' THEN ASSIGN cFieldList='cta_corren_desconto_id,desconto_importacao_id,container_id,valor_utilizado,data,cod_usuario' cAliasList=cFieldList cKeyList='desconto_importacao_id,cta_corren_desconto_id' baseWhere='TRUE'.
+   WHEN 'custo_distribuicao_itens_aptos' THEN ASSIGN cFieldList='pedido_imp,processo_fornec,fornec_pi,item_pedido,container,fornec,item_container,descricao,codigo_erp,fornec_pi_nome_abrev_atual,fornec_nome_abrev_atual' cAliasList=cFieldList cKeyList='item_container' baseWhere='TRUE'.
+@@ -350,6 +352,7 @@
+  q:QUERY-OPEN(). q:GET-FIRST(NO-LOCK).
+  DO WHILE NOT q:QUERY-OFF-END:
+   totalValue=totalValue + 1.
++  IF pcResource='item_custos_manual' AND totalValue>50000 THEN RUN Fail('CIW_ERP_QUERY_LIMIT',503).
+   IF op='get' AND totalValue>1 THEN RUN Fail('CIW_ERP_KEY_AMBIGUOUS',409).
+   IF op='get' OR totalValue>skipValue AND rows:Length<takeValue THEN DO:
+    item=RowJson(). fieldName=IF LOOKUP(pcResource,'procs_compra_med,proc_compra_resumo')>0 THEN NumText(item:GetInteger('proc_compra_id')) ELSE IF pcResource='container_calculos_impostos_med' THEN NumText(item:GetInteger('calc_imp_container_id')) ELSE IF pcResource='container_despesa_memoria_med' THEN NumText(item:GetInteger('despesa_container_id')) ELSE IF pcResource='container_despesas_lote' THEN NumText(item:GetInteger('despesa_container_id')) ELSE IF pcResource='proc_compra_alocacoes' THEN NumText(item:GetInteger('item_container_id')) ELSE IF pcResource='proc_compra_itens' THEN NumText(item:GetInteger('item_proc_compra_id')) ELSE IF LOOKUP(pcResource,'proc_compra_anexos,proc_compra_documentos')>0 THEN NumText(item:GetInteger('anexo_proc_compra_id')) ELSE IF pcResource='proc_compra_despesas' THEN NumText(item:GetInteger('despesa_proc_compra_id')) ELSE IF pcResource='proc_compra_amostras' THEN NumText(item:GetInteger('envio_amostra_repres_id')) ELSE item:GetCharacter('record_key').

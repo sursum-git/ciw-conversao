@@ -1,0 +1,11 @@
+'use strict';
+const fs=require('node:fs'),assert=require('node:assert/strict');
+const root='integration-src/purchase-quantities/abl/',api=fs.readFileSync(root+'PurchaseImportQuantitiesApi.p','utf8'),service=fs.readFileSync(root+'PurchaseImportQuantitiesService.p','utf8'),rules=fs.readFileSync(root+'PurchaseImportQuantityRules.p','utf8'),dispatch=fs.readFileSync(root+'CiwCadastrosCrud.p','utf8');
+assert.match(api,/Remove\('resource'\)/,'Dispatcher resource must be removed before the closed service');
+for(const table of ['procs_compra','empresas','itens_proc_compra','itens_container','pp-container','situacoes_container'])assert.ok(api.includes("'espec."+table+"'"));
+assert.match(api,/hContainers,hSituations,cleanRequest,OUTPUT poResponse/);
+assert.ok(dispatch.includes('WHEN "proc_compra_quantidades" THEN DO:'));assert.ok(dispatch.includes('PurchaseImportQuantitiesApi.r'));
+assert.ok(service.includes('{sursum-api/includes/PurchaseOrderContext.i}'));assert.ok(service.includes("PurchaseImportQuantityRules.r"));assert.ok(service.includes("CiwErpReadService.r"));assert.ok(service.includes("IF LOOKUP(op,'read,get')=0"));assert.ok(service.includes('scanned>50000'));
+for(const text of [api,service,rules])assert.ok(!/BUFFER-(CREATE|DELETE)|DO TRANSACTION|DYNAMIC-NEXT-VALUE/i.test(text));
+assert.ok(rules.includes('physicalValue>pdBought'));assert.ok(rules.includes('ELSE IF confirmedValue>pdBought'));assert.ok(!rules.includes('MAXIMUM('));
+console.log('PASS fixed readonly bindings/resource/global+context/shared rules-reader; no business writers');

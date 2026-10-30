@@ -1,0 +1,114 @@
+{
+  "code": "motor_progress_container_financeiro",
+  "name": "Motor Progress — Financeiro do Container",
+  "providerType": "generic",
+  "baseUrl": "http://127.0.0.1:19910/med/web",
+  "status": "active",
+  "timeoutSeconds": 25,
+  "responseContract": "sursum-programs",
+  "operations": [
+    {
+      "code": "pagamentos_read",
+      "name": "Pagamentos do Container — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/containers-financeiro",
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "read",
+        "resource": "pagamentos"
+      },
+      "requestContextFields": [
+        "container_id"
+      ],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": null
+    },
+    {
+      "code": "pagamentos_get",
+      "name": "Pagamentos do Container — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/containers-financeiro",
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "get",
+        "resource": "pagamentos"
+      },
+      "requestContextFields": [
+        "container_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "nfs_read",
+      "name": "Notas Fiscais do Container — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/containers-financeiro",
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "read",
+        "resource": "nfs"
+      },
+      "requestContextFields": [
+        "container_id"
+      ],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": null
+    },
+    {
+      "code": "nfs_get",
+      "name": "Notas Fiscais do Container — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/containers-financeiro",
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "get",
+        "resource": "nfs"
+      },
+      "requestContextFields": [
+        "container_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "nfs_disponiveis_read",
+      "name": "NFs disponiveis MED — read",
+      "method": "POST",
+      "type": "list",
+      "path": "/SursumPrograms/containers-financeiro",
+      "requestContextFields": [
+        "container_id"
+      ],
+      "bodyTemplate": {
+        "operation": "read",
+        "resource": "nfs-disponiveis"
+      },
+      "itemsPath": "data",
+      "totalPath": "total"
+    },
+    {
+      "code": "nfs_disponiveis_get",
+      "name": "NFs disponiveis MED — get",
+      "method": "POST",
+      "type": "detail",
+      "path": "/SursumPrograms/containers-financeiro",
+      "requestContextFields": [
+        "container_id"
+      ],
+      "bodyTemplate": {
+        "operation": "get",
+        "resource": "nfs-disponiveis"
+      },
+      "itemPath": "data"
+    }
+  ]
+}

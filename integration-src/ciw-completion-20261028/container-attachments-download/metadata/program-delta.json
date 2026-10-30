@@ -1,0 +1,19 @@
+{
+  "target": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-attachments-current/op1004-program.json",
+  "baselineSha256": "02bead8bb3a5fe12e4b8d203444b5fa0208465201247dac2ebfcd900043fe8c3",
+  "targetPointer": "/versions/0/builderConfig",
+  "programCode": "op1004",
+  "baselineVersion": "1.0.0",
+  "createNewVersionThroughNativeBuilder": true,
+  "newVersion": "root selects next available version",
+  "operations": [
+    {
+      "op": "replace",
+      "path": "/changeSummary",
+      "value": "Download autenticado readonly; contexto MED e referencia recuperados no servidor."
+    }
+  ],
+  "preserveAllOtherConfig": true,
+  "newFieldAutoAppearsInExistingDefaultForm": true,
+  "noNewScreenOrCode": true
+}

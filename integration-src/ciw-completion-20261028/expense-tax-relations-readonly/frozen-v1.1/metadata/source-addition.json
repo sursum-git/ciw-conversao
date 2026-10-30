@@ -1,0 +1,51 @@
+{
+  "target": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-current\\sources-current.json",
+  "baselineSha256": "38c47d34491c42bbe24f683f74fef5e065aa8188c73378556176872fe68de5ee",
+  "sourceCode": "motor_progress_ciw_cadastros",
+  "expectedOperationCount": 144,
+  "resultOperationCount": 146,
+  "preserveGlobalAuthentication": true,
+  "rootCompositionRequired": true,
+  "replacementOfSanitizedSourceAllowed": false,
+  "operations": [
+    {
+      "op": "add",
+      "path": "/operations/-",
+      "value": {
+        "code": "despesas_impostos_geral_read",
+        "name": "Relacoes globais despesa/imposto - read",
+        "type": "list",
+        "method": "POST",
+        "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+        "headers": [],
+        "queryParams": [],
+        "requestContextFields": [],
+        "bodyTemplate": {
+          "resource": "despesas_impostos_geral",
+          "operation": "read"
+        },
+        "itemsPath": "data",
+        "totalPath": "total"
+      }
+    },
+    {
+      "op": "add",
+      "path": "/operations/-",
+      "value": {
+        "code": "despesas_impostos_geral_get",
+        "name": "Relacoes globais despesa/imposto - get",
+        "type": "detail",
+        "method": "POST",
+        "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+        "headers": [],
+        "queryParams": [],
+        "requestContextFields": [],
+        "bodyTemplate": {
+          "resource": "despesas_impostos_geral",
+          "operation": "get"
+        },
+        "itemPath": "data"
+      }
+    }
+  ]
+}

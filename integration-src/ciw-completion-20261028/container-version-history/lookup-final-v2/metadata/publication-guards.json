@@ -1,0 +1,187 @@
+{
+  "status": "GUARDED_FIELD_APPEND_AND_NEW_NATIVE_DRAFT_ONLY",
+  "sanitizationReceipt": ".runtime/ciw-completion-20261028/lookup-metadata/sanitization.json",
+  "newSourceOperations": 0,
+  "newEntities": 0,
+  "newLinks": 0,
+  "newGrants": 0,
+  "guards": [
+    {
+      "programCode": "op1035",
+      "screenId": "ciw.container-versao-itens-historico",
+      "entityCode": "container_versoes_historico_med_progress",
+      "programExportPath": ".runtime/ciw-completion-20261028/lookup-metadata/op1035-program.json",
+      "programExportSha256": "16bd9ecee111db73e2a88a7dd633d6bf87b5b26d70fa9b05db1a80ba99cc8858",
+      "entityExportPath": ".runtime/ciw-completion-20261028/lookup-metadata/op1035-entity.json",
+      "entityExportSha256": "f6cddd2aa3ab946f28a85b9906896f406b06b5a0c080aaea88da58c12812a5a4",
+      "publishedVersion": "1.0.0",
+      "nextVersion": "1.0.1",
+      "existingFieldCodes": [
+        "record_key",
+        "container_id",
+        "item_container_custo_id",
+        "versao_id",
+        "item_container_id",
+        "it_codigo",
+        "item_custo_id",
+        "memoria_calculo",
+        "vl_desp_prev_real",
+        "vl_custo_prev_real",
+        "vl_pago_real",
+        "qt_alocada",
+        "qt_confirm_emb",
+        "qt_recebto_fisico",
+        "vl_desp_realiz_real",
+        "vl_unit_prev",
+        "vl_unit_realiz",
+        "vl_desp_prev_dolar",
+        "vl_custo_prev_dolar",
+        "vl_pago_dolar",
+        "vl_desp_realiz_dolar",
+        "vl_desconto_utiliz_dolar",
+        "vl_unit_prev_dolar",
+        "vl_unit_realiz_dolar",
+        "vl_custo_distribuido",
+        "vl_negociado",
+        "vl_desp_prev_real_sem_distr_cust",
+        "vl_desp_prev_dolar_sem_distr_cus",
+        "qt_embarcada",
+        "vl_desconto_utiliz_real"
+      ],
+      "metadataDtoCanonicalSha256": "b278ae29394a735082968fe08aed3cf5189fba7d4279eff03b5456bf99eea0a1",
+      "guardAlgorithm": "Recursively replace ALL authHeaders with []; remove entity.apiSource; sort object keys recursively, preserve array order; JSON compact UTF8 then SHA256. Source object is deliberately excluded so source operation appends cannot invalidate the field-only guard.",
+      "entityMutation": {
+        "appendFieldOnly": {
+          "code": "item_descricao_atual",
+          "label": "Descrição atual do item",
+          "dataType": "string",
+          "primaryKey": false,
+          "required": false,
+          "readonlyField": true,
+          "position": 999,
+          "apiJsonPath": "item_descricao_atual",
+          "apiWritePath": "item_descricao_atual",
+          "apiShowInGrid": true,
+          "apiShowInForm": true,
+          "apiShowInFilter": true,
+          "options": {
+            "readonly": true,
+            "writable": false
+          }
+        },
+        "preserveAllExistingFields": true,
+        "preserveActualApiSourceObject": true,
+        "neverSubmitSanitizedDtoAsEntityReplacement": true
+      },
+      "programMutation": {
+        "file": "metadata/op1035-program-draft.json",
+        "newNativeDraft": true,
+        "preserveAllExistingSettings": true
+      }
+    },
+    {
+      "programCode": "op1037",
+      "screenId": "ciw.container-versao-nfs-historico",
+      "entityCode": "container_versao_nfs_historico_med_progress",
+      "programExportPath": ".runtime/ciw-completion-20261028/lookup-metadata/op1037-program.json",
+      "programExportSha256": "777b0b8b2de98f960b21f8a12d6f62c628f18e65a44d9c15aaa69faef1d1ff8d",
+      "entityExportPath": ".runtime/ciw-completion-20261028/lookup-metadata/op1037-entity.json",
+      "entityExportSha256": "9e8e65b6032adf5fdb435ba6139a32801a59ea933a8f13e49ff09b882fd4be8e",
+      "publishedVersion": "1.0.0",
+      "nextVersion": "1.0.1",
+      "existingFieldCodes": [
+        "record_key",
+        "container_id",
+        "versao_id",
+        "documento",
+        "serie",
+        "estab",
+        "nat_operacao",
+        "cod_emitente",
+        "vl_mercadoria",
+        "vl_despesa"
+      ],
+      "metadataDtoCanonicalSha256": "4bbc6dc9e57f21c65943cffab2d59da4a37c518a35fb9982b8a64a799b3e73d5",
+      "guardAlgorithm": "Recursively replace ALL authHeaders with []; remove entity.apiSource; sort object keys recursively, preserve array order; JSON compact UTF8 then SHA256. Source object is deliberately excluded so source operation appends cannot invalidate the field-only guard.",
+      "entityMutation": {
+        "appendFieldOnly": {
+          "code": "emitente_nome_abrev_atual",
+          "label": "Nome atual do emitente",
+          "dataType": "string",
+          "primaryKey": false,
+          "required": false,
+          "readonlyField": true,
+          "position": 999,
+          "apiJsonPath": "emitente_nome_abrev_atual",
+          "apiWritePath": "emitente_nome_abrev_atual",
+          "apiShowInGrid": true,
+          "apiShowInForm": true,
+          "apiShowInFilter": true,
+          "options": {
+            "readonly": true,
+            "writable": false
+          }
+        },
+        "preserveAllExistingFields": true,
+        "preserveActualApiSourceObject": true,
+        "neverSubmitSanitizedDtoAsEntityReplacement": true
+      },
+      "programMutation": {
+        "file": "metadata/op1037-program-draft.json",
+        "newNativeDraft": true,
+        "preserveAllExistingSettings": true
+      }
+    },
+    {
+      "programCode": "op1039",
+      "screenId": "ciw.container-versao-despesas-historico",
+      "entityCode": "container_versao_despesas_historico_med_progress",
+      "programExportPath": ".runtime/ciw-completion-20261028/lookup-metadata/op1039-program.json",
+      "programExportSha256": "269298d0e0d5f2d242b86d1b206801bbae0a9d4e97f529f90ba2212e1ddb079d",
+      "entityExportPath": ".runtime/ciw-completion-20261028/lookup-metadata/op1039-entity.json",
+      "entityExportSha256": "840d083837960e7a7e66c5c3ab0fba5c745765445522118509f84e25028ff77b",
+      "publishedVersion": "1.0.0",
+      "nextVersion": "1.0.1",
+      "existingFieldCodes": [
+        "record_key",
+        "container_id",
+        "versao_id",
+        "despesa_id",
+        "vl_prev",
+        "vl_base_imp",
+        "vl_negociado",
+        "log_custo"
+      ],
+      "metadataDtoCanonicalSha256": "c8d171fb9ac6af3e252fb7d4ed0f1de3af3cd3c87edf29d34393f3bf48f61475",
+      "guardAlgorithm": "Recursively replace ALL authHeaders with []; remove entity.apiSource; sort object keys recursively, preserve array order; JSON compact UTF8 then SHA256. Source object is deliberately excluded so source operation appends cannot invalidate the field-only guard.",
+      "entityMutation": {
+        "appendFieldOnly": {
+          "code": "despesa_descricao_atual",
+          "label": "Descrição atual da despesa",
+          "dataType": "string",
+          "primaryKey": false,
+          "required": false,
+          "readonlyField": true,
+          "position": 999,
+          "apiJsonPath": "despesa_descricao_atual",
+          "apiWritePath": "despesa_descricao_atual",
+          "apiShowInGrid": true,
+          "apiShowInForm": true,
+          "apiShowInFilter": true,
+          "options": {
+            "readonly": true,
+            "writable": false
+          }
+        },
+        "preserveAllExistingFields": true,
+        "preserveActualApiSourceObject": true,
+        "neverSubmitSanitizedDtoAsEntityReplacement": true
+      },
+      "programMutation": {
+        "file": "metadata/op1039-program-draft.json",
+        "newNativeDraft": true,
+        "preserveAllExistingSettings": true
+      }
+    }
+  ]
+}

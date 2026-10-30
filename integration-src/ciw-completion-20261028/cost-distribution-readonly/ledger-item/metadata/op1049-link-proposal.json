@@ -1,0 +1,18 @@
+{
+  "status": "PROPOSAL_REQUIRES_ACTUAL_PUBLISHED_1049_EXPORT_OR_ROOT_COMPOSE_BEFORE_PUBLICATION",
+  "baselineFrozenDraftSha256": "0f99b933c0156440145b3b979715b88d41e4d7708a16b10d127aeda25404d571",
+  "parentScreen": "ciw.custo-distribuicao-itens-aptos",
+  "preserveAllExistingLinks": true,
+  "newRowLink": {
+    "id": "conta_corrente_distribuicao_item",
+    "label": "Conta corrente de distribuição",
+    "screenId": "ciw.custo-distribuicao-lancamentos-item",
+    "parameters": [
+      {
+        "field": "item_container_id",
+        "sourceField": "item_container"
+      }
+    ],
+    "position": "end"
+  }
+}

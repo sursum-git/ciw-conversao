@@ -1,0 +1,74 @@
+[
+  {
+    "name": "ContainersVersionHistoryTest.p",
+    "output": "container-version-history-tests.log",
+    "expectedChecks": 38,
+    "sourceSha256": "e9cde6bcf0b4a5942c7bb991800be9b5220c233d284d905324044517808b5075"
+  },
+  {
+    "name": "ContainersVersionTest.p",
+    "output": "containers-version-tests-{culture}.log",
+    "expectedChecks": 189,
+    "sourceSha256": "80504be79a48caf04126b5a196441ae17730d4b409f273855f027d967f905f9f"
+  },
+  {
+    "name": "CiwErpReadTest.p",
+    "output": "erp-read-{culture}.log",
+    "expectedChecks": 47,
+    "sourceSha256": "321e247e04e397c8fde6541bdb0c6fda06a67f27d47d7496b52b5fa9cae82a34"
+  },
+  {
+    "name": "PurchaseItemsReadTest.p",
+    "output": "purchase-item-read-{culture}.log",
+    "expectedChecks": 9,
+    "sourceSha256": "a8c05e089db3aaed7bc4a5ea97ae5fd28e4b1298b0032d78924e7d85094def7c"
+  },
+  {
+    "name": "ContainersVersionAuxHistoryTest.p",
+    "output": "container-version-aux-history-tests.log",
+    "expectedChecks": 28,
+    "sourceSha256": "b2194fabceea481a7b482be23ce826fab859d519aa10c87de48aa0b4a3111060"
+  },
+  {
+    "name": "ImportDiscountsLabelsTest.p",
+    "output": "discount-labels-tests.log",
+    "expectedChecks": 17,
+    "sourceSha256": "71a08b4c66f434bd1ccd596c7b6b618ec678d615b7469e021bfe8275946c9ef0"
+  },
+  {
+    "name": "ImportDiscountsReadTest.p",
+    "output": "read-tests.log",
+    "expectedChecks": 44,
+    "sourceSha256": "cc83171fa68ddc298d674e03b4e9f935318acaa5a5c56393de5a9534c65ff1b0"
+  },
+  {
+    "name": "CostDistributionEligibleTest.p",
+    "output": "eligible-tests.log",
+    "expectedChecks": 33,
+    "sourceSha256": "2b2b086f7591bc726e13d8f94c86aea680a9acc4e4bfada21c999d8c4af5b05b"
+  },
+  {
+    "name": "CostDistributionLedgerTest.p",
+    "output": "ledger-tests.log",
+    "expectedChecks": 31,
+    "sourceSha256": "a168ddcc4a6fb3d5bb4d52c71cfc97399254e7da7f76f85470c0f970aca41d67"
+  },
+  {
+    "name": "ItemCostManualReadTest.p",
+    "output": "item-manual-{culture}.log",
+    "expectedChecks": 24,
+    "sourceSha256": "724b45dace64b64f6ce51723d75d42966b6c845694c43619259cbca0441cfaad"
+  },
+  {
+    "name": "SampleContainerItemsTest.p",
+    "output": "sample-tests.log",
+    "expectedChecks": 35,
+    "sourceSha256": "edd7e959c258a6dcf8f8a78bd9c89070e22210ce9d04f8c3e55272219973c88a"
+  },
+  {
+    "name": "ExpenseTaxRelationsReadTest.p",
+    "output": "expense-tax-relations-{culture}.log",
+    "expectedChecks": 49,
+    "sourceSha256": "963675398b7fbd708401cb8335569006060c1f43d718b8de42d2002cdec1dc80"
+  }
+]

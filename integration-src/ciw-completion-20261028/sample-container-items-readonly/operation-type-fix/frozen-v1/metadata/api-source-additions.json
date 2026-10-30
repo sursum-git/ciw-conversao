@@ -1,0 +1,34 @@
+{
+  "sourceCode": "motor_progress_ciw_cadastros",
+  "status": "APPEND_ONLY_CURRENT_EXPORT_REQUIRED",
+  "preserveActualAuthentication": true,
+  "operations": [
+    {
+      "code": "item_container_amostra_read",
+      "name": "Itens de containers de amostra — read",
+      "type": "list",
+      "method": "POST",
+      "path": "/SursumPrograms/ciw-cadastros",
+      "bodyTemplate": {
+        "resource": "item_container_amostra",
+        "operation": "read"
+      },
+      "requestContextFields": [],
+      "itemsPath": "data",
+      "totalPath": "total"
+    },
+    {
+      "code": "item_container_amostra_get",
+      "name": "Itens de containers de amostra — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "/SursumPrograms/ciw-cadastros",
+      "bodyTemplate": {
+        "resource": "item_container_amostra",
+        "operation": "get"
+      },
+      "requestContextFields": [],
+      "itemPath": "data"
+    }
+  ]
+}

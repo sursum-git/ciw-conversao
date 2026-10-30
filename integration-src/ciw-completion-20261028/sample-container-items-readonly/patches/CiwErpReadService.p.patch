@@ -1,0 +1,12 @@
+diff --git a/CiwErpReadService.p b/CiwErpReadService.p
+index 69ad67e..65a0837 100644
+--- a/CiwErpReadService.p
++++ b/CiwErpReadService.p
+@@ -198,6 +198,7 @@ DO ON ERROR UNDO, THROW:
+  IF NOT VALID-HANDLE(phData) OR NOT VALID-OBJECT(poRequest) THEN RUN Fail('CIW_ERP_UNAVAILABLE',503).
+  CREATE BUFFER b FOR TABLE phData BUFFER-NAME 'bCiwErpRead'.
+  CASE pcResource:
++  WHEN 'item_container_amostra' THEN ASSIGN cFieldList='item_container_id,codigo_erp,descricao,container_id' cAliasList=cFieldList cKeyList='item_container_id' baseWhere='TRUE'.
+   WHEN 'import_descontos_geral' THEN ASSIGN cFieldList='desconto_importacao_id,motivo_desconto_id,descricao,log_credito,vl_dolar,vl_real,vl_cotacao_dolar,item_container_id,cod_tipo,fornecedor_id,vl_real_autorizado,vl_dolar_autorizado,dt_autorizacao,vl_utiliz,vl_utiliz_detalhe,vl_saldo,item_codigo_erp_atual,item_descricao_atual,fornecedor_nome_abrev_atual,motivo_descricao_atual' cAliasList=cFieldList cKeyList='desconto_importacao_id' baseWhere='TRUE'.
+   WHEN 'import_descontos_lancamentos' THEN ASSIGN cFieldList='cta_corren_desconto_id,desconto_importacao_id,container_id,valor_utilizado,data,cod_usuario' cAliasList=cFieldList cKeyList='desconto_importacao_id,cta_corren_desconto_id' baseWhere='TRUE'.
+   WHEN 'custo_distribuicao_itens_aptos' THEN ASSIGN cFieldList='pedido_imp,processo_fornec,fornec_pi,item_pedido,container,fornec,item_container,descricao,codigo_erp,fornec_pi_nome_abrev_atual,fornec_nome_abrev_atual' cAliasList=cFieldList cKeyList='item_container' baseWhere='TRUE'.

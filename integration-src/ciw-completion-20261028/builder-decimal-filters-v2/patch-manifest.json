@@ -1,0 +1,7 @@
+{
+  "target": "D:\\opencode\\construtor-pg\\backend\\src\\Builder\\ProgramBuilderService.php",
+  "before": "72c6dafbfa0e93196b443ec45cd6d7c743fddd6415719febd70a0965d1fe18ee",
+  "after": "205ebd14329f8e8896d07c07716939db8a12d58345fecf76cab5252f4e0694a7",
+  "scope": "two CRUD filter paths only; preserve normalized number data model; one local filterDataType variable and four checks",
+  "canonicalChanged": false
+}

@@ -1,0 +1,63 @@
+{
+  "relative": "src/crud-engine/CrudEngine.js",
+  "role": "generic-native-capability",
+  "baselineSha256": "ae49f19edb1cc37fd7725c86ce85300b07868d693cc72a2f27a64f716d233d81",
+  "candidateSha256": "2ce07a9b7a8a9e3a06557e695dc71150b6c5d21d72120c9db120d367d390cd97",
+  "hunks": [
+    {
+      "baselineStart": 56533,
+      "baselineEnd": 56533,
+      "candidateStart": 56533,
+      "candidateEnd": 56700,
+      "beforeBase64": "",
+      "afterBase64": "ICAgICAgICBjb25zdCByYW5nZSA9IE9iamVjdC5wcm90b3R5cGUuaGFzT3duUHJvcGVydHkuY2FsbChpdGVtLCAiaW50ZWdlclJhbmdlIikgPyBnbG9iYWwuUGFnZURlZmluaXRpb25Ob3JtYWxpemVyLmludGVnZXJDb250ZXh0UmFuZ2UodGhpcy5kZWZpbml0aW9uLCBpdGVtKSA6IG51bGw7DQo="
+    },
+    {
+      "baselineStart": 57161,
+      "baselineEnd": 57161,
+      "candidateStart": 57328,
+      "candidateEnd": 57796,
+      "beforeBase64": "",
+      "afterBase64": "ICAgICAgICAgIGlmIChyYW5nZSkgew0KICAgICAgICAgICAgY29uc3QgY2Fub25pY2FsID0gdHlwZW9mIHJhdyA9PT0gIm51bWJlciIgJiYgTnVtYmVyLmlzSW50ZWdlcihyYXcpIHx8IHR5cGVvZiByYXcgPT09ICJzdHJpbmciICYmIC9eKD86MHwtWzEtOV1bMC05XSp8WzEtOV1bMC05XSopJC8udGVzdChyYXcpOw0KICAgICAgICAgICAgaWYgKCFjYW5vbmljYWwgfHwgIU51bWJlci5pc0ludGVnZXIoTnVtYmVyKHJhdykpIHx8IE51bWJlcihyYXcpIDwgcmFuZ2UubWluIHx8IE51bWJlcihyYXcpID4gcmFuZ2UubWF4KSB7IHRocm93IGdsb2JhbC5DcnVkVXRpbHMubWFrZUVycm9yKCJDUlVEX0NPTlRFWFRfSU5WQUxJRCIsICJDb250ZXh0byBpbnRlaXJvIGZvcmEgZGEgZmFpeGE6ICIgKyBpdGVtLmZpZWxkICsgIi4iKTsgfQ0KICAgICAgICAgICAgdmFsdWUgPSBOdW1iZXIocmF3KTsNCiAgICAgICAgICB9IGVsc2Ugew0K"
+    },
+    {
+      "baselineStart": 57376,
+      "baselineEnd": 57376,
+      "candidateStart": 58011,
+      "candidateEnd": 58024,
+      "beforeBase64": "",
+      "afterBase64": "ICAgICAgICAgIH0NCg=="
+    }
+  ],
+  "unchangedRanges": [
+    {
+      "baselineStart": 0,
+      "baselineEnd": 56533,
+      "candidateStart": 0,
+      "candidateEnd": 56533,
+      "sha256": "0447caf1d2fe7654e2a75cfeb47cdb85eeb86c668c5a1bf243b7c69febd75dae"
+    },
+    {
+      "baselineStart": 56533,
+      "baselineEnd": 57161,
+      "candidateStart": 56700,
+      "candidateEnd": 57328,
+      "sha256": "67beea329822d69df89cae77d36c4f883cd24849f800830ef9d9235aec64cb6f"
+    },
+    {
+      "baselineStart": 57161,
+      "baselineEnd": 57376,
+      "candidateStart": 57796,
+      "candidateEnd": 58011,
+      "sha256": "c219b9a41548aec6435995cd7d74ce56301bc425e630ff11dff8e7dec730b141"
+    },
+    {
+      "baselineStart": 57376,
+      "baselineEnd": 155881,
+      "candidateStart": 58024,
+      "candidateEnd": 156529,
+      "sha256": "6c23dd5394bd4ac989e2ff763b5d40b1e2a849e2bab07a8d0bc04170aeaaa8f6"
+    }
+  ],
+  "applyOnlyByExactBaseline": true
+}

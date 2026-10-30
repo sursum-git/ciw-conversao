@@ -1,0 +1,79 @@
+{
+  "database": "espec",
+  "table": "item_container_custo_descontos",
+  "fields": [
+    {
+      "name": "versao_id",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "desconto_importacao_id",
+      "type": "integer",
+      "format": ">>,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vl_autoriz_dolar",
+      "type": "decimal",
+      "format": ">>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vl_autoriz_real",
+      "type": "decimal",
+      "format": ">>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_custo",
+      "type": "integer",
+      "format": "9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    }
+  ],
+  "indexes": [
+    {
+      "name": "primario",
+      "unique": true,
+      "primary": true,
+      "fields": [
+        "versao_id",
+        "desconto_importacao_id"
+      ]
+    }
+  ],
+  "triggers": [
+  ]
+}

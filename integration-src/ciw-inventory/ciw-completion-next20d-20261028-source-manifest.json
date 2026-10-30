@@ -1,0 +1,566 @@
+{
+  "scope": [
+    "bl_ajustarCtaCorrenFornec",
+    "bl_eliminarLanctosCtaCorrenPedImp",
+    "bl_estornarSaldoPgtosItemPed",
+    "bl_gerarLanctosCtaCorrenPedImp",
+    "bl_gerarLanctosPedidosIntegrCtaCorrente",
+    "bl_gerar_conta_corrente",
+    "bl_sincrQtEmbarcadaCtaCorrenFornec",
+    "cons_cta_corren_fornec_imp_embarcado",
+    "cons_cta_corren_fornec_imp_entregue",
+    "cons_cta_corren_fornec_imp_nao_embarcado",
+    "cons_cta_corren_fornec_imp_saldos",
+    "cons_cta_corren_fornec_imp_tudo",
+    "cons_cta_corren_res_ped",
+    "cons_cta_corren_custo_distr_bkp",
+    "cons_cta_corren_fornec_imp_entregue_old",
+    "cons_cta_corren_res_ped_old",
+    "cons_cta_fornec_imp_entregue_bkp",
+    "cons_docum_est_importacao_old",
+    "cons_item_container_custos_bkp",
+    "grid_despesas_container_bkp"
+  ],
+  "analysis_copies": true,
+  "files": [
+    {
+      "application": "bl_ajustarCtaCorrenFornec",
+      "file": "bl_ajustarCtaCorrenFornec.php",
+      "remote_sha256": "2cc7dda2ea41d31744ea50151243181021d5711bc369c1b6e357b7a638621fe6",
+      "copied_sha256": "2cc7dda2ea41d31744ea50151243181021d5711bc369c1b6e357b7a638621fe6",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_ajustarCtaCorrenFornec",
+      "file": "index.php",
+      "remote_sha256": "e8e2d2bd4994d9aad137b85e4977ae633b5ccdd6cfb2cd2f80f7706291967c40",
+      "copied_sha256": "d4d96ef5cb094b0e3a2c63b1481b8309deb75038e79e7222aa4ddb81870fb127",
+      "sensitive_literals_omitted": 15
+    },
+    {
+      "application": "bl_eliminarLanctosCtaCorrenPedImp",
+      "file": "bl_eliminarLanctosCtaCorrenPedImp.php",
+      "remote_sha256": "fcdc2f34226fc6ec232d7d142f216b31c3858fe9deb14937a81d06ae37b2089d",
+      "copied_sha256": "fcdc2f34226fc6ec232d7d142f216b31c3858fe9deb14937a81d06ae37b2089d",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_eliminarLanctosCtaCorrenPedImp",
+      "file": "index.php",
+      "remote_sha256": "23196441c70d8adff012bb0d7ed5fd77697f40c89907956c396d1ecc65bf80ed",
+      "copied_sha256": "6a4873aefd968b38054f4d56ce4a296280e3cd70ed1d5f1e9716f9c5303ff51a",
+      "sensitive_literals_omitted": 15
+    },
+    {
+      "application": "bl_estornarSaldoPgtosItemPed",
+      "file": "bl_estornarSaldoPgtosItemPed.php",
+      "remote_sha256": "ea1c502a10ab3475fc7e0b7380df657c2c2eb4cf8b6c8462a91430abd8266dbc",
+      "copied_sha256": "ea1c502a10ab3475fc7e0b7380df657c2c2eb4cf8b6c8462a91430abd8266dbc",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_estornarSaldoPgtosItemPed",
+      "file": "index.php",
+      "remote_sha256": "076d7f31b17b028cd04a05a8d1cf5457105c911b1410f1882640ac4b483343d3",
+      "copied_sha256": "985cf1b60924cdaa032d9ef65dcb49eae5bdadcab276e09163f68c7233681ea8",
+      "sensitive_literals_omitted": 15
+    },
+    {
+      "application": "bl_gerarLanctosCtaCorrenPedImp",
+      "file": "bl_gerarLanctosCtaCorrenPedImp.php",
+      "remote_sha256": "1e4d92d69ddc612f9bf4935978064b7262c676aa2884458ceca70c135c394052",
+      "copied_sha256": "1e4d92d69ddc612f9bf4935978064b7262c676aa2884458ceca70c135c394052",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_gerarLanctosCtaCorrenPedImp",
+      "file": "index.php",
+      "remote_sha256": "6e0daa400d84ed3299ae7a3e8b58d0d5eaff91e86e31a60978b26e963415bfe9",
+      "copied_sha256": "e3464d35a5b92f6c0ab2c2eb014e3badde6d2679c7d49c75868dd4554f5792b3",
+      "sensitive_literals_omitted": 15
+    },
+    {
+      "application": "bl_gerarLanctosPedidosIntegrCtaCorrente",
+      "file": "bl_gerarLanctosPedidosIntegrCtaCorrente.php",
+      "remote_sha256": "6dde8b9086beea3a708bd73070f0fbf2a541a83f450563b55fc57d4378a22c18",
+      "copied_sha256": "6dde8b9086beea3a708bd73070f0fbf2a541a83f450563b55fc57d4378a22c18",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_gerarLanctosPedidosIntegrCtaCorrente",
+      "file": "index.php",
+      "remote_sha256": "57ab8260d74e4d2ce079d2ee4168ce9babee30c01457312cea73a1853e72fb6d",
+      "copied_sha256": "e5d51731ba38efa7f497500b40d9085790db1b3c419e7df1c796bb1a63f7e684",
+      "sensitive_literals_omitted": 15
+    },
+    {
+      "application": "bl_gerar_conta_corrente",
+      "file": "bl_gerar_conta_corrente.php",
+      "remote_sha256": "211b45de6e0466343c2597097d0a8d918032a45b7d88f8c86f48f64e5e737b0e",
+      "copied_sha256": "211b45de6e0466343c2597097d0a8d918032a45b7d88f8c86f48f64e5e737b0e",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_gerar_conta_corrente",
+      "file": "index.php",
+      "remote_sha256": "913bb8748a11df8b6427f36aca59dceb31ee4a4258736a4bdd105fefd53dfd07",
+      "copied_sha256": "ee06452774a47b272e85c69f623dd6719f88a4cc2be98e49878e0165a443eb3c",
+      "sensitive_literals_omitted": 16
+    },
+    {
+      "application": "bl_sincrQtEmbarcadaCtaCorrenFornec",
+      "file": "bl_sincrQtEmbarcadaCtaCorrenFornec.php",
+      "remote_sha256": "2aefec1e2e00a401c8f6d6ee3ba1c8fcbdf38fb0624d41c91703991184bf974d",
+      "copied_sha256": "2aefec1e2e00a401c8f6d6ee3ba1c8fcbdf38fb0624d41c91703991184bf974d",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_sincrQtEmbarcadaCtaCorrenFornec",
+      "file": "index.php",
+      "remote_sha256": "cfdb4c0ead20ff71eff2f8c34c7c7586f54d7824793abcebfe900010c57c58d7",
+      "copied_sha256": "27d2100c526bdcd4c000ae123545ca180e1c5289a7c089f8e41e78f7d0af9390",
+      "sensitive_literals_omitted": 15
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_embarcado",
+      "file": "cons_cta_corren_fornec_imp_embarcado.php",
+      "remote_sha256": "a3472f471ba225bc8b5dee35fbfbe7458d9248e6389d185ec6cc8d7c310d7761",
+      "copied_sha256": "a3472f471ba225bc8b5dee35fbfbe7458d9248e6389d185ec6cc8d7c310d7761",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_embarcado",
+      "file": "cons_cta_corren_fornec_imp_embarcado_det.class.php",
+      "remote_sha256": "ecc966aa85021999d42467d9e5c093ff508152fa427c0c8aab2bcde6da051a85",
+      "copied_sha256": "ecc966aa85021999d42467d9e5c093ff508152fa427c0c8aab2bcde6da051a85",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_embarcado",
+      "file": "cons_cta_corren_fornec_imp_embarcado_grid.class.php",
+      "remote_sha256": "4cc50787cfa599f4d096f3ec751ad62ff50001499f2e2e7dd5044abccd7435ae",
+      "copied_sha256": "858180ade599df7d0c526c9a4f34dcc65500ca9d2a9971bebe9fd40df30ad1cb",
+      "sensitive_literals_omitted": 4
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_embarcado",
+      "file": "cons_cta_corren_fornec_imp_embarcado_lookup.class.php",
+      "remote_sha256": "7f73ed7c9c350d0e054749bf22ccf10cc0605df33907fe115b325d460bb8e937",
+      "copied_sha256": "7f73ed7c9c350d0e054749bf22ccf10cc0605df33907fe115b325d460bb8e937",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_embarcado",
+      "file": "index.php",
+      "remote_sha256": "1abf70ddf427dc049297e06b48bfd425943ad0f9fd5c9ea21b1f9162ffab6f16",
+      "copied_sha256": "d68e4644a1610ff30370e3c0b0e85ab61587598dfc6c5b58a5d26a44c0358366",
+      "sensitive_literals_omitted": 11
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_entregue",
+      "file": "cons_cta_corren_fornec_imp_entregue.php",
+      "remote_sha256": "bf0c263b72228b82b232585ad6844782e687e71301aa0f4345b3521086f7acea",
+      "copied_sha256": "bf0c263b72228b82b232585ad6844782e687e71301aa0f4345b3521086f7acea",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_entregue",
+      "file": "cons_cta_corren_fornec_imp_entregue_det.class.php",
+      "remote_sha256": "b6cd7bf1bbb80045397dbb11cabc9024795c7ace034b5bbd6b0559dddf2586be",
+      "copied_sha256": "0ab0da1599ffef049c5345bcf996b945b0ef6caf51f8647e8291a3c9d9ba0a04",
+      "sensitive_literals_omitted": 1
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_entregue",
+      "file": "cons_cta_corren_fornec_imp_entregue_grid.class.php",
+      "remote_sha256": "24a54125e936fd9fcbf4428e6ce6b29ea49da27555646038946ece71c14ef81c",
+      "copied_sha256": "b8075edc442caae093e7d81f67f4403d33243614afdfb62202fef1e12a4cb981",
+      "sensitive_literals_omitted": 9
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_entregue",
+      "file": "cons_cta_corren_fornec_imp_entregue_lookup.class.php",
+      "remote_sha256": "a5352fb634625b98af2a5b5ad034974edf47c34d7e3c51051021335fac96e539",
+      "copied_sha256": "a5352fb634625b98af2a5b5ad034974edf47c34d7e3c51051021335fac96e539",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_entregue",
+      "file": "cons_cta_corren_fornec_imp_entregue_pesq.class.php",
+      "remote_sha256": "2798f1899d91d2d0516ecf1d6e4b3e04f3b41d6717cec75a89e6d587b31f8c18",
+      "copied_sha256": "ed5af6225ada53c7c89e27551867be70aab6a06a7a80a38aa80c8a77d199a933",
+      "sensitive_literals_omitted": 1
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_entregue",
+      "file": "index.php",
+      "remote_sha256": "66f339bfda24971e8b3e00b642b8492edaa3468a49b56cb4d1b7e857c9622012",
+      "copied_sha256": "feac635c4d166ccc3c68d17c480d89eba4231e9da8a3be734c6664ec302a064e",
+      "sensitive_literals_omitted": 20
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_nao_embarcado",
+      "file": "cons_cta_corren_fornec_imp_nao_embarcado.php",
+      "remote_sha256": "edc9dabd5c1f6450711a6777eb8c7260fa933425fe46e498c0369be8fa308ef6",
+      "copied_sha256": "edc9dabd5c1f6450711a6777eb8c7260fa933425fe46e498c0369be8fa308ef6",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_nao_embarcado",
+      "file": "cons_cta_corren_fornec_imp_nao_embarcado_grid.class.php",
+      "remote_sha256": "20442e5426e8b88ff7d7b1b12c72bc70c7615b56de9bf0aca8c44cc4a6051097",
+      "copied_sha256": "0f9f3be7cc9777c9333d0e8e160260c3ec758a79bf136785bbe9ef7a297ec660",
+      "sensitive_literals_omitted": 4
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_nao_embarcado",
+      "file": "cons_cta_corren_fornec_imp_nao_embarcado_lookup.class.php",
+      "remote_sha256": "89268a97bd6a4b34162482f9627ee23999b5d2eca4b4247e86fc31857f4563a9",
+      "copied_sha256": "89268a97bd6a4b34162482f9627ee23999b5d2eca4b4247e86fc31857f4563a9",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_nao_embarcado",
+      "file": "index.php",
+      "remote_sha256": "9669835194d01028ae56d7cc40d7a99c3a2ef633b720d1494d97c67ed02ac226",
+      "copied_sha256": "d483f883c2b8ed94577a04052322cf3d791702fc325f6d4112e62089dc8e7deb",
+      "sensitive_literals_omitted": 8
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_saldos",
+      "file": "cons_cta_corren_fornec_imp_saldos.php",
+      "remote_sha256": "50da1f58f8152697244bf6afe6b1d486273cd948c0b66a21889c847034811f2a",
+      "copied_sha256": "50da1f58f8152697244bf6afe6b1d486273cd948c0b66a21889c847034811f2a",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_saldos",
+      "file": "cons_cta_corren_fornec_imp_saldos_grid.class.php",
+      "remote_sha256": "85b15b2234e64b73363e15625b491fe057930b3dfab89b4ab66ca4feb42b7c3e",
+      "copied_sha256": "f4bad854e6528ed08408e5000aa20857a8f655facdbf232e11126eb993c84410",
+      "sensitive_literals_omitted": 5
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_saldos",
+      "file": "cons_cta_corren_fornec_imp_saldos_lookup.class.php",
+      "remote_sha256": "52cb255aef025ad6e343ca3afc6eb1ea64940f1ce2d98b1d8aa6d2aa92c6182f",
+      "copied_sha256": "52cb255aef025ad6e343ca3afc6eb1ea64940f1ce2d98b1d8aa6d2aa92c6182f",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_saldos",
+      "file": "index.php",
+      "remote_sha256": "9b5cd352add50e490daf19e8a8decae26444f3e48ebd949e4363cb6e81193069",
+      "copied_sha256": "a457edf366979f5c639d569b59a22e9484f2443c83d48243a81957005d3e5a04",
+      "sensitive_literals_omitted": 21
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_tudo",
+      "file": "cons_cta_corren_fornec_imp_tudo.php",
+      "remote_sha256": "9cd21b557b7271d2def7d55a8c8226ce7cb329becb8e8d06882dbd29a9492228",
+      "copied_sha256": "9cd21b557b7271d2def7d55a8c8226ce7cb329becb8e8d06882dbd29a9492228",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_tudo",
+      "file": "cons_cta_corren_fornec_imp_tudo_grid.class.php",
+      "remote_sha256": "8ff1a2e7ee434da1f8418e2e1ecd5d77b915f9e98aa7ac899951a68bb5d29385",
+      "copied_sha256": "48be0169bbb3bbe02c11eaf9f01c571b24659d87253b97fa05ae73a0a6b1c653",
+      "sensitive_literals_omitted": 4
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_tudo",
+      "file": "cons_cta_corren_fornec_imp_tudo_lookup.class.php",
+      "remote_sha256": "edda38f9a08fa6a6a9009a32f24646c2ad2f8bd18f736c0455a387833fafeb4e",
+      "copied_sha256": "edda38f9a08fa6a6a9009a32f24646c2ad2f8bd18f736c0455a387833fafeb4e",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_tudo",
+      "file": "index.php",
+      "remote_sha256": "92cbc15b8511a5d452ca6bac37dcc959c18eb1679a019811e8cc3215fc60176c",
+      "copied_sha256": "95dc524fdd4f6d8770899a93412d595bc82c791dd92b3659bf783acef567730b",
+      "sensitive_literals_omitted": 8
+    },
+    {
+      "application": "cons_cta_corren_res_ped",
+      "file": "cons_cta_corren_res_ped.php",
+      "remote_sha256": "2a8500d947d6af12532f490a85f85ac4c82f8c0d7e9bb887b7a43ab936e8c0f8",
+      "copied_sha256": "2a8500d947d6af12532f490a85f85ac4c82f8c0d7e9bb887b7a43ab936e8c0f8",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_cta_corren_res_ped",
+      "file": "cons_cta_corren_res_ped_grid.class.php",
+      "remote_sha256": "3f87e51837d7e3ea8449ef304193b0b66db085373bea2c00e8ae0ee9bc1e46d2",
+      "copied_sha256": "a6e15887db0fd14812e250bce0428d6e1917173589de9d06ea8527b5a7ea0c29",
+      "sensitive_literals_omitted": 5
+    },
+    {
+      "application": "cons_cta_corren_res_ped",
+      "file": "cons_cta_corren_res_ped_lookup.class.php",
+      "remote_sha256": "4ec960e1dc2bd0b08d7a8932c2f940033ba89de78596813210253439937a91b1",
+      "copied_sha256": "4ec960e1dc2bd0b08d7a8932c2f940033ba89de78596813210253439937a91b1",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_cta_corren_res_ped",
+      "file": "cons_cta_corren_res_ped_pesq.class.php",
+      "remote_sha256": "4b0989dba4f0d835799d2c44cc396efd0f65bd2825d0f7600bb40452f18004b8",
+      "copied_sha256": "db4d3751eb6adf0a5673f94f4994a9bf4fed9d915702f43898c6ef755af113c9",
+      "sensitive_literals_omitted": 1
+    },
+    {
+      "application": "cons_cta_corren_res_ped",
+      "file": "index.php",
+      "remote_sha256": "48a26663e400b8d32f8a3bef5ace7505b289950951de4bbf8220eb9f65ec5ccc",
+      "copied_sha256": "b5b84702ca902ed5b483c3ad948e432e4f45cb71879a9670d64a251fa1bec37d",
+      "sensitive_literals_omitted": 20
+    },
+    {
+      "application": "cons_cta_corren_custo_distr_bkp",
+      "file": "cons_cta_corren_custo_distr_bkp.php",
+      "remote_sha256": "b558a4e41fc34643bcae8c4ed162dc13b4b580ebee40f2b8c082a2f5915603ca",
+      "copied_sha256": "b558a4e41fc34643bcae8c4ed162dc13b4b580ebee40f2b8c082a2f5915603ca",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_cta_corren_custo_distr_bkp",
+      "file": "cons_cta_corren_custo_distr_bkp_grid.class.php",
+      "remote_sha256": "eacdb0e881b3f90c74d044195707295fdd3e01f1647ae084ba3de0c0ea29eb03",
+      "copied_sha256": "28d4d9a4cb0525b2b2c2da9c57ee46913a07123ae66869d61f05a6b7b4226abf",
+      "sensitive_literals_omitted": 5
+    },
+    {
+      "application": "cons_cta_corren_custo_distr_bkp",
+      "file": "cons_cta_corren_custo_distr_bkp_lookup.class.php",
+      "remote_sha256": "c417af3e3735cf9e81c4134969fa2613b7efdd06f098a585011ef19a3de990fc",
+      "copied_sha256": "c417af3e3735cf9e81c4134969fa2613b7efdd06f098a585011ef19a3de990fc",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_cta_corren_custo_distr_bkp",
+      "file": "cons_cta_corren_custo_distr_bkp_pesq.class.php",
+      "remote_sha256": "8b88fe3ff4f4b81373bbf9d83c28cfdebb415bee8868eef86fb1f2c739a53587",
+      "copied_sha256": "ad6fc0e154bed50c2e5ff5cc851ff36fad02d2b147302aa047b4f1ad8d52ef67",
+      "sensitive_literals_omitted": 1
+    },
+    {
+      "application": "cons_cta_corren_custo_distr_bkp",
+      "file": "index.php",
+      "remote_sha256": "23290d8fa2d80777391d9aed7ad9b077c06ca6f8d75b22340efb3b5c18ca23d8",
+      "copied_sha256": "fefb279964fe74e702aa569fefe8d215a08b3e45690b71d959bb0091b5f61512",
+      "sensitive_literals_omitted": 20
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_entregue_old",
+      "file": "cons_cta_corren_fornec_imp_entregue_old.php",
+      "remote_sha256": "cda0511f213792d8967a7253d113821646944a6a0cca9f5062fa982624212d7d",
+      "copied_sha256": "cda0511f213792d8967a7253d113821646944a6a0cca9f5062fa982624212d7d",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_entregue_old",
+      "file": "cons_cta_corren_fornec_imp_entregue_old_det.class.php",
+      "remote_sha256": "f36e780846dbe293f7a2bd85d6b57382f5e3e583ce2f4f4295e0921284e70c83",
+      "copied_sha256": "07416031b27d5650b21399f144033ce6686b7727bb2134ff92f56980315b39a1",
+      "sensitive_literals_omitted": 1
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_entregue_old",
+      "file": "cons_cta_corren_fornec_imp_entregue_old_grid.class.php",
+      "remote_sha256": "6b11ba8950f6d1062ce9bb1994331cc38700c9f9d53d49e39944223f56946a21",
+      "copied_sha256": "90f5e77037b1d3b6a1dfae4b6ec43feb964f173251b643b1ad444aaf1edc61c4",
+      "sensitive_literals_omitted": 5
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_entregue_old",
+      "file": "cons_cta_corren_fornec_imp_entregue_old_lookup.class.php",
+      "remote_sha256": "c8fccad97783846c66e2709ea871de40b8a0beb481ab27b734db12f929432786",
+      "copied_sha256": "c8fccad97783846c66e2709ea871de40b8a0beb481ab27b734db12f929432786",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_entregue_old",
+      "file": "index.php",
+      "remote_sha256": "cccb30b1d3c64b304eba6e2f90e489280fc3d27f65523a24d05fe70692a7595e",
+      "copied_sha256": "335830859ccf70ed9e76e8d67b9d90464db5cf0bec8bc44446cebf8cb2e3b04e",
+      "sensitive_literals_omitted": 22
+    },
+    {
+      "application": "cons_cta_corren_res_ped_old",
+      "file": "cons_cta_corren_res_ped_old.php",
+      "remote_sha256": "ce9cd3cf5f489cded2fb025e8eeffd6ccdaf8619f2658bad3b0d83c1ffed873c",
+      "copied_sha256": "ce9cd3cf5f489cded2fb025e8eeffd6ccdaf8619f2658bad3b0d83c1ffed873c",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_cta_corren_res_ped_old",
+      "file": "cons_cta_corren_res_ped_old_grid.class.php",
+      "remote_sha256": "7e1b66885200a6dfeb05bfc9aaa892f864fb814cc83c01b24875a5e7c97d9008",
+      "copied_sha256": "e510fabafbfffd750f13956b210640faa166952b2e5280c29de5434adc5a2330",
+      "sensitive_literals_omitted": 5
+    },
+    {
+      "application": "cons_cta_corren_res_ped_old",
+      "file": "cons_cta_corren_res_ped_old_lookup.class.php",
+      "remote_sha256": "6a3e1cf9da7d30fe513175147acf0ffeb82a7c3fc40340c8f9e819b09cb4c9de",
+      "copied_sha256": "6a3e1cf9da7d30fe513175147acf0ffeb82a7c3fc40340c8f9e819b09cb4c9de",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_cta_corren_res_ped_old",
+      "file": "cons_cta_corren_res_ped_old_pesq.class.php",
+      "remote_sha256": "cdfdb57a5e6234a1e579d86d360daaa9f2fa54da6442aba380f0c93a5b3eb854",
+      "copied_sha256": "a35296c86da1fe4b01f9f31a46cd77ce7bc5d92eee0170881b4965c35ca2af82",
+      "sensitive_literals_omitted": 1
+    },
+    {
+      "application": "cons_cta_corren_res_ped_old",
+      "file": "index.php",
+      "remote_sha256": "82d2cddae079f5ee92dc2fc155538f40b43748b30421898d1f6f556b4af7c840",
+      "copied_sha256": "81281c2fabcf47996769c837def82f1a9379d9ea0832d2aa1dff3402ab55ec95",
+      "sensitive_literals_omitted": 20
+    },
+    {
+      "application": "cons_cta_fornec_imp_entregue_bkp",
+      "file": "cons_cta_fornec_imp_entregue_bkp.php",
+      "remote_sha256": "2568c012d091bc02ba39d23be6f67055afc63b8092e1c41426839de0b97aa018",
+      "copied_sha256": "2568c012d091bc02ba39d23be6f67055afc63b8092e1c41426839de0b97aa018",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_cta_fornec_imp_entregue_bkp",
+      "file": "cons_cta_fornec_imp_entregue_bkp_det.class.php",
+      "remote_sha256": "cbc5cbca45739d77f5777a2ccf084b603cdeea9811e27ef31d6ab36f1d1424da",
+      "copied_sha256": "cbc5cbca45739d77f5777a2ccf084b603cdeea9811e27ef31d6ab36f1d1424da",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_cta_fornec_imp_entregue_bkp",
+      "file": "cons_cta_fornec_imp_entregue_bkp_grid.class.php",
+      "remote_sha256": "a31d81af6e092e681f6cd7b016797ee0e8e6f768f8a16785faf3121284d3b356",
+      "copied_sha256": "184d494ea2c3ec984cf63062ec33ddb6ab8137c17e165e8514fdeb2f1f46650e",
+      "sensitive_literals_omitted": 4
+    },
+    {
+      "application": "cons_cta_fornec_imp_entregue_bkp",
+      "file": "cons_cta_fornec_imp_entregue_bkp_lookup.class.php",
+      "remote_sha256": "83cea5b5b86a42e3d32653a21612346138058cfca6a0f39cce56fd9a1709c737",
+      "copied_sha256": "83cea5b5b86a42e3d32653a21612346138058cfca6a0f39cce56fd9a1709c737",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_cta_fornec_imp_entregue_bkp",
+      "file": "index.php",
+      "remote_sha256": "c63b624c7205e9d9cab2310412040ea88decefce1b299d7f445e591eb77d0be9",
+      "copied_sha256": "33656c95ff3e1d1522981166794a8e296dd43b396e90c9acb39ced077f870533",
+      "sensitive_literals_omitted": 11
+    },
+    {
+      "application": "cons_docum_est_importacao_old",
+      "file": "cons_docum_est_importacao_old.php",
+      "remote_sha256": "c16022960d292c17053c2abeb10180ba7b9a7142f07b08da058a84e0dec0b809",
+      "copied_sha256": "c16022960d292c17053c2abeb10180ba7b9a7142f07b08da058a84e0dec0b809",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_docum_est_importacao_old",
+      "file": "cons_docum_est_importacao_old_grid.class.php",
+      "remote_sha256": "9eeb706040f3946a9bfa34e82970e51efb54df31b0019b54d3922a05c380bc6e",
+      "copied_sha256": "349d9407ce17982cedc74b87dc170621de20dbf30d720f9f7f079a7a30242462",
+      "sensitive_literals_omitted": 3
+    },
+    {
+      "application": "cons_docum_est_importacao_old",
+      "file": "cons_docum_est_importacao_old_lookup.class.php",
+      "remote_sha256": "b732bf4efc9421e117bba0fabec87e13a457ed9fe19b3c650e108c115c5401a1",
+      "copied_sha256": "b732bf4efc9421e117bba0fabec87e13a457ed9fe19b3c650e108c115c5401a1",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_docum_est_importacao_old",
+      "file": "cons_docum_est_importacao_old_pesq.class.php",
+      "remote_sha256": "207235002c94a371fd4a807c3f0bd2e9dd59a7acfb8db289d471aaf8f2ed4c92",
+      "copied_sha256": "ffa43e8772379de23d9d811b2773b474e83402c262c9cb9f97ddbe6cf8f6d203",
+      "sensitive_literals_omitted": 1
+    },
+    {
+      "application": "cons_docum_est_importacao_old",
+      "file": "index.php",
+      "remote_sha256": "626be9967881771f4962bba4332e8750ab7b1e26bc9dfdd0a1a6727c982eb313",
+      "copied_sha256": "4ebe2ddc096d929976af385651bfaa5d3b2ed4b249fe9e19dd2da185a1799055",
+      "sensitive_literals_omitted": 21
+    },
+    {
+      "application": "cons_item_container_custos_bkp",
+      "file": "cons_item_container_custos_bkp.php",
+      "remote_sha256": "9b0b275f0cfca23da7e9d487a8e5ad9d70fc0b2679f70061a93431b532d02d8c",
+      "copied_sha256": "9b0b275f0cfca23da7e9d487a8e5ad9d70fc0b2679f70061a93431b532d02d8c",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_item_container_custos_bkp",
+      "file": "cons_item_container_custos_bkp_det.class.php",
+      "remote_sha256": "4eb0e61d86e7b75b94561c8c8ef1cdbcbce8925281634e7f442aa668c4c7a077",
+      "copied_sha256": "4eb0e61d86e7b75b94561c8c8ef1cdbcbce8925281634e7f442aa668c4c7a077",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_item_container_custos_bkp",
+      "file": "cons_item_container_custos_bkp_grid.class.php",
+      "remote_sha256": "8aa1e31cd2be93e4076f0ed3c0311fa95ae9e92c68d6c069a6b082badc197007",
+      "copied_sha256": "32ebf46f72fc055f29b44754a5fe61c3cd265fe93ad7256df68e8c001b49735c",
+      "sensitive_literals_omitted": 4
+    },
+    {
+      "application": "cons_item_container_custos_bkp",
+      "file": "cons_item_container_custos_bkp_lookup.class.php",
+      "remote_sha256": "691378fd4e531f42f59f73c4e4190d0c132d2108fc12b5d1c531a936d2482fd4",
+      "copied_sha256": "691378fd4e531f42f59f73c4e4190d0c132d2108fc12b5d1c531a936d2482fd4",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_item_container_custos_bkp",
+      "file": "cons_item_container_custos_bkp_pesq.class.php",
+      "remote_sha256": "f1ba23e4202cbe3410936b6486f5ac2f165f8b03ddd337df7ad039cb50d470d8",
+      "copied_sha256": "e3ce97d41db379e9b8aa0edbdda3ca00bb035e64bf760e58e1e754d76aa2d197",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_item_container_custos_bkp",
+      "file": "index.php",
+      "remote_sha256": "5eca9d88ec439e6959af3963252aefeb2591ecb45e5cb3546447b4e5ddcd1d67",
+      "copied_sha256": "39bffbfcd42fa42f845976e338fbaff16210b3b75626e5953bdb1026573a2000",
+      "sensitive_literals_omitted": 9
+    },
+    {
+      "application": "grid_despesas_container_bkp",
+      "file": "grid_despesas_container_bkp.php",
+      "remote_sha256": "6bf0f7fce53af457dfa80938406fd878ebc6ab4374106f1aa7694ad01fa05f4e",
+      "copied_sha256": "6bf0f7fce53af457dfa80938406fd878ebc6ab4374106f1aa7694ad01fa05f4e",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "grid_despesas_container_bkp",
+      "file": "grid_despesas_container_bkp_grid.class.php",
+      "remote_sha256": "d3f80c03ed586f338c84f70457ce478511c70498a5633c0052177c538cea5f02",
+      "copied_sha256": "650dbaca4c9b51237e26d7467f3ca90675ab39e27e3681482939b3bcda464dc8",
+      "sensitive_literals_omitted": 3
+    },
+    {
+      "application": "grid_despesas_container_bkp",
+      "file": "grid_despesas_container_bkp_lookup.class.php",
+      "remote_sha256": "008aae47bb87e50f0056cf823007bf9f03db1f707d6a2315b39106f4739972d7",
+      "copied_sha256": "008aae47bb87e50f0056cf823007bf9f03db1f707d6a2315b39106f4739972d7",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "grid_despesas_container_bkp",
+      "file": "index.php",
+      "remote_sha256": "97d219da01cf1a353a2ec12d0d848b38de73626a9a25de3e0582d53f005c46f7",
+      "copied_sha256": "e2e7ab91054425f1ad4cd4a8bc8a03ea877886108d12ace7d7994f202bfc7840",
+      "sensitive_literals_omitted": 19
+    }
+  ]
+}

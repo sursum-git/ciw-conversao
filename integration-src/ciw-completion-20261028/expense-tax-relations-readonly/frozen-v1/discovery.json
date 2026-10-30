@@ -1,0 +1,61 @@
+{
+  "status": "DISCOVERY_NOT_IMPLEMENTED",
+  "reservedCode": "op1055",
+  "origin": "grid_despesas_impostos",
+  "sourceQuery": "SELECT despesa_id, imposto_id FROM despesas_impostos;no fixed WHERE;description lookups from despesas",
+  "existingDelivery": "cd0093/ciw.empresas-despesa1.0.1;taxes are nested collection owned by empresa_id/despesa_id",
+  "gap": "Global rows/filter/navigation not provided by nested collection;no automatic equivalence",
+  "physicalKey": [
+    "despesa_id",
+    "imposto_id",
+    "empresa_id"
+  ],
+  "identityRule": "Preserve all physical rows and source multiplicity;hidden composite key required;do not deduplicate only two projected columns",
+  "implementationPreference": "Reuse fixed readonly reader and native Builder metadata;no writers or calculation rules;source options reuse existing despesas APIs",
+  "usageGate": "No literal inbound in other local PHP observed;not evidence of inactivity;inspect actualmenu/event before publishing",
+  "proofs": [
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-current\\catalog-current.json",
+      "sha256": "62bceb9def2e4153705f4bb646ef6a651c8ccd85a7c6be256dee66635ffecda8"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-current\\expense-company-program.json",
+      "sha256": "915135cd1ecd9607c0d65ef221ca26d5b030415044ef0eecfdcf1464780f7545"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-current\\expense-tax-entities.json",
+      "sha256": "5ea3663309c95fc320e936b126f38463de0680a3b78be666bca60248e14c4c69"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-current\\sanitization.json",
+      "sha256": "dfb449b2b12aa7af91ed7881606d781b8d586c5442c0fc77fa3d6b6b94f1e17a"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-current\\sources-current.json",
+      "sha256": "38c47d34491c42bbe24f683f74fef5e065aa8188c73378556176872fe68de5ee"
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "D:\\opencode\\conversao-sc\\sources\\scriptcase\\phase1\\grid_despesas_impostos\\grid_despesas_impostos.php",
+      "sha256": "673027e491913e6723e6a19c5d5e8b431a19d265502f619da6cee7584ce51411"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\sources\\scriptcase\\phase1\\grid_despesas_impostos\\grid_despesas_impostos_grid.class.php",
+      "sha256": "cc05ac638d5e783ecf7ddeea0ac9420c6b287119acff41a1a3c905d0eabcf158"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\sources\\scriptcase\\phase1\\grid_despesas_impostos\\index.php",
+      "sha256": "52e80cac02d7a56397f958b81d4a448db72551fd3cdd75d9fb676a42d34706c9"
+    }
+  ],
+  "schema": {
+    "path": "D:\\opencode\\conversao-sc\\integration-src\\despesas\\schema\\schema-despesas_impostos.json",
+    "sha256": "fbcd75213e89c7a2011f830d38e8b4da4a33fa041369f478ce219ff7c2e7eca5"
+  },
+  "catalogProgramCount": 128,
+  "networkExecuted": false,
+  "businessWrites": false,
+  "canonicalChanged": false,
+  "inventoryChanged": false
+}

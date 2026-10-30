@@ -1,0 +1,69 @@
+{
+  "remote": "/var/www/clients/client1/web2/web/iol/bl_pag_ini_ger",
+  "files": [
+    {
+      "name": "bl_pag_ini_ger_download.php",
+      "sha256": "9c39f31bf04aa7f66b6119ef6cec9ec644d0bbe06b096841e970830a8239aa64"
+    },
+    {
+      "name": "bl_pag_ini_ger_fil_rtl.css",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "bl_pag_ini_ger_session.php",
+      "sha256": "c5e5d2fd145f29703907a57bc0a936c5e685653922da731de48df7103a15a0b8"
+    },
+    {
+      "name": "index.php",
+      "sha256": "aabbfed9d4107311921a5b8f2b4da7e55db489e29807bab6f5a8cf150506dea9"
+    },
+    {
+      "name": "bl_pag_ini_ger_erro.class.php",
+      "sha256": "bec9f51ef938855e5004d3877394a535fea32fb9461fd7102ed47baca3f3b63f"
+    },
+    {
+      "name": "bl_pag_ini_ger_res_rtl.css",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "bl_pag_ini_ger_det_ltr.css",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "bl_pag_ini_ger_erro.php",
+      "sha256": "6d8b3d2296cdc7fcd48d195676f567b985d7d7bb1f0e5c5dc0a27009a64ee5eb"
+    },
+    {
+      "name": "bl_pag_ini_ger_teste.php",
+      "sha256": "39ec9db02aea750285f6d3855b4b9a31a96cb63f20a3e244b9603709db62253d"
+    },
+    {
+      "name": "bl_pag_ini_ger_grid_ltr.css",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "bl_pag_ini_ger_fil_ltr.css",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "bl_pag_ini_ger_res_ltr.css",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "bl_pag_ini_ger_det_rtl.css",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "bl_pag_ini_ger_json.php",
+      "sha256": "07c47d6108b64c5a3716fd02d11db31febb7c1999ae78aed08a31c99a76ccef9"
+    },
+    {
+      "name": "bl_pag_ini_ger.php",
+      "sha256": "ca501130215a004d7347683eb7a581626a56b0694d82116919055f563c78e63d"
+    },
+    {
+      "name": "bl_pag_ini_ger_grid_rtl.css",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

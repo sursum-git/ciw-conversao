@@ -1,0 +1,48 @@
+{
+  "relative": "backend/src/Runtime/RuntimeApiEntityActionService.php",
+  "canonical": "D:\\opencode\\construtor-pg\\backend\\src\\Runtime\\RuntimeApiEntityActionService.php",
+  "baselineSha256": "d5413e3085c445107aedc22d8c07a374259dc056ef5550cccf0c7d8dc388a7bb",
+  "candidateSha256": "79a0d97fb32d3af7e4569239b120d9c9f0ce65a5240e1a9c5a6b5659c867ac5e",
+  "hunks": [
+    {
+      "baselineStart": 47996,
+      "baselineEnd": 47996,
+      "candidateStart": 47996,
+      "candidateEnd": 48199,
+      "beforeBase64": "",
+      "afterBase64": "ICAgICAgICAgICAgaWYgKFJ1bnRpbWVJbXBvcnREaXNjb3VudFJlYWQ6OmlzU3VwcGxpZXIoJGRlZmluaXRpb24pICYmIGlzc2V0KCRib2R5WydlcnJvciddKSkgeyB0aHJvdyBuZXcgUnVudGltZUh0dHBFeGNlcHRpb24oJ0NJV19FUlBfUkVTUE9OU0VfSU5WQUxJRCcsJ1Jlc3Bvc3RhIGRhIGNvbnN1bHRhIEVSUCBNRUQgaW52YWxpZGEuJyw1MDIpOyB9DQo="
+    },
+    {
+      "baselineStart": 56701,
+      "baselineEnd": 56766,
+      "candidateStart": 56904,
+      "candidateEnd": 57123,
+      "beforeBase64": "ICAgICAgICAgICAgQXBpUmVxdWVzdENvbnRleHQ6OmFzc2VydFJvd3MoWyRtYXBwZWRdLCAkY29udGV4dCk7DQo=",
+      "afterBase64": "ICAgICAgICAgICAgaWYgKFJ1bnRpbWVJbXBvcnREaXNjb3VudFJlYWQ6OmlzU3VwcGxpZXIoJGRlZmluaXRpb24pKSB7IFJ1bnRpbWVJbXBvcnREaXNjb3VudFJlYWQ6OmFzc2VydFJvdygkZGVmaW5pdGlvbiwkbWFwcGVkLCRjb250ZXh0LCRpZCk7IH0NCiAgICAgICAgICAgIGVsc2UgeyBBcGlSZXF1ZXN0Q29udGV4dDo6YXNzZXJ0Um93cyhbJG1hcHBlZF0sICRjb250ZXh0KTsgfQ0K"
+    }
+  ],
+  "unchangedRanges": [
+    {
+      "baselineStart": 0,
+      "baselineEnd": 47996,
+      "candidateStart": 0,
+      "candidateEnd": 47996,
+      "sha256": "2c9f690aa3ce35d0a7c4377703a873b0395874b4c356c3158666fba50532b7dd"
+    },
+    {
+      "baselineStart": 47996,
+      "baselineEnd": 56701,
+      "candidateStart": 48199,
+      "candidateEnd": 56904,
+      "sha256": "91c65be502788f30680bf322616262dce9af57d3a808f8e50b287a6cbb4a4fbc"
+    },
+    {
+      "baselineStart": 56766,
+      "baselineEnd": 127310,
+      "candidateStart": 57123,
+      "candidateEnd": 127667,
+      "sha256": "664db902174fe47e0d32c1c6a88315bb554f4cf34ff77492a6d756bbf7ab37cf"
+    }
+  ],
+  "applyOnlyByExactBaseline": true
+}

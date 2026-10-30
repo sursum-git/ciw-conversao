@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-20",
+  "instance": "sursum-api/med",
+  "resources": [
+    {
+      "resource": "fornecedores",
+      "screenId": "ciw.fornecedores",
+      "programCode": "cd0099",
+      "version": "1.0.0",
+      "applications": [
+        "cons_fornecedor"
+      ],
+      "runtimeReadValidated": true,
+      "visualValidation": "pending",
+      "evidence": "docs/ciw-fornecedores-validacao-2026-10-20.md; OpenEdge12.2/.42:27checks/cultura; PASOE/runtime contagem/soma/primeira linha vsDB, filtros/paginacao/detalhe e recusa escrita."
+    },
+    {
+      "resource": "fornecedores_estrangeiros",
+      "screenId": "ciw.fornecedores-estrangeiros",
+      "programCode": "cd0100",
+      "version": "1.0.0",
+      "applications": [
+        "cons_fornecedor_estrangeiro"
+      ],
+      "runtimeReadValidated": true,
+      "visualValidation": "pending",
+      "evidence": "docs/ciw-fornecedores-validacao-2026-10-20.md; OpenEdge12.2/.42:27checks/cultura; PASOE/runtime contagem/soma/primeira linha vsDB, filtros/paginacao/detalhe e recusa escrita."
+    }
+  ]
+}

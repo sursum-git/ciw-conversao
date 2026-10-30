@@ -1,0 +1,160 @@
+{
+  "database": "espec",
+  "table": "cta_corren_custo_distr",
+  "fields": [
+    {
+      "name": "cta_corren_custo_distr_id",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "data",
+      "type": "date",
+      "format": "99\/99\/99",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "item_container_custo_id",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "item_container_id",
+      "type": "integer",
+      "format": "->,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "historico",
+      "type": "character",
+      "format": "x(2000)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_tipo_movto",
+      "type": "integer",
+      "format": ">9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vl_lancto",
+      "type": "decimal",
+      "format": "->>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "despesa_container_id",
+      "type": "integer",
+      "format": "->,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "login",
+      "type": "character",
+      "format": "x(20)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    }
+  ],
+  "indexes": [
+    {
+      "name": "ind_cod_tipo_movto",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod_tipo_movto",
+        "data"
+      ]
+    },
+    {
+      "name": "ind_data_tipo_movto",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "data",
+        "cod_tipo_movto"
+      ]
+    },
+    {
+      "name": "ind_item_container_custo_id",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "item_container_custo_id"
+      ]
+    },
+    {
+      "name": "ind_item_container_id",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "item_container_id"
+      ]
+    },
+    {
+      "name": "primario",
+      "unique": true,
+      "primary": true,
+      "fields": [
+        "cta_corren_custo_distr_id"
+      ]
+    }
+  ],
+  "triggers": [
+  ]
+}

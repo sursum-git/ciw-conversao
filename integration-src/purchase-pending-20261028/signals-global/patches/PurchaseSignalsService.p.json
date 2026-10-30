@@ -1,0 +1,7 @@
+{
+  "target": "D:/opencode/motor-progress/v2/sursum-api/programs/PurchaseSignalsService.p",
+  "baselineSHA256": "f98158cb3ea0a2cb2bd7c954de547861491dff1e632a07a1c4487c3c1cc5bcdc",
+  "operation": "replaceFile",
+  "candidate": "abl/PurchaseSignalsService.p",
+  "reason": "Extract existing collector once; contextual API/fields/filters remain compatible."
+}

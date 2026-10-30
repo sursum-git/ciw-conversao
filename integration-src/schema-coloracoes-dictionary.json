@@ -1,0 +1,54 @@
+{
+  "database": "espec",
+  "table": "coloracoes",
+  "fields": [
+    {
+      "name": "coloracao_id",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "descricao",
+      "type": "character",
+      "format": "x(50)",
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_inativo",
+      "type": "logical",
+      "format": "sim\/não",
+      "initial": "não",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    }
+  ],
+  "indexes": [
+    {
+      "name": "primario",
+      "unique": true,
+      "primary": true,
+      "fields": [
+        "coloracao_id"
+      ]
+    }
+  ],
+  "triggers": [
+  ],
+  "coloracaoIdTables": [
+    "itens_proc_compra"
+  ]
+}

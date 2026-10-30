@@ -1,0 +1,11 @@
+--- D:\opencode\motor-progress\v2\sursum-api\includes\ContainerProcessBoundary.i
++++ D:\opencode\motor-progress\v2\sursum-api\includes\ContainerProcessBoundary.i
+@@ -35,7 +35,7 @@
+   IF NOT requestValue:Has("log_priorizar_custo_previsto") THEN UNDO, THROW NEW Progress.Lang.AppError("Preferencia obrigatoria.",1).
+   IF requestValue:GetType("log_priorizar_custo_previsto")<>JsonDataType:BOOLEAN THEN UNDO, THROW NEW Progress.Lang.AppError("Preferencia deve ser booleana.",1).
+  END.
+- ELSE IF resourceValue<>"impostos" OR operationValue<>"sincronizar" THEN UNDO, THROW NEW Progress.Lang.AppError("Comando nao suportado.",1).
++ ELSE IF resourceValue<>"impostos" OR (operationValue<>"sincronizar" AND operationValue<>"calcular_impostos") THEN UNDO, THROW NEW Progress.Lang.AppError("Comando nao suportado.",1).
+  cid=ProcessInteger(requestValue,"container_id",FALSE).
+  IF cid=? THEN UNDO, THROW NEW Progress.Lang.AppError("Container inteiro positivo obrigatorio.",1).
+  IF requestValue:Has("request_id") THEN DO:

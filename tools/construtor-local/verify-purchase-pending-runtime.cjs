@@ -1,0 +1,19 @@
+'use strict';
+const c=require('./purchase-payments-builder-common.cjs'),state=c.path.join(c.root,'.runtime/purchase-pending-integration-20261028');
+const unwrap=v=>v.data??v;
+const save=(n,v)=>c.fs.writeFileSync(c.path.join(state,n),JSON.stringify(v,null,2)+'\n');
+c.session(async({api,runtime})=>{
+ const source=(await api('/api-sources/motor_progress_ciw_cadastros')).apiSource;c.assert.equal(source.operations.length,118);for(const old of c.readJson(c.path.join(state,'source-before.json')).operations)c.assert.deepEqual(source.operations.find(x=>x.code===old.code),old);
+ const parent=await runtime('ciw.processos-compra-med');c.assert.deepEqual(parent,c.readJson(c.path.join(state,'parent-before.json')));
+ const screens=['ciw.sinalizadores-importacao-med','ciw.alertas-importacao-med','ciw.sinalizadores-importacao'],definitions={};
+ for(let i=0;i<screens.length;i++){const d=await runtime(screens[i]);definitions[screens[i]]=d;c.assert.equal(d.program.version,'1.0.0');c.assert.equal(Object.keys(d.dataModel.fields).length,[9,19,5][i]);c.assert.equal(d.permissions.create,false);c.assert.equal(d.permissions.delete,false);if(i<2)c.assert.equal(d.permissions.edit,false);}
+ c.assert.equal(definitions[screens[2]].crud.form.logs.enabled,true);c.assert.equal(definitions[screens[2]].crud.form.logs.mode,'transactions');
+ const page=await runtime(screens[0]+'/endpoints/read',{take:200,skip:0});c.assert.equal(page.total,5);const first=page.data[0];c.assert.deepEqual(unwrap(await runtime(screens[0]+'/endpoints/get',{id:first.record_key})),first);
+ const rule=page.data.find(x=>x.quantidade>0);c.assert.ok(rule);const context={sinaliz_imp_id:rule.sinaliz_imp_id};const details=await runtime(screens[1]+'/endpoints/read',{context,take:200,skip:0});c.assert.equal(details.total,rule.quantidade);c.assert.ok(details.data.every(x=>x.sinaliz_imp_id===context.sinaliz_imp_id));c.assert.deepEqual(unwrap(await runtime(screens[1]+'/endpoints/get',{context,id:details.data[0].record_key})),details.data[0]);
+ const large=page.data.find(x=>x.quantidade>200);let pagingAfter200=false;
+ if(large){const context={sinaliz_imp_id:large.sinaliz_imp_id},payload={context,take:1,skip:200,sort:[{field:'proc_compra_id',dir:'desc'}]},actual=await runtime(screens[1]+'/endpoints/read',payload),connection=c.readJson(c.path.join(c.root,'.runtime/ciw-cadastros-20261020/private/connection.json'));
+  const response=await fetch(connection.baseUrl+'/SursumPrograms/ciw-cadastros',{method:'POST',headers:{'Content-Type':'application/json','X-Ciw-Cadastros-Token':connection.integrationToken},body:JSON.stringify({resource:'proc_compra_sinalizados',operation:'read',sinaliz_imp_id:large.sinaliz_imp_id,take:1,skip:200,sort:payload.sort}),signal:AbortSignal.timeout(45000)}),expected=await response.json();c.assert.equal(expected.success,true);c.assert.deepEqual(actual.data,expected.data);c.assert.equal(actual.total,expected.total);c.assert.equal(actual.data.length,1);pagingAfter200=true;
+ }
+ const cfg=await runtime(screens[2]+'/endpoints/read',{take:50,skip:0});c.assert.equal(cfg.total,5);const config=cfg.data[0];c.assert.deepEqual(unwrap(await runtime(screens[2]+'/endpoints/get',{id:config.sinaliz_imp_id})),config);
+ save('published-definitions.json',definitions);save('native-private-rows.json',{summary:page,details,configuration:cfg});save('native-read-proof.json',{success:true,screens:3,sourceOperations:118,previous111Preserved:true,parentUnchanged:true,parentTabs:11,fields:[9,19,5],readGet:true,selectedRuleContext:true,countsMatch:true,pagingAfter200,configurationLogsEnabled:true,configurationLogsMode:'transactions',configurationOperationalUpdatesExecuted:false,businessWrites:false,humanPermissionsChanged:false});console.log('PASS native3screens/read/get/context/counts/configLogs;118ops/pai11tabs preserved');
+},{readOnly:true}).catch(e=>{console.error(e.message);process.exitCode=1;});

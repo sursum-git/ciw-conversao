@@ -1,0 +1,47 @@
+--- D:\opencode\construtor-pg\backend\src\Builder\ProgramBuilderService.php
++++ D:\opencode\construtor-pg\backend\src\Builder\ProgramBuilderService.php
+@@ -3733,7 +3733,7 @@
+         if ($pageType !== 'crud' || !$entity instanceof BuilderEntity) {
+             throw new RuntimeHttpException('PROGRAM_BUILDER_CRUD_OPTIONS_INVALID', 'crudOptions exige um programa CRUD com entidade.', 422);
+         }
+-        $input = $this->closedObject($value, ['pageSize', 'gridFields', 'filterFields', 'defaultSort', 'defaultGroup'], 'crudOptions');
++        $input = $this->closedObject($value, ['pageSize', 'gridFields', 'filterFields', 'defaultSort', 'defaultGroup', 'batchSnapshot'], 'crudOptions');
+         $fields = [];
+         foreach ($entity->getFields() as $field) {
+             if ($field->getDataType() !== 'json') {
+@@ -3784,6 +3784,18 @@
+                 }
+                 $result[$name][] = $entry;
+             }
++        }
++        if (array_key_exists('batchSnapshot', $input)) {
++            $snapshot = $this->closedObject($input['batchSnapshot'], ['originalFields','contextFields'], 'crudOptions.batchSnapshot');
++            $available = []; foreach ($entity->getFields() as $field) { $available[$field->getCode()] = $field; }
++            foreach (['originalFields','contextFields'] as $key) {
++                $items = $snapshot[$key] ?? null;
++                if (!is_array($items) || !array_is_list($items) || !$items || count($items)>64 || count(array_unique($items,SORT_REGULAR))!==count($items)) { $invalid('batchSnapshot.'.$key); }
++                foreach ($items as $name) {
++                    if (!is_string($name) || !isset($available[$name]) || !in_array($available[$name]->getDataType(),['integer','decimal','boolean','string','date','datetime'],true)) { $invalid('batchSnapshot.'.$key); }
++                }
++            }
++            $result['batchSnapshot'] = $snapshot;
+         }
+         return $result;
+     }
+@@ -4956,7 +4968,7 @@
+                     'fields' => $filterFields,
+                 ],
+                 'grid' => [
+-                    'editing' => ['mode' => $config['gridEditMode'] ?? 'form'],
++                    'editing' => ['mode' => $config['gridEditMode'] ?? 'form'] + (isset($crudOptions['batchSnapshot']) ? ['snapshot' => $crudOptions['batchSnapshot']] : []),
+                     'pageable' => true,
+                     'sortable' => true,
+                     'filterable' => !$apiEntity,
+@@ -6357,6 +6369,7 @@
+                 'actionId' => $endpointId,
+                 'programId' => $version->getProgramCode(),
+                 'permissionPrefix' => $version->getPermissionPrefix(),
++                ...($endpointId === 'batch' && isset($version->getBuilderConfig()['crudOptions']['batchSnapshot']) ? ['batchSnapshot' => $version->getBuilderConfig()['crudOptions']['batchSnapshot']] : []),
+                 'allowCreate' => $version->isAllowCreate(),
+                 'allowUpdate' => $version->isAllowUpdate(),
+                 'allowDelete' => $version->isAllowDelete(),

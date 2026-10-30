@@ -1,0 +1,44 @@
+{
+  "status": "NEXT_INCREMENT_AFTER_AUX_V1_1_NOT_APPLIED",
+  "sharedPhpChanges": 0,
+  "sharedSourceOperationChanges": 0,
+  "canonicalWrites": false,
+  "baselines": [
+    {
+      "file": "ContainersVersionHistoryApi.p",
+      "baselinePath": "integration-src/ciw-completion-20261028/container-version-history/frozen-v1.4/abl/ContainersVersionHistoryApi.p",
+      "baselineSha256": "d3101f8cccc81d637002c185074f9dd69ded7000cd6b03e0ebbd7c6ef4e99065",
+      "candidateSha256": "d0432295fca4b3b03dd629013cdb7a8f75b6c6b6ef014aa28a3db4cd64222cd5",
+      "action": "Deploy API and its matching Service atomically; internal additional2handles"
+    },
+    {
+      "file": "ContainersVersionHistoryService.p",
+      "baselinePath": "integration-src/ciw-completion-20261028/container-version-history/frozen-v1.4/abl/ContainersVersionHistoryService.p",
+      "baselineSha256": "1b72391027820a110e3041ea60d33fe701ef04f63b749753d96f6f88df5c3407",
+      "candidateSha256": "8b6bfd5a7c7e824ec1b91a637db738c62053ee8b5f4a8534d6e2ed764b309672",
+      "action": "Deploy API and its matching Service atomically; internal additional2handles"
+    },
+    {
+      "file": "ContainersVersionAuxHistoryApi.p",
+      "baselinePath": "integration-src/ciw-completion-20261028/container-version-history/frozen-aux-v1.1/abl/ContainersVersionAuxHistoryApi.p",
+      "baselineSha256": "ba4a614c58c841ca5715929cd1e0a8d967224bfe360a4051e169dea322f56073",
+      "candidateSha256": "430bfe017297fcb68db55589a046a474c88d61e6a894fbcc64061c9231715086",
+      "action": "Deploy API and its matching Service atomically; internal additional2handles"
+    },
+    {
+      "file": "ContainersVersionAuxHistoryService.p",
+      "baselinePath": "integration-src/ciw-completion-20261028/container-version-history/frozen-aux-v1.1/abl/ContainersVersionAuxHistoryService.p",
+      "baselineSha256": "8e795b43200b54ff4299fde78f4e8de565cc6b5444ab1adea3b3fc85fa26867f",
+      "candidateSha256": "6294d044179fa0faa3d990d1c034f6e39c66f0490342e9bf1722682135abdf67",
+      "action": "Deploy API and its matching Service atomically; internal additional2handles"
+    },
+    {
+      "file": "CiwErpReadService.p",
+      "baselinePath": "Aux-v1.1 candidate (must be canonical before applying this delta)",
+      "baselineSha256": "56c424fbdcaea700650d29d2e247d6f4e861872af9b1c329cce33d4f70c0274f",
+      "candidateSha256": "8f2e1444650426824f61e7d220f06a50fb5c0968af42d4c27507c4c90df82223",
+      "patch": "patches/CiwErpReadService.p.patch",
+      "action": "Add only3 current string projections; preserve all keys and other resources"
+    }
+  ]
+}

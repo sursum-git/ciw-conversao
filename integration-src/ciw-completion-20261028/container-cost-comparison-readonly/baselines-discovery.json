@@ -1,0 +1,11 @@
+{
+  "core": {
+    "path": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersCustoCalculator.p",
+    "sha256": "9ba548fb0c49f7448b944a47a883200738ba7faf4f0d8111f13c08cb765ee6ac"
+  },
+  "fixtureSource": {
+    "path": "D:/opencode/motor-progress/v2/tests/abl/container-panel/ContainersCustoCalculatorTest.p",
+    "sha256": "22d5cb46bc031ee617bb11ab988d4aa7c34d42f8e430db3e8f9256b2b43ef8d9"
+  },
+  "fixtureHarnessOnly": "FIX-CODEPAGE UTF8 before literal assignment; no formula changed"
+}

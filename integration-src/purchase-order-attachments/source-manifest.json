@@ -1,0 +1,72 @@
+{
+  "scope": [
+    "form_anexos_proc_compra",
+    "grid_anexos_proc_compra"
+  ],
+  "analysis_copies": true,
+  "files": [
+    {
+      "application": "form_anexos_proc_compra",
+      "file": "form_anexos_proc_compra.php",
+      "remote_sha256": "eb94b96e9f8f5c37d5757b937490c152291a4bf8a74b731d465fddbe7e6b2160",
+      "copied_sha256": "eb94b96e9f8f5c37d5757b937490c152291a4bf8a74b731d465fddbe7e6b2160",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "form_anexos_proc_compra",
+      "file": "form_anexos_proc_compra_apl.php",
+      "remote_sha256": "02e030ed65dadc0604546791344e2bce07b05f3023594004ba3eb9c9887b3479",
+      "copied_sha256": "0281ea72a602f23ad48c324678eed290d77112aa8f3b70b864c2d9425e912bda",
+      "sensitive_literals_omitted": 3
+    },
+    {
+      "application": "form_anexos_proc_compra",
+      "file": "form_anexos_proc_compra_form0.php",
+      "remote_sha256": "75a3284f6a6b11d0d59901bbd9c89939060f0b0ea1cef4e80a3cc2c8575e1811",
+      "copied_sha256": "60825fcce10252db99ba23e4618e3de20acb4ef384867793849d949c5e5ccd5f",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "form_anexos_proc_compra",
+      "file": "form_anexos_proc_compra_js0.php",
+      "remote_sha256": "979c633bf1c2a1a720e12b9114402ecdf14ef183f621c64dbfefc7c8f6ba3431",
+      "copied_sha256": "979c633bf1c2a1a720e12b9114402ecdf14ef183f621c64dbfefc7c8f6ba3431",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "form_anexos_proc_compra",
+      "file": "form_anexos_proc_compra_sajax.php",
+      "remote_sha256": "3933da62f5b842c7e511b694ee8533963eca8cab0c730b2de51d270f66af3969",
+      "copied_sha256": "3933da62f5b842c7e511b694ee8533963eca8cab0c730b2de51d270f66af3969",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "form_anexos_proc_compra",
+      "file": "index.php",
+      "remote_sha256": "f0ba12f9417122ef64f4b22be795adb01bdc34dc7a756b6e8de3076e81fbe5e7",
+      "copied_sha256": "9f1fca46519ceecad40a33e5d41184ed600a2096a65e8749958626bfafa11717",
+      "sensitive_literals_omitted": 15
+    },
+    {
+      "application": "grid_anexos_proc_compra",
+      "file": "grid_anexos_proc_compra.php",
+      "remote_sha256": "5a6d85d9c5626d80716b9257e6b78f118baac5c1be24fe397bb05036555f9d25",
+      "copied_sha256": "5a6d85d9c5626d80716b9257e6b78f118baac5c1be24fe397bb05036555f9d25",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "grid_anexos_proc_compra",
+      "file": "grid_anexos_proc_compra_grid.class.php",
+      "remote_sha256": "5b7638d9779f95cd08a8381032f6a3844f9b6b5ddd6684fe883a1faf29e299df",
+      "copied_sha256": "bbae500a3a55da8defa2c7ec47efdd2d9fe4f43cd4382b8534356b8e16cb7664",
+      "sensitive_literals_omitted": 4
+    },
+    {
+      "application": "grid_anexos_proc_compra",
+      "file": "index.php",
+      "remote_sha256": "3a43b99546868cf01d2af268a5c60ff167522ed15058e4d4e5a9708105fc17ba",
+      "copied_sha256": "cb70b50a6398e52f1f4047878df47ac2625c563344b79126e20d37b783c1db4c",
+      "sensitive_literals_omitted": 7
+    }
+  ]
+}

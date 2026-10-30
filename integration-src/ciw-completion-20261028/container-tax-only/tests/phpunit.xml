@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="phpunit-bootstrap.php" cacheResult="false">
+ <testsuites><testsuite name="Tax-only and existing process contracts">
+  <file>RuntimeContainerTaxOnlyProcessTest.php</file>
+  <file>D:/opencode/construtor-pg/backend/tests/Runtime/RuntimeApiProcessTest.php</file>
+  <file>D:/opencode/construtor-pg/backend/tests/Runtime/RuntimeContainerAuditImportTest.php</file>
+  <file>D:/opencode/construtor-pg/backend/tests/Runtime/RuntimeContainerAuditContractTest.php</file>
+  <file>D:/opencode/construtor-pg/backend/tests/Builder/ProgramBuilderApiProcessOptInTest.php</file>
+  <file>D:/opencode/construtor-pg/backend/tests/Builder/ProgramBuilderProcessOptionsTest.php</file>
+ </testsuite></testsuites>
+</phpunit>

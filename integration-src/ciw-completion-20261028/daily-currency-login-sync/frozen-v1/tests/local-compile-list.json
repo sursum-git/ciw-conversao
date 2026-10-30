@@ -1,0 +1,12 @@
+[
+  "integration-src/ciw-completion-20261028/daily-currency-login-sync/candidate-exact/CiwCotacoesService.p",
+  "integration-src/ciw-completion-20261028/daily-currency-login-sync/abl/CiwCotacaoHistoryParticipant.p",
+  "integration-src/ciw-completion-20261028/daily-currency-login-sync/abl/CiwDailyCurrencyErpParticipant.p",
+  "integration-src/ciw-completion-20261028/daily-currency-login-sync/abl/CiwDailyCurrencyHistoryCollector.p",
+  "integration-src/ciw-completion-20261028/daily-currency-login-sync/test-inputs/ContainerCostInvalidation.p",
+  "integration-src/ciw-completion-20261028/daily-currency-login-sync/test-inputs/CiwCotacoesTest.p",
+  "integration-src/ciw-completion-20261028/daily-currency-login-sync/tests/abl/CurrencyDailyRootTransactionTest.p",
+  "integration-src/ciw-completion-20261028/daily-currency-login-sync/tests/abl/CurrencyHistoryParticipantTest.p",
+  "integration-src/ciw-completion-20261028/daily-currency-login-sync/tests/abl/DailyCurrencyErpParticipantTest.p",
+  "integration-src/ciw-completion-20261028/daily-currency-login-sync/tests/abl/DailyCurrencyHistoryCollectorTest.p"
+]

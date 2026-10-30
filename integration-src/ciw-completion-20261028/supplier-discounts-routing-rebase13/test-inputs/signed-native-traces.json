@@ -1,0 +1,91 @@
+{
+  "syntheticOnly": true,
+  "networkExecuted": false,
+  "businessWrites": false,
+  "traces": [
+    {
+      "supplier": 0,
+      "read": {
+        "skip": 0,
+        "take": 2,
+        "filters": [
+          {
+            "field": "fornecedor_id",
+            "operator": "eq",
+            "value": 0
+          }
+        ]
+      },
+      "get": {
+        "record_key": "{\"desconto_importacao_id\":1}",
+        "id": "{\"desconto_importacao_id\":1}",
+        "context": {
+          "fornecedor_id": 0
+        }
+      }
+    },
+    {
+      "supplier": -9,
+      "read": {
+        "skip": 0,
+        "take": 2,
+        "filters": [
+          {
+            "field": "fornecedor_id",
+            "operator": "eq",
+            "value": -9
+          }
+        ]
+      },
+      "get": {
+        "record_key": "{\"desconto_importacao_id\":1}",
+        "id": "{\"desconto_importacao_id\":1}",
+        "context": {
+          "fornecedor_id": -9
+        }
+      }
+    },
+    {
+      "supplier": -2147483648,
+      "read": {
+        "skip": 0,
+        "take": 2,
+        "filters": [
+          {
+            "field": "fornecedor_id",
+            "operator": "eq",
+            "value": -2147483648
+          }
+        ]
+      },
+      "get": {
+        "record_key": "{\"desconto_importacao_id\":1}",
+        "id": "{\"desconto_importacao_id\":1}",
+        "context": {
+          "fornecedor_id": -2147483648
+        }
+      }
+    },
+    {
+      "supplier": 2147483647,
+      "read": {
+        "skip": 0,
+        "take": 2,
+        "filters": [
+          {
+            "field": "fornecedor_id",
+            "operator": "eq",
+            "value": 2147483647
+          }
+        ]
+      },
+      "get": {
+        "record_key": "{\"desconto_importacao_id\":1}",
+        "id": "{\"desconto_importacao_id\":1}",
+        "context": {
+          "fornecedor_id": 2147483647
+        }
+      }
+    }
+  ]
+}

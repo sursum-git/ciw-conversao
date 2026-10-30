@@ -1,0 +1,54 @@
+{
+  "canonical": "D:\\opencode\\construtor-pg\\src\\page-engine\\PageDefinitionNormalizer.js",
+  "relative": "src/page-engine/PageDefinitionNormalizer.js",
+  "baselineSha256": "fb038ccb2446957902432473535aad0b1e7b61ba8152b02e04aa6c7baf60ecca",
+  "candidateSha256": "fb8a5b4612e4c5b7c839712d582515214022df809d86083dfb2c2d158868d533",
+  "edits": [
+    {
+      "start": 818,
+      "end": 818,
+      "beforeBase64": "",
+      "afterBase64": "ICAgICAgaWYgKE9iamVjdC5wcm90b3R5cGUuaGFzT3duUHJvcGVydHkuY2FsbChzb3VyY2UsICJjb250ZXh0RmllbGRzIikpIHsgc291cmNlLmNvbnRleHRGaWVsZHMgPSB0aGlzLm5vcm1hbGl6ZUNvbnRleHRGaWVsZHMoc291cmNlLmNvbnRleHRGaWVsZHMsIHNvdXJjZS5kYXRhTW9kZWwgfHwgY3J1ZC5kYXRhTW9kZWwpOyB9DQo="
+    },
+    {
+      "start": 2983,
+      "end": 2983,
+      "beforeBase64": "",
+      "afterBase64": "ICAgICAgaWYgKE9iamVjdC5wcm90b3R5cGUuaGFzT3duUHJvcGVydHkuY2FsbChzb3VyY2UsICJjb250ZXh0RmllbGRzIikpIHsgc291cmNlLmNvbnRleHRGaWVsZHMgPSB0aGlzLm5vcm1hbGl6ZUNvbnRleHRGaWVsZHMoc291cmNlLmNvbnRleHRGaWVsZHMsIHNvdXJjZS5kYXRhTW9kZWwpOyB9DQo="
+    },
+    {
+      "start": 4199,
+      "end": 4199,
+      "beforeBase64": "",
+      "afterBase64": "ICAgIH0NCg0KICAgIG5vcm1hbGl6ZUNvbnRleHRGaWVsZHModmFsdWUsIG1vZGVsKSB7DQogICAgICBpZiAoIUFycmF5LmlzQXJyYXkodmFsdWUpKSB7IHJldHVybiB2YWx1ZTsgfQ0KICAgICAgdmFsdWUuZm9yRWFjaCgoaXRlbSkgPT4gew0KICAgICAgICBpZiAoIWl0ZW0gfHwgdHlwZW9mIGl0ZW0gIT09ICJvYmplY3QiIHx8ICFPYmplY3QucHJvdG90eXBlLmhhc093blByb3BlcnR5LmNhbGwoaXRlbSwgImZpbHRlck9ubHkiKSkgeyByZXR1cm47IH0NCiAgICAgICAgY29uc3QgZmllbGQgPSBtb2RlbCAmJiBtb2RlbC5maWVsZHMgJiYgbW9kZWwuZmllbGRzW2l0ZW0uZmllbGRdOw0KICAgICAgICBpZiAoT2JqZWN0LmtleXMoaXRlbSkuc29tZSgoa2V5KSA9PiBbImZpZWxkIiwgImZpbHRlciIsICJjcmVhdGVEZWZhdWx0IiwgInJlYWRvbmx5IiwgInJlcXVpcmVkIiwgImZpbHRlck9ubHkiXS5pbmRleE9mKGtleSkgPT09IC0xKSB8fCB0eXBlb2YgaXRlbS5maWx0ZXJPbmx5ICE9PSAiYm9vbGVhbiIgfHwgKGl0ZW0uZmlsdGVyT25seSAmJiAoIWZpZWxkIHx8IGZpZWxkLnR5cGUgIT09ICJpbnRlZ2VyIiB8fCBpdGVtLnJlcXVpcmVkICE9PSBmYWxzZSB8fCBpdGVtLmZpbHRlciAhPT0gdHJ1ZSB8fCBpdGVtLnJlYWRvbmx5ICE9PSB0cnVlIHx8IGl0ZW0uY3JlYXRlRGVmYXVsdCAhPT0gZmFsc2UpKSkgew0KICAgICAgICAgIHRocm93IGdsb2JhbC5DcnVkVXRpbHMubWFrZUVycm9yKCJDUlVEX0NPTlRFWFRfSU5WQUxJRCIsICJmaWx0ZXJPbmx5IGV4aWdlIGNvbnRleHRvIGludGVnZXIgb3BjaW9uYWwgcmVhZG9ubHksIGZpbHRybyBhdGl2byBlIHNlbSBkZWZhdWx0IGRlIGNyaWFjYW8uIik7DQogICAgICAgIH0NCiAgICAgICAgaWYgKGl0ZW0uZmlsdGVyT25seSA9PT0gZmFsc2UpIHsgZGVsZXRlIGl0ZW0uZmlsdGVyT25seTsgfQ0KICAgICAgfSk7DQogICAgICByZXR1cm4gdmFsdWU7DQo="
+    }
+  ],
+  "unchangedByteRanges": [
+    {
+      "baselineStart": 0,
+      "candidateStart": 0,
+      "bytes": 818,
+      "sha256": "ee0fc5e9b25da91b72021af9da7deae2d18ba31442d32994609eb867f2391569"
+    },
+    {
+      "baselineStart": 818,
+      "candidateStart": 1006,
+      "bytes": 2165,
+      "sha256": "dc98c425e16a0187c54dfb9a4b63ef593bc268c063f2e19399a46db3317ee140"
+    },
+    {
+      "baselineStart": 2983,
+      "candidateStart": 3341,
+      "bytes": 1216,
+      "sha256": "a39cf2c16944aa4fba5433cdf9a346ea09195584bfada3add4019df66f337bf8"
+    },
+    {
+      "baselineStart": 4199,
+      "candidateStart": 5519,
+      "bytes": 1727,
+      "sha256": "3cf40567cf8c6a2e356bc061965075e96beef60d8c518032b746d0ad80d1de87"
+    }
+  ],
+  "roundTripExact": true,
+  "role": "native-runtime-capability"
+}

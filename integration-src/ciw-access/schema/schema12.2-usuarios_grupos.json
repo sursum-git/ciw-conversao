@@ -1,0 +1,32 @@
+{
+  "database": "espec",
+  "table": "usuarios_grupos",
+  "fields": [
+    {
+      "name": "login_usuario",
+      "type": "character",
+      "format": "x(32)",
+      "mandatory": false,
+      "extent": 0
+    },
+    {
+      "name": "cod_grupo",
+      "type": "integer",
+      "format": ">9",
+      "mandatory": false,
+      "extent": 0
+    }
+  ],
+  "indexes": [
+    {
+      "name": "primario",
+      "unique": true,
+      "primary": true,
+      "fields": [
+        "login_usuario",
+        "cod_grupo"
+      ]
+    }
+  ],
+  "evidence": "ReadCiwAccessSchema.p executado OpenEdge12.2 no .42; somente dicionario"
+}

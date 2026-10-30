@@ -1,0 +1,38 @@
+{
+  "status": "OFFICIAL_12_2_READ_ONLY_DICTIONARY_MATCH",
+  "proofs": [
+    {
+      "table": "item_container_custo_pgtos",
+      "currentFile": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\aux-schema\\schema-item_container_custo_pgtos.json",
+      "currentSha256": "d49aa383ba93199b31e6541336d06d0a0d48f8451df97832b2a1d6a59514d7b7",
+      "namesTypesExtentsAndIndexesEqual": true,
+      "fields": 4,
+      "indexes": 1
+    },
+    {
+      "table": "item_container_custo_nfs",
+      "currentFile": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\aux-schema\\schema-item_container_custo_nfs.json",
+      "currentSha256": "562dab1b3fc4ffaf65e93abb9792fa60c389c6ee4e7c2ca44a6dbc1cdef9e02a",
+      "namesTypesExtentsAndIndexesEqual": true,
+      "fields": 9,
+      "indexes": 1
+    },
+    {
+      "table": "item_container_custo_descontos",
+      "currentFile": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\aux-schema\\schema-item_container_custo_descontos.json",
+      "currentSha256": "044d91ef922c2b61eab94f8133d02060052ffb9bc26748b8edfd0d6cd03818d5",
+      "namesTypesExtentsAndIndexesEqual": true,
+      "fields": 5,
+      "indexes": 1
+    },
+    {
+      "table": "item_container_custo_despesas",
+      "currentFile": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\aux-schema\\schema-item_container_custo_despesas.json",
+      "currentSha256": "7824118862a315bc17769a6d31d0493c5b73859a5fd5cf9d2ffb4a40c0904133",
+      "namesTypesExtentsAndIndexesEqual": true,
+      "fields": 8,
+      "indexes": 1
+    }
+  ],
+  "expenseSingletonGroup": "Unique physical PK version+expense implies each legacy GROUP BY version+expense+nullable log_custo has one row; SUM preserves the physical value including NULL"
+}

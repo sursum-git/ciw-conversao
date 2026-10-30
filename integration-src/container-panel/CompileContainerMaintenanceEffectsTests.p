@@ -1,0 +1,32 @@
+/* Isolated diagnostics. Publish neither this runner nor its local r-code. */
+DEFINE VARIABLE n AS INTEGER NO-UNDO.
+DEFINE VARIABLE j AS INTEGER NO-UNDO.
+DEFINE VARIABLE cultureIndex AS INTEGER NO-UNDO.
+DEFINE VARIABLE nameValue AS CHARACTER NO-UNDO.
+DEFINE VARIABLE failed AS LOGICAL NO-UNDO.
+OUTPUT TO "compile-container-maintenance-effects.log".
+PUT UNFORMATTED "OpenEdge " PROVERSION SKIP.
+DO n=1 TO 3:
+ nameValue=ENTRY(n,"ContainerMaintenanceEffectsTest.p,ContainersItensCrudService.p,ContainersItensCrudTest.p").
+ COMPILE VALUE(nameValue) SAVE NO-ERROR.
+ PUT UNFORMATTED nameValue " COMPILER:ERROR=" COMPILER:ERROR SKIP.
+ IF COMPILER:ERROR OR ERROR-STATUS:ERROR THEN failed=TRUE.
+ DO j=1 TO ERROR-STATUS:NUM-MESSAGES: PUT UNFORMATTED ERROR-STATUS:GET-MESSAGE(j) SKIP. END.
+END.
+OUTPUT CLOSE.
+IF NOT failed THEN DO cultureIndex=1 TO 2:
+ SESSION:NUMERIC-FORMAT=ENTRY(cultureIndex,"AMERICAN,EUROPEAN").
+ DO n=1 TO 2:
+  nameValue=ENTRY(n,"ContainerMaintenanceEffectsTest.r,ContainersItensCrudTest.r").
+  RUN VALUE(nameValue) NO-ERROR.
+  OUTPUT TO "compile-container-maintenance-effects.log" APPEND.
+  IF ERROR-STATUS:ERROR THEN DO:
+   failed=TRUE. DO j=1 TO ERROR-STATUS:NUM-MESSAGES: PUT UNFORMATTED ERROR-STATUS:GET-MESSAGE(j) SKIP. END.
+  END.
+  ELSE PUT UNFORMATTED "PASS " nameValue " " SESSION:NUMERIC-FORMAT SKIP.
+  OUTPUT CLOSE.
+ END.
+END.
+OUTPUT TO "compile-container-maintenance-effects.log" APPEND.
+PUT UNFORMATTED (IF failed THEN "FAIL MAINTENANCE EFFECTS" ELSE "PASS MAINTENANCE EFFECTS") SKIP.
+OUTPUT CLOSE. QUIT.

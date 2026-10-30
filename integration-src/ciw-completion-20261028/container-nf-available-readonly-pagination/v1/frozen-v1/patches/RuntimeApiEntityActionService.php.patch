@@ -1,0 +1,23 @@
+--- baseline/php/RuntimeApiEntityActionService.php
++++ candidate/php/RuntimeApiEntityActionService.php
+@@ -939,6 +939,7 @@
+ 
+         }
+ 
++        if (RuntimeContainerNfAvailableRead::supports($definition)) { RuntimeContainerNfAvailableRead::pageResponse($body,$query); }
+         if (RuntimeItemCostManualRead::supports($definition)) { RuntimeItemCostManualRead::readResponse($body); }
+         if (RuntimeExpenseTaxRelationsRead::supports($definition)) { RuntimeExpenseTaxRelationsRead::readResponse($body); }
+         $containerFiscalKey = match ($definition['entityCode'] ?? null) {
+@@ -949,9 +950,9 @@
+ 
+         foreach ($body['data'] as $row) {
+ 
+-            $valid=$containerFiscalKey !== null ? is_array($row) && is_int($row['container_id'] ?? null) && is_int($row[$containerFiscalKey] ?? null) && $row[$containerFiscalKey] > 0 && $row[$containerFiscalKey] <= 2147483647 : (RuntimePurchaseContextAudit::supports($definition) ? RuntimePurchaseContextAudit::dataRow($row,$definition) && RuntimePurchaseContextAudit::matchesContext($row,$query) : (RuntimePurchaseOrderAudit::supports($definition) ? RuntimePurchaseOrderAudit::dataRow($row)
+-
+-                : is_array($row) && is_string($row['record_key'] ?? null) && $row['record_key']!==''));
++            $valid=RuntimeContainerNfAvailableRead::supports($definition) ? true : ($containerFiscalKey !== null ? is_array($row) && is_int($row['container_id'] ?? null) && is_int($row[$containerFiscalKey] ?? null) && $row[$containerFiscalKey] > 0 && $row[$containerFiscalKey] <= 2147483647 : (RuntimePurchaseContextAudit::supports($definition) ? RuntimePurchaseContextAudit::dataRow($row,$definition) && RuntimePurchaseContextAudit::matchesContext($row,$query) : (RuntimePurchaseOrderAudit::supports($definition) ? RuntimePurchaseOrderAudit::dataRow($row)
++
++                : is_array($row) && is_string($row['record_key'] ?? null) && $row['record_key']!=='')));
+ 
+             if (!$valid) { throw new RuntimeHttpException('CIW_ERP_RESPONSE_INVALID', 'Registro da consulta ERP MED inválido.', 502); }
+ 

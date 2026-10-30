@@ -1,0 +1,36 @@
+--- a/backend/src/Builder/ProgramBuilderService.php
++++ b/backend/src/Builder/ProgramBuilderService.php
+@@ -3612,7 +3612,7 @@
+             'processOptions' => $pageType === 'process' ? $this->normalizeProcessOptions($payload['processOptions'] ?? null, $entity, $payload['contextFields'] ?? []) : null,
+             'formOptions' => $this->normalizeFormOptions($payload['formOptions'] ?? null, $entity, $pageType, $payload['contextFields'] ?? []),
+             'rowLinks' => $this->normalizeRowLinks($payload['rowLinks'] ?? [], $entity),
+-            'contextFields' => $this->normalizeContextFields($payload['contextFields'] ?? [], $entity, $pageType),
++            'contextFields' => $this->normalizeContextFields($payload['contextFields'] ?? [], $entity, $pageType, $payload),
+             'allowCreate' => $pageType === 'master_detail' ? (bool) ($payload['allowCreate'] ?? true) : ($pageType === 'crud' ? (($this->apiEntitySupportsOperation($entity, 'create') || ($gridEditMode === 'batch' && $this->apiEntitySupportsOperation($entity, 'batch'))) ? (bool) ($payload['allowCreate'] ?? true) : ($entity && $entity->getEntityType() === 'api' ? false : (bool) ($payload['allowCreate'] ?? true))) : false),
+             'allowUpdate' => $pageType === 'master_detail' ? (bool) ($payload['allowUpdate'] ?? true) : ($pageType === 'crud' ? (($this->apiEntitySupportsOperation($entity, 'update') || ($gridEditMode === 'batch' && $this->apiEntitySupportsOperation($entity, 'batch'))) ? (bool) ($payload['allowUpdate'] ?? true) : ($entity && $entity->getEntityType() === 'api' ? false : (bool) ($payload['allowUpdate'] ?? true))) : false),
+             'allowDelete' => $pageType === 'master_detail' ? (bool) ($payload['allowDelete'] ?? true) : ($pageType === 'crud' ? (($this->apiEntitySupportsOperation($entity, 'delete') || ($gridEditMode === 'batch' && $this->apiEntitySupportsOperation($entity, 'batch'))) ? (bool) ($payload['allowDelete'] ?? true) : ($entity && $entity->getEntityType() === 'api' ? false : (bool) ($payload['allowDelete'] ?? true))) : false),
+@@ -7225,18 +7225,22 @@
+         return $value;
+     }
+ 
+-    private function normalizeContextFields(mixed $value, ?BuilderEntity $entity, string $pageType = 'crud'): array
++    private function normalizeContextFields(mixed $value, ?BuilderEntity $entity, string $pageType = 'crud', array $profile = []): array
+     {
+         if (!is_array($value) || !array_is_list($value) || count($value) > 10) { throw new RuntimeHttpException('BUILDER_CONTEXT_INVALID', 'Contexto invalido.', 422); }
+         $fields = []; foreach ($entity?->getFields() ?? [] as $field) { $fields[$field->getCode()] = $field; }
+         $seen = [];
+         foreach ($value as $item) {
+-            $this->closedObject($item, ['field', 'filter', 'createDefault', 'readonly', 'required', 'filterOnly'], 'contextFields');
++            $this->closedObject($item, ['field', 'filter', 'createDefault', 'readonly', 'required', 'filterOnly', 'integerRange'], 'contextFields');
+             $field = $item['field'] ?? '';
+             if (!isset($fields[$field]) || $fields[$field]->getDataType() !== 'integer' || isset($seen[$field])) { throw new RuntimeHttpException('BUILDER_CONTEXT_INVALID', 'Contexto exige campo integer existente e unico.', 422); }
+             $seen[$field] = true;
+             if (array_key_exists('filterOnly', $item)) {
+                 if ($pageType !== 'crud' || !is_bool($item['filterOnly']) || ($item['filterOnly'] && (($item['required'] ?? null) !== false || ($item['filter'] ?? null) !== true || ($item['readonly'] ?? null) !== true || ($item['createDefault'] ?? null) !== false))) { throw new RuntimeHttpException('BUILDER_CONTEXT_INVALID', 'filterOnly exige CRUD, contexto opcional readonly, filtro ativo e sem default de criacao.', 422); }
++            }
++            if (array_key_exists('integerRange', $item)) {
++                $range = $item['integerRange']; $unsupportedConsumer = false; foreach ($entity->getFields() as $candidate) { $options = $candidate->getOptions(); if (isset($options['api']['optionsSource']) || isset($options['attachment']) || ($options['editor'] ?? null) === 'file') { $unsupportedConsumer = true; } }
++                if ($pageType !== 'crud' || ($profile['allowCreate'] ?? null) !== false || ($profile['allowUpdate'] ?? null) !== false || ($profile['allowDelete'] ?? null) !== false || $unsupportedConsumer || $fields[$field]->isPrimaryKey() || ($item['required'] ?? null) !== true || ($item['readonly'] ?? null) !== true || ($item['filter'] ?? null) !== true || ($item['createDefault'] ?? null) !== false || !is_array($range) || array_is_list($range) || count($range) !== 2 || array_diff(array_keys($range), ['min', 'max']) || !is_int($range['min'] ?? null) || !is_int($range['max'] ?? null) || $range['min'] < -2147483648 || $range['max'] > 2147483647 || $range['min'] > $range['max']) { throw new RuntimeHttpException('BUILDER_CONTEXT_INVALID', 'integerRange exige CRUD readonly, integer nao PK, sem opcoes remotas/arquivos e limites int32 fechados.', 422); }
+             }
+             foreach (['filter', 'createDefault', 'readonly', 'required'] as $key) { if (isset($item[$key]) && !is_bool($item[$key])) { throw new RuntimeHttpException('BUILDER_CONTEXT_INVALID', 'Propriedade de contexto deve ser booleana.', 422); } }
+         }

@@ -1,0 +1,116 @@
+--- baseline/sursum-api/programs/ContainersPainelFinanceReadService.p
++++ candidate/sursum-api/programs/ContainersPainelFinanceReadService.p
+@@ -55,6 +55,20 @@
+ DEFINE VARIABLE iNfReads AS INTEGER NO-UNDO.
+ DEFINE VARIABLE cNfError AS CHARACTER NO-UNDO.
+ DEFINE VARIABLE iNfStatus AS INTEGER NO-UNDO.
++/* Internal projection comes only from NfRow. The original JSON is the output;
++   typed columns exist solely for the shared reader's filter/order/page engine. */
++DEFINE TEMP-TABLE ttNfPage NO-UNDO
++ FIELD container_id AS INTEGER FIELD nf_key AS CHARACTER CASE-SENSITIVE
++ FIELD documento_localizado AS LOGICAL FIELD estab AS CHARACTER FIELD documento AS CHARACTER
++ FIELD serie AS CHARACTER FIELD cod_emitente AS INTEGER FIELD nat_operacao AS CHARACTER
++ FIELD especie AS INTEGER FIELD dt_emissao AS DATE FIELD dt_trans AS DATE
++ FIELD tot_valor AS DECIMAL DECIMALS 10 FIELD despesa_nota AS DECIMAL DECIMALS 10
++ FIELD valor_embal AS DECIMAL DECIMALS 10 FIELD valor_frete AS DECIMAL DECIMALS 10
++ FIELD valor_mercad AS DECIMAL DECIMALS 10 FIELD valor_outras AS DECIMAL DECIMALS 10
++ FIELD valor_seguro AS DECIMAL DECIMALS 10 FIELD nf_original_json AS CLOB
++ INDEX pk IS PRIMARY UNIQUE nf_key.
++DEFINE VARIABLE joNfPageResponse AS JsonObject NO-UNDO.
++DEFINE VARIABLE iNfPageRows AS INTEGER NO-UNDO.
+ 
+ FUNCTION FindFirst RETURNS LOGICAL (phBuffer AS HANDLE,pcCondition AS CHARACTER):
+   DEFINE VARIABLE lValue AS LOGICAL NO-UNDO.
+@@ -94,7 +108,9 @@
+ FUNCTION AllowedName RETURNS LOGICAL (pcName AS CHARACTER):
+   DEFINE VARIABLE cName AS CHARACTER CASE-SENSITIVE NO-UNDO.
+   cName=pcName.
+-  RETURN cName="operation" OR cName="resource" OR cName="container_id" OR cName="id"
++  RETURN (cResource="nfs-disponiveis" AND cOperation="read"
++    AND (cName="skip" OR cName="take" OR cName="filter" OR cName="sort"))
++    OR cName="operation" OR cName="resource" OR cName="container_id" OR cName="id"
+     OR (cResource<>"pagamentos-disponiveis" AND cOperation="get" AND cName=cKeyField).
+ END FUNCTION.
+ FUNCTION KeyPart RETURNS CHARACTER (pcValue AS CHARACTER):
+@@ -373,14 +389,59 @@
+    END.
+    IF NOT excluded THEN DO:
+     countRows=countRows + 1.
+-    IF countRows>200 THEN RUN NfFail("CONTAINER_NF_CANDIDATE_LIMIT",503).
+     RUN NfRow(TRUE,OUTPUT joRow). RUN AcceptRow(joRow).
+    END.
+    hDocuments:GET-NEXT().
+   END.
+-  hDocuments:QUERY-CLOSE(). finished=TRUE.
++  hDocuments:QUERY-CLOSE().
++  /* One outer deadline includes collection AND the common reader. Its own
++     deadline cannot extend this request to collection10 + reader10 seconds. */
++  IF cOperation="read" THEN RUN NfPage.
++  finished=TRUE.
+  END.
+  IF NOT finished OR ETIME - iNfStarted>=10000 THEN RUN NfFail("CONTAINER_NF_QUERY_TIMEOUT",503).
++END PROCEDURE.
++PROCEDURE KeepNfPage:
++ DEFINE INPUT PARAMETER originalRow AS JsonObject NO-UNDO.
++ DEFINE VARIABLE fieldsValue AS CHARACTER EXTENT NO-UNDO.
++ DEFINE VARIABLE k AS INTEGER NO-UNDO.
++ DEFINE VARIABLE f AS HANDLE NO-UNDO.
++ DEFINE VARIABLE dateText AS CHARACTER NO-UNDO.
++ DEFINE VARIABLE serialized AS LONGCHAR NO-UNDO.
++ CREATE ttNfPage. iNfPageRows=iNfPageRows + 1. fieldsValue=originalRow:GetNames().
++ DO k=1 TO EXTENT(fieldsValue):
++  f=BUFFER ttNfPage:HANDLE:BUFFER-FIELD(fieldsValue[k]).
++  IF originalRow:IsNull(fieldsValue[k]) THEN f:BUFFER-VALUE=?.
++  ELSE CASE f:DATA-TYPE:
++   WHEN "CHARACTER" THEN f:BUFFER-VALUE=originalRow:GetCharacter(fieldsValue[k]).
++   WHEN "INTEGER" THEN f:BUFFER-VALUE=originalRow:GetInteger(fieldsValue[k]).
++   WHEN "DECIMAL" THEN f:BUFFER-VALUE=originalRow:GetDecimal(fieldsValue[k]).
++   WHEN "LOGICAL" THEN f:BUFFER-VALUE=originalRow:GetLogical(fieldsValue[k]).
++   WHEN "DATE" THEN DO:
++    dateText=originalRow:GetCharacter(fieldsValue[k]).
++    f:BUFFER-VALUE=DATE(INTEGER(SUBSTRING(dateText,6,2)),INTEGER(SUBSTRING(dateText,9,2)),INTEGER(SUBSTRING(dateText,1,4))).
++   END.
++   OTHERWISE RUN NfFail("CONTAINER_NF_PROJECTION_INVALID",503).
++  END CASE.
++ END.
++ originalRow:Write(serialized,FALSE). COPY-LOB FROM serialized TO ttNfPage.nf_original_json.
++ RELEASE ttNfPage. DELETE OBJECT originalRow.
++END PROCEDURE.
++PROCEDURE NfPage:
++ DEFINE VARIABLE queryValue AS JsonObject NO-UNDO.
++ DEFINE VARIABLE readerPath AS CHARACTER NO-UNDO.
++ IF iNfPageRows>iNfReads OR iNfReads>50000 THEN RUN NfFail("CONTAINER_NF_SOURCE_LIMIT",503).
++ queryValue=CAST(poRequest:Clone(),JsonObject).
++ queryValue:Remove("resource"). queryValue:Remove("container_id").
++ readerPath=SEARCH("sursum-api/programs/CiwErpReadService.r").
++ IF readerPath=? THEN RUN NfFail("CONTAINER_NF_READER_REQUIRED",503).
++ RUN VALUE(readerPath)(INPUT BUFFER ttNfPage:HANDLE,INPUT "container_nfs_disponiveis",INPUT "",INPUT queryValue,OUTPUT joNfPageResponse).
++ DELETE OBJECT queryValue.
++ IF NOT joNfPageResponse:GetLogical("success") THEN DO:
++  IF joNfPageResponse:GetJsonObject("error"):GetCharacter("code")="CIW_ERP_QUERY_TIMEOUT" THEN RUN NfFail("CONTAINER_NF_QUERY_TIMEOUT",503).
++  RUN NfFail(joNfPageResponse:GetJsonObject("error"):GetCharacter("code"),joNfPageResponse:GetJsonObject("error"):GetInteger("status")).
++ END.
++ IF joNfPageResponse:GetInteger("total")>iNfPageRows THEN RUN NfFail("CONTAINER_NF_PROJECTION_INVALID",503).
+ END PROCEDURE.
+ PROCEDURE OpenQuery:
+   DEFINE INPUT PARAMETER phQuery AS HANDLE NO-UNDO.
+@@ -566,7 +627,8 @@
+   cKey=poRow:GetCharacter(cKeyField).
+   IF CAN-FIND(ttSeen WHERE ttSeen.recordKey=cKey) THEN DO: DELETE OBJECT poRow. RETURN. END.
+   CREATE ttSeen. ttSeen.recordKey=cKey.
+-  IF cOperation="read" THEN jaRows:Add(poRow).
++  IF cResource="nfs-disponiveis" AND cOperation="read" THEN RUN KeepNfPage(poRow).
++  ELSE IF cOperation="read" THEN jaRows:Add(poRow).
+   ELSE IF cKey=cId THEN ASSIGN joSelected=poRow lMatched=TRUE.
+   ELSE DELETE OBJECT poRow.
+ END PROCEDURE.
+@@ -688,6 +750,9 @@
+     IF NOT lMatched THEN DO: RUN Fail("CONTAINER_CHILD_NOT_FOUND","Registro nao encontrado neste container.",404). RETURN. END.
+     poResponse:Add("success",TRUE). poResponse:Add("data",joSelected).
+   END.
++  ELSE IF cResource="nfs-disponiveis" THEN DO:
++    DELETE OBJECT poResponse. poResponse=joNfPageResponse.
++  END.
+   ELSE DO: poResponse:Add("success",TRUE). poResponse:Add("data",jaRows). END.
+   CATCH e AS Progress.Lang.Error:
+     IF cResource="nfs-disponiveis" AND cNfError<>"" THEN RUN Fail(cNfError,"Consulta de NFs disponiveis recusada; contexto ou limite invalido.",iNfStatus).

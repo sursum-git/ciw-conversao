@@ -1,0 +1,30 @@
+{
+  "canonical": "D:\\opencode\\construtor-pg\\docs\\paridade-demo-producao.md",
+  "relative": "docs/paridade-demo-producao.md",
+  "baselineSha256": "d0634a264dfc151c242af05a7c1274cd22c27e0678d4a1e52124740100dc363c",
+  "candidateSha256": "9386954538c919367e6ef1b5bae9fe80b1b4d0da9e274231349b1d9e2ee411f0",
+  "edits": [
+    {
+      "start": 1616,
+      "end": 1616,
+      "beforeBase64": "",
+      "afterBase64": "fCAyMDI2LTEwLTI4IHwgTmF2ZWdh5+NvIENSVUQgcG9yIFBLIGNvbSBmaWx0ZXJPbmx5IG9wdC1pbiB8IEV4ZW1wbG8gY2FuZGlkYXRvIGNvbnRhaW5lci1pdGVtLW5hdmlnYXRpb24tZmlsdGVyLW9ubHkvZXhhbXBsZXMvY2l3LWNvbnRhaW5lci1pdGVucy1maWx0ZXItb25seS5qc29uIHwgTWVzbW8gbW90b3IgbmF0aXZvOyBwcm9kdefjbyBwb3Igc2NyZWVuSWQvZW5kcG9pbnRJZCwgc2VtIG1vY2svZXhhbXBsZXMgZW0gcnVudGltZTsgY29udGV4dG8gZXh0ZXJubyBwcmVzZXJ2YSBzb21lbnRlIHBhaSB8IHBlbmRlbnRlIHwgSW50ZWdyYXIgQnVpbGRlci9ub3JtYWxpemVyL3ZhbGlkYXRvci9FbmdpbmUvc2NoZW1hIGUgY29uZmVyaXIgV0hPTEUgcHJldmlld3MxMDA4LzEwMDIvMTAxNDsgcHVibGljYXIgbWV0YWRhZG9zIGFw83MgcmV2aXPjbyBleHBs7WNpdGEgZGUxMCBkZWx0YXMgZGVjaW1hbDIwNSB8IFNraWxsIGF1c2VudGU7IGNoZWNrbGlzdCBhcGxpY2FkbyBkaXJldGFtZW50ZS4gU2VtIG5lZ/NjaW8vZ3JhbnQgb3Ugbm92byB3cml0ZXI7IGV4cG9ydCBFUlA+PTEwMDAgY29udGludWEgbGltaXRhZG8uIHwNCg=="
+    }
+  ],
+  "unchangedByteRanges": [
+    {
+      "baselineStart": 0,
+      "candidateStart": 0,
+      "bytes": 1616,
+      "sha256": "1b5a0bed491d8c44ce933816b4e06bbe1f91657ee46b19b06673f72deeedec84"
+    },
+    {
+      "baselineStart": 1616,
+      "candidateStart": 2196,
+      "bytes": 106115,
+      "sha256": "3443fccee5ece839cebb2fec4cd2000ff6c9c43c450bde10895393d42d182795"
+    }
+  ],
+  "roundTripExact": true,
+  "role": "documentation-parity-only"
+}

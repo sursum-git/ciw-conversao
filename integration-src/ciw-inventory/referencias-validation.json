@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-20",
+  "instance": "sursum-api/med",
+  "resources": [
+    {
+      "resource": "itens",
+      "screenId": "ciw.itens-erp",
+      "programCode": "cd0101",
+      "version": "1.0.0",
+      "applications": [
+        "cons_itens"
+      ],
+      "runtimeReadValidated": true,
+      "visualValidation": "pending",
+      "evidence": "docs/ciw-itens-representantes-validacao-2026-10-20.md;12.2/.42:48checks/cultura/codepage; PASOE/runtime vsDB, DISTINCT/hashUTF8, detalhe/filtros/paginacao, negativas,7consultasanteriores."
+    },
+    {
+      "resource": "representantes_ativos",
+      "screenId": "ciw.representantes-ativos",
+      "programCode": "cd0102",
+      "version": "1.0.0",
+      "applications": [
+        "cons_representante_ativos"
+      ],
+      "runtimeReadValidated": true,
+      "visualValidation": "pending",
+      "evidence": "docs/ciw-itens-representantes-validacao-2026-10-20.md;12.2/.42:48checks/cultura/codepage; PASOE/runtime vsDB, DISTINCT/hashUTF8, detalhe/filtros/paginacao, negativas,7consultasanteriores."
+    }
+  ]
+}

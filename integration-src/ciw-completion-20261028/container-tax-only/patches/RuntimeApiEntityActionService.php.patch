@@ -1,0 +1,36 @@
+--- D:\opencode\construtor-pg\backend\src\Runtime\RuntimeApiEntityActionService.php
++++ D:\opencode\construtor-pg\backend\src\Runtime\RuntimeApiEntityActionService.php
+@@ -341,6 +341,12 @@
+         }
+ 
+         $requestData += $context;
++        $containerTaxOnly = RuntimeContainerTaxAudit::selected($operation);
++        $containerTaxActor = null;
++        if ($containerTaxOnly) {
++            if (!RuntimeContainerTaxAudit::binding($definition, $endpoint) || $names !== [] || $requestData !== $context) { $invalid('Calculo fiscal exige operacao fixa e somente contexto do container.'); }
++            $containerTaxActor = $this->attachmentActor();
++        }
+         $allocationProcess = RuntimeContainerAllocationAudit::supports($definition);
+         $allocationActor = null;
+         if ($allocationProcess) {
+@@ -392,10 +398,11 @@
+             }
+ 
+             $response = $this->requestEndpoint($definition, $endpoint, $definition['apiSource']['authHeaders'] ?? [], [], $requestData);
++            if ($containerTaxOnly && ($response['body']['committed'] ?? null) !== true) { throw new RuntimeHttpException('CONTAINER_TAX_UNCONFIRMED','Calculo fiscal nao confirmado. Consulte a transacao antes de repetir.',502); }
+             if ($allocationProcess && ($response['body']['committed'] ?? null) !== true) { throw new RuntimeHttpException('CONTAINER_ALLOCATION_UNCONFIRMED', 'Alocacao nao confirmada. Consulte a transacao antes de repetir.', 502); }
+             if ($expenseGeneration && ($response['body']['committed']??null)!==true) { throw new RuntimeHttpException('PURCHASE_EXPENSE_UNCONFIRMED','Geracao de despesas nao confirmada. Consulte a transacao antes de repetir.',502); }
+ 
+-            if (!$allocationProcess && (($response['body']['success'] ?? true) === false || isset($response['body']['error']))) { throw new RuntimeHttpException('ENTITY_API_PROCESS_FAILED', 'A API recusou o processo.', 422); }
++            if (!$allocationProcess && !($containerTaxOnly && ($response['body']['committed']??null)===true) && (($response['body']['success'] ?? true) === false || isset($response['body']['error']))) { throw new RuntimeHttpException('ENTITY_API_PROCESS_FAILED', 'A API recusou o processo.', 422); }
+ 
+             try {
+ 
+@@ -424,6 +431,7 @@
+ 
+             }
+ 
++            if ($containerTaxOnly) { $audit = RuntimeContainerTaxAudit::inspect($definition,$endpoint,$response['body'],$context,$containerTaxActor); }
+             if (RuntimeCiwCotacaoAudit::isImportEndpoint($definition, $endpoint)) {
+ 
+                 $audit = RuntimeCiwCotacaoAudit::inspect($definition, $endpoint, $response['body'], 'import-bc', null);

@@ -1,0 +1,43 @@
+{
+  "database": "espec",
+  "table": "pagtos_proc_compra",
+  "fields": [
+    {
+      "name": "num_id_tit_ap",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "proc_compra_id",
+      "type": "integer",
+      "format": "->,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    }
+  ],
+  "indexes": [
+    {
+      "name": "ind_pagtos_proc_compra",
+      "unique": true,
+      "primary": true,
+      "fields": [
+        "num_id_tit_ap",
+        "proc_compra_id"
+      ]
+    }
+  ],
+  "triggers": [
+  ]
+}

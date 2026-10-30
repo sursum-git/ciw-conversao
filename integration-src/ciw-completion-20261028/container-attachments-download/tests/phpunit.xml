@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="bootstrap.php" cacheResult="false"><testsuites><testsuite name="ContainerAttachmentDownload">
+<file>RuntimeContainerAttachmentDownloadTest.php</file>
+<file>D:/opencode/construtor-pg/backend/tests/Runtime/RuntimePurchaseAttachmentTransportTest.php</file>
+<file>D:/opencode/construtor-pg/backend/tests/Runtime/RuntimePurchaseAttachmentAuditTest.php</file>
+<file>D:/opencode/construtor-pg/backend/tests/Runtime/RuntimePurchaseAttachmentLogScopeTest.php</file>
+<file>D:/opencode/construtor-pg/backend/tests/RuntimePurchaseOrderAttachmentTransportTest.php</file>
+<file>D:/opencode/construtor-pg/backend/tests/RuntimePurchaseOrderAttachmentAuditTest.php</file>
+<file>D:/opencode/construtor-pg/backend/tests/RuntimePurchaseOrderAttachmentLogScopeTest.php</file>
+<file>D:/opencode/construtor-pg/backend/tests/Runtime/RuntimeFileTransferContextTest.php</file>
+<file>D:/opencode/construtor-pg/backend/tests/Runtime/RuntimeAttachmentWriteCoordinatorTest.php</file>
+<file>D:/opencode/construtor-pg/backend/tests/Attachments/AttachmentStorageBrokerTest.php</file>
+<file>D:/opencode/construtor-pg/backend/tests/Attachments/AttachmentFilePolicyTest.php</file>
+<file>D:/opencode/construtor-pg/backend/tests/Attachments/AttachmentStorageConfigurationTest.php</file>
+<file>D:/opencode/construtor-pg/backend/tests/Runtime/RuntimeApiEntityActionServiceTest.php</file>
+</testsuite></testsuites></phpunit>

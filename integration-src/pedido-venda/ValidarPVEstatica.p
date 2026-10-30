@@ -1,0 +1,38 @@
+/* Runner auxiliar para banco fisico local, com schema sintetico. */
+DEFINE VARIABLE i AS INTEGER NO-UNDO.
+DEFINE VARIABLE j AS INTEGER NO-UNDO.
+DEFINE VARIABLE lFailed AS LOGICAL NO-UNDO.
+DEFINE VARIABLE cFile AS CHARACTER NO-UNDO.
+IF NUM-DBS <> 1 OR INDEX(PDBNAME(1), "pedido-venda-fixture") = 0 THEN QUIT.
+CREATE ALIAS espec FOR DATABASE pvfixture.
+CREATE ALIAS ems2cad FOR DATABASE pvfixture.
+CREATE ALIAS ems2med FOR DATABASE pvfixture.
+OUTPUT TO "pv-static-validation.log".
+PUT UNFORMATTED "OpenEdge " PROVERSION SKIP.
+DO i = 1 TO 2:
+    cFile = ENTRY(i, "FiltroTipoUsuarioPV.p,FiltroTipoUsuarioPVStaticTest.p").
+    COMPILE VALUE(cFile) NO-ERROR.
+    PUT UNFORMATTED cFile " COMPILER:ERROR=" COMPILER:ERROR SKIP.
+    IF COMPILER:ERROR OR ERROR-STATUS:ERROR THEN lFailed = TRUE.
+    DO j = 1 TO ERROR-STATUS:NUM-MESSAGES:
+        PUT UNFORMATTED ERROR-STATUS:GET-MESSAGE(j) SKIP.
+    END.
+END.
+OUTPUT CLOSE.
+IF NOT lFailed THEN DO i = 1 TO 2:
+    SESSION:NUMERIC-FORMAT = ENTRY(i, "AMERICAN,EUROPEAN").
+    RUN FiltroTipoUsuarioPVStaticTest.p NO-ERROR.
+    OUTPUT TO "pv-static-validation.log" APPEND.
+    IF ERROR-STATUS:ERROR THEN DO:
+        lFailed = TRUE.
+        DO j = 1 TO ERROR-STATUS:NUM-MESSAGES:
+            PUT UNFORMATTED ERROR-STATUS:GET-MESSAGE(j) SKIP.
+        END.
+    END.
+    OUTPUT CLOSE.
+    IF lFailed THEN LEAVE.
+END.
+OUTPUT TO "pv-static-validation.log" APPEND.
+PUT UNFORMATTED (IF lFailed THEN "FAIL" ELSE "PASS") SKIP.
+OUTPUT CLOSE.
+QUIT.

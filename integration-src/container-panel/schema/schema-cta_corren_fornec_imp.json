@@ -1,0 +1,224 @@
+{
+  "database": "espec",
+  "table": "cta_corren_fornec_imp",
+  "fields": [
+    {
+      "name": "cta_corren_fornec_imp_id",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "fornecedor_id",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "data",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "historico",
+      "type": "character",
+      "format": "x(2000)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_tipo_movto",
+      "type": "integer",
+      "format": ">9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vl_lancto",
+      "type": "decimal",
+      "format": "->>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod_acao",
+      "type": "integer",
+      "format": ">9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "login",
+      "type": "character",
+      "format": "x(20)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "data_hora",
+      "type": "datetime",
+      "format": "99\/99\/9999 HH:MM:SS",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "num_id_tit_ap",
+      "type": "integer",
+      "format": ">>>,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "item_proc_compra_id",
+      "type": "integer",
+      "format": ">>>,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "item_container_id",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "transacao_id",
+      "type": "integer",
+      "format": ">>>,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    }
+  ],
+  "indexes": [
+    {
+      "name": "ind_fornec",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "fornecedor_id",
+        "data"
+      ]
+    },
+    {
+      "name": "ind_id",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "item_proc_compra_id",
+        "num_id_tit_ap"
+      ]
+    },
+    {
+      "name": "ind_tipo_movto",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod_tipo_movto",
+        "item_proc_compra_id",
+        "num_id_tit_ap",
+        "fornecedor_id"
+      ]
+    },
+    {
+      "name": "ind_tit_ap",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "num_id_tit_ap",
+        "item_proc_compra_id",
+        "fornecedor_id",
+        "cod_tipo_movto",
+        "data_hora"
+      ]
+    },
+    {
+      "name": "ind_transacao",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "transacao_id",
+        "cta_corren_fornec_imp_id"
+      ]
+    },
+    {
+      "name": "primario",
+      "unique": true,
+      "primary": true,
+      "fields": [
+        "cta_corren_fornec_imp_id"
+      ]
+    }
+  ],
+  "triggers": [
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "status": "CANDIDATE_ONLY_NOT_INTEGRATED",
+  "canonicalWrites": false,
+  "productionMocks": false,
+  "matrixBaseline": {
+    "target": "D:\\opencode\\construtor-pg\\docs\\paridade-demo-producao.md",
+    "sha256": "c48740b97709554be965acf3fac137d3044042c0e17653f73dac6159d9eab937"
+  },
+  "files": [
+    {
+      "path": "docs/batch-snapshot.md",
+      "sha256": "aef2d012167fe3d22f7efeca09bbfd2a464c52c1a9779b74c28b6fbb7b7f9e69"
+    },
+    {
+      "path": "docs/paridade-demo-producao.md",
+      "sha256": "0e8ba9755ba7207d33abf13bd7bbf450d888a46069050e7966e2dc102d598664"
+    },
+    {
+      "path": "examples/batch-snapshot.crud.json",
+      "sha256": "70c33300047c04fdd4bc44439a97b3914ffcd5af9fc299bdcdbc341898f113e2"
+    },
+    {
+      "path": "examples/pages/batch-snapshot.html",
+      "sha256": "be57db4d48496b388948ed74ff41b902e8c18daa51862f806726171a8e61969d"
+    },
+    {
+      "path": "patches/paridade-demo-producao.md.patch",
+      "sha256": "329efe79c4fb82a0190e1e8e6b6324a75cba1d9399b28e50da0f6f79d15a2112"
+    },
+    {
+      "path": "src/examples/batch-snapshot-example.js",
+      "sha256": "bca340eef506eef5fe5acec025505440119628e7428097a60a2c1b17bcdd10c0"
+    }
+  ]
+}

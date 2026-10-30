@@ -1,0 +1,90 @@
+[
+  {
+    "path": "D:/opencode/conversao-sc/sources/scriptcase/containers/form_anexos_container/index.php",
+    "sha256": "dd1c39a46e5f040b1b9401b079cc116c591863f1f147a25548b73449add3d072",
+    "lineRanges": [
+      [
+        47,
+        103
+      ],
+      [
+        421,
+        421
+      ],
+      [
+        729,
+        729
+      ]
+    ],
+    "role": "document root derives from existing _lib/file/doc configuration"
+  },
+  {
+    "path": "D:/opencode/conversao-sc/sources/scriptcase/containers/form_anexos_container/form_anexos_container_apl.php",
+    "sha256": "2cd913aa69d033fadbd5fa6443e94d936f974c10b12018d155d52afac3d59cf1",
+    "lineRanges": [
+      [
+        3833,
+        3846
+      ],
+      [
+        5436,
+        5442
+      ]
+    ],
+    "role": "legacy upload basename persisted; writes outside this candidate"
+  },
+  {
+    "path": "D:/opencode/conversao-sc/sources/scriptcase/ciw-completion-next19c-20261028/cons_anexos_container/cons_anexos_container_grid.class.php",
+    "sha256": "6a75d8b9272e8f6aa65aef5336dd5a197cd6be19f4e969e93ed567728bd3ab4f",
+    "lineRanges": [
+      [
+        3976,
+        4003
+      ]
+    ],
+    "role": "active protected attachment link; empty subdirectory"
+  },
+  {
+    "path": "D:/opencode/conversao-sc/integration-src/container-panel/schema/schema-anexos_container.json",
+    "sha256": "ad7c941786b03814db718a520e548d42d2359b7513019a6d008286706701366d",
+    "lineRanges": [],
+    "role": "physical seven-field attachment dictionary"
+  },
+  {
+    "path": "D:/opencode/conversao-sc/integration-src/container-panel/schema/schema-tipos_anexo.json",
+    "sha256": "140cf7ee8d12b05450eafda73e0fba4e794add5a9f2f047d755c1cf57c222851",
+    "lineRanges": [],
+    "role": "physical type lookup dictionary"
+  },
+  {
+    "path": "D:/opencode/conversao-sc/integration-src/container-panel/schema/schema-pp-container.json",
+    "sha256": "c8034298dd1e210827826c069647fcc1446143552751e77a2ee9661e81a1d813",
+    "lineRanges": [],
+    "role": "physical master dictionary"
+  },
+  {
+    "path": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersPainelRead.p",
+    "sha256": "ee5764cbb5c657390d48a90e005c26455f37bbf15fe440f5cb98b65569542047",
+    "role": "unchanged authenticated fixed-buffer wrapper; ABI preserved"
+  },
+  {
+    "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-attachments-current/source-current.json",
+    "sha256": "487f41bb38e4b9188498a90a29259c1e738246bf55ee0ea9b304ad74b9bf28a6",
+    "role": "live sanitized metadata snapshot; never overwrite authentication from DTO"
+  },
+  {
+    "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-attachments-current/container-anexos-entity.json",
+    "sha256": "18e21263b86c10b0a509eaad249bb561784c085210f275f54992c4df71fb5844",
+    "role": "live sanitized metadata snapshot; never overwrite authentication from DTO"
+  },
+  {
+    "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-attachments-current/op1004-program.json",
+    "sha256": "02bead8bb3a5fe12e4b8d203444b5fa0208465201247dac2ebfcd900043fe8c3",
+    "role": "live sanitized metadata snapshot; never overwrite authentication from DTO"
+  },
+  {
+    "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-attachments-current/sanitization.json",
+    "sha256": "0d1b85cdf90e9546a5046decbe5dcbc0a7fd4ee1273664f9ae50bd81e15d9b8c",
+    "role": "live sanitized metadata snapshot; never overwrite authentication from DTO"
+  }
+]

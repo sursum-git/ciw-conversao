@@ -1,0 +1,78 @@
+{
+  "relative": "backend/src/Builder/ProgramBuilderService.php",
+  "role": "generic-native-capability",
+  "baselineSha256": "a58a98b85127c85377b1592c2f6bde38b0a8bf78ce86d343bed239cf084e0401",
+  "candidateSha256": "c0653c409de42dc98a9904c6b3bf4d86217e71d49445374700c30060093ba123",
+  "hunks": [
+    {
+      "baselineStart": 177828,
+      "baselineEnd": 177944,
+      "candidateStart": 177828,
+      "candidateEnd": 177954,
+      "beforeBase64": "ICAgICAgICAgICAgJ2NvbnRleHRGaWVsZHMnID0+ICR0aGlzLT5ub3JtYWxpemVDb250ZXh0RmllbGRzKCRwYXlsb2FkWydjb250ZXh0RmllbGRzJ10gPz8gW10sICRlbnRpdHksICRwYWdlVHlwZSksDQo=",
+      "afterBase64": "ICAgICAgICAgICAgJ2NvbnRleHRGaWVsZHMnID0+ICR0aGlzLT5ub3JtYWxpemVDb250ZXh0RmllbGRzKCRwYXlsb2FkWydjb250ZXh0RmllbGRzJ10gPz8gW10sICRlbnRpdHksICRwYWdlVHlwZSwgJHBheWxvYWQpLA0K"
+    },
+    {
+      "baselineStart": 376582,
+      "baselineEnd": 376699,
+      "candidateStart": 376592,
+      "candidateEnd": 376730,
+      "beforeBase64": "ICAgIHByaXZhdGUgZnVuY3Rpb24gbm9ybWFsaXplQ29udGV4dEZpZWxkcyhtaXhlZCAkdmFsdWUsID9CdWlsZGVyRW50aXR5ICRlbnRpdHksIHN0cmluZyAkcGFnZVR5cGUgPSAnY3J1ZCcpOiBhcnJheQ0K",
+      "afterBase64": "ICAgIHByaXZhdGUgZnVuY3Rpb24gbm9ybWFsaXplQ29udGV4dEZpZWxkcyhtaXhlZCAkdmFsdWUsID9CdWlsZGVyRW50aXR5ICRlbnRpdHksIHN0cmluZyAkcGFnZVR5cGUgPSAnY3J1ZCcsIGFycmF5ICRwcm9maWxlID0gW10pOiBhcnJheQ0K"
+    },
+    {
+      "baselineStart": 377046,
+      "baselineEnd": 377180,
+      "candidateStart": 377077,
+      "candidateEnd": 377227,
+      "beforeBase64": "ICAgICAgICAgICAgJHRoaXMtPmNsb3NlZE9iamVjdCgkaXRlbSwgWydmaWVsZCcsICdmaWx0ZXInLCAnY3JlYXRlRGVmYXVsdCcsICdyZWFkb25seScsICdyZXF1aXJlZCcsICdmaWx0ZXJPbmx5J10sICdjb250ZXh0RmllbGRzJyk7DQo=",
+      "afterBase64": "ICAgICAgICAgICAgJHRoaXMtPmNsb3NlZE9iamVjdCgkaXRlbSwgWydmaWVsZCcsICdmaWx0ZXInLCAnY3JlYXRlRGVmYXVsdCcsICdyZWFkb25seScsICdyZXF1aXJlZCcsICdmaWx0ZXJPbmx5JywgJ2ludGVnZXJSYW5nZSddLCAnY29udGV4dEZpZWxkcycpOw0K"
+    },
+    {
+      "baselineStart": 377979,
+      "baselineEnd": 377979,
+      "candidateStart": 378026,
+      "candidateEnd": 379283,
+      "beforeBase64": "",
+      "afterBase64": "ICAgICAgICAgICAgfQ0KICAgICAgICAgICAgaWYgKGFycmF5X2tleV9leGlzdHMoJ2ludGVnZXJSYW5nZScsICRpdGVtKSkgew0KICAgICAgICAgICAgICAgICRyYW5nZSA9ICRpdGVtWydpbnRlZ2VyUmFuZ2UnXTsgJHVuc3VwcG9ydGVkQ29uc3VtZXIgPSBmYWxzZTsgZm9yZWFjaCAoJGVudGl0eS0+Z2V0RmllbGRzKCkgYXMgJGNhbmRpZGF0ZSkgeyAkb3B0aW9ucyA9ICRjYW5kaWRhdGUtPmdldE9wdGlvbnMoKTsgaWYgKGlzc2V0KCRvcHRpb25zWydhcGknXVsnb3B0aW9uc1NvdXJjZSddKSB8fCBpc3NldCgkb3B0aW9uc1snYXR0YWNobWVudCddKSB8fCAoJG9wdGlvbnNbJ2VkaXRvciddID8/IG51bGwpID09PSAnZmlsZScpIHsgJHVuc3VwcG9ydGVkQ29uc3VtZXIgPSB0cnVlOyB9IH0NCiAgICAgICAgICAgICAgICBpZiAoJHBhZ2VUeXBlICE9PSAnY3J1ZCcgfHwgKCRwcm9maWxlWydhbGxvd0NyZWF0ZSddID8/IG51bGwpICE9PSBmYWxzZSB8fCAoJHByb2ZpbGVbJ2FsbG93VXBkYXRlJ10gPz8gbnVsbCkgIT09IGZhbHNlIHx8ICgkcHJvZmlsZVsnYWxsb3dEZWxldGUnXSA/PyBudWxsKSAhPT0gZmFsc2UgfHwgJHVuc3VwcG9ydGVkQ29uc3VtZXIgfHwgJGZpZWxkc1skZmllbGRdLT5pc1ByaW1hcnlLZXkoKSB8fCAoJGl0ZW1bJ3JlcXVpcmVkJ10gPz8gbnVsbCkgIT09IHRydWUgfHwgKCRpdGVtWydyZWFkb25seSddID8/IG51bGwpICE9PSB0cnVlIHx8ICgkaXRlbVsnZmlsdGVyJ10gPz8gbnVsbCkgIT09IHRydWUgfHwgKCRpdGVtWydjcmVhdGVEZWZhdWx0J10gPz8gbnVsbCkgIT09IGZhbHNlIHx8ICFpc19hcnJheSgkcmFuZ2UpIHx8IGFycmF5X2lzX2xpc3QoJHJhbmdlKSB8fCBjb3VudCgkcmFuZ2UpICE9PSAyIHx8IGFycmF5X2RpZmYoYXJyYXlfa2V5cygkcmFuZ2UpLCBbJ21pbicsICdtYXgnXSkgfHwgIWlzX2ludCgkcmFuZ2VbJ21pbiddID8/IG51bGwpIHx8ICFpc19pbnQoJHJhbmdlWydtYXgnXSA/PyBudWxsKSB8fCAkcmFuZ2VbJ21pbiddIDwgLTIxNDc0ODM2NDggfHwgJHJhbmdlWydtYXgnXSA+IDIxNDc0ODM2NDcgfHwgJHJhbmdlWydtaW4nXSA+ICRyYW5nZVsnbWF4J10pIHsgdGhyb3cgbmV3IFJ1bnRpbWVIdHRwRXhjZXB0aW9uKCdCVUlMREVSX0NPTlRFWFRfSU5WQUxJRCcsICdpbnRlZ2VyUmFuZ2UgZXhpZ2UgQ1JVRCByZWFkb25seSwgaW50ZWdlciBuYW8gUEssIHNlbSBvcGNvZXMgcmVtb3Rhcy9hcnF1aXZvcyBlIGxpbWl0ZXMgaW50MzIgZmVjaGFkb3MuJywgNDIyKTsgfQ0K"
+    }
+  ],
+  "unchangedRanges": [
+    {
+      "baselineStart": 0,
+      "baselineEnd": 177828,
+      "candidateStart": 0,
+      "candidateEnd": 177828,
+      "sha256": "64aa6bf4ee2ca8fcc139277dff0e70f3571364f71470edcc00e7616f1869c824"
+    },
+    {
+      "baselineStart": 177944,
+      "baselineEnd": 376582,
+      "candidateStart": 177954,
+      "candidateEnd": 376592,
+      "sha256": "4511f262caf152a5beda7cca4431000994a7a2d7fe2c761752b8563348e42523"
+    },
+    {
+      "baselineStart": 376699,
+      "baselineEnd": 377046,
+      "candidateStart": 376730,
+      "candidateEnd": 377077,
+      "sha256": "274bbac4b42a57c12aae9652273fe2f8a1ee5f2617c5c6693d2f49490a76fb97"
+    },
+    {
+      "baselineStart": 377180,
+      "baselineEnd": 377979,
+      "candidateStart": 377227,
+      "candidateEnd": 378026,
+      "sha256": "1cda31a963fc49006586df75d1c91c25a24dea5dbe7a62c08d62ff63c2095292"
+    },
+    {
+      "baselineStart": 377979,
+      "baselineEnd": 481701,
+      "candidateStart": 379283,
+      "candidateEnd": 483005,
+      "sha256": "e6ba3fc02886e12d3a2d68e2c816b4039bf99374f6f9d43362142f89873b42d5"
+    }
+  ],
+  "applyOnlyByExactBaseline": true
+}

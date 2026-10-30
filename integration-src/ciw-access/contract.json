@@ -1,0 +1,81 @@
+{
+  "version": "1.0.0",
+  "scope": "phase1A_readonly_authorization",
+  "request": {
+    "operation": "authorize",
+    "resource": "cadastros.coloracoes",
+    "action_enum": ["read", "get", "create", "update", "delete", "export", "print"],
+    "unknown_fields": "reject",
+    "identity_in_body": "reject"
+  },
+  "trusted_identity": {
+    "login": "HTTP_X_SURSUM_USER from verified PHP session",
+    "session_id": "HTTP_X_SESSION_ID from verified PHP session",
+    "auth_provider": "HTTP_X_SURSUM_AUTH_SOURCE from sessionProperties.authentication.provider",
+    "auth_provider_grammar": "[A-Za-z0-9_.:-]{1,80}",
+    "missing_or_invalid": "deny",
+    "provider_allowlist": "private configuration; empty or invalid denies",
+    "login_match": "case-insensitive exact Login match, no partial match; multiple matching records deny",
+    "legacy_numeric_id": "returned only as a legacy attribute; never inferred from PostgreSQL identity"
+  },
+  "private_resource_map": {
+    "cadastros.coloracoes": {
+      "read": "grid_pub_coloracoes",
+      "get": "form_pub_coloracoes",
+      "create": "form_pub_coloracoes",
+      "update": "form_pub_coloracoes",
+      "delete": "form_pub_coloracoes",
+      "export": "grid_pub_coloracoes",
+      "print": "grid_pub_coloracoes"
+    }
+  },
+  "action_flags": {
+    "read": ["acesso_permitido"],
+    "get": ["acesso_permitido"],
+    "create": ["acesso_permitido", "insercao_permitida"],
+    "update": ["acesso_permitido", "alteracao_permitida"],
+    "delete": ["acesso_permitido", "exclusao_permitida"],
+    "export": ["acesso_permitido", "exportacao_permitida"],
+    "print": ["acesso_permitido", "impressao_permitida"]
+  },
+  "authorization": {
+    "user_table": "espec.user-web",
+    "active_field": "ativo",
+    "active_required": true,
+    "membership_table": "espec.usuarios_grupos",
+    "application_table": "espec.grupos_aplicacoes",
+    "group_join": "usuarios_grupos.cod_grupo = grupos_aplicacoes.cod_grupo",
+    "login_join": "user-web.Login = usuarios_grupos.login_usuario",
+    "application_match": "exact bytes of registered application identifier",
+    "grant_value": "Y",
+    "invalid_unknown_or_missing_flag": false,
+    "multiple_group_resolution": "OR each required flag among grants for this user and this exact application; every required flag must be granted",
+    "priv_admin_bypass": false,
+    "construtor_permission": "independently required by each business endpoint",
+    "cache": false,
+    "locks": "NO-LOCK",
+    "revocation_consistency": "per request; no distributed atomic snapshot or lock against concurrent ACL changes"
+  },
+  "success_row": {
+    "login": "character",
+    "ima_user_id": "integer or null",
+    "usuario": "character or null",
+    "tp_usuario": "integer or null",
+    "legacy_application": "character",
+    "action": "character",
+    "allowed": true
+  },
+  "errors": {
+    "CIW_IDENTITY_REQUIRED": 401,
+    "CIW_IDENTITY_NOT_LINKED": 403,
+    "CIW_IDENTITY_INACTIVE": 403,
+    "CIW_IDENTITY_AMBIGUOUS": 409,
+    "CIW_AUTH_SOURCE_DENIED": 403,
+    "CIW_ACCESS_DENIED": 403,
+    "CIW_ACCESS_INVALID_REQUEST": 400,
+    "CIW_ACCESS_CONFIGURATION": 500
+  },
+  "business_writes": false,
+  "credentials_in_response": false,
+  "deferred_menu_item": "Tarefas / Conta corrente fornecedor"
+}

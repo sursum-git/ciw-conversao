@@ -1,0 +1,78 @@
+--- D:/opencode/motor-progress/v2/sursum-api/programs/ContainersPainelReadService.p
++++ D:/opencode/motor-progress/v2/sursum-api/programs/ContainersPainelReadService.p
+@@ -120,6 +120,19 @@
+   END CASE.
+ END PROCEDURE.
+ 
++PROCEDURE AttachmentExtras:
++ DEFINE INPUT PARAMETER poRow AS JsonObject NO-UNDO.
++ DEFINE VARIABLE cPath AS CHARACTER NO-UNDO.
++ DEFINE VARIABLE iLookup AS INTEGER NO-UNDO.
++ DEFINE VARIABLE lFound AS LOGICAL NO-UNDO.
++      cPath = hRows:BUFFER-FIELD("caminho_arquivo"):BUFFER-VALUE.
++      poRow:Add("tem_arquivo",cPath <> ? AND LENGTH(TRIM(cPath)) > 0).
++      iLookup = hRows:BUFFER-FIELD("tipos_anexo_id"):BUFFER-VALUE.
++      phTiposAnexo:BUFFER-RELEASE().
++      IF iLookup <> ? THEN lFound = FindFirst(phTiposAnexo,phTiposAnexo:NAME + ".tipo_anexo_id = " + TRIM(STRING(iLookup))).
++      RUN AddField(poRow,phTiposAnexo,"descricao","tipo_anexo_descricao").
++END PROCEDURE.
++
+ PROCEDURE BuildRow:
+   DEFINE OUTPUT PARAMETER poRow AS JsonObject NO-UNDO.
+   DEFINE VARIABLE n AS INTEGER NO-UNDO.
+@@ -144,13 +157,10 @@
+       ELSE IF iLookup = 2 THEN poRow:Add("situacao_descricao","Completo").
+       ELSE poRow:AddNull("situacao_descricao").
+     END.
+-    WHEN "anexos" THEN DO:
+-      cPath = hRows:BUFFER-FIELD("caminho_arquivo"):BUFFER-VALUE.
+-      poRow:Add("tem_arquivo",cPath <> ? AND LENGTH(TRIM(cPath)) > 0).
+-      iLookup = hRows:BUFFER-FIELD("tipos_anexo_id"):BUFFER-VALUE.
+-      phTiposAnexo:BUFFER-RELEASE().
+-      IF iLookup <> ? THEN lFound = FindFirst(phTiposAnexo,phTiposAnexo:NAME + ".tipo_anexo_id = " + TRIM(STRING(iLookup))).
+-      RUN AddField(poRow,phTiposAnexo,"descricao","tipo_anexo_descricao").
++    WHEN "anexos" THEN RUN AttachmentExtras(poRow).
++    WHEN "anexos-arquivo" THEN DO:
++      RUN AttachmentExtras(poRow).
++      RUN AddField(poRow,phContainer,"cod-estabel","cod_estabel").
+     END.
+     WHEN "despesas" THEN DO:
+       /* Eligibility performed before BuildRow; these are the matching join buffers. */
+@@ -215,6 +225,10 @@
+       cFields = "cod-estabel,nr-container,num-pedido,nome-ab-forn,cod-emit-forn,comprador,narrativa,usuario,dt-compra,dt-prev-chegada,dt-recebimento,situacao,char-1,dec-1,int-1,log-1,data-1,vlr-frete,vlr-seguro,vlr-despesas,exclusivo,vl-dolar-venda,vl-dolar-compra,log_liberar_custo_realizado,medidas_container,dt_prev_embarque,dt_real_embarque,ind_dt_embarque,situacao_container_id,ind_dt_prev_chegada,log_pagto_final,cod_agente_cargas,cod_armador,cod_tipo_calculo,perc_custo,vl_dolar_di,log_gerar_saldo_a_pagar,log_gerar_distr_custo,ordem_busca_dolar_compra,ordem_busca_dolar_di,cod_tipo_proj_dolar,vl_proj_dolar,log_versao_custo_desatualizada,dt_hr_ult_alt_versao_custo,ptax,cod-depos,dt_prev_chegada_loja,estacao,num_origem,log_rota_indefinida".
+     WHEN "versoes" THEN ASSIGN hRows = phVersoes cKey = "versao_id"
+       cFields = "versao_id,dt_hr_versao,cod_usuario,descricao,ind_sit_versao,vl_dolar_compra,vl_desconto_utiliz_dolar,vl_desconto_utiliz_real,tipo_versao_id,container_id,vl_dolar_medio,vl_dolar_di,usuario_id,log_gerar_saldo_a_pagar,log_gerar_distr_custo,situacao_container_id,desc_sit_container,cod_tipo_cotacao,vl_cotacao,data_ref_cotacao,perc_fixo_container,hist_dolar".
++    WHEN "anexos-arquivo" THEN DO:
++      IF cOperation<>"get" THEN DO: RUN Fail("CONTAINER_ATTACHMENT_READ_ONLY","Recurso de arquivo aceita somente get.",405). RETURN. END.
++      ASSIGN hRows=phAnexos cKey="anexo_container_id" cFields="anexo_container_id,container_id,item_container_id,descricao,tipos_anexo_id,dt_hr_arquivo,caminho_arquivo".
++    END.
+     WHEN "anexos" THEN ASSIGN hRows = phAnexos cKey = "anexo_container_id"
+       cFields = "anexo_container_id,container_id,item_container_id,descricao,tipos_anexo_id,dt_hr_arquivo".
+     WHEN "despesas" THEN ASSIGN hRows = phDespesasContainer cKey = "despesa_container_id"
+@@ -229,6 +243,12 @@
+       RUN Fail("CONTAINER_VALIDATION","Campo nao permitido na consulta.",422). RETURN.
+     END.
+   END.
++  IF cResource="anexos-arquivo" THEN DO:
++    DO iName=1 TO EXTENT(cNames):
++      IF cNames[iName]="container_id" OR cNames[iName]="id" OR cNames[iName]="anexo_container_id" THEN
++        IF poRequest:GetType(cNames[iName])<>JsonDataType:NUMBER THEN DO: RUN Fail("CONTAINER_VALIDATION","Identificador deve ser numero JSON inteiro.",422). RETURN. END.
++    END.
++  END.
+   iContainer = ReadId("container_id").
+   IF iContainer = ? THEN DO:
+     RUN Fail("CONTAINER_VALIDATION","Informe container_id inteiro positivo valido.",422). RETURN.
+@@ -252,8 +272,12 @@
+   IF NOT FindFirst(phContainer,phContainer:NAME + ".nr-container = " + TRIM(STRING(iContainer))) THEN DO:
+     RUN Fail("CONTAINER_NOT_FOUND","Container nao encontrado.",404). RETURN.
+   END.
++  IF cResource="anexos-arquivo" THEN DO:
++    cPrefix=phContainer:BUFFER-FIELD("cod-estabel"):BUFFER-VALUE.
++    IF cPrefix=? OR NOT cPrefix BEGINS "5" THEN DO: RUN Fail("CONTAINER_ATTACHMENT_MED_REQUIRED","Download exige container MED.",422). RETURN. END.
++  END.
+   IF NOT VALID-HANDLE(hRows) THEN UNDO, THROW NEW Progress.Lang.AppError("Missing resource buffer.",0).
+-  IF cResource = "anexos" AND NOT VALID-HANDLE(phTiposAnexo) THEN UNDO, THROW NEW Progress.Lang.AppError("Missing type buffer.",0).
++  IF (cResource = "anexos" OR cResource="anexos-arquivo") AND NOT VALID-HANDLE(phTiposAnexo) THEN UNDO, THROW NEW Progress.Lang.AppError("Missing type buffer.",0).
+   IF cResource = "itens" AND (NOT VALID-HANDLE(phItensProcCompra) OR NOT VALID-HANDLE(phProcsCompra)) THEN
+     UNDO, THROW NEW Progress.Lang.AppError("Missing purchase buffers.",0).
+   IF cResource = "despesas" THEN DO:

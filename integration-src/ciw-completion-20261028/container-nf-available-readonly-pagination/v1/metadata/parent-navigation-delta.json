@@ -1,0 +1,36 @@
+{
+  "targetProgram": "op1000",
+  "targetScreenId": "ciw.containers",
+  "baselinePath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-header-current/op1000-program.json",
+  "baselineSha256": "34d0d1971ec9c0708e0aaa22db222c66d31315afc9b5cfd5a7d4cf509696d4ed",
+  "expectedPublishedVersion": "1.0.2",
+  "candidateVersion": "1.0.3",
+  "applyMode": "append-one-rowLink-to-current-builderConfig-preserve-other-properties",
+  "existingRowLinks": [
+    {
+      "id": "painel_container",
+      "label": "Painel do Container",
+      "screenId": "ciw.container-painel",
+      "parameters": [
+        {
+          "field": "container_id",
+          "sourceField": "container_id"
+        }
+      ],
+      "position": "start"
+    }
+  ],
+  "appendRowLink": {
+    "id": "nfs_disponiveis_med",
+    "label": "NFs disponíveis — MED",
+    "screenId": "ciw.container-nfs-disponiveis-med",
+    "parameters": [
+      {
+        "field": "container_id",
+        "sourceField": "container_id"
+      }
+    ],
+    "position": "start"
+  },
+  "newPermissionsGranted": false
+}

@@ -1,0 +1,244 @@
+--- D:\opencode\motor-progress\v2\sursum-api\programs\ContainersImpostosService.p
++++ D:\opencode\motor-progress\v2\sursum-api\programs\ContainersImpostosService.p
+@@ -20,10 +20,10 @@
+ DEFINE INPUT PARAMETER poRequest AS JsonObject NO-UNDO.
+ DEFINE OUTPUT PARAMETER poResponse AS JsonObject NO-UNDO.
+ DEFINE TEMP-TABLE ttDef NO-UNDO
+- FIELD id AS INTEGER FIELD ordinal AS INTEGER FIELD tax AS INTEGER FIELD calculated AS LOGICAL
++ FIELD id AS INTEGER FIELD ordinal AS INTEGER FIELD tax AS INTEGER FIELD calculated AS LOGICAL FIELD description AS CHARACTER
+  FIELD productBase AS LOGICAL FIELD perItem AS LOGICAL FIELD taxType AS INTEGER FIELD percentage AS DECIMAL DECIMALS 10
+  INDEX pk IS UNIQUE PRIMARY id.
+-DEFINE TEMP-TABLE ttLink NO-UNDO FIELD id AS INTEGER FIELD percentage AS DECIMAL DECIMALS 10
++DEFINE TEMP-TABLE ttLink NO-UNDO FIELD id AS INTEGER FIELD percentage AS DECIMAL DECIMALS 10 FIELD active AS INTEGER FIELD defaultValue AS DECIMAL DECIMALS 10
+  FIELD costId AS INTEGER FIELD costPercentage AS DECIMAL DECIMALS 10 INDEX pk IS UNIQUE PRIMARY id.
+ DEFINE TEMP-TABLE ttBase NO-UNDO FIELD taxId AS INTEGER FIELD baseId AS INTEGER INDEX pk IS UNIQUE PRIMARY taxId baseId.
+ DEFINE TEMP-TABLE ttRel NO-UNDO FIELD id AS INTEGER FIELD baseId AS INTEGER INDEX pk IS UNIQUE PRIMARY id baseId.
+@@ -37,11 +37,15 @@
+  FIELD amount AS DECIMAL EXTENT 3 DECIMALS 10 FIELD taxBase AS DECIMAL DECIMALS 10 FIELD manual AS LOGICAL
+  FIELD calcId AS INTEGER FIELD percentage AS DECIMAL DECIMALS 10 FIELD memoryText AS CHARACTER
+  FIELD ledgerId AS INTEGER FIELD managed AS LOGICAL
+- FIELD changed AS LOGICAL FIELD useNewCalc AS LOGICAL INDEX pk IS UNIQUE PRIMARY id
++ FIELD used AS LOGICAL FIELD changed AS LOGICAL FIELD useNewCalc AS LOGICAL INDEX pk IS UNIQUE PRIMARY id
+  INDEX tuple expenseId itemId.
+ DEFINE TEMP-TABLE ttWork NO-UNDO FIELD kind AS CHARACTER FIELD id AS INTEGER FIELD targetId AS INTEGER
+  FIELD ordinal AS INTEGER FIELD done AS LOGICAL INDEX pk IS UNIQUE PRIMARY kind id.
+ DEFINE BUFFER bWork FOR ttWork.
++DEFINE BUFFER bLink FOR ttLink.
++DEFINE TEMP-TABLE ttSelected NO-UNDO FIELD id AS INTEGER FIELD ordinal AS INTEGER FIELD calculated AS LOGICAL INDEX pk IS PRIMARY UNIQUE id.
++DEFINE TEMP-TABLE ttSelectionOrder NO-UNDO FIELD id AS INTEGER FIELD position AS INTEGER INDEX pk IS PRIMARY UNIQUE id.
++DEFINE VARIABLE lSelectedCalculated AS LOGICAL NO-UNDO.
+ DEFINE BUFFER bExpense FOR ttExpense.
+ DEFINE VARIABLE iContainer AS INTEGER NO-UNDO.
+ DEFINE VARIABLE iCompany AS INTEGER NO-UNDO.
+@@ -143,7 +147,7 @@
+  hq:GET-NEXT(IF lWriteQuery THEN EXCLUSIVE-LOCK ELSE SHARE-LOCK,NO-WAIT) NO-ERROR. RUN CheckQuery.
+ END PROCEDURE.
+ PROCEDURE CheckQuery:
+- IF cOperation="calcular_impostos" AND NOT hq:QUERY-OFF-END THEN DO:
++ IF (cOperation="calcular_impostos" OR cOperation="selecionar_despesas" OR cOperation="opcoes_despesas_selecao") AND NOT hq:QUERY-OFF-END THEN DO:
+   iTaxOnlyRows=iTaxOnlyRows + 1.
+   IF iTaxOnlyRows>50000 OR ETIME - iTaxOnlyStarted>10000 THEN RUN Fail("CONTAINER_TAX_LIMIT","Limite do comando fiscal excedido.",503).
+  END.
+@@ -213,14 +217,7 @@
+ END PROCEDURE.
+ PROCEDURE LoadState:
+  DEFINE VARIABLE idValue AS INTEGER NO-UNDO. DEFINE VARIABLE companyCount AS INTEGER NO-UNDO.
+- cPrefix=phContainer:BUFFER-FIELD("cod-estabel"):BUFFER-VALUE.
+- IF cPrefix=? OR LENGTH(cPrefix)=0 THEN RUN Fail("CONTAINER_COMPANY_CONTEXT","Estabelecimento invalido.",422).
+- cPrefix=SUBSTRING(cPrefix,1,1). IF INDEX("0123456789",cPrefix)=0 THEN RUN Fail("CONTAINER_COMPANY_CONTEXT","Estabelecimento invalido.",422).
+- RUN Open(phEmpresas,phEmpresas:NAME + ".cod_emp_ems2 = " + cPrefix,"BY " + phEmpresas:NAME + ".empresa_id",FALSE).
+- DO WHILE NOT hq:QUERY-OFF-END:
+-  companyCount=companyCount + 1. iCompany=phEmpresas:BUFFER-FIELD("empresa_id"):BUFFER-VALUE. RUN Next.
+- END.
+- IF companyCount<>1 OR iCompany=? THEN RUN Fail("CONTAINER_COMPANY_CONTEXT","Empresa ausente ou ambigua.",422).
++ RUN LoadCompany.
+  RUN Open(phItems,phItems:NAME + ".container_id = " + Num(iContainer),"BY " + phItems:NAME + ".item_container_id",FALSE).
+  DO WHILE NOT hq:QUERY-OFF-END:
+   CREATE ttItem.
+@@ -247,34 +244,7 @@
+   DO k=1 TO 4: ASSIGN dAllocated[k]=dAllocated[k] + ttItem.allocated * ttBuy.price[k] dShipped[k]=dShipped[k] + ttItem.shipped * ttBuy.price[k]. END.
+  END.
+  DO k=1 TO 4: dTotals[k]=IF dShipped[k]=0 THEN dAllocated[k] ELSE dShipped[k]. END.
+- /* Catalog/configuration locks precede the persistent expense locks. */
+- RUN Open(phDefs,"TRUE","BY " + phDefs:NAME + ".despesa_id",FALSE).
+- DO WHILE NOT hq:QUERY-OFF-END:
+-  CREATE ttDef.
+-  ASSIGN ttDef.id=phDefs:BUFFER-FIELD("despesa_id"):BUFFER-VALUE ttDef.ordinal=phDefs:BUFFER-FIELD("ordem"):BUFFER-VALUE
+-   ttDef.tax=phDefs:BUFFER-FIELD("log_imposto"):BUFFER-VALUE ttDef.calculated=phDefs:BUFFER-FIELD("log_calculada"):BUFFER-VALUE
+-   ttDef.productBase=phDefs:BUFFER-FIELD("log_vl_prod_base_calculo"):BUFFER-VALUE ttDef.perItem=phDefs:BUFFER-FIELD("log_calc_por_item"):BUFFER-VALUE
+-   ttDef.taxType=phDefs:BUFFER-FIELD("ind_imposto"):BUFFER-VALUE ttDef.percentage=phDefs:BUFFER-FIELD("perc_calculo"):BUFFER-VALUE.
+-  IF ttDef.taxType=3 THEN DO: IF iIpiId<>0 THEN RUN Fail("CONTAINER_TAX_CONFIG","Mais de uma despesa IPI configurada.",422). iIpiId=ttDef.id. END.
+-  RUN Next.
+- END.
+- RUN Open(phLinks,phLinks:NAME + ".empresa_id = " + Num(iCompany),"BY " + phLinks:NAME + ".empresa_despesa_id",FALSE).
+- DO WHILE NOT hq:QUERY-OFF-END:
+-  idValue=phLinks:BUFFER-FIELD("despesa_id"):BUFFER-VALUE.
+-  IF idValue=? OR CAN-FIND(FIRST ttLink WHERE ttLink.id=idValue) THEN RUN Fail("CONTAINER_TAX_CONFIG","Vinculo empresa/despesa duplicado ou invalido.",422).
+-  IF NOT CAN-FIND(FIRST ttDef WHERE ttDef.id=idValue) THEN RUN Fail("CONTAINER_TAX_CONFIG","Despesa do vinculo nao encontrada.",422).
+-  CREATE ttLink. ASSIGN ttLink.id=idValue ttLink.percentage=phLinks:BUFFER-FIELD("percentual"):BUFFER-VALUE
+-   ttLink.costId=phLinks:BUFFER-FIELD("despesa_custo_id"):BUFFER-VALUE ttLink.costPercentage=phLinks:BUFFER-FIELD("percentual_custo"):BUFFER-VALUE.
+-  RUN Next.
+- END.
+- RUN Open(phTaxBases,phTaxBases:NAME + ".empresa_id = " + Num(iCompany),"BY " + phTaxBases:NAME + ".imposto_id BY " + phTaxBases:NAME + ".despesa_id",FALSE).
+- DO WHILE NOT hq:QUERY-OFF-END:
+-  CREATE ttBase. ASSIGN ttBase.taxId=phTaxBases:BUFFER-FIELD("imposto_id"):BUFFER-VALUE ttBase.baseId=phTaxBases:BUFFER-FIELD("despesa_id"):BUFFER-VALUE. RUN Next.
+- END.
+- RUN Open(phRelations,"TRUE","BY " + phRelations:NAME + ".despesa_id BY " + phRelations:NAME + ".despesa_id_base",FALSE).
+- DO WHILE NOT hq:QUERY-OFF-END:
+-  CREATE ttRel. ASSIGN ttRel.id=phRelations:BUFFER-FIELD("despesa_id"):BUFFER-VALUE ttRel.baseId=phRelations:BUFFER-FIELD("despesa_id_base"):BUFFER-VALUE. RUN Next.
+- END.
++ RUN LoadCatalog.
+  RUN Open(phExpenses,phExpenses:NAME + ".container_id = " + Num(iContainer),"BY " + phExpenses:NAME + ".despesa_container_id",TRUE).
+  DO WHILE NOT hq:QUERY-OFF-END:
+   idValue=phExpenses:BUFFER-FIELD("despesa_id"):BUFFER-VALUE. iNewId=phExpenses:BUFFER-FIELD("item_container_id"):BUFFER-VALUE.
+@@ -287,10 +257,57 @@
+    ttExpense.amount[1]=Amount(phExpenses,"vl_prev") ttExpense.amount[2]=Amount(phExpenses,"vl_proforma") ttExpense.amount[3]=Amount(phExpenses,"vl_negociado")
+    ttExpense.taxBase=Amount(phExpenses,"vl_base_imp") ttExpense.manual=phExpenses:BUFFER-FIELD("log_manual"):BUFFER-VALUE
+    ttExpense.calcId=phExpenses:BUFFER-FIELD("calc_imp_container_id"):BUFFER-VALUE.
++  IF cOperation="selecionar_despesas" THEN ASSIGN ttExpense.used=phExpenses:BUFFER-FIELD("log_utilizado"):BUFFER-VALUE ttExpense.percentage=phExpenses:BUFFER-FIELD("perc_calc"):BUFFER-VALUE ttExpense.memoryText=phExpenses:BUFFER-FIELD("memoria_calculo"):BUFFER-VALUE.
+   joBefore:Add(Num(ttExpense.id),Snapshot(phExpenses,"despesa_container_id,despesa_id,container_id,item_container_id,vl_prev,vl_proforma,vl_negociado,vl_base_imp,calc_imp_container_id,cta_corren_custo_distr_id,log_manual,log_utilizado,perc_calc,memoria_calculo")).
+   RUN Next.
+  END.
+ END PROCEDURE.
++PROCEDURE LoadCompany:
++ DEFINE VARIABLE companyCount AS INTEGER NO-UNDO.
++ cPrefix=phContainer:BUFFER-FIELD("cod-estabel"):BUFFER-VALUE.
++ IF cPrefix=? OR LENGTH(cPrefix)=0 THEN RUN Fail("CONTAINER_COMPANY_CONTEXT","Estabelecimento invalido.",422).
++ IF (cOperation="selecionar_despesas" OR cOperation="opcoes_despesas_selecao") AND NOT cPrefix BEGINS "5" THEN RUN Fail("CONTAINER_SELECTION_MED_REQUIRED","Selecao exige container MED sob lock.",422).
++ cPrefix=SUBSTRING(cPrefix,1,1). IF INDEX("0123456789",cPrefix)=0 THEN RUN Fail("CONTAINER_COMPANY_CONTEXT","Estabelecimento invalido.",422).
++ RUN Open(phEmpresas,phEmpresas:NAME + ".cod_emp_ems2 = " + cPrefix,"BY " + phEmpresas:NAME + ".empresa_id",FALSE).
++ DO WHILE NOT hq:QUERY-OFF-END:
++  companyCount=companyCount + 1. iCompany=phEmpresas:BUFFER-FIELD("empresa_id"):BUFFER-VALUE. RUN Next.
++ END.
++ IF companyCount<>1 OR iCompany=? THEN RUN Fail("CONTAINER_COMPANY_CONTEXT","Empresa ausente ou ambigua.",422).
++END PROCEDURE.
++PROCEDURE LoadCatalog:
++ DEFINE VARIABLE idValue AS INTEGER NO-UNDO.
++ /* Catalog/configuration locks precede the persistent expense locks. */
++ RUN Open(phDefs,"TRUE","BY " + phDefs:NAME + ".despesa_id",FALSE).
++ DO WHILE NOT hq:QUERY-OFF-END:
++  CREATE ttDef.
++  ASSIGN ttDef.id=phDefs:BUFFER-FIELD("despesa_id"):BUFFER-VALUE ttDef.ordinal=phDefs:BUFFER-FIELD("ordem"):BUFFER-VALUE
++   ttDef.tax=phDefs:BUFFER-FIELD("log_imposto"):BUFFER-VALUE ttDef.calculated=phDefs:BUFFER-FIELD("log_calculada"):BUFFER-VALUE
++   ttDef.productBase=phDefs:BUFFER-FIELD("log_vl_prod_base_calculo"):BUFFER-VALUE ttDef.perItem=phDefs:BUFFER-FIELD("log_calc_por_item"):BUFFER-VALUE
++   ttDef.taxType=phDefs:BUFFER-FIELD("ind_imposto"):BUFFER-VALUE ttDef.percentage=phDefs:BUFFER-FIELD("perc_calculo"):BUFFER-VALUE.
++  IF ttDef.taxType=3 THEN DO: IF iIpiId<>0 THEN RUN Fail("CONTAINER_TAX_CONFIG","Mais de uma despesa IPI configurada.",422). iIpiId=ttDef.id. END.
++  IF cOperation="selecionar_despesas" OR cOperation="opcoes_despesas_selecao" THEN ttDef.description=phDefs:BUFFER-FIELD("descricao"):BUFFER-VALUE.
++  RUN Next.
++ END.
++ RUN Open(phLinks,phLinks:NAME + ".empresa_id = " + Num(iCompany),"BY " + phLinks:NAME + ".empresa_despesa_id",FALSE).
++ DO WHILE NOT hq:QUERY-OFF-END:
++  idValue=phLinks:BUFFER-FIELD("despesa_id"):BUFFER-VALUE.
++  IF idValue=? OR CAN-FIND(FIRST ttLink WHERE ttLink.id=idValue) THEN RUN Fail("CONTAINER_TAX_CONFIG","Vinculo empresa/despesa duplicado ou invalido.",422).
++  IF NOT CAN-FIND(FIRST ttDef WHERE ttDef.id=idValue) THEN RUN Fail("CONTAINER_TAX_CONFIG","Despesa do vinculo nao encontrada.",422).
++  CREATE ttLink. ASSIGN ttLink.id=idValue ttLink.percentage=phLinks:BUFFER-FIELD("percentual"):BUFFER-VALUE
++   ttLink.costId=phLinks:BUFFER-FIELD("despesa_custo_id"):BUFFER-VALUE ttLink.costPercentage=phLinks:BUFFER-FIELD("percentual_custo"):BUFFER-VALUE.
++  IF cOperation="selecionar_despesas" OR cOperation="opcoes_despesas_selecao" THEN ASSIGN ttLink.active=phLinks:BUFFER-FIELD("log_ativo"):BUFFER-VALUE ttLink.defaultValue=phLinks:BUFFER-FIELD("vl_padrao"):BUFFER-VALUE.
++  RUN Next.
++ END.
++ RUN Open(phTaxBases,phTaxBases:NAME + ".empresa_id = " + Num(iCompany),"BY " + phTaxBases:NAME + ".imposto_id BY " + phTaxBases:NAME + ".despesa_id",FALSE).
++ DO WHILE NOT hq:QUERY-OFF-END:
++  CREATE ttBase. ASSIGN ttBase.taxId=phTaxBases:BUFFER-FIELD("imposto_id"):BUFFER-VALUE ttBase.baseId=phTaxBases:BUFFER-FIELD("despesa_id"):BUFFER-VALUE. RUN Next.
++ END.
++ RUN Open(phRelations,"TRUE","BY " + phRelations:NAME + ".despesa_id BY " + phRelations:NAME + ".despesa_id_base",FALSE).
++ DO WHILE NOT hq:QUERY-OFF-END:
++  CREATE ttRel. ASSIGN ttRel.id=phRelations:BUFFER-FIELD("despesa_id"):BUFFER-VALUE ttRel.baseId=phRelations:BUFFER-FIELD("despesa_id_base"):BUFFER-VALUE. RUN Next.
++ END.
++END PROCEDURE.
++{sursum-api/includes/ContainerExpenseDefaultsPlan.i}
+ PROCEDURE UpsertPlan:
+  DEFINE INPUT PARAMETER expenseId AS INTEGER NO-UNDO. DEFINE INPUT PARAMETER itemId AS INTEGER NO-UNDO.
+  DEFINE INPUT PARAMETER useCalc AS LOGICAL NO-UNDO. DEFINE INPUT PARAMETER percentage AS DECIMAL NO-UNDO.
+@@ -308,6 +325,7 @@
+  END.
+  ASSIGN ttExpense.amount[1]=dValues[1] ttExpense.amount[2]=dValues[2] ttExpense.amount[3]=dValues[3]
+   ttExpense.percentage=percentage ttExpense.calcId=0 ttExpense.useNewCalc=useCalc ttExpense.memoryText=memoryText ttExpense.changed=TRUE.
++ IF cOperation="selecionar_despesas" THEN ttExpense.ledgerId=0.
+ END PROCEDURE.
+ PROCEDURE StepMemory:
+  DEFINE INPUT PARAMETER kind AS CHARACTER NO-UNDO. DEFINE INPUT PARAMETER expenseId AS INTEGER NO-UNDO.
+@@ -400,17 +418,19 @@
+ END PROCEDURE.
+ PROCEDURE CalculatedPlan:
+  FOR EACH ttExpense WHERE ttExpense.manual=FALSE:
++  IF cOperation="selecionar_despesas" AND lSelectedCalculated AND NOT CAN-FIND(FIRST ttSelected WHERE ttSelected.id=ttExpense.expenseId AND ttSelected.calculated) THEN NEXT.
+   FIND ttDef WHERE ttDef.id=ttExpense.expenseId NO-ERROR.
+   IF AVAILABLE ttDef AND ttDef.calculated=TRUE AND NOT CAN-FIND(FIRST ttWork WHERE ttWork.kind="calculated" AND ttWork.id=ttDef.id) THEN DO:
+    IF NOT CAN-FIND(FIRST ttLink WHERE ttLink.id=ttDef.id) THEN RUN Fail("CONTAINER_COMPANY_CONTEXT","Despesa calculada sem vinculo a empresa.",422).
+    CREATE ttWork. ASSIGN ttWork.kind="calculated" ttWork.id=ttDef.id ttWork.ordinal=ttDef.ordinal.
++   IF cOperation="selecionar_despesas" THEN DO: FIND ttSelectionOrder WHERE ttSelectionOrder.id=ttDef.id. ttWork.ordinal=ttSelectionOrder.position. END.
+   END.
+  END.
+  DO WHILE CAN-FIND(FIRST ttWork WHERE ttWork.kind="calculated" AND NOT ttWork.done):
+   lProgress=FALSE.
+   FOR EACH ttWork WHERE ttWork.kind="calculated" AND NOT ttWork.done BY ttWork.ordinal BY ttWork.id:
+    lReady=TRUE.
+-   FOR EACH ttRel WHERE ttRel.id=ttWork.id:
++   IF cOperation<>"selecionar_despesas" THEN FOR EACH ttRel WHERE ttRel.id=ttWork.id:
+     IF CAN-FIND(FIRST bWork WHERE bWork.kind="calculated" AND bWork.id=ttRel.baseId AND NOT bWork.done) THEN lReady=FALSE.
+    END.
+    IF NOT lReady THEN NEXT.
+@@ -438,7 +458,7 @@
+ END PROCEDURE.
+ PROCEDURE PersistPlan:
+  DEFINE VARIABLE oldRow AS JsonObject NO-UNDO.
+- IF cOperation="sincronizar" OR cOperation="calcular_impostos" THEN DO:
++ IF cOperation="sincronizar" OR cOperation="calcular_impostos" OR cOperation="selecionar_despesas" THEN DO:
+   RUN NextCalculoId IN phIdProvider (OUTPUT iCalcId).
+   IF iCalcId=? OR iCalcId<1 THEN RUN Fail("CONTAINER_SEQUENCE_INVALID","Sequencia do calculo invalida.",409).
+   IF NOT phCalcs:BUFFER-CREATE() THEN UNDO, THROW NEW Progress.Lang.AppError("Calculation creation failed.",0).
+@@ -466,9 +486,10 @@
+    oldRow=CAST(joBefore:GetJsonObject(Num(iNewId)):Clone(),JsonObject).
+   END.
+   ASSIGN phExpenses:BUFFER-FIELD("vl_prev"):BUFFER-VALUE=ttExpense.amount[1] phExpenses:BUFFER-FIELD("vl_proforma"):BUFFER-VALUE=ttExpense.amount[2]
+-   phExpenses:BUFFER-FIELD("vl_negociado"):BUFFER-VALUE=ttExpense.amount[3] phExpenses:BUFFER-FIELD("calc_imp_container_id"):BUFFER-VALUE=IF ttExpense.useNewCalc THEN iCalcId ELSE 0
+-   phExpenses:BUFFER-FIELD("cta_corren_custo_distr_id"):BUFFER-VALUE=0 phExpenses:BUFFER-FIELD("perc_calc"):BUFFER-VALUE=ttExpense.percentage
++   phExpenses:BUFFER-FIELD("vl_negociado"):BUFFER-VALUE=ttExpense.amount[3] phExpenses:BUFFER-FIELD("calc_imp_container_id"):BUFFER-VALUE=IF ttExpense.useNewCalc THEN iCalcId ELSE (IF cOperation="selecionar_despesas" THEN ttExpense.calcId ELSE 0)
++   phExpenses:BUFFER-FIELD("cta_corren_custo_distr_id"):BUFFER-VALUE=(IF cOperation="selecionar_despesas" THEN ttExpense.ledgerId ELSE 0) phExpenses:BUFFER-FIELD("perc_calc"):BUFFER-VALUE=ttExpense.percentage
+    phExpenses:BUFFER-FIELD("memoria_calculo"):BUFFER-VALUE=ttExpense.memoryText.
++  IF cOperation="selecionar_despesas" THEN phExpenses:BUFFER-FIELD("log_utilizado"):BUFFER-VALUE=ttExpense.used.
+   IF NOT phExpenses:BUFFER-VALIDATE() THEN UNDO, THROW NEW Progress.Lang.AppError("Expense validation failed.",0).
+   joEvent=NEW JsonObject(). joEvent:Add("resource","despesas_container"). joEvent:Add("operation",IF ttExpense.id<0 THEN "create" ELSE "update"). joEvent:Add("recordId",iNewId).
+   joEvent:Add("before",oldRow). joEvent:Add("after",Snapshot(phExpenses,"despesa_container_id,despesa_id,container_id,item_container_id,vl_prev,vl_proforma,vl_negociado,vl_base_imp,calc_imp_container_id,cta_corren_custo_distr_id,log_manual,log_utilizado,perc_calc,memoria_calculo")). jaEvents:Add(joEvent).
+@@ -485,14 +506,15 @@
+  IF NOT poRequest:Has("operation") THEN RUN Fail("CONTAINER_OPERATION_INVALID","Informe operacao fiscal.",422).
+  IF poRequest:GetType("operation")<>JsonDataType:STRING THEN RUN Fail("CONTAINER_OPERATION_INVALID","Operacao fiscal invalida.",422).
+  cOperation=poRequest:GetCharacter("operation").
+- IF cOperation<>"sincronizar" AND cOperation<>"calcular_impostos" AND cOperation<>"atualizar_despesas_calculadas" THEN RUN Fail("CONTAINER_OPERATION_INVALID","Operacao fiscal invalida.",422).
++ IF cOperation<>"sincronizar" AND cOperation<>"calcular_impostos" AND cOperation<>"selecionar_despesas" AND cOperation<>"opcoes_despesas_selecao" AND cOperation<>"atualizar_despesas_calculadas" THEN RUN Fail("CONTAINER_OPERATION_INVALID","Operacao fiscal invalida.",422).
+  cNames=poRequest:GetNames().
+- DO i=1 TO EXTENT(cNames): cField=cNames[i]. IF cField<>"operation" AND cField<>"container_id" THEN RUN Fail("CONTAINER_VALIDATION","Campo nao permitido na operacao fiscal.",422). END.
++ DO i=1 TO EXTENT(cNames): cField=cNames[i]. IF cField<>"operation" AND cField<>"container_id" AND NOT (cOperation="selecionar_despesas" AND cField="despesa_ids") AND NOT ((cOperation="selecionar_despesas" OR cOperation="opcoes_despesas_selecao") AND (cField="ordem_campo" OR cField="ordem_direcao")) THEN RUN Fail("CONTAINER_VALIDATION","Campo nao permitido na operacao fiscal.",422). END.
+  iContainer=Id(poRequest,"container_id"). IF iContainer=? THEN RUN Fail("CONTAINER_VALIDATION","Container deve ser inteiro positivo valido.",422).
++ IF cOperation="selecionar_despesas" THEN RUN DefaultsSelectionInput.
+  joBefore=NEW JsonObject(). jaSteps=NEW JsonArray(). jaEvents=NEW JsonArray(). jaWarnings=NEW JsonArray().
+  DO TRANSACTION ON ERROR UNDO, THROW:
+-  IF NOT Found(phContainer,phContainer:NAME + ".nr-container = " + Num(iContainer),TRUE) THEN RUN Fail("CONTAINER_NOT_FOUND","Container nao encontrado.",404).
+-  IF cOperation="calcular_impostos" THEN DO:
++  IF NOT Found(phContainer,phContainer:NAME + ".nr-container = " + Num(iContainer),cOperation<>"opcoes_despesas_selecao") THEN RUN Fail("CONTAINER_NOT_FOUND","Container nao encontrado.",404).
++  IF cOperation="calcular_impostos" OR cOperation="selecionar_despesas" OR cOperation="opcoes_despesas_selecao" THEN DO:
+    iTaxOnlyStarted=ETIME.
+    DO STOP-AFTER 10 ON STOP UNDO, LEAVE:
+     RUN FiscalPlan. lTaxOnlyCompleted=TRUE.
+@@ -501,6 +523,7 @@
+   END.
+   ELSE RUN FiscalPlan.
+  END.
++ IF cOperation="opcoes_despesas_selecao" THEN RETURN.
+  /* Standalone: the real transaction ended. Nested: only the caller can confirm. */
+  joData=NEW JsonObject(). joData:Add("container_id",iContainer). joData:Add("calc_imp_container_id",iCalcId).
+  joData:Add("committed",NOT lNested). joData:Add("warnings",jaWarnings). joData:Add("changed",jaEvents:Length).
+@@ -530,9 +553,13 @@
+ END.
+ /* One shared planner/persister path. The new command deliberately skips IPI. */
+ PROCEDURE FiscalPlan:
++ IF cOperation="opcoes_despesas_selecao" THEN DO:
++  RUN DefaultsPolicy. RUN LoadCompany. RUN LoadCatalog. RUN DefaultsBuildOrder. RUN DefaultsOptions. RETURN.
++ END.
+  RUN CheckInputs. RUN LoadState.
+  IF cOperation="sincronizar" THEN DO: RUN TaxPlan. RUN IpiPlan. END.
+  ELSE IF cOperation="calcular_impostos" THEN RUN TaxPlan.
++ ELSE IF cOperation="selecionar_despesas" THEN DO: RUN DefaultsBuildOrder. RUN DefaultsPlan. RUN CalculatedPlan. RUN TaxPlan. RUN IpiPlan. END.
+  ELSE RUN CalculatedPlan.
+  RUN PersistPlan.
+ END PROCEDURE.

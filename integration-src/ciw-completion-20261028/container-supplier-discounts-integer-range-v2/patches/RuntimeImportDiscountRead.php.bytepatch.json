@@ -1,0 +1,63 @@
+{
+  "relative": "backend/src/Runtime/RuntimeImportDiscountRead.php",
+  "role": "private1056-helper",
+  "baselineSha256": "5e5d142c103c93b192123e104215ce7a2d186fe817465ba8c3198556caf668f3",
+  "candidateSha256": "d89428668214f8901cd02a32176200afa3433f645fddd3cf42cd749e8545893a",
+  "hunks": [
+    {
+      "baselineStart": 3067,
+      "baselineEnd": 3389,
+      "candidateStart": 3067,
+      "candidateEnd": 3521,
+      "beforeBase64": "ICAkY29udGV4dD0kcGF5bG9hZFsnY29udGV4dCddPz9udWxsO2lmKCFpc19hcnJheSgkY29udGV4dCl8fGNvdW50KCRjb250ZXh0KSE9PTF8fCFhcnJheV9rZXlfZXhpc3RzKCdmb3JuZWNlZG9yX2lkJywkY29udGV4dCkpc2VsZjo6aW52YWxpZCg0MjIpOw0KICAkaWQ9c2VsZjo6c2lnbmVkSW50ZWdlcigkY29udGV4dFsnZm9ybmVjZWRvcl9pZCddLDQyMix0cnVlKTskbGVhdmVzPTA7DQogICR2aXNpdD1zdGF0aWMgZnVuY3Rpb24obWl4ZWQgJGZpbHRlcixpbnQgJGRlcHRoPTAsYm9vbCAkYW5kPXRydWUpdXNlKCYkdmlzaXQsJiRsZWF2ZXMsJGlkKTp2b2lkIHsNCg==",
+      "afterBase64": "ICAkaWQ9bnVsbDskbGVhdmVzPTA7DQogIGlmKGFycmF5X2tleV9leGlzdHMoJ2NvbnRleHQnLCRwYXlsb2FkKSl7JGNvbnRleHQ9JHBheWxvYWRbJ2NvbnRleHQnXTtpZighaXNfYXJyYXkoJGNvbnRleHQpfHxjb3VudCgkY29udGV4dCkhPT0xfHwhYXJyYXlfa2V5X2V4aXN0cygnZm9ybmVjZWRvcl9pZCcsJGNvbnRleHQpKXNlbGY6OmludmFsaWQoNDIyKTskaWQ9c2VsZjo6c2lnbmVkSW50ZWdlcigkY29udGV4dFsnZm9ybmVjZWRvcl9pZCddLDQyMix0cnVlKTt9DQogIGVsc2VpZigoJGVuZHBvaW50Wydib2R5VGVtcGxhdGUnXVsnb3BlcmF0aW9uJ10/P251bGwpIT09J3JlYWQnKXNlbGY6OmludmFsaWQoNDIyKTsNCiAgJHZpc2l0PXN0YXRpYyBmdW5jdGlvbihtaXhlZCAkZmlsdGVyLGludCAkZGVwdGg9MCxib29sICRhbmQ9dHJ1ZSl1c2UoJiR2aXNpdCwmJGxlYXZlcywmJGlkKTp2b2lkIHsNCg=="
+    },
+    {
+      "baselineStart": 3846,
+      "baselineEnd": 4016,
+      "candidateStart": 3978,
+      "candidateEnd": 4217,
+      "beforeBase64": "ICAgaWYoKCRmaWx0ZXJbJ2ZpZWxkJ10/P251bGwpPT09J2Zvcm5lY2Vkb3JfaWQnJiYoISRhbmR8fCgkZmlsdGVyWydvcGVyYXRvciddPz9udWxsKSE9PSdlcSd8fHNlbGY6OnNpZ25lZEludGVnZXIoJGZpbHRlclsndmFsdWUnXT8/bnVsbCw0MjIpIT09JGlkKSlzZWxmOjppbnZhbGlkKDQyMik7DQo=",
+      "afterBase64": "ICAgaWYoKCRmaWx0ZXJbJ2ZpZWxkJ10/P251bGwpPT09J2Zvcm5lY2Vkb3JfaWQnKXtpZighJGFuZHx8KCRmaWx0ZXJbJ29wZXJhdG9yJ10/P251bGwpIT09J2VxJylzZWxmOjppbnZhbGlkKDQyMik7JHNlbGVjdGVkPXNlbGY6OnNpZ25lZEludGVnZXIoJGZpbHRlclsndmFsdWUnXT8/bnVsbCw0MjIpO2lmKCRpZCE9PW51bGwmJiRzZWxlY3RlZCE9PSRpZClzZWxmOjppbnZhbGlkKDQyMik7JGlkPSRzZWxlY3RlZDt9DQo="
+    },
+    {
+      "baselineStart": 4328,
+      "baselineEnd": 4362,
+      "candidateStart": 4529,
+      "candidateEnd": 4596,
+      "beforeBase64": "ICByZXR1cm4gWydmb3JuZWNlZG9yX2lkJz0+JGlkXTsNCg==",
+      "afterBase64": "ICBpZigkaWQ9PT1udWxsKXNlbGY6OmludmFsaWQoNDIyKTtyZXR1cm4gWydmb3JuZWNlZG9yX2lkJz0+JGlkXTsNCg=="
+    }
+  ],
+  "unchangedRanges": [
+    {
+      "baselineStart": 0,
+      "baselineEnd": 3067,
+      "candidateStart": 0,
+      "candidateEnd": 3067,
+      "sha256": "396576fff5a92619cf80ec5573521190187d6bcdc848912fc6f8c6efd6f9cbc3"
+    },
+    {
+      "baselineStart": 3389,
+      "baselineEnd": 3846,
+      "candidateStart": 3521,
+      "candidateEnd": 3978,
+      "sha256": "32ae79dab560aea1e2da6a2ca106c62873bc7ec30611ab6316318c813180aaf3"
+    },
+    {
+      "baselineStart": 4016,
+      "baselineEnd": 4328,
+      "candidateStart": 4217,
+      "candidateEnd": 4529,
+      "sha256": "1f1c1c366c02b26f23e3da988c8cda85e76ddbfa4dd47fe4d41d2fa62c6113c3"
+    },
+    {
+      "baselineStart": 4362,
+      "baselineEnd": 7471,
+      "candidateStart": 4596,
+      "candidateEnd": 7705,
+      "sha256": "585404fdb1b4892306ce191bc19398d1fc5733adc791c199ecd09f5cb0e1d9a6"
+    }
+  ],
+  "applyOnlyByExactBaseline": true
+}

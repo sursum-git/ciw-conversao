@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "createdAtUtc": "2026-10-29T03:11:54.765676+00:00",
+  "scope": "Supplement only; original limits/proposal immutable",
+  "previousManifestSha256": "19f3e3a92eeb81d117e19c5c3ea1492f477f211976e2b024f22b6e6048304b53",
+  "paginationComplement": {
+    "path": ".runtime\\ciw-completion-20261028\\build13-pagination-complement\\proof.json",
+    "sha256": "bbc81f2d7557a5a15965d55d260363777e62cb6371818f167c8cfdc6459c2dd2",
+    "state": "INCONCLUSIVE_NO_QUALIFYING_OBSERVED_DATA",
+    "nonemptySecondPage": false,
+    "directCalls": 7,
+    "nativeCalls": 4,
+    "furtherScanPlanned": false
+  },
+  "remainingPhysicalFidelityGates": [
+    "SQL precision/overflow and dynamic optimizer NULL/zero boundaries remain limited to physical operand metadata and closed synthetic SQL vectors; no universal physical equivalence claimed",
+    "PK ASC default is native deterministic pagination policy, not proof of legacy source order when order_grid starts empty",
+    "Quantity n2 matches physical SQL scale2; exact raw legacy driver padding/text and all export formats remain unproved",
+    "Displayed current item labels are current joins; no historical label reconstruction or DB text repair is claimed"
+  ],
+  "originPromotionAllowed": false,
+  "recordedStatesOrTargetsChanged": false,
+  "businessOrCatalogWrites": false
+}

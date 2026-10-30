@@ -1,0 +1,221 @@
+{
+  "database": "espec",
+  "table": "despesas_container",
+  "fields": [
+    {
+      "name": "despesa_container_id",
+      "type": "integer",
+      "format": ">>>,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "despesa_id",
+      "type": "integer",
+      "format": ">>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vl_prev",
+      "type": "decimal",
+      "format": "->>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "container_id",
+      "type": "integer",
+      "format": ">>>>>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "calc_imp_container_id",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vl_base_imp",
+      "type": "decimal",
+      "format": "->>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vl_negociado",
+      "type": "decimal",
+      "format": "->>>,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vl_proforma",
+      "type": "decimal",
+      "format": "->>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cta_corren_custo_distr_id",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_utilizado",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "não",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_manual",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "Sim",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "perc_calc",
+      "type": "decimal",
+      "format": ">>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "memoria_calculo",
+      "type": "character",
+      "format": "x(4000)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "item_container_id",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    }
+  ],
+  "indexes": [
+    {
+      "name": "ind_container_id",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "container_id"
+      ]
+    },
+    {
+      "name": "ind_despesa",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "despesa_id"
+      ]
+    },
+    {
+      "name": "ind_despesas_container",
+      "unique": true,
+      "primary": true,
+      "fields": [
+        "despesa_container_id"
+      ]
+    },
+    {
+      "name": "ind_item_container",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "item_container_id",
+        "despesa_id"
+      ]
+    },
+    {
+      "name": "ind_utilizado",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "container_id",
+        "despesa_id",
+        "log_utilizado"
+      ]
+    }
+  ],
+  "triggers": [
+  ]
+}

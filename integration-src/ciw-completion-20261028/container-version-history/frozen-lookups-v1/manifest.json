@@ -1,0 +1,231 @@
+{
+  "version": "lookups-v1",
+  "status": "ABL_CANDIDATE_FOR_REVIEW_METADATA_RUNTIME_HASH_GATE",
+  "canonicalWrites": false,
+  "scope": {
+    "helper": "ContainersVersionHistoryLabels.p",
+    "updatedApiServicePairs": 2,
+    "newCurrentLabelFields": 3,
+    "newEntities": 0,
+    "newSourceOperations": 0,
+    "newParentLinks": 0,
+    "phpChanges": 0,
+    "costFormulas": 0,
+    "centralVersionServiceChanges": 0
+  },
+  "dependencyOrder": [
+    "Aux-v1.1 coherent API/Service/Reader/Dispatcher/PHP integration",
+    "Verify main HistoryService baseline v1.4 (565 fix retained)",
+    "Compile helper and both new matching API/Service pairs plus includes and Reader delta",
+    "Deploy each matching API/Service pair coherently",
+    "Read exact runtime metadata exports and hashes for op1035/op1037/op1039",
+    "Append only3fields/columns/filters and create native drafts before publishing"
+  ],
+  "abi": {
+    "externalJsonUnchanged": true,
+    "mainServiceNewHandles": [
+      "phCurrentAllocations",
+      "phCurrentItems"
+    ],
+    "auxServiceNewHandles": [
+      "phCurrentEmitters",
+      "phCurrentExpenses"
+    ],
+    "physicalAliases": [
+      "espec",
+      "ems2cad (NF only)"
+    ],
+    "neverMixOldServiceWithNewApi": true
+  },
+  "budget": {
+    "maxAggregateRecords": 50000,
+    "globalSeconds": 10,
+    "parentReadsReserved": 2,
+    "centralPrivateMaxRows": 49998,
+    "lookupCounterSharedAcrossRows": true,
+    "lookupClockSharedAcrossRows": true,
+    "maxPageSize": 200
+  },
+  "validation": {
+    "localOpenEdge": "12.8 development only",
+    "compiledUnitsPerCodepage": 10,
+    "checks": {
+      "helper": 13,
+      "main": 38,
+      "aux": 28,
+      "total": 79
+    },
+    "codepages": [
+      "UTF-8",
+      "ISO8859-1"
+    ],
+    "cultures": [
+      "AMERICAN",
+      "EUROPEAN"
+    ],
+    "numDbs": 0,
+    "phpTests": 2,
+    "phpAssertions": 51,
+    "realRuntimeMethods": [
+      "readCiwErpPage",
+      "get"
+    ],
+    "transport": "mocked, no network"
+  },
+  "limits": [
+    "No official12.2 compile or physical lookup execution by this executor",
+    "Metadata exports/hashes after auxiliary integration required before final guarded catalog append",
+    "BRL/USD comparisons remain gated by exact SQL NULL/division semantics and shared rule helper",
+    "Do not declare all seven detail tabs converted"
+  ],
+  "baselines": [
+    {
+      "file": "ContainersVersionHistoryApi.p",
+      "baselinePath": "integration-src/ciw-completion-20261028/container-version-history/frozen-v1.4/abl/ContainersVersionHistoryApi.p",
+      "baselineSha256": "d3101f8cccc81d637002c185074f9dd69ded7000cd6b03e0ebbd7c6ef4e99065",
+      "candidateSha256": "d0432295fca4b3b03dd629013cdb7a8f75b6c6b6ef014aa28a3db4cd64222cd5",
+      "action": "Deploy API and its matching Service atomically; internal additional2handles"
+    },
+    {
+      "file": "ContainersVersionHistoryService.p",
+      "baselinePath": "integration-src/ciw-completion-20261028/container-version-history/frozen-v1.4/abl/ContainersVersionHistoryService.p",
+      "baselineSha256": "1b72391027820a110e3041ea60d33fe701ef04f63b749753d96f6f88df5c3407",
+      "candidateSha256": "8b6bfd5a7c7e824ec1b91a637db738c62053ee8b5f4a8534d6e2ed764b309672",
+      "action": "Deploy API and its matching Service atomically; internal additional2handles"
+    },
+    {
+      "file": "ContainersVersionAuxHistoryApi.p",
+      "baselinePath": "integration-src/ciw-completion-20261028/container-version-history/frozen-aux-v1.1/abl/ContainersVersionAuxHistoryApi.p",
+      "baselineSha256": "ba4a614c58c841ca5715929cd1e0a8d967224bfe360a4051e169dea322f56073",
+      "candidateSha256": "430bfe017297fcb68db55589a046a474c88d61e6a894fbcc64061c9231715086",
+      "action": "Deploy API and its matching Service atomically; internal additional2handles"
+    },
+    {
+      "file": "ContainersVersionAuxHistoryService.p",
+      "baselinePath": "integration-src/ciw-completion-20261028/container-version-history/frozen-aux-v1.1/abl/ContainersVersionAuxHistoryService.p",
+      "baselineSha256": "8e795b43200b54ff4299fde78f4e8de565cc6b5444ab1adea3b3fc85fa26867f",
+      "candidateSha256": "6294d044179fa0faa3d990d1c034f6e39c66f0490342e9bf1722682135abdf67",
+      "action": "Deploy API and its matching Service atomically; internal additional2handles"
+    },
+    {
+      "file": "CiwErpReadService.p",
+      "baselinePath": "Aux-v1.1 candidate (must be canonical before applying this delta)",
+      "baselineSha256": "56c424fbdcaea700650d29d2e247d6f4e861872af9b1c329cce33d4f70c0274f",
+      "candidateSha256": "8f2e1444650426824f61e7d220f06a50fb5c0968af42d4c27507c4c90df82223",
+      "patch": "patches/CiwErpReadService.p.patch",
+      "action": "Add only3 current string projections; preserve all keys and other resources"
+    }
+  ],
+  "receipts": [
+    {
+      "path": ".runtime/ciw-completion-20261028/container-version-history/lookup-increment-green.xml",
+      "sha256": "8ce433e74e043fe3ee2a118d34b01c1f7eb2a12676fd296d20f07aa24477e752"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/container-version-history/future-v4-product-local/compile-UTF-8.log",
+      "sha256": "e18ee0ce348311b221678c8ab0ea7df922351fe79a6add23e57f660e8c55de38"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/container-version-history/future-v4-product-local/green-UTF-8-AMERICAN.log",
+      "sha256": "52e2fccc2c40f12919ef2389d93b4dcc2b46a469cf744595a19219344ede50c2"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/container-version-history/future-v4-product-local/green-UTF-8-EUROPEAN.log",
+      "sha256": "52e2fccc2c40f12919ef2389d93b4dcc2b46a469cf744595a19219344ede50c2"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/container-version-history/future-v4-product-local/compile-ISO8859-1.log",
+      "sha256": "e18ee0ce348311b221678c8ab0ea7df922351fe79a6add23e57f660e8c55de38"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/container-version-history/future-v4-product-local/green-ISO8859-1-AMERICAN.log",
+      "sha256": "52e2fccc2c40f12919ef2389d93b4dcc2b46a469cf744595a19219344ede50c2"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/container-version-history/future-v4-product-local/green-ISO8859-1-EUROPEAN.log",
+      "sha256": "52e2fccc2c40f12919ef2389d93b4dcc2b46a469cf744595a19219344ede50c2"
+    }
+  ],
+  "files": [
+    {
+      "path": "abl/ContainersVersionAuxHistoryApi.p",
+      "sha256": "430bfe017297fcb68db55589a046a474c88d61e6a894fbcc64061c9231715086"
+    },
+    {
+      "path": "abl/ContainersVersionAuxHistoryService.p",
+      "sha256": "6294d044179fa0faa3d990d1c034f6e39c66f0490342e9bf1722682135abdf67"
+    },
+    {
+      "path": "abl/ContainersVersionHistoryApi.p",
+      "sha256": "d0432295fca4b3b03dd629013cdb7a8f75b6c6b6ef014aa28a3db4cd64222cd5"
+    },
+    {
+      "path": "abl/ContainersVersionHistoryLabels.p",
+      "sha256": "d78961c6cf351b2acfa5c8298d58666216df3064ebdf76a6e3ea06dff3d217cb"
+    },
+    {
+      "path": "abl/ContainersVersionHistoryService.p",
+      "sha256": "8b6bfd5a7c7e824ec1b91a637db738c62053ee8b5f4a8534d6e2ed764b309672"
+    },
+    {
+      "path": "baselines.json",
+      "sha256": "136783cf8c5929e6df5b4968774db24e68f14790ca805f2e6e1a57069fbb42cb"
+    },
+    {
+      "path": "freeze.cjs",
+      "sha256": "c2ce6660e99e050a082548bec744eddc0fd3643fe02a57182718984f06afb6e0"
+    },
+    {
+      "path": "includes/ContainersVersionAuxHistoryTables.i",
+      "sha256": "d930b8806ef0a065ebc31c071f7ed5d9400a6c9c10eea8400521c53c3c403be6"
+    },
+    {
+      "path": "includes/ContainersVersionHistoryTable.i",
+      "sha256": "e5285fabef060dd20905aced163059e735078873901b11052ab23c39836d326b"
+    },
+    {
+      "path": "metadata/field-additions.json",
+      "sha256": "6bd95e5a0f95f724d932e439ac5bafbeeeca8773130b6648f07061991b2156aa"
+    },
+    {
+      "path": "patches/CiwErpReadService.p.patch",
+      "sha256": "a11ae22d28ed233a0673527dfc1a299e1d696161929c3e8f29d5d34cf32776dd"
+    },
+    {
+      "path": "README.md",
+      "sha256": "6c8de154636683d4bbf7ca4a9433f40777c82b9a60adb25d32b5945f4082f0c8"
+    },
+    {
+      "path": "schema-proof.json",
+      "sha256": "40e829f1b9f801ec7de83b09c9fec33d375806c93cff1f3fc91dcd3c631ae795"
+    },
+    {
+      "path": "tests/abl/ContainersVersionAuxHistoryTest.p",
+      "sha256": "0c2cce2e0aeebf4c934e844e7e6bd2783a134fb1b29af0136b48da8afbc7b85e"
+    },
+    {
+      "path": "tests/abl/ContainersVersionHistoryLabelsTest.p",
+      "sha256": "bf44f159eba7bd7dfbe87b5a6c92a184975781d98a4fc811f8c2b048b6321ebd"
+    },
+    {
+      "path": "tests/abl/ContainersVersionHistoryTest.p",
+      "sha256": "2f47332603aef8796f5786bc87df7376f425405a3d7063c1c27634360b3c3bdb"
+    },
+    {
+      "path": "tests/abl/ContainersVersionHistoryTestTables.i",
+      "sha256": "24480f748f0b71bf28b27ef4abf117540238ebc8cdf992a4e883940ab907262d"
+    },
+    {
+      "path": "tests/runtime-bootstrap.php",
+      "sha256": "8b3311f6251c53fbce9af85dfcc9659d314446e36ad8f1931565aeda92388abb"
+    },
+    {
+      "path": "tests/RuntimeContainerVersionLabelsIntegrationTest.php",
+      "sha256": "d56c6997d936528ca6d8ec5f8653804dfbaa994ad757e64e74d9ed6628385467"
+    },
+    {
+      "path": "verify.cjs",
+      "sha256": "58eee2e47c21211a18d2165244779779b2b917614203708b2187dd9200f2048b"
+    }
+  ]
+}

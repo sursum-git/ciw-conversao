@@ -1,0 +1,36 @@
+{
+  "canonicalWrites": false,
+  "files": [
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwCotacoesService.p",
+      "baselineFile": "baseline-exact/CiwCotacoesService.p",
+      "baselineSha256": "64c35d1616afb509836665bf8550341d705a487bdb12d56c8df0ded66ba61a4a",
+      "candidateFile": "candidate-exact/CiwCotacoesService.p",
+      "candidateSha256": "0f9683eaf6cc09bb6627df182b4a4a7f5437f5f3347fdba043bab70f7baf5ea8"
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeCiwCotacaoAudit.php",
+      "baselineFile": "baseline-exact/RuntimeCiwCotacaoAudit.php",
+      "baselineSha256": "bace517346f4f3282d659a98be5c6f6e028491948fb1346afc7128a8d4ed2336",
+      "candidateFile": "candidate-exact/RuntimeCiwCotacaoAudit.php",
+      "candidateSha256": "99737df043dafa89657a140d4c30c38a69fac5e9e5141dccbf569380bfcb8949"
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "D:/opencode/construtor-pg/backend/src/Ciw/BancoCentralSgsClient.php",
+      "sha256": "912a16638b468e2dfb19af6b5b32cb339b51a2eddfce07c7bfc1f73b37e3b75a",
+      "role": "onlyBCclient-noRealHTTP"
+    },
+    {
+      "path": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeProgressAuditSchema.php",
+      "sha256": "c4b9ae1baae8108e2fbc91c68f4ec8d0e9e5031a6a1ad0282f3e8806ad49b22e",
+      "role": "sharedScalarAuditSchema"
+    },
+    {
+      "path": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainerCostInvalidation.p",
+      "sha256": "380cd70517722a5b2b0bd1b59ca17684f9c416191021e1bb3d13ed2595c15320",
+      "role": "existingInvalidator-exactDependency"
+    }
+  ]
+}

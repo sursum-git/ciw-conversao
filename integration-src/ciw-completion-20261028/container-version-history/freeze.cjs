@@ -1,0 +1,10 @@
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
+const pkg=__dirname,version=process.argv[2]||'v1',dest=path.join(pkg,'frozen-'+version);
+if(fs.existsSync(dest))throw Error('Frozen snapshot already exists; never overwrite it');
+fs.mkdirSync(dest);
+const files=[];function copy(relative){const source=path.join(pkg,relative),target=path.join(dest,relative);if(fs.statSync(source).isDirectory()){fs.mkdirSync(target,{recursive:true});for(const name of fs.readdirSync(source).sort())copy(path.join(relative,name));}else{fs.mkdirSync(path.dirname(target),{recursive:true});fs.copyFileSync(source,target);files.push({path:relative.replaceAll('\\','/'),sha256:crypto.createHash('sha256').update(fs.readFileSync(target)).digest('hex')});}}
+for(const name of ['abl','includes','tests','metadata','patches','baselines.json','README.md','RECONCILIATION.md','PLAN.md'])copy(name);
+if(fs.existsSync(path.join(pkg,'auxiliary-views.json')))copy('auxiliary-views.json');
+const manifest={status:'FROZEN_CANDIDATE_NOT_APPLIED_NOT_PUBLISHED',version,files,officialCompileRequired:'OpenEdge12.2/.42; sursum-api/med/9911 only',localDiagnostics:{version:'12.8 development only',compiles:11,newChecksPerCombination:28,auxiliaryChecksPerCombination:20,codepages:['UTF-8','ISO8859-1'],centralRegressionPerCulture:189,centralRegressionCodepage:'UTF-8',cultures:['AMERICAN','EUROPEAN'],numDbs:0},phpTransportChecks:21,runtimeServiceTests:6,runtimeServiceAssertions:41,metadataSchemaChecks:78,remaining:['independent-review','official12.2-four-combinations','additional-central-Composition-Boundary-regression','PASOE-and-native-runtime-readonly','current-dictionary-four-auxiliary-tables','current-item-emitter-and-expense-lookups','two-derived-historical-comparison-views']};
+fs.writeFileSync(path.join(dest,'manifest.json'),JSON.stringify(manifest,null,2)+'\n');
+console.log(JSON.stringify({snapshot:dest,manifestSha256:crypto.createHash('sha256').update(fs.readFileSync(path.join(dest,'manifest.json'))).digest('hex'),files:files.length},null,2));

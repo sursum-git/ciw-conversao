@@ -1,0 +1,110 @@
+{
+  "status": "CANDIDATE_READY_P1_FIX_REQUIRES_ROOT_REVIEW_AND_NATIVE_RUNTIME",
+  "scope": "1050 PHP key-set check only; no ABL or metadata",
+  "files": [
+    {
+      "path": "baseline-exact/RuntimeCostDistributionLedgerRead.php",
+      "sha256": "8cd734ac03e410d9cb5bf6a230e5f1ccd9b8352d633dc2accf274474c6e1657a",
+      "bytes": 2595
+    },
+    {
+      "path": "baselines.json",
+      "sha256": "e68e267ceedca27daf98c16809e01382ddd687ae21cc4a7d1fef24d5dd3119f8",
+      "bytes": 503
+    },
+    {
+      "path": "candidate-exact/RuntimeCostDistributionLedgerRead.php",
+      "sha256": "f2273437e55865d3ba66ea5fbea0e96d7aa01ea2bd7c6e0bc2bde906ae7e457c",
+      "bytes": 2654
+    },
+    {
+      "path": "evidence/compile.log",
+      "sha256": "d87d9a5651814d49363f6fbda89c6f98e98a6779cd30c37f8cfd2fbdfd92f96a",
+      "bytes": 219
+    },
+    {
+      "path": "evidence/full-green.xml",
+      "sha256": "e761b92781448843aebe4eb8e492b3ace6f4075188515aead5fa087d12f6a85e",
+      "bytes": 356574
+    },
+    {
+      "path": "evidence/green.xml",
+      "sha256": "6e0e2303537080f87062c5371023c538ff1e68c922f79b60fb21760e917a2684",
+      "bytes": 3752
+    },
+    {
+      "path": "evidence/ledger-tests.log",
+      "sha256": "47fbbbadbe8d2a18c4a3b679382d1366edeeeeb94e61c29bfdad430d21f47301",
+      "bytes": 35
+    },
+    {
+      "path": "evidence/red.xml",
+      "sha256": "6dbd2703097317d8eb101b8a76ac8e9c9c621d3cea821cf55f387bb55b9a37c0",
+      "bytes": 4223
+    },
+    {
+      "path": "fixture-provenance.json",
+      "sha256": "2c365ff6455a9897377e657ee95fbae5544389a62b40b44119f11f4e01bffd85",
+      "bytes": 403
+    },
+    {
+      "path": "patches/RuntimeCostDistributionLedgerRead.php.patch",
+      "sha256": "f2daff25d1147470974edc61b058faf33d75a874677c8736154f6f0375f2e5d4",
+      "bytes": 1342
+    },
+    {
+      "path": "php/RuntimeCostDistributionLedgerRead.php",
+      "sha256": "f2273437e55865d3ba66ea5fbea0e96d7aa01ea2bd7c6e0bc2bde906ae7e457c",
+      "bytes": 2654
+    },
+    {
+      "path": "README.md",
+      "sha256": "a892f75aafa37e42a3bc08697ce5c8174bcd3abb1ef638e7a511f8820ff110ee",
+      "bytes": 2330
+    },
+    {
+      "path": "test-inputs/CostDistributionLedgerTest.p",
+      "sha256": "0d9e2150365c960328840079f2099ec9ba2f44aad36da4b64edfc7bac404c422",
+      "bytes": 7434
+    },
+    {
+      "path": "tests/reader-row.json",
+      "sha256": "e6922b43024c8c85cee0621f1287c2b018289d4e848e845a826abf709246a6df",
+      "bytes": 277
+    },
+    {
+      "path": "tests/runtime-bootstrap.php",
+      "sha256": "86976e22a242392fc28f0ca06cd9d30ed1f367f7fd582bc045d11d863dd70713",
+      "bytes": 142
+    },
+    {
+      "path": "tests/RuntimeCostDistributionLedgerKeyOrderIntegrationTest.php",
+      "sha256": "929374a314a228345268546293161d04f32cc29cc887b721de673edb291d3bae",
+      "bytes": 6463
+    }
+  ],
+  "baselines": [
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeCostDistributionLedgerRead.php",
+      "baselineSha256": "8cd734ac03e410d9cb5bf6a230e5f1ccd9b8352d633dc2accf274474c6e1657a",
+      "candidateSha256": "f2273437e55865d3ba66ea5fbea0e96d7aa01ea2bd7c6e0bc2bde906ae7e457c",
+      "patch": "patches/RuntimeCostDistributionLedgerRead.php.patch",
+      "exactCandidate": "candidate-exact/RuntimeCostDistributionLedgerRead.php"
+    }
+  ],
+  "validation": {
+    "red": true,
+    "tests": 7,
+    "assertions": 44,
+    "fullTests": 917,
+    "fullAssertions": 6018,
+    "realReaderFixture": true,
+    "syntheticTtChecks": 31,
+    "numDbs": 0
+  },
+  "priorFreezePreserved": true,
+  "productAblChanges": 0,
+  "canonicalWrites": false,
+  "network": false,
+  "published": false
+}

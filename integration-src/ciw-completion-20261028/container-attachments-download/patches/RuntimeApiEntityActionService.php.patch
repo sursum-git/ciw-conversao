@@ -1,0 +1,50 @@
+--- D:/opencode/construtor-pg/backend/src/Runtime/RuntimeApiEntityActionService.php
++++ D:/opencode/construtor-pg/backend/src/Runtime/RuntimeApiEntityActionService.php
+@@ -59,6 +59,7 @@
+         $operation = trim((string) ($config['operation'] ?? $payload['operation'] ?? $endpointId));
+ 
+         $definition = $this->resolveDefinition($entityCode);
++        if (RuntimeContainerAttachmentDownload::supports($definition) && !in_array($operation,["read","get","download"],true)) { throw new RuntimeHttpException("CONTAINER_ATTACHMENT_READ_ONLY","Anexos do container permitem somente consulta e download.",405); }
+ 
+         if (RuntimePurchaseContextAudit::supports($definition) && in_array($operation,['create','update','delete','get','download'],true)) {
+ 
+@@ -254,13 +255,16 @@
+ 
+     {
+ 
+-        if (!RuntimePurchaseAttachmentAudit::supports($definition) || !$this->files?->isActive() || !$this->attachmentStorage) { throw new RuntimeHttpException('ATTACHMENT_DOWNLOAD_UNAVAILABLE','Download indisponivel.',422); }
+-
+-        $actor=$this->attachmentActor();$row=$this->get($definition,$payload);
+-
+-        if (!RuntimePurchaseAttachmentAudit::dataRow($row,$definition) || !is_string($row['caminho_arquivo']??null) || $row['caminho_arquivo']==='') { throw new RuntimeHttpException('ATTACHMENT_NOT_FOUND','Arquivo nao informado neste registro.',404); }
+-
+-        $owner=hash('sha256',json_encode([$actor,$definition['entityCode'],$row['proc_compra_id'],$row['item_proc_compra_id'],$row['anexo_proc_compra_id']],JSON_THROW_ON_ERROR));
++        $containerAttachment=RuntimeContainerAttachmentDownload::supports($definition);
++        if ((!RuntimePurchaseAttachmentAudit::supports($definition) && !$containerAttachment) || !$this->files?->isActive() || !$this->attachmentStorage) { throw new RuntimeHttpException('ATTACHMENT_DOWNLOAD_UNAVAILABLE','Download indisponivel.',422); }
++
++        $actor=$this->attachmentActor();
++        if ($containerAttachment) { if (!$this->permissions?->hasPermission("container_anexos_progress.read")) { throw new RuntimeHttpException("CONTAINER_ATTACHMENT_FORBIDDEN","Sem permissao para consultar anexos.",403); } RuntimeContainerAttachmentDownload::request($definition,$payload,$this->extractRecordId($definition,$payload)); if ($this->files->hasFiles()) { throw new RuntimeHttpException("CONTAINER_ATTACHMENT_READ_ONLY","Download nao aceita upload.",405); } }
++        $row=$this->get($definition,$payload);
++
++        if (!$containerAttachment && (!RuntimePurchaseAttachmentAudit::dataRow($row,$definition) || !is_string($row['caminho_arquivo']??null) || $row['caminho_arquivo']==='')) { throw new RuntimeHttpException('ATTACHMENT_NOT_FOUND','Arquivo nao informado neste registro.',404); }
++
++        $owner=$containerAttachment ? RuntimeContainerAttachmentDownload::owner($definition,$payload,$row,$actor) : hash('sha256',json_encode([$actor,$definition['entityCode'],$row['proc_compra_id'],$row['item_proc_compra_id'],$row['anexo_proc_compra_id']],JSON_THROW_ON_ERROR));
+ 
+         $stored=$this->attachmentStorage->get($row['caminho_arquivo'],$owner);$path=$stored['path'];
+ 
+@@ -999,6 +1003,7 @@
+         if (RuntimeContainerExpenseBatch::supports($definition)) { return $this->containerExpenseBatchRequest($definition,[],$payload,'get'); }
+ 
+         $id = $this->extractRecordId($definition, $payload);
++        if (RuntimeContainerAttachmentDownload::referenceProfile($definition)) { RuntimeContainerAttachmentDownload::request($definition,$payload,$id); }
+         if (RuntimeImportDiscountRead::supports($definition)) { RuntimeImportDiscountRead::submittedAliases($payload,$id); }
+         if (RuntimeCostDistributionRead::supports($definition)) { RuntimeCostDistributionRead::submittedAliases($payload,$id); }
+         if (RuntimeCostDistributionLedgerRead::supports($definition)) { RuntimeCostDistributionLedgerRead::submittedAliases($payload,$id); }
+@@ -1034,6 +1039,7 @@
+             $path = (string) ($definition['apiSource']['detailResponse']['itemPath'] ?? '$');
+ 
+             $item = $this->extractByPath($response['body'], $path);
++            if (RuntimeContainerAttachmentDownload::referenceProfile($definition)) { RuntimeContainerAttachmentDownload::response($response['body'],$item,$context,$id); }
+ 
+             if ((RuntimePurchaseContextAudit::supports($definition) && (($response['body']['success']??null)!==true || isset($response['body']['error']) || !RuntimePurchaseContextAudit::dataRow($item,$definition) || $item[$definition['primaryKey']]!==$id)) || RuntimePurchaseOrderAudit::supports($definition) && !RuntimePurchaseOrderAudit::dataRow($item)) {
+ 

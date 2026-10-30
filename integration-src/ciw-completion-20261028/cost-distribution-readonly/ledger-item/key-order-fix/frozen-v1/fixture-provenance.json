@@ -1,0 +1,10 @@
+{
+  "kind": "synthetic TT, no DB",
+  "generatedBy": "official-build7/package/sursum-api/programs/CiwErpReadService.p",
+  "readerSha256": "8d7d6da8069bdee82e5c4c95fca3df643e918ae10b96ef22d8a77459ac7bd3cc",
+  "fixtureSha256": "e6922b43024c8c85cee0621f1287c2b018289d4e848e845a826abf709246a6df",
+  "localDevelopmentOpenEdge": "12.8",
+  "numDbs": 0,
+  "unchangedLedgerChecks": 31,
+  "productAblChanges": 0
+}

@@ -1,0 +1,13 @@
+'use strict';
+const assert=require('node:assert/strict'),{rowShape}=require('./verify-ciw-completion-build7-pasoe.cjs');
+const resource='import_descontos_lancamentos',context={desconto_importacao_id:1},base={desconto_importacao_id:1,cta_corren_desconto_id:2,cod_usuario:'2024-02-03',record_key:'{"cta_corren_desconto_id":2,"desconto_importacao_id":1}'};
+assert.doesNotThrow(()=>rowShape(resource,base,context));
+assert.doesNotThrow(()=>rowShape(resource,{...base,record_key:'{"desconto_importacao_id":1,"cta_corren_desconto_id":2}'},context));
+assert.throws(()=>rowShape(resource,{...base,record_key:'{"cta_corren_desconto_id":2,"desconto_importacao_id":1,"extra":0}'},context),/KEY_FIELDS_MISMATCH/);
+assert.throws(()=>rowShape(resource,{...base,record_key:'{"cta_corren_desconto_id":2}'},context),/KEY_FIELDS_MISMATCH/);
+assert.throws(()=>rowShape(resource,{...base,record_key:'{"cta_corren_desconto_id":3,"desconto_importacao_id":1}'},context),/KEY_IDENTITY_MISMATCH/);
+assert.throws(()=>rowShape(resource,{...base,record_key:'{"cta_corren_desconto_id":"2","desconto_importacao_id":1}'},context),/KEY_IDENTITY_MISMATCH/);
+assert.throws(()=>rowShape(resource,base,{desconto_importacao_id:9}),/ROW_OWNER_MISMATCH/);
+assert.throws(()=>rowShape(resource,{...base,cod_usuario:'actor'},context),/PHYSICAL_DATE_NOT_ACTOR/);
+assert.equal(base.record_key,'{"cta_corren_desconto_id":2,"desconto_importacao_id":1}');
+console.log('PASS9 key-order checks;exact key set/types/identity/owner/date/opaque key preserved');

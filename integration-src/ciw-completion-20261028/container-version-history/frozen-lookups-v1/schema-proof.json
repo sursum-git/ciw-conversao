@@ -1,0 +1,90 @@
+{
+  "status": "FOUR_EXISTING_DICTIONARIES_HASH_AND_UNIQUE_KEYS_VERIFIED",
+  "schemas": [
+    {
+      "path": "integration-src/container-panel/schema/schema-itens_container.json",
+      "sha256": "cb27024b0fce79e3528d21e9267bad20927eb6bf9adb7a6ee54bf86404523ebd",
+      "fields": {
+        "item_container_id": "integer",
+        "item_proc_compra_id": "integer"
+      },
+      "uniqueKey": {
+        "name": "ind_itens_container",
+        "unique": true,
+        "primary": true,
+        "fields": [
+          "item_container_id"
+        ]
+      }
+    },
+    {
+      "path": "integration-src/container-panel/schema/schema-itens_proc_compra.json",
+      "sha256": "06ccaf4c0570026c79acb46fe982b139aa19e139985dd8c33eebb6afaaf51a0f",
+      "fields": {
+        "item_proc_compra_id": "integer",
+        "descricao": "character"
+      },
+      "uniqueKey": {
+        "name": "ind_itens_proc_compra",
+        "unique": true,
+        "primary": true,
+        "fields": [
+          "item_proc_compra_id"
+        ]
+      }
+    },
+    {
+      "path": "integration-src/container-panel/schema/schema-despesas.json",
+      "sha256": "370e2e9e0e1e515279d4a4989a40c3e46a02e56170a1546f6fa4638bf994e2db",
+      "fields": {
+        "despesa_id": "integer",
+        "descricao": "character"
+      },
+      "uniqueKey": {
+        "name": "ind_despesa",
+        "unique": true,
+        "primary": true,
+        "fields": [
+          "despesa_id"
+        ]
+      }
+    },
+    {
+      "path": "integration-src/container-panel/schema/ems2cad/schema-emitente.json",
+      "sha256": "e6655fe27ee81d1121b6f869fd5dc65bbaf90201c7299ca4cc13e18544687ae5",
+      "fields": {
+        "cod-emitente": "integer",
+        "nome-abrev": "character"
+      },
+      "uniqueKey": {
+        "name": "codigo",
+        "unique": true,
+        "primary": true,
+        "fields": [
+          "cod-emitente"
+        ]
+      }
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "sources/scriptcase/ciw-completion-linked-20261028/cons_item_container_custos/cons_item_container_custos_lookup.class.php",
+      "sha256": "e6c5a7c965604312f1a98238640415137e7dfbc9fa7bb87db720d6600c3ecc23"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-linked-20261028/cons_item_container_custo_nfs/cons_item_container_custo_nfs_lookup.class.php",
+      "sha256": "768b6feff1c0bc0c78098a2818195f042143d5ec48167847d68b95d63659cf23"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-linked-20261028/cons_item_container_custo_despesas/cons_item_container_custo_despesas_lookup.class.php",
+      "sha256": "50537e58dafdae4c432c76ba1eda8f2c5499b51cb97fe88ba1e089bf8e81ad7a"
+    }
+  ],
+  "semantics": [
+    "Current allocation item_container_id joins current purchase item item_proc_compra_id, without a new container predicate",
+    "Current EMS2CAD emitter cod-emitente, without supplier identific restriction",
+    "Current ESPEC expense despesa_id",
+    "IDs and raw historical snapshot remain unchanged; missing current row or unknown current label is NULL"
+  ],
+  "ima": "No IMA read introduced; no cache introduced"
+}

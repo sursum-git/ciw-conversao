@@ -1,0 +1,72 @@
+{
+  "scope": [
+    "form_itens_proc_compra",
+    "grid_itens_proc_compra"
+  ],
+  "analysis_copies": true,
+  "files": [
+    {
+      "application": "form_itens_proc_compra",
+      "file": "form_itens_proc_compra.php",
+      "remote_sha256": "f814baa9207bf710c813c34ca142981cdfd62987cb8464078bba26495fbd9e49",
+      "copied_sha256": "f814baa9207bf710c813c34ca142981cdfd62987cb8464078bba26495fbd9e49",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "form_itens_proc_compra",
+      "file": "form_itens_proc_compra_apl.php",
+      "remote_sha256": "3bc6a73bab813ea2c0d71802fedafe4b70a8743f3a14c7f4d20b0742e64f99a7",
+      "copied_sha256": "9c94aecbbf4370a7acb2d5905b521b023bbdcec1498a75291763ba6404ef06c8",
+      "sensitive_literals_omitted": 5
+    },
+    {
+      "application": "form_itens_proc_compra",
+      "file": "form_itens_proc_compra_form0.php",
+      "remote_sha256": "153b385555bede32645b035fb56b9a9912d40877b3e13813a62a6823fc6794b5",
+      "copied_sha256": "f670bf4514a1284f874c629f8fc33580583ae8f4f78518e835ccc04fd15ebc00",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "form_itens_proc_compra",
+      "file": "form_itens_proc_compra_js0.php",
+      "remote_sha256": "2a0c6e17d1a65655497db5be1b539fec3f310252c40aafaa4f02d0dbdf904c88",
+      "copied_sha256": "2a0c6e17d1a65655497db5be1b539fec3f310252c40aafaa4f02d0dbdf904c88",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "form_itens_proc_compra",
+      "file": "form_itens_proc_compra_sajax.php",
+      "remote_sha256": "3933da62f5b842c7e511b694ee8533963eca8cab0c730b2de51d270f66af3969",
+      "copied_sha256": "3933da62f5b842c7e511b694ee8533963eca8cab0c730b2de51d270f66af3969",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "form_itens_proc_compra",
+      "file": "index.php",
+      "remote_sha256": "3806098e113562c562f28057403c74cb6b5163032269205c52cba4005b4ff710",
+      "copied_sha256": "0e3d713fdf781096db8df5eb4a53ffedf688a640c579ac5717764d1a1a7ef65e",
+      "sensitive_literals_omitted": 17
+    },
+    {
+      "application": "grid_itens_proc_compra",
+      "file": "grid_itens_proc_compra.php",
+      "remote_sha256": "23c0b886e7fe86e212f785b3168686ad17305a9b66b7c3288dbe20f8b8af4f46",
+      "copied_sha256": "23c0b886e7fe86e212f785b3168686ad17305a9b66b7c3288dbe20f8b8af4f46",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "grid_itens_proc_compra",
+      "file": "grid_itens_proc_compra_grid.class.php",
+      "remote_sha256": "ec16dfc7215f9f7df1edf8e86347243ab8c4051b16c9682d0c616b7c466fda5c",
+      "copied_sha256": "4f1ef34a1e971d779fe6cd41cff12583ef3325bfa7cb780904bac9f22fc85643",
+      "sensitive_literals_omitted": 5
+    },
+    {
+      "application": "grid_itens_proc_compra",
+      "file": "index.php",
+      "remote_sha256": "6d5870f3629569f0e62ed561c4e8521400ae758515e09470691631df3162ddef",
+      "copied_sha256": "a9b8f09aa01f781a146f81da075e1b62d0e0fe8a11967b331067c48d229118ee",
+      "sensitive_literals_omitted": 23
+    }
+  ]
+}

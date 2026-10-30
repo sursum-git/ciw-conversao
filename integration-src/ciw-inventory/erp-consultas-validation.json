@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-22",
+  "instance": "sursum-api/med",
+  "origin": "MED",
+  "resources": [
+    {
+      "resource": "notas_fiscais_med",
+      "screenId": "ciw.notas-fiscais-med",
+      "programCode": "cd0105",
+      "version": "1.0.0",
+      "applications": [
+        "cons_nota_fiscal"
+      ],
+      "runtimeReadValidated": true,
+      "visualValidation": "automated-native-grid-and-detail-passed",
+      "conversionScope": "standalone-read",
+      "contextualActionsPending": false,
+      "remaining": "Consulta MED de naturezas iniciadas em3 publicada; oito campos legados e chave completa. Leitura/detalhe/filtros/paginacao PASOE/runtime e grade/detalhe nativos em Edge validados. Origem IMA e selecao empresarial fora deste recorte; permissoes CIW ao final.",
+      "evidence": "docs/ciw-erp-consultas-med-validacao-2026-10-22.md; OE12.2/.42,47checks/cultura/codepage; PHP622tests/3688assertions; PASOE/read/get/filtros/paginacao e interface nativa; zero escrita de negocio."
+    },
+    {
+      "resource": "titulos_pagar_med",
+      "screenId": "ciw.titulos-pagar-med",
+      "programCode": "cd0106",
+      "version": "1.0.0",
+      "applications": [
+        "cons_tit_ap"
+      ],
+      "runtimeReadValidated": true,
+      "visualValidation": "automated-native-grid-and-detail-passed",
+      "conversionScope": "standalone-read",
+      "contextualActionsPending": true,
+      "remaining": "Consulta independente e seletor contextual de compra MED publicados; novo cadastro ativo cd0108 publicado com aba Pagamentos. Conferir demais chamadores/origens, Itens/Anexos e o novo teste operacional antes de equivalência integral. IMA/seletor empresarial e permissões CIW gerais continuam separados.",
+      "evidence": "docs/ciw-erp-consultas-med-validacao-2026-10-22.md; OE12.2/.42,47checks/cultura/codepage; PHP622tests/3688assertions; PASOE/read/get/filtros/paginacao e interface nativa; zero escrita de negocio. Seletor compra: docs/ciw-processos-compra-pagamentos-2026-10-22.md; OE12.2/210checks por cultura/codepage; PHP641/3987; associacao, estorno, usuario/imagens e Logs nativos comprovados; teste novo removido, titulos originais inalterados.",
+      "purchaseContextPublished": true,
+      "purchaseContextScreens": [
+        "ciw.processos-compra-financeiro-med",
+        "ciw.proc-compra-pagamentos"
+      ],
+      "purchaseContextOperationalValidation": {
+        "association": true,
+        "unlink": true,
+        "nativeActorBeforeAfter": true,
+        "bothPaymentKeysAndParentUI": true,
+        "fixtureCleanup": true,
+        "originalTitlesUnchanged": true
+      },
+      "purchaseHeaderPublished": true,
+      "purchaseHeaderScreen": "ciw.processos-compra-med"
+    }
+  ]
+}

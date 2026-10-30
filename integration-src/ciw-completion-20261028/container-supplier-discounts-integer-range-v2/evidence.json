@@ -1,0 +1,36 @@
+{
+  "success": true,
+  "predecessor518PinsIntact": true,
+  "supplierFreezePinsIntact": true,
+  "unchangedInputs": [
+    {
+      "path": "D:/opencode/construtor-pg/backend/src/Runtime/ApiRequestContext.php",
+      "sha256": "8f788e9627204786fba769c083d2845fe1ff5bdd4561607727fb853e95b23918",
+      "proposalChanges": false
+    },
+    {
+      "path": "D:/opencode/construtor-pg/src/process-engine/ProcessEngine.js",
+      "sha256": "4c47a45b29531752ddffa3f477addbce69ac2f864cfa94f3c96b206d77d4f263",
+      "proposalChanges": false
+    },
+    {
+      "path": "D:/opencode/construtor-pg/public/metadata/schemas/process-definition-v1.schema.json",
+      "sha256": "178910fceb3e4a1d383f85f74efc73ecc4f4c36f1830bb47276adc5640886ee8",
+      "proposalChanges": false
+    }
+  ],
+  "sourceProofSha256": "5414c2930e41fb0dd5359b17d12eb193ee0a78645edf321fdb6aeebcb89b093d",
+  "causalProofSha256": "0ffcbde04f1ec2e45d64b6489280d515da38e1b357f999a6876b0ce1ed6a8c65",
+  "current13SrcManifestSha256": "f24fc810ac250d4f4ac389ed5d6caa1152cef6dd59f9f45485800c7d38f01a2d",
+  "fullPhp": {
+    "tests": 903,
+    "assertions": 6005,
+    "stagedSources": 410,
+    "loadedApp": 278
+  },
+  "nativeTests": 31,
+  "exampleByteExact": true,
+  "routing1056IntegrationProven": false,
+  "networkExecuted": false,
+  "businessWrites": false
+}

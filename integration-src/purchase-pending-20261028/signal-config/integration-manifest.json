@@ -1,0 +1,91 @@
+{
+  "date": "2026-10-28",
+  "status": "FROZEN_REVIEWED_PENDING_OFFICIAL122",
+  "instance": "sursum-api/med/9911",
+  "canonicalModified": false,
+  "published": false,
+  "businessWrites": 0,
+  "ddl": 0,
+  "grants": 0,
+  "newPrograms": [
+    "PurchaseSignalConfigApi.p",
+    "PurchaseSignalConfigService.p"
+  ],
+  "sharedPatches": "patches/integration.json",
+  "reuse": [
+    "CiwCadastroCoreService.r",
+    "RuntimeCiwCadastroAudit",
+    "RuntimeApiEntityActionService",
+    "ScreenDefinitionService.withTransactionLogs"
+  ],
+  "local128": {
+    "numDbs": 0,
+    "checksPerCombination": 40,
+    "official": false,
+    "combinations": [
+      "UTF-8/AMERICAN",
+      "UTF-8/EUROPEAN",
+      "ISO8859-1/AMERICAN",
+      "ISO8859-1/EUROPEAN"
+    ]
+  },
+  "phpAuditChecks": 25,
+  "files": [
+    {
+      "path": "D:/opencode/conversao-sc/integration-src/purchase-pending-20261028/signal-config/prepare.php",
+      "sha256": "73feddbfb08138beb901f7abfe5fbc960393ae86ff069fa6386f55bfdf301bf3",
+      "bytes": 6838
+    },
+    {
+      "path": "D:/opencode/conversao-sc/integration-src/purchase-pending-20261028/signal-config/README.md",
+      "sha256": "edabc49fed2d204e11eb2c4f5fc4f2db38e20bea5387b2919eabc1584b508507",
+      "bytes": 4381
+    },
+    {
+      "path": "D:/opencode/conversao-sc/integration-src/purchase-pending-20261028/signal-config/abl/PurchaseSignalConfigApi.p",
+      "sha256": "d77f6cf270b98e9932e96e0e801cc7041b35ef294ff5831d2bc034e805ce72ef",
+      "bytes": 1376
+    },
+    {
+      "path": "D:/opencode/conversao-sc/integration-src/purchase-pending-20261028/signal-config/abl/PurchaseSignalConfigService.p",
+      "sha256": "7386f09e79cae130967f8cb9bf7bc7fe60e07ffc9fe5b69fb24661735db37e54",
+      "bytes": 4934
+    },
+    {
+      "path": "D:/opencode/conversao-sc/integration-src/purchase-pending-20261028/signal-config/metadata/api-source-additions.json",
+      "sha256": "e054fb729a5b8c35cb7343630e60082e524534634e9df23650b17a759c6a533b",
+      "bytes": 1333
+    },
+    {
+      "path": "D:/opencode/conversao-sc/integration-src/purchase-pending-20261028/signal-config/metadata/sinalizadores-importacao-builder-draft.json",
+      "sha256": "a82388dba7f1cda018dfd8c672b995f32ba9fb7e171ce07e5b6ff564f9ea6348",
+      "bytes": 6353
+    },
+    {
+      "path": "D:/opencode/conversao-sc/integration-src/purchase-pending-20261028/signal-config/patches/integration.json",
+      "sha256": "541d9ac49934f8a932cf4e1a28053cda441b251f6ed82f52d08fc88c2472d398",
+      "bytes": 2841
+    },
+    {
+      "path": "D:/opencode/conversao-sc/integration-src/purchase-pending-20261028/signal-config/php/RuntimeApiEntityActionService.php",
+      "sha256": "d1e75f6f8a06ed552ecc0f05bb77a51d9fe11582c84f9f756b20ade8328683cf",
+      "bytes": 113629
+    },
+    {
+      "path": "D:/opencode/conversao-sc/integration-src/purchase-pending-20261028/signal-config/php/RuntimeCiwCadastroAudit.php",
+      "sha256": "5e90e544977ee4bd0a1798c25e70146231ff8b01f94ec47a0769b0c702d0241e",
+      "bytes": 3503
+    },
+    {
+      "path": "D:/opencode/conversao-sc/integration-src/purchase-pending-20261028/signal-config/tests/audit.php",
+      "sha256": "6cafb0278cb099d7ab20ed93b70f9d58ef33fccc0e5ae95829363bd208693780",
+      "bytes": 4187
+    },
+    {
+      "path": "D:/opencode/conversao-sc/integration-src/purchase-pending-20261028/signal-config/tests/PurchaseSignalConfigServiceTest.p",
+      "sha256": "a3dac9261852f88ff7bb9b6c4730441107d2fda0b9f707cb08ffe1a10c7db0f5",
+      "bytes": 6903
+    }
+  ],
+  "independentReview": "../sample-batch/review-signal-config-final.json"
+}

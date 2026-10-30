@@ -1,0 +1,249 @@
+{
+  "status": "published-readonly-validated",
+  "sourceApplication": "grid_pp_container",
+  "sourceTitle": "Container's",
+  "target": {
+    "entity": "containers_progress",
+    "program": "op1000",
+    "screenId": "ciw.containers",
+    "module": "operacional",
+    "version": "1.0.0"
+  },
+  "validation": {
+    "schemaConfirmed": true,
+    "schemaEvidence": [
+      "schema-pp-container.json",
+      "schema-situacoes_container.json"
+    ],
+    "apiRegistered": true,
+    "screenPublished": true,
+    "businessWrites": false,
+    "pending": [],
+    "builderContractTests": {
+      "php": "339 tests / 2035 assertions (full suite)",
+      "focalPhp": "41 tests / 215 assertions",
+      "edge": [
+        "crud-query-options-smoke",
+        "program-builder-crud-options-smoke",
+        "program-builder-batch-smoke",
+        "crud-grid-batch-smoke",
+        "crud-context-collections-smoke",
+        "crud-transaction-logs-smoke",
+        "crud-audit-summary-smoke",
+        "linked-page-form-tab-smoke"
+      ],
+      "evidence": [
+        ".runtime/containers-core-20261016/php-tests.log",
+        ".runtime/containers-core-20261016/frontend-tests.log",
+        ".runtime/containers-core-20261016/frontend-format-tests.log"
+      ],
+      "note": "Edge isolates test pages; final default-group test includes real default UserLayoutService envelope, explicit empty user/global layout, empty active preset, and pageSizes containing30.",
+      "edgeFinalFormattingRegressionCount": 9
+    },
+    "publication": {
+      "versionId": 9,
+      "approvalId": 8,
+      "editGrantId": 12,
+      "editGrantRevoked": true
+    },
+    "realRuntime": {
+      "recordCount": 2393,
+      "fieldCount": 23,
+      "integrityChecked": 1119,
+      "integrityInvalid": 0,
+      "datasetDigestBeforeAndAfter": "c36b1b08dae8efcdd2a3dca6895f1b45167fe359968db3d84821e4b8babde9db",
+      "apiEvidence": ".runtime/construtor-pg/containers-readonly-evidence.json",
+      "uiEvidence": ".runtime/construtor-pg/containers-ui-evidence.json",
+      "manifest": ".runtime/containers-publish-20261016/active-manifest.json",
+      "ablChecksPerNumericFormat": 218,
+      "compiler": "OpenEdge 12.2.12",
+      "uiVerified": [
+        "pageSize30",
+        "initialGroups",
+        "fiveDecimalCurrencies",
+        "integerNoDecimals",
+        "readonlyDetail331126",
+        "dateCalendarUTC-3",
+        "booleanSimNao",
+        "recordLogsButton"
+      ]
+    }
+  },
+  "physicalSource": {
+    "database": "espec",
+    "table": "pp-container",
+    "primaryKeyAlias": {
+      "publicField": "container_id",
+      "physicalField": "nr-container",
+      "meaning": "Número do container ERP; não é containers.container_id. Não duplicar como nr_container."
+    },
+    "fieldMapping": {
+      "container_id": "nr-container",
+      "cod_estabel": "cod-estabel",
+      "cod_emit_forn": "cod-emit-forn",
+      "nome_ab_forn": "nome-ab-forn",
+      "dt_recebimento": "dt-recebimento",
+      "dt_prev_chegada": "dt-prev-chegada",
+      "situacao": "situacao",
+      "vl_dolar_compra": "vl-dolar-compra",
+      "vl_dolar_venda": "vl-dolar-venda",
+      "situacao_container_id": "situacao_container_id",
+      "dt_prev_embarque": "dt_prev_embarque",
+      "dt_real_embarque": "dt_real_embarque",
+      "num_pedido": "num-pedido",
+      "dt_compra": "dt-compra",
+      "exclusivo": "exclusivo",
+      "ind_dt_embarque": "ind_dt_embarque",
+      "ind_dt_prev_chegada": "ind_dt_prev_chegada",
+      "log_pagto_final": "log_pagto_final",
+      "cod_agente_cargas": "cod_agente_cargas",
+      "cod_armador": "cod_armador"
+    },
+    "initialWhere": null,
+    "readonly": true,
+    "stringLengthDecision": "Formatos X(3)/X(12) são apresentação; não impor como limite de armazenamento em consulta.",
+    "decimalScale": 5
+  },
+  "sourceEvidence": {
+    "query": "grid_pp_container_grid.class.php:1207",
+    "title": "grid_pp_container_grid.class.php:1530",
+    "fieldOrder": "index.php:5774-5795",
+    "hiddenColumns": "index.php:5801-5808",
+    "defaultGroup": "index.php:5284-5298",
+    "groupOrder": "grid_pp_container_grid.class.php:877-878",
+    "filters": "grid_pp_container_pesq.class.php:3096-4576"
+  },
+  "sourceNavigation": {
+    "first": {
+      "label": "Painel",
+      "application": "bl_ponte_painel_container",
+      "target": "_self",
+      "parameters": {
+        "container_id_corrente": "nr-container",
+        "container_corrente": "nr-container"
+      },
+      "evidence": "grid_pp_container_grid.class.php:5700-5717",
+      "implementationStatus": "proposal-only"
+    },
+    "second": {
+      "label": "Vendas",
+      "application": "bl_selec_vendas_container",
+      "target": "_blank",
+      "parameters": {
+        "container_param": "nr-container"
+      },
+      "evidence": "grid_pp_container_grid.class.php:5775-5792",
+      "implementationStatus": "proposal-only"
+    },
+    "newContainer": {
+      "application": "form_pp_container",
+      "sessionContext": {
+        "novo_container": 1,
+        "container_corrente": 0
+      },
+      "evidence": "index.php:6998-7009",
+      "implementationStatus": "proposal-only"
+    },
+    "legacyProgramsCalledAutomatically": false
+  },
+  "onRecord": {
+    "customBusinessRuleFound": false,
+    "note": "Painel/Vendas são ícones estáticos do renderer; lookups não escrevem registros."
+  },
+  "lookups": {
+    "situacao": [
+      [
+        1,
+        "Aberto"
+      ],
+      [
+        2,
+        "Suspenso"
+      ],
+      [
+        3,
+        "Fechado"
+      ]
+    ],
+    "situacao_container_descricao": {
+      "table": "espec.situacoes_container",
+      "key": "situacao_container_id",
+      "display": "descricao",
+      "missingLabel": "Não Informado"
+    },
+    "agente_cargas_nome": {
+      "table": "ems2cad.emitente",
+      "key": "cod-emitente",
+      "sourceField": "cod_agente_cargas",
+      "display": "nome-abrev + \"-\" + nome-emit",
+      "databaseStatus": "confirmed-by-schema-pf-and-real-api"
+    },
+    "armador_nome": {
+      "table": "ems2cad.emitente",
+      "key": "cod-emitente",
+      "sourceField": "cod_armador",
+      "display": "nome-abrev + \"-\" + nome-emit",
+      "databaseStatus": "confirmed-by-schema-pf-and-real-api"
+    },
+    "ind_dt_prev_chegadaOriginDefect": "Origem compara vazio para segunda descrição, não código 2; não atribuir significado inventado a 2. Valor raw preservado."
+  },
+  "layout": {
+    "visibleDataColumns": [
+      "container_id",
+      "cod_estabel",
+      "cod_emit_forn",
+      "nome_ab_forn",
+      "dt_recebimento",
+      "dt_prev_chegada",
+      "situacao",
+      "vl_dolar_compra",
+      "vl_dolar_venda",
+      "situacao_container_descricao",
+      "dt_prev_embarque",
+      "dt_real_embarque"
+    ],
+    "initiallyHiddenDataColumns": [
+      "num_pedido",
+      "dt_compra",
+      "exclusivo",
+      "ind_dt_embarque",
+      "ind_dt_prev_chegada",
+      "log_pagto_final",
+      "agente_cargas_nome",
+      "armador_nome"
+    ],
+    "filterFields": [
+      "container_id",
+      "log_pagto_final",
+      "cod_emit_forn",
+      "cod_agente_cargas",
+      "cod_armador",
+      "dt_prev_embarque",
+      "dt_real_embarque",
+      "dt_prev_chegada",
+      "dt_recebimento",
+      "situacao",
+      "situacao_container_id"
+    ],
+    "filterLogic": "and",
+    "initialFilterValues": {},
+    "sourceGroup": [
+      {
+        "field": "situacao",
+        "dir": "asc"
+      },
+      {
+        "field": "situacao_container_id",
+        "dir": "asc"
+      }
+    ],
+    "sourcePageSize": 30,
+    "defaultGroupingSupport": "Implementado por programDraft.crudOptions.defaultGroup; o renderer usa crud.query.defaultGroup somente sem escolha de agrupamento do usuário. Leiaute explícito vazio é preservado."
+  },
+  "builderLimitations": {
+    "resolved": true,
+    "contract": "programDraft.crudOptions",
+    "reference": "docs/crud-consultas-config.md",
+    "instructions": "O builder gera as colunas, filtros e defaults por contrato fechado, persiste em builderConfig e preserva ao importar/exportar/editar. Não aplicar patch de generatedDefinition nem alterar dados assinados diretamente."
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "textPatches": [
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersImpostosService.p",
+      "baselineSha256": "7c2f1ce11dd750531a79ad67386f691a02f9244700fcc1a9b59ff83c8e28b669",
+      "changes": [
+        {
+          "old": "DEFINE VARIABLE lcMemory AS LONGCHAR NO-UNDO.",
+          "new": "DEFINE VARIABLE lcMemory AS LONGCHAR NO-UNDO.\nDEFINE VARIABLE iTaxOnlyRows AS INTEGER NO-UNDO.\nDEFINE VARIABLE iTaxOnlyStarted AS INTEGER NO-UNDO.\nDEFINE VARIABLE lTaxOnlyCompleted AS LOGICAL NO-UNDO."
+        },
+        {
+          "old": " IF hqBuffer:LOCKED THEN RUN Fail(",
+          "new": " IF cOperation=\"calcular_impostos\" AND NOT hq:QUERY-OFF-END THEN DO:\n  iTaxOnlyRows=iTaxOnlyRows + 1.\n  IF iTaxOnlyRows>50000 OR ETIME - iTaxOnlyStarted>10000 THEN RUN Fail(\"CONTAINER_TAX_LIMIT\",\"Limite do comando fiscal excedido.\",503).\n END.\n IF hqBuffer:LOCKED THEN RUN Fail("
+        },
+        {
+          "old": " IF cOperation=\"sincronizar\" THEN DO:\n  RUN NextCalculoId",
+          "new": " IF cOperation=\"sincronizar\" OR cOperation=\"calcular_impostos\" THEN DO:\n  RUN NextCalculoId"
+        },
+        {
+          "old": " IF cOperation<>\"sincronizar\" AND cOperation<>\"atualizar_despesas_calculadas\" THEN",
+          "new": " IF cOperation<>\"sincronizar\" AND cOperation<>\"calcular_impostos\" AND cOperation<>\"atualizar_despesas_calculadas\" THEN"
+        },
+        {
+          "old": "  RUN CheckInputs. RUN LoadState.\n  IF cOperation=\"sincronizar\" THEN DO: RUN TaxPlan. RUN IpiPlan. END.\n  ELSE RUN CalculatedPlan.\n  RUN PersistPlan.",
+          "new": "  IF cOperation=\"calcular_impostos\" THEN DO:\n   iTaxOnlyStarted=ETIME.\n   DO STOP-AFTER 10 ON STOP UNDO, LEAVE:\n    RUN FiscalPlan. lTaxOnlyCompleted=TRUE.\n   END.\n   IF NOT lTaxOnlyCompleted THEN RUN Fail(\"CONTAINER_TAX_LIMIT\",\"Tempo limite do comando fiscal excedido.\",503).\n  END.\n  ELSE RUN FiscalPlan."
+        },
+        {
+          "old": "PROCEDURE BuildError:",
+          "new": "/* One shared planner/persister path. The new command deliberately skips IPI. */\nPROCEDURE FiscalPlan:\n RUN CheckInputs. RUN LoadState.\n IF cOperation=\"sincronizar\" THEN DO: RUN TaxPlan. RUN IpiPlan. END.\n ELSE IF cOperation=\"calcular_impostos\" THEN RUN TaxPlan.\n ELSE RUN CalculatedPlan.\n RUN PersistPlan.\nEND PROCEDURE.\nPROCEDURE BuildError:"
+        }
+      ]
+    },
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/includes/ContainerProcessBoundary.i",
+      "baselineSha256": "895eb07004a834725397c3a68129726772c561a2fab6145337fee08e029f74db",
+      "changes": [
+        {
+          "old": " ELSE IF resourceValue<>\"impostos\" OR operationValue<>\"sincronizar\" THEN",
+          "new": " ELSE IF resourceValue<>\"impostos\" OR (operationValue<>\"sincronizar\" AND operationValue<>\"calcular_impostos\") THEN"
+        }
+      ]
+    },
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersProcessosService.p",
+      "baselineSha256": "c8c33cd04ee545baf83b854dcfb467b6a863827640c766d3533160debcb66a96",
+      "changes": [
+        {
+          "old": "  beforeValue=ProcessSnapshot(master,cid).",
+          "new": "  IF op=\"calcular_impostos\" THEN DO:\n   failureCode=\"CONTAINER_PROCESS_MED_REQUIRED\". failureStatus=422.\n   IF master:BUFFER-FIELD(\"cod-estabel\"):BUFFER-VALUE=? OR NOT STRING(master:BUFFER-FIELD(\"cod-estabel\"):BUFFER-VALUE) BEGINS \"5\" THEN UNDO, THROW NEW Progress.Lang.AppError(\"Comando fiscal exige container MED sob lock.\",1).\n   failureCode=\"CONTAINER_PROCESS_BUSY\". failureStatus=409.\n  END.\n  beforeValue=ProcessSnapshot(master,cid)."
+        },
+        {
+          "old": "  IF op=\"sincronizar\" THEN DO:",
+          "new": "  IF op=\"sincronizar\" OR op=\"calcular_impostos\" THEN DO:"
+        },
+        {
+          "old": " poResponse=NEW JsonObject(). dataValue=NEW JsonObject(). dataValue:Add(\"type\",\"message\").",
+          "new": " poResponse=NEW JsonObject(). IF op=\"calcular_impostos\" THEN poResponse:Add(\"committed\",TRUE). dataValue=NEW JsonObject(). dataValue:Add(\"type\",\"message\")."
+        },
+        {
+          "old": " ELSE messageValue=messageValue + \"impostos sincronizados; memoria \"",
+          "new": " ELSE messageValue=messageValue + (IF op=\"calcular_impostos\" THEN \"impostos calculados; memoria \" ELSE \"impostos sincronizados; memoria \")"
+        }
+      ]
+    },
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersProcessos.p",
+      "baselineSha256": "afd001e23855a4a5349097b4b9cf7e6c4a9a825735b3698df8eea6f7e9ccd9f0",
+      "changes": [
+        {
+          "old": " hCollector[1]:BUFFER-RELEASE().",
+          "new": " IF op=\"calcular_impostos\" AND NOT cEstab BEGINS \"5\" THEN DO: RUN Fail(\"CONTAINER_PROCESS_MED_REQUIRED\",\"Comando fiscal exige container MED.\",422). RETURN. END.\n hCollector[1]:BUFFER-RELEASE()."
+        }
+      ]
+    }
+  ]
+}

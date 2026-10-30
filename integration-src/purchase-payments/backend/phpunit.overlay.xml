@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="tests/bootstrap.php" cacheResult="false" failOnWarning="true" failOnNotice="true" failOnDeprecation="true">
+  <testsuites>
+    <testsuite name="Canonical with candidate overlay">
+      <directory>D:/opencode/construtor-pg/backend/tests</directory>
+      <directory>tests/Runtime</directory>
+    </testsuite>
+  </testsuites>
+</phpunit>

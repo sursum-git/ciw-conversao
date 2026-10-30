@@ -1,0 +1,2173 @@
+{
+  "sourceFiles": [
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/cons_descontos_geral/cons_descontos_geral.php",
+      "sha256": "2d476dc5912f73ef67ee91ecad4bc2c5c4857ef08a0114360b812d18cb555b8d"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/cons_descontos_geral/cons_descontos_geral_grid.class.php",
+      "sha256": "83f36db1f324de2421b11a1719b0e9b870f9b813148fedd4b7cdc396bf8c15cd"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/cons_descontos_geral/cons_descontos_geral_lookup.class.php",
+      "sha256": "5217a49fac7f936c5df7c508b34b2d39c4c92b2e78dd1efec0acf6782e38594b"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/cons_descontos_geral/cons_descontos_geral_pesq.class.php",
+      "sha256": "077a5556c4de92b1d88c8f72f81a976fb0e0d445f3dd10fb4f69a3604043d07b"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/cons_descontos_geral/index.php",
+      "sha256": "998c9ffc754f3fc10a968adb2d325b0d46a961e9f0790e56df3dab0012603b08"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/cons_det_desconto_geral/cons_det_desconto_geral.php",
+      "sha256": "218d2354478097a3973a660ac5769dae84caf3e1e6a6a1a530db1b06d4c8f59a"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/cons_det_desconto_geral/cons_det_desconto_geral_grid.class.php",
+      "sha256": "3ece3702be6e6062cef2c2ed81690577c1b89038901823d554bca71ec59abd64"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/cons_det_desconto_geral/cons_det_desconto_geral_lookup.class.php",
+      "sha256": "b232d83b9915f57ddf17fd059ab58c90fa13403bff5b4368825aadf855bcdabd"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/cons_det_desconto_geral/cons_det_desconto_geral_pesq.class.php",
+      "sha256": "ac44594c8a0a13084ac4b6586a92ab7e471369f010a47dfd61a0d7afaf495f25"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/cons_det_desconto_geral/index.php",
+      "sha256": "07a7e104429c63f5b87ff5f32e5ef594daed5e1673f1b96ace777c39b6ae1d0d"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/grid_cta_corren_desconto/grid_cta_corren_desconto.php",
+      "sha256": "58b4ad480cb23e4822759bc39f4e11eb27edeb6ebac4cdb890df6a42cd4edcbe"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/grid_cta_corren_desconto/grid_cta_corren_desconto_grid.class.php",
+      "sha256": "cc56c992203f3b17bd6d048ca3a62f58b22e080a884114ca167f3b51ded96895"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/grid_cta_corren_desconto/grid_cta_corren_desconto_lookup.class.php",
+      "sha256": "53af765df6ac42abac42c01e6d9835161ba4bd9d86f16c2228242133418b0b13"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/grid_cta_corren_desconto/index.php",
+      "sha256": "ed4d3815122c966248d7bbc7d379f4dbb92044348f5aaf46a54b5812f1e47cd6"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/grid_descontos_importacao/grid_descontos_importacao.php",
+      "sha256": "efb9e481a965b9162e3a68720a973011cdc7cc9254d4fd60f02b65904620de62"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/grid_descontos_importacao/grid_descontos_importacao_grid.class.php",
+      "sha256": "46f4caca34e7f0fb91514212f04a5c26bc0eeb913a30526e03bdfc6fb8b9dfbd"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/grid_descontos_importacao/grid_descontos_importacao_lookup.class.php",
+      "sha256": "1beb68886c9c39a47aaf209fb1cfe4258578bd16ee75d0f14f841fb629b5e2ae"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/grid_descontos_importacao/grid_descontos_importacao_pesq.class.php",
+      "sha256": "9180f0c1e5d4224246280f89358950dc653f8976d2a855908a97447e8591bbba"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/grid_descontos_importacao/index.php",
+      "sha256": "48469ea9ec042bd33c8540b6e1012fac977075f259c1499125d40cc5e3e2b89b"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/bl_ponte_descontos_importacao/bl_ponte_descontos_importacao.php",
+      "sha256": "8d1094b20dd6a03f8a9c52ceb66e3d18decf079cab8220d599034ecf96b27ab1"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/bl_ponte_descontos_importacao/index.php",
+      "sha256": "13beb9323dad9b3751f34685f36acf3c8d332b21ede98aadb51da0aa9ef0cb21"
+    }
+  ],
+  "schemas": [
+    {
+      "path": "integration-src/container-panel/schema/schema-descontos_importacao.json",
+      "sha256": "2898444db0b91153ece70f3c3c16c7d1f96feae5ab298907f2ac0350e87d12d5",
+      "table": "descontos_importacao",
+      "fields": [
+        {
+          "name": "desconto_importacao_id",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "motivo_desconto_id",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "descricao",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "log_credito",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "vl_dolar",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 2
+        },
+        {
+          "name": "vl_real",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 2
+        },
+        {
+          "name": "vl_cotacao_dolar",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 2
+        },
+        {
+          "name": "item_container_id",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "cod_tipo",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "fornecedor_id",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "vl_real_autorizado",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 2
+        },
+        {
+          "name": "vl_dolar_autorizado",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 2
+        },
+        {
+          "name": "dt_autorizacao",
+          "type": "date",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "arquivo",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        }
+      ],
+      "indexes": [
+        {
+          "name": "ind_cod_tipo",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "cod_tipo"
+          ]
+        },
+        {
+          "name": "ind_credito",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "log_credito"
+          ]
+        },
+        {
+          "name": "ind_dt_autorizacao",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "dt_autorizacao"
+          ]
+        },
+        {
+          "name": "ind_fornecedor",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "fornecedor_id"
+          ]
+        },
+        {
+          "name": "ind_item_container",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "item_container_id"
+          ]
+        },
+        {
+          "name": "primario",
+          "unique": true,
+          "primary": true,
+          "fields": [
+            "desconto_importacao_id"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "integration-src/container-panel/schema/schema-cta_corren_desconto.json",
+      "sha256": "b23cd6bffde120c9eec78a3bc8e9f8371db30b8b584e5980306f56b9c86b0378",
+      "table": "cta_corren_desconto",
+      "fields": [
+        {
+          "name": "cta_corren_desconto_id",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "desconto_importacao_id",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "container_id",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "valor_utilizado",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 2
+        },
+        {
+          "name": "data",
+          "type": "date",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "cod_usuario",
+          "type": "date",
+          "extent": 0,
+          "decimals": null
+        }
+      ],
+      "indexes": [
+        {
+          "name": "ind_container",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "container_id"
+          ]
+        },
+        {
+          "name": "ind_desconto",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "desconto_importacao_id"
+          ]
+        },
+        {
+          "name": "primario",
+          "unique": true,
+          "primary": true,
+          "fields": [
+            "cta_corren_desconto_id"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "integration-src/container-panel/schema/schema-motivos_desconto.json",
+      "sha256": "570a868b4f3e2096113a09692caac7de2ce6e6e4b98514a98795655fe6e931bb",
+      "table": "motivos_desconto",
+      "fields": [
+        {
+          "name": "motivo_desconto_id",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "descricao",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "log_considerar_custo",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        }
+      ],
+      "indexes": [
+        {
+          "name": "primario",
+          "unique": true,
+          "primary": true,
+          "fields": [
+            "motivo_desconto_id"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "integration-src/container-panel/schema/schema-itens_container.json",
+      "sha256": "cb27024b0fce79e3528d21e9267bad20927eb6bf9adb7a6ee54bf86404523ebd",
+      "table": "itens_container",
+      "fields": [
+        {
+          "name": "item_container_id",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "container_id",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "item_proc_compra_id",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "qt_alocada",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 2
+        },
+        {
+          "name": "qt_confirm_emb",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 2
+        },
+        {
+          "name": "qt_recbto_fisico",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 2
+        },
+        {
+          "name": "log_rec_doc_prazo_emb",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "observacao",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "cod_tipo_calculo",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "perc_custo",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 2
+        },
+        {
+          "name": "log_calc_icms",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "log_calc_ipi",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "perc_icms",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 2
+        },
+        {
+          "name": "perc_ipi",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 2
+        },
+        {
+          "name": "preco_liquida_ima",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 2
+        }
+      ],
+      "indexes": [
+        {
+          "name": "ind_container_id",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "container_id"
+          ]
+        },
+        {
+          "name": "ind_item_proc_compra_id",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "item_proc_compra_id"
+          ]
+        },
+        {
+          "name": "ind_itens_container",
+          "unique": true,
+          "primary": true,
+          "fields": [
+            "item_container_id"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "integration-src/container-panel/schema/schema-itens_proc_compra.json",
+      "sha256": "06ccaf4c0570026c79acb46fe982b139aa19e139985dd8c33eebb6afaaf51a0f",
+      "table": "itens_proc_compra",
+      "fields": [
+        {
+          "name": "item_proc_compra_id",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "descricao",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "codigo_erp",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "qt_dias_producao",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "vl_base_tributacao",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 5
+        },
+        {
+          "name": "unid_medida",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "proc_compra_id",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "qt_comprada",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 2
+        },
+        {
+          "name": "vl_custo_dolar",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 10
+        },
+        {
+          "name": "composicao",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "peso",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "largura",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "rolo",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "dt_prev_envio_desenhos",
+          "type": "date",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "dt_real_envio_desenhos",
+          "type": "date",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "log_aprov_so_ld",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "dt_prev_recbto_so_ld",
+          "type": "date",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "dt_prev_aprov_so_ld",
+          "type": "date",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "dt_real_aprov_so_ld",
+          "type": "date",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "coloracao_id",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "dt_maxima_producao",
+          "type": "date",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "dt_mostruario",
+          "type": "date",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "log_mostruario",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "formato_amostra_id",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ind_producao_no_prazo",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ind_relat_semanal_producao",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ind_qualid_emb",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ind_laudo_antes_embarque",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ind_prod_conf_pi",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ind_rec_amostra_antes_emb",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ind_qt_conf_proforma",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ind_tamanho_pecas_correto",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "observacao",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "dt_cheg_amostras_emb",
+          "type": "date",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "dt_termino_producao",
+          "type": "date",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "vl_cubagem",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 2
+        },
+        {
+          "name": "dt_recbto_laudo",
+          "type": "date",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "dt_recbto_embalagem",
+          "type": "date",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "dt_real_recbto_so_ld",
+          "type": "date",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "dt_prev_termino_producao",
+          "type": "date",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "qt_dias_calc_so_ld",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "shrinkage",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ind_distr_custo",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "vl_negociado",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 5
+        },
+        {
+          "name": "item_estacao",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "dt_item_certificacao",
+          "type": "date",
+          "extent": 0,
+          "decimals": null
+        }
+      ],
+      "indexes": [
+        {
+          "name": "ind_codigo_erp",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "codigo_erp"
+          ]
+        },
+        {
+          "name": "ind_descricao",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "descricao"
+          ]
+        },
+        {
+          "name": "ind_itens_proc_compra",
+          "unique": true,
+          "primary": true,
+          "fields": [
+            "item_proc_compra_id"
+          ]
+        },
+        {
+          "name": "ind_procs_compra",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "proc_compra_id"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "integration-src/container-panel/schema/ems2cad/schema-emitente.json",
+      "sha256": "e6655fe27ee81d1121b6f869fd5dc65bbaf90201c7299ca4cc13e18544687ae5",
+      "table": "ems2cad/emitente",
+      "fields": [
+        {
+          "name": "cod-emitente",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "nome-abrev",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "cgc",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "identific",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "natureza",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "nome-emit",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "endereco",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "bairro",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "cidade",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "estado",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "cep",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "caixa-postal",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "pais",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ins-estadual",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "cod-cond-pag",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "taxa-financ",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 2
+        },
+        {
+          "name": "data-taxa",
+          "type": "date",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "cod-transp",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "cod-gr-forn",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "linha-produt",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "atividade",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "contato",
+          "type": "character",
+          "extent": 2,
+          "decimals": null
+        },
+        {
+          "name": "telefone",
+          "type": "character",
+          "extent": 2,
+          "decimals": null
+        },
+        {
+          "name": "ramal",
+          "type": "character",
+          "extent": 2,
+          "decimals": null
+        },
+        {
+          "name": "telefax",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ramal-fax",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "telex",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "data-implant",
+          "type": "date",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "compr-period",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 2
+        },
+        {
+          "name": "end-cobranca",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "cod-rep",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "categoria",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "bonificacao",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 3
+        },
+        {
+          "name": "istr",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "cod-gr-cli",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "lim-credito",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 2
+        },
+        {
+          "name": "dt-lim-cred",
+          "type": "date",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "perc-fat-ped",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "portador",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "modalidade",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ind-fat-par",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ind-cre-cli",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ind-apr-cred",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "nat-operacao",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "observacoes",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "per-minfat",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 2
+        },
+        {
+          "name": "emissao-ped",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "nome-matriz",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "telef-modem",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ramal-modem",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "telef-fac",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ramal-fac",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "agencia",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "nr-titulo",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "nr-dias",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "per-max-canc",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 2
+        },
+        {
+          "name": "dt-ult-venda",
+          "type": "date",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "emite-bloq",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "emite-etiq",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "tr-ar-valor",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "gera-ad",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "port-prefer",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "mod-prefer",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "bx-acatada",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "conta-corren",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "nr-copias-ped",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "cod-suframa",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "cod-cacex",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "gera-difer",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "nr-tabpre",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ind-aval",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "user-libcre",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ins-banc",
+          "type": "integer",
+          "extent": 2,
+          "decimals": null
+        },
+        {
+          "name": "ven-feriado",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ven-domingo",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ven-sabado",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "cgc-cob",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "cep-cob",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "estado-cob",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "cidade-cob",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "bairro-cob",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "endereco-cob",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "cx-post-cob",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ins-est-cob",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "nome-mic-reg",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "tip-cob-desp",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "nome-tr-red",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "nat-ope-ext",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "cod-banco",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "prox-ad",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "lim-adicional",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 2
+        },
+        {
+          "name": "dt-fim-cred",
+          "type": "date",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "obs-entrega",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "cod-tip-ent",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ins-municipal",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "nr-peratr",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "nr-mesina",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "insc-subs-trib",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "cod-mensagem",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "nr-dias-taxa",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "tp-desp-padrao",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "tp-rec-padrao",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "inf-complementar",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "zip-code",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "tp-inspecao",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "forn-exp",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "tp-qt-prg",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ind-atraso",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ind-div-atraso",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ind-dif-atrs-1",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ind-dif-atrs-2",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "esp-pd-venda",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ind-lib-estoque",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ind-moeda-tit",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ind-rendiment",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "tp-pagto",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "vl-min-ad",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 2
+        },
+        {
+          "name": "zip-cob-code",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "hora-ini",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "hora-fim",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "pais-cob",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "resumo-mp",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ind-cred-abat",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "contrib-icms",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "e-mail",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "home-page",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ind-licenciador",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "endereco2",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ind-aval-embarque",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ind-abrange-aval",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "cod-tax",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "cn-codigo",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "cod-entrega",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "cod-isencao",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "dias-comp",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "estoque",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "flag-pag",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "item-cli",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "moeda-libcre",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "nr-dias-atraso",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "valor-minimo",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 2
+        },
+        {
+          "name": "cod-parceiro-edi",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "agente-retencao",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "percepcao",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "char-1",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "char-2",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "dec-1",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 8
+        },
+        {
+          "name": "dec-2",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 8
+        },
+        {
+          "name": "int-1",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "int-2",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "log-1",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "log-2",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "data-1",
+          "type": "date",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "data-2",
+          "type": "date",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "cod-canal-venda",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ind-sit-emitente",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "ind-emit-retencao",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "calcula-multa",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "prog-emit",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "nr-tab-progr",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "recebe-inf-sci",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "cod-classif-fornec",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "cod-classif-cliente",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "nr-cheque-devol",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "periodo-devol",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "vl-max-devol",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 2
+        },
+        {
+          "name": "check-sum",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "val-quota-media",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 4
+        },
+        {
+          "name": "cod-repres-imp",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "vencto-dia-nao-util",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "rend-tribut",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 2
+        },
+        {
+          "name": "utiliza-verba",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "percent-verba",
+          "type": "decimal",
+          "extent": 0,
+          "decimals": 2
+        },
+        {
+          "name": "endereco_text",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "endereco-cob-text",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "short-name",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "log-controla-val-max-inss",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "cod-inscr-inss",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "cod-pulmao",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "idi-tributac-cofins",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "idi-tributac-pis",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "log-calcula-pis-cofins-unid",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "log-optan-suspens-ipi",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "log-optan-cr-presmdo-subst",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "retem-pagto",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "portador-ap",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "modalidade-ap",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "log-contribt-subst-interm",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "dat-valid-suframa",
+          "type": "date",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "nom-fantasia",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "log-possui-nf-eletro",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "log-nf-eletro",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "dt-atualiza",
+          "type": "date",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "hra-atualiz",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "cod-email-nfe",
+          "type": "character",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "log-integr-totvs-colab-vendas",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "cdn-atraso-max",
+          "type": "integer",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "dat-nasc",
+          "type": "date",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "log-beneficiario",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        },
+        {
+          "name": "log-isenta-anexo",
+          "type": "logical",
+          "extent": 0,
+          "decimals": null
+        }
+      ],
+      "indexes": [
+        {
+          "name": "cgc",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "cgc"
+          ]
+        },
+        {
+          "name": "ch-cobranca",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "end-cobranca",
+            "nome-abrev"
+          ]
+        },
+        {
+          "name": "ch-conpag",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "cod-cond-pag"
+          ]
+        },
+        {
+          "name": "ch-matriz",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "nome-matriz"
+          ]
+        },
+        {
+          "name": "ch-natope",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "nat-operacao"
+          ]
+        },
+        {
+          "name": "ch-pais",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "pais"
+          ]
+        },
+        {
+          "name": "ch-portador",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "portador",
+            "modalidade"
+          ]
+        },
+        {
+          "name": "ch-prog-emit",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "prog-emit",
+            "cod-emitente"
+          ]
+        },
+        {
+          "name": "ch-short-name",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "short-name"
+          ]
+        },
+        {
+          "name": "codigo",
+          "unique": true,
+          "primary": true,
+          "fields": [
+            "cod-emitente"
+          ]
+        },
+        {
+          "name": "emtclnfr-19",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "cidade",
+            "cod-emitente"
+          ]
+        },
+        {
+          "name": "emtclnfr-20",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "nome-tr-red"
+          ]
+        },
+        {
+          "name": "emtclnfr-21",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "dt-atualiza",
+            "hra-atualiz"
+          ]
+        },
+        {
+          "name": "gr-mic-cli",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "cod-gr-cli",
+            "nome-mic-reg",
+            "cod-emitente"
+          ]
+        },
+        {
+          "name": "grupo-cli",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "cod-gr-cli",
+            "cod-emitente"
+          ]
+        },
+        {
+          "name": "grupo-fornec",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "cod-gr-forn",
+            "cod-emitente"
+          ]
+        },
+        {
+          "name": "micro-reg",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "nome-mic-reg",
+            "cod-emitente"
+          ]
+        },
+        {
+          "name": "nome",
+          "unique": true,
+          "primary": false,
+          "fields": [
+            "nome-abrev"
+          ]
+        },
+        {
+          "name": "repres",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "cod-rep",
+            "cod-emitente"
+          ]
+        },
+        {
+          "name": "transporte",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "cod-transp",
+            "cod-emitente"
+          ]
+        }
+      ]
+    }
+  ],
+  "confirmedScope": "GLOBAL as original SQL; ledger only selected desconto_importacao_id",
+  "currentLabels": [
+    "item_codigo_erp_atual + item_descricao_atual: original current allocation→purchase item join, exposed as separate typed columns",
+    "fornecedor_nome_abrev_atual: EMS2CAD.emitente by cod-emitente, no identific/empresa restriction",
+    "motivo_descricao_atual: ESPEC.motivos_desconto by id, no log_considerar_custo restriction",
+    "Missing current rows stay NULL in explicit labels while original IDs remain; source display N/A is not converted to invented historical text"
+  ],
+  "differencesPreserved": [
+    "vl_utiliz COALESCE0 and vl_utiliz_detalhe nullable raw SUM coexist consistently in read/get",
+    "vl_saldo is authorized USD minus coalesced utilized USD in both views",
+    "cod_usuario is physical DATE, never actor"
+  ],
+  "outsideScope": [
+    "grid_descontos_importacao item context and bl_ponte item0",
+    "writers form_descontos_importacao/form_cta_corren_desconto"
+  ],
+  "convertedOriginsClaimed": false
+}

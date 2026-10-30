@@ -1,0 +1,433 @@
+{
+  "fields": {
+    "item_proc_compra_id": {
+      "label": "ID Item Pedido",
+      "required": false,
+      "maxLength": null
+    },
+    "descricao": {
+      "label": "Descrição",
+      "required": true,
+      "maxLength": 100
+    },
+    "codigo_erp": {
+      "label": "Código ERP",
+      "required": false,
+      "maxLength": 20
+    },
+    "qt_dias_producao": {
+      "label": "Qt Dias Produção",
+      "required": false,
+      "maxLength": null
+    },
+    "vl_base_tributacao": {
+      "label": "Vl.Unit.Base Tributação + Anti Dumping(Dólar)",
+      "required": false,
+      "maxLength": null
+    },
+    "unid_medida": {
+      "label": "Unid.Medida",
+      "required": true,
+      "maxLength": null
+    },
+    "proc_compra_id": {
+      "label": "Pedido Importação",
+      "required": false,
+      "maxLength": null
+    },
+    "qt_comprada": {
+      "label": "Qt.Comprada",
+      "required": false,
+      "maxLength": null
+    },
+    "vl_custo_dolar": {
+      "label": "Vl .Unit.Registro(Dólar)",
+      "required": false,
+      "maxLength": null
+    },
+    "composicao": {
+      "label": "Composição",
+      "required": false,
+      "maxLength": 30
+    },
+    "peso": {
+      "label": "Peso (GSM)",
+      "required": false,
+      "maxLength": 30
+    },
+    "largura": {
+      "label": "Largura (CM)",
+      "required": false,
+      "maxLength": 30
+    },
+    "rolo": {
+      "label": "Tamanho Rolo",
+      "required": false,
+      "maxLength": 30
+    },
+    "dt_prev_envio_desenhos": {
+      "label": "Dt. Prev. Envio Desenhos",
+      "required": false,
+      "maxLength": null
+    },
+    "dt_real_envio_desenhos": {
+      "label": "Dt. Real Envio Desenhos",
+      "required": false,
+      "maxLength": null
+    },
+    "log_aprov_so_ld": {
+      "label": "Aprova Strike Offs e Lab Dips?",
+      "required": true,
+      "maxLength": null
+    },
+    "dt_prev_recbto_so_ld": {
+      "label": "Dt.Prev.Recbto Strike Offs e Labs Dips",
+      "required": false,
+      "maxLength": null
+    },
+    "dt_prev_aprov_so_ld": {
+      "label": "Dt. Prev. Aprov. Strike Offs e Labs Dips",
+      "required": false,
+      "maxLength": null
+    },
+    "dt_real_aprov_so_ld": {
+      "label": "Dt. Real Aprov. Strike Offs e Labs Dips",
+      "required": false,
+      "maxLength": null
+    },
+    "coloracao_id": {
+      "label": "Coloração",
+      "required": false,
+      "maxLength": null
+    },
+    "dt_maxima_producao": {
+      "label": "Dt. Máxima Produção",
+      "required": false,
+      "maxLength": null
+    },
+    "dt_mostruario": {
+      "label": "Dt. do Mostruário",
+      "required": false,
+      "maxLength": null
+    },
+    "log_mostruario": {
+      "label": "Controla Data Mostruário?",
+      "required": true,
+      "maxLength": null
+    },
+    "formato_amostra_id": {
+      "label": "Formato Amostra ",
+      "required": false,
+      "maxLength": null
+    },
+    "ind_producao_no_prazo": {
+      "label": "Produção no prazo esperado?",
+      "required": true,
+      "maxLength": null
+    },
+    "ind_relat_semanal_producao": {
+      "label": "Envio Relat. Semanal de Produção?",
+      "required": true,
+      "maxLength": null
+    },
+    "ind_qualid_emb": {
+      "label": "Recbto da  Embalagem Conforme  nossa qualidade padrão ?",
+      "required": true,
+      "maxLength": null
+    },
+    "ind_laudo_antes_embarque": {
+      "label": "Envio de Laudo Antes do Embarque?",
+      "required": true,
+      "maxLength": null
+    },
+    "ind_prod_conf_pi": {
+      "label": "Produção Conforme PL(Laudo)?",
+      "required": true,
+      "maxLength": null
+    },
+    "ind_rec_amostra_antes_emb": {
+      "label": "Recbto Amostras Antes do Embarque?",
+      "required": true,
+      "maxLength": null
+    },
+    "ind_qt_conf_proforma": {
+      "label": "Quantidade Conforme Pró-forma ?",
+      "required": true,
+      "maxLength": null
+    },
+    "ind_tamanho_pecas_correto": {
+      "label": "Tamanho de Peças De acordo com o Solicitado?",
+      "required": true,
+      "maxLength": null
+    },
+    "observacao": {
+      "label": "Observações",
+      "required": false,
+      "maxLength": 8000
+    },
+    "dt_cheg_amostras_emb": {
+      "label": "Dt. Cheg. Amostras Embarque",
+      "required": false,
+      "maxLength": null
+    },
+    "dt_termino_producao": {
+      "label": "Dt Termino Producao",
+      "required": false,
+      "maxLength": null
+    },
+    "vl_cubagem": {
+      "label": "Vl. Cubagem",
+      "required": false,
+      "maxLength": null
+    },
+    "dt_recbto_laudo": {
+      "label": "Dt Recbto Laudo",
+      "required": false,
+      "maxLength": null
+    },
+    "dt_recbto_embalagem": {
+      "label": "Dt Recbto Embalagem",
+      "required": false,
+      "maxLength": null
+    },
+    "dt_real_recbto_so_ld": {
+      "label": "Dt Real Recbto So Ld",
+      "required": false,
+      "maxLength": null
+    },
+    "dt_prev_termino_producao": {
+      "label": "Dt.Prev.Término Produção",
+      "required": false,
+      "maxLength": null
+    },
+    "qt_dias_calc_so_ld": {
+      "label": "Qt Dias Calc So Ld",
+      "required": false,
+      "maxLength": null
+    },
+    "shrinkage": {
+      "label": "Shrinkage",
+      "required": false,
+      "maxLength": 100
+    },
+    "ind_distr_custo": {
+      "label": "Distr.Custo ?",
+      "required": true,
+      "maxLength": null
+    },
+    "vl_negociado": {
+      "label": "Vl.Negociado",
+      "required": false,
+      "maxLength": null
+    },
+    "item_estacao": {
+      "label": "Estação Item/Container",
+      "required": false,
+      "maxLength": null
+    },
+    "dt_item_certificacao": {
+      "label": "dt_item_certificacao",
+      "required": false,
+      "maxLength": null
+    }
+  },
+  "staticOptions": {
+    "unid_medida": [
+      {
+        "value": "MT",
+        "text": "Metro",
+        "selected": false
+      },
+      {
+        "value": "KG",
+        "text": "Quilo",
+        "selected": false
+      }
+    ],
+    "log_mostruario": [
+      {
+        "value": "1",
+        "text": "Sim",
+        "selected": false
+      },
+      {
+        "value": "0",
+        "text": "Não",
+        "selected": false
+      }
+    ],
+    "ind_laudo_antes_embarque": [
+      {
+        "value": "0",
+        "text": "Não Informado",
+        "selected": false
+      },
+      {
+        "value": "1",
+        "text": "Sim",
+        "selected": false
+      },
+      {
+        "value": "2",
+        "text": "Não",
+        "selected": false
+      }
+    ],
+    "ind_qualid_emb": [
+      {
+        "value": "0",
+        "text": "Não Informado",
+        "selected": false
+      },
+      {
+        "value": "1",
+        "text": "Sim",
+        "selected": false
+      },
+      {
+        "value": "2",
+        "text": "Não",
+        "selected": false
+      }
+    ],
+    "ind_prod_conf_pi": [
+      {
+        "value": "0",
+        "text": "Não Informado",
+        "selected": false
+      },
+      {
+        "value": "1",
+        "text": "Sim",
+        "selected": false
+      },
+      {
+        "value": "2",
+        "text": "Não",
+        "selected": false
+      }
+    ],
+    "ind_rec_amostra_antes_emb": [
+      {
+        "value": "0",
+        "text": "Não Informado",
+        "selected": false
+      },
+      {
+        "value": "1",
+        "text": "Sim",
+        "selected": false
+      },
+      {
+        "value": "2",
+        "text": "Não",
+        "selected": false
+      }
+    ],
+    "ind_qt_conf_proforma": [
+      {
+        "value": "0",
+        "text": "Não Informado",
+        "selected": false
+      },
+      {
+        "value": "1",
+        "text": "Sim",
+        "selected": false
+      },
+      {
+        "value": "2",
+        "text": "Não",
+        "selected": false
+      }
+    ],
+    "ind_tamanho_pecas_correto": [
+      {
+        "value": "0",
+        "text": "Não Informado",
+        "selected": false
+      },
+      {
+        "value": "1",
+        "text": "Sim",
+        "selected": false
+      },
+      {
+        "value": "2",
+        "text": "Não",
+        "selected": false
+      }
+    ],
+    "log_aprov_so_ld": [
+      {
+        "value": "1",
+        "text": "Sim",
+        "selected": false
+      },
+      {
+        "value": "0",
+        "text": "Não",
+        "selected": false
+      }
+    ],
+    "ind_producao_no_prazo": [
+      {
+        "value": "0",
+        "text": "Não Informado",
+        "selected": false
+      },
+      {
+        "value": "1",
+        "text": "Sim",
+        "selected": false
+      },
+      {
+        "value": "2",
+        "text": "Não",
+        "selected": false
+      }
+    ],
+    "ind_relat_semanal_producao": [
+      {
+        "value": "0",
+        "text": "Não Informado",
+        "selected": false
+      },
+      {
+        "value": "1",
+        "text": "Sim",
+        "selected": false
+      },
+      {
+        "value": "2",
+        "text": "Não",
+        "selected": false
+      }
+    ],
+    "ind_distr_custo": [
+      {
+        "value": "1",
+        "text": "Sim",
+        "selected": true
+      },
+      {
+        "value": "0",
+        "text": "Não",
+        "selected": false
+      }
+    ],
+    "nmgp_cond_fast_search_t": [
+      {
+        "value": "'qp'",
+        "text": "\" . $this->Ini->Nm_lang['lang_srch_like'] . \""
+      }
+    ]
+  },
+  "lookupQueries": [
+    "SELECT cod_opcao, desc_opcao  FROM PUB.opcoes_lista WHERE PUB.opcoes_lista.lista_id = 15  ORDER BY desc_opcao",
+    "SELECT coloracao_id, descricao  FROM PUB.coloracoes  ORDER BY descricao",
+    "SELECT formato_amostra_id, descricao  FROM PUB.formatos_amostra  ORDER BY descricao"
+  ],
+  "physicalFields": 46,
+  "analysisOnly": true
+}

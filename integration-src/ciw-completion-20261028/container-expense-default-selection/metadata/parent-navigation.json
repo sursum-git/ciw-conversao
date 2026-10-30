@@ -1,0 +1,30 @@
+{
+  "target": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/official-build6-v2/tax-only-metadata/op1003-after.json",
+  "baselineSha256": "9740086aec8ecd5ecca40475d4d8827d833085c3f8757b5b9ca6ffaf3227b169",
+  "builderConfigBaselineSha256": "9c8035a14c8db802b6df1ee10c3f732d6ab3b755c7fe5ea8a214b0380138bb61",
+  "targetProgram": "op1003",
+  "baselineVersion": "1.0.3",
+  "targetPointer": "/versions/0/builderConfig",
+  "applyToCloneForNewVersion": true,
+  "preserveExistingVersion": true,
+  "rebaseRequiredAfter1042And1043": false,
+  "liveSnapshotMustStillMatchBeforeApply": true,
+  "operations": [
+    {
+      "op": "add",
+      "path": "/rowLinks/-",
+      "value": {
+        "id": "selecionar_despesas",
+        "label": "Gerar despesas",
+        "screenId": "ciw.container-selecionar-despesas",
+        "parameters": [
+          {
+            "field": "container_id",
+            "sourceField": "container_id"
+          }
+        ],
+        "position": "end"
+      }
+    }
+  ]
+}

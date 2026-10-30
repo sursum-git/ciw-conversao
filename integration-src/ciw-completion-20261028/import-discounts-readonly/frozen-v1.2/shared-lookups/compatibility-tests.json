@@ -1,0 +1,30 @@
+{
+  "productConsumersUnchanged": true,
+  "baseline": "frozen-lookups-v1",
+  "tests": [
+    {
+      "file": "ContainersVersionAuxHistoryTest.p",
+      "baselineSha256": "0c2cce2e0aeebf4c934e844e7e6bd2783a134fb1b29af0136b48da8afbc7b85e",
+      "candidateSha256": "b2194fabceea481a7b482be23ce826fab859d519aa10c87de48aa0b4a3111060",
+      "change": "Fixture purchase item now includes its physical codigo_erp field; assertions unchanged"
+    },
+    {
+      "file": "ContainersVersionHistoryLabelsTest.p",
+      "baselineSha256": "bf44f159eba7bd7dfbe87b5a6c92a184975781d98a4fc811f8c2b048b6321ebd",
+      "candidateSha256": "4ad681be78815fce68b65a51e1830edbe83db82474c26fcfebda691c26f04547",
+      "change": "Fixture purchase item now includes its physical codigo_erp field; assertions unchanged"
+    },
+    {
+      "file": "ContainersVersionHistoryTest.p",
+      "baselineSha256": "2f47332603aef8796f5786bc87df7376f425405a3d7063c1c27634360b3c3bdb",
+      "candidateSha256": "e9cde6bcf0b4a5942c7bb991800be9b5220c233d284d905324044517808b5075",
+      "change": "Fixture purchase item now includes its physical codigo_erp field; assertions unchanged"
+    },
+    {
+      "file": "ContainersVersionHistoryTestTables.i",
+      "baselineSha256": "24480f748f0b71bf28b27ef4abf117540238ebc8cdf992a4e883940ab907262d",
+      "candidateSha256": "24480f748f0b71bf28b27ef4abf117540238ebc8cdf992a4e883940ab907262d",
+      "change": "Fixture purchase item now includes its physical codigo_erp field; assertions unchanged"
+    }
+  ]
+}

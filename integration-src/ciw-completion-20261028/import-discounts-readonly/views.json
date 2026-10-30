@@ -1,0 +1,22 @@
+[
+  {
+    "code": 1045,
+    "entity": "descontos_importacao_geral_progress",
+    "resource": "import_descontos_geral",
+    "screen": "ciw.descontos-importacao-geral",
+    "name": "Descontos de importação — consulta geral",
+    "schema": "descontos_importacao",
+    "context": []
+  },
+  {
+    "code": 1046,
+    "entity": "descontos_importacao_lancamentos_progress",
+    "resource": "import_descontos_lancamentos",
+    "screen": "ciw.descontos-importacao-lancamentos",
+    "name": "Utilização do desconto de importação",
+    "schema": "cta_corren_desconto",
+    "context": [
+      "desconto_importacao_id"
+    ]
+  }
+]

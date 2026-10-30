@@ -1,0 +1,10 @@
+{
+  "legacyParameter": "fornec_id",
+  "legacySourceField": "fornecedor_id",
+  "nativeContextField": "fornecedor_id",
+  "resource": "import_descontos_fornecedor",
+  "newScreen": "ciw.descontos-importacao-fornecedor",
+  "legacyCaller": "cons_cta_corren_fornec_imp_saldos",
+  "nativeCallerStatus": "not converted/published in this package; proposed contextual link only",
+  "programCode": "op1056"
+}

@@ -1,0 +1,91 @@
+{
+  "sourceCode": "motor_progress_ciw_cadastros",
+  "baselinePath": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\build11-metadata-publication-preparation\\metadata-source-after.json",
+  "baselineSha256": "e03349faf62bc8b7a507c6b003c5783349f0901017eeb4499476cea811ff8fcc",
+  "before": 146,
+  "after": 150,
+  "operations": [
+    {
+      "op": "append",
+      "value": {
+        "code": "container_custos_comparacao_real_read",
+        "name": "Comparação histórica de custos — BRL — read",
+        "type": "list",
+        "method": "POST",
+        "path": "/SursumPrograms/ciw-cadastros",
+        "bodyTemplate": {
+          "resource": "container_custos_comparacao_real",
+          "operation": "read"
+        },
+        "requestContextFields": [
+          "container_id",
+          "versao_id"
+        ],
+        "itemsPath": "data",
+        "totalPath": "total"
+      }
+    },
+    {
+      "op": "append",
+      "value": {
+        "code": "container_custos_comparacao_real_get",
+        "name": "Comparação histórica de custos — BRL — get",
+        "type": "detail",
+        "method": "POST",
+        "path": "/SursumPrograms/ciw-cadastros",
+        "bodyTemplate": {
+          "resource": "container_custos_comparacao_real",
+          "operation": "get"
+        },
+        "requestContextFields": [
+          "container_id",
+          "versao_id"
+        ],
+        "itemPath": "data"
+      }
+    },
+    {
+      "op": "append",
+      "value": {
+        "code": "container_custos_comparacao_dolar_read",
+        "name": "Comparação histórica de custos — USD — read",
+        "type": "list",
+        "method": "POST",
+        "path": "/SursumPrograms/ciw-cadastros",
+        "bodyTemplate": {
+          "resource": "container_custos_comparacao_dolar",
+          "operation": "read"
+        },
+        "requestContextFields": [
+          "container_id",
+          "versao_id"
+        ],
+        "itemsPath": "data",
+        "totalPath": "total"
+      }
+    },
+    {
+      "op": "append",
+      "value": {
+        "code": "container_custos_comparacao_dolar_get",
+        "name": "Comparação histórica de custos — USD — get",
+        "type": "detail",
+        "method": "POST",
+        "path": "/SursumPrograms/ciw-cadastros",
+        "bodyTemplate": {
+          "resource": "container_custos_comparacao_dolar",
+          "operation": "get"
+        },
+        "requestContextFields": [
+          "container_id",
+          "versao_id"
+        ],
+        "itemPath": "data"
+      }
+    }
+  ],
+  "rootMustRecheckActualSource": true,
+  "preserveActualAuthenticationInMemory": true,
+  "neverApplySanitizedDtoAsWholeSource": true,
+  "canonicalBuilder205eRequiredBeforeMetadata": true
+}

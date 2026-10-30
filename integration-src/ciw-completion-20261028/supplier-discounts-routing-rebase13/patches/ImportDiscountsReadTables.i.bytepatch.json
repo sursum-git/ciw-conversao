@@ -1,0 +1,33 @@
+{
+  "relative": "includes/ImportDiscountsReadTables.i",
+  "canonical": "D:\\opencode\\motor-progress\\v2\\sursum-api\\includes\\ImportDiscountsReadTables.i",
+  "baselineSha256": "f1d31239a2f8c669218af4d7f968f45b8600bd4a12dd7a087e043b0726b1fbc1",
+  "candidateSha256": "340f3fe91a4e1c76a971221df1f84f8b6f9e6c1974f4b31dbf6baca31d2f7c16",
+  "hunks": [
+    {
+      "baselineStart": 529,
+      "baselineEnd": 529,
+      "candidateStart": 529,
+      "candidateEnd": 567,
+      "beforeBase64": "",
+      "afterBase64": "IEZJRUxEIGFycXVpdm8gQVMgQ0hBUkFDVEVSIElOSVRJQUwgPwo="
+    }
+  ],
+  "unchangedRanges": [
+    {
+      "baselineStart": 0,
+      "baselineEnd": 529,
+      "candidateStart": 0,
+      "candidateEnd": 529,
+      "sha256": "72d03bb128ef651098541597377a87da8ce92819abb381c7b9b8a77c48b36ab3"
+    },
+    {
+      "baselineStart": 529,
+      "baselineEnd": 1255,
+      "candidateStart": 567,
+      "candidateEnd": 1293,
+      "sha256": "0a9ed08b7bc822f7f249bd70e6ef73dc4d74f778b94b53d95918d6e6c76cfcbd"
+    }
+  ],
+  "applyOnlyByExactBaseline": true
+}

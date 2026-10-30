@@ -1,0 +1,49 @@
+{
+  "sourceCode": "motor_progress_ciw_cadastros",
+  "baselinePath": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\source-118-before.json",
+  "baselineSha256": "2bbff65351a30f396a163ee3b2e60c6208e22ed5bbc95e719ac1732f9ec3a098",
+  "merge": "add-only by unique operation code, preserving all 118 entries; root composes concurrent additions",
+  "operations": [
+    {
+      "op": "add",
+      "path": "/operations/-",
+      "value": {
+        "code": "container_versoes_historico_med_read",
+        "name": "Histórico de itens da versão — read",
+        "type": "list",
+        "method": "POST",
+        "path": "/SursumPrograms/ciw-cadastros",
+        "bodyTemplate": {
+          "resource": "container_versoes_historico_med",
+          "operation": "read"
+        },
+        "requestContextFields": [
+          "container_id",
+          "versao_id"
+        ],
+        "itemsPath": "data",
+        "totalPath": "total"
+      }
+    },
+    {
+      "op": "add",
+      "path": "/operations/-",
+      "value": {
+        "code": "container_versoes_historico_med_get",
+        "name": "Histórico de itens da versão — get",
+        "type": "detail",
+        "method": "POST",
+        "path": "/SursumPrograms/ciw-cadastros",
+        "bodyTemplate": {
+          "resource": "container_versoes_historico_med",
+          "operation": "get"
+        },
+        "requestContextFields": [
+          "container_id",
+          "versao_id"
+        ],
+        "itemPath": "data"
+      }
+    }
+  ]
+}

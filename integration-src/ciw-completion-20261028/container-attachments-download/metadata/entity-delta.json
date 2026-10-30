@@ -1,0 +1,40 @@
+{
+  "target": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-attachments-current/container-anexos-entity.json",
+  "baselineSha256": "18e21263b86c10b0a509eaad249bb561784c085210f275f54992c4df71fb5844",
+  "targetPointer": "/entity",
+  "entityCode": "container_anexos_progress",
+  "applyThroughNativeBuilder": true,
+  "neverWriteSanitizedMetadataAuthentication": true,
+  "operations": [
+    {
+      "op": "replace",
+      "path": "/apiDetailOperationCode",
+      "value": "anexos_arquivo_get"
+    },
+    {
+      "op": "add",
+      "path": "/fields/-",
+      "value": {
+        "code": "caminho_arquivo",
+        "label": "Arquivo",
+        "dataType": "string",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "apiJsonPath": "caminho_arquivo",
+        "apiWritePath": "caminho_arquivo",
+        "apiShowInGrid": false,
+        "apiShowInForm": true,
+        "apiShowInFilter": false,
+        "position": 90,
+        "options": {
+          "readonly": true,
+          "writable": false,
+          "editor": "file"
+        }
+      }
+    }
+  ],
+  "resultFieldCount": 9,
+  "preserveAllEightFields": true
+}

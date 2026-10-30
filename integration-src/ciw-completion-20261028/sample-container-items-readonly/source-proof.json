@@ -1,0 +1,188 @@
+{
+  "scope": "GLOBAL source faithful, two header states both3; not equivalent to contextual container panel",
+  "sources": [
+    {
+      "path": "sources/scriptcase/ciw-completion-next19c-20261028/cons_item_container_amostra/cons_item_container_amostra.php",
+      "sha256": "5ce05a9ad2babb2f772b584bdbe28c81fd60aec4179bafd2a8ff88b7166e773f"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next19c-20261028/cons_item_container_amostra/cons_item_container_amostra_grid.class.php",
+      "sha256": "41d47a3c98bd1ca8b0dcc0f2d1d3ed537b15d6df20cc1a7810e3e1c9552f0571"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next19c-20261028/cons_item_container_amostra/cons_item_container_amostra_lookup.class.php",
+      "sha256": "e017c37f19a21cf8b6e5fe8b6b8063ee8dbba8fa6a5901222aed59a5657c0e27"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next19c-20261028/cons_item_container_amostra/index.php",
+      "sha256": "f2a0d9f3e1db963eefb12ed0287786f22294848ff3cfa83fc101a2e7e2ecaaa7"
+    }
+  ],
+  "schemas": [
+    {
+      "path": "integration-src/container-panel/schema/schema-itens_container.json",
+      "sha256": "cb27024b0fce79e3528d21e9267bad20927eb6bf9adb7a6ee54bf86404523ebd",
+      "table": "itens_container",
+      "indexes": [
+        {
+          "name": "ind_container_id",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "container_id"
+          ]
+        },
+        {
+          "name": "ind_item_proc_compra_id",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "item_proc_compra_id"
+          ]
+        },
+        {
+          "name": "ind_itens_container",
+          "unique": true,
+          "primary": true,
+          "fields": [
+            "item_container_id"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "integration-src/container-panel/schema/schema-pp-container.json",
+      "sha256": "c8034298dd1e210827826c069647fcc1446143552751e77a2ee9661e81a1d813",
+      "table": "pp-container",
+      "indexes": [
+        {
+          "name": "indice1",
+          "unique": true,
+          "primary": true,
+          "fields": [
+            "nr-container"
+          ]
+        },
+        {
+          "name": "ind_dt_prev_chegada",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "dt-prev-chegada"
+          ]
+        },
+        {
+          "name": "ind_dt_recbto",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "dt-recebimento",
+            "dt-prev-chegada",
+            "nr-container"
+          ]
+        },
+        {
+          "name": "ind_fornec",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "cod-emit-forn",
+            "nr-container"
+          ]
+        },
+        {
+          "name": "ind_origem",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "num_origem",
+            "nr-container"
+          ]
+        },
+        {
+          "name": "ind_situacao",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "situacao",
+            "nr-container"
+          ]
+        },
+        {
+          "name": "ind_sit_container",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "situacao_container_id"
+          ]
+        },
+        {
+          "name": "ind_versao_custo_desatu",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "log_versao_custo_desatualizada",
+            "nr-container"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "integration-src/container-panel/schema/schema-itens_proc_compra.json",
+      "sha256": "06ccaf4c0570026c79acb46fe982b139aa19e139985dd8c33eebb6afaaf51a0f",
+      "table": "itens_proc_compra",
+      "indexes": [
+        {
+          "name": "ind_codigo_erp",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "codigo_erp"
+          ]
+        },
+        {
+          "name": "ind_descricao",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "descricao"
+          ]
+        },
+        {
+          "name": "ind_itens_proc_compra",
+          "unique": true,
+          "primary": true,
+          "fields": [
+            "item_proc_compra_id"
+          ]
+        },
+        {
+          "name": "ind_procs_compra",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "proc_compra_id"
+          ]
+        }
+      ]
+    }
+  ],
+  "origin": {
+    "app": "cons_item_container_amostra",
+    "tables": "index.php:1160",
+    "predicate": "index.php:3630; grid.class.php:648",
+    "projection": "grid.class.php:815",
+    "defaultSort": "grid.class.php:562",
+    "lookup": "empty lookup class",
+    "columns": 4,
+    "financialFormula": false
+  },
+  "navigation": {
+    "externalCaller": "not found in sanitized local corpus by literal app-name search; no invented navigation or writer"
+  },
+  "identity": {
+    "physicalPK": "itens_container.item_container_id",
+    "record_key": "JSON item_container_id",
+    "ties": "central reader PK tie is deterministic extension, not source guarantee"
+  }
+}

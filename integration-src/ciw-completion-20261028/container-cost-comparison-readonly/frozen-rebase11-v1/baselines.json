@@ -1,0 +1,43 @@
+{
+  "files": [
+    {
+      "target": "D:\\opencode\\motor-progress\\v2\\sursum-api\\programs\\CiwCadastrosCrud.p",
+      "baselineFile": "baseline-exact/CiwCadastrosCrud.p",
+      "baselineSha256": "5717308a591f27516341ded859ce669b4c3fab95199f93b06bae655080cf75c3",
+      "candidateFile": "candidate-exact/CiwCadastrosCrud.p",
+      "candidateSha256": "325746bfbf416dab5b5b05614e937bd9d45203240f215cd779484584a28a427b"
+    },
+    {
+      "target": "D:\\opencode\\motor-progress\\v2\\sursum-api\\programs\\CiwErpReadService.p",
+      "baselineFile": "baseline-exact/CiwErpReadService.p",
+      "baselineSha256": "e330e9adcf4377f09d822e2423f7262d05428ca78172667ff61a20df669711ed",
+      "candidateFile": "candidate-exact/CiwErpReadService.p",
+      "candidateSha256": "e5f550193203ec740ed2f234e3157ad87c5b0c4290b70a0afce078cfe0da9173"
+    },
+    {
+      "target": "D:\\opencode\\motor-progress\\v2\\sursum-api\\programs\\ContainersVersionHistoryLabels.p",
+      "baselineFile": "baseline-exact/ContainersVersionHistoryLabels.p",
+      "baselineSha256": "9bfe21dc6ff9d86105d7602d376a2adc3cc3b9fe61783a68f7d1cd03f9d100bb",
+      "candidateFile": "candidate-exact/ContainersVersionHistoryLabels.p",
+      "candidateSha256": "bce8fc89f40c69d3407fd6e5e789dfd6ee84d6191eeeffd1da131a7e886678b8"
+    },
+    {
+      "target": "D:\\opencode\\construtor-pg\\backend\\src\\Runtime\\RuntimeApiEntityActionService.php",
+      "baselineFile": "baseline-exact/RuntimeApiEntityActionService.php",
+      "baselineSha256": "5f7591ae378c46c0c865c04cb03afaeb9c76fa31dbf329e5661851942ccfc7c6",
+      "candidateFile": "candidate-exact/RuntimeApiEntityActionService.php",
+      "candidateSha256": "318dbb703520869aa83115a4957888789d149671a28a48d697d084cf2156a5cb"
+    },
+    {
+      "target": "D:\\opencode\\construtor-pg\\backend\\src\\Runtime\\RuntimeCiwErpQuery.php",
+      "baselineFile": "baseline-exact/RuntimeCiwErpQuery.php",
+      "baselineSha256": "ee404b000f78b9ff0d482ccf9e735fcd483d196b30811b53b422d4587c819da5",
+      "candidateFile": "candidate-exact/RuntimeCiwErpQuery.php",
+      "candidateSha256": "e05186618557fa692190e1f573b9b11d2f7013c8b281338d864c6750767fe5eb"
+    }
+  ],
+  "baseline": "official11, future compose-after12; never apply a cumulative frozen10 snapshot",
+  "preserve1055": true,
+  "pending12MustRebaseAgain": true,
+  "financeDependencySha256": "614795f3af80f29a51c467e8170f954540a76a8902034b9cf6186b1c328ac7b5"
+}

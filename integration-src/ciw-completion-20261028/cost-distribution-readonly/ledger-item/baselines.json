@@ -1,0 +1,30 @@
+{
+  "status": "ROOT_POST_OFFICIAL6_REBASED_NOT_APPLIED",
+  "canonicalWrites": false,
+  "baselines": [
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwErpReadService.p",
+      "baselineSha256": "2a2111dc9fa56459b0f42796e837675b56921b852d5e012c43f4e71a8b35e1d8",
+      "candidateSha256": "3c8d8b43aefcdf6b23c36cf8fd5fc6211cc3e52a7ae59fd5740cd28c1131992a",
+      "patch": "patches/CiwErpReadService.p.patch"
+    },
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwCadastrosCrud.p",
+      "baselineSha256": "a167b039396533829ede08ab1569215f27b0c6b643af30b6bbe6ae60c8b893b1",
+      "candidateSha256": "41026e7b578ed90404d542b937da51f4c10e980a1e358a6d89ccb63a48f43bca",
+      "patch": "patches/CiwCadastrosCrud.p.patch"
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeCiwErpQuery.php",
+      "baselineSha256": "076d9f9b7dc324743191f9ccada5b43e7c3461cdaaa8506d92fb297ce520a116",
+      "candidateSha256": "76f0848b2161fa09580936a61b357114391cce91370f85d5ec6b16b5748174fc",
+      "patch": "patches/RuntimeCiwErpQuery.php.patch"
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeApiEntityActionService.php",
+      "baselineSha256": "cd7d6cb032f250c8ef69909033009d4210873c9c0bc811e5ded2b8d2e0c557fa",
+      "candidateSha256": "3bd1f401328f967c5eeb169761e6056688d086a2eae45f9ecde91d5298ccad57",
+      "patch": "patches/RuntimeApiEntityActionService.php.patch"
+    }
+  ]
+}

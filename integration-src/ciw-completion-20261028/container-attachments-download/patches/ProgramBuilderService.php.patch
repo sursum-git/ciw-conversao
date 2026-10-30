@@ -1,0 +1,31 @@
+--- D:/opencode/construtor-pg/backend/src/Builder/ProgramBuilderService.php
++++ D:/opencode/construtor-pg/backend/src/Builder/ProgramBuilderService.php
+@@ -4802,8 +4802,9 @@
+             }
+             if (in_array($options['editor'] ?? '', ['dropdown', 'multiselect', 'textarea'], true)) { $fields[$code]['editor'] = $options['editor']; }
+             if (($options['editor']??null)==='file') {
+-                if (!$apiEntity || !\App\Runtime\RuntimePurchaseAttachmentAudit::supports(['entityCode'=>$entity->getCode()]) || $code!=='arquivo_upload' || $field->getDataType()!=='string') { throw new \InvalidArgumentException('Editor file exige perfil de anexos registrado.'); }
++                if (!$apiEntity || !((\App\Runtime\RuntimePurchaseAttachmentAudit::supports(['entityCode'=>$entity->getCode()]) && $code==='arquivo_upload') || (\App\Runtime\RuntimeContainerAttachmentDownload::builderEnabled($entity) && $code==='caminho_arquivo' && ($options['readonly']??false)===true && ($options['writable']??true)===false)) || $field->getDataType()!=='string') { throw new \InvalidArgumentException('Editor file exige perfil de anexos registrado.'); }
+                 $fields[$code]['editor']='file';$fields[$code]['attachment']=['downloadEndpoint'=>'attachments.download','maxBytes'=>20971520];
++                if (\App\Runtime\RuntimeContainerAttachmentDownload::builderEnabled($entity)) { unset($fields[$code]['attachment']['maxBytes']);$fields[$code]['readonly']=true; }
+             }
+ 
+             foreach (['visibleWhen', 'enabledWhen'] as $conditionKey) {
+@@ -6073,7 +6074,7 @@
+                 }
+             }
+         }
+-        if ($apiEntity && !$odooEntity && \App\Runtime\RuntimePurchaseAttachmentAudit::supports(['entityCode'=>$version->getBuilderEntityCode()])) { $handlers['attachments.download']='attachments.download'; }
++        if ($apiEntity && !$odooEntity && (\App\Runtime\RuntimePurchaseAttachmentAudit::supports(['entityCode'=>$version->getBuilderEntityCode()]) || $entity && \App\Runtime\RuntimeContainerAttachmentDownload::builderEnabled($entity))) { $handlers['attachments.download']='attachments.download'; }
+         $activeEndpointIds = [];
+         foreach ($handlers as $endpointId => $handler) {
+             if (in_array($endpointId, ['create', 'update', 'delete'], true)) {
+@@ -6521,7 +6522,7 @@
+                 if ($field->getOptions()['api']['optionsSource'] ?? null) { $api['options.' . $field->getCode()] = ['endpointId' => 'options.' . $field->getCode(), 'method' => 'POST']; }
+             }
+         }
+-        if (\App\Runtime\RuntimePurchaseAttachmentAudit::supports(['entityCode'=>$config['_entity']->getCode()])) { $api['attachments.download']=['endpointId'=>'attachments.download','method'=>'POST']; }
++        if (\App\Runtime\RuntimePurchaseAttachmentAudit::supports(['entityCode'=>$config['_entity']->getCode()]) || \App\Runtime\RuntimeContainerAttachmentDownload::builderEnabled($config['_entity'])) { $api['attachments.download']=['endpointId'=>'attachments.download','method'=>'POST']; }
+         return $api + $systemEndpoints;
+     }
+ 

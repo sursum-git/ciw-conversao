@@ -1,0 +1,14 @@
+{
+  "success": true,
+  "state": "PARITY_GAPS_NOT_CLOSED_NO_PROMOTION",
+  "files": [
+    {
+      "path": "integration-src\\ciw-completion-20261028\\comparison-export-print-parity\\LIMITS.json",
+      "sha256": "3359f9c518975d55e1be13e277dd9b6b83c642f969ff1a9f6a70056d9451f086"
+    },
+    {
+      "path": "integration-src\\ciw-completion-20261028\\comparison-export-print-parity\\reconciliation-proposal.json",
+      "sha256": "b1913ea6fe7e02fd64901769bc78e27e188a610030acb1f35ec3f4c112ab0194"
+    }
+  ]
+}

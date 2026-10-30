@@ -1,0 +1,982 @@
+{
+  "version": 1,
+  "purpose": "1040/41 exact source expression derived multi-row synthetic fixture using actual SQL numeric P/S",
+  "metadataProof": {
+    "path": ".runtime/ciw-completion-20261028/sql-comparison-operand-metadata-v1.json",
+    "sha256": "f22c7e6eb0c10e32c9e3348a5608caa66017f25b19d4ce126bdadcb87404c062",
+    "requestSha256": "c7900f2c631ae446ebe8beeefa45fd1c29c35da2aa52e2b70e89cbb1e17ca448"
+  },
+  "sourceContract": {
+    "path": "integration-src/ciw-completion-20261028/container-cost-comparison-readonly/SOURCE_CONTRACT.json",
+    "sha256": "053f07115cae76d43771343f473f8b18918ad476026d7295770967903b6230d1"
+  },
+  "policy": {
+    "fixedDsn": "espec_pro",
+    "processOnlyOdbcIni": "/etc/odbc.ini",
+    "rootApprovalRequiredBeforeExecution": true,
+    "candidateExecuted": false,
+    "physicalTablesReferenced": false,
+    "businessRowsProjected": false,
+    "businessWrites": false,
+    "ddl": false,
+    "freeSql": false,
+    "fallbackDsn": false,
+    "maxCases": 14,
+    "maxRowsPerCase": 3,
+    "timeoutSecondsPerCase": 10,
+    "resultLimits": "case/status/column metadata/synthetic rows/null flags/error numeric; no business data"
+  },
+  "caseMap": [
+    {
+      "case": "real_normal_rounding",
+      "querySha256": "a32b579649388e48151892b203fa87542a59ec3fe96f33e8493b46fc44e58f26",
+      "rows": 3
+    },
+    {
+      "case": "real_null_nonzero",
+      "querySha256": "cb84f63a88ff5ca2ccdbcfb6f3436edfa2151e4f750163a764d56616503d8e29",
+      "rows": 3
+    },
+    {
+      "case": "real_null_cost_inner_zero",
+      "querySha256": "053eb530c4b60e01245cf1dcdd08f6ca02d1c787d301e6d4a9e294f2deead026",
+      "rows": 2
+    },
+    {
+      "case": "real_null_expense_inner_zero",
+      "querySha256": "feaee259bcd28820d02dfe9e3746bc26e680f326f15de134701f0b283bd818bd",
+      "rows": 2
+    },
+    {
+      "case": "real_null_outer_zero",
+      "querySha256": "f144db3dd29c1341c7dac58c24f0d4ceabcd6e91029e893307bc9e37525db501",
+      "rows": 2
+    },
+    {
+      "case": "real_inner_nonnull_zero",
+      "querySha256": "26308ff1bae3e91742f0e4624f959d5d5b8c2bca1d580eb43eeb69213edda912",
+      "rows": 2
+    },
+    {
+      "case": "real_outer_known_zero",
+      "querySha256": "200fc2d5402d5e37a71cc3c551f89ba19ffd407fe8f3fe88c326e0c8e47ca4aa",
+      "rows": 2
+    },
+    {
+      "case": "dolar_normal_rounding",
+      "querySha256": "c04666761ec264f3bcb0ffa0c69414b5f94217c501e49ed77300eca6eca7570d",
+      "rows": 3
+    },
+    {
+      "case": "dolar_null_nonzero",
+      "querySha256": "9757a6f0a7b919a4e09e97c8551dd855bf1b959c20b8c94ea0af2ab2d815ba17",
+      "rows": 3
+    },
+    {
+      "case": "dolar_null_cost_inner_zero",
+      "querySha256": "3bc3c41fee3777f4dcc6ed33a40a75429c9c4ccca81bb1c26a39601dc8745736",
+      "rows": 2
+    },
+    {
+      "case": "dolar_null_expense_inner_zero",
+      "querySha256": "b242ab5a0c4f8dc9f07f401abf0908f1c228494c53671f1b9a2d7129ff266f7f",
+      "rows": 2
+    },
+    {
+      "case": "dolar_null_outer_zero",
+      "querySha256": "bd75a7cf0ac975bc21f6ed38b2806fcbe60d5779e934c370fe0501c8632dd7d8",
+      "rows": 2
+    },
+    {
+      "case": "dolar_inner_nonnull_zero",
+      "querySha256": "0a71b92bc1202ae7ca4b74a00e7c79dc3159663ff0e4534ca6c4e7a618c542e7",
+      "rows": 2
+    },
+    {
+      "case": "dolar_outer_known_zero",
+      "querySha256": "2f708c255853f264e4349b96757f2be9561a5a84353a8cfe89ecf4eccabef22e",
+      "rows": 2
+    }
+  ],
+  "cases": [
+    {
+      "case": "real_normal_rounding",
+      "currency": "real",
+      "sourceGridSha256": "cb3ba3c4b138e959a75ebc36c4aef585f460eef0aa8153d819ca8ed299cfb595",
+      "sourceSelectLine": 793,
+      "sourceFinancialProjections": [
+        "item_custo.vl_custo_prev_real as item_custo_vl_custo_prev_real",
+        "item_custo.vl_desp_prev_real as item_custo_vl_desp_prev_real",
+        "vl_custo_prev_real + vl_desp_prev_real as vl_tot_prev",
+        "item_custo.vl_unit_prev as item_custo_vl_unit_prev",
+        "item_custo.vl_desp_prev_real_sem_distr_cust as cmp_maior_30_1",
+        "vl_custo_prev_real + vl_desp_prev_real_sem_distr_cust as vl_tot_sem_distr_custo",
+        "(vl_custo_prev_real + vl_desp_prev_real_sem_distr_cust) / ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as vl_unit_sem_distr_custo",
+        "vl_custo_prev_real * perc_fixo_container / 100 as vl_desp_prev_perc_fixo",
+        "vl_custo_prev_real * (1 + (perc_fixo_container / 100)) as vl_tot_perc_fixo",
+        "vl_custo_prev_real * (1 + (perc_fixo_container / 100)) / ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as vl_unit_perc_fixo"
+      ],
+      "physicalOperandMap": {
+        "c": "vl_custo_prev_real",
+        "e": "vl_desp_prev_real",
+        "w": "vl_desp_prev_real_sem_distr_cust",
+        "u": "vl_unit_prev",
+        "p": "perc_fixo_container"
+      },
+      "syntheticRows": [
+        {
+          "id": 1,
+          "c": "100",
+          "e": "20",
+          "w": "10",
+          "u": "12",
+          "p": "5"
+        },
+        {
+          "id": 2,
+          "c": "0",
+          "e": "20",
+          "w": "10",
+          "u": "2",
+          "p": "0"
+        },
+        {
+          "id": 3,
+          "c": "1450",
+          "e": "51.30769231",
+          "w": "52.30769231",
+          "u": "500.4358974367",
+          "p": "5"
+        }
+      ],
+      "rowCount": 3,
+      "nullFlagMap": {
+        "n1": "item_custo_vl_custo_prev_real",
+        "n2": "item_custo_vl_desp_prev_real",
+        "n3": "vl_tot_prev",
+        "n4": "item_custo_vl_unit_prev",
+        "n5": "cmp_maior_30_1",
+        "n6": "vl_tot_sem_distr_custo",
+        "n7": "vl_unit_sem_distr_custo",
+        "n8": "vl_desp_prev_perc_fixo",
+        "n9": "vl_tot_perc_fixo",
+        "n10": "vl_unit_perc_fixo"
+      },
+      "query": "SELECT projected.*, CASE WHEN projected.item_custo_vl_custo_prev_real IS NULL THEN 1 ELSE 0 END AS n1, CASE WHEN projected.item_custo_vl_desp_prev_real IS NULL THEN 1 ELSE 0 END AS n2, CASE WHEN projected.vl_tot_prev IS NULL THEN 1 ELSE 0 END AS n3, CASE WHEN projected.item_custo_vl_unit_prev IS NULL THEN 1 ELSE 0 END AS n4, CASE WHEN projected.cmp_maior_30_1 IS NULL THEN 1 ELSE 0 END AS n5, CASE WHEN projected.vl_tot_sem_distr_custo IS NULL THEN 1 ELSE 0 END AS n6, CASE WHEN projected.vl_unit_sem_distr_custo IS NULL THEN 1 ELSE 0 END AS n7, CASE WHEN projected.vl_desp_prev_perc_fixo IS NULL THEN 1 ELSE 0 END AS n8, CASE WHEN projected.vl_tot_perc_fixo IS NULL THEN 1 ELSE 0 END AS n9, CASE WHEN projected.vl_unit_perc_fixo IS NULL THEN 1 ELSE 0 END AS n10 FROM (\nSELECT item_custo.probe_case_id AS probe_case_id, item_custo.vl_custo_prev_real as item_custo_vl_custo_prev_real, item_custo.vl_desp_prev_real as item_custo_vl_desp_prev_real, vl_custo_prev_real + vl_desp_prev_real as vl_tot_prev, item_custo.vl_unit_prev as item_custo_vl_unit_prev, item_custo.vl_desp_prev_real_sem_distr_cust as cmp_maior_30_1, vl_custo_prev_real + vl_desp_prev_real_sem_distr_cust as vl_tot_sem_distr_custo, (vl_custo_prev_real + vl_desp_prev_real_sem_distr_cust) / ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as vl_unit_sem_distr_custo, vl_custo_prev_real * perc_fixo_container / 100 as vl_desp_prev_perc_fixo, vl_custo_prev_real * (1 + (perc_fixo_container / 100)) as vl_tot_perc_fixo, vl_custo_prev_real * (1 + (perc_fixo_container / 100)) / ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as vl_unit_perc_fixo FROM (\nSELECT 1 AS probe_case_id, CAST(100 AS NUMERIC(17,2)) AS vl_custo_prev_real, CAST(20 AS NUMERIC(17,2)) AS vl_desp_prev_real, CAST(10 AS NUMERIC(17,2)) AS vl_desp_prev_real_sem_distr_cust, CAST(12 AS NUMERIC(17,5)) AS vl_unit_prev\nUNION ALL\nSELECT 2 AS probe_case_id, CAST(0 AS NUMERIC(17,2)) AS vl_custo_prev_real, CAST(20 AS NUMERIC(17,2)) AS vl_desp_prev_real, CAST(10 AS NUMERIC(17,2)) AS vl_desp_prev_real_sem_distr_cust, CAST(2 AS NUMERIC(17,5)) AS vl_unit_prev\nUNION ALL\nSELECT 3 AS probe_case_id, CAST(1450 AS NUMERIC(17,2)) AS vl_custo_prev_real, CAST(51.30769231 AS NUMERIC(17,2)) AS vl_desp_prev_real, CAST(52.30769231 AS NUMERIC(17,2)) AS vl_desp_prev_real_sem_distr_cust, CAST(500.4358974367 AS NUMERIC(17,5)) AS vl_unit_prev\n) item_custo INNER JOIN (\nSELECT 1 AS probe_case_id, CAST(5 AS NUMERIC(17,2)) AS perc_fixo_container\nUNION ALL\nSELECT 2 AS probe_case_id, CAST(0 AS NUMERIC(17,2)) AS perc_fixo_container\nUNION ALL\nSELECT 3 AS probe_case_id, CAST(5 AS NUMERIC(17,2)) AS perc_fixo_container\n) versao ON versao.probe_case_id=item_custo.probe_case_id\n) projected ORDER BY projected.probe_case_id",
+      "querySha256": "a32b579649388e48151892b203fa87542a59ec3fe96f33e8493b46fc44e58f26",
+      "expectedOutcome": "UNOBSERVED_ROOT_REVIEW_BEFORE_EXECUTION",
+      "executeByCandidate": false
+    },
+    {
+      "case": "real_null_nonzero",
+      "currency": "real",
+      "sourceGridSha256": "cb3ba3c4b138e959a75ebc36c4aef585f460eef0aa8153d819ca8ed299cfb595",
+      "sourceSelectLine": 793,
+      "sourceFinancialProjections": [
+        "item_custo.vl_custo_prev_real as item_custo_vl_custo_prev_real",
+        "item_custo.vl_desp_prev_real as item_custo_vl_desp_prev_real",
+        "vl_custo_prev_real + vl_desp_prev_real as vl_tot_prev",
+        "item_custo.vl_unit_prev as item_custo_vl_unit_prev",
+        "item_custo.vl_desp_prev_real_sem_distr_cust as cmp_maior_30_1",
+        "vl_custo_prev_real + vl_desp_prev_real_sem_distr_cust as vl_tot_sem_distr_custo",
+        "(vl_custo_prev_real + vl_desp_prev_real_sem_distr_cust) / ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as vl_unit_sem_distr_custo",
+        "vl_custo_prev_real * perc_fixo_container / 100 as vl_desp_prev_perc_fixo",
+        "vl_custo_prev_real * (1 + (perc_fixo_container / 100)) as vl_tot_perc_fixo",
+        "vl_custo_prev_real * (1 + (perc_fixo_container / 100)) / ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as vl_unit_perc_fixo"
+      ],
+      "physicalOperandMap": {
+        "c": "vl_custo_prev_real",
+        "e": "vl_desp_prev_real",
+        "w": "vl_desp_prev_real_sem_distr_cust",
+        "u": "vl_unit_prev",
+        "p": "perc_fixo_container"
+      },
+      "syntheticRows": [
+        {
+          "id": 1,
+          "c": "100",
+          "e": "20",
+          "w": "10",
+          "u": "12",
+          "p": "5"
+        },
+        {
+          "id": 2,
+          "c": null,
+          "e": "1",
+          "w": "1",
+          "u": "5",
+          "p": "1"
+        },
+        {
+          "id": 3,
+          "c": "1",
+          "e": "1",
+          "w": null,
+          "u": "5",
+          "p": null
+        }
+      ],
+      "rowCount": 3,
+      "nullFlagMap": {
+        "n1": "item_custo_vl_custo_prev_real",
+        "n2": "item_custo_vl_desp_prev_real",
+        "n3": "vl_tot_prev",
+        "n4": "item_custo_vl_unit_prev",
+        "n5": "cmp_maior_30_1",
+        "n6": "vl_tot_sem_distr_custo",
+        "n7": "vl_unit_sem_distr_custo",
+        "n8": "vl_desp_prev_perc_fixo",
+        "n9": "vl_tot_perc_fixo",
+        "n10": "vl_unit_perc_fixo"
+      },
+      "query": "SELECT projected.*, CASE WHEN projected.item_custo_vl_custo_prev_real IS NULL THEN 1 ELSE 0 END AS n1, CASE WHEN projected.item_custo_vl_desp_prev_real IS NULL THEN 1 ELSE 0 END AS n2, CASE WHEN projected.vl_tot_prev IS NULL THEN 1 ELSE 0 END AS n3, CASE WHEN projected.item_custo_vl_unit_prev IS NULL THEN 1 ELSE 0 END AS n4, CASE WHEN projected.cmp_maior_30_1 IS NULL THEN 1 ELSE 0 END AS n5, CASE WHEN projected.vl_tot_sem_distr_custo IS NULL THEN 1 ELSE 0 END AS n6, CASE WHEN projected.vl_unit_sem_distr_custo IS NULL THEN 1 ELSE 0 END AS n7, CASE WHEN projected.vl_desp_prev_perc_fixo IS NULL THEN 1 ELSE 0 END AS n8, CASE WHEN projected.vl_tot_perc_fixo IS NULL THEN 1 ELSE 0 END AS n9, CASE WHEN projected.vl_unit_perc_fixo IS NULL THEN 1 ELSE 0 END AS n10 FROM (\nSELECT item_custo.probe_case_id AS probe_case_id, item_custo.vl_custo_prev_real as item_custo_vl_custo_prev_real, item_custo.vl_desp_prev_real as item_custo_vl_desp_prev_real, vl_custo_prev_real + vl_desp_prev_real as vl_tot_prev, item_custo.vl_unit_prev as item_custo_vl_unit_prev, item_custo.vl_desp_prev_real_sem_distr_cust as cmp_maior_30_1, vl_custo_prev_real + vl_desp_prev_real_sem_distr_cust as vl_tot_sem_distr_custo, (vl_custo_prev_real + vl_desp_prev_real_sem_distr_cust) / ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as vl_unit_sem_distr_custo, vl_custo_prev_real * perc_fixo_container / 100 as vl_desp_prev_perc_fixo, vl_custo_prev_real * (1 + (perc_fixo_container / 100)) as vl_tot_perc_fixo, vl_custo_prev_real * (1 + (perc_fixo_container / 100)) / ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as vl_unit_perc_fixo FROM (\nSELECT 1 AS probe_case_id, CAST(100 AS NUMERIC(17,2)) AS vl_custo_prev_real, CAST(20 AS NUMERIC(17,2)) AS vl_desp_prev_real, CAST(10 AS NUMERIC(17,2)) AS vl_desp_prev_real_sem_distr_cust, CAST(12 AS NUMERIC(17,5)) AS vl_unit_prev\nUNION ALL\nSELECT 2 AS probe_case_id, CAST(NULL AS NUMERIC(17,2)) AS vl_custo_prev_real, CAST(1 AS NUMERIC(17,2)) AS vl_desp_prev_real, CAST(1 AS NUMERIC(17,2)) AS vl_desp_prev_real_sem_distr_cust, CAST(5 AS NUMERIC(17,5)) AS vl_unit_prev\nUNION ALL\nSELECT 3 AS probe_case_id, CAST(1 AS NUMERIC(17,2)) AS vl_custo_prev_real, CAST(1 AS NUMERIC(17,2)) AS vl_desp_prev_real, CAST(NULL AS NUMERIC(17,2)) AS vl_desp_prev_real_sem_distr_cust, CAST(5 AS NUMERIC(17,5)) AS vl_unit_prev\n) item_custo INNER JOIN (\nSELECT 1 AS probe_case_id, CAST(5 AS NUMERIC(17,2)) AS perc_fixo_container\nUNION ALL\nSELECT 2 AS probe_case_id, CAST(1 AS NUMERIC(17,2)) AS perc_fixo_container\nUNION ALL\nSELECT 3 AS probe_case_id, CAST(NULL AS NUMERIC(17,2)) AS perc_fixo_container\n) versao ON versao.probe_case_id=item_custo.probe_case_id\n) projected ORDER BY projected.probe_case_id",
+      "querySha256": "cb84f63a88ff5ca2ccdbcfb6f3436edfa2151e4f750163a764d56616503d8e29",
+      "expectedOutcome": "UNOBSERVED_ROOT_REVIEW_BEFORE_EXECUTION",
+      "executeByCandidate": false
+    },
+    {
+      "case": "real_null_cost_inner_zero",
+      "currency": "real",
+      "sourceGridSha256": "cb3ba3c4b138e959a75ebc36c4aef585f460eef0aa8153d819ca8ed299cfb595",
+      "sourceSelectLine": 793,
+      "sourceFinancialProjections": [
+        "item_custo.vl_custo_prev_real as item_custo_vl_custo_prev_real",
+        "item_custo.vl_desp_prev_real as item_custo_vl_desp_prev_real",
+        "vl_custo_prev_real + vl_desp_prev_real as vl_tot_prev",
+        "item_custo.vl_unit_prev as item_custo_vl_unit_prev",
+        "item_custo.vl_desp_prev_real_sem_distr_cust as cmp_maior_30_1",
+        "vl_custo_prev_real + vl_desp_prev_real_sem_distr_cust as vl_tot_sem_distr_custo",
+        "(vl_custo_prev_real + vl_desp_prev_real_sem_distr_cust) / ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as vl_unit_sem_distr_custo",
+        "vl_custo_prev_real * perc_fixo_container / 100 as vl_desp_prev_perc_fixo",
+        "vl_custo_prev_real * (1 + (perc_fixo_container / 100)) as vl_tot_perc_fixo",
+        "vl_custo_prev_real * (1 + (perc_fixo_container / 100)) / ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as vl_unit_perc_fixo"
+      ],
+      "physicalOperandMap": {
+        "c": "vl_custo_prev_real",
+        "e": "vl_desp_prev_real",
+        "w": "vl_desp_prev_real_sem_distr_cust",
+        "u": "vl_unit_prev",
+        "p": "perc_fixo_container"
+      },
+      "syntheticRows": [
+        {
+          "id": 1,
+          "c": "100",
+          "e": "20",
+          "w": "10",
+          "u": "12",
+          "p": "5"
+        },
+        {
+          "id": 2,
+          "c": null,
+          "e": "1",
+          "w": "1",
+          "u": "0",
+          "p": "1"
+        }
+      ],
+      "rowCount": 2,
+      "nullFlagMap": {
+        "n1": "item_custo_vl_custo_prev_real",
+        "n2": "item_custo_vl_desp_prev_real",
+        "n3": "vl_tot_prev",
+        "n4": "item_custo_vl_unit_prev",
+        "n5": "cmp_maior_30_1",
+        "n6": "vl_tot_sem_distr_custo",
+        "n7": "vl_unit_sem_distr_custo",
+        "n8": "vl_desp_prev_perc_fixo",
+        "n9": "vl_tot_perc_fixo",
+        "n10": "vl_unit_perc_fixo"
+      },
+      "query": "SELECT projected.*, CASE WHEN projected.item_custo_vl_custo_prev_real IS NULL THEN 1 ELSE 0 END AS n1, CASE WHEN projected.item_custo_vl_desp_prev_real IS NULL THEN 1 ELSE 0 END AS n2, CASE WHEN projected.vl_tot_prev IS NULL THEN 1 ELSE 0 END AS n3, CASE WHEN projected.item_custo_vl_unit_prev IS NULL THEN 1 ELSE 0 END AS n4, CASE WHEN projected.cmp_maior_30_1 IS NULL THEN 1 ELSE 0 END AS n5, CASE WHEN projected.vl_tot_sem_distr_custo IS NULL THEN 1 ELSE 0 END AS n6, CASE WHEN projected.vl_unit_sem_distr_custo IS NULL THEN 1 ELSE 0 END AS n7, CASE WHEN projected.vl_desp_prev_perc_fixo IS NULL THEN 1 ELSE 0 END AS n8, CASE WHEN projected.vl_tot_perc_fixo IS NULL THEN 1 ELSE 0 END AS n9, CASE WHEN projected.vl_unit_perc_fixo IS NULL THEN 1 ELSE 0 END AS n10 FROM (\nSELECT item_custo.probe_case_id AS probe_case_id, item_custo.vl_custo_prev_real as item_custo_vl_custo_prev_real, item_custo.vl_desp_prev_real as item_custo_vl_desp_prev_real, vl_custo_prev_real + vl_desp_prev_real as vl_tot_prev, item_custo.vl_unit_prev as item_custo_vl_unit_prev, item_custo.vl_desp_prev_real_sem_distr_cust as cmp_maior_30_1, vl_custo_prev_real + vl_desp_prev_real_sem_distr_cust as vl_tot_sem_distr_custo, (vl_custo_prev_real + vl_desp_prev_real_sem_distr_cust) / ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as vl_unit_sem_distr_custo, vl_custo_prev_real * perc_fixo_container / 100 as vl_desp_prev_perc_fixo, vl_custo_prev_real * (1 + (perc_fixo_container / 100)) as vl_tot_perc_fixo, vl_custo_prev_real * (1 + (perc_fixo_container / 100)) / ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as vl_unit_perc_fixo FROM (\nSELECT 1 AS probe_case_id, CAST(100 AS NUMERIC(17,2)) AS vl_custo_prev_real, CAST(20 AS NUMERIC(17,2)) AS vl_desp_prev_real, CAST(10 AS NUMERIC(17,2)) AS vl_desp_prev_real_sem_distr_cust, CAST(12 AS NUMERIC(17,5)) AS vl_unit_prev\nUNION ALL\nSELECT 2 AS probe_case_id, CAST(NULL AS NUMERIC(17,2)) AS vl_custo_prev_real, CAST(1 AS NUMERIC(17,2)) AS vl_desp_prev_real, CAST(1 AS NUMERIC(17,2)) AS vl_desp_prev_real_sem_distr_cust, CAST(0 AS NUMERIC(17,5)) AS vl_unit_prev\n) item_custo INNER JOIN (\nSELECT 1 AS probe_case_id, CAST(5 AS NUMERIC(17,2)) AS perc_fixo_container\nUNION ALL\nSELECT 2 AS probe_case_id, CAST(1 AS NUMERIC(17,2)) AS perc_fixo_container\n) versao ON versao.probe_case_id=item_custo.probe_case_id\n) projected ORDER BY projected.probe_case_id",
+      "querySha256": "053eb530c4b60e01245cf1dcdd08f6ca02d1c787d301e6d4a9e294f2deead026",
+      "expectedOutcome": "UNOBSERVED_ROOT_REVIEW_BEFORE_EXECUTION",
+      "executeByCandidate": false
+    },
+    {
+      "case": "real_null_expense_inner_zero",
+      "currency": "real",
+      "sourceGridSha256": "cb3ba3c4b138e959a75ebc36c4aef585f460eef0aa8153d819ca8ed299cfb595",
+      "sourceSelectLine": 793,
+      "sourceFinancialProjections": [
+        "item_custo.vl_custo_prev_real as item_custo_vl_custo_prev_real",
+        "item_custo.vl_desp_prev_real as item_custo_vl_desp_prev_real",
+        "vl_custo_prev_real + vl_desp_prev_real as vl_tot_prev",
+        "item_custo.vl_unit_prev as item_custo_vl_unit_prev",
+        "item_custo.vl_desp_prev_real_sem_distr_cust as cmp_maior_30_1",
+        "vl_custo_prev_real + vl_desp_prev_real_sem_distr_cust as vl_tot_sem_distr_custo",
+        "(vl_custo_prev_real + vl_desp_prev_real_sem_distr_cust) / ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as vl_unit_sem_distr_custo",
+        "vl_custo_prev_real * perc_fixo_container / 100 as vl_desp_prev_perc_fixo",
+        "vl_custo_prev_real * (1 + (perc_fixo_container / 100)) as vl_tot_perc_fixo",
+        "vl_custo_prev_real * (1 + (perc_fixo_container / 100)) / ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as vl_unit_perc_fixo"
+      ],
+      "physicalOperandMap": {
+        "c": "vl_custo_prev_real",
+        "e": "vl_desp_prev_real",
+        "w": "vl_desp_prev_real_sem_distr_cust",
+        "u": "vl_unit_prev",
+        "p": "perc_fixo_container"
+      },
+      "syntheticRows": [
+        {
+          "id": 1,
+          "c": "100",
+          "e": "20",
+          "w": "10",
+          "u": "12",
+          "p": "5"
+        },
+        {
+          "id": 2,
+          "c": "1",
+          "e": null,
+          "w": "1",
+          "u": "0",
+          "p": "1"
+        }
+      ],
+      "rowCount": 2,
+      "nullFlagMap": {
+        "n1": "item_custo_vl_custo_prev_real",
+        "n2": "item_custo_vl_desp_prev_real",
+        "n3": "vl_tot_prev",
+        "n4": "item_custo_vl_unit_prev",
+        "n5": "cmp_maior_30_1",
+        "n6": "vl_tot_sem_distr_custo",
+        "n7": "vl_unit_sem_distr_custo",
+        "n8": "vl_desp_prev_perc_fixo",
+        "n9": "vl_tot_perc_fixo",
+        "n10": "vl_unit_perc_fixo"
+      },
+      "query": "SELECT projected.*, CASE WHEN projected.item_custo_vl_custo_prev_real IS NULL THEN 1 ELSE 0 END AS n1, CASE WHEN projected.item_custo_vl_desp_prev_real IS NULL THEN 1 ELSE 0 END AS n2, CASE WHEN projected.vl_tot_prev IS NULL THEN 1 ELSE 0 END AS n3, CASE WHEN projected.item_custo_vl_unit_prev IS NULL THEN 1 ELSE 0 END AS n4, CASE WHEN projected.cmp_maior_30_1 IS NULL THEN 1 ELSE 0 END AS n5, CASE WHEN projected.vl_tot_sem_distr_custo IS NULL THEN 1 ELSE 0 END AS n6, CASE WHEN projected.vl_unit_sem_distr_custo IS NULL THEN 1 ELSE 0 END AS n7, CASE WHEN projected.vl_desp_prev_perc_fixo IS NULL THEN 1 ELSE 0 END AS n8, CASE WHEN projected.vl_tot_perc_fixo IS NULL THEN 1 ELSE 0 END AS n9, CASE WHEN projected.vl_unit_perc_fixo IS NULL THEN 1 ELSE 0 END AS n10 FROM (\nSELECT item_custo.probe_case_id AS probe_case_id, item_custo.vl_custo_prev_real as item_custo_vl_custo_prev_real, item_custo.vl_desp_prev_real as item_custo_vl_desp_prev_real, vl_custo_prev_real + vl_desp_prev_real as vl_tot_prev, item_custo.vl_unit_prev as item_custo_vl_unit_prev, item_custo.vl_desp_prev_real_sem_distr_cust as cmp_maior_30_1, vl_custo_prev_real + vl_desp_prev_real_sem_distr_cust as vl_tot_sem_distr_custo, (vl_custo_prev_real + vl_desp_prev_real_sem_distr_cust) / ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as vl_unit_sem_distr_custo, vl_custo_prev_real * perc_fixo_container / 100 as vl_desp_prev_perc_fixo, vl_custo_prev_real * (1 + (perc_fixo_container / 100)) as vl_tot_perc_fixo, vl_custo_prev_real * (1 + (perc_fixo_container / 100)) / ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as vl_unit_perc_fixo FROM (\nSELECT 1 AS probe_case_id, CAST(100 AS NUMERIC(17,2)) AS vl_custo_prev_real, CAST(20 AS NUMERIC(17,2)) AS vl_desp_prev_real, CAST(10 AS NUMERIC(17,2)) AS vl_desp_prev_real_sem_distr_cust, CAST(12 AS NUMERIC(17,5)) AS vl_unit_prev\nUNION ALL\nSELECT 2 AS probe_case_id, CAST(1 AS NUMERIC(17,2)) AS vl_custo_prev_real, CAST(NULL AS NUMERIC(17,2)) AS vl_desp_prev_real, CAST(1 AS NUMERIC(17,2)) AS vl_desp_prev_real_sem_distr_cust, CAST(0 AS NUMERIC(17,5)) AS vl_unit_prev\n) item_custo INNER JOIN (\nSELECT 1 AS probe_case_id, CAST(5 AS NUMERIC(17,2)) AS perc_fixo_container\nUNION ALL\nSELECT 2 AS probe_case_id, CAST(1 AS NUMERIC(17,2)) AS perc_fixo_container\n) versao ON versao.probe_case_id=item_custo.probe_case_id\n) projected ORDER BY projected.probe_case_id",
+      "querySha256": "feaee259bcd28820d02dfe9e3746bc26e680f326f15de134701f0b283bd818bd",
+      "expectedOutcome": "UNOBSERVED_ROOT_REVIEW_BEFORE_EXECUTION",
+      "executeByCandidate": false
+    },
+    {
+      "case": "real_null_outer_zero",
+      "currency": "real",
+      "sourceGridSha256": "cb3ba3c4b138e959a75ebc36c4aef585f460eef0aa8153d819ca8ed299cfb595",
+      "sourceSelectLine": 793,
+      "sourceFinancialProjections": [
+        "item_custo.vl_custo_prev_real as item_custo_vl_custo_prev_real",
+        "item_custo.vl_desp_prev_real as item_custo_vl_desp_prev_real",
+        "vl_custo_prev_real + vl_desp_prev_real as vl_tot_prev",
+        "item_custo.vl_unit_prev as item_custo_vl_unit_prev",
+        "item_custo.vl_desp_prev_real_sem_distr_cust as cmp_maior_30_1",
+        "vl_custo_prev_real + vl_desp_prev_real_sem_distr_cust as vl_tot_sem_distr_custo",
+        "(vl_custo_prev_real + vl_desp_prev_real_sem_distr_cust) / ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as vl_unit_sem_distr_custo",
+        "vl_custo_prev_real * perc_fixo_container / 100 as vl_desp_prev_perc_fixo",
+        "vl_custo_prev_real * (1 + (perc_fixo_container / 100)) as vl_tot_perc_fixo",
+        "vl_custo_prev_real * (1 + (perc_fixo_container / 100)) / ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as vl_unit_perc_fixo"
+      ],
+      "physicalOperandMap": {
+        "c": "vl_custo_prev_real",
+        "e": "vl_desp_prev_real",
+        "w": "vl_desp_prev_real_sem_distr_cust",
+        "u": "vl_unit_prev",
+        "p": "perc_fixo_container"
+      },
+      "syntheticRows": [
+        {
+          "id": 1,
+          "c": "100",
+          "e": "20",
+          "w": "10",
+          "u": "12",
+          "p": "5"
+        },
+        {
+          "id": 2,
+          "c": "1",
+          "e": "-1",
+          "w": null,
+          "u": "5",
+          "p": null
+        }
+      ],
+      "rowCount": 2,
+      "nullFlagMap": {
+        "n1": "item_custo_vl_custo_prev_real",
+        "n2": "item_custo_vl_desp_prev_real",
+        "n3": "vl_tot_prev",
+        "n4": "item_custo_vl_unit_prev",
+        "n5": "cmp_maior_30_1",
+        "n6": "vl_tot_sem_distr_custo",
+        "n7": "vl_unit_sem_distr_custo",
+        "n8": "vl_desp_prev_perc_fixo",
+        "n9": "vl_tot_perc_fixo",
+        "n10": "vl_unit_perc_fixo"
+      },
+      "query": "SELECT projected.*, CASE WHEN projected.item_custo_vl_custo_prev_real IS NULL THEN 1 ELSE 0 END AS n1, CASE WHEN projected.item_custo_vl_desp_prev_real IS NULL THEN 1 ELSE 0 END AS n2, CASE WHEN projected.vl_tot_prev IS NULL THEN 1 ELSE 0 END AS n3, CASE WHEN projected.item_custo_vl_unit_prev IS NULL THEN 1 ELSE 0 END AS n4, CASE WHEN projected.cmp_maior_30_1 IS NULL THEN 1 ELSE 0 END AS n5, CASE WHEN projected.vl_tot_sem_distr_custo IS NULL THEN 1 ELSE 0 END AS n6, CASE WHEN projected.vl_unit_sem_distr_custo IS NULL THEN 1 ELSE 0 END AS n7, CASE WHEN projected.vl_desp_prev_perc_fixo IS NULL THEN 1 ELSE 0 END AS n8, CASE WHEN projected.vl_tot_perc_fixo IS NULL THEN 1 ELSE 0 END AS n9, CASE WHEN projected.vl_unit_perc_fixo IS NULL THEN 1 ELSE 0 END AS n10 FROM (\nSELECT item_custo.probe_case_id AS probe_case_id, item_custo.vl_custo_prev_real as item_custo_vl_custo_prev_real, item_custo.vl_desp_prev_real as item_custo_vl_desp_prev_real, vl_custo_prev_real + vl_desp_prev_real as vl_tot_prev, item_custo.vl_unit_prev as item_custo_vl_unit_prev, item_custo.vl_desp_prev_real_sem_distr_cust as cmp_maior_30_1, vl_custo_prev_real + vl_desp_prev_real_sem_distr_cust as vl_tot_sem_distr_custo, (vl_custo_prev_real + vl_desp_prev_real_sem_distr_cust) / ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as vl_unit_sem_distr_custo, vl_custo_prev_real * perc_fixo_container / 100 as vl_desp_prev_perc_fixo, vl_custo_prev_real * (1 + (perc_fixo_container / 100)) as vl_tot_perc_fixo, vl_custo_prev_real * (1 + (perc_fixo_container / 100)) / ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as vl_unit_perc_fixo FROM (\nSELECT 1 AS probe_case_id, CAST(100 AS NUMERIC(17,2)) AS vl_custo_prev_real, CAST(20 AS NUMERIC(17,2)) AS vl_desp_prev_real, CAST(10 AS NUMERIC(17,2)) AS vl_desp_prev_real_sem_distr_cust, CAST(12 AS NUMERIC(17,5)) AS vl_unit_prev\nUNION ALL\nSELECT 2 AS probe_case_id, CAST(1 AS NUMERIC(17,2)) AS vl_custo_prev_real, CAST(-1 AS NUMERIC(17,2)) AS vl_desp_prev_real, CAST(NULL AS NUMERIC(17,2)) AS vl_desp_prev_real_sem_distr_cust, CAST(5 AS NUMERIC(17,5)) AS vl_unit_prev\n) item_custo INNER JOIN (\nSELECT 1 AS probe_case_id, CAST(5 AS NUMERIC(17,2)) AS perc_fixo_container\nUNION ALL\nSELECT 2 AS probe_case_id, CAST(NULL AS NUMERIC(17,2)) AS perc_fixo_container\n) versao ON versao.probe_case_id=item_custo.probe_case_id\n) projected ORDER BY projected.probe_case_id",
+      "querySha256": "f144db3dd29c1341c7dac58c24f0d4ceabcd6e91029e893307bc9e37525db501",
+      "expectedOutcome": "UNOBSERVED_ROOT_REVIEW_BEFORE_EXECUTION",
+      "executeByCandidate": false
+    },
+    {
+      "case": "real_inner_nonnull_zero",
+      "currency": "real",
+      "sourceGridSha256": "cb3ba3c4b138e959a75ebc36c4aef585f460eef0aa8153d819ca8ed299cfb595",
+      "sourceSelectLine": 793,
+      "sourceFinancialProjections": [
+        "item_custo.vl_custo_prev_real as item_custo_vl_custo_prev_real",
+        "item_custo.vl_desp_prev_real as item_custo_vl_desp_prev_real",
+        "vl_custo_prev_real + vl_desp_prev_real as vl_tot_prev",
+        "item_custo.vl_unit_prev as item_custo_vl_unit_prev",
+        "item_custo.vl_desp_prev_real_sem_distr_cust as cmp_maior_30_1",
+        "vl_custo_prev_real + vl_desp_prev_real_sem_distr_cust as vl_tot_sem_distr_custo",
+        "(vl_custo_prev_real + vl_desp_prev_real_sem_distr_cust) / ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as vl_unit_sem_distr_custo",
+        "vl_custo_prev_real * perc_fixo_container / 100 as vl_desp_prev_perc_fixo",
+        "vl_custo_prev_real * (1 + (perc_fixo_container / 100)) as vl_tot_perc_fixo",
+        "vl_custo_prev_real * (1 + (perc_fixo_container / 100)) / ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as vl_unit_perc_fixo"
+      ],
+      "physicalOperandMap": {
+        "c": "vl_custo_prev_real",
+        "e": "vl_desp_prev_real",
+        "w": "vl_desp_prev_real_sem_distr_cust",
+        "u": "vl_unit_prev",
+        "p": "perc_fixo_container"
+      },
+      "syntheticRows": [
+        {
+          "id": 1,
+          "c": "100",
+          "e": "20",
+          "w": "10",
+          "u": "12",
+          "p": "5"
+        },
+        {
+          "id": 2,
+          "c": "1",
+          "e": "1",
+          "w": null,
+          "u": "0",
+          "p": null
+        }
+      ],
+      "rowCount": 2,
+      "nullFlagMap": {
+        "n1": "item_custo_vl_custo_prev_real",
+        "n2": "item_custo_vl_desp_prev_real",
+        "n3": "vl_tot_prev",
+        "n4": "item_custo_vl_unit_prev",
+        "n5": "cmp_maior_30_1",
+        "n6": "vl_tot_sem_distr_custo",
+        "n7": "vl_unit_sem_distr_custo",
+        "n8": "vl_desp_prev_perc_fixo",
+        "n9": "vl_tot_perc_fixo",
+        "n10": "vl_unit_perc_fixo"
+      },
+      "query": "SELECT projected.*, CASE WHEN projected.item_custo_vl_custo_prev_real IS NULL THEN 1 ELSE 0 END AS n1, CASE WHEN projected.item_custo_vl_desp_prev_real IS NULL THEN 1 ELSE 0 END AS n2, CASE WHEN projected.vl_tot_prev IS NULL THEN 1 ELSE 0 END AS n3, CASE WHEN projected.item_custo_vl_unit_prev IS NULL THEN 1 ELSE 0 END AS n4, CASE WHEN projected.cmp_maior_30_1 IS NULL THEN 1 ELSE 0 END AS n5, CASE WHEN projected.vl_tot_sem_distr_custo IS NULL THEN 1 ELSE 0 END AS n6, CASE WHEN projected.vl_unit_sem_distr_custo IS NULL THEN 1 ELSE 0 END AS n7, CASE WHEN projected.vl_desp_prev_perc_fixo IS NULL THEN 1 ELSE 0 END AS n8, CASE WHEN projected.vl_tot_perc_fixo IS NULL THEN 1 ELSE 0 END AS n9, CASE WHEN projected.vl_unit_perc_fixo IS NULL THEN 1 ELSE 0 END AS n10 FROM (\nSELECT item_custo.probe_case_id AS probe_case_id, item_custo.vl_custo_prev_real as item_custo_vl_custo_prev_real, item_custo.vl_desp_prev_real as item_custo_vl_desp_prev_real, vl_custo_prev_real + vl_desp_prev_real as vl_tot_prev, item_custo.vl_unit_prev as item_custo_vl_unit_prev, item_custo.vl_desp_prev_real_sem_distr_cust as cmp_maior_30_1, vl_custo_prev_real + vl_desp_prev_real_sem_distr_cust as vl_tot_sem_distr_custo, (vl_custo_prev_real + vl_desp_prev_real_sem_distr_cust) / ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as vl_unit_sem_distr_custo, vl_custo_prev_real * perc_fixo_container / 100 as vl_desp_prev_perc_fixo, vl_custo_prev_real * (1 + (perc_fixo_container / 100)) as vl_tot_perc_fixo, vl_custo_prev_real * (1 + (perc_fixo_container / 100)) / ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as vl_unit_perc_fixo FROM (\nSELECT 1 AS probe_case_id, CAST(100 AS NUMERIC(17,2)) AS vl_custo_prev_real, CAST(20 AS NUMERIC(17,2)) AS vl_desp_prev_real, CAST(10 AS NUMERIC(17,2)) AS vl_desp_prev_real_sem_distr_cust, CAST(12 AS NUMERIC(17,5)) AS vl_unit_prev\nUNION ALL\nSELECT 2 AS probe_case_id, CAST(1 AS NUMERIC(17,2)) AS vl_custo_prev_real, CAST(1 AS NUMERIC(17,2)) AS vl_desp_prev_real, CAST(NULL AS NUMERIC(17,2)) AS vl_desp_prev_real_sem_distr_cust, CAST(0 AS NUMERIC(17,5)) AS vl_unit_prev\n) item_custo INNER JOIN (\nSELECT 1 AS probe_case_id, CAST(5 AS NUMERIC(17,2)) AS perc_fixo_container\nUNION ALL\nSELECT 2 AS probe_case_id, CAST(NULL AS NUMERIC(17,2)) AS perc_fixo_container\n) versao ON versao.probe_case_id=item_custo.probe_case_id\n) projected ORDER BY projected.probe_case_id",
+      "querySha256": "26308ff1bae3e91742f0e4624f959d5d5b8c2bca1d580eb43eeb69213edda912",
+      "expectedOutcome": "UNOBSERVED_ROOT_REVIEW_BEFORE_EXECUTION",
+      "executeByCandidate": false
+    },
+    {
+      "case": "real_outer_known_zero",
+      "currency": "real",
+      "sourceGridSha256": "cb3ba3c4b138e959a75ebc36c4aef585f460eef0aa8153d819ca8ed299cfb595",
+      "sourceSelectLine": 793,
+      "sourceFinancialProjections": [
+        "item_custo.vl_custo_prev_real as item_custo_vl_custo_prev_real",
+        "item_custo.vl_desp_prev_real as item_custo_vl_desp_prev_real",
+        "vl_custo_prev_real + vl_desp_prev_real as vl_tot_prev",
+        "item_custo.vl_unit_prev as item_custo_vl_unit_prev",
+        "item_custo.vl_desp_prev_real_sem_distr_cust as cmp_maior_30_1",
+        "vl_custo_prev_real + vl_desp_prev_real_sem_distr_cust as vl_tot_sem_distr_custo",
+        "(vl_custo_prev_real + vl_desp_prev_real_sem_distr_cust) / ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as vl_unit_sem_distr_custo",
+        "vl_custo_prev_real * perc_fixo_container / 100 as vl_desp_prev_perc_fixo",
+        "vl_custo_prev_real * (1 + (perc_fixo_container / 100)) as vl_tot_perc_fixo",
+        "vl_custo_prev_real * (1 + (perc_fixo_container / 100)) / ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as vl_unit_perc_fixo"
+      ],
+      "physicalOperandMap": {
+        "c": "vl_custo_prev_real",
+        "e": "vl_desp_prev_real",
+        "w": "vl_desp_prev_real_sem_distr_cust",
+        "u": "vl_unit_prev",
+        "p": "perc_fixo_container"
+      },
+      "syntheticRows": [
+        {
+          "id": 1,
+          "c": "100",
+          "e": "20",
+          "w": "10",
+          "u": "12",
+          "p": "5"
+        },
+        {
+          "id": 2,
+          "c": "1",
+          "e": "-1",
+          "w": null,
+          "u": "5",
+          "p": "1"
+        }
+      ],
+      "rowCount": 2,
+      "nullFlagMap": {
+        "n1": "item_custo_vl_custo_prev_real",
+        "n2": "item_custo_vl_desp_prev_real",
+        "n3": "vl_tot_prev",
+        "n4": "item_custo_vl_unit_prev",
+        "n5": "cmp_maior_30_1",
+        "n6": "vl_tot_sem_distr_custo",
+        "n7": "vl_unit_sem_distr_custo",
+        "n8": "vl_desp_prev_perc_fixo",
+        "n9": "vl_tot_perc_fixo",
+        "n10": "vl_unit_perc_fixo"
+      },
+      "query": "SELECT projected.*, CASE WHEN projected.item_custo_vl_custo_prev_real IS NULL THEN 1 ELSE 0 END AS n1, CASE WHEN projected.item_custo_vl_desp_prev_real IS NULL THEN 1 ELSE 0 END AS n2, CASE WHEN projected.vl_tot_prev IS NULL THEN 1 ELSE 0 END AS n3, CASE WHEN projected.item_custo_vl_unit_prev IS NULL THEN 1 ELSE 0 END AS n4, CASE WHEN projected.cmp_maior_30_1 IS NULL THEN 1 ELSE 0 END AS n5, CASE WHEN projected.vl_tot_sem_distr_custo IS NULL THEN 1 ELSE 0 END AS n6, CASE WHEN projected.vl_unit_sem_distr_custo IS NULL THEN 1 ELSE 0 END AS n7, CASE WHEN projected.vl_desp_prev_perc_fixo IS NULL THEN 1 ELSE 0 END AS n8, CASE WHEN projected.vl_tot_perc_fixo IS NULL THEN 1 ELSE 0 END AS n9, CASE WHEN projected.vl_unit_perc_fixo IS NULL THEN 1 ELSE 0 END AS n10 FROM (\nSELECT item_custo.probe_case_id AS probe_case_id, item_custo.vl_custo_prev_real as item_custo_vl_custo_prev_real, item_custo.vl_desp_prev_real as item_custo_vl_desp_prev_real, vl_custo_prev_real + vl_desp_prev_real as vl_tot_prev, item_custo.vl_unit_prev as item_custo_vl_unit_prev, item_custo.vl_desp_prev_real_sem_distr_cust as cmp_maior_30_1, vl_custo_prev_real + vl_desp_prev_real_sem_distr_cust as vl_tot_sem_distr_custo, (vl_custo_prev_real + vl_desp_prev_real_sem_distr_cust) / ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as vl_unit_sem_distr_custo, vl_custo_prev_real * perc_fixo_container / 100 as vl_desp_prev_perc_fixo, vl_custo_prev_real * (1 + (perc_fixo_container / 100)) as vl_tot_perc_fixo, vl_custo_prev_real * (1 + (perc_fixo_container / 100)) / ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as vl_unit_perc_fixo FROM (\nSELECT 1 AS probe_case_id, CAST(100 AS NUMERIC(17,2)) AS vl_custo_prev_real, CAST(20 AS NUMERIC(17,2)) AS vl_desp_prev_real, CAST(10 AS NUMERIC(17,2)) AS vl_desp_prev_real_sem_distr_cust, CAST(12 AS NUMERIC(17,5)) AS vl_unit_prev\nUNION ALL\nSELECT 2 AS probe_case_id, CAST(1 AS NUMERIC(17,2)) AS vl_custo_prev_real, CAST(-1 AS NUMERIC(17,2)) AS vl_desp_prev_real, CAST(NULL AS NUMERIC(17,2)) AS vl_desp_prev_real_sem_distr_cust, CAST(5 AS NUMERIC(17,5)) AS vl_unit_prev\n) item_custo INNER JOIN (\nSELECT 1 AS probe_case_id, CAST(5 AS NUMERIC(17,2)) AS perc_fixo_container\nUNION ALL\nSELECT 2 AS probe_case_id, CAST(1 AS NUMERIC(17,2)) AS perc_fixo_container\n) versao ON versao.probe_case_id=item_custo.probe_case_id\n) projected ORDER BY projected.probe_case_id",
+      "querySha256": "200fc2d5402d5e37a71cc3c551f89ba19ffd407fe8f3fe88c326e0c8e47ca4aa",
+      "expectedOutcome": "UNOBSERVED_ROOT_REVIEW_BEFORE_EXECUTION",
+      "executeByCandidate": false
+    },
+    {
+      "case": "dolar_normal_rounding",
+      "currency": "dolar",
+      "sourceGridSha256": "297bb945f86e9fb42f3e1ebbffd002c95d1e99d36776f166e13bdd74bcccdf3c",
+      "sourceSelectLine": 793,
+      "sourceFinancialProjections": [
+        "item_custo.vl_custo_prev_dolar as item_custo_vl_custo_prev_dolar",
+        "item_custo.vl_desp_prev_dolar as item_custo_vl_desp_prev_dolar",
+        "vl_custo_prev_dolar + vl_desp_prev_dolar as vl_tot_prev",
+        "item_custo.vl_unit_prev_dolar as item_custo_vl_unit_prev_dolar",
+        "item_custo.vl_desp_prev_dolar_sem_distr_cus as cmp_maior_30_1",
+        "vl_custo_prev_dolar + vl_desp_prev_dolar_sem_distr_cus as vl_tot_sem_distr_custo",
+        "(vl_custo_prev_dolar + vl_desp_prev_dolar_sem_distr_cus) / ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as vl_unit_sem_distr_custo",
+        "vl_custo_prev_dolar * perc_fixo_container / 100 as vl_desp_prev_perc_fixo",
+        "vl_custo_prev_dolar * (1 + (perc_fixo_container / 100)) as vl_tot_perc_fixo",
+        "vl_custo_prev_dolar * (1 + (perc_fixo_container / 100)) / ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as vl_unit_perc_fixo"
+      ],
+      "physicalOperandMap": {
+        "c": "vl_custo_prev_dolar",
+        "e": "vl_desp_prev_dolar",
+        "w": "vl_desp_prev_dolar_sem_distr_cus",
+        "u": "vl_unit_prev_dolar",
+        "p": "perc_fixo_container"
+      },
+      "syntheticRows": [
+        {
+          "id": 1,
+          "c": "100",
+          "e": "20",
+          "w": "10",
+          "u": "12",
+          "p": "5"
+        },
+        {
+          "id": 2,
+          "c": "0",
+          "e": "20",
+          "w": "10",
+          "u": "2",
+          "p": "0"
+        },
+        {
+          "id": 3,
+          "c": "1450",
+          "e": "51.30769231",
+          "w": "52.30769231",
+          "u": "500.4358974367",
+          "p": "5"
+        }
+      ],
+      "rowCount": 3,
+      "nullFlagMap": {
+        "n1": "item_custo_vl_custo_prev_dolar",
+        "n2": "item_custo_vl_desp_prev_dolar",
+        "n3": "vl_tot_prev",
+        "n4": "item_custo_vl_unit_prev_dolar",
+        "n5": "cmp_maior_30_1",
+        "n6": "vl_tot_sem_distr_custo",
+        "n7": "vl_unit_sem_distr_custo",
+        "n8": "vl_desp_prev_perc_fixo",
+        "n9": "vl_tot_perc_fixo",
+        "n10": "vl_unit_perc_fixo"
+      },
+      "query": "SELECT projected.*, CASE WHEN projected.item_custo_vl_custo_prev_dolar IS NULL THEN 1 ELSE 0 END AS n1, CASE WHEN projected.item_custo_vl_desp_prev_dolar IS NULL THEN 1 ELSE 0 END AS n2, CASE WHEN projected.vl_tot_prev IS NULL THEN 1 ELSE 0 END AS n3, CASE WHEN projected.item_custo_vl_unit_prev_dolar IS NULL THEN 1 ELSE 0 END AS n4, CASE WHEN projected.cmp_maior_30_1 IS NULL THEN 1 ELSE 0 END AS n5, CASE WHEN projected.vl_tot_sem_distr_custo IS NULL THEN 1 ELSE 0 END AS n6, CASE WHEN projected.vl_unit_sem_distr_custo IS NULL THEN 1 ELSE 0 END AS n7, CASE WHEN projected.vl_desp_prev_perc_fixo IS NULL THEN 1 ELSE 0 END AS n8, CASE WHEN projected.vl_tot_perc_fixo IS NULL THEN 1 ELSE 0 END AS n9, CASE WHEN projected.vl_unit_perc_fixo IS NULL THEN 1 ELSE 0 END AS n10 FROM (\nSELECT item_custo.probe_case_id AS probe_case_id, item_custo.vl_custo_prev_dolar as item_custo_vl_custo_prev_dolar, item_custo.vl_desp_prev_dolar as item_custo_vl_desp_prev_dolar, vl_custo_prev_dolar + vl_desp_prev_dolar as vl_tot_prev, item_custo.vl_unit_prev_dolar as item_custo_vl_unit_prev_dolar, item_custo.vl_desp_prev_dolar_sem_distr_cus as cmp_maior_30_1, vl_custo_prev_dolar + vl_desp_prev_dolar_sem_distr_cus as vl_tot_sem_distr_custo, (vl_custo_prev_dolar + vl_desp_prev_dolar_sem_distr_cus) / ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as vl_unit_sem_distr_custo, vl_custo_prev_dolar * perc_fixo_container / 100 as vl_desp_prev_perc_fixo, vl_custo_prev_dolar * (1 + (perc_fixo_container / 100)) as vl_tot_perc_fixo, vl_custo_prev_dolar * (1 + (perc_fixo_container / 100)) / ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as vl_unit_perc_fixo FROM (\nSELECT 1 AS probe_case_id, CAST(100 AS NUMERIC(17,5)) AS vl_custo_prev_dolar, CAST(20 AS NUMERIC(17,2)) AS vl_desp_prev_dolar, CAST(10 AS NUMERIC(17,2)) AS vl_desp_prev_dolar_sem_distr_cus, CAST(12 AS NUMERIC(25,5)) AS vl_unit_prev_dolar\nUNION ALL\nSELECT 2 AS probe_case_id, CAST(0 AS NUMERIC(17,5)) AS vl_custo_prev_dolar, CAST(20 AS NUMERIC(17,2)) AS vl_desp_prev_dolar, CAST(10 AS NUMERIC(17,2)) AS vl_desp_prev_dolar_sem_distr_cus, CAST(2 AS NUMERIC(25,5)) AS vl_unit_prev_dolar\nUNION ALL\nSELECT 3 AS probe_case_id, CAST(1450 AS NUMERIC(17,5)) AS vl_custo_prev_dolar, CAST(51.30769231 AS NUMERIC(17,2)) AS vl_desp_prev_dolar, CAST(52.30769231 AS NUMERIC(17,2)) AS vl_desp_prev_dolar_sem_distr_cus, CAST(500.4358974367 AS NUMERIC(25,5)) AS vl_unit_prev_dolar\n) item_custo INNER JOIN (\nSELECT 1 AS probe_case_id, CAST(5 AS NUMERIC(17,2)) AS perc_fixo_container\nUNION ALL\nSELECT 2 AS probe_case_id, CAST(0 AS NUMERIC(17,2)) AS perc_fixo_container\nUNION ALL\nSELECT 3 AS probe_case_id, CAST(5 AS NUMERIC(17,2)) AS perc_fixo_container\n) versao ON versao.probe_case_id=item_custo.probe_case_id\n) projected ORDER BY projected.probe_case_id",
+      "querySha256": "c04666761ec264f3bcb0ffa0c69414b5f94217c501e49ed77300eca6eca7570d",
+      "expectedOutcome": "UNOBSERVED_ROOT_REVIEW_BEFORE_EXECUTION",
+      "executeByCandidate": false
+    },
+    {
+      "case": "dolar_null_nonzero",
+      "currency": "dolar",
+      "sourceGridSha256": "297bb945f86e9fb42f3e1ebbffd002c95d1e99d36776f166e13bdd74bcccdf3c",
+      "sourceSelectLine": 793,
+      "sourceFinancialProjections": [
+        "item_custo.vl_custo_prev_dolar as item_custo_vl_custo_prev_dolar",
+        "item_custo.vl_desp_prev_dolar as item_custo_vl_desp_prev_dolar",
+        "vl_custo_prev_dolar + vl_desp_prev_dolar as vl_tot_prev",
+        "item_custo.vl_unit_prev_dolar as item_custo_vl_unit_prev_dolar",
+        "item_custo.vl_desp_prev_dolar_sem_distr_cus as cmp_maior_30_1",
+        "vl_custo_prev_dolar + vl_desp_prev_dolar_sem_distr_cus as vl_tot_sem_distr_custo",
+        "(vl_custo_prev_dolar + vl_desp_prev_dolar_sem_distr_cus) / ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as vl_unit_sem_distr_custo",
+        "vl_custo_prev_dolar * perc_fixo_container / 100 as vl_desp_prev_perc_fixo",
+        "vl_custo_prev_dolar * (1 + (perc_fixo_container / 100)) as vl_tot_perc_fixo",
+        "vl_custo_prev_dolar * (1 + (perc_fixo_container / 100)) / ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as vl_unit_perc_fixo"
+      ],
+      "physicalOperandMap": {
+        "c": "vl_custo_prev_dolar",
+        "e": "vl_desp_prev_dolar",
+        "w": "vl_desp_prev_dolar_sem_distr_cus",
+        "u": "vl_unit_prev_dolar",
+        "p": "perc_fixo_container"
+      },
+      "syntheticRows": [
+        {
+          "id": 1,
+          "c": "100",
+          "e": "20",
+          "w": "10",
+          "u": "12",
+          "p": "5"
+        },
+        {
+          "id": 2,
+          "c": null,
+          "e": "1",
+          "w": "1",
+          "u": "5",
+          "p": "1"
+        },
+        {
+          "id": 3,
+          "c": "1",
+          "e": "1",
+          "w": null,
+          "u": "5",
+          "p": null
+        }
+      ],
+      "rowCount": 3,
+      "nullFlagMap": {
+        "n1": "item_custo_vl_custo_prev_dolar",
+        "n2": "item_custo_vl_desp_prev_dolar",
+        "n3": "vl_tot_prev",
+        "n4": "item_custo_vl_unit_prev_dolar",
+        "n5": "cmp_maior_30_1",
+        "n6": "vl_tot_sem_distr_custo",
+        "n7": "vl_unit_sem_distr_custo",
+        "n8": "vl_desp_prev_perc_fixo",
+        "n9": "vl_tot_perc_fixo",
+        "n10": "vl_unit_perc_fixo"
+      },
+      "query": "SELECT projected.*, CASE WHEN projected.item_custo_vl_custo_prev_dolar IS NULL THEN 1 ELSE 0 END AS n1, CASE WHEN projected.item_custo_vl_desp_prev_dolar IS NULL THEN 1 ELSE 0 END AS n2, CASE WHEN projected.vl_tot_prev IS NULL THEN 1 ELSE 0 END AS n3, CASE WHEN projected.item_custo_vl_unit_prev_dolar IS NULL THEN 1 ELSE 0 END AS n4, CASE WHEN projected.cmp_maior_30_1 IS NULL THEN 1 ELSE 0 END AS n5, CASE WHEN projected.vl_tot_sem_distr_custo IS NULL THEN 1 ELSE 0 END AS n6, CASE WHEN projected.vl_unit_sem_distr_custo IS NULL THEN 1 ELSE 0 END AS n7, CASE WHEN projected.vl_desp_prev_perc_fixo IS NULL THEN 1 ELSE 0 END AS n8, CASE WHEN projected.vl_tot_perc_fixo IS NULL THEN 1 ELSE 0 END AS n9, CASE WHEN projected.vl_unit_perc_fixo IS NULL THEN 1 ELSE 0 END AS n10 FROM (\nSELECT item_custo.probe_case_id AS probe_case_id, item_custo.vl_custo_prev_dolar as item_custo_vl_custo_prev_dolar, item_custo.vl_desp_prev_dolar as item_custo_vl_desp_prev_dolar, vl_custo_prev_dolar + vl_desp_prev_dolar as vl_tot_prev, item_custo.vl_unit_prev_dolar as item_custo_vl_unit_prev_dolar, item_custo.vl_desp_prev_dolar_sem_distr_cus as cmp_maior_30_1, vl_custo_prev_dolar + vl_desp_prev_dolar_sem_distr_cus as vl_tot_sem_distr_custo, (vl_custo_prev_dolar + vl_desp_prev_dolar_sem_distr_cus) / ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as vl_unit_sem_distr_custo, vl_custo_prev_dolar * perc_fixo_container / 100 as vl_desp_prev_perc_fixo, vl_custo_prev_dolar * (1 + (perc_fixo_container / 100)) as vl_tot_perc_fixo, vl_custo_prev_dolar * (1 + (perc_fixo_container / 100)) / ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as vl_unit_perc_fixo FROM (\nSELECT 1 AS probe_case_id, CAST(100 AS NUMERIC(17,5)) AS vl_custo_prev_dolar, CAST(20 AS NUMERIC(17,2)) AS vl_desp_prev_dolar, CAST(10 AS NUMERIC(17,2)) AS vl_desp_prev_dolar_sem_distr_cus, CAST(12 AS NUMERIC(25,5)) AS vl_unit_prev_dolar\nUNION ALL\nSELECT 2 AS probe_case_id, CAST(NULL AS NUMERIC(17,5)) AS vl_custo_prev_dolar, CAST(1 AS NUMERIC(17,2)) AS vl_desp_prev_dolar, CAST(1 AS NUMERIC(17,2)) AS vl_desp_prev_dolar_sem_distr_cus, CAST(5 AS NUMERIC(25,5)) AS vl_unit_prev_dolar\nUNION ALL\nSELECT 3 AS probe_case_id, CAST(1 AS NUMERIC(17,5)) AS vl_custo_prev_dolar, CAST(1 AS NUMERIC(17,2)) AS vl_desp_prev_dolar, CAST(NULL AS NUMERIC(17,2)) AS vl_desp_prev_dolar_sem_distr_cus, CAST(5 AS NUMERIC(25,5)) AS vl_unit_prev_dolar\n) item_custo INNER JOIN (\nSELECT 1 AS probe_case_id, CAST(5 AS NUMERIC(17,2)) AS perc_fixo_container\nUNION ALL\nSELECT 2 AS probe_case_id, CAST(1 AS NUMERIC(17,2)) AS perc_fixo_container\nUNION ALL\nSELECT 3 AS probe_case_id, CAST(NULL AS NUMERIC(17,2)) AS perc_fixo_container\n) versao ON versao.probe_case_id=item_custo.probe_case_id\n) projected ORDER BY projected.probe_case_id",
+      "querySha256": "9757a6f0a7b919a4e09e97c8551dd855bf1b959c20b8c94ea0af2ab2d815ba17",
+      "expectedOutcome": "UNOBSERVED_ROOT_REVIEW_BEFORE_EXECUTION",
+      "executeByCandidate": false
+    },
+    {
+      "case": "dolar_null_cost_inner_zero",
+      "currency": "dolar",
+      "sourceGridSha256": "297bb945f86e9fb42f3e1ebbffd002c95d1e99d36776f166e13bdd74bcccdf3c",
+      "sourceSelectLine": 793,
+      "sourceFinancialProjections": [
+        "item_custo.vl_custo_prev_dolar as item_custo_vl_custo_prev_dolar",
+        "item_custo.vl_desp_prev_dolar as item_custo_vl_desp_prev_dolar",
+        "vl_custo_prev_dolar + vl_desp_prev_dolar as vl_tot_prev",
+        "item_custo.vl_unit_prev_dolar as item_custo_vl_unit_prev_dolar",
+        "item_custo.vl_desp_prev_dolar_sem_distr_cus as cmp_maior_30_1",
+        "vl_custo_prev_dolar + vl_desp_prev_dolar_sem_distr_cus as vl_tot_sem_distr_custo",
+        "(vl_custo_prev_dolar + vl_desp_prev_dolar_sem_distr_cus) / ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as vl_unit_sem_distr_custo",
+        "vl_custo_prev_dolar * perc_fixo_container / 100 as vl_desp_prev_perc_fixo",
+        "vl_custo_prev_dolar * (1 + (perc_fixo_container / 100)) as vl_tot_perc_fixo",
+        "vl_custo_prev_dolar * (1 + (perc_fixo_container / 100)) / ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as vl_unit_perc_fixo"
+      ],
+      "physicalOperandMap": {
+        "c": "vl_custo_prev_dolar",
+        "e": "vl_desp_prev_dolar",
+        "w": "vl_desp_prev_dolar_sem_distr_cus",
+        "u": "vl_unit_prev_dolar",
+        "p": "perc_fixo_container"
+      },
+      "syntheticRows": [
+        {
+          "id": 1,
+          "c": "100",
+          "e": "20",
+          "w": "10",
+          "u": "12",
+          "p": "5"
+        },
+        {
+          "id": 2,
+          "c": null,
+          "e": "1",
+          "w": "1",
+          "u": "0",
+          "p": "1"
+        }
+      ],
+      "rowCount": 2,
+      "nullFlagMap": {
+        "n1": "item_custo_vl_custo_prev_dolar",
+        "n2": "item_custo_vl_desp_prev_dolar",
+        "n3": "vl_tot_prev",
+        "n4": "item_custo_vl_unit_prev_dolar",
+        "n5": "cmp_maior_30_1",
+        "n6": "vl_tot_sem_distr_custo",
+        "n7": "vl_unit_sem_distr_custo",
+        "n8": "vl_desp_prev_perc_fixo",
+        "n9": "vl_tot_perc_fixo",
+        "n10": "vl_unit_perc_fixo"
+      },
+      "query": "SELECT projected.*, CASE WHEN projected.item_custo_vl_custo_prev_dolar IS NULL THEN 1 ELSE 0 END AS n1, CASE WHEN projected.item_custo_vl_desp_prev_dolar IS NULL THEN 1 ELSE 0 END AS n2, CASE WHEN projected.vl_tot_prev IS NULL THEN 1 ELSE 0 END AS n3, CASE WHEN projected.item_custo_vl_unit_prev_dolar IS NULL THEN 1 ELSE 0 END AS n4, CASE WHEN projected.cmp_maior_30_1 IS NULL THEN 1 ELSE 0 END AS n5, CASE WHEN projected.vl_tot_sem_distr_custo IS NULL THEN 1 ELSE 0 END AS n6, CASE WHEN projected.vl_unit_sem_distr_custo IS NULL THEN 1 ELSE 0 END AS n7, CASE WHEN projected.vl_desp_prev_perc_fixo IS NULL THEN 1 ELSE 0 END AS n8, CASE WHEN projected.vl_tot_perc_fixo IS NULL THEN 1 ELSE 0 END AS n9, CASE WHEN projected.vl_unit_perc_fixo IS NULL THEN 1 ELSE 0 END AS n10 FROM (\nSELECT item_custo.probe_case_id AS probe_case_id, item_custo.vl_custo_prev_dolar as item_custo_vl_custo_prev_dolar, item_custo.vl_desp_prev_dolar as item_custo_vl_desp_prev_dolar, vl_custo_prev_dolar + vl_desp_prev_dolar as vl_tot_prev, item_custo.vl_unit_prev_dolar as item_custo_vl_unit_prev_dolar, item_custo.vl_desp_prev_dolar_sem_distr_cus as cmp_maior_30_1, vl_custo_prev_dolar + vl_desp_prev_dolar_sem_distr_cus as vl_tot_sem_distr_custo, (vl_custo_prev_dolar + vl_desp_prev_dolar_sem_distr_cus) / ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as vl_unit_sem_distr_custo, vl_custo_prev_dolar * perc_fixo_container / 100 as vl_desp_prev_perc_fixo, vl_custo_prev_dolar * (1 + (perc_fixo_container / 100)) as vl_tot_perc_fixo, vl_custo_prev_dolar * (1 + (perc_fixo_container / 100)) / ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as vl_unit_perc_fixo FROM (\nSELECT 1 AS probe_case_id, CAST(100 AS NUMERIC(17,5)) AS vl_custo_prev_dolar, CAST(20 AS NUMERIC(17,2)) AS vl_desp_prev_dolar, CAST(10 AS NUMERIC(17,2)) AS vl_desp_prev_dolar_sem_distr_cus, CAST(12 AS NUMERIC(25,5)) AS vl_unit_prev_dolar\nUNION ALL\nSELECT 2 AS probe_case_id, CAST(NULL AS NUMERIC(17,5)) AS vl_custo_prev_dolar, CAST(1 AS NUMERIC(17,2)) AS vl_desp_prev_dolar, CAST(1 AS NUMERIC(17,2)) AS vl_desp_prev_dolar_sem_distr_cus, CAST(0 AS NUMERIC(25,5)) AS vl_unit_prev_dolar\n) item_custo INNER JOIN (\nSELECT 1 AS probe_case_id, CAST(5 AS NUMERIC(17,2)) AS perc_fixo_container\nUNION ALL\nSELECT 2 AS probe_case_id, CAST(1 AS NUMERIC(17,2)) AS perc_fixo_container\n) versao ON versao.probe_case_id=item_custo.probe_case_id\n) projected ORDER BY projected.probe_case_id",
+      "querySha256": "3bc3c41fee3777f4dcc6ed33a40a75429c9c4ccca81bb1c26a39601dc8745736",
+      "expectedOutcome": "UNOBSERVED_ROOT_REVIEW_BEFORE_EXECUTION",
+      "executeByCandidate": false
+    },
+    {
+      "case": "dolar_null_expense_inner_zero",
+      "currency": "dolar",
+      "sourceGridSha256": "297bb945f86e9fb42f3e1ebbffd002c95d1e99d36776f166e13bdd74bcccdf3c",
+      "sourceSelectLine": 793,
+      "sourceFinancialProjections": [
+        "item_custo.vl_custo_prev_dolar as item_custo_vl_custo_prev_dolar",
+        "item_custo.vl_desp_prev_dolar as item_custo_vl_desp_prev_dolar",
+        "vl_custo_prev_dolar + vl_desp_prev_dolar as vl_tot_prev",
+        "item_custo.vl_unit_prev_dolar as item_custo_vl_unit_prev_dolar",
+        "item_custo.vl_desp_prev_dolar_sem_distr_cus as cmp_maior_30_1",
+        "vl_custo_prev_dolar + vl_desp_prev_dolar_sem_distr_cus as vl_tot_sem_distr_custo",
+        "(vl_custo_prev_dolar + vl_desp_prev_dolar_sem_distr_cus) / ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as vl_unit_sem_distr_custo",
+        "vl_custo_prev_dolar * perc_fixo_container / 100 as vl_desp_prev_perc_fixo",
+        "vl_custo_prev_dolar * (1 + (perc_fixo_container / 100)) as vl_tot_perc_fixo",
+        "vl_custo_prev_dolar * (1 + (perc_fixo_container / 100)) / ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as vl_unit_perc_fixo"
+      ],
+      "physicalOperandMap": {
+        "c": "vl_custo_prev_dolar",
+        "e": "vl_desp_prev_dolar",
+        "w": "vl_desp_prev_dolar_sem_distr_cus",
+        "u": "vl_unit_prev_dolar",
+        "p": "perc_fixo_container"
+      },
+      "syntheticRows": [
+        {
+          "id": 1,
+          "c": "100",
+          "e": "20",
+          "w": "10",
+          "u": "12",
+          "p": "5"
+        },
+        {
+          "id": 2,
+          "c": "1",
+          "e": null,
+          "w": "1",
+          "u": "0",
+          "p": "1"
+        }
+      ],
+      "rowCount": 2,
+      "nullFlagMap": {
+        "n1": "item_custo_vl_custo_prev_dolar",
+        "n2": "item_custo_vl_desp_prev_dolar",
+        "n3": "vl_tot_prev",
+        "n4": "item_custo_vl_unit_prev_dolar",
+        "n5": "cmp_maior_30_1",
+        "n6": "vl_tot_sem_distr_custo",
+        "n7": "vl_unit_sem_distr_custo",
+        "n8": "vl_desp_prev_perc_fixo",
+        "n9": "vl_tot_perc_fixo",
+        "n10": "vl_unit_perc_fixo"
+      },
+      "query": "SELECT projected.*, CASE WHEN projected.item_custo_vl_custo_prev_dolar IS NULL THEN 1 ELSE 0 END AS n1, CASE WHEN projected.item_custo_vl_desp_prev_dolar IS NULL THEN 1 ELSE 0 END AS n2, CASE WHEN projected.vl_tot_prev IS NULL THEN 1 ELSE 0 END AS n3, CASE WHEN projected.item_custo_vl_unit_prev_dolar IS NULL THEN 1 ELSE 0 END AS n4, CASE WHEN projected.cmp_maior_30_1 IS NULL THEN 1 ELSE 0 END AS n5, CASE WHEN projected.vl_tot_sem_distr_custo IS NULL THEN 1 ELSE 0 END AS n6, CASE WHEN projected.vl_unit_sem_distr_custo IS NULL THEN 1 ELSE 0 END AS n7, CASE WHEN projected.vl_desp_prev_perc_fixo IS NULL THEN 1 ELSE 0 END AS n8, CASE WHEN projected.vl_tot_perc_fixo IS NULL THEN 1 ELSE 0 END AS n9, CASE WHEN projected.vl_unit_perc_fixo IS NULL THEN 1 ELSE 0 END AS n10 FROM (\nSELECT item_custo.probe_case_id AS probe_case_id, item_custo.vl_custo_prev_dolar as item_custo_vl_custo_prev_dolar, item_custo.vl_desp_prev_dolar as item_custo_vl_desp_prev_dolar, vl_custo_prev_dolar + vl_desp_prev_dolar as vl_tot_prev, item_custo.vl_unit_prev_dolar as item_custo_vl_unit_prev_dolar, item_custo.vl_desp_prev_dolar_sem_distr_cus as cmp_maior_30_1, vl_custo_prev_dolar + vl_desp_prev_dolar_sem_distr_cus as vl_tot_sem_distr_custo, (vl_custo_prev_dolar + vl_desp_prev_dolar_sem_distr_cus) / ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as vl_unit_sem_distr_custo, vl_custo_prev_dolar * perc_fixo_container / 100 as vl_desp_prev_perc_fixo, vl_custo_prev_dolar * (1 + (perc_fixo_container / 100)) as vl_tot_perc_fixo, vl_custo_prev_dolar * (1 + (perc_fixo_container / 100)) / ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as vl_unit_perc_fixo FROM (\nSELECT 1 AS probe_case_id, CAST(100 AS NUMERIC(17,5)) AS vl_custo_prev_dolar, CAST(20 AS NUMERIC(17,2)) AS vl_desp_prev_dolar, CAST(10 AS NUMERIC(17,2)) AS vl_desp_prev_dolar_sem_distr_cus, CAST(12 AS NUMERIC(25,5)) AS vl_unit_prev_dolar\nUNION ALL\nSELECT 2 AS probe_case_id, CAST(1 AS NUMERIC(17,5)) AS vl_custo_prev_dolar, CAST(NULL AS NUMERIC(17,2)) AS vl_desp_prev_dolar, CAST(1 AS NUMERIC(17,2)) AS vl_desp_prev_dolar_sem_distr_cus, CAST(0 AS NUMERIC(25,5)) AS vl_unit_prev_dolar\n) item_custo INNER JOIN (\nSELECT 1 AS probe_case_id, CAST(5 AS NUMERIC(17,2)) AS perc_fixo_container\nUNION ALL\nSELECT 2 AS probe_case_id, CAST(1 AS NUMERIC(17,2)) AS perc_fixo_container\n) versao ON versao.probe_case_id=item_custo.probe_case_id\n) projected ORDER BY projected.probe_case_id",
+      "querySha256": "b242ab5a0c4f8dc9f07f401abf0908f1c228494c53671f1b9a2d7129ff266f7f",
+      "expectedOutcome": "UNOBSERVED_ROOT_REVIEW_BEFORE_EXECUTION",
+      "executeByCandidate": false
+    },
+    {
+      "case": "dolar_null_outer_zero",
+      "currency": "dolar",
+      "sourceGridSha256": "297bb945f86e9fb42f3e1ebbffd002c95d1e99d36776f166e13bdd74bcccdf3c",
+      "sourceSelectLine": 793,
+      "sourceFinancialProjections": [
+        "item_custo.vl_custo_prev_dolar as item_custo_vl_custo_prev_dolar",
+        "item_custo.vl_desp_prev_dolar as item_custo_vl_desp_prev_dolar",
+        "vl_custo_prev_dolar + vl_desp_prev_dolar as vl_tot_prev",
+        "item_custo.vl_unit_prev_dolar as item_custo_vl_unit_prev_dolar",
+        "item_custo.vl_desp_prev_dolar_sem_distr_cus as cmp_maior_30_1",
+        "vl_custo_prev_dolar + vl_desp_prev_dolar_sem_distr_cus as vl_tot_sem_distr_custo",
+        "(vl_custo_prev_dolar + vl_desp_prev_dolar_sem_distr_cus) / ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as vl_unit_sem_distr_custo",
+        "vl_custo_prev_dolar * perc_fixo_container / 100 as vl_desp_prev_perc_fixo",
+        "vl_custo_prev_dolar * (1 + (perc_fixo_container / 100)) as vl_tot_perc_fixo",
+        "vl_custo_prev_dolar * (1 + (perc_fixo_container / 100)) / ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as vl_unit_perc_fixo"
+      ],
+      "physicalOperandMap": {
+        "c": "vl_custo_prev_dolar",
+        "e": "vl_desp_prev_dolar",
+        "w": "vl_desp_prev_dolar_sem_distr_cus",
+        "u": "vl_unit_prev_dolar",
+        "p": "perc_fixo_container"
+      },
+      "syntheticRows": [
+        {
+          "id": 1,
+          "c": "100",
+          "e": "20",
+          "w": "10",
+          "u": "12",
+          "p": "5"
+        },
+        {
+          "id": 2,
+          "c": "1",
+          "e": "-1",
+          "w": null,
+          "u": "5",
+          "p": null
+        }
+      ],
+      "rowCount": 2,
+      "nullFlagMap": {
+        "n1": "item_custo_vl_custo_prev_dolar",
+        "n2": "item_custo_vl_desp_prev_dolar",
+        "n3": "vl_tot_prev",
+        "n4": "item_custo_vl_unit_prev_dolar",
+        "n5": "cmp_maior_30_1",
+        "n6": "vl_tot_sem_distr_custo",
+        "n7": "vl_unit_sem_distr_custo",
+        "n8": "vl_desp_prev_perc_fixo",
+        "n9": "vl_tot_perc_fixo",
+        "n10": "vl_unit_perc_fixo"
+      },
+      "query": "SELECT projected.*, CASE WHEN projected.item_custo_vl_custo_prev_dolar IS NULL THEN 1 ELSE 0 END AS n1, CASE WHEN projected.item_custo_vl_desp_prev_dolar IS NULL THEN 1 ELSE 0 END AS n2, CASE WHEN projected.vl_tot_prev IS NULL THEN 1 ELSE 0 END AS n3, CASE WHEN projected.item_custo_vl_unit_prev_dolar IS NULL THEN 1 ELSE 0 END AS n4, CASE WHEN projected.cmp_maior_30_1 IS NULL THEN 1 ELSE 0 END AS n5, CASE WHEN projected.vl_tot_sem_distr_custo IS NULL THEN 1 ELSE 0 END AS n6, CASE WHEN projected.vl_unit_sem_distr_custo IS NULL THEN 1 ELSE 0 END AS n7, CASE WHEN projected.vl_desp_prev_perc_fixo IS NULL THEN 1 ELSE 0 END AS n8, CASE WHEN projected.vl_tot_perc_fixo IS NULL THEN 1 ELSE 0 END AS n9, CASE WHEN projected.vl_unit_perc_fixo IS NULL THEN 1 ELSE 0 END AS n10 FROM (\nSELECT item_custo.probe_case_id AS probe_case_id, item_custo.vl_custo_prev_dolar as item_custo_vl_custo_prev_dolar, item_custo.vl_desp_prev_dolar as item_custo_vl_desp_prev_dolar, vl_custo_prev_dolar + vl_desp_prev_dolar as vl_tot_prev, item_custo.vl_unit_prev_dolar as item_custo_vl_unit_prev_dolar, item_custo.vl_desp_prev_dolar_sem_distr_cus as cmp_maior_30_1, vl_custo_prev_dolar + vl_desp_prev_dolar_sem_distr_cus as vl_tot_sem_distr_custo, (vl_custo_prev_dolar + vl_desp_prev_dolar_sem_distr_cus) / ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as vl_unit_sem_distr_custo, vl_custo_prev_dolar * perc_fixo_container / 100 as vl_desp_prev_perc_fixo, vl_custo_prev_dolar * (1 + (perc_fixo_container / 100)) as vl_tot_perc_fixo, vl_custo_prev_dolar * (1 + (perc_fixo_container / 100)) / ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as vl_unit_perc_fixo FROM (\nSELECT 1 AS probe_case_id, CAST(100 AS NUMERIC(17,5)) AS vl_custo_prev_dolar, CAST(20 AS NUMERIC(17,2)) AS vl_desp_prev_dolar, CAST(10 AS NUMERIC(17,2)) AS vl_desp_prev_dolar_sem_distr_cus, CAST(12 AS NUMERIC(25,5)) AS vl_unit_prev_dolar\nUNION ALL\nSELECT 2 AS probe_case_id, CAST(1 AS NUMERIC(17,5)) AS vl_custo_prev_dolar, CAST(-1 AS NUMERIC(17,2)) AS vl_desp_prev_dolar, CAST(NULL AS NUMERIC(17,2)) AS vl_desp_prev_dolar_sem_distr_cus, CAST(5 AS NUMERIC(25,5)) AS vl_unit_prev_dolar\n) item_custo INNER JOIN (\nSELECT 1 AS probe_case_id, CAST(5 AS NUMERIC(17,2)) AS perc_fixo_container\nUNION ALL\nSELECT 2 AS probe_case_id, CAST(NULL AS NUMERIC(17,2)) AS perc_fixo_container\n) versao ON versao.probe_case_id=item_custo.probe_case_id\n) projected ORDER BY projected.probe_case_id",
+      "querySha256": "bd75a7cf0ac975bc21f6ed38b2806fcbe60d5779e934c370fe0501c8632dd7d8",
+      "expectedOutcome": "UNOBSERVED_ROOT_REVIEW_BEFORE_EXECUTION",
+      "executeByCandidate": false
+    },
+    {
+      "case": "dolar_inner_nonnull_zero",
+      "currency": "dolar",
+      "sourceGridSha256": "297bb945f86e9fb42f3e1ebbffd002c95d1e99d36776f166e13bdd74bcccdf3c",
+      "sourceSelectLine": 793,
+      "sourceFinancialProjections": [
+        "item_custo.vl_custo_prev_dolar as item_custo_vl_custo_prev_dolar",
+        "item_custo.vl_desp_prev_dolar as item_custo_vl_desp_prev_dolar",
+        "vl_custo_prev_dolar + vl_desp_prev_dolar as vl_tot_prev",
+        "item_custo.vl_unit_prev_dolar as item_custo_vl_unit_prev_dolar",
+        "item_custo.vl_desp_prev_dolar_sem_distr_cus as cmp_maior_30_1",
+        "vl_custo_prev_dolar + vl_desp_prev_dolar_sem_distr_cus as vl_tot_sem_distr_custo",
+        "(vl_custo_prev_dolar + vl_desp_prev_dolar_sem_distr_cus) / ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as vl_unit_sem_distr_custo",
+        "vl_custo_prev_dolar * perc_fixo_container / 100 as vl_desp_prev_perc_fixo",
+        "vl_custo_prev_dolar * (1 + (perc_fixo_container / 100)) as vl_tot_perc_fixo",
+        "vl_custo_prev_dolar * (1 + (perc_fixo_container / 100)) / ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as vl_unit_perc_fixo"
+      ],
+      "physicalOperandMap": {
+        "c": "vl_custo_prev_dolar",
+        "e": "vl_desp_prev_dolar",
+        "w": "vl_desp_prev_dolar_sem_distr_cus",
+        "u": "vl_unit_prev_dolar",
+        "p": "perc_fixo_container"
+      },
+      "syntheticRows": [
+        {
+          "id": 1,
+          "c": "100",
+          "e": "20",
+          "w": "10",
+          "u": "12",
+          "p": "5"
+        },
+        {
+          "id": 2,
+          "c": "1",
+          "e": "1",
+          "w": null,
+          "u": "0",
+          "p": null
+        }
+      ],
+      "rowCount": 2,
+      "nullFlagMap": {
+        "n1": "item_custo_vl_custo_prev_dolar",
+        "n2": "item_custo_vl_desp_prev_dolar",
+        "n3": "vl_tot_prev",
+        "n4": "item_custo_vl_unit_prev_dolar",
+        "n5": "cmp_maior_30_1",
+        "n6": "vl_tot_sem_distr_custo",
+        "n7": "vl_unit_sem_distr_custo",
+        "n8": "vl_desp_prev_perc_fixo",
+        "n9": "vl_tot_perc_fixo",
+        "n10": "vl_unit_perc_fixo"
+      },
+      "query": "SELECT projected.*, CASE WHEN projected.item_custo_vl_custo_prev_dolar IS NULL THEN 1 ELSE 0 END AS n1, CASE WHEN projected.item_custo_vl_desp_prev_dolar IS NULL THEN 1 ELSE 0 END AS n2, CASE WHEN projected.vl_tot_prev IS NULL THEN 1 ELSE 0 END AS n3, CASE WHEN projected.item_custo_vl_unit_prev_dolar IS NULL THEN 1 ELSE 0 END AS n4, CASE WHEN projected.cmp_maior_30_1 IS NULL THEN 1 ELSE 0 END AS n5, CASE WHEN projected.vl_tot_sem_distr_custo IS NULL THEN 1 ELSE 0 END AS n6, CASE WHEN projected.vl_unit_sem_distr_custo IS NULL THEN 1 ELSE 0 END AS n7, CASE WHEN projected.vl_desp_prev_perc_fixo IS NULL THEN 1 ELSE 0 END AS n8, CASE WHEN projected.vl_tot_perc_fixo IS NULL THEN 1 ELSE 0 END AS n9, CASE WHEN projected.vl_unit_perc_fixo IS NULL THEN 1 ELSE 0 END AS n10 FROM (\nSELECT item_custo.probe_case_id AS probe_case_id, item_custo.vl_custo_prev_dolar as item_custo_vl_custo_prev_dolar, item_custo.vl_desp_prev_dolar as item_custo_vl_desp_prev_dolar, vl_custo_prev_dolar + vl_desp_prev_dolar as vl_tot_prev, item_custo.vl_unit_prev_dolar as item_custo_vl_unit_prev_dolar, item_custo.vl_desp_prev_dolar_sem_distr_cus as cmp_maior_30_1, vl_custo_prev_dolar + vl_desp_prev_dolar_sem_distr_cus as vl_tot_sem_distr_custo, (vl_custo_prev_dolar + vl_desp_prev_dolar_sem_distr_cus) / ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as vl_unit_sem_distr_custo, vl_custo_prev_dolar * perc_fixo_container / 100 as vl_desp_prev_perc_fixo, vl_custo_prev_dolar * (1 + (perc_fixo_container / 100)) as vl_tot_perc_fixo, vl_custo_prev_dolar * (1 + (perc_fixo_container / 100)) / ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as vl_unit_perc_fixo FROM (\nSELECT 1 AS probe_case_id, CAST(100 AS NUMERIC(17,5)) AS vl_custo_prev_dolar, CAST(20 AS NUMERIC(17,2)) AS vl_desp_prev_dolar, CAST(10 AS NUMERIC(17,2)) AS vl_desp_prev_dolar_sem_distr_cus, CAST(12 AS NUMERIC(25,5)) AS vl_unit_prev_dolar\nUNION ALL\nSELECT 2 AS probe_case_id, CAST(1 AS NUMERIC(17,5)) AS vl_custo_prev_dolar, CAST(1 AS NUMERIC(17,2)) AS vl_desp_prev_dolar, CAST(NULL AS NUMERIC(17,2)) AS vl_desp_prev_dolar_sem_distr_cus, CAST(0 AS NUMERIC(25,5)) AS vl_unit_prev_dolar\n) item_custo INNER JOIN (\nSELECT 1 AS probe_case_id, CAST(5 AS NUMERIC(17,2)) AS perc_fixo_container\nUNION ALL\nSELECT 2 AS probe_case_id, CAST(NULL AS NUMERIC(17,2)) AS perc_fixo_container\n) versao ON versao.probe_case_id=item_custo.probe_case_id\n) projected ORDER BY projected.probe_case_id",
+      "querySha256": "0a71b92bc1202ae7ca4b74a00e7c79dc3159663ff0e4534ca6c4e7a618c542e7",
+      "expectedOutcome": "UNOBSERVED_ROOT_REVIEW_BEFORE_EXECUTION",
+      "executeByCandidate": false
+    },
+    {
+      "case": "dolar_outer_known_zero",
+      "currency": "dolar",
+      "sourceGridSha256": "297bb945f86e9fb42f3e1ebbffd002c95d1e99d36776f166e13bdd74bcccdf3c",
+      "sourceSelectLine": 793,
+      "sourceFinancialProjections": [
+        "item_custo.vl_custo_prev_dolar as item_custo_vl_custo_prev_dolar",
+        "item_custo.vl_desp_prev_dolar as item_custo_vl_desp_prev_dolar",
+        "vl_custo_prev_dolar + vl_desp_prev_dolar as vl_tot_prev",
+        "item_custo.vl_unit_prev_dolar as item_custo_vl_unit_prev_dolar",
+        "item_custo.vl_desp_prev_dolar_sem_distr_cus as cmp_maior_30_1",
+        "vl_custo_prev_dolar + vl_desp_prev_dolar_sem_distr_cus as vl_tot_sem_distr_custo",
+        "(vl_custo_prev_dolar + vl_desp_prev_dolar_sem_distr_cus) / ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as vl_unit_sem_distr_custo",
+        "vl_custo_prev_dolar * perc_fixo_container / 100 as vl_desp_prev_perc_fixo",
+        "vl_custo_prev_dolar * (1 + (perc_fixo_container / 100)) as vl_tot_perc_fixo",
+        "vl_custo_prev_dolar * (1 + (perc_fixo_container / 100)) / ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as vl_unit_perc_fixo"
+      ],
+      "physicalOperandMap": {
+        "c": "vl_custo_prev_dolar",
+        "e": "vl_desp_prev_dolar",
+        "w": "vl_desp_prev_dolar_sem_distr_cus",
+        "u": "vl_unit_prev_dolar",
+        "p": "perc_fixo_container"
+      },
+      "syntheticRows": [
+        {
+          "id": 1,
+          "c": "100",
+          "e": "20",
+          "w": "10",
+          "u": "12",
+          "p": "5"
+        },
+        {
+          "id": 2,
+          "c": "1",
+          "e": "-1",
+          "w": null,
+          "u": "5",
+          "p": "1"
+        }
+      ],
+      "rowCount": 2,
+      "nullFlagMap": {
+        "n1": "item_custo_vl_custo_prev_dolar",
+        "n2": "item_custo_vl_desp_prev_dolar",
+        "n3": "vl_tot_prev",
+        "n4": "item_custo_vl_unit_prev_dolar",
+        "n5": "cmp_maior_30_1",
+        "n6": "vl_tot_sem_distr_custo",
+        "n7": "vl_unit_sem_distr_custo",
+        "n8": "vl_desp_prev_perc_fixo",
+        "n9": "vl_tot_perc_fixo",
+        "n10": "vl_unit_perc_fixo"
+      },
+      "query": "SELECT projected.*, CASE WHEN projected.item_custo_vl_custo_prev_dolar IS NULL THEN 1 ELSE 0 END AS n1, CASE WHEN projected.item_custo_vl_desp_prev_dolar IS NULL THEN 1 ELSE 0 END AS n2, CASE WHEN projected.vl_tot_prev IS NULL THEN 1 ELSE 0 END AS n3, CASE WHEN projected.item_custo_vl_unit_prev_dolar IS NULL THEN 1 ELSE 0 END AS n4, CASE WHEN projected.cmp_maior_30_1 IS NULL THEN 1 ELSE 0 END AS n5, CASE WHEN projected.vl_tot_sem_distr_custo IS NULL THEN 1 ELSE 0 END AS n6, CASE WHEN projected.vl_unit_sem_distr_custo IS NULL THEN 1 ELSE 0 END AS n7, CASE WHEN projected.vl_desp_prev_perc_fixo IS NULL THEN 1 ELSE 0 END AS n8, CASE WHEN projected.vl_tot_perc_fixo IS NULL THEN 1 ELSE 0 END AS n9, CASE WHEN projected.vl_unit_perc_fixo IS NULL THEN 1 ELSE 0 END AS n10 FROM (\nSELECT item_custo.probe_case_id AS probe_case_id, item_custo.vl_custo_prev_dolar as item_custo_vl_custo_prev_dolar, item_custo.vl_desp_prev_dolar as item_custo_vl_desp_prev_dolar, vl_custo_prev_dolar + vl_desp_prev_dolar as vl_tot_prev, item_custo.vl_unit_prev_dolar as item_custo_vl_unit_prev_dolar, item_custo.vl_desp_prev_dolar_sem_distr_cus as cmp_maior_30_1, vl_custo_prev_dolar + vl_desp_prev_dolar_sem_distr_cus as vl_tot_sem_distr_custo, (vl_custo_prev_dolar + vl_desp_prev_dolar_sem_distr_cus) / ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as vl_unit_sem_distr_custo, vl_custo_prev_dolar * perc_fixo_container / 100 as vl_desp_prev_perc_fixo, vl_custo_prev_dolar * (1 + (perc_fixo_container / 100)) as vl_tot_perc_fixo, vl_custo_prev_dolar * (1 + (perc_fixo_container / 100)) / ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as vl_unit_perc_fixo FROM (\nSELECT 1 AS probe_case_id, CAST(100 AS NUMERIC(17,5)) AS vl_custo_prev_dolar, CAST(20 AS NUMERIC(17,2)) AS vl_desp_prev_dolar, CAST(10 AS NUMERIC(17,2)) AS vl_desp_prev_dolar_sem_distr_cus, CAST(12 AS NUMERIC(25,5)) AS vl_unit_prev_dolar\nUNION ALL\nSELECT 2 AS probe_case_id, CAST(1 AS NUMERIC(17,5)) AS vl_custo_prev_dolar, CAST(-1 AS NUMERIC(17,2)) AS vl_desp_prev_dolar, CAST(NULL AS NUMERIC(17,2)) AS vl_desp_prev_dolar_sem_distr_cus, CAST(5 AS NUMERIC(25,5)) AS vl_unit_prev_dolar\n) item_custo INNER JOIN (\nSELECT 1 AS probe_case_id, CAST(5 AS NUMERIC(17,2)) AS perc_fixo_container\nUNION ALL\nSELECT 2 AS probe_case_id, CAST(1 AS NUMERIC(17,2)) AS perc_fixo_container\n) versao ON versao.probe_case_id=item_custo.probe_case_id\n) projected ORDER BY projected.probe_case_id",
+      "querySha256": "2f708c255853f264e4349b96757f2be9561a5a84353a8cfe89ecf4eccabef22e",
+      "expectedOutcome": "UNOBSERVED_ROOT_REVIEW_BEFORE_EXECUTION",
+      "executeByCandidate": false
+    }
+  ],
+  "limits": [
+    "Derived UNION ALL of constants may still be optimized; this is stronger than isolated constants but not physical row execution equivalence.",
+    "All10financial SELECT expressions are verbatim from source; operands use precise SQLColumns types.",
+    "Extra outer CASE flags observe logical NULL independently of ODBC fetch string0.",
+    "Control row included per case; errors may refuse the entire case, never fabricate a result.",
+    "No production metadata/source was changed; SQL fixture is only an isolated candidate for root review."
+  ]
+}

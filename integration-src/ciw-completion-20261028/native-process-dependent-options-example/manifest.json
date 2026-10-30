@@ -1,0 +1,168 @@
+{
+  "package": "native-process-dependent-options-example",
+  "version": "1",
+  "status": "candidate-ready-example-parity-review",
+  "businessExecuted": false,
+  "canonicalChanged": false,
+  "productionMockAdded": false,
+  "skillAvailability": "construtor-pg-demo-production-parity not installed; canonical documented checklist applied directly",
+  "requires1047ManifestSha256": "ed0cc7a801afe2e75d086d61a94972f6d6102514595f3a049689989619631dee",
+  "testCommands": [
+    "C:/Users/user/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe integration-src/ciw-completion-20261028/native-process-dependent-options-example/tests/prepare.py",
+    "C:/Users/user/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node.exe integration-src/ciw-completion-20261028/native-process-dependent-options-example/tests/verify.cjs"
+  ],
+  "verification": {
+    "success": true,
+    "checks": 29,
+    "canonicalChanged": false,
+    "businessExecuted": false,
+    "productionClientChanged": false,
+    "httpRequests": 0,
+    "xhrRequests": 0,
+    "nativeProcessEngine": true,
+    "fullAjvSchema": true,
+    "localFilePage": true
+  },
+  "sharedPatches": [
+    {
+      "target": "D:/opencode/construtor-pg/src/examples/examples-catalog.js",
+      "baselineSha256": "beefe6f63ce19d279b244270efb5475dface0711d10c49474db20c765d9ea834",
+      "candidatePath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/native-process-dependent-options-example/catalog-preview.js",
+      "candidateSha256": "cab7c7165a5773a6d554439619e6c54f19a7fb82b326b7a71eca8a292472385a",
+      "kind": "byteInsertion",
+      "encoding": "utf8-preserved",
+      "insertAtByte": 23661,
+      "insertHex": "202020207b0d0a20202020202069643a202270726f63657373616d656e746f2d6f70636f65732d646570656e64656e746573222c0d0a20202020202063617465676f72793a202250726f63657373616d656e746f222c0d0a2020202020207469746c653a20224f70c3a7c3b5657320646570656e64656e74657320646520706172c3a26d6574726f73222c0d0a20202020202073756d6d6172793a2022446f697320656e756d73206665636861646f73207265636172726567616d20612073656c65c3a7c3a36f3b20636f6e746578746f2070726f74656769646f2c20726573706f73746120616e746967612064657363617274616461206520636f6e6669726d61c3a7c3a36f206e61746976612e222c0d0a202020202020706167653a207061676550617468202b202270726f63657373616d656e746f2d6f70636f65732d646570656e64656e7465732e68746d6c220d0a202020207d2c0d0a",
+      "oldContentUnchanged": true,
+      "changes": [
+        {
+          "old": "    {\n      id: \"processamento-parametros\",",
+          "new": "    {\n      id: \"processamento-opcoes-dependentes\",\n      category: \"Processamento\",\n      title: \"Op\u00e7\u00f5es dependentes de par\u00e2metros\",\n      summary: \"Dois enums fechados recarregam a sele\u00e7\u00e3o; contexto protegido, resposta antiga descartada e confirma\u00e7\u00e3o nativa.\",\n      page: pagePath + \"processamento-opcoes-dependentes.html\"\n    },\n    {\n      id: \"processamento-parametros\","
+        }
+      ]
+    },
+    {
+      "target": "D:/opencode/construtor-pg/docs/paridade-demo-producao.md",
+      "baselineSha256": "0e8ba9755ba7207d33abf13bd7bbf450d888a46069050e7966e2dc102d598664",
+      "candidatePath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/native-process-dependent-options-example/paridade-demo-producao-preview.md",
+      "candidateSha256": "d0634a264dfc151c242af05a7c1274cd22c27e0678d4a1e52124740100dc363c",
+      "kind": "byteInsertion",
+      "encoding": "cp1252-preserved",
+      "insertAtByte": 1616,
+      "insertHex": "7c20323032362d31302d3238207c2050726f636573736f20636f6d206f70e7f5657320646570656e64656e746573206f70742d696e207c206578616d706c65732f70616765732f70726f63657373616d656e746f2d6f70636f65732d646570656e64656e7465732e68746d6c2c206578616d706c65732f70726f63657373616d656e746f2d6f70636f65732d646570656e64656e7465732e70726f636573732e6a736f6e2c207372632f6578616d706c65732f70726f636573732d646570656e64656e742d6f7074696f6e732d6578616d706c652e6a73207c204d65736d6f2050726f63657373456e67696e652c204275696c646572206520736368656d6173313034373b2070726f6475e7e36f20706f722073637265656e49642f656e64706f696e7449642c2073656d20636c69656e74652066696374ed63696f207c2070656e64656e7465207c20526576697361722f696e74656772617220657874656e73e36f2070726f636573732d6f6e6c793130343720652065737465206578656d706c6f3b2070726573657276617220617574656e74696361e7e36f2f7065726d697373f56573207265616973207c20446f697320656e756d73206665636861646f732c20636f6e746578746f206f627269676174f372696f20726561646f6e6c792c2067657261e7e36f20617373ed6e63726f6e61206520636f6e6669726d61e7e36f206e61746976612e2053656d20666c61672c20636f6e747261746f73206c656761646f73207072657365727661646f732e20536b696c6c20617573656e7465206170f3732062757363613b20636865636b6c697374206461206d617472697a2061706c696361646f206469726574616d656e74652e207c0d0a",
+      "oldContentUnchanged": true
+    }
+  ],
+  "newSources": [
+    {
+      "source": "candidates/examples/pages/processamento-opcoes-dependentes.html",
+      "target": "D:/opencode/construtor-pg/examples/pages/processamento-opcoes-dependentes.html",
+      "sha256": "bad0b4e7d84a71cc5af78ccd3866ce09f7078b1ead2c809b3c3ada638437d819"
+    },
+    {
+      "source": "candidates/examples/processamento-opcoes-dependentes.process.json",
+      "target": "D:/opencode/construtor-pg/examples/processamento-opcoes-dependentes.process.json",
+      "sha256": "4097f768233bab63d614be99c368f8a242b6560d377afd2471db7d6897f5388d"
+    },
+    {
+      "source": "candidates/src/examples/process-dependent-options-example.js",
+      "target": "D:/opencode/construtor-pg/src/examples/process-dependent-options-example.js",
+      "sha256": "faa0be8786a4e0269fdcc2cb4cb4c60c4d8bc8fae90945d341808f6360029cfb"
+    }
+  ],
+  "gates": [
+    "root review and hash-guarded integration",
+    "integrate approved1047 native extension before example; current canonical engine does not support dependent opt-in",
+    "preserve production screenId/endpointId and no example imports",
+    "no production publication/grants/business authorized here"
+  ],
+  "proof": [
+    {
+      "path": "D:/opencode/construtor-pg/production/app.html",
+      "sha256": "e96e1c5b229f003992ba950d4e1e6c12c023d1436daa084b0cb58cf4e389ab65",
+      "changed": false
+    },
+    {
+      "path": "D:/opencode/construtor-pg/src/bootstrap/production-crud.js",
+      "sha256": "0ec08d96d51217bf9e38811bcb500e442dcb26144a5cb2182e505f1485826cbb",
+      "changed": false
+    },
+    {
+      "path": "D:/opencode/construtor-pg/src/crud-engine/CrudUtils.js",
+      "sha256": "7f7464041bced73069e1f21f72f7b56011eaeaa85d182117f939fe853fca47d4",
+      "changed": false
+    },
+    {
+      "path": "D:/opencode/construtor-pg/AGENTS.md",
+      "sha256": "194c130e5f044748702ac7f359c1be1d01e73e1310ba6be28930ccf72c873a0e",
+      "changed": false
+    },
+    {
+      "path": "D:/opencode/construtor-pg/docs/paridade-demo-producao.md",
+      "sha256": "0e8ba9755ba7207d33abf13bd7bbf450d888a46069050e7966e2dc102d598664",
+      "changed": false
+    },
+    {
+      "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/native-process-dependent-options-example/example-desktop.png",
+      "sha256": "a4021e7e98f0c60110a58c0b51a3151bb0a167b8369bfa68ee471e72a18c5da7"
+    },
+    {
+      "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/native-process-dependent-options-example/example-mobile.png",
+      "sha256": "227a1e560c2742244ef31e8f846c9caf1b956baba04b44faf834d9eb8c8abe50"
+    },
+    {
+      "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/native-process-dependent-options-example/verification.json",
+      "sha256": "3096bc82af25f45262430c4f2db2f9d64383258eb152183e1f258c8b4492cc8f"
+    },
+    {
+      "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/native-process-dependent-options-example/asset-manifest.json",
+      "sha256": "304fa7b00d294d72d1d1824c9c6b2d7a23f514a9f03772a9eb9f755c6fcb4f8b"
+    }
+  ],
+  "files": [
+    {
+      "path": "candidates/examples/pages/processamento-opcoes-dependentes.html",
+      "sha256": "bad0b4e7d84a71cc5af78ccd3866ce09f7078b1ead2c809b3c3ada638437d819"
+    },
+    {
+      "path": "candidates/examples/processamento-opcoes-dependentes.process.json",
+      "sha256": "4097f768233bab63d614be99c368f8a242b6560d377afd2471db7d6897f5388d"
+    },
+    {
+      "path": "candidates/src/examples/process-dependent-options-example.js",
+      "sha256": "faa0be8786a4e0269fdcc2cb4cb4c60c4d8bc8fae90945d341808f6360029cfb"
+    },
+    {
+      "path": "PARITY_REVIEW.md",
+      "sha256": "9ee7299ef4ae29bd70058384512d483a9c55947a4b7190742b5d46ea3928038e"
+    },
+    {
+      "path": "patches/examples-catalog.js.patch",
+      "sha256": "e47e9c44b9d927bad1cea8102aa822d3b27d192b829b81a341a229bdc520b6ea"
+    },
+    {
+      "path": "patches/patch-plan.json",
+      "sha256": "4c6740413d65aa3514973438edf83c229bd2000a49f8be07883fb08313caab89"
+    },
+    {
+      "path": "README.md",
+      "sha256": "fde118362d57c0558cc1e4eb4a9098533d0ce5b40e14b9ae2b6937f508f5186b"
+    },
+    {
+      "path": "tests/example-template.js",
+      "sha256": "65bb813b27153063afbb6bd42b9a8bed7f07f669ca2acb9b19d44d1dde60d98f"
+    },
+    {
+      "path": "tests/freeze.py",
+      "sha256": "71a0a120f66f52e9b9606f0f15eecb46bb9f2d55a307a1d55a691bee4f36fa89"
+    },
+    {
+      "path": "tests/prepare.py",
+      "sha256": "774c03d3069080c72fb911e18a6fddcb222d880e4b7098b82d2824d4f0a1d49f"
+    },
+    {
+      "path": "tests/verify.cjs",
+      "sha256": "533f9aabbe926bfd324a9f3fdda16caad1c2e6bdd144f8a69ae9a4bfca3d8ed6"
+    }
+  ]
+}

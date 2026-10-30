@@ -1,0 +1,458 @@
+{
+  "package": "container-expense-default-selection",
+  "version": "1.2",
+  "program": "op1047",
+  "entity": "container_despesas_selecao_progress",
+  "status": "candidate-ready-rebased7-review",
+  "rootAuthorizedScope": "candidate preparation only; no business/grants/DDL/publication",
+  "businessExecuted": false,
+  "canonicalFilesChanged": false,
+  "testCommand": "powershell -NoProfile -ExecutionPolicy Bypass -File integration-src/ciw-completion-20261028/container-expense-default-selection/tests/verify-rebase-v1.2.ps1",
+  "verificationPath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-expense-default-selection/verification-v1.2.json",
+  "verificationSha256": "cdbc3b1399c1710cebb29894d58bdc087429ff6f213b125c36201eb4a4b5da67",
+  "incrementalReviewFix": {
+    "predecessorManifestSha256": "8a730403d05653fc692d7a593f01665534e23e34eff93046ae516b5de8dedea2",
+    "finding": "dependent lookup accepted on CRUD although transport supports process only",
+    "delta": "Builder process-only guard in normalization and publication before persistence/archive; intermediate generateCrudDefinition allowed",
+    "priorFreezePreserved": true
+  },
+  "localEvidence": {
+    "success": true,
+    "businessExecuted": false,
+    "canonicalFilesChanged": false,
+    "official122Compiled": false,
+    "ablReexecuted": false,
+    "ablReuse": {
+      "verificationPath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-expense-default-selection/verification-v1.1.json",
+      "verificationSha256": "5702f2eb592b7c9555183a8e31e93809b7fb5820f9abea50d7fd595b4b9a215c",
+      "checksPerCombination": 237,
+      "combinations": 4,
+      "numDbs": 0,
+      "reason": "all four shared ABL candidates and fixture/include source byte-identical to frozen-v1.1",
+      "candidates": [
+        {
+          "path": "sursum-api/programs/ContainersImpostosService.p",
+          "sha256": "5aece96c2ab4c9512aa946e51e42bdc76795c7784c704968eeb57d1e37ea6128"
+        },
+        {
+          "path": "sursum-api/includes/ContainerProcessBoundary.i",
+          "sha256": "6db9a0e2ed85aa442a5f345312bb59fca2b60294cb287ce02fba91f4d9c0b614"
+        },
+        {
+          "path": "sursum-api/programs/ContainersProcessosService.p",
+          "sha256": "9001f0f18592fac39c7f024d290cc424f6a29c51b805bea2c57ce90c8c5070b2"
+        },
+        {
+          "path": "sursum-api/programs/ContainersProcessos.p",
+          "sha256": "6f801d705797bc2efeec1a1769839be1ac133bf969059be3048c9e1b07533e82"
+        }
+      ]
+    },
+    "phpTests": 167,
+    "phpAssertions": 1313,
+    "nativeSelectionChecks": 19,
+    "jsonSchemaAjvChecks": 18,
+    "wiringChecks": 114,
+    "legacyFrontendSuites": 3,
+    "oldFreezesVerified": [
+      {
+        "version": "v1",
+        "manifestSha256": "8a730403d05653fc692d7a593f01665534e23e34eff93046ae516b5de8dedea2",
+        "candidateFilesVerified": 46,
+        "testInputFilesVerified": 55
+      },
+      {
+        "version": "v1.1",
+        "manifestSha256": "4fa5a8b489fb3857e5be5e69cce09ffb344a1ede515a211e786b30cf3744917a",
+        "candidateFilesVerified": 47,
+        "testInputFilesVerified": 55
+      }
+    ],
+    "logs": [
+      {
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-expense-default-selection/phpunit-final.log",
+        "sha256": "cb95c384928e68122a9dad3d285ac84900091cb2bb5a453971f95b782e32a19f"
+      },
+      {
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-expense-default-selection/builder-final.log",
+        "sha256": "14b1987994891b68884d4bb4edbc4c39434b7bfff28be9c081ac157c10a0a1ce"
+      },
+      {
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-expense-default-selection/wiring-final.log",
+        "sha256": "6149fb2b438c9d64cb2bbc1d6a42eda58de7e28906139692ccdc8d954eea63ce"
+      },
+      {
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-expense-default-selection/schema-ajv-final.log",
+        "sha256": "240531f383279b51ac9d97babe4f3715328f14f4e420b6305ffb5015e53dfe3d"
+      },
+      {
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-expense-default-selection/process-native-final.log",
+        "sha256": "74093bf5d772b0bf7b860db3a7142da7636c4ec6054b7ce231c7fae2af1de7a3"
+      },
+      {
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-expense-default-selection/api-process-context-smoke.mjs.log",
+        "sha256": "60271748fae988fd5e224a895fb978b3cddc668232173315705d76fbffec7321"
+      },
+      {
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-expense-default-selection/container-process-logs-smoke.mjs.log",
+        "sha256": "ce2082b7e6aa97ca8a9c07019d7e5970cc359c8b099f3ef7b14b29bd81699745"
+      },
+      {
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-expense-default-selection/process-session-flag-smoke.mjs.log",
+        "sha256": "c444ef7ce2dee82fddfade54f3f2c3dca73eddb1c03ff8c875c5e4c8e1986f7d"
+      },
+      {
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-expense-default-selection/rebase-v1.2-complete.log",
+        "sha256": "d8b15d64476b0a7ce4163b2073f908039472a18b18e4847ef786fa4bfe24527b"
+      }
+    ]
+  },
+  "sharedBaselines": [
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersImpostosService.p",
+      "baselineSha256": "2bcc14896963cd5b6ed09bbabbdce52d7eb389298b7ef1958a51f3083d4e841c",
+      "patchPlan": "patches/core-plan.json",
+      "candidateRuntimePath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-expense-default-selection/local/sursum-api/programs/ContainersImpostosService.p",
+      "candidateSha256": "5aece96c2ab4c9512aa946e51e42bdc76795c7784c704968eeb57d1e37ea6128"
+    },
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/includes/ContainerProcessBoundary.i",
+      "baselineSha256": "a7b5cdca15862746c8781aeaefd15d5291aa0f3261d11e6b363afeebb81167fb",
+      "patchPlan": "patches/core-plan.json",
+      "candidateRuntimePath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-expense-default-selection/local/sursum-api/includes/ContainerProcessBoundary.i",
+      "candidateSha256": "6db9a0e2ed85aa442a5f345312bb59fca2b60294cb287ce02fba91f4d9c0b614"
+    },
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersProcessosService.p",
+      "baselineSha256": "658ef1dd90e97e0c1e101c5562a0162c34a9db557358695d4c2025ef23ad6918",
+      "patchPlan": "patches/core-plan.json",
+      "candidateRuntimePath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-expense-default-selection/local/sursum-api/programs/ContainersProcessosService.p",
+      "candidateSha256": "9001f0f18592fac39c7f024d290cc424f6a29c51b805bea2c57ce90c8c5070b2"
+    },
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersProcessos.p",
+      "baselineSha256": "3a635efa5dc2db6e1ecc8068bed8647e6eabc2d5c61c8761c35ad166efe674ae",
+      "patchPlan": "patches/core-plan.json",
+      "candidateRuntimePath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-expense-default-selection/local/sursum-api/programs/ContainersProcessos.p",
+      "candidateSha256": "6f801d705797bc2efeec1a1769839be1ac133bf969059be3048c9e1b07533e82"
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeContainerAudit.php",
+      "baselineSha256": "700bea4e36a10576f0ccaf74a5c611a01354d2975221fd0d4e32d3974d7f85d1",
+      "patchPlan": "patches/php-plan.json",
+      "candidateRuntimePath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-expense-default-selection/php/RuntimeContainerAudit.php",
+      "candidateSha256": "3cd4448cd1a28b61a42cce9003e84d434a1e58c7b11c1a89599456f5e8d6931b"
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeApiEntityActionService.php",
+      "baselineSha256": "6f52ddca37b15b3494989b71b6f7ac05ce3b73c31d4562db62a61edd48ed51ff",
+      "patchPlan": "patches/php-plan.json",
+      "candidateRuntimePath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-expense-default-selection/php/RuntimeApiEntityActionService.php",
+      "candidateSha256": "5de4f665910f86d4d18e0c95e4e1f51a39b21c8b7e9e929c93759a46af52fb81"
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/ScreenDefinitionService.php",
+      "baselineSha256": "647758b5d04e3ebd5407496d5df6c1f754a09ec99b875efe3eae932b5bec08af",
+      "patchPlan": "patches/php-plan.json",
+      "candidateRuntimePath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-expense-default-selection/php/ScreenDefinitionService.php",
+      "candidateSha256": "accaa7aa35f5037d9af28de9b169c6f95a366af27ab27123cd270f10f6653f47"
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Builder/ProgramBuilderService.php",
+      "baselineSha256": "5a667b65a39d717983e96532d9ab25d7e4c79a9162bfed10639a5810278f5024",
+      "patchPlan": "patches/native-lookup-parameters/patch-plan.json",
+      "candidateRuntimePath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-expense-default-selection/native/backend/src/Builder/ProgramBuilderService.php",
+      "candidateSha256": "15ef719c4f34ed99f5769a2322ec6cb7dc9a1701e74a9387ae5a54f5f79b70a2"
+    },
+    {
+      "target": "D:/opencode/construtor-pg/src/process-engine/ProcessDefinitionValidator.js",
+      "baselineSha256": "e8d55e6537ab7567042927430273febcfced7b4f6068cdfba40c76781af74688",
+      "patchPlan": "patches/native-lookup-parameters/patch-plan.json",
+      "candidateRuntimePath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-expense-default-selection/native/src/process-engine/ProcessDefinitionValidator.js",
+      "candidateSha256": "4437f2825989815b83ae4aad545866a0bc3cacb2cfa254ad8f22d38a4e5e4242"
+    },
+    {
+      "target": "D:/opencode/construtor-pg/src/process-engine/ProcessEngine.js",
+      "baselineSha256": "a172476944d817ec47a2bb9739750c5a89a0fc3dac513d8084b0746f3365164d",
+      "patchPlan": "patches/native-lookup-parameters/patch-plan.json",
+      "candidateRuntimePath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-expense-default-selection/native/src/process-engine/ProcessEngine.js",
+      "candidateSha256": "4c47a45b29531752ddffa3f477addbce69ac2f864cfa94f3c96b206d77d4f263"
+    },
+    {
+      "target": "D:/opencode/construtor-pg/public/metadata/schemas/process-definition-v1.schema.json",
+      "baselineSha256": "3148d0f8304c675134f92f83b623cf620d6a067ea06d505345891e768b32d9b1",
+      "patchPlan": "patches/native-lookup-parameters/schema-patch-plan.json",
+      "candidateRuntimePath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-expense-default-selection/native/public/metadata/schemas/process-definition-v1.schema.json",
+      "candidateSha256": "178910fceb3e4a1d383f85f74efc73ecc4f4c36f1830bb47276adc5640886ee8"
+    },
+    {
+      "target": "D:/opencode/construtor-pg/public/metadata/schemas/crud-definition-v1.schema.json",
+      "baselineSha256": "32f6710c532eae8004448b64794cc02b07b1ada2620aec59c3f730c74c0923e5",
+      "patchPlan": "patches/native-lookup-parameters/schema-patch-plan.json",
+      "candidateRuntimePath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-expense-default-selection/native/public/metadata/schemas/crud-definition-v1.schema.json",
+      "candidateSha256": "f0cce7a940663a30760f770d95eae3a2647f6df92cad0d22b9ac34060fa10c26"
+    }
+  ],
+  "newSources": [
+    "abl/ContainerExpenseDefaultsPlan.i",
+    "php/RuntimeContainerExpenseDefaultsAudit.php"
+  ],
+  "metadataStatus": {
+    "preparedOnly": true,
+    "sourcePreview": "actual published6 plus two fixed additive operations; six originals preserved exactly; auth omitted and must remain unchanged",
+    "parentPreview": "actual published1.0.3 builderConfig with only additive Gerar despesas link; memory/tax links preserved",
+    "publicationBlockedUntilRootLiveHashCompare": true,
+    "sourceAddition": "metadata/source-addition.json",
+    "parentPatch": "metadata/parent-navigation.json"
+  },
+  "limits": {
+    "readerRows": 50000,
+    "readerMilliseconds": 10000,
+    "options": 200,
+    "selectionMinimum": 1,
+    "selectionMaximum": 100,
+    "unknownActiveOrTaxExcluded": true,
+    "publicEmptySelectionRejected": true,
+    "emptyCalculatedSubsetFallback": "all nonmanual",
+    "UIOrderFields": [
+      "ordem",
+      "despesa_id",
+      "log_calculada",
+      "perc_calculo"
+    ],
+    "directions": [
+      "asc",
+      "desc"
+    ],
+    "defaultOrder": [
+      "ordem",
+      "asc"
+    ],
+    "textOrder": "not offered in UI; direct request rejected422 pending SQL collation proof",
+    "orderedNull": "relevant NULL rejects422 pending SQL ordering proof",
+    "tieOrder": "ascending ID for numeric ties is explicit new deterministic extension, not literal legacy parity"
+  },
+  "gates": [
+    "root review no P1/P2",
+    "live source/parent compare against exported baseline hashes before append publication",
+    "official OE12.2/.42 compile and TT four combinations",
+    "native opt-in example/parity matrix candidate to be reviewed separately before extension integration",
+    "root integrates only hash-guarded patches; never copy mutable stage over shared sources",
+    "root publication/real native validation only in sursum-api/med; business tests require separate concrete authorization"
+  ],
+  "freezesPreserved": [
+    "container-fiscal-readonly v2",
+    "container-expense-batch v1",
+    "container-tax-only v1",
+    "container-expense-batch-preflight v1.1",
+    "replay-actual-config v1/v1.1"
+  ],
+  "files": [
+    {
+      "path": "abl/ContainerExpenseDefaultsPlan.i",
+      "sha256": "ac98ab4e6eb379784017aa6c011aea57342cccefeda8281e00a1002db6b3e88d"
+    },
+    {
+      "path": "metadata/api-source-preview.json",
+      "sha256": "7b3a493c7edd46a54e53a165a896cf484f4178787d21519853cd3c0a0075ff38"
+    },
+    {
+      "path": "metadata/parent-builderConfig-preview.json",
+      "sha256": "1898208fa2cdc167663b9bc0ab9beed822052da7ba81655f1f3db54935ffe6e7"
+    },
+    {
+      "path": "metadata/parent-navigation.json",
+      "sha256": "4410e814ca6358440b30130690bec4cdc0c9a1d9eeb92b999aa21c287b8dd495"
+    },
+    {
+      "path": "metadata/selection-builder-draft.json",
+      "sha256": "5940622fc316c7c5f2e663c98317493e76db917ddd5a12a190878d1fa234dbd8"
+    },
+    {
+      "path": "metadata/source-addition.json",
+      "sha256": "c04606c6f28d4430bef5863f7c363c465556b0e85ee0647efaba82894c1f0f4d"
+    },
+    {
+      "path": "patches/ContainerProcessBoundary.i.patch",
+      "sha256": "6e34163b3b02c3bb40f2bd22a4609be30778e5229c1e6eaffeb314e6ec0379c7"
+    },
+    {
+      "path": "patches/ContainersImpostosService.p.patch",
+      "sha256": "fb2f5db662c0a11e82bd6f280a6b258a920d949505c0972a18359c86494f1b69"
+    },
+    {
+      "path": "patches/ContainersProcessos.p.patch",
+      "sha256": "89de76601412c596c94515aed2cdac4cc535019873b79c1fcf26e0b2b4768ae9"
+    },
+    {
+      "path": "patches/ContainersProcessosService.p.patch",
+      "sha256": "cb0b8258e265c29b1ebf80b762d1690c107d36378dc0628a0349127aed9f8325"
+    },
+    {
+      "path": "patches/core-plan.json",
+      "sha256": "9c71d50002ce36696e2f5a185e5210c64f1fa38286ede1327a6168789b749a8d"
+    },
+    {
+      "path": "patches/native-lookup-parameters/crud-definition-v1.schema.json.patch",
+      "sha256": "1e4e8a6784bdd086226e6eefb619176d9f9c5fc9c19ab9147a7f5c0c8462eca8"
+    },
+    {
+      "path": "patches/native-lookup-parameters/patch-plan.json",
+      "sha256": "3046db8b9449e5a337812d4df873d0df7d7bb681a1d7515df82f629960b0b585"
+    },
+    {
+      "path": "patches/native-lookup-parameters/process-definition-v1.schema.json.patch",
+      "sha256": "9348c0b489d15bf68a22b51e7e6ea9970dd440280a5245eb760e0af76a7f8e2f"
+    },
+    {
+      "path": "patches/native-lookup-parameters/ProcessDefinitionValidator.js.patch",
+      "sha256": "6a68b7390e3120609bed38f995639907560b9c05891f0ec4b5218f179bdafb23"
+    },
+    {
+      "path": "patches/native-lookup-parameters/ProcessEngine.js.patch",
+      "sha256": "8401bb56818d1cca6f023d1670f638e053cdc4c8d7de8ddfc5287057f237808e"
+    },
+    {
+      "path": "patches/native-lookup-parameters/ProgramBuilderService.php.patch",
+      "sha256": "368332d03ada4b251f05adbfe3a7c4fa05ebea2e83a3fddc042f54f80a7de004"
+    },
+    {
+      "path": "patches/native-lookup-parameters/schema-patch-plan.json",
+      "sha256": "f3bba17848cbb46bf138289300e4fcd88743f5aac281fdd0ffdd3dbb2a920971"
+    },
+    {
+      "path": "patches/php-plan.json",
+      "sha256": "657e71cc3d1219fd681de9b5b1d5da1809a37a7a5bbe0848c6200fd6d9582c68"
+    },
+    {
+      "path": "patches/RuntimeApiEntityActionService.php.patch",
+      "sha256": "101dad1fa0e198ac9f4d3cd131b8b286433094b7cb4ceebf5a4b39f97ebc21ce"
+    },
+    {
+      "path": "patches/RuntimeContainerAudit.php.patch",
+      "sha256": "8df3a6e0dc48003111a25d9b54fd867ba5188d1a9dd6a07ca28ac006ab4ba4f0"
+    },
+    {
+      "path": "patches/ScreenDefinitionService.php.patch",
+      "sha256": "a63ffd03278f54bf07ed6d1dc38a9e01ebd88a888cf31dddc8cc793f4ceab39d"
+    },
+    {
+      "path": "php/RuntimeContainerExpenseDefaultsAudit.php",
+      "sha256": "e3229be6b584f8e53e38243d6f003f9b3f45b48d2f7aaefc9b792e3b16c26c9d"
+    },
+    {
+      "path": "PLAN.md",
+      "sha256": "20468a4c5e8fe5937b6541f777ec0d48c2df795ebfa228873d1b94699c273311"
+    },
+    {
+      "path": "review/1042-real-test-proposal.md",
+      "sha256": "ea6970b484b92354cbf36b158ebdb9eb3778242e7a596c3cf5e0b71203f145dd"
+    },
+    {
+      "path": "REVIEW.md",
+      "sha256": "fb4a62de1fe6ff7c4738928c4a8747570af7cbdf0e29e4bd92c1cace3f318dd3"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "7046291235436eae950d80d82700e32781007982e65f36202e42201ebf77e79e"
+    },
+    {
+      "path": "tests/browser-selection.cjs",
+      "sha256": "279839974775bb9fcda05c9ce887aab0a06fdb9a0b796387d6692d973a95eb7d"
+    },
+    {
+      "path": "tests/freeze-rebase-v1.2.py",
+      "sha256": "eb949ad7da92e402792c5744fb3790af2752e93358e48577747d01f4fbb37dae"
+    },
+    {
+      "path": "tests/freeze.py",
+      "sha256": "a2803831311a273c9e15f32fd378ee0a7ba08d521e8e702aaa12123c97dd4644"
+    },
+    {
+      "path": "tests/NativeLookupPageTypeGuardTest.php",
+      "sha256": "488d809978f20c643a97cc06e998ce9920f86b21ed2fbc7b9db93dd12327afdd"
+    },
+    {
+      "path": "tests/NativeLookupParametersTest.php",
+      "sha256": "ff20f66e287c41c6fc85858c511d9a6d65697df839f1f38b9c9b06e4b9fecfbb"
+    },
+    {
+      "path": "tests/patches.py",
+      "sha256": "da945c932130d601fbc5ae5e5118da2600bdb26510a62a1d7e0f613a98fb731d"
+    },
+    {
+      "path": "tests/phpunit-bootstrap.php",
+      "sha256": "d671b7d3c70f2179379a46e902182e90d03bb57c705372aad81beb228ad1a93b"
+    },
+    {
+      "path": "tests/phpunit.xml",
+      "sha256": "c1597678ab609ec6a642cea8b18a097abbc5cb5fdf36ae9ae1288ed6b4797de4"
+    },
+    {
+      "path": "tests/prepare-metadata.py",
+      "sha256": "b09c594651bd37d419d3d7417ec1fee1f558e301d6b1c6cc5735944aa5a03314"
+    },
+    {
+      "path": "tests/prepare-native.py",
+      "sha256": "be91e5e1b27832f0d5de5f0a2dffbea74d23851fa1d46cc7ee33c48d6e2741e5"
+    },
+    {
+      "path": "tests/prepare-php.py",
+      "sha256": "db48ae87d0cf1099eb69687869aefb392e1924b1c05fd7a30d57d2151413f6c1"
+    },
+    {
+      "path": "tests/prepare-regressions.py",
+      "sha256": "4405edc94bd11ae738d22d8bc7389eab669ee6e07b30332ddad70de67b468f86"
+    },
+    {
+      "path": "tests/prepare-schemas.py",
+      "sha256": "d55dda1d128f311fc73b4a776922b829906f6330d75214de05eb2e9d60391b90"
+    },
+    {
+      "path": "tests/prepare.py",
+      "sha256": "fa298537416a01c57ff14eecc96a73208256345c0027a0c8ed56acb41bd1e58e"
+    },
+    {
+      "path": "tests/preview-native.php",
+      "sha256": "2e586a82aa1c2cfcabe2cc7d0686fafceba5659e3fcda425d3ae0796e168348e"
+    },
+    {
+      "path": "tests/run-abl.ps1",
+      "sha256": "60eca3440dfec3c2107b1d4ded76b8291e8dc01889fa780d8dbd47a547b353ae"
+    },
+    {
+      "path": "tests/RuntimeExpenseSelectionTest.php",
+      "sha256": "cec686f2859a021ee9d02d68dc92f7ce9ae4b85c608186c02aec7f1f544bbfdd"
+    },
+    {
+      "path": "tests/schema-ajv.cjs",
+      "sha256": "0c0beda27dee6224dbb58ad0a4f273caae7500519b07372021b5bbd1b1735765"
+    },
+    {
+      "path": "tests/SelectedExpenseDefaultsTests.i",
+      "sha256": "39e93d91d2a73123ef415df0bdcdc3cc383a7d7f0a7c101c1414662e20b18ade"
+    },
+    {
+      "path": "tests/SelectionRootTests.i",
+      "sha256": "dae82a6f03d464c69dc027324dfb5a484c3e1fb31ed301fd0e168c926fb22a8c"
+    },
+    {
+      "path": "tests/verify-all.ps1",
+      "sha256": "bb24165d4c7070260793d5c0de54845a9d702ddd362003748af86563324f1daa"
+    },
+    {
+      "path": "tests/verify-rebase-v1.2.ps1",
+      "sha256": "ccea1e788f083c5e739667fc373572c62efe59c29ef9900e899dc183957d5036"
+    },
+    {
+      "path": "tests/verify-wiring.py",
+      "sha256": "d63f9f5b8b60f3956bd0c981adfe4d9e545a804369cd2dda59a022fc195b6162"
+    }
+  ],
+  "incrementalRebase": {
+    "predecessorManifestSha256": "4fa5a8b489fb3857e5be5e69cce09ffb344a1ede515a211e786b30cf3744917a",
+    "changedProductSource": "RuntimeApiEntityActionService.php hunks only rebased onto integrated7, without changing1047 policy",
+    "metadata": "published process source6 and parent1003/1.0.3",
+    "priorFreezePreserved": true
+  }
+}

@@ -1,0 +1,7081 @@
+[
+  {
+    "table": "espec.user-web",
+    "fields": [
+      {
+        "name": "Login",
+        "type": "character",
+        "format": "X(20)",
+        "extent": 0
+      },
+      {
+        "name": "senha",
+        "type": "character",
+        "format": "X(12)",
+        "extent": 0
+      },
+      {
+        "name": "gr-usuario",
+        "type": "character",
+        "format": "X(20)",
+        "extent": 0
+      },
+      {
+        "name": "usuario",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "nome",
+        "type": "character",
+        "format": "X(50)",
+        "extent": 0
+      },
+      {
+        "name": "perfil",
+        "type": "character",
+        "format": "X(20)",
+        "extent": 0
+      },
+      {
+        "name": "preferencia",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "email",
+        "type": "character",
+        "format": "X(50)",
+        "extent": 0
+      },
+      {
+        "name": "nome-ab-cli",
+        "type": "character",
+        "format": "X(12)",
+        "extent": 0
+      },
+      {
+        "name": "nivel-perfil",
+        "type": "integer",
+        "format": "9",
+        "extent": 0
+      },
+      {
+        "name": "dt-ativacao",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "dt-validade",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "ativo",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "suspender-data",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "dt-sus-ini",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "dt-sus-fim",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "tp-usuario",
+        "type": "integer",
+        "format": "9",
+        "extent": 0
+      },
+      {
+        "name": "cliente-total",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "cod_ativacao",
+        "type": "character",
+        "format": "x(50)",
+        "extent": 0
+      },
+      {
+        "name": "priv_admin",
+        "type": "character",
+        "format": "x(1)",
+        "extent": 0
+      },
+      {
+        "name": "log_prioridade",
+        "type": "logical",
+        "format": "yes\/no",
+        "extent": 0
+      },
+      {
+        "name": "log_pedido_on_line",
+        "type": "logical",
+        "format": "yes\/no",
+        "extent": 0
+      },
+      {
+        "name": "log_caixa",
+        "type": "logical",
+        "format": "yes\/no",
+        "extent": 0
+      },
+      {
+        "name": "foto",
+        "type": "character",
+        "format": "x(100)",
+        "extent": 0
+      },
+      {
+        "name": "log_aprovador",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "sexo",
+        "type": "int64",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "id",
+        "type": "integer",
+        "format": ">,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "log_todos_clientes",
+        "type": "logical",
+        "format": "yes\/no",
+        "extent": 0
+      },
+      {
+        "name": "perc_participacao_comis",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "telefone",
+        "type": "character",
+        "format": "x(15)",
+        "extent": 0
+      },
+      {
+        "name": "tp_portal",
+        "type": "integer",
+        "format": ">,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "log_venda_ped_imp",
+        "type": "character",
+        "format": "x(8)",
+        "extent": 0
+      }
+    ]
+  },
+  {
+    "table": "espec.usuarios_grupos",
+    "fields": [
+      {
+        "name": "login_usuario",
+        "type": "character",
+        "format": "x(32)",
+        "extent": 0
+      },
+      {
+        "name": "cod_grupo",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      }
+    ]
+  },
+  {
+    "table": "espec.cm-hierarquia",
+    "fields": [
+      {
+        "name": "cod-estabel",
+        "type": "character",
+        "format": "x(3)",
+        "extent": 0
+      },
+      {
+        "name": "cod-rep",
+        "type": "integer",
+        "format": ">>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "cod-depend",
+        "type": "integer",
+        "format": ">>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "char-1",
+        "type": "character",
+        "format": "x(100)",
+        "extent": 0
+      },
+      {
+        "name": "dec-1",
+        "type": "decimal",
+        "format": "->>>>>>>>>>>9.99999999",
+        "extent": 0
+      },
+      {
+        "name": "int-1",
+        "type": "integer",
+        "format": "->>>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "log-1",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "data-1",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      }
+    ]
+  },
+  {
+    "table": "espec.cm-ext-repres",
+    "fields": [
+      {
+        "name": "cod-rep",
+        "type": "integer",
+        "format": ">>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "classe",
+        "type": "integer",
+        "format": "9",
+        "extent": 0
+      },
+      {
+        "name": "dias-tit-venc",
+        "type": "integer",
+        "format": ">>9",
+        "extent": 0
+      },
+      {
+        "name": "dias-cheque-dev",
+        "type": "integer",
+        "format": ">>9",
+        "extent": 0
+      },
+      {
+        "name": "bloqueado",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "perc-ir",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "char-1",
+        "type": "character",
+        "format": "x(100)",
+        "extent": 0
+      },
+      {
+        "name": "dec-1",
+        "type": "decimal",
+        "format": "->>>>>>>>>>>9.99999999",
+        "extent": 0
+      },
+      {
+        "name": "int-1",
+        "type": "integer",
+        "format": "->>>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "log-1",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "data-1",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "tp-aplic-comis",
+        "type": "integer",
+        "format": "9",
+        "extent": 0
+      }
+    ]
+  },
+  {
+    "table": "espec.fats_repres",
+    "fields": [
+      {
+        "name": "fat_repres_id",
+        "type": "integer",
+        "format": ">,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "cod_rep",
+        "type": "integer",
+        "format": ">>>>9",
+        "extent": 0
+      },
+      {
+        "name": "mes",
+        "type": "integer",
+        "format": ">>>>9",
+        "extent": 0
+      },
+      {
+        "name": "ano",
+        "type": "integer",
+        "format": ">>>>9",
+        "extent": 0
+      },
+      {
+        "name": "vl_faturamento",
+        "type": "decimal",
+        "format": "->>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "vl_desconto",
+        "type": "decimal",
+        "format": "->>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "vl_devolucoes",
+        "type": "decimal",
+        "format": "->>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "transacao_id",
+        "type": "integer",
+        "format": "9999999",
+        "extent": 0
+      },
+      {
+        "name": "vl_desconto_dev",
+        "type": "decimal",
+        "format": "->>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "qt_fat",
+        "type": "decimal",
+        "format": "->>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "qt_dev",
+        "type": "decimal",
+        "format": "->>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "vl_meta",
+        "type": "decimal",
+        "format": "->>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "qt_nf",
+        "type": "integer",
+        "format": "->>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "qt_nf_dev",
+        "type": "integer",
+        "format": ">,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "dt_ini_mes",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "dt_fim_mes",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "cod_estabel",
+        "type": "character",
+        "format": "x(5)",
+        "extent": 0
+      }
+    ]
+  },
+  {
+    "table": "espec.transacoes",
+    "fields": [
+      {
+        "name": "transacao_id",
+        "type": "integer",
+        "format": ">>>,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "dt_hr_ini",
+        "type": "datetime",
+        "format": "99\/99\/9999 HH:MM:SS",
+        "extent": 0
+      },
+      {
+        "name": "login",
+        "type": "character",
+        "format": "x(20)",
+        "extent": 0
+      },
+      {
+        "name": "cod_programa",
+        "type": "character",
+        "format": "x(50)",
+        "extent": 0
+      },
+      {
+        "name": "dt_hr_fim",
+        "type": "datetime",
+        "format": "99\/99\/9999 HH:MM:SS",
+        "extent": 0
+      },
+      {
+        "name": "chave",
+        "type": "character",
+        "format": "x(80)",
+        "extent": 0
+      },
+      {
+        "name": "ind_sit_transacao",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "calculo_id",
+        "type": "integer",
+        "format": ">>9",
+        "extent": 0
+      },
+      {
+        "name": "transacao_pai_id",
+        "type": "int64",
+        "format": ">,>>>,>>9",
+        "extent": 0
+      }
+    ]
+  },
+  {
+    "table": "espec.metas_repres",
+    "fields": [
+      {
+        "name": "meta_repres_id",
+        "type": "integer",
+        "format": ">,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "cod_repres",
+        "type": "integer",
+        "format": ">,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "mes",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "ano",
+        "type": "integer",
+        "format": "9999",
+        "extent": 0
+      },
+      {
+        "name": "vl_meta",
+        "type": "decimal",
+        "format": ">>,>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "vl_meta_quinz",
+        "type": "decimal",
+        "format": ">>,>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "qt_cli_meta",
+        "type": "integer",
+        "format": ">,>>>,>>9",
+        "extent": 0
+      }
+    ]
+  },
+  {
+    "table": "espec.metas_gerencial",
+    "fields": [
+      {
+        "name": "metas_ger_id",
+        "type": "integer",
+        "format": ">,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "cod_rep_ger",
+        "type": "integer",
+        "format": ">,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "mes",
+        "type": "integer",
+        "format": ">,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "ano",
+        "type": "integer",
+        "format": ">,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "meta",
+        "type": "decimal",
+        "format": ">>,>>9.99",
+        "extent": 0
+      }
+    ]
+  },
+  {
+    "table": "espec.metas_geral",
+    "fields": [
+      {
+        "name": "meta_geral_id",
+        "type": "integer",
+        "format": ">,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "mes",
+        "type": "integer",
+        "format": ">>>>9",
+        "extent": 0
+      },
+      {
+        "name": "ano",
+        "type": "integer",
+        "format": ">>>>9",
+        "extent": 0
+      },
+      {
+        "name": "meta",
+        "type": "decimal",
+        "format": ">>,>>9.99",
+        "extent": 0
+      }
+    ]
+  },
+  {
+    "table": "espec.peds_web",
+    "fields": [
+      {
+        "name": "ped_web_id",
+        "type": "integer",
+        "format": ">,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "repres_id",
+        "type": "integer",
+        "format": ">,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "num_versao_pedido",
+        "type": "integer",
+        "format": ">,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "dt_hr_registro",
+        "type": "datetime",
+        "format": "99\/99\/9999 HH:MM:SS",
+        "extent": 0
+      },
+      {
+        "name": "movto_solic_web_id",
+        "type": "integer",
+        "format": ">,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "ind_sit_ped_web",
+        "type": "integer",
+        "format": ">,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "cod_estabel",
+        "type": "character",
+        "format": "x(5)",
+        "extent": 0
+      },
+      {
+        "name": "nr_pedido_erp",
+        "type": "integer",
+        "format": ">,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "log_operac_triang",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log_a_vista",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "cliente_id",
+        "type": "integer",
+        "format": ">,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "cliente_triang_id",
+        "type": "integer",
+        "format": "->,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "log_cond_pagto_especial",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "cond_pagto_id",
+        "type": "integer",
+        "format": ">,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "dias_cond_pagto_esp",
+        "type": "character",
+        "format": "x(100)",
+        "extent": 0
+      },
+      {
+        "name": "transp_id",
+        "type": "integer",
+        "format": ">,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "cod_tipo_frete",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "transp_redesp_id",
+        "type": "integer",
+        "format": ">,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "perc_comis",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "cod_finalidade",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "cod_prioridade",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "cod_moeda",
+        "type": "character",
+        "format": "x(8)",
+        "extent": 0
+      },
+      {
+        "name": "comentario",
+        "type": "character",
+        "format": "x(2000)",
+        "extent": 0
+      },
+      {
+        "name": "cod_tipo_pedido",
+        "type": "character",
+        "format": "x(8)",
+        "extent": 0
+      },
+      {
+        "name": "dt_limite_alocacao",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "dt_limite_pgto_vista",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "nr_container",
+        "type": "integer",
+        "format": ">,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "login",
+        "type": "character",
+        "format": "x(20)",
+        "extent": 0
+      },
+      {
+        "name": "versao_ped_web_id",
+        "type": "int64",
+        "format": ">>>,>>>,>>>,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "log_novo_cliente",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "cnpj_novo_cliente",
+        "type": "character",
+        "format": "x(30)",
+        "extent": 0
+      },
+      {
+        "name": "cnpj_novo_cliente_triang",
+        "type": "character",
+        "format": "x(30)",
+        "extent": 0
+      },
+      {
+        "name": "log_novo_cliente_triang",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "descr_rejeicao",
+        "type": "character",
+        "format": "x(500)",
+        "extent": 0
+      },
+      {
+        "name": "log_dt_fixa",
+        "type": "logical",
+        "format": "yes\/no",
+        "extent": 0
+      },
+      {
+        "name": "log_comissao_negoc",
+        "type": "logical",
+        "format": "yes\/no",
+        "extent": 0
+      },
+      {
+        "name": "log_cliente_bloqueado",
+        "type": "logical",
+        "format": "yes\/no",
+        "extent": 0
+      },
+      {
+        "name": "log_novo_transp",
+        "type": "logical",
+        "format": "yes\/no",
+        "extent": 0
+      },
+      {
+        "name": "log_novo_transp_redesp",
+        "type": "logical",
+        "format": "yes\/no",
+        "extent": 0
+      },
+      {
+        "name": "telefone_novo_transp",
+        "type": "character",
+        "format": "x(60)",
+        "extent": 0
+      },
+      {
+        "name": "telefone_novo_transp_redesp",
+        "type": "character",
+        "format": "x(60)",
+        "extent": 0
+      },
+      {
+        "name": "cod_tipo_frete_calc",
+        "type": "integer",
+        "format": "->,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "cod_tipo_frete_cliente",
+        "type": "integer",
+        "format": "->,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "emails_adicionais",
+        "type": "character",
+        "format": "x(100)",
+        "extent": 0
+      },
+      {
+        "name": "login_digitacao",
+        "type": "character",
+        "format": "x(20)",
+        "extent": 0
+      },
+      {
+        "name": "log_caixa",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "dt_hr_vencto",
+        "type": "datetime",
+        "format": "99\/99\/9999 HH:MM:SS",
+        "extent": 0
+      },
+      {
+        "name": "log_pedido_manual",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "login_preposto",
+        "type": "character",
+        "format": "x(20)",
+        "extent": 0
+      },
+      {
+        "name": "cod_forma_pagto",
+        "type": "integer",
+        "format": ">>9",
+        "extent": 0
+      },
+      {
+        "name": "parcelas_credito",
+        "type": "integer",
+        "format": ">,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "dados_cartao",
+        "type": "character",
+        "format": "x(100)",
+        "extent": 0
+      },
+      {
+        "name": "num_agrup",
+        "type": "integer",
+        "format": ">>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "tb_preco_id",
+        "type": "integer",
+        "format": ">,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "perc_comis_vend",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "perc_comis_repres",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "log_divide_comissao",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "repres_2_id",
+        "type": "integer",
+        "format": ">,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "perc_comis_2",
+        "type": "integer",
+        "format": "->,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "log_perc_negoc",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "perc_comis_negoc",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "dt_hr_vencto_real",
+        "type": "datetime",
+        "format": "99\/99\/9999 HH:MM:SS.SSS",
+        "extent": 0
+      },
+      {
+        "name": "vl_frete_destacado",
+        "type": "decimal",
+        "format": ">>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "perc_frete_destacado",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "log_safira",
+        "type": "integer",
+        "format": ">,>>>,>>9",
+        "extent": 0
+      }
+    ]
+  },
+  {
+    "table": "espec.im-param",
+    "fields": [
+      {
+        "name": "cod-param",
+        "type": "character",
+        "format": "x(50)",
+        "extent": 0
+      },
+      {
+        "name": "val-param",
+        "type": "character",
+        "format": "x(500)",
+        "extent": 0
+      },
+      {
+        "name": "tp-param",
+        "type": "integer",
+        "format": "9",
+        "extent": 0
+      },
+      {
+        "name": "agrup_im_param_id",
+        "type": "integer",
+        "format": ">,>>>,>>9",
+        "extent": 0
+      }
+    ]
+  },
+  {
+    "table": "ems2cad.repres",
+    "fields": [
+      {
+        "name": "cod-rep",
+        "type": "integer",
+        "format": ">>>>9",
+        "extent": 0
+      },
+      {
+        "name": "nome",
+        "type": "character",
+        "format": "x(80)",
+        "extent": 0
+      },
+      {
+        "name": "nome-abrev",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "natureza",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "nome-ab-reg",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "endereco",
+        "type": "character",
+        "format": "x(40)",
+        "extent": 0
+      },
+      {
+        "name": "bairro",
+        "type": "character",
+        "format": "x(030)",
+        "extent": 0
+      },
+      {
+        "name": "cep",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "cidade",
+        "type": "character",
+        "format": "x(50)",
+        "extent": 0
+      },
+      {
+        "name": "estado",
+        "type": "character",
+        "format": "x(004)",
+        "extent": 0
+      },
+      {
+        "name": "pais",
+        "type": "character",
+        "format": "x(20)",
+        "extent": 0
+      },
+      {
+        "name": "caixa-postal",
+        "type": "character",
+        "format": "X(10)",
+        "extent": 0
+      },
+      {
+        "name": "cgc",
+        "type": "character",
+        "format": "x(18)",
+        "extent": 0
+      },
+      {
+        "name": "telefone",
+        "type": "character",
+        "format": "x(15)",
+        "extent": 2
+      },
+      {
+        "name": "inscr-est",
+        "type": "character",
+        "format": "x(19)",
+        "extent": 0
+      },
+      {
+        "name": "rep-indireto",
+        "type": "integer",
+        "format": ">>>>9",
+        "extent": 0
+      },
+      {
+        "name": "comis-direta",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "comis-emis",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "comis-indir",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "telex",
+        "type": "character",
+        "format": "x(15)",
+        "extent": 0
+      },
+      {
+        "name": "telefax",
+        "type": "character",
+        "format": "x(15)",
+        "extent": 0
+      },
+      {
+        "name": "telef-modem",
+        "type": "character",
+        "format": "x(15)",
+        "extent": 0
+      },
+      {
+        "name": "perc-aire",
+        "type": "decimal",
+        "format": ">9.99",
+        "extent": 0
+      },
+      {
+        "name": "comis-max",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "comis-min",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "ins-municipal",
+        "type": "character",
+        "format": "X(19)",
+        "extent": 0
+      },
+      {
+        "name": "zip-code",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "permissao",
+        "type": "character",
+        "format": "x(72)",
+        "extent": 0
+      },
+      {
+        "name": "e-mail",
+        "type": "character",
+        "format": "x(80)",
+        "extent": 0
+      },
+      {
+        "name": "home-page",
+        "type": "character",
+        "format": "x(40)",
+        "extent": 0
+      },
+      {
+        "name": "Complemento",
+        "type": "character",
+        "format": "x(40)",
+        "extent": 0
+      },
+      {
+        "name": "char-1",
+        "type": "character",
+        "format": "x(100)",
+        "extent": 0
+      },
+      {
+        "name": "char-2",
+        "type": "character",
+        "format": "x(100)",
+        "extent": 0
+      },
+      {
+        "name": "dec-1",
+        "type": "decimal",
+        "format": "->>>>>>>>>>>9.99999999",
+        "extent": 0
+      },
+      {
+        "name": "dec-2",
+        "type": "decimal",
+        "format": "->>>>>>>>>>>9.99999999",
+        "extent": 0
+      },
+      {
+        "name": "int-1",
+        "type": "integer",
+        "format": "->>>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "int-2",
+        "type": "integer",
+        "format": "->>>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "log-1",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-2",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "data-1",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "data-2",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "check-sum",
+        "type": "character",
+        "format": "x(20)",
+        "extent": 0
+      },
+      {
+        "name": "cod-portador-geracao-ad",
+        "type": "integer",
+        "format": ">>>>9",
+        "extent": 0
+      },
+      {
+        "name": "dt-deslig",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "fc-codigo",
+        "type": "integer",
+        "format": "99999999",
+        "extent": 0
+      },
+      {
+        "name": "perc-abatimento",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "perc-juros",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "perc-multa",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "perc-desconto",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "perc-AVA",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "cod-emitente",
+        "type": "integer",
+        "format": ">>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "bloqueado-pagto",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "cod-tax",
+        "type": "integer",
+        "format": ">>>9",
+        "extent": 0
+      },
+      {
+        "name": "tipo-repres",
+        "type": "integer",
+        "format": "9",
+        "extent": 0
+      },
+      {
+        "name": "comis-propor",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "tipo-comis",
+        "type": "integer",
+        "format": "9",
+        "extent": 0
+      },
+      {
+        "name": "calendario-pagto",
+        "type": "character",
+        "format": "X(3)",
+        "extent": 0
+      },
+      {
+        "name": "vl-minimo-comis",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "mo-codigo",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "cod-retencao",
+        "type": "integer",
+        "format": ">>>>9",
+        "extent": 0
+      },
+      {
+        "name": "cod-tax-indeniz",
+        "type": "integer",
+        "format": ">>>9",
+        "extent": 0
+      },
+      {
+        "name": "cod-retenc-indeniz",
+        "type": "integer",
+        "format": ">>>>9",
+        "extent": 0
+      },
+      {
+        "name": "ind-situacao",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "endereco_text",
+        "type": "character",
+        "format": "X(2000)",
+        "extent": 0
+      },
+      {
+        "name": "log-consid-repres-cotas",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "cod-formula",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "idi-tip-comis-agent",
+        "type": "integer",
+        "format": "9",
+        "extent": 0
+      },
+      {
+        "name": "idi-tip-base-comis-agent",
+        "type": "integer",
+        "format": "9",
+        "extent": 0
+      },
+      {
+        "name": "idi-liber-pagto-comis-agent",
+        "type": "integer",
+        "format": "9",
+        "extent": 0
+      },
+      {
+        "name": "log-interm",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "nom-usuar-interm",
+        "type": "character",
+        "format": "x(60)",
+        "extent": 0
+      }
+    ]
+  },
+  {
+    "table": "ems2med.ped-venda",
+    "fields": [
+      {
+        "name": "cod-estabel",
+        "type": "character",
+        "format": "x(5)",
+        "extent": 0
+      },
+      {
+        "name": "nome-abrev",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "nr-pedcli",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "nr-pedido",
+        "type": "integer",
+        "format": ">>>,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "nr-pedrep",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "dt-emissao",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "dt-implant",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "dt-entrega",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "dt-cancela",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "desc-cancela",
+        "type": "character",
+        "format": "x(2000)",
+        "extent": 0
+      },
+      {
+        "name": "dt-minfat",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "dt-lim-fat",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "dt-entorig",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "dt-reativ",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "dt-devolucao",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "dt-suspensao",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "nat-operacao",
+        "type": "character",
+        "format": "x(06)",
+        "extent": 0
+      },
+      {
+        "name": "cod-cond-pag",
+        "type": "integer",
+        "format": ">>>9",
+        "extent": 0
+      },
+      {
+        "name": "nr-tabpre",
+        "type": "character",
+        "format": "x(8)",
+        "extent": 0
+      },
+      {
+        "name": "nr-tab-finan",
+        "type": "integer",
+        "format": ">>9",
+        "extent": 0
+      },
+      {
+        "name": "tp-pedido",
+        "type": "character",
+        "format": "x(2)",
+        "extent": 0
+      },
+      {
+        "name": "cod-priori",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "cod-entrega",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "local-entreg",
+        "type": "character",
+        "format": "x(40)",
+        "extent": 0
+      },
+      {
+        "name": "bairro",
+        "type": "character",
+        "format": "x(30)",
+        "extent": 0
+      },
+      {
+        "name": "cidade",
+        "type": "character",
+        "format": "x(50)",
+        "extent": 0
+      },
+      {
+        "name": "estado",
+        "type": "character",
+        "format": "x(04)",
+        "extent": 0
+      },
+      {
+        "name": "cep",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "caixa-postal",
+        "type": "character",
+        "format": "x(10)",
+        "extent": 0
+      },
+      {
+        "name": "pais",
+        "type": "character",
+        "format": "x(20)",
+        "extent": 0
+      },
+      {
+        "name": "cgc",
+        "type": "character",
+        "format": "x(19)",
+        "extent": 0
+      },
+      {
+        "name": "ins-estadual",
+        "type": "character",
+        "format": "x(19)",
+        "extent": 0
+      },
+      {
+        "name": "cod-sit-ped",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "perc-desco1",
+        "type": "decimal",
+        "format": "->9.999",
+        "extent": 0
+      },
+      {
+        "name": "perc-desco2",
+        "type": "decimal",
+        "format": "->9.999",
+        "extent": 0
+      },
+      {
+        "name": "cond-redespa",
+        "type": "character",
+        "format": "x(2000)",
+        "extent": 0
+      },
+      {
+        "name": "cidade-cif",
+        "type": "character",
+        "format": "x(50)",
+        "extent": 0
+      },
+      {
+        "name": "cod-portador",
+        "type": "integer",
+        "format": ">>>>9",
+        "extent": 0
+      },
+      {
+        "name": "modalidade",
+        "type": "integer",
+        "format": "9",
+        "extent": 0
+      },
+      {
+        "name": "cod-mensagem",
+        "type": "integer",
+        "format": ">>>>9",
+        "extent": 0
+      },
+      {
+        "name": "observacoes",
+        "type": "character",
+        "format": "x(2000)",
+        "extent": 0
+      },
+      {
+        "name": "cond-espec",
+        "type": "character",
+        "format": "x(2000)",
+        "extent": 0
+      },
+      {
+        "name": "user-impl",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "dt-userimp",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "user-alte",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "dt-useralt",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "user-canc",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "dt-usercan",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "user-reat",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "dt-userrea",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "user-suspen",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "dt-usersusp",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "ind-aprov",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "quem-aprovou",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "dt-apr-cred",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "cod-des-merc",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "nome-transp",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "tp-preco",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "ind-fat-par",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "mo-codigo",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "cod-rota",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "ind-lib-nota",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "vl-tot-ped",
+        "type": "decimal",
+        "format": ">,>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "vl-liq-ped",
+        "type": "decimal",
+        "format": ">,>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "vl-liq-abe",
+        "type": "decimal",
+        "format": ">,>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "ind-imp-ped",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "per-max-canc",
+        "type": "decimal",
+        "format": ">9.99",
+        "extent": 0
+      },
+      {
+        "name": "nr-ind-finan",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "user-aprov",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "no-ab-reppri",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "ind-antecip",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "distancia",
+        "type": "decimal",
+        "format": ">>>,>>9.9",
+        "extent": 0
+      },
+      {
+        "name": "taxa-orig",
+        "type": "decimal",
+        "format": ">>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "taxa-real",
+        "type": "decimal",
+        "format": ">>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "vl-mer-abe",
+        "type": "decimal",
+        "format": ">>,>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "cod-sit-aval",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "desc-suspend",
+        "type": "character",
+        "format": "x(2000)",
+        "extent": 0
+      },
+      {
+        "name": "desc-bloq-cr",
+        "type": "character",
+        "format": "x(500)",
+        "extent": 0
+      },
+      {
+        "name": "desc-forc-cr",
+        "type": "character",
+        "format": "x(76)",
+        "extent": 0
+      },
+      {
+        "name": "nome-tr-red",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "tip-cob-desp",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "desc-txt",
+        "type": "character",
+        "format": "x(50)",
+        "extent": 0
+      },
+      {
+        "name": "cod-emitente",
+        "type": "integer",
+        "format": ">>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "cod-sit-pre",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "per-des-icms",
+        "type": "decimal",
+        "format": "->>9.999",
+        "extent": 0
+      },
+      {
+        "name": "vl-cred-lib",
+        "type": "decimal",
+        "format": ">>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "inc-desc-txt",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "dt-base-ft",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "aprov-forcado",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "tp-receita",
+        "type": "integer",
+        "format": ">>9",
+        "extent": 0
+      },
+      {
+        "name": "estab-atend",
+        "type": "character",
+        "format": "x(5)",
+        "extent": 0
+      },
+      {
+        "name": "estab-central",
+        "type": "character",
+        "format": "x(5)",
+        "extent": 0
+      },
+      {
+        "name": "esp-ped",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "cd-origem",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "proc-edi",
+        "type": "integer",
+        "format": ">>>>9",
+        "extent": 0
+      },
+      {
+        "name": "dt-inivig",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "dt-fimvig",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "dt-prev-vend",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "dsp-pre-fat",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "cod-gr-cli",
+        "type": "integer",
+        "format": ">>>9",
+        "extent": 0
+      },
+      {
+        "name": "nr-proforma",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "tp-faturam",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "contato",
+        "type": "character",
+        "format": "x(25)",
+        "extent": 0
+      },
+      {
+        "name": "nr-versao",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "origem",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "cons-mrp",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "cons-pmp",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "invoice-id",
+        "type": "character",
+        "format": "x(1)",
+        "extent": 0
+      },
+      {
+        "name": "nr-proc-exp",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "atendido",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "permissao",
+        "type": "character",
+        "format": "x(72)",
+        "extent": 0
+      },
+      {
+        "name": "zip-code",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "replica-pd",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "nome-prog",
+        "type": "character",
+        "format": "X(20)",
+        "extent": 0
+      },
+      {
+        "name": "dt-mensagem",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "cod-message-alerta",
+        "type": "integer",
+        "format": ">,>>9",
+        "extent": 0
+      },
+      {
+        "name": "ind-ent-completa",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "completo",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "cod-tax",
+        "type": "integer",
+        "format": ">>>9",
+        "extent": 0
+      },
+      {
+        "name": "ind-orig-entrada",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "nro-proc-entrada",
+        "type": "integer",
+        "format": ">>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "nro-proc-alteracao",
+        "type": "integer",
+        "format": ">>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "ind-via-envio",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "nro-proc-saida",
+        "type": "integer",
+        "format": ">>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "desc-reativa",
+        "type": "character",
+        "format": "x(2000)",
+        "extent": 0
+      },
+      {
+        "name": "e-mail",
+        "type": "character",
+        "format": "x(40)",
+        "extent": 0
+      },
+      {
+        "name": "char-1",
+        "type": "character",
+        "format": "x(100)",
+        "extent": 0
+      },
+      {
+        "name": "char-2",
+        "type": "character",
+        "format": "x(100)",
+        "extent": 0
+      },
+      {
+        "name": "dec-1",
+        "type": "decimal",
+        "format": "->>>>>>>>>>>9.99999999",
+        "extent": 0
+      },
+      {
+        "name": "dec-2",
+        "type": "decimal",
+        "format": "->>>>>>>>>>>9.99999999",
+        "extent": 0
+      },
+      {
+        "name": "int-1",
+        "type": "integer",
+        "format": "->>>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "int-2",
+        "type": "integer",
+        "format": "->>>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "log-1",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-2",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "data-1",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "data-2",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "cod-canal-venda",
+        "type": "integer",
+        "format": ">>9",
+        "extent": 0
+      },
+      {
+        "name": "vl-desconto",
+        "type": "decimal",
+        "format": ">>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "cod-imagem",
+        "type": "character",
+        "format": "x(30)",
+        "extent": 0
+      },
+      {
+        "name": "nr-cotacao",
+        "type": "integer",
+        "format": ">>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "dt-entrega-prim",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "cd-cancela",
+        "type": "integer",
+        "format": ">>9",
+        "extent": 0
+      },
+      {
+        "name": "tab-ind-fin",
+        "type": "decimal",
+        "format": ">9.99999",
+        "extent": 0
+      },
+      {
+        "name": "cod-sit-com",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "motivo-alt-sit-quota",
+        "type": "character",
+        "format": "x(2000)",
+        "extent": 0
+      },
+      {
+        "name": "dat-alter-sit",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "cod-usu-alt-sit",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "check-sum",
+        "type": "character",
+        "format": "x(20)",
+        "extent": 0
+      },
+      {
+        "name": "log-usa-tabela-desconto",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "val-pct-desconto-tab-preco",
+        "type": "decimal",
+        "format": "->>9.99",
+        "extent": 0
+      },
+      {
+        "name": "des-pct-desconto-inform",
+        "type": "character",
+        "format": "x(50)",
+        "extent": 0
+      },
+      {
+        "name": "val-pct-desconto-valor",
+        "type": "decimal",
+        "format": "->>9.9999",
+        "extent": 0
+      },
+      {
+        "name": "val-pct-desconto-total",
+        "type": "decimal",
+        "format": "->>9.9999",
+        "extent": 0
+      },
+      {
+        "name": "log-ped-bonif-pendente",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-pedido-alterado",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "ind-sit-desconto",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "dat-sit-desconto",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "cod-usu-lib-desconto",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "desc-lib-desconto",
+        "type": "character",
+        "format": "x(76)",
+        "extent": 0
+      },
+      {
+        "name": "val-desconto-total",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "estab-destino",
+        "type": "character",
+        "format": "x(5)",
+        "extent": 0
+      },
+      {
+        "name": "cod-sit-preco",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "user-preco",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "dat-aprov-preco",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "desc-lib-preco",
+        "type": "character",
+        "format": "x(76)",
+        "extent": 0
+      },
+      {
+        "name": "placa",
+        "type": "character",
+        "format": "x(10)",
+        "extent": 0
+      },
+      {
+        "name": "uf-placa",
+        "type": "character",
+        "format": "!!",
+        "extent": 0
+      },
+      {
+        "name": "mo-fatur",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "nr-invoice",
+        "type": "character",
+        "format": "X(16)",
+        "extent": 0
+      },
+      {
+        "name": "num-pedido-origem",
+        "type": "character",
+        "format": "X(12)",
+        "extent": 0
+      },
+      {
+        "name": "ind-tp-frete",
+        "type": "integer",
+        "format": "9",
+        "extent": 0
+      },
+      {
+        "name": "nr-ped-cot-orig",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "log-cotacao",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "cod-mot-canc-cot",
+        "type": "integer",
+        "format": ">>9",
+        "extent": 0
+      },
+      {
+        "name": "user-aprov-cot",
+        "type": "character",
+        "format": "X(12)",
+        "extent": 0
+      },
+      {
+        "name": "dt-aprov-cot",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "dt-validade-cot",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "nome-abrev-tri",
+        "type": "character",
+        "format": "X(12)",
+        "extent": 0
+      },
+      {
+        "name": "cod-entrega-tri",
+        "type": "character",
+        "format": "X(12)",
+        "extent": 0
+      },
+      {
+        "name": "num-pedido-bonif",
+        "type": "character",
+        "format": "X(12)",
+        "extent": 0
+      },
+      {
+        "name": "pct-min-rentab",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "log-cot-impressa",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-pedido-mp",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "endereco_text",
+        "type": "character",
+        "format": "X(2000)",
+        "extent": 0
+      },
+      {
+        "name": "cd-jurisdicao-ent",
+        "type": "character",
+        "format": "X(20)",
+        "extent": 0
+      },
+      {
+        "name": "ind-ender-fatur",
+        "type": "logical",
+        "format": "Yes\/No",
+        "extent": 0
+      },
+      {
+        "name": "nr-contrato",
+        "type": "integer",
+        "format": ">>>,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "nr-anexo",
+        "type": "character",
+        "format": "X(12)",
+        "extent": 0
+      },
+      {
+        "name": "desc-valor-ped",
+        "type": "decimal",
+        "format": ">>,>>>,>>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "pedido-mp",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-atual-cotas",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "cod-rma",
+        "type": "character",
+        "format": "X(16)",
+        "extent": 0
+      },
+      {
+        "name": "nr-pedido-crm",
+        "type": "integer",
+        "format": ">>>,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "log-juros-prorate",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "cdn-motiv-reprovac-cr",
+        "type": "integer",
+        "format": ">>9",
+        "extent": 0
+      },
+      {
+        "name": "cod-ped-clien-mp",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "val-perc-frete",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "val-perc-seguro",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "val-perc-embal",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "val-frete",
+        "type": "decimal",
+        "format": ">>>,>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "val-seguro",
+        "type": "decimal",
+        "format": ">>>,>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "val-embal",
+        "type": "decimal",
+        "format": ">>>,>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "cod-unid-negoc",
+        "type": "character",
+        "format": "X(3)",
+        "extent": 0
+      },
+      {
+        "name": "num-dias-praz-med-cond-esp",
+        "type": "integer",
+        "format": ">>9",
+        "extent": 0
+      },
+      {
+        "name": "hra-emis-ped",
+        "type": "character",
+        "format": "99:99:99",
+        "extent": 0
+      },
+      {
+        "name": "hra-atualiz",
+        "type": "character",
+        "format": "99:99:99",
+        "extent": 0
+      },
+      {
+        "name": "val-pct-desc-politic-bonifi",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "cod-safra",
+        "type": "character",
+        "format": "9999\/9999",
+        "extent": 0
+      },
+      {
+        "name": "dat-base-preco",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "num-id-oportun-vda",
+        "type": "integer",
+        "format": ">>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "num-id-campanha-crm",
+        "type": "integer",
+        "format": ">>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "cod-id-prosp",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "cod-workflow",
+        "type": "character",
+        "format": "x(100)",
+        "extent": 0
+      },
+      {
+        "name": "log-aprov-workflow",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      }
+    ]
+  },
+  {
+    "table": "ems2med.ped-repre",
+    "fields": [
+      {
+        "name": "nr-pedido",
+        "type": "integer",
+        "format": ">>>,>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "nome-ab-rep",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "ind-repbase",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "perc-comis",
+        "type": "decimal",
+        "format": ">>9.99999999",
+        "extent": 0
+      },
+      {
+        "name": "comis-emis",
+        "type": "integer",
+        "format": ">>9",
+        "extent": 0
+      },
+      {
+        "name": "char-1",
+        "type": "character",
+        "format": "x(100)",
+        "extent": 0
+      },
+      {
+        "name": "char-2",
+        "type": "character",
+        "format": "x(100)",
+        "extent": 0
+      },
+      {
+        "name": "dec-1",
+        "type": "decimal",
+        "format": "->>>>>>>>>>>9.99999999",
+        "extent": 0
+      },
+      {
+        "name": "dec-2",
+        "type": "decimal",
+        "format": "->>>>>>>>>>>9.99999999",
+        "extent": 0
+      },
+      {
+        "name": "int-1",
+        "type": "integer",
+        "format": "->>>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "int-2",
+        "type": "integer",
+        "format": "->>>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "log-1",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-2",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "data-1",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "data-2",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "check-sum",
+        "type": "character",
+        "format": "x(20)",
+        "extent": 0
+      },
+      {
+        "name": "cod-classificador",
+        "type": "character",
+        "format": "X(8)",
+        "extent": 0
+      },
+      {
+        "name": "idi-tip-comis-agent",
+        "type": "integer",
+        "format": "9",
+        "extent": 0
+      },
+      {
+        "name": "idi-tip-base-comis-agent",
+        "type": "integer",
+        "format": "9",
+        "extent": 0
+      },
+      {
+        "name": "idi-liber-pagto-comis-agent",
+        "type": "integer",
+        "format": "9",
+        "extent": 0
+      },
+      {
+        "name": "val-base-comis",
+        "type": "decimal",
+        "format": ">>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "val-comis",
+        "type": "decimal",
+        "format": "->>>,>>>,>>>,>>9.9999",
+        "extent": 0
+      },
+      {
+        "name": "val-comis-emis",
+        "type": "decimal",
+        "format": ">>9.99999999",
+        "extent": 0
+      }
+    ]
+  },
+  {
+    "table": "ems2med.nota-fiscal",
+    "fields": [
+      {
+        "name": "cod-estabel",
+        "type": "character",
+        "format": "x(5)",
+        "extent": 0
+      },
+      {
+        "name": "serie",
+        "type": "character",
+        "format": "x(5)",
+        "extent": 0
+      },
+      {
+        "name": "nr-nota-fis",
+        "type": "character",
+        "format": "x(16)",
+        "extent": 0
+      },
+      {
+        "name": "nome-ab-cli",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "dt-emis-nota",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "ind-sit-nota",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "dt-confirma",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "hr-confirma",
+        "type": "character",
+        "format": "99:99",
+        "extent": 0
+      },
+      {
+        "name": "dt-cancela",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "desc-cancela",
+        "type": "character",
+        "format": "x(2000)",
+        "extent": 0
+      },
+      {
+        "name": "hr-atualiza",
+        "type": "character",
+        "format": "99:99",
+        "extent": 0
+      },
+      {
+        "name": "cod-cond-pag",
+        "type": "integer",
+        "format": ">>>9",
+        "extent": 0
+      },
+      {
+        "name": "nr-pedcli",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "cod-entrega",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "endereco",
+        "type": "character",
+        "format": "X(40)",
+        "extent": 0
+      },
+      {
+        "name": "bairro",
+        "type": "character",
+        "format": "X(30)",
+        "extent": 0
+      },
+      {
+        "name": "cidade",
+        "type": "character",
+        "format": "x(50)",
+        "extent": 0
+      },
+      {
+        "name": "estado",
+        "type": "character",
+        "format": "x(04)",
+        "extent": 0
+      },
+      {
+        "name": "cep",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "pais",
+        "type": "character",
+        "format": "X(20)",
+        "extent": 0
+      },
+      {
+        "name": "cgc",
+        "type": "character",
+        "format": "x(19)",
+        "extent": 0
+      },
+      {
+        "name": "ins-estadual",
+        "type": "character",
+        "format": "X(19)",
+        "extent": 0
+      },
+      {
+        "name": "perc-desco1",
+        "type": "decimal",
+        "format": "->9.999",
+        "extent": 0
+      },
+      {
+        "name": "perc-desco2",
+        "type": "decimal",
+        "format": "->9.999",
+        "extent": 0
+      },
+      {
+        "name": "cond-redespa",
+        "type": "character",
+        "format": "x(2000)",
+        "extent": 0
+      },
+      {
+        "name": "cidade-cif",
+        "type": "character",
+        "format": "x(50)",
+        "extent": 0
+      },
+      {
+        "name": "cod-des-merc",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "nome-transp",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "tp-preco",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "cod-rota",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "ind-lib-nota",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "nr-tabpre",
+        "type": "character",
+        "format": "x(8)",
+        "extent": 0
+      },
+      {
+        "name": "vl-tot-nota",
+        "type": "decimal",
+        "format": ">>,>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "vl-mercad",
+        "type": "decimal",
+        "format": ">>,>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "vl-frete",
+        "type": "decimal",
+        "format": ">>,>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "vl-seguro",
+        "type": "decimal",
+        "format": ">>,>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "vl-embalagem",
+        "type": "decimal",
+        "format": ">>,>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "nr-praz-med",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "nr-fatura",
+        "type": "character",
+        "format": "x(16)",
+        "extent": 0
+      },
+      {
+        "name": "nat-operacao",
+        "type": "character",
+        "format": "x(06)",
+        "extent": 0
+      },
+      {
+        "name": "emite-duplic",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "cod-mensagem",
+        "type": "integer",
+        "format": ">>>>9",
+        "extent": 0
+      },
+      {
+        "name": "preco-saida",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "marca-volume",
+        "type": "character",
+        "format": "x(20)",
+        "extent": 0
+      },
+      {
+        "name": "nr-volumes",
+        "type": "character",
+        "format": "x(10)",
+        "extent": 0
+      },
+      {
+        "name": "peso-liq-tot",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.999",
+        "extent": 0
+      },
+      {
+        "name": "peso-bru-tot",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.999",
+        "extent": 0
+      },
+      {
+        "name": "ind-tip-nota",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "cod-portador",
+        "type": "integer",
+        "format": ">>>>9",
+        "extent": 0
+      },
+      {
+        "name": "modalidade",
+        "type": "integer",
+        "format": "9",
+        "extent": 0
+      },
+      {
+        "name": "mercado",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "tipo-fat",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "dt-prvenc",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "observ-nota",
+        "type": "character",
+        "format": "x(2000)",
+        "extent": 0
+      },
+      {
+        "name": "nr-tab-finan",
+        "type": "integer",
+        "format": ">>9",
+        "extent": 0
+      },
+      {
+        "name": "nr-ind-finan",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "ind-contabil",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "dt-at-ofest",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "dt-atual-cr",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "placa",
+        "type": "character",
+        "format": "x(10)",
+        "extent": 0
+      },
+      {
+        "name": "vl-acum-dup",
+        "type": "decimal",
+        "format": ">>,>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "cod-rep",
+        "type": "integer",
+        "format": ">>>>9",
+        "extent": 0
+      },
+      {
+        "name": "no-ab-reppri",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "nome-ab-reg",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "esp-docto",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "distancia",
+        "type": "decimal",
+        "format": ">>>,>>9.9",
+        "extent": 0
+      },
+      {
+        "name": "cd-vendedor",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "dt-saida",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "taxa-orig",
+        "type": "decimal",
+        "format": ">>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "user-calc",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "taxa-real",
+        "type": "decimal",
+        "format": ">>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "per-des-icms",
+        "type": "decimal",
+        "format": "->>9.999",
+        "extent": 0
+      },
+      {
+        "name": "nr-embarque",
+        "type": "integer",
+        "format": ">>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "tp-pedido",
+        "type": "character",
+        "format": "x(2)",
+        "extent": 0
+      },
+      {
+        "name": "nome-tr-red",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "cod-emitente",
+        "type": "integer",
+        "format": ">>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "vl-taxa-exp",
+        "type": "decimal",
+        "format": ">>>>,>>9.99999999",
+        "extent": 0
+      },
+      {
+        "name": "nr-proc-exp",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "vl-totnota-e",
+        "type": "decimal",
+        "format": ">>,>>>,>>>,>>9.99",
+        "extent": 3
+      },
+      {
+        "name": "vl-mercad-e",
+        "type": "decimal",
+        "format": ">>,>>>,>>>,>>9.99",
+        "extent": 3
+      },
+      {
+        "name": "vl-frete-e",
+        "type": "decimal",
+        "format": ">>,>>>,>>>,>>9.99",
+        "extent": 3
+      },
+      {
+        "name": "vl-seguro-e",
+        "type": "decimal",
+        "format": ">>,>>>,>>>,>>9.99",
+        "extent": 3
+      },
+      {
+        "name": "vl-embalagem-e",
+        "type": "decimal",
+        "format": ">>,>>>,>>>,>>9.99",
+        "extent": 3
+      },
+      {
+        "name": "vl-acumdup-e",
+        "type": "decimal",
+        "format": ">>,>>>,>>>,>>9.99",
+        "extent": 3
+      },
+      {
+        "name": "vl-taxaexp-e",
+        "type": "decimal",
+        "format": ">>>>,>>9.99",
+        "extent": 3
+      },
+      {
+        "name": "identific",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "cod-dep-ext",
+        "type": "character",
+        "format": "x(3)",
+        "extent": 0
+      },
+      {
+        "name": "fat-retro",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "vl-fatura",
+        "type": "decimal",
+        "format": ">>,>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "docto-orig",
+        "type": "character",
+        "format": "x(16)",
+        "extent": 0
+      },
+      {
+        "name": "descto2",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "descto1",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "nr-fat-retro",
+        "type": "character",
+        "format": "x(16)",
+        "extent": 0
+      },
+      {
+        "name": "dt-entr-cli",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "cd-sit-desp",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "hr-entr-cli",
+        "type": "character",
+        "format": "99:99:99",
+        "extent": 0
+      },
+      {
+        "name": "nivel-restituicao",
+        "type": "character",
+        "format": "!",
+        "extent": 0
+      },
+      {
+        "name": "nr-parcelas",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "nr-resumo",
+        "type": "integer",
+        "format": ">>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "pc-restituicao",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "vl-tot-itens-fat",
+        "type": "decimal",
+        "format": ">>,>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "uf-placa",
+        "type": "character",
+        "format": "!!",
+        "extent": 0
+      },
+      {
+        "name": "invoice-id",
+        "type": "character",
+        "format": "x(1)",
+        "extent": 0
+      },
+      {
+        "name": "vl-tot-com",
+        "type": "decimal",
+        "format": ">>,>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "vl-comis-nota",
+        "type": "decimal",
+        "format": ">>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "zip-code",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "serie-ant",
+        "type": "character",
+        "format": "x(5)",
+        "extent": 0
+      },
+      {
+        "name": "nr-nota-ant",
+        "type": "character",
+        "format": "x(16)",
+        "extent": 0
+      },
+      {
+        "name": "dt-embarque",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "mo-codigo",
+        "type": "character",
+        "format": "x(16)",
+        "extent": 0
+      },
+      {
+        "name": "nr-pedido-nf-orig",
+        "type": "integer",
+        "format": "999999999",
+        "extent": 0
+      },
+      {
+        "name": "replica-nf",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "dt-at-est",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "cod-tax",
+        "type": "integer",
+        "format": ">>>9",
+        "extent": 0
+      },
+      {
+        "name": "tax-desp",
+        "type": "decimal",
+        "format": "->>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "tax-frete",
+        "type": "decimal",
+        "format": "->>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "vl-tot-ipi",
+        "type": "decimal",
+        "format": "->>>,>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "vl-tot-iva",
+        "type": "decimal",
+        "format": "->>>,>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "caixa-postal",
+        "type": "character",
+        "format": "x(10)",
+        "extent": 0
+      },
+      {
+        "name": "serie-orig",
+        "type": "character",
+        "format": "x(5)",
+        "extent": 0
+      },
+      {
+        "name": "nro-nota-orig",
+        "type": "character",
+        "format": "x(16)",
+        "extent": 0
+      },
+      {
+        "name": "cn-codigo",
+        "type": "character",
+        "format": "x(40)",
+        "extent": 0
+      },
+      {
+        "name": "ind-orig-entrada",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "ind-via-envio",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "nro-proc-entrada",
+        "type": "integer",
+        "format": ">>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "nro-proc-saida",
+        "type": "integer",
+        "format": ">>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "dt-at-ct",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "refer-ct",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "vl-merc-tot-fat",
+        "type": "decimal",
+        "format": "->>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "char-1",
+        "type": "character",
+        "format": "x(2000)",
+        "extent": 0
+      },
+      {
+        "name": "char-2",
+        "type": "character",
+        "format": "x(2000)",
+        "extent": 0
+      },
+      {
+        "name": "dec-1",
+        "type": "decimal",
+        "format": "->>>>>>>>>>>9.99999999",
+        "extent": 0
+      },
+      {
+        "name": "dec-2",
+        "type": "decimal",
+        "format": "->>>>>>>>>>>9.99999999",
+        "extent": 0
+      },
+      {
+        "name": "int-1",
+        "type": "integer",
+        "format": "->>>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "int-2",
+        "type": "integer",
+        "format": "->>>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "log-1",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-2",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "data-1",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "data-2",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "cod-canal-venda",
+        "type": "integer",
+        "format": ">>9",
+        "extent": 0
+      },
+      {
+        "name": "vl-desconto",
+        "type": "decimal",
+        "format": ">>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "cod-imagem",
+        "type": "character",
+        "format": "x(30)",
+        "extent": 0
+      },
+      {
+        "name": "check-sum",
+        "type": "character",
+        "format": "x(20)",
+        "extent": 0
+      },
+      {
+        "name": "log-usa-tabela-desconto",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "val-pct-desconto-tab-preco",
+        "type": "decimal",
+        "format": "->>9.99",
+        "extent": 0
+      },
+      {
+        "name": "des-pct-desconto-inform",
+        "type": "character",
+        "format": "x(50)",
+        "extent": 0
+      },
+      {
+        "name": "val-pct-desconto-total",
+        "type": "decimal",
+        "format": "->>9.9999",
+        "extent": 0
+      },
+      {
+        "name": "val-desconto-total",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "vl-tot-nota-me",
+        "type": "decimal",
+        "format": ">>,>>>,>>>,>>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "vl-mercad-me",
+        "type": "decimal",
+        "format": ">>,>>>,>>>,>>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "vl-frete-me",
+        "type": "decimal",
+        "format": ">>,>>>,>>>,>>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "vl-seguro-me",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "vl-embalagem-me",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "vl-acum-dup-me",
+        "type": "decimal",
+        "format": ">>,>>>,>>>,>>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "vl-fatura-me",
+        "type": "decimal",
+        "format": ">>,>>>,>>>,>>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "vl-tot-itens-fat-me",
+        "type": "decimal",
+        "format": ">>,>>>,>>>,>>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "vl-tot-com-me",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "vl-comis-nota-me",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "vl-tot-iva-me",
+        "type": "decimal",
+        "format": "->>>,>>>,>>>,>>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "vl-merc-tot-fat-me",
+        "type": "decimal",
+        "format": "->>,>>>,>>>,>>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "vl-desconto-me",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "vl-cotacao-fatur",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "vl-cotacao-pedido",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "dt-atual-ap",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "nr-siscomex",
+        "type": "character",
+        "format": "X(20)",
+        "extent": 0
+      },
+      {
+        "name": "cod-tax-fre",
+        "type": "integer",
+        "format": ">>9",
+        "extent": 0
+      },
+      {
+        "name": "cod-tax-div",
+        "type": "integer",
+        "format": ">>9",
+        "extent": 0
+      },
+      {
+        "name": "perc-tax-fre",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "perc-tax-div",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "nr-invoice",
+        "type": "character",
+        "format": "X(16)",
+        "extent": 0
+      },
+      {
+        "name": "val-pct-desconto-valor",
+        "type": "decimal",
+        "format": "->>9.9999",
+        "extent": 0
+      },
+      {
+        "name": "ind-tp-frete",
+        "type": "integer",
+        "format": "9",
+        "extent": 0
+      },
+      {
+        "name": "tax-emb",
+        "type": "decimal",
+        "format": "->>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "tax-emb-me",
+        "type": "decimal",
+        "format": "->>>,>>>,>>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "tax-seg",
+        "type": "decimal",
+        "format": "->>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "tax-seg-me",
+        "type": "decimal",
+        "format": "->>>,>>>,>>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "tax-fre-me",
+        "type": "decimal",
+        "format": "->>>,>>>,>>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "tax-div-me",
+        "type": "decimal",
+        "format": "->>>,>>>,>>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "perc-tax-emb",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "perc-tax-seg",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "cod-tax-emb",
+        "type": "integer",
+        "format": ">>9",
+        "extent": 0
+      },
+      {
+        "name": "cod-tax-seg",
+        "type": "integer",
+        "format": ">>9",
+        "extent": 0
+      },
+      {
+        "name": "nome-abrev-tri",
+        "type": "character",
+        "format": "X(12)",
+        "extent": 0
+      },
+      {
+        "name": "endereco_text",
+        "type": "character",
+        "format": "X(2000)",
+        "extent": 0
+      },
+      {
+        "name": "refer-cr",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "desc-valor-ped",
+        "type": "decimal",
+        "format": ">>,>>>,>>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "desc-valor-nota",
+        "type": "decimal",
+        "format": ">>,>>>,>>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "val-desp-outros",
+        "type": "decimal",
+        "format": "->>>,>>>,>>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "val-desp-outros-inf",
+        "type": "decimal",
+        "format": "->>>,>>>,>>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "num-rma-orig",
+        "type": "character",
+        "format": "X(16)",
+        "extent": 0
+      },
+      {
+        "name": "log-estorn-comis-repres",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "cod-rma",
+        "type": "character",
+        "format": "X(16)",
+        "extent": 0
+      },
+      {
+        "name": "obs-gerada",
+        "type": "character",
+        "format": "x(2000)",
+        "extent": 0
+      },
+      {
+        "name": "cod-estab-estoq",
+        "type": "character",
+        "format": "x(5)",
+        "extent": 0
+      },
+      {
+        "name": "tab-ind-fin",
+        "type": "decimal",
+        "format": ">9.99999",
+        "extent": 0
+      },
+      {
+        "name": "log-juros-prorate",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-possui-retenc",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "val-desc-pis-zfm",
+        "type": "decimal",
+        "format": ">,>>>,>>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "val-desc-cofins-zfm",
+        "type": "decimal",
+        "format": ">,>>>,>>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "idi-sit-nf-eletro",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "cod-chave-aces-nf-eletro",
+        "type": "character",
+        "format": "x(60)",
+        "extent": 0
+      },
+      {
+        "name": "idi-forma-emis-nf-eletro",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "des-espec-volum",
+        "type": "character",
+        "format": "x(60)",
+        "extent": 0
+      },
+      {
+        "name": "cod-placa-2",
+        "type": "character",
+        "format": "x(8)",
+        "extent": 0
+      },
+      {
+        "name": "cod-uf-placa-2",
+        "type": "character",
+        "format": "x(8)",
+        "extent": 0
+      },
+      {
+        "name": "cod-lacre",
+        "type": "character",
+        "format": "X(60)",
+        "extent": 2
+      },
+      {
+        "name": "val-iof",
+        "type": "decimal",
+        "format": "->>>,>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "cod-protoc",
+        "type": "character",
+        "format": "x(15)",
+        "extent": 0
+      },
+      {
+        "name": "num-romaneio",
+        "type": "integer",
+        "format": ">>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "cod-usuar-contingen-nf-eletro",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "cod-estab-proces-export",
+        "type": "character",
+        "format": "x(5)",
+        "extent": 0
+      },
+      {
+        "name": "hra-emis-nf",
+        "type": "character",
+        "format": "99:99:99",
+        "extent": 0
+      },
+      {
+        "name": "dt-atualiza",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "hra-atualiz",
+        "type": "character",
+        "format": "99:99:99",
+        "extent": 0
+      },
+      {
+        "name": "cod-safra",
+        "type": "character",
+        "format": "9999\/9999",
+        "extent": 0
+      },
+      {
+        "name": "num-cx-financ",
+        "type": "integer",
+        "format": ">>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "num-process-negoc",
+        "type": "integer",
+        "format": ">>>>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "cdd-embarq",
+        "type": "decimal",
+        "format": ">>>>>>>>>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "log-var-cambial",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      }
+    ]
+  },
+  {
+    "table": "ems2med.natur-oper",
+    "fields": [
+      {
+        "name": "nat-operacao",
+        "type": "character",
+        "format": "x(06)",
+        "extent": 0
+      },
+      {
+        "name": "tipo",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "denominacao",
+        "type": "character",
+        "format": "x(35)",
+        "extent": 0
+      },
+      {
+        "name": "cd-trib-icm",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "aliquota-icm",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "perc-red-icm",
+        "type": "decimal",
+        "format": ">>9.9999",
+        "extent": 0
+      },
+      {
+        "name": "cd-trib-ipi",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "cd-vinc-ipi",
+        "type": "character",
+        "format": "99.9-x",
+        "extent": 0
+      },
+      {
+        "name": "perc-red-ipi",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "cd-trib-iss",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "perc-red-iss",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "emite-duplic",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "cod-mensagem",
+        "type": "integer",
+        "format": ">>>>9",
+        "extent": 0
+      },
+      {
+        "name": "atual-estat",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "mercado",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "preco-saida",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "manut-icm",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "manut-ipi",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "especie-doc",
+        "type": "character",
+        "format": "x(3)",
+        "extent": 0
+      },
+      {
+        "name": "consum-final",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "aliq-icm-com",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "baixa-estoq",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "perc-PIS",
+        "type": "decimal",
+        "format": ">9.99",
+        "extent": 2
+      },
+      {
+        "name": "per-fin-soc",
+        "type": "decimal",
+        "format": ">9.99",
+        "extent": 2
+      },
+      {
+        "name": "tp-base-icm",
+        "type": "character",
+        "format": "!",
+        "extent": 0
+      },
+      {
+        "name": "ind-imprenda",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "ct-recven",
+        "type": "character",
+        "format": "x(20)",
+        "extent": 0
+      },
+      {
+        "name": "sc-recven",
+        "type": "character",
+        "format": "x(20)",
+        "extent": 0
+      },
+      {
+        "name": "ct-cusven",
+        "type": "character",
+        "format": "x(20)",
+        "extent": 0
+      },
+      {
+        "name": "sc-cusven",
+        "type": "character",
+        "format": "x(20)",
+        "extent": 0
+      },
+      {
+        "name": "transf",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "terceiros",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "cd-situacao",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "cd-registro",
+        "type": "character",
+        "format": "x(2)",
+        "extent": 0
+      },
+      {
+        "name": "oper-terc",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "cod-esp",
+        "type": "character",
+        "format": "!!",
+        "extent": 0
+      },
+      {
+        "name": "modelo-docto",
+        "type": "character",
+        "format": "x(02)",
+        "extent": 0
+      },
+      {
+        "name": "per-des-icms",
+        "type": "decimal",
+        "format": "->>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "narrativa",
+        "type": "character",
+        "format": "x(2000)",
+        "extent": 0
+      },
+      {
+        "name": "ind-entfut",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "tp-oper-terc",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "ind-gera-of",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "ind-est-crz",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "ind-est-mof",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "ind-est-qtd",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "atualiza-of",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "nat-comp",
+        "type": "character",
+        "format": "x(06)",
+        "extent": 0
+      },
+      {
+        "name": "ct-transven",
+        "type": "character",
+        "format": "x(20)",
+        "extent": 0
+      },
+      {
+        "name": "sc-transven",
+        "type": "character",
+        "format": "x(20)",
+        "extent": 0
+      },
+      {
+        "name": "auto-ce",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "auto-cr",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "auto-est",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "calc-auto",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "ind-tipo-vat",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "usa-nota-ent",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "usa-pick",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "uso",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "subs-trib",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "tp-rec-desp",
+        "type": "integer",
+        "format": ">>9",
+        "extent": 0
+      },
+      {
+        "name": "per-sub-tri",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "ind-contabilizacao",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "nat-vinculada",
+        "type": "character",
+        "format": "x(06)",
+        "extent": 0
+      },
+      {
+        "name": "icms-subs-trib",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "ind-it-icms",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "ind-it-sub-dif",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "imp-nota",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "nat-ativa",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "venda-ativo",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "ipi-icm-out",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "credito-subs",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "merc-base-icms",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "baixa-ship",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "auto-ct",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "tipo-trib",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "nota-rateio",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "char-1",
+        "type": "character",
+        "format": "x(100)",
+        "extent": 0
+      },
+      {
+        "name": "char-2",
+        "type": "character",
+        "format": "x(100)",
+        "extent": 0
+      },
+      {
+        "name": "dec-1",
+        "type": "decimal",
+        "format": "->>>>>>>>>>>9.99999999",
+        "extent": 0
+      },
+      {
+        "name": "dec-2",
+        "type": "decimal",
+        "format": "->>>>>>>>>>>9.99999999",
+        "extent": 0
+      },
+      {
+        "name": "int-1",
+        "type": "integer",
+        "format": "->>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "int-2",
+        "type": "integer",
+        "format": "->>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "log-1",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-2",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "data-1",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "data-2",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "cod-canal-venda",
+        "type": "integer",
+        "format": ">>9",
+        "extent": 0
+      },
+      {
+        "name": "check-sum",
+        "type": "character",
+        "format": "x(20)",
+        "extent": 0
+      },
+      {
+        "name": "log-natureza-bonif",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "cod-natur-oper-bonif",
+        "type": "character",
+        "format": "x(06)",
+        "extent": 0
+      },
+      {
+        "name": "gera-prev-cr",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "alt-vl-it-terc",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-acum-ciap",
+        "type": "logical",
+        "format": "yes\/no",
+        "extent": 0
+      },
+      {
+        "name": "credito-ciap",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "tipo-compra",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "log-oper-triang",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "ind-venda-ambulante",
+        "type": "integer",
+        "format": ">>>>9",
+        "extent": 0
+      },
+      {
+        "name": "log-nota-comercio",
+        "type": "character",
+        "format": "X(5)",
+        "extent": 0
+      },
+      {
+        "name": "ind-nota-propria",
+        "type": "integer",
+        "format": ">>>>9",
+        "extent": 0
+      },
+      {
+        "name": "var-val-it-terc",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.9999",
+        "extent": 0
+      },
+      {
+        "name": "dest-red-icms",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.9999",
+        "extent": 0
+      },
+      {
+        "name": "log-ipi-bicms",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-frete-bipi",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-base-ipi",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-ipi-out-tot",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-biss",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-atual-cotas",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-vl-it-terc",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-emit-remito",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-ipi-out-bsubst",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-icms-out-subst",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-gera-cre-subst",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-remito-gera-prevcr",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "perc-desc-zf",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "log-ret-inss-fonte",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "modelo-cupom",
+        "type": "character",
+        "format": "X(05)",
+        "extent": 0
+      },
+      {
+        "name": "form-cfop",
+        "type": "character",
+        "format": "X(05)",
+        "extent": 0
+      },
+      {
+        "name": "ind-entreg-futur",
+        "type": "integer",
+        "format": ">>>>9",
+        "extent": 0
+      },
+      {
+        "name": "ind-situacao",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "log-impr-nf-auto",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "ind-devolucao-valor",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "Log-picking",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "cod-trib-ii",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "log-impres-autom",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "cod-cfop",
+        "type": "character",
+        "format": "x(10)",
+        "extent": 0
+      },
+      {
+        "name": "cod-livre-1",
+        "type": "character",
+        "format": "x(100)",
+        "extent": 0
+      },
+      {
+        "name": "cod-livre-2",
+        "type": "character",
+        "format": "x(100)",
+        "extent": 0
+      },
+      {
+        "name": "log-livre-1",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-livre-2",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-livre-3",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-livre-4",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-livre-5",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-livre-6",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "num-livre-1",
+        "type": "integer",
+        "format": "->>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "num-livre-2",
+        "type": "integer",
+        "format": "->>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "val-livre-1",
+        "type": "decimal",
+        "format": "->>>>>>>>>>>9.99999999",
+        "extent": 0
+      },
+      {
+        "name": "val-livre-2",
+        "type": "decimal",
+        "format": "->>>>>>>>>>>9.99999999",
+        "extent": 0
+      },
+      {
+        "name": "dat-livre-1",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "dat-livre-2",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "log-icms-presmdo",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-natur-operac-draw",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "cdd-perc-retenc-csll",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "cdd-perc-retenc-pis",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "cdd-perc-retenc-cofins",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "val-perc-impto-renda",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "log-ipi-contrib-social",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-ipi-outras-contrib-social",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-suspens-impto-import",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-suspens-ipi-import",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-memorando",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-ipi-contrib-retid",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-ipi-outras-contrib-retid",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-icms-substto-repas",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-icms-substto-compltar",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "val-perc-desc-pis-zfm",
+        "type": "decimal",
+        "format": ">>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "val-perc-desc-cofins-zfm",
+        "type": "decimal",
+        "format": ">>9.99999",
+        "extent": 0
+      },
+      {
+        "name": "log-deduz-desc-zfm-tot-nf",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "val-perc-sat",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "val-perc-senar",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "log-apurac-retenc",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "cod-model-nf-eletro",
+        "type": "character",
+        "format": "x(8)",
+        "extent": 0
+      },
+      {
+        "name": "log-icms-substto-base-contrib",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-icms-substto-base-irf-retid",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "cod-natur-ref",
+        "type": "character",
+        "format": "x(6)",
+        "extent": 0
+      },
+      {
+        "name": "log-vda-ret",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-gera-ncredito",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-permite-lote-vencid",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "idi-tip-devol-consig",
+        "type": "integer",
+        "format": "9",
+        "extent": 0
+      },
+      {
+        "name": "log-icms-despes-import",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-pis-despes-import",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-cofins-despes-import",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-icms-despes-import-nfr",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-incid-icms-tot-nfr",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-integr-base-calc-icms-nfr",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-icms-substto-antecip",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-consid-icms-outras",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-cr-st-antec",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-contrib-st-antec",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-impr-ipi-danfe",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-ipi-nao-tributad",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-ipi-imune",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "idi-escrit-fatur-remes",
+        "type": "integer",
+        "format": "9",
+        "extent": 0
+      },
+      {
+        "name": "cod-cta-ctbl-cust-vda",
+        "type": "character",
+        "format": "x(17)",
+        "extent": 0
+      },
+      {
+        "name": "cod-cta-ctbl-recta-vendas",
+        "type": "character",
+        "format": "x(17)",
+        "extent": 0
+      },
+      {
+        "name": "cod-cta-ctbl-transit-vendas",
+        "type": "character",
+        "format": "x(17)",
+        "extent": 0
+      },
+      {
+        "name": "log-operac-transp",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-ipi-suspen-icms",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-nfse-nacional",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      }
+    ]
+  },
+  {
+    "table": "ems2med.devol-cli",
+    "fields": [
+      {
+        "name": "cod-estabel",
+        "type": "character",
+        "format": "x(5)",
+        "extent": 0
+      },
+      {
+        "name": "serie",
+        "type": "character",
+        "format": "x(5)",
+        "extent": 0
+      },
+      {
+        "name": "nr-nota-fis",
+        "type": "character",
+        "format": "x(16)",
+        "extent": 0
+      },
+      {
+        "name": "cod-emitente",
+        "type": "integer",
+        "format": ">>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "nome-ab-emi",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "serie-docto",
+        "type": "character",
+        "format": "x(5)",
+        "extent": 0
+      },
+      {
+        "name": "nro-docto",
+        "type": "character",
+        "format": "x(16)",
+        "extent": 0
+      },
+      {
+        "name": "nat-operacao",
+        "type": "character",
+        "format": "x(06)",
+        "extent": 0
+      },
+      {
+        "name": "sequencia",
+        "type": "integer",
+        "format": ">>9",
+        "extent": 0
+      },
+      {
+        "name": "dt-devol",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "it-codigo",
+        "type": "character",
+        "format": "x(16)",
+        "extent": 0
+      },
+      {
+        "name": "qt-devolvida",
+        "type": "decimal",
+        "format": ">>,>>>,>>9.9999",
+        "extent": 0
+      },
+      {
+        "name": "nr-sequencia",
+        "type": "integer",
+        "format": ">>,>>9",
+        "extent": 0
+      },
+      {
+        "name": "vl-custo",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "filler-3",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "identific",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "vl-devol",
+        "type": "decimal",
+        "format": ">>,>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "situacao",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "origem",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "cod-refer",
+        "type": "character",
+        "format": "x(8)",
+        "extent": 0
+      },
+      {
+        "name": "ind-atu-est",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "sit-pedido",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "codigo-rejei",
+        "type": "integer",
+        "format": ">>9",
+        "extent": 0
+      },
+      {
+        "name": "nr-entrega",
+        "type": "integer",
+        "format": ">>>>9",
+        "extent": 0
+      },
+      {
+        "name": "char-1",
+        "type": "character",
+        "format": "x(100)",
+        "extent": 0
+      },
+      {
+        "name": "char-2",
+        "type": "character",
+        "format": "x(100)",
+        "extent": 0
+      },
+      {
+        "name": "dec-1",
+        "type": "decimal",
+        "format": "->>>>>>>>>>>9.99999999",
+        "extent": 0
+      },
+      {
+        "name": "dec-2",
+        "type": "decimal",
+        "format": "->>>>>>>>>>>9.99999999",
+        "extent": 0
+      },
+      {
+        "name": "int-1",
+        "type": "integer",
+        "format": "->>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "int-2",
+        "type": "integer",
+        "format": "->>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "log-1",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-2",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "data-1",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "data-2",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "check-sum",
+        "type": "character",
+        "format": "x(20)",
+        "extent": 0
+      }
+    ]
+  },
+  {
+    "table": "ems2med.docum-est",
+    "fields": [
+      {
+        "name": "esp-docto",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "serie-docto",
+        "type": "character",
+        "format": "x(5)",
+        "extent": 0
+      },
+      {
+        "name": "nro-docto",
+        "type": "character",
+        "format": "x(16)",
+        "extent": 0
+      },
+      {
+        "name": "cod-emitente",
+        "type": "integer",
+        "format": ">>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "dt-emissao",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "dt-trans",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "dt-atualiza",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "hr-atualiza",
+        "type": "character",
+        "format": "x(8)",
+        "extent": 0
+      },
+      {
+        "name": "base-icm",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "base-ipi",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "base-iss",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "tot-valor",
+        "type": "decimal",
+        "format": ">>>>,>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "nat-operacao",
+        "type": "character",
+        "format": "x(06)",
+        "extent": 0
+      },
+      {
+        "name": "icm-fonte",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "embalagem",
+        "type": "character",
+        "format": "x(10)",
+        "extent": 0
+      },
+      {
+        "name": "tot-peso",
+        "type": "decimal",
+        "format": ">>>>,>>>,>>9.9999",
+        "extent": 0
+      },
+      {
+        "name": "ct-transit",
+        "type": "character",
+        "format": "x(20)",
+        "extent": 0
+      },
+      {
+        "name": "sc-transit",
+        "type": "character",
+        "format": "x(20)",
+        "extent": 0
+      },
+      {
+        "name": "cod-estabel",
+        "type": "character",
+        "format": "x(5)",
+        "extent": 0
+      },
+      {
+        "name": "tipo-docto",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "cod-observa",
+        "type": "integer",
+        "format": "9",
+        "extent": 0
+      },
+      {
+        "name": "uf",
+        "type": "character",
+        "format": "x(4)",
+        "extent": 0
+      },
+      {
+        "name": "via-transp",
+        "type": "integer",
+        "format": "9",
+        "extent": 0
+      },
+      {
+        "name": "cod-ibge",
+        "type": "integer",
+        "format": "9",
+        "extent": 0
+      },
+      {
+        "name": "aliquota-icm",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "icm-complem",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "icm-deb-cre",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "icm-nao-trib",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "icm-outras",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "despesa-nota",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "iss-deb-cre",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "ipi-deb-cre",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "ipi-nao-trib",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "iss-nao-trib",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "ipi-outras",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "iss-outras",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "estado",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "aliquota-iss",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "ap-atual",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "ipi-despesa",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "valor-embal",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "valor-frete",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "valor-mercad",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "valor-outras",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "valor-seguro",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "tot-desconto",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "nff",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "of-atual",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "estab-de-or",
+        "type": "character",
+        "format": "x(5)",
+        "extent": 0
+      },
+      {
+        "name": "CE-atual",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "observacao",
+        "type": "character",
+        "format": "x(2000)",
+        "extent": 0
+      },
+      {
+        "name": "base-icm-fas",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 2
+      },
+      {
+        "name": "base-ipi-fas",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 2
+      },
+      {
+        "name": "base-iss-fas",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 2
+      },
+      {
+        "name": "desp-fasb",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 2
+      },
+      {
+        "name": "icm-cpl-fasb",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 2
+      },
+      {
+        "name": "icm-dc-fasb",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 2
+      },
+      {
+        "name": "icm-fnt-fasb",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 2
+      },
+      {
+        "name": "icm-ntr-fasb",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 2
+      },
+      {
+        "name": "icm-out-fasb",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 2
+      },
+      {
+        "name": "ipi-dc-fasb",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 2
+      },
+      {
+        "name": "ipi-ntr-fasb",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 2
+      },
+      {
+        "name": "ipi-out-fasb",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 2
+      },
+      {
+        "name": "iss-dc-fasb",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 2
+      },
+      {
+        "name": "iss-ntr-fasb",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 2
+      },
+      {
+        "name": "iss-out-fasb",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 2
+      },
+      {
+        "name": "tot-des-fasb",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 2
+      },
+      {
+        "name": "tot-vl-fasb",
+        "type": "decimal",
+        "format": ">>>>,>>>,>>>,>>9.99",
+        "extent": 2
+      },
+      {
+        "name": "vl-emb-fasb",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 2
+      },
+      {
+        "name": "vl-fre-fasb",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 2
+      },
+      {
+        "name": "vl-merc-fasb",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 2
+      },
+      {
+        "name": "vl-out-fasb",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 2
+      },
+      {
+        "name": "vl-seg-fasb",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 2
+      },
+      {
+        "name": "cotacao-fasb",
+        "type": "decimal",
+        "format": ">>>,>>9.99999999",
+        "extent": 0
+      },
+      {
+        "name": "vl-imp-impor",
+        "type": "decimal",
+        "format": ">>>>,>>>,>>9.99",
+        "extent": 2
+      },
+      {
+        "name": "pais-origem",
+        "type": "character",
+        "format": "x(20)",
+        "extent": 0
+      },
+      {
+        "name": "usuario",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "mod-frete",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "valor-irf",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "ok-fornec",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "estab-fisc",
+        "type": "character",
+        "format": "x(5)",
+        "extent": 0
+      },
+      {
+        "name": "ok-observ",
+        "type": "character",
+        "format": "x(2000)",
+        "extent": 0
+      },
+      {
+        "name": "ok-data",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "ok-user",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "cr-atual",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "dt-venc-iss",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "dt-venc-ipi",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "dt-venc-icm",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "base-subs",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "vl-subs",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "vl-subs-fasb",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>9.99",
+        "extent": 2
+      },
+      {
+        "name": "base-subs-fasb",
+        "type": "decimal",
+        "format": ">>>>>,>>>,>>>.99",
+        "extent": 2
+      },
+      {
+        "name": "acresc-financ",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "rateia-frete",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "aliq-irf",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "esp-irf",
+        "type": "character",
+        "format": "!!",
+        "extent": 0
+      },
+      {
+        "name": "cod-imp-irf",
+        "type": "character",
+        "format": "x(4)",
+        "extent": 0
+      },
+      {
+        "name": "cod-ret-irf",
+        "type": "integer",
+        "format": ">>>>9",
+        "extent": 0
+      },
+      {
+        "name": "dia-util-irf",
+        "type": "integer",
+        "format": ">>9",
+        "extent": 0
+      },
+      {
+        "name": "ind-extrac",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "origem",
+        "type": "character",
+        "format": "!",
+        "extent": 0
+      },
+      {
+        "name": "c-nr-invoice",
+        "type": "character",
+        "format": "x(10)",
+        "extent": 0
+      },
+      {
+        "name": "i-sequencia",
+        "type": "integer",
+        "format": "999",
+        "extent": 0
+      },
+      {
+        "name": "dt-entr-merc",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "taxa-conv-imp",
+        "type": "decimal",
+        "format": "9.9999999999",
+        "extent": 0
+      },
+      {
+        "name": "imp-import",
+        "type": "decimal",
+        "format": "->>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "qt-tot-imp",
+        "type": "decimal",
+        "format": "->>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "atual-ft",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "mod-atual",
+        "type": "integer",
+        "format": ">>>>9",
+        "extent": 0
+      },
+      {
+        "name": "estorn-comis",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "rec-fisico",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "ind-orig-entrada",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "ind-via-envio",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "nro-proc-entrada",
+        "type": "integer",
+        "format": ">>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "nro-proc-saida",
+        "type": "integer",
+        "format": ">>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "nf-emitida-est",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "conta-transit",
+        "type": "character",
+        "format": "x(20)",
+        "extent": 0
+      },
+      {
+        "name": "tot-taxa",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "mo-codigo",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "cotacao-dia",
+        "type": "decimal",
+        "format": ">>>,>9.99999999",
+        "extent": 0
+      },
+      {
+        "name": "valor-frete-me",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "valor-seguro-me",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "valor-embal-me",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "valor-outras-me",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "tot-desconto-me",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "tot-valor-me",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "valor-mercad-me",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "despesa-nota-me",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "tot-taxa-me",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "tp-rat-fret",
+        "type": "integer",
+        "format": "9",
+        "extent": 0
+      },
+      {
+        "name": "sit-docum",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "sit-edi",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "ind-tipo-rateio",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "ind-rateio",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "sit-atual",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "char-1",
+        "type": "character",
+        "format": "x(100)",
+        "extent": 0
+      },
+      {
+        "name": "char-2",
+        "type": "character",
+        "format": "x(100)",
+        "extent": 0
+      },
+      {
+        "name": "dec-1",
+        "type": "decimal",
+        "format": "->>>>>>>>>>>9.99999999",
+        "extent": 0
+      },
+      {
+        "name": "dec-2",
+        "type": "decimal",
+        "format": "->>>>>>>>>>>9.99999999",
+        "extent": 0
+      },
+      {
+        "name": "int-1",
+        "type": "integer",
+        "format": "->>>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "int-2",
+        "type": "integer",
+        "format": "->>>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "log-1",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-2",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "data-1",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "data-2",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "check-sum",
+        "type": "character",
+        "format": "x(20)",
+        "extent": 0
+      },
+      {
+        "name": "tipo-nota",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "atualiza-cr",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "cod-tax-fre",
+        "type": "integer",
+        "format": ">>9",
+        "extent": 0
+      },
+      {
+        "name": "cod-tax-div",
+        "type": "integer",
+        "format": ">>9",
+        "extent": 0
+      },
+      {
+        "name": "perc-tax-fre",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "perc-tax-div",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "vl-tax-frete",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "vl-tax-diversos",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "esp-fiscal",
+        "type": "character",
+        "format": "X(3)",
+        "extent": 0
+      },
+      {
+        "name": "base-pis-subs",
+        "type": "decimal",
+        "format": ">>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "base-cofins-subs",
+        "type": "decimal",
+        "format": ">>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "vl-pis-subs",
+        "type": "decimal",
+        "format": ">>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "vl-cofins-subs",
+        "type": "decimal",
+        "format": ">>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "cp-atual",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "embarque",
+        "type": "character",
+        "format": "X(16)",
+        "extent": 0
+      },
+      {
+        "name": "cod-imp-frete",
+        "type": "integer",
+        "format": ">>9",
+        "extent": 0
+      },
+      {
+        "name": "cod-imp-seguro",
+        "type": "integer",
+        "format": ">>9",
+        "extent": 0
+      },
+      {
+        "name": "cod-imp-embal",
+        "type": "integer",
+        "format": ">>9",
+        "extent": 0
+      },
+      {
+        "name": "cod-imp-outras",
+        "type": "integer",
+        "format": ">>9",
+        "extent": 0
+      },
+      {
+        "name": "vl-imp-frete",
+        "type": "decimal",
+        "format": ">>>,>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "vl-imp-seguro",
+        "type": "decimal",
+        "format": ">>>,>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "vl-imp-embalagem",
+        "type": "decimal",
+        "format": ">>>,>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "vl-imp-outras",
+        "type": "decimal",
+        "format": ">>>,>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "vl-imp-frete-me",
+        "type": "decimal",
+        "format": ">>>,>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "vl-imp-seguro-me",
+        "type": "decimal",
+        "format": ">>>,>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "vl-imp-embalagem-me",
+        "type": "decimal",
+        "format": ">>>,>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "vl-imp-outras-me",
+        "type": "decimal",
+        "format": ">>>,>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "perc-tax-seg",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "perc-tax-emb",
+        "type": "decimal",
+        "format": ">>9.99",
+        "extent": 0
+      },
+      {
+        "name": "declaracao-import",
+        "type": "character",
+        "format": "X(20)",
+        "extent": 0
+      },
+      {
+        "name": "log-ft-atual",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-cc-atual",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-pt-atual",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "ft-atual",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "cc-atual",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "pt-atual",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "cod-rma",
+        "type": "character",
+        "format": "X(16)",
+        "extent": 0
+      },
+      {
+        "name": "dat-validade",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "val-perc-restocagem",
+        "type": "decimal",
+        "format": ">9.99",
+        "extent": 0
+      },
+      {
+        "name": "val-restocagem",
+        "type": "decimal",
+        "format": ">>>,>>9.9999",
+        "extent": 0
+      },
+      {
+        "name": "dat-aprovacao",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "desc-motivo-aprov",
+        "type": "character",
+        "format": "X(2000)",
+        "extent": 0
+      },
+      {
+        "name": "num-seq-cont-emit",
+        "type": "integer",
+        "format": ">>9",
+        "extent": 0
+      },
+      {
+        "name": "Fat-despesa",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-wms-atual",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "peso-bruto-tot",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.999",
+        "extent": 0
+      },
+      {
+        "name": "peso-liquido-tot",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.999",
+        "extent": 0
+      },
+      {
+        "name": "cod-servico",
+        "type": "integer",
+        "format": ">>>>9",
+        "extent": 0
+      },
+      {
+        "name": "log-draw-atlzdo",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "idi-nf-simples-remes",
+        "type": "integer",
+        "format": "99",
+        "extent": 0
+      },
+      {
+        "name": "log-memorando",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "cdn-modalid-transp",
+        "type": "integer",
+        "format": "9",
+        "extent": 0
+      },
+      {
+        "name": "cod-placa",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 3
+      },
+      {
+        "name": "cod-uf-placa",
+        "type": "character",
+        "format": "!!",
+        "extent": 3
+      },
+      {
+        "name": "nome-transp",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "cod-entrega",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "endereco",
+        "type": "character",
+        "format": "X(40)",
+        "extent": 0
+      },
+      {
+        "name": "bairro",
+        "type": "character",
+        "format": "X(30)",
+        "extent": 0
+      },
+      {
+        "name": "cep",
+        "type": "character",
+        "format": "x(12)",
+        "extent": 0
+      },
+      {
+        "name": "cidade",
+        "type": "character",
+        "format": "x(50)",
+        "extent": 0
+      },
+      {
+        "name": "pais",
+        "type": "character",
+        "format": "X(20)",
+        "extent": 0
+      },
+      {
+        "name": "log-consid-ender-nf-saida",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-recuper-impto-atlzdo",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "log-entreg-fut",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "cod-natur-vincul",
+        "type": "character",
+        "format": "x(06)",
+        "extent": 0
+      },
+      {
+        "name": "cod-chave-aces-nf-eletro",
+        "type": "character",
+        "format": "x(60)",
+        "extent": 0
+      },
+      {
+        "name": "cdn-sit-nfe",
+        "type": "integer",
+        "format": "9",
+        "extent": 0
+      },
+      {
+        "name": "log-tax-siscomex",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "idi-sit-nf-eletro",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "idi-bxa-devol",
+        "type": "integer",
+        "format": "9",
+        "extent": 0
+      },
+      {
+        "name": "log-atualiz-proces-export",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "idi-tip-operac",
+        "type": "integer",
+        "format": ">>9",
+        "extent": 0
+      },
+      {
+        "name": "cdn-depositante",
+        "type": "integer",
+        "format": ">>>>>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "ind-sit-wms-ext",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "ts-disp-integr",
+        "type": "datetime",
+        "format": "99\/99\/9999 HH:MM:SS.SSS",
+        "extent": 0
+      },
+      {
+        "name": "ts-processamento",
+        "type": "datetime",
+        "format": "99\/99\/9999 HH:MM:SS.SSS",
+        "extent": 0
+      },
+      {
+        "name": "obs-infcpl",
+        "type": "character",
+        "format": "x(1000)",
+        "extent": 0
+      },
+      {
+        "name": "obs-infadfisco",
+        "type": "character",
+        "format": "x(1000)",
+        "extent": 0
+      },
+      {
+        "name": "cod-tipo-nf-cred-deb",
+        "type": "character",
+        "format": "x(02)",
+        "extent": 0
+      },
+      {
+        "name": "cod-finalidade",
+        "type": "character",
+        "format": "x(02)",
+        "extent": 0
+      },
+      {
+        "name": "cod-chave-aces-cte-sub",
+        "type": "character",
+        "format": "x(60)",
+        "extent": 0
+      },
+      {
+        "name": "log-sumar",
+        "type": "logical",
+        "format": "Sim\/Nï¿½o",
+        "extent": 0
+      },
+      {
+        "name": "log-ctbl-atual",
+        "type": "logical",
+        "format": "Sim\/Nï¿½o",
+        "extent": 0
+      },
+      {
+        "name": "tipo-dfe-docto",
+        "type": "character",
+        "format": "x(20)",
+        "extent": 0
+      },
+      {
+        "name": "dt-competencia",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "valor-tot-nf-rt",
+        "type": "decimal",
+        "format": ">>,>>>,>>>,>>>,>>9.99",
+        "extent": 0
+      },
+      {
+        "name": "cod-tipo-oper-gov",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      },
+      {
+        "name": "cod-tipo-ente-gov",
+        "type": "integer",
+        "format": ">9",
+        "extent": 0
+      }
+    ]
+  },
+  {
+    "table": "ems5.dia_calend_glob",
+    "fields": [
+      {
+        "name": "cod_calend",
+        "type": "character",
+        "format": "x(8)",
+        "extent": 0
+      },
+      {
+        "name": "dat_calend",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "cod_clas_dia_calend",
+        "type": "character",
+        "format": "x(8)",
+        "extent": 0
+      },
+      {
+        "name": "des_dia_calend",
+        "type": "character",
+        "format": "x(30)",
+        "extent": 0
+      },
+      {
+        "name": "qtd_hora_util",
+        "type": "decimal",
+        "format": ">9.99",
+        "extent": 0
+      },
+      {
+        "name": "log_dia_util",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "cod_livre_1",
+        "type": "character",
+        "format": "x(100)",
+        "extent": 0
+      },
+      {
+        "name": "log_livre_1",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "num_livre_1",
+        "type": "integer",
+        "format": ">>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "val_livre_1",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.9999",
+        "extent": 0
+      },
+      {
+        "name": "dat_livre_1",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "cod_livre_2",
+        "type": "character",
+        "format": "x(100)",
+        "extent": 0
+      },
+      {
+        "name": "dat_livre_2",
+        "type": "date",
+        "format": "99\/99\/9999",
+        "extent": 0
+      },
+      {
+        "name": "log_livre_2",
+        "type": "logical",
+        "format": "Sim\/Não",
+        "extent": 0
+      },
+      {
+        "name": "num_livre_2",
+        "type": "integer",
+        "format": ">>>>>9",
+        "extent": 0
+      },
+      {
+        "name": "val_livre_2",
+        "type": "decimal",
+        "format": ">>>,>>>,>>9.9999",
+        "extent": 0
+      }
+    ]
+  }
+]

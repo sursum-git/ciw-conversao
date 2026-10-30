@@ -1,0 +1,210 @@
+{
+  "programDraft": {
+    "programCode": "op1035",
+    "programTitle": "Itens históricos da versão de custo",
+    "module": "operacional",
+    "pageType": "crud",
+    "builderEntityCode": "container_versoes_historico_med_progress",
+    "screenId": "ciw.container-versao-itens-historico",
+    "version": "1.0.1",
+    "subtitle": "Snapshot persistido da versão selecionada — MED",
+    "icon": null,
+    "permissionPrefix": "container_versoes_historico_med_progress",
+    "gridEditMode": "form",
+    "crudOptions": {
+      "pageSize": 30,
+      "gridFields": [
+        {
+          "field": "item_container_custo_id",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "item_container_id",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "it_codigo",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "item_custo_id",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "vl_desp_prev_real",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "vl_custo_prev_real",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "vl_pago_real",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "qt_alocada",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "qt_confirm_emb",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "qt_recebto_fisico",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "vl_desp_realiz_real",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "vl_unit_prev",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "vl_unit_realiz",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "vl_desp_prev_dolar",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "vl_custo_prev_dolar",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "vl_pago_dolar",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "vl_desp_realiz_dolar",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "vl_desconto_utiliz_dolar",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "vl_unit_prev_dolar",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "vl_unit_realiz_dolar",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "vl_custo_distribuido",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "vl_negociado",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "vl_desp_prev_real_sem_distr_cust",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "vl_desp_prev_dolar_sem_distr_cus",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "qt_embarcada",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "vl_desconto_utiliz_real",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "item_descricao_atual",
+          "hidden": false,
+          "width": 260
+        }
+      ],
+      "filterFields": [
+        "item_container_custo_id",
+        "item_container_id",
+        "it_codigo",
+        "item_custo_id",
+        "item_descricao_atual"
+      ],
+      "defaultSort": [
+        {
+          "field": "qt_embarcada",
+          "dir": "desc"
+        }
+      ]
+    },
+    "processOptions": null,
+    "formOptions": null,
+    "rowLinks": [],
+    "contextFields": [
+      {
+        "field": "container_id",
+        "filter": true,
+        "createDefault": true,
+        "readonly": true,
+        "required": true
+      },
+      {
+        "field": "versao_id",
+        "filter": true,
+        "createDefault": true,
+        "readonly": true,
+        "required": true
+      }
+    ],
+    "allowCreate": false,
+    "allowUpdate": false,
+    "allowDelete": false,
+    "changeSummary": "Acrescenta coluna de cadastro atual somente leitura; snapshot e contexto preservados.",
+    "programOrigin": "standard",
+    "ownerScope": "system",
+    "customizationPolicy": "overlay_only",
+    "subscriberId": null,
+    "baseProgramCode": null,
+    "baseProgramVersionId": null,
+    "upgradeFrozen": false,
+    "frozenReason": null,
+    "publicationPolicy": {
+      "allowedDatabaseEnvironments": []
+    },
+    "analyticsConfig": null,
+    "reportConfig": null,
+    "specialDocumentConfig": null,
+    "regulatedDocumentConfig": null,
+    "masterDetailConfig": null,
+    "customMode": null,
+    "customEntryUrl": null,
+    "customFrameTitle": null
+  }
+}

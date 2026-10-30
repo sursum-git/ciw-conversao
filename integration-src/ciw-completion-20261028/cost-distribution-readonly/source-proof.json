@@ -1,0 +1,442 @@
+{
+  "scope": "op1049 global, no MED/company/filter invented",
+  "sources": [
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/cons_itens_aptos_distr_custo/cons_itens_aptos_distr_custo.php",
+      "sha256": "e1d0cf803778d29fa69133bea5923cfe181283472862f0e8d05cf240a9e1b4b4"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/cons_itens_aptos_distr_custo/cons_itens_aptos_distr_custo_grid.class.php",
+      "sha256": "0ed471882cc0492bdea00a50c453a417935f94604523a2911e8ea27977eb1d80"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/cons_itens_aptos_distr_custo/cons_itens_aptos_distr_custo_lookup.class.php",
+      "sha256": "90cbc8b84552b41358de97a54c67808bc3262fa7b10a0af3b91d69f9e1843a29"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/cons_itens_aptos_distr_custo/cons_itens_aptos_distr_custo_pesq.class.php",
+      "sha256": "52510f8ecd80b58e847b37872c324bcd4714ca5e9338a65f498e732f4725c84f"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/cons_itens_aptos_distr_custo/index.php",
+      "sha256": "e5f4efa13f5081fefd8fba63c12d97dfc870e7d58ca53e301a5f91cb41067740"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/cons_cta_corren_custo_distr/cons_cta_corren_custo_distr.php",
+      "sha256": "3041cd75e539955a66ec8f735e7ee7620710c27b90a6075ea8a1c4bf27bd591b"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/cons_cta_corren_custo_distr/cons_cta_corren_custo_distr_grid.class.php",
+      "sha256": "0ee3e749c5b83d342d27723893469926c71d1dd4b90886886ed9a694a94d662d"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/cons_cta_corren_custo_distr/cons_cta_corren_custo_distr_lookup.class.php",
+      "sha256": "480f971b013eb3a19bbc4b0f4836a22984e9a96a34ffcf40aacfb46c82d23605"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/cons_cta_corren_custo_distr/cons_cta_corren_custo_distr_pesq.class.php",
+      "sha256": "653f8cc050fd1a13275af2288999eccb2466c3a86422239dc211cffe3889c789"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/cons_cta_corren_custo_distr/index.php",
+      "sha256": "eab41f39d50f03d0bbc183e57efe7d34922416b1b106cc419dfe75e53334f248"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/cons_cta_corren_distr_item_container/cons_cta_corren_distr_item_container.php",
+      "sha256": "64f0cffca94c1fcd071a403dc3c73f2bdf2a4c42cdd277a378df79a50f024622"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/cons_cta_corren_distr_item_container/cons_cta_corren_distr_item_container_grid.class.php",
+      "sha256": "87b8d21fc97cd20a90ad52a5e32fce2d9c46e181ebfc930c1bf65deee793606a"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/cons_cta_corren_distr_item_container/cons_cta_corren_distr_item_container_lookup.class.php",
+      "sha256": "c248eb46bc5dc1dd3fedf8c268115e49e58d32fc6c9f1d2880fa59a5666e9a9f"
+    },
+    {
+      "path": "sources/scriptcase/ciw-completion-next20-20261028/cons_cta_corren_distr_item_container/index.php",
+      "sha256": "610c2f1521ecddcb9edd94fc98b88a4a70d042f420e5b6c2bb95d66d64dfee96"
+    }
+  ],
+  "schemas": [
+    {
+      "path": "integration-src/container-panel/schema/schema-itens_container.json",
+      "sha256": "cb27024b0fce79e3528d21e9267bad20927eb6bf9adb7a6ee54bf86404523ebd",
+      "table": "itens_container",
+      "indexes": [
+        {
+          "name": "ind_container_id",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "container_id"
+          ]
+        },
+        {
+          "name": "ind_item_proc_compra_id",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "item_proc_compra_id"
+          ]
+        },
+        {
+          "name": "ind_itens_container",
+          "unique": true,
+          "primary": true,
+          "fields": [
+            "item_container_id"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "integration-src/container-panel/schema/schema-pp-container.json",
+      "sha256": "c8034298dd1e210827826c069647fcc1446143552751e77a2ee9661e81a1d813",
+      "table": "pp-container",
+      "indexes": [
+        {
+          "name": "indice1",
+          "unique": true,
+          "primary": true,
+          "fields": [
+            "nr-container"
+          ]
+        },
+        {
+          "name": "ind_dt_prev_chegada",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "dt-prev-chegada"
+          ]
+        },
+        {
+          "name": "ind_dt_recbto",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "dt-recebimento",
+            "dt-prev-chegada",
+            "nr-container"
+          ]
+        },
+        {
+          "name": "ind_fornec",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "cod-emit-forn",
+            "nr-container"
+          ]
+        },
+        {
+          "name": "ind_origem",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "num_origem",
+            "nr-container"
+          ]
+        },
+        {
+          "name": "ind_situacao",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "situacao",
+            "nr-container"
+          ]
+        },
+        {
+          "name": "ind_sit_container",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "situacao_container_id"
+          ]
+        },
+        {
+          "name": "ind_versao_custo_desatu",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "log_versao_custo_desatualizada",
+            "nr-container"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "integration-src/container-panel/schema/schema-itens_proc_compra.json",
+      "sha256": "06ccaf4c0570026c79acb46fe982b139aa19e139985dd8c33eebb6afaaf51a0f",
+      "table": "itens_proc_compra",
+      "indexes": [
+        {
+          "name": "ind_codigo_erp",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "codigo_erp"
+          ]
+        },
+        {
+          "name": "ind_descricao",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "descricao"
+          ]
+        },
+        {
+          "name": "ind_itens_proc_compra",
+          "unique": true,
+          "primary": true,
+          "fields": [
+            "item_proc_compra_id"
+          ]
+        },
+        {
+          "name": "ind_procs_compra",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "proc_compra_id"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "integration-src/container-panel/schema/schema-procs_compra.json",
+      "sha256": "7a75322f54cb8018cd72349f0c0fb7998833d6ca2f18d14eaeaecbd260cf861b",
+      "table": "procs_compra",
+      "indexes": [
+        {
+          "name": "ind_cod_situacao",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "cod_situacao"
+          ]
+        },
+        {
+          "name": "ind_empresa",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "empresa_id"
+          ]
+        },
+        {
+          "name": "ind_fornecedor",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "fornecedor_id"
+          ]
+        },
+        {
+          "name": "ind_procs_compra",
+          "unique": true,
+          "primary": true,
+          "fields": [
+            "proc_compra_id"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "integration-src/container-panel/schema/ems2cad/schema-emitente.json",
+      "sha256": "e6655fe27ee81d1121b6f869fd5dc65bbaf90201c7299ca4cc13e18544687ae5",
+      "table": "emitente",
+      "indexes": [
+        {
+          "name": "cgc",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "cgc"
+          ]
+        },
+        {
+          "name": "ch-cobranca",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "end-cobranca",
+            "nome-abrev"
+          ]
+        },
+        {
+          "name": "ch-conpag",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "cod-cond-pag"
+          ]
+        },
+        {
+          "name": "ch-matriz",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "nome-matriz"
+          ]
+        },
+        {
+          "name": "ch-natope",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "nat-operacao"
+          ]
+        },
+        {
+          "name": "ch-pais",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "pais"
+          ]
+        },
+        {
+          "name": "ch-portador",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "portador",
+            "modalidade"
+          ]
+        },
+        {
+          "name": "ch-prog-emit",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "prog-emit",
+            "cod-emitente"
+          ]
+        },
+        {
+          "name": "ch-short-name",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "short-name"
+          ]
+        },
+        {
+          "name": "codigo",
+          "unique": true,
+          "primary": true,
+          "fields": [
+            "cod-emitente"
+          ]
+        },
+        {
+          "name": "emtclnfr-19",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "cidade",
+            "cod-emitente"
+          ]
+        },
+        {
+          "name": "emtclnfr-20",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "nome-tr-red"
+          ]
+        },
+        {
+          "name": "emtclnfr-21",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "dt-atualiza",
+            "hra-atualiz"
+          ]
+        },
+        {
+          "name": "gr-mic-cli",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "cod-gr-cli",
+            "nome-mic-reg",
+            "cod-emitente"
+          ]
+        },
+        {
+          "name": "grupo-cli",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "cod-gr-cli",
+            "cod-emitente"
+          ]
+        },
+        {
+          "name": "grupo-fornec",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "cod-gr-forn",
+            "cod-emitente"
+          ]
+        },
+        {
+          "name": "micro-reg",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "nome-mic-reg",
+            "cod-emitente"
+          ]
+        },
+        {
+          "name": "nome",
+          "unique": true,
+          "primary": false,
+          "fields": [
+            "nome-abrev"
+          ]
+        },
+        {
+          "name": "repres",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "cod-rep",
+            "cod-emitente"
+          ]
+        },
+        {
+          "name": "transporte",
+          "unique": false,
+          "primary": false,
+          "fields": [
+            "cod-transp",
+            "cod-emitente"
+          ]
+        }
+      ]
+    }
+  ],
+  "origin": {
+    "app": "cons_itens_aptos_distr_custo",
+    "join": "index.php:1220",
+    "globalWhere": "index.php:3987",
+    "projection": "grid.class.php:933",
+    "labels": "lookup.class.php:23,66",
+    "predicate": "container.situacao <> 3",
+    "columns": 9,
+    "formula": false
+  },
+  "pending": {
+    "op1048": "UNION aggregates and synthetic prior balance; SQL probe required",
+    "itemLedger": "separate selected item origin, not converted"
+  }
+}

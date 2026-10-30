@@ -1,0 +1,77 @@
+{
+  "database": "espec",
+  "table": "situacoes_container",
+  "fields": [
+    {
+      "name": "situacao_container_id",
+      "type": "integer",
+      "format": ">9",
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "descricao",
+      "type": "character",
+      "format": "x(100)",
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_gerar_saldo_a_pagar",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "initial": "Sim",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log_gerar_distr_custo",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "initial": "Sim",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "num_ordem",
+      "type": "integer",
+      "format": "999",
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    }
+  ],
+  "indexes": [
+    {
+      "name": "ind_situacoes_container",
+      "unique": true,
+      "primary": true,
+      "fields": [
+        "situacao_container_id"
+      ]
+    }
+  ],
+  "triggers": [
+  ],
+  "tipoAnexoIdTables": [
+    "pp-container",
+    "versoes_item_custo_container"
+  ]
+}

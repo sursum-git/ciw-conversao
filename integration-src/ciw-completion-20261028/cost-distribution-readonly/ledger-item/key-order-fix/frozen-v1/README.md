@@ -1,0 +1,11 @@
+# op1050 — guard de chaves por conjunto exato
+
+P1 comprovado antes dos metadados1050: CiwErpReadService.RowJson percorre cFieldList e acrescenta os campos pertencentes a cKeyList. A projeção do ledger começa cta_corren_custo_distr_id e inclui item_container_id depois; o JSON gerado conserva essa ordem. O guard PHP comparava array_keys ordenados a owner/PK e rejeitava a resposta válida como502. A suíte antiga usava uma string owner-first construída no teste; não atravessava a serialização real do leitor.
+
+O candidato altera UMA linha de RuntimeCostDistributionLedgerRead: exige objeto, cardinalidade e conjunto exato de campos, no mesmo padrão do guard1046. Mantém valores INTEGER, limites físicos, propriedade do contexto, igualdade com a chave opaca pedida e aliases brutos. Nenhuma chave é reserializada ou normalizada no transporte. Nenhuma alteração ABL, API, fórmula, schema, metadata, grant ou DDL. Canônico e frozen-v1 não foram editados.
+
+A fixture tests/reader-row.json foi emitida pelo leitor official7 EXATO SHA8d7d6da8069bdee82e5c4c95fca3df643e918ae10b96ef22d8a77459ac7bd3cc, executado localmente sobre os temp-tables existentes do teste1050. Só foi acrescentado WriteFile na cópia privada do TESTE após obter a primeira linha;31checks/NUMDBS0 PASS. Os IDs/textos são dados sintéticos da fixture, não registros do banco. Compile local12.8 das quatro entradas existentes foi apenas diagnóstico e exportação da fixture; nenhum programa novo de produto ou .r publicado.
+
+Prova RED: runtime real readCiwErpPage rejeita a linha serializada502. GREEN:7testes44asserções de read/get reais, fixture original/owner-first, chave opaca exata em request/response, campos a mais/ausentes, owner diferente com chave válida, IDs físicos/string em chave, aliases diferentes mesmo com identidade equivalente, erro no body. Mocks apenas de transporte/repositórios; seleção/regra não foi mockada. Full suite7 mais incremento:917testes6018asserções PASS.
+
+Integrar somente exactcandidate PHP após comparar baselineSha256. Não recompilar/republicar ABL por este fix. Depois root deve validar runtime nativo1050 read/get com chave produzida pelo PASOE e manter metadados retidos até aprovação. Freezes anteriores e staging7 permanecem imutáveis; este companion descreve o delta posterior.

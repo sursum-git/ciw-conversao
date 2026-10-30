@@ -1,0 +1,488 @@
+{
+  "entityDraft": {
+    "code": "container_custos_comparacao_dolar_progress",
+    "name": "ComparaÃ§Ã£o histÃ³rica de custos â€” USD",
+    "entityType": "api",
+    "createPhysicalTable": false,
+    "structureType": "main",
+    "structureModuleCode": "operacional",
+    "structureBaseNumber": 1041,
+    "apiSourceCode": "motor_progress_ciw_cadastros",
+    "apiListOperationCode": "container_custos_comparacao_dolar_read",
+    "apiDetailOperationCode": "container_custos_comparacao_dolar_get",
+    "fields": [
+      {
+        "code": "record_key",
+        "label": "Chave da linha",
+        "dataType": "string",
+        "primaryKey": true,
+        "required": false,
+        "readonlyField": true,
+        "position": 0,
+        "apiJsonPath": "record_key",
+        "apiWritePath": "record_key",
+        "apiShowInGrid": false,
+        "apiShowInForm": false,
+        "apiShowInFilter": false,
+        "options": {
+          "readonly": true,
+          "writable": false
+        },
+        "length": 2048
+      },
+      {
+        "code": "container_id",
+        "label": "Container",
+        "dataType": "integer",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "position": 10,
+        "apiJsonPath": "container_id",
+        "apiWritePath": "container_id",
+        "apiShowInGrid": false,
+        "apiShowInForm": false,
+        "apiShowInFilter": false,
+        "options": {
+          "readonly": true,
+          "writable": false
+        }
+      },
+      {
+        "code": "versao_id",
+        "label": "VersÃ£o",
+        "dataType": "integer",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "position": 20,
+        "apiJsonPath": "versao_id",
+        "apiWritePath": "versao_id",
+        "apiShowInGrid": false,
+        "apiShowInForm": false,
+        "apiShowInFilter": false,
+        "options": {
+          "readonly": true,
+          "writable": false
+        }
+      },
+      {
+        "code": "item_container_custo_id",
+        "label": "Item histÃ³rico",
+        "dataType": "integer",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "position": 30,
+        "apiJsonPath": "item_container_custo_id",
+        "apiWritePath": "item_container_custo_id",
+        "apiShowInGrid": false,
+        "apiShowInForm": false,
+        "apiShowInFilter": false,
+        "options": {
+          "readonly": true,
+          "writable": false
+        }
+      },
+      {
+        "code": "item_container_id",
+        "label": "Item do container",
+        "dataType": "integer",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "position": 40,
+        "apiJsonPath": "item_container_id",
+        "apiWritePath": "item_container_id",
+        "apiShowInGrid": false,
+        "apiShowInForm": false,
+        "apiShowInFilter": false,
+        "options": {
+          "readonly": true,
+          "writable": false
+        }
+      },
+      {
+        "code": "codigo_erp",
+        "label": "CÃ³digo ERP atual",
+        "dataType": "string",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "position": 50,
+        "apiJsonPath": "codigo_erp",
+        "apiWritePath": "codigo_erp",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "options": {
+          "readonly": true,
+          "writable": false
+        }
+      },
+      {
+        "code": "descricao",
+        "label": "DescriÃ§Ã£o atual do item",
+        "dataType": "string",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "position": 60,
+        "apiJsonPath": "descricao",
+        "apiWritePath": "descricao",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "options": {
+          "readonly": true,
+          "writable": false
+        }
+      },
+      {
+        "code": "qt_alocada",
+        "label": "Quantidade alocada",
+        "dataType": "decimal",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "position": 70,
+        "apiJsonPath": "qt_alocada",
+        "apiWritePath": "qt_alocada",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "options": {
+          "readonly": true,
+          "writable": false
+        },
+        "scale": 2
+      },
+      {
+        "code": "qt_confirm_emb",
+        "label": "Quantidade confirmada",
+        "dataType": "decimal",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "position": 80,
+        "apiJsonPath": "qt_confirm_emb",
+        "apiWritePath": "qt_confirm_emb",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "options": {
+          "readonly": true,
+          "writable": false
+        },
+        "scale": 2
+      },
+      {
+        "code": "vl_custo_prev",
+        "label": "Mercadoria",
+        "dataType": "decimal",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "position": 90,
+        "apiJsonPath": "vl_custo_prev",
+        "apiWritePath": "vl_custo_prev",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "options": {
+          "readonly": true,
+          "writable": false
+        },
+        "scale": 2
+      },
+      {
+        "code": "vl_desp_prev",
+        "label": "Despesa",
+        "dataType": "decimal",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "position": 100,
+        "apiJsonPath": "vl_desp_prev",
+        "apiWritePath": "vl_desp_prev",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "options": {
+          "readonly": true,
+          "writable": false
+        },
+        "scale": 2
+      },
+      {
+        "code": "vl_tot_prev",
+        "label": "Total",
+        "dataType": "decimal",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "position": 110,
+        "apiJsonPath": "vl_tot_prev",
+        "apiWritePath": "vl_tot_prev",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "options": {
+          "readonly": true,
+          "writable": false
+        },
+        "scale": 2
+      },
+      {
+        "code": "vl_unit_prev",
+        "label": "UnitÃ¡rio",
+        "dataType": "decimal",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "position": 120,
+        "apiJsonPath": "vl_unit_prev",
+        "apiWritePath": "vl_unit_prev",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "options": {
+          "readonly": true,
+          "writable": false
+        },
+        "scale": 2
+      },
+      {
+        "code": "vl_desp_prev_sem_distr_custo",
+        "label": "Despesa sem distribuiÃ§Ã£o",
+        "dataType": "decimal",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "position": 130,
+        "apiJsonPath": "vl_desp_prev_sem_distr_custo",
+        "apiWritePath": "vl_desp_prev_sem_distr_custo",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "options": {
+          "readonly": true,
+          "writable": false
+        },
+        "scale": 2
+      },
+      {
+        "code": "vl_tot_sem_distr_custo",
+        "label": "Total sem distribuiÃ§Ã£o",
+        "dataType": "decimal",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "position": 140,
+        "apiJsonPath": "vl_tot_sem_distr_custo",
+        "apiWritePath": "vl_tot_sem_distr_custo",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "options": {
+          "readonly": true,
+          "writable": false
+        },
+        "scale": 2
+      },
+      {
+        "code": "vl_unit_sem_distr_custo",
+        "label": "UnitÃ¡rio sem distribuiÃ§Ã£o",
+        "dataType": "decimal",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "position": 150,
+        "apiJsonPath": "vl_unit_sem_distr_custo",
+        "apiWritePath": "vl_unit_sem_distr_custo",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "options": {
+          "readonly": true,
+          "writable": false
+        },
+        "scale": 2
+      },
+      {
+        "code": "vl_desp_prev_perc_fixo",
+        "label": "Despesa percentual fixo",
+        "dataType": "decimal",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "position": 160,
+        "apiJsonPath": "vl_desp_prev_perc_fixo",
+        "apiWritePath": "vl_desp_prev_perc_fixo",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "options": {
+          "readonly": true,
+          "writable": false
+        },
+        "scale": 2
+      },
+      {
+        "code": "vl_tot_perc_fixo",
+        "label": "Total percentual fixo",
+        "dataType": "decimal",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "position": 170,
+        "apiJsonPath": "vl_tot_perc_fixo",
+        "apiWritePath": "vl_tot_perc_fixo",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "options": {
+          "readonly": true,
+          "writable": false
+        },
+        "scale": 2
+      },
+      {
+        "code": "vl_unit_perc_fixo",
+        "label": "UnitÃ¡rio percentual fixo",
+        "dataType": "decimal",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "position": 180,
+        "apiJsonPath": "vl_unit_perc_fixo",
+        "apiWritePath": "vl_unit_perc_fixo",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "options": {
+          "readonly": true,
+          "writable": false
+        },
+        "scale": 2
+      }
+    ]
+  },
+  "programDraft": {
+    "programCode": "op1041",
+    "programTitle": "ComparaÃ§Ã£o histÃ³rica de custos â€” USD",
+    "module": "operacional",
+    "pageType": "crud",
+    "builderEntityCode": "container_custos_comparacao_dolar_progress",
+    "screenId": "ciw.container-custos-comparacao-dolar",
+    "version": "1.0.0",
+    "subtitle": "VersÃ£o persistida selecionada; cÃ³digo e descriÃ§Ã£o atuais. Consulta global.",
+    "permissionPrefix": "container_custos_comparacao_dolar_progress",
+    "programOrigin": "standard",
+    "ownerScope": "system",
+    "gridEditMode": "form",
+    "allowCreate": false,
+    "allowUpdate": false,
+    "allowDelete": false,
+    "rowLinks": [],
+    "contextFields": [
+      {
+        "field": "container_id",
+        "filter": true,
+        "createDefault": true,
+        "readonly": true,
+        "required": true
+      },
+      {
+        "field": "versao_id",
+        "filter": true,
+        "createDefault": true,
+        "readonly": true,
+        "required": true
+      }
+    ],
+    "crudOptions": {
+      "pageSize": 30,
+      "gridFields": [
+        {
+          "field": "codigo_erp",
+          "width": 170
+        },
+        {
+          "field": "descricao",
+          "width": 320
+        },
+        {
+          "field": "qt_alocada",
+          "width": 170
+        },
+        {
+          "field": "qt_confirm_emb",
+          "width": 170
+        },
+        {
+          "field": "vl_custo_prev",
+          "width": 170
+        },
+        {
+          "field": "vl_desp_prev",
+          "width": 170
+        },
+        {
+          "field": "vl_tot_prev",
+          "width": 170
+        },
+        {
+          "field": "vl_unit_prev",
+          "width": 170
+        },
+        {
+          "field": "vl_desp_prev_sem_distr_custo",
+          "width": 170
+        },
+        {
+          "field": "vl_tot_sem_distr_custo",
+          "width": 170
+        },
+        {
+          "field": "vl_unit_sem_distr_custo",
+          "width": 170
+        },
+        {
+          "field": "vl_desp_prev_perc_fixo",
+          "width": 170
+        },
+        {
+          "field": "vl_tot_perc_fixo",
+          "width": 170
+        },
+        {
+          "field": "vl_unit_perc_fixo",
+          "width": 170
+        }
+      ],
+      "filterFields": [
+        "codigo_erp",
+        "descricao",
+        "qt_alocada",
+        "qt_confirm_emb",
+        "vl_custo_prev",
+        "vl_desp_prev",
+        "vl_tot_prev",
+        "vl_unit_prev",
+        "vl_desp_prev_sem_distr_custo",
+        "vl_tot_sem_distr_custo",
+        "vl_unit_sem_distr_custo",
+        "vl_desp_prev_perc_fixo",
+        "vl_tot_perc_fixo",
+        "vl_unit_perc_fixo"
+      ],
+      "defaultSort": [
+        {
+          "field": "item_container_custo_id",
+          "dir": "asc"
+        }
+      ]
+    }
+  }
+}

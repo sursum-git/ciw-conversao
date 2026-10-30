@@ -1,0 +1,109 @@
+{
+  "date": "2026-10-26",
+  "instance": "sursum-api/med",
+  "state": "COMPLETED_CLEANED",
+  "applications": {
+    "control_selec_proc_compra": {
+      "screenId": "ciw.container-alocar-itens",
+      "programCode": "op1025",
+      "version": "1.0.0",
+      "published": true,
+      "runtimeReadValidated": true,
+      "operationalWriteValidated": true,
+      "state": "COMPLETED_CLEANED"
+    },
+    "grid_itens_proc_compra_selecao": {
+      "screenId": "ciw.container-alocar-itens",
+      "programCode": "op1025",
+      "version": "1.0.0",
+      "published": true,
+      "runtimeReadValidated": true,
+      "operationalWriteValidated": true,
+      "state": "COMPLETED_CLEANED"
+    }
+  },
+  "parent": {
+    "screenId": "ciw.container-painel",
+    "version": "1.0.8",
+    "tabs": 15,
+    "previousTabsPreserved": 14,
+    "visualTabValidated": true
+  },
+  "source": {
+    "code": "motor_progress_container_alocacao",
+    "operations": 4,
+    "oldIndividualSourcePreserved": true
+  },
+  "reused": [
+    "ContainersItensCrudService.p",
+    "ContainersAllocationBalance.p",
+    "ContainerTransactionAudit.i",
+    "existing fiscal and financial participants"
+  ],
+  "audit": {
+    "authenticatedActor": true,
+    "beforeAfter": true,
+    "isolatedTestsPassed": true,
+    "operationalPending": false,
+    "operationalValidated": true,
+    "realActor": "tadeu.parreiras",
+    "physicalImagesVerified": true,
+    "logsPreserved": true
+  },
+  "pending": [],
+  "businessWrites": true,
+  "controlsDeferredFinal": true,
+  "evidence": "docs/ciw-alocacao-lote-container-2026-10-26.md",
+  "operationalWriteValidated": true,
+  "access": {
+    "username": "tadeu.parreiras",
+    "addedOnly": [
+      "op1025.read",
+      "op1025.process"
+    ],
+    "verified": true
+  },
+  "operationalValidation": {
+    "success": true,
+    "state": "COMPLETED_CLEANED",
+    "tag": "SC_TEST_ALOC_LOTE_20261026",
+    "actor": "tadeu.parreiras",
+    "containerId": 2147000107,
+    "orderId": 1687,
+    "purchaseItemIds": [
+      3208,
+      3209,
+      3210
+    ],
+    "allocationIds": [
+      3285,
+      3286
+    ],
+    "allocationTransaction": 30058,
+    "repeatTransaction": 30060,
+    "batchEvents": 10,
+    "totalStoredLogs": 56,
+    "calculationIds": [
+      46746,
+      46747,
+      46748,
+      46749
+    ],
+    "expenseIds": [
+      43997,
+      43998,
+      43999,
+      44000,
+      44001
+    ],
+    "allOwnRecordsAbsent": true,
+    "allOwnFiscalEffectsDeleted": true,
+    "batchSnapshotsPreserved": true,
+    "logsPreserved": true,
+    "noSchemaChanges": true,
+    "noSequenceReset": true,
+    "canonicalFilesUnchanged": true,
+    "physicalAfterEvidence": "physical-after/probe.json",
+    "uiEvidence": "ui-logs-30058.jpg"
+  }
+}

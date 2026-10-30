@@ -1,0 +1,90 @@
+{
+  "schemaVersion": "1.0",
+  "pageType": "crud",
+  "screenId": "ciw.empresas",
+  "program": {
+    "id": "ciw.empresas",
+    "screenId": "ciw.empresas",
+    "module": "ciw",
+    "entity": "empresas_progress",
+    "title": "Empresas",
+    "version": "1.0.0"
+  },
+  "permissions": { "read": true, "create": true, "edit": true, "delete": true },
+  "dataSource": {
+    "api": {
+      "read": { "endpointId": "read", "method": "POST" },
+      "get": { "endpointId": "get", "method": "POST" },
+      "create": { "endpointId": "create", "method": "POST" },
+      "update": { "endpointId": "update", "method": "POST" },
+      "delete": { "endpointId": "delete", "method": "POST" }
+    }
+  },
+  "runtime": { "entityCode": "empresas_progress", "lock": { "enabled": false } },
+  "dataModel": {
+    "primaryKey": "empresa_id",
+    "fields": {
+      "empresa_id": { "type": "integer", "label": "ID", "editable": false, "nullable": true },
+      "nome": { "type": "string", "label": "Nome", "editable": true, "nullable": true, "validation": { "maxLength": 50 } },
+      "cod_emp_ems2": { "type": "integer", "label": "Código EMS2", "editable": true, "nullable": false, "defaultValue": 0 },
+      "cod_emp_ems5": { "type": "integer", "label": "Código EMS5", "editable": true, "nullable": false, "defaultValue": 0 }
+    }
+  },
+  "crud": {
+    "query": { "defaultPageSize": 20, "pageSizes": [10, 20, 50], "defaultSort": [{ "field": "empresa_id", "dir": "asc" }] },
+    "filter": {
+      "type": "window",
+      "title": "Consultar empresas",
+      "openOnLoad": false,
+      "waitForSubmitOnLoad": false,
+      "showAppliedFilters": true,
+      "fields": [
+        { "id": "nome", "field": "nome", "label": "Nome", "type": "string", "operator": "contains" },
+        { "id": "empresa_id", "field": "empresa_id", "label": "ID", "type": "integer", "operator": "eq" },
+        { "id": "cod_emp_ems2", "field": "cod_emp_ems2", "label": "Código EMS2", "type": "integer", "operator": "eq" },
+        { "id": "cod_emp_ems5", "field": "cod_emp_ems5", "label": "Código EMS5", "type": "integer", "operator": "eq" }
+      ]
+    },
+    "grid": {
+      "columns": [
+        { "field": "empresa_id", "title": "ID", "width": 90 },
+        { "field": "nome", "title": "Nome", "width": 320 },
+        { "field": "cod_emp_ems2", "title": "Código EMS2", "width": 140 },
+        { "field": "cod_emp_ems5", "title": "Código EMS5", "width": 140 }
+      ],
+      "toolbar": [
+        { "id": "create", "label": "Incluir", "icon": "plus", "action": "create", "permission": "create" },
+        { "id": "filters", "label": "Filtros", "icon": "filter", "action": "filters", "permission": "read" },
+        { "id": "refresh", "label": "Atualizar", "icon": "arrow-rotate-cw", "action": "refresh", "permission": "read" }
+      ],
+      "rowActions": [
+        { "id": "view", "label": "Consultar", "action": "view", "permission": "read" },
+        { "id": "edit", "label": "Alterar", "action": "edit", "permission": "edit" },
+        { "id": "delete", "label": "Excluir", "action": "delete", "permission": "delete" }
+      ]
+    },
+    "form": {
+      "id": "empresasProgressForm",
+      "mode": "popup",
+      "width": 680,
+      "layout": "tabs",
+      "title": { "create": "Incluir empresa", "edit": "Alterar empresa", "view": "Consultar empresa" },
+      "behavior": { "closeOnSave": true, "closeOnCancel": false },
+      "tabs": [{
+        "id": "geral",
+        "title": "Geral",
+        "sections": [{
+          "id": "dados",
+          "title": "Dados da empresa",
+          "columns": 2,
+          "fields": [
+            { "field": "empresa_id", "renderAs": "label", "colSpan": 2 },
+            { "field": "nome", "colSpan": 2 },
+            { "field": "cod_emp_ems2", "colSpan": 1 },
+            { "field": "cod_emp_ems5", "colSpan": 1 }
+          ]
+        }]
+      }]
+    }
+  }
+}

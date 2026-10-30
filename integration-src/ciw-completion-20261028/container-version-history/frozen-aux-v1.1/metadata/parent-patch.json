@@ -1,0 +1,123 @@
+{
+  "screenId": "ciw.container-versoes-custo",
+  "baselinePath": ".runtime/ciw-completion-20261028/official-build3/op1005-program-after.json",
+  "baselineSha256": "9fa6d4102e350ed1fff305d8d845df5c393f6af95ef183e847f97f93984cde1f",
+  "baselineVersion": "1.0.1",
+  "proposedVersion": "1.0.2",
+  "proposalOnly": true,
+  "note": "Patch addresses the exported published version as evidence. Create a new draft through the native Builder lifecycle; never mutate the published or archived version in place.",
+  "operations": [
+    {
+      "op": "test",
+      "path": "/versions/0/rowLinks",
+      "value": [
+        {
+          "id": "itens_historicos",
+          "label": "Itens desta versão",
+          "screenId": "ciw.container-versao-itens-historico",
+          "parameters": [
+            {
+              "field": "container_id",
+              "sourceField": "container_id"
+            },
+            {
+              "field": "versao_id",
+              "sourceField": "versao_id"
+            }
+          ],
+          "position": "end"
+        }
+      ]
+    },
+    {
+      "op": "test",
+      "path": "/versions/0/version",
+      "value": "1.0.1"
+    },
+    {
+      "op": "replace",
+      "path": "/versions/0/version",
+      "value": "1.0.2"
+    },
+    {
+      "op": "add",
+      "path": "/versions/0/rowLinks/-",
+      "value": {
+        "id": "payments_historicos",
+        "label": "Pagamentos históricos da versão",
+        "screenId": "ciw.container-versao-pagamentos-historico",
+        "parameters": [
+          {
+            "field": "container_id",
+            "sourceField": "container_id"
+          },
+          {
+            "field": "versao_id",
+            "sourceField": "versao_id"
+          }
+        ],
+        "position": "end"
+      }
+    },
+    {
+      "op": "add",
+      "path": "/versions/0/rowLinks/-",
+      "value": {
+        "id": "nfs_historicos",
+        "label": "NFs históricas da versão",
+        "screenId": "ciw.container-versao-nfs-historico",
+        "parameters": [
+          {
+            "field": "container_id",
+            "sourceField": "container_id"
+          },
+          {
+            "field": "versao_id",
+            "sourceField": "versao_id"
+          }
+        ],
+        "position": "end"
+      }
+    },
+    {
+      "op": "add",
+      "path": "/versions/0/rowLinks/-",
+      "value": {
+        "id": "discounts_historicos",
+        "label": "Descontos históricos da versão",
+        "screenId": "ciw.container-versao-descontos-historico",
+        "parameters": [
+          {
+            "field": "container_id",
+            "sourceField": "container_id"
+          },
+          {
+            "field": "versao_id",
+            "sourceField": "versao_id"
+          }
+        ],
+        "position": "end"
+      }
+    },
+    {
+      "op": "add",
+      "path": "/versions/0/rowLinks/-",
+      "value": {
+        "id": "expenses_historicos",
+        "label": "Despesas históricas da versão",
+        "screenId": "ciw.container-versao-despesas-historico",
+        "parameters": [
+          {
+            "field": "container_id",
+            "sourceField": "container_id"
+          },
+          {
+            "field": "versao_id",
+            "sourceField": "versao_id"
+          }
+        ],
+        "position": "end"
+      }
+    }
+  ]
+}

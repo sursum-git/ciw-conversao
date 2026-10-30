@@ -1,0 +1,19 @@
+{
+  "status": "READ_ONLY_DIAGNOSTIC_NOT_ENDPOINT_NOT_DEPLOYMENT",
+  "baseline": {
+    "source": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersVersionHistoryService.p",
+    "sha256": "32e81cdfa54c1494d573a83fb9977302fc9da6720b8bf7a8a638e7fff4a05a19"
+  },
+  "files": [
+    {
+      "file": "HistoryReadDiagnostic.p",
+      "sha256": "24c21c565fd0160187796bbe7c897d31faacb6a5348d01e888c7855a07e508e4"
+    },
+    {
+      "file": "ProbeHistoryPhysical.p",
+      "sha256": "9a7ccf778ccd6a8a9d5fbdb04562a46b78f4f4da90391e5a4f5bf9cc064da70e"
+    }
+  ],
+  "input": "SESSION:PARAMETER=positive container integer,positive version integer; numeric only, never written to output",
+  "output": "history-physical-probe.json: stage, schema names/types, counts and error numbers/callstack; no values/messages/tokens"
+}

@@ -1,0 +1,2696 @@
+{
+  "success": true,
+  "state": "CANDIDATE_READY_LOCAL_GREEN_ROOT_REVIEW_REQUIRED",
+  "createdAtUtc": "2026-10-29T03:11:43.964350+00:00",
+  "scope": "Generic native readonly CRUD integerRange plus isolated supplier1056 read-selection helper; no Grid/Form/Process/API generic changes",
+  "predecessorManifestSha256": "e2787dfe2f59cb5fd393c75f6db00fab308b93874c2a11317acb188d97bb3b8a",
+  "supplierFreezeManifestSha256": "ad6ae7a988a532c1e3d9adab252e7e408afdeec1367173dccee6887b7361470c",
+  "sharedFiles": [
+    {
+      "relative": "backend/src/Builder/ProgramBuilderService.php",
+      "role": "generic-native-capability",
+      "baselineSha256": "a58a98b85127c85377b1592c2f6bde38b0a8bf78ce86d343bed239cf084e0401",
+      "candidateSha256": "c0653c409de42dc98a9904c6b3bf4d86217e71d49445374700c30060093ba123",
+      "hunks": 4,
+      "bytePatch": "patches/ProgramBuilderService.php.bytepatch.json",
+      "roundTripExact": true
+    },
+    {
+      "relative": "src/page-engine/PageDefinitionNormalizer.js",
+      "role": "generic-native-capability",
+      "baselineSha256": "fb8a5b4612e4c5b7c839712d582515214022df809d86083dfb2c2d158868d533",
+      "candidateSha256": "7d3bc4553f3e88daa3dcb30c7610435199728ee257e3ad1c8f660faa9261099f",
+      "hunks": 6,
+      "bytePatch": "patches/PageDefinitionNormalizer.js.bytepatch.json",
+      "roundTripExact": true
+    },
+    {
+      "relative": "src/crud-engine/CrudDefinitionValidator.js",
+      "role": "generic-native-capability",
+      "baselineSha256": "a42792d03c65ef1e9b7c2a1b21f32c834861d63347789cde7e1e68202c6dfa0a",
+      "candidateSha256": "b9589de89540edfb222b801a25e34ab8b7afba52bce0407bc3cae9b5e3627a4c",
+      "hunks": 2,
+      "bytePatch": "patches/CrudDefinitionValidator.js.bytepatch.json",
+      "roundTripExact": true
+    },
+    {
+      "relative": "src/crud-engine/CrudEngine.js",
+      "role": "generic-native-capability",
+      "baselineSha256": "ae49f19edb1cc37fd7725c86ce85300b07868d693cc72a2f27a64f716d233d81",
+      "candidateSha256": "2ce07a9b7a8a9e3a06557e695dc71150b6c5d21d72120c9db120d367d390cd97",
+      "hunks": 3,
+      "bytePatch": "patches/CrudEngine.js.bytepatch.json",
+      "roundTripExact": true
+    },
+    {
+      "relative": "public/metadata/schemas/crud-definition-v1.schema.json",
+      "role": "generic-native-capability",
+      "baselineSha256": "c8631a7a5ca50cf4d7911ed1fc372a81b10a5f9011ec366f632e1ecdbf33a8b0",
+      "candidateSha256": "1889d1c3b290af83f441ace3293d18b3969f78c0837b1788cdf8b60fb2c2054c",
+      "hunks": 3,
+      "bytePatch": "patches/crud-definition-v1.schema.json.bytepatch.json",
+      "roundTripExact": true
+    },
+    {
+      "relative": "backend/src/Runtime/RuntimeImportDiscountRead.php",
+      "role": "private1056-helper",
+      "baselineSha256": "5e5d142c103c93b192123e104215ce7a2d186fe817465ba8c3198556caf668f3",
+      "candidateSha256": "d89428668214f8901cd02a32176200afa3433f645fddd3cf42cd749e8545893a",
+      "hunks": 3,
+      "bytePatch": "patches/RuntimeImportDiscountRead.php.bytepatch.json",
+      "roundTripExact": true
+    }
+  ],
+  "documentationFiles": [
+    {
+      "relative": "docs/paridade-demo-producao.md",
+      "role": "parity-documentation",
+      "baselineSha256": "9386954538c919367e6ef1b5bae9fe80b1b4d0da9e274231349b1d9e2ee411f0",
+      "candidateSha256": "e4e2a4ef8f32ec8f1f695044e742981d6183865a99dc8e7ee9592612692cd9ab",
+      "hunks": 1,
+      "bytePatch": "patches/paridade-demo-producao.md.bytepatch.json",
+      "roundTripExact": true
+    }
+  ],
+  "tests": {
+    "php": 903,
+    "assertions": 6005,
+    "stagedSources": 410,
+    "loadedAppStaged": 278,
+    "native": 31,
+    "redPreserved": true
+  },
+  "gates": [
+    "Compose only on exact FUTURE filterOnly/1056 helper baselines; never apply directly to canonical205/13",
+    "1056 Action/Query integration must be rebased by hunks on current13 after review; no routing proof claimed",
+    "Runtime/native permissions/publication and actual signed-supplier corpus remain root validation; no grants or business authorized here"
+  ],
+  "networkExecuted": false,
+  "canonicalWrites": false,
+  "businessWrites": false,
+  "metadataWrites": false,
+  "genericApiContextChanged": false,
+  "gridFormProcessChanged": false,
+  "files": [
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\ALTERNATIVAS.md",
+      "sha256": "3054e83da0e235707042395b2ae052be321c505fab3f57a51faedb7cca1a72ff",
+      "bytes": 3338
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\baseline\\backend\\src\\Builder\\ProgramBuilderService.php",
+      "sha256": "a58a98b85127c85377b1592c2f6bde38b0a8bf78ce86d343bed239cf084e0401",
+      "bytes": 481701
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\baseline\\backend\\src\\Runtime\\RuntimeImportDiscountRead.php",
+      "sha256": "5e5d142c103c93b192123e104215ce7a2d186fe817465ba8c3198556caf668f3",
+      "bytes": 7471
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\baseline\\docs\\paridade-demo-producao.md",
+      "sha256": "9386954538c919367e6ef1b5bae9fe80b1b4d0da9e274231349b1d9e2ee411f0",
+      "bytes": 108311
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\baseline\\public\\metadata\\schemas\\crud-definition-v1.schema.json",
+      "sha256": "c8631a7a5ca50cf4d7911ed1fc372a81b10a5f9011ec366f632e1ecdbf33a8b0",
+      "bytes": 66878
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\baseline\\src\\crud-engine\\CrudDefinitionValidator.js",
+      "sha256": "a42792d03c65ef1e9b7c2a1b21f32c834861d63347789cde7e1e68202c6dfa0a",
+      "bytes": 70900
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\baseline\\src\\crud-engine\\CrudEngine.js",
+      "sha256": "ae49f19edb1cc37fd7725c86ce85300b07868d693cc72a2f27a64f716d233d81",
+      "bytes": 155881
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\baseline\\src\\crud-engine\\CrudKendoFormRenderer.js",
+      "sha256": "430173106a0c9b420f346ab007f423cce4791821122ebec406bdc425e432338e",
+      "bytes": 145152
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\baseline\\src\\crud-engine\\CrudKendoGridRenderer.js",
+      "sha256": "e8c1211702ad756a5f55e74952fda3530b39cc70de1229cd6eb86e45165c223c",
+      "bytes": 106718
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\baseline\\src\\page-engine\\PageDefinitionNormalizer.js",
+      "sha256": "fb8a5b4612e4c5b7c839712d582515214022df809d86083dfb2c2d158868d533",
+      "bytes": 7246
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\baselines.json",
+      "sha256": "6526cac2230998c16425c87a6480ff4e83a260edbdeb09a884cdaadd2fc3e23f",
+      "bytes": 4441
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\candidate\\backend\\src\\Builder\\ProgramBuilderService.php",
+      "sha256": "c0653c409de42dc98a9904c6b3bf4d86217e71d49445374700c30060093ba123",
+      "bytes": 483005
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\candidate\\backend\\src\\Runtime\\RuntimeImportDiscountRead.php",
+      "sha256": "d89428668214f8901cd02a32176200afa3433f645fddd3cf42cd749e8545893a",
+      "bytes": 7705
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\candidate\\docs\\paridade-demo-producao.md",
+      "sha256": "e4e2a4ef8f32ec8f1f695044e742981d6183865a99dc8e7ee9592612692cd9ab",
+      "bytes": 108904
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\candidate\\public\\metadata\\schemas\\crud-definition-v1.schema.json",
+      "sha256": "1889d1c3b290af83f441ace3293d18b3969f78c0837b1788cdf8b60fb2c2054c",
+      "bytes": 68123
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\candidate\\src\\crud-engine\\CrudDefinitionValidator.js",
+      "sha256": "b9589de89540edfb222b801a25e34ab8b7afba52bce0407bc3cae9b5e3627a4c",
+      "bytes": 71185
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\candidate\\src\\crud-engine\\CrudEngine.js",
+      "sha256": "2ce07a9b7a8a9e3a06557e695dc71150b6c5d21d72120c9db120d367d390cd97",
+      "bytes": 156529
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\candidate\\src\\crud-engine\\CrudKendoFormRenderer.js",
+      "sha256": "430173106a0c9b420f346ab007f423cce4791821122ebec406bdc425e432338e",
+      "bytes": 145152
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\candidate\\src\\crud-engine\\CrudKendoGridRenderer.js",
+      "sha256": "e8c1211702ad756a5f55e74952fda3530b39cc70de1229cd6eb86e45165c223c",
+      "bytes": 106718
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\candidate\\src\\page-engine\\PageDefinitionNormalizer.js",
+      "sha256": "7d3bc4553f3e88daa3dcb30c7610435199728ee257e3ad1c8f660faa9261099f",
+      "bytes": 9004
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\evidence.json",
+      "sha256": "66cb5cb20737629ebe9a8ac2508c5cb1439ae95f8d0c593193dceb4425df1187",
+      "bytes": 1342
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\examples\\README.md",
+      "sha256": "5d1a5674a9f458c800bc73434ad285ff912c68f917f6148bb0bc588da95360ec",
+      "bytes": 1074
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\examples\\supplier-discounts-integer-range.json",
+      "sha256": "c5c250443c1b26ab6f7c5ca1ba70e964b393e2624fa88b502fe7d24d11f52f52",
+      "bytes": 165560
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\metadata\\before\\op1002-external-test-input.json",
+      "sha256": "2b1213bc534cc5353aea96fa8f8bc4f07288a76281e066fb3f2384db8b849c90",
+      "bytes": 63587
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\metadata\\before\\op1008-external-test-input.json",
+      "sha256": "c9f12c121a6963720326843835e4dacb431418dda70a43243002ae07909e0872",
+      "bytes": 95153
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\metadata\\before\\op1014-external-test-input.json",
+      "sha256": "7f898e83714344f78a49f53cc70772c8ae7789f37f54a1362ed1b94172e0e9c9",
+      "bytes": 191430
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\metadata\\candidate\\op1002-external-test-input.json",
+      "sha256": "fe18a915ee56efabdad27108f66b2def3618286a0c8e47212b517e38b8fb16ea",
+      "bytes": 64351
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\metadata\\candidate\\op1008-external-test-input.json",
+      "sha256": "159135bd3ccca98f7a9fc8224c2e788bd97cf602d69f2f34a7b29d837c98b08e",
+      "bytes": 96154
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\metadata\\candidate\\op1014-external-test-input.json",
+      "sha256": "c46773c0355d375c34097081c84cd430c80c2f0df9400ab8e25d83dfe5833031",
+      "bytes": 191761
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\patches\\crud-definition-v1.schema.json.bytepatch.json",
+      "sha256": "af4ffcf256970d928b14083549379dba702566c005cdea7e899832b68ea22b7a",
+      "bytes": 3473
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\patches\\crud-definition-v1.schema.json.patch",
+      "sha256": "e47831e2253f9121886e5d2b44ed34029fb71586fa0c2f0d1aeb5a070d816d09",
+      "bytes": 1970
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\patches\\CrudDefinitionValidator.js.bytepatch.json",
+      "sha256": "587718c99923d3ab25b5dc0c06e147ecb1938958018bf3a87965b6a4d548e451",
+      "bytes": 2127
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\patches\\CrudDefinitionValidator.js.patch",
+      "sha256": "bdcddc00b506e79c97a8a39eeead888aaf04403a312dd071fe1ba82de760c54f",
+      "bytes": 1663
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\patches\\CrudEngine.js.bytepatch.json",
+      "sha256": "2db73aefc66d9c186ae0f062dc73d04dc78e0b8475b620d0f95d829ced16206a",
+      "bytes": 2670
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\patches\\CrudEngine.js.patch",
+      "sha256": "36a967159fd458d99151e355d5110890aabac274dbe1d86a812fd8f786768fb4",
+      "bytes": 1959
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\patches\\PageDefinitionNormalizer.js.bytepatch.json",
+      "sha256": "9206e2f3c73d2b132006e369ac558f55065a593cd7af405d1f68a9577e9719f1",
+      "bytes": 7366
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\patches\\PageDefinitionNormalizer.js.patch",
+      "sha256": "cead2607b0387ebca0cdcca733037efbbe4a8898fbb86adf8709968e47ffef3e",
+      "bytes": 4774
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\patches\\paridade-demo-producao.md.bytepatch.json",
+      "sha256": "969e63813903729e36ca17742922d93398103e4872d90c7c6ddc27fa21abf480",
+      "bytes": 1553
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\patches\\paridade-demo-producao.md.patch",
+      "sha256": "be03ae463557d638f0dd92c56f013de07118685567055a08906b59bffb5ca812",
+      "bytes": 985
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\patches\\ProgramBuilderService.php.bytepatch.json",
+      "sha256": "b1e7d9b4f68d27dd73bdda240a529f2bb6f3ebbb87bbd14efe48c728c394c49c",
+      "bytes": 4980
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\patches\\ProgramBuilderService.php.patch",
+      "sha256": "3fea318fd82305430d5a2b3309128e11f054767394a77a0aa2f9bb34869826b9",
+      "bytes": 5364
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\patches\\RuntimeImportDiscountRead.php.bytepatch.json",
+      "sha256": "c4e8cc5582d772d16ac42150efc703f118407e0e19f8b4947427ba81c82e5aa2",
+      "bytes": 3515
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\patches\\RuntimeImportDiscountRead.php.patch",
+      "sha256": "423ef6bde04e28d5a1842e1bbe2dd5031f5afb9677cd9dd8946a6762d2bf7983",
+      "bytes": 3572
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\PLAN.md",
+      "sha256": "a745547d91391144f643c578aed26661cc14d33fecf23c6cfaa82004a6ff326c",
+      "bytes": 4997
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\prepare-candidate.py",
+      "sha256": "6617ddfd40c94b69704035a0866ba97ea6f3044bb3aa8e123a4c3f2aa764324a",
+      "bytes": 10949
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\prepare-final-stage.py",
+      "sha256": "c681587d3b19222be09f4870b32cfc5da01e05918868880cb211b793ae6416f5",
+      "bytes": 3400
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\replay-prepare.py",
+      "sha256": "f35b4b163e88ea84808abf25ad0ddba8030d45d11d4286fa8ae6e2d4fb2847e5",
+      "bytes": 915
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\REVIEW.md",
+      "sha256": "ca325aaae041cb63f8549c5afd80d1bc9ce2547c99c9a1e37b89c3896531f914",
+      "bytes": 2838
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\seal.py",
+      "sha256": "2898a1f133d18b6948043abb799bc5c71de3e524bbee8c2f160258345882d02f",
+      "bytes": 7380
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\TESTES.md",
+      "sha256": "06165234e162dcb505722858461c7fb04c6347611166720bfebcf9425483857e",
+      "bytes": 2595
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\tests\\bootstrap.php",
+      "sha256": "4c1b5fab3ab856a75610c92fad6265c87e83c95d3ba938d3980fa3d5bdbadd0f",
+      "bytes": 267
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\tests\\check-context.php",
+      "sha256": "c234230703a28cf7e14bc091ef6f8e87e7b885fd7f04e8fd02105cd1e09800d2",
+      "bytes": 628
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\tests\\diagnose-helper.php",
+      "sha256": "f1602cffc3186f24e2340352a9f85705f3aa071acaa429d5564095d6a2288c75",
+      "bytes": 1496
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\tests\\diagnose-native.cjs",
+      "sha256": "6ee85bbc4053b0bc45a72b8d396af3f743fee57ec68d3f27deff3e777ce76267",
+      "bytes": 3620
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\tests\\filter-only-native-boundaries.test.cjs",
+      "sha256": "339735eb9a5caae95e88b92f23549a4ff76eddfc7f3ef667a10782d2c5a86a18",
+      "bytes": 10874
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\tests\\filter-only-native-filter-only.test.cjs",
+      "sha256": "08421a464efe09d64165d91bbb4c44a07c95efbee2978d9bf35d1f042abe8f2f",
+      "bytes": 11024
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\tests\\filter-only-test-provenance.json",
+      "sha256": "af7989f3095068ef60377710a491ab9289b6680368bd81d4539d06519163c65b",
+      "bytes": 1239
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\tests\\RangeFilterOnlyBuilderTest.php",
+      "sha256": "e9ce1b99078327aaf469c87a1cf35e6d8c592ead21a68967c0f0bf2b5507289b",
+      "bytes": 1907
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\tests\\RangeNavigationMetadataTest.php",
+      "sha256": "73ce1d15045b69bf359ffe156b2cdaf578a8ac49fe6b47ddd68719ad5d055b84",
+      "bytes": 4951
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\tests\\RangeNavigationRuntimeBoundaryTest.php",
+      "sha256": "2a7288be77e74bc95b7d8c602e28bb0900b6808d98573f311deada5cd04b4875",
+      "bytes": 4467
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\tests\\resolve-helper.php",
+      "sha256": "bd8066775d2b216317aceecf17b0d9b4430febc630ad6c320458bbc19d53b224",
+      "bytes": 1137
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\tests\\signed-context.test.cjs",
+      "sha256": "8a851015de5cd0be2b007dff2463f2b15f70d9c23516a4b711df3b53690dfac9",
+      "bytes": 10222
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\tests\\SignedRangeBuilderTest.php",
+      "sha256": "799e1c8ce198932b685e77f87e7f24aece533ef430840df35ff231d8f7d163ea",
+      "bytes": 4063
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\tests\\SignedRangeMetadataTest.php",
+      "sha256": "2bd6c7867b6afd1cc19805577dd096784fd67f40d2e725029e3b2c01f10baf3d",
+      "bytes": 4928
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\tests\\SupplierSelectionHelperTest.php",
+      "sha256": "c4ef15ba3f35b0d34830f0436be36951e3050506582c007115159bd24e6c9054",
+      "bytes": 2682
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\verify.py",
+      "sha256": "d5b9464c1cd8146dd92cb6bb3bf103df81aa1145353e6b16e720ab3636e97f35",
+      "bytes": 1888
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\builder-red.xml",
+      "sha256": "066cbb6363fcf0998162dd1a2b3022539bf5e8f2fbc5e36dab21e6acc761f47f",
+      "bytes": 2784
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\causal-comparison.json",
+      "sha256": "0ffcbde04f1ec2e45d64b6489280d515da38e1b357f999a6876b0ce1ed6a8c65",
+      "bytes": 2085
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\generated\\op1002-before.json",
+      "sha256": "bed4c84e59db5590dc7de1daf1c26a6f51528823d4e497bbdc69bedbdf32154a",
+      "bytes": 106925
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\generated\\op1002-candidate.json",
+      "sha256": "c8bd12bab438c8155a2d8bee47ee52aab84a95cfcb29f527445c58371d33fc50",
+      "bytes": 107782
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\generated\\op1008-before.json",
+      "sha256": "4535a7904f7e4a6406c27956571f7e2325d3b368d7c59e752f0cfc7aeeca331d",
+      "bytes": 194757
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\generated\\op1008-candidate.json",
+      "sha256": "7c4e2e2d4f7296c1df423ec387dfa9189323fd3ec2eadb5e45477ea142f1bb25",
+      "bytes": 196027
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\generated\\op1014-before.json",
+      "sha256": "7959984da0fdd55b0f41679fc01ba2270710730697b0895311361ffc91426ee8",
+      "bytes": 176901
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\generated\\op1014-candidate.json",
+      "sha256": "058c090329696e289b95f19292406722485614afc449632db12694f4553dfee3",
+      "bytes": 177122
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\generated\\op1056-before.json",
+      "sha256": "945a36374a5caa13eb14cb3f49a22f6bb2339bf9128fa60575375120030466e2",
+      "bytes": 165445
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\generated\\op1056-candidate.json",
+      "sha256": "c5c250443c1b26ab6f7c5ca1ba70e964b393e2624fa88b502fe7d24d11f52f52",
+      "bytes": 165560
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\generated\\op1056-external-test-input.json",
+      "sha256": "032f4bc00a1730b8cf35a6821e397587083c29d3a67d3d0e5b82d881e6c7f314",
+      "bytes": 20703
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\native-final.log",
+      "sha256": "5c25d020140ac2960a116cf752e369a55e5f30845bd1e00306b6a0dce310101d",
+      "bytes": 3281
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-full.log",
+      "sha256": "3689992d662abe06289bfce574daf65be0a25a40e40cfb72dc5678573ce83679",
+      "bytes": 1535
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-full.xml",
+      "sha256": "945774d1d4e51a1e55ff9b6786815b2054dcc17fa53d9cf991f13940552ca158",
+      "bytes": 353504
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Admin\\AdminCrudDefinitionFactory.php",
+      "sha256": "1f5db651c900c7e80db94df5aa59df50af327bd30fd19591de1678607dadf92c",
+      "bytes": 94937
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Attachments\\AttachmentFilePolicy.php",
+      "sha256": "ce1f056e6c236d2a289bcd480140d4930792e94ab08c68c5a597bec1fecfd1c3",
+      "bytes": 4657
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Attachments\\AttachmentPolicyViolation.php",
+      "sha256": "8e685e12d6fc4409c28d5287c7aa5e396ef005031b14a65ad12564cc2a25fd0b",
+      "bytes": 183
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Attachments\\AttachmentStorageBroker.php",
+      "sha256": "7232f1e771ebaa3d528882579a32b08c14601f3564db0341a19e6267a243d739",
+      "bytes": 10218
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Attachments\\AttachmentStorageClient.php",
+      "sha256": "0ba35c21666e739e9c5f9922b1c0d8279e5523d1cbc4db52dbdc7decf70f1fe5",
+      "bytes": 5252
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Attachments\\AttachmentStorageConfiguration.php",
+      "sha256": "a81a76364c5065b1067dc8e648d920f8d4b1c946e6bb882102d8111508f32310",
+      "bytes": 1908
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Auth\\AuthenticatedSessionResolver.php",
+      "sha256": "27a90a2a5c43a89ae742bddebafb4d1641585d35feb31f09daa087dfc1d3852f",
+      "bytes": 3638
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Auth\\AuthenticatedUser.php",
+      "sha256": "54b859082579ffb11af79de2851f6bbf2f313d11b4cd96436d7432af6ebb88ff",
+      "bytes": 2338
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Auth\\AuthProviderInterface.php",
+      "sha256": "8099c6f5bab1e95abb539a1c2d4428df98cb4f598ec3c3875ae23cccbb312946",
+      "bytes": 278
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Auth\\AuthProviderRegistry.php",
+      "sha256": "5c776829c57896f89e6d806ea7fedda42aabb8103ca7cdd78628f9b7d50cd72c",
+      "bytes": 801
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Auth\\AuthService.php",
+      "sha256": "6393bfb45ff05d87452eb8a5c1a1bdd0e6b524a2ed944be006ec18bd0f80f25f",
+      "bytes": 58739
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Auth\\ImaUserWebAuthProvider.php",
+      "sha256": "60fd70fa664b322369a1424e751a72e148f15710377f1c412bbeeba349ed2497",
+      "bytes": 2203
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Auth\\ImaUserWebClient.php",
+      "sha256": "5ac38361f8b6b8104d75c0753ce1874e1499bb140c99a1c920cde5c01c568130",
+      "bytes": 3199
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Auth\\ImaUserWebClientInterface.php",
+      "sha256": "bfd945b1c338a2fe9130d762ca558846f3060991bf60b953a1274e430b950571",
+      "bytes": 144
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Auth\\ImaUserWebProviderConfiguration.php",
+      "sha256": "9bf904a2e314e93dec026f3a161c43922d180ac67c5b7bb3769de782fc57afe0",
+      "bytes": 1522
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Auth\\ImaUserWebProviderRegistration.php",
+      "sha256": "bbfaacb762977bda98fff9b2c8a8262ae788368e66e9f6ddb8b75817f47ab38a",
+      "bytes": 2760
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Auth\\LdapAuthProvider.php",
+      "sha256": "6f006616c8721751b0ae80b01956b8243021f6e50ad2081094143bc4c0d93bc0",
+      "bytes": 6156
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Auth\\LocalPasswordAuthProvider.php",
+      "sha256": "270b34e3a1ff6f4c69d05252f13030c0966ca254599efc95ad6c59a80d88276e",
+      "bytes": 2128
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Auth\\OAuthAuthProvider.php",
+      "sha256": "f0a6c50cae2e15c2c339a3666e3ad5ba00cdca32379dce0ace0b9ba5b3b35da9",
+      "bytes": 6747
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Auth\\PasswordPolicy.php",
+      "sha256": "fb01b8dfc2596eac85e56ef590f5a1c095e85ba8d67fd43052d082361ffb0682",
+      "bytes": 1207
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Auth\\SsoAuthProvider.php",
+      "sha256": "55d8e3a4a26e2420fad3f2815b63319262bf084a98f10f40f547c842577b10ed",
+      "bytes": 3071
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Builder\\AnalyticsApiDashboardConfig.php",
+      "sha256": "d41225de74404e11f27eb3f27b600373703ba80353ba3c6d0841e652ba1bfa94",
+      "bytes": 8456
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Builder\\ApiCompanyContextValidator.php",
+      "sha256": "a6bd825aad4622742e9d6ab2b52130ba87c63c5e0205886c2ff767242a3be2d7",
+      "bytes": 4846
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Builder\\BuilderAiService.php",
+      "sha256": "61007c873e12ea37bb114a46de72f2b14ff1eff254eb0a58328e0019d460d920",
+      "bytes": 28476
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Builder\\BuilderAiSessionService.php",
+      "sha256": "d3a8969d364535ec48b961d929ad27c39257a561174bbb7647fcc3512b5cc936",
+      "bytes": 7554
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Builder\\BuilderAiSettingsService.php",
+      "sha256": "8c503296da1a2f956eccc97c94db06b663d32191da84a2662b25fc2dc8709620",
+      "bytes": 8455
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Builder\\ExternalBuilderContextService.php",
+      "sha256": "81556528c636409be193e3fc53bf9e3dbe32d0d308b2d4245482e7ebd0ef03b9",
+      "bytes": 17244
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Builder\\ExternalBuilderImportService.php",
+      "sha256": "bffa55ca4de34410d349f50a24254f6f64401ffd92f555f1ca3ff9b66e332b51",
+      "bytes": 319
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Builder\\ProgramBuilderService.php",
+      "sha256": "c0653c409de42dc98a9904c6b3bf4d86217e71d49445374700c30060093ba123",
+      "bytes": 483005
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Catalog\\ProgramTableCatalogService.php",
+      "sha256": "fe7314e190d021c4199b8456aab6f5f18f6396dd69be633e8705d7420a5cf328",
+      "bytes": 24897
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Ciw\\BancoCentralSgsClient.php",
+      "sha256": "912a16638b468e2dfb19af6b5b32cb339b51a2eddfce07c7bfc1f73b37e3b75a",
+      "bytes": 3327
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Ciw\\CiwAccessService.php",
+      "sha256": "2be1ef5d48a35915abcd032507813cb00cd0e0b77841675af89c0136e1eb3f2a",
+      "bytes": 1694
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Ciw\\CiwColoracoesPolicy.php",
+      "sha256": "00a7a94e7ecab05fded0295db423e6c7d9a71d04f49c3b72389997f1c9b60eb8",
+      "bytes": 928
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Ciw\\CiwIdentityRegistration.php",
+      "sha256": "170d03c23d4211d09dbf61ea7f9e6a4261c67e24d9d7ad7cb3f3fcb4b1b65102",
+      "bytes": 4815
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Ciw\\CiwProgressIdentityClient.php",
+      "sha256": "d522de63d1f36609e977bea1977fda3597c53c3c7971c947ad3246739a2e09f6",
+      "bytes": 3650
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Ciw\\CiwProgressIdentityClientInterface.php",
+      "sha256": "d1efb50d334f466f2d9911c3d32ed97c1569fc71850d5ff26775fdfa4624870a",
+      "bytes": 171
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Ciw\\CiwSqlConnectionConfiguration.php",
+      "sha256": "db213ff0816e4271ba6b36f6b5c3c36af2629e3ee99e6ba3452fbaca573565e8",
+      "bytes": 1666
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Ciw\\CiwSqlGrantReaderInterface.php",
+      "sha256": "2f16e6068ae2fd55f77cf1ec28df59bdf6e8063ff809de281b977f5c2129a334",
+      "bytes": 206
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Ciw\\CiwSqlTunnelOwnership.php",
+      "sha256": "d843b844bb5b4d86e8cb34657ae64c38c5c331c104ef25035abd23cc68374d1e",
+      "bytes": 1901
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Ciw\\CiwSubjectResolver.php",
+      "sha256": "e81926e7d018500b4361ea5a3551eb8c35e39bb3f2778fff91ba0ab4ec6bcd9b",
+      "bytes": 2217
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Ciw\\PdoCiwSqlGrantReader.php",
+      "sha256": "7eb6478eaf72d7baf48798a9bd334c6f846dfe3fb0ba4374aa35a175f84b1124",
+      "bytes": 2055
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\ApplySystemUpdateCommand.php",
+      "sha256": "a0603a175091130b88f7887e6051e7587e7523e888b4555fbcdcca196815fcdb",
+      "bytes": 1927
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\BootstrapRegulatedDocumentDemoCommand.php",
+      "sha256": "7090c1c5eb918031b4e9eda1fadc6ecd3761ce5e984fe3e3078b9e46e3d0c8f4",
+      "bytes": 1670
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\BuildProgramTableCatalogCommand.php",
+      "sha256": "92ae72cd8e571589389326df3c9dcaef64ca8f8066928a8fadeec771384c4620",
+      "bytes": 1671
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\CheckStructuralIntegrityCommand.php",
+      "sha256": "ae9d5b9b342cbe8e4d1ff97cfba0ed878dc99d99ca12aa08f11907480a9885c5",
+      "bytes": 1806
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\CheckSystemUpdatesCommand.php",
+      "sha256": "bac3565a845193098e02b3d0fe2481acb3235a6e746facba30270caaebdc42b6",
+      "bytes": 2617
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\CleanupGovernanceHistoryCommand.php",
+      "sha256": "4349d484fd681d8f4370f4267754f77e7a083cbc9aa3940eb1241253533d6d10",
+      "bytes": 7121
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\CleanupRegulatedDocumentStoreCommand.php",
+      "sha256": "e349a1cfaed16b31db66f5179b0a374dce635ccfd20940f1362c67de39b6b785",
+      "bytes": 2101
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\ConfigureCiwIdentityCommand.php",
+      "sha256": "ecea8fcd08370352712e1ac2d256937ffa858217e97e654fa0402619640fbc2b",
+      "bytes": 1390
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\ConfigureImaUserWebProviderCommand.php",
+      "sha256": "c393ab74d6f0339a0e30a2e0ae98064702cbfe40d28ac652d7cab056d1e4e036",
+      "bytes": 1539
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\CopyParamDatabaseCommand.php",
+      "sha256": "23f27e79c9569a48c4759d52961e77c581ccbfcef22afd3260126a8a7f4120d5",
+      "bytes": 4209
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\CreateSubscriberCommand.php",
+      "sha256": "20f645b230a7bc52ab3bb89c4ffafb924142e135a291002e84b17fbb6abb6e7d",
+      "bytes": 10436
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\DispatchSystemUpdateRolloutCommand.php",
+      "sha256": "ba785bc637f0f4beb9e3c1b8c64d028c5201e05177eb54f0cde60368a350e050",
+      "bytes": 1788
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\DownloadPendingCriticalSystemUpdateCommand.php",
+      "sha256": "ee7106d3dca1a95bf2031ddb5e8cf1bc71ba83a3f9ff3d3945e9b48b1b1c0eee",
+      "bytes": 1653
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\DownloadSystemUpdatePackageCommand.php",
+      "sha256": "22a115656fac7ade5afbfc8d7a88340144b438010b2c1eaef1fb163df4485719",
+      "bytes": 1820
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\ExportSystemUpdateRolloutPlanCommand.php",
+      "sha256": "547db8fd7e860ad49ee37a67cf79a0bf6ceac2387de5235f58f0e7ea71542fc3",
+      "bytes": 1156
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\InitializeAnalyticsAuditStoreCommand.php",
+      "sha256": "d59fef06d1f671010262e7eddd6bf5ec434a7ef8ca53151dcc356844069e869b",
+      "bytes": 1237
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\InitializeRegulatedDocumentStoreCommand.php",
+      "sha256": "df03eb127d937892a9aa2ba9eeebd25c93996b3735cfc80cfdf4a0a246226f65",
+      "bytes": 1228
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\InstallBootstrapCommand.php",
+      "sha256": "38cfd9f572f370ab3420949bc0f3161e57092c5cc1f31abd367d3fa6cbe9a99c",
+      "bytes": 5264
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\MonitorProgramGovernanceCommand.php",
+      "sha256": "ebd2fdbe1a44e4c590e13bc1c86d4f77b6473aab132a32e79ae1a5eac711aefe",
+      "bytes": 2696
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\MonitorStructuralIntegrityCommand.php",
+      "sha256": "acc93450f74d6a316f2d3c8536d90350d1423fa92f98588c52de11b248514200",
+      "bytes": 2540
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\PublishRuntimeDefaultsCommand.php",
+      "sha256": "a7054ea6b90c385f2725fc4c1fa45db08cb851306c84b49b56c5223b239335a4",
+      "bytes": 4773
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\PublishSystemUpdateArtifactsCommand.php",
+      "sha256": "f3d0e3822d1cafa2e6828a3588da75babce2ffc380bf2f3375fa121724e51813",
+      "bytes": 2572
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\QuerySqlCommand.php",
+      "sha256": "281892a27ecf982eebf4b47e6101966b0b352fb5a2692dccf8f3f7fc8089498a",
+      "bytes": 3284
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\ResignStructuralIntegrityCommand.php",
+      "sha256": "35d2062feae380e2216e940bcebd8b01163f17dd41f0bd7fbaab015b3a10f302",
+      "bytes": 4190
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\RollbackSystemUpdateCommand.php",
+      "sha256": "44928dad55195c2c3e46eb46e0e118ae739c656d356d6e68bc9d8a50ea85e69e",
+      "bytes": 2207
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\RunGovernanceOperationsCommand.php",
+      "sha256": "aca95b67e68ba89914d68caf955d65e7e33ba6e80c3c12635896c727bc6e41ae",
+      "bytes": 3629
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\RunImportExportSchedulesCommand.php",
+      "sha256": "b2dcb427362d1b1ab4bbc954e7f34267d9a3a029f4d7abc524b7334e418aab31",
+      "bytes": 1293
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\RunPendingSystemUpdatesCommand.php",
+      "sha256": "4ffe7d1e61425cf14faf1d570e31bc714c1a11443b8bfb7f2ae02e84fecb58f1",
+      "bytes": 2558
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\RunSaasSystemUpdateCycleCommand.php",
+      "sha256": "0531a2507b1bd841ec6315a985d1d8bacd9b6574ebd5ee1ec19d07c6d41645b0",
+      "bytes": 2981
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\SeedRegulatedDocumentSamplesCommand.php",
+      "sha256": "3d8927e7bfbd9b98f7a22bdd25687522ec1dc27ef6932db174bf8a41b09e7ed3",
+      "bytes": 3497
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\SeedRuntimeMetadataCommand.php",
+      "sha256": "042f3d785277087ee289b342c134955092176a4b58660638b15285d19cc4da53",
+      "bytes": 126352
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\SetupRegulatedDocumentModuleCommand.php",
+      "sha256": "71532424398872295501d5a2d10644b01e26e90ef77c1f504c524254e828246b",
+      "bytes": 2091
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Command\\SimulateSystemUpdateCommand.php",
+      "sha256": "f9779da9c645d21843152eb43cfa5c88263c2cea1aea9005413b1b4f1f1213df",
+      "bytes": 2324
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Controller\\AnalyticsAuditAdminController.php",
+      "sha256": "00b239509bf7ca61fcbe03e6349d2167ddbf798a8dbc52096c1bcba9c296a0eb",
+      "bytes": 3114
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Controller\\AnalyticsPipelineAdminController.php",
+      "sha256": "ef542e13b701d3e21dafa5a0da32129f7b38d447a6e90170991dd0de7c89700b",
+      "bytes": 6803
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Controller\\ApiCompanyContextController.php",
+      "sha256": "db886128033a9d7b4968c50e38b427ab0d18c4cc4f0c8ce36d405ff76a310ee5",
+      "bytes": 1698
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Controller\\AuthController.php",
+      "sha256": "553c15490d77da2f4a63d63174901eda4e71b4f90038decd535c8dc9005ac2c9",
+      "bytes": 6618
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Controller\\CentralOperationsController.php",
+      "sha256": "f1fcbf4b61fbb7d951e868bfd093e4e26086f46e30a166835c2c36824f799b96",
+      "bytes": 3017
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Controller\\CiwAccessController.php",
+      "sha256": "b17d9411e0d52428f9c414bd5823559c684ee005da717dd47a6cb59d72221368",
+      "bytes": 1556
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Controller\\HealthController.php",
+      "sha256": "e7a835e2b4826a370bf403a44c907aacf665a85af5b02e46141a8b51274fec58",
+      "bytes": 478
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Controller\\ImportExportMappingController.php",
+      "sha256": "01e2d7aec8ac1e0b131f81bfb8c74fc187d9fb214193c25734b9b02e6adc02a5",
+      "bytes": 5171
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Controller\\InstallerActivationController.php",
+      "sha256": "c3e4d02db2d338cf4356a0ec67af501d105dd8b6d2f2057676868e13a5a80c83",
+      "bytes": 2620
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Controller\\ProgramBuilderController.php",
+      "sha256": "dfeb3f567622c42c9f6f6604e8049e53ec00412e4e78995a17b63d74c289f599",
+      "bytes": 26506
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Controller\\PublicPrivacyRequestController.php",
+      "sha256": "00eb199175e5e35352245272c88cdfd7954d606830a2aed78c736644d5c36e6e",
+      "bytes": 2735
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Controller\\PublicProgramBuilderController.php",
+      "sha256": "bee4af25bd0f5986f16c79042cf99e2155f6e7562331f2db20890c474cb4786f",
+      "bytes": 1875
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Controller\\PublicRegulatedDocumentController.php",
+      "sha256": "a68ed3ff9ea5fd1b5129326a19a9bed5b09b0dd39b11b1c134253fe42ed28157",
+      "bytes": 1568
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Controller\\PublicReportAuthenticityController.php",
+      "sha256": "5e5067f19153d2accfcae008bcd1b1fd5fb747ebe70d224bec27eb0b344b68bb",
+      "bytes": 1591
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Controller\\RegulatedDocumentAdminController.php",
+      "sha256": "444d6ee7020c3aebb1464d9693992fa555beac2c66bdf95c1e539240cdb2da0a",
+      "bytes": 4983
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Controller\\ReportAuditAdminController.php",
+      "sha256": "1cb05f596328d2e41856d3233668c7e749a006d26b3206b2b6b24c7b37faba5e",
+      "bytes": 3185
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Controller\\RuntimeController.php",
+      "sha256": "04e3e3ed5ede0e85e63dac4e97305052e1ef1eef87a321a0943c0b8d48d4c55a",
+      "bytes": 14391
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Controller\\RuntimeSystemUpdateController.php",
+      "sha256": "94760a134df21fbe549e9c307f72c93bb6a1e9f4e5ce648705d256147973346a",
+      "bytes": 4607
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Controller\\SubscriberProvisioningController.php",
+      "sha256": "105e6af860b37f908be186984c94a736f7d8092657e9dc107f82334e3d996f15",
+      "bytes": 9153
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Controller\\SystemInstallController.php",
+      "sha256": "ce0c2408afc966cb8e5456389542c872e9cf93f9c55922c7077836512750a8e5",
+      "bytes": 2424
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Controller\\SystemUpdateController.php",
+      "sha256": "106dfb01723b107a16131f2e770d378a0f581221d3e43bb85f5222c2bf352ca9",
+      "bytes": 13741
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\AuthLoginChallenge.php",
+      "sha256": "0cfadfe8b5d18a9e113f0908eae592a26399f4e5469fb6e83c27740f4681daa0",
+      "bytes": 5027
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\AuthPasswordResetToken.php",
+      "sha256": "83b6cf8824f4e2933e9c42c82f7f58e4bf1ebc420bb1b41d342f0dc036bec5cf",
+      "bytes": 4117
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\AuthProviderConfig.php",
+      "sha256": "2a01b8d4fed22a8e2c188e411ca9657635649324381897fd0a7e4d355c6290aa",
+      "bytes": 3090
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\AuthRememberToken.php",
+      "sha256": "630b3b80cec6f9d4585762ae56e8187a36ff1c38b947bc5989910d8d06b363d6",
+      "bytes": 5473
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\AuthSubscriber.php",
+      "sha256": "1c02647e776a7694ad0204f0dadb5f12f7d97eea7127aecb85c890d4aa5b9549",
+      "bytes": 3250
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\AuthUser.php",
+      "sha256": "575dbfb7a47aa7bc26e1234b4c8bb2fd882e092a8e6b3594e5d0d72e2cdd6861",
+      "bytes": 5615
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\AuthUserSubscriber.php",
+      "sha256": "8a9386a01631208aa800bee452a09f5b7cdcb7d1e53eef88249043e2da220635",
+      "bytes": 3982
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\BuilderApiSource.php",
+      "sha256": "79301eead74dab1c97782a29c0fea3a27ce2eaf66adfb2487805d127a5854d4e",
+      "bytes": 3646
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\BuilderEditorLock.php",
+      "sha256": "27e0d1f6bba687ddd97f7ece63627ad9cbfcbb92db0fb41581355704208a180e",
+      "bytes": 7459
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\BuilderEntity.php",
+      "sha256": "264b4b0f02137805ba27f974f88ff4fb51d8f7c7557c8425310f390c80f73120",
+      "bytes": 7519
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\BuilderEntitySituation.php",
+      "sha256": "a5d05133c45049ac4f62c566709fd94168d0bb174c6194634711213ef9514f01",
+      "bytes": 4572
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\BuilderEntitySituationTransition.php",
+      "sha256": "80ea04c5bc437373831a3153616a97ed13bfe1670d16cd15d43eedd63c4a411e",
+      "bytes": 5693
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\BuilderEntityVersion.php",
+      "sha256": "6ae74b765fded91f4ac0d7fbf766472edeb0e3d840c3d968f938ff7e6ade8255",
+      "bytes": 5055
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\BuilderField.php",
+      "sha256": "83b7e4a347ce31c6bf1b8c6e567657b265341784989f624050132cb762473c40",
+      "bytes": 4430
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\BuilderModule.php",
+      "sha256": "900ca72625c3a5ea4a5c78e1b3d64e2a57627f674945d508fd1025107cbac0ea",
+      "bytes": 3453
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\BuilderProgramOverlay.php",
+      "sha256": "872956883f2f1bebadb43e40ac8846075084da5902ad816955b88ab9b3c1086c",
+      "bytes": 4727
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\BuilderProgramOverlayVersion.php",
+      "sha256": "72f398bfa7f1de22d7f84cda992fc39e142bae5a1c880f7cad64038b80c1c453",
+      "bytes": 3902
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\BuilderProgramVersion.php",
+      "sha256": "20c1a99ef87a606885d00e4bdbaf6dff81481d7d5403a3900865ccbf09c8ed50",
+      "bytes": 11375
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\Cliente.php",
+      "sha256": "fd8b9678dce0aeb0c03ddab8f9df269f7de48fabee177d57f26640f9cd06d47f",
+      "bytes": 5890
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\ImportExportExecution.php",
+      "sha256": "e6f04b4e54d169e27aab505111d6d562397f35fc66388ed82171fed31bf5e79d",
+      "bytes": 5946
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\ImportExportMapping.php",
+      "sha256": "2118ae314510a902f310a376c3adfb300f398d3f6de92681fa217640a8bc6dcf",
+      "bytes": 3062
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\ImportExportMappingVersion.php",
+      "sha256": "6b6a15cd46ff0d81e572335d821c9157e91cbffe49cdc7912836c0803d7b32b2",
+      "bytes": 2603
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\ImportExportSchedule.php",
+      "sha256": "558e337cdd8051cdacbf83a82968fa3602827951035d6d0582e87471b3fe18a9",
+      "bytes": 4596
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\InstallerActivationLicense.php",
+      "sha256": "07b7f33e3385ad186db5b17956c8792333296f4020be15cba2e653dc0c451bc0",
+      "bytes": 6297
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\InstallerActivationServiceToken.php",
+      "sha256": "9bec2e71f595e05c1c70ab96ad1604bfd1aa9ddf724e2788d72e1d4606361252",
+      "bytes": 5188
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\Program.php",
+      "sha256": "6ca28f75fd7d7cda94d851e255e6478e6da81914d2e40421f1e94a3c58898203",
+      "bytes": 6496
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\ProgramChangeGrant.php",
+      "sha256": "1c52b41cf78402accf25b22b00e897a37a863695d86382b7978cbf97695627d8",
+      "bytes": 4774
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\ProgramChangeRequest.php",
+      "sha256": "adba832934893ceb44631d2abe99e635ae2ecad8281f62baab60af9a3ae04d65",
+      "bytes": 5210
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\ProgramGovernanceRetentionRun.php",
+      "sha256": "b397500b63efcb3a3d01b5a9fe2bc1e520c01ed9415999566a2a3013ce74a7fd",
+      "bytes": 4041
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\ProgramPublicationApproval.php",
+      "sha256": "03365455b4507ca042d3d0858a9aafd8e26ec4a964947f01f68f3704374cee84",
+      "bytes": 4379
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\ProgramTestExecution.php",
+      "sha256": "8fef7084336db2ebf6fc143f6d4b5889ddcc8225b5d7b62335b78290895f7020",
+      "bytes": 5307
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\RuntimeAiMessage.php",
+      "sha256": "a46192815df4d735b460d532e8f163e4c0f95511813144312c3ec2d9d0119a8b",
+      "bytes": 2650
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\RuntimeAiSession.php",
+      "sha256": "cc6226aa45e96e38dde0e7b2bb8661472b2b012308c7e807fe468f23b9f08ba5",
+      "bytes": 5496
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\RuntimeAsyncJob.php",
+      "sha256": "02dede40d2ac53ad587f615c06895e7a816dc5e52361dcdc1743525ad585836c",
+      "bytes": 8334
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\RuntimeEndpoint.php",
+      "sha256": "02f6e117d543b68ffc2c88ffb5f71d3ff09eb99159ea743d9b83ae98ff123ae3",
+      "bytes": 2492
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\RuntimeEntityRecordVersion.php",
+      "sha256": "718630e4e4490cdff8eb38b14f8831705b42afdcf44e8f9308e487c8402fbba1",
+      "bytes": 3038
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\RuntimeEvent.php",
+      "sha256": "8e3fa5dcda942381f8835526aeb3cd1c30ec0034a67c0f96fd9884f4f1540864",
+      "bytes": 6232
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\RuntimeEventDelivery.php",
+      "sha256": "34d1c731c4cb452ef9f079ef8576415debc620baffd763236128d81e6acea9e6",
+      "bytes": 4441
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\RuntimeEventSubscription.php",
+      "sha256": "2ab14e53676764193e6c34f9445a5a4757a8e6dc50ed59738e5849cfaadfc024",
+      "bytes": 4512
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\RuntimeLockPolicy.php",
+      "sha256": "62fc6857c2d5fce7a4a558602495a4d3f65a944627af0fc1f7cbbef428a36e33",
+      "bytes": 5560
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\RuntimeRecordLock.php",
+      "sha256": "59ea93e9b270738e26b2f738bd6210bbe3bce8d69016a110b175dce3811579f0",
+      "bytes": 6791
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\RuntimeTransaction.php",
+      "sha256": "7aaee3fd10549be3f8d970bcf0aff88b3ac3a1e418fc7702d7df1f88dcb07308",
+      "bytes": 5616
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\RuntimeTransactionLog.php",
+      "sha256": "6b7b86cb83e27dfa91e81960b6afbe4fba4fe1b62cc424f58340df9a1e3f7589",
+      "bytes": 3290
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\RuntimeUserMessage.php",
+      "sha256": "4dc93896fb39387e8a9ef1fdb19153b21ce74bd169f3e2926857b3b7b7a70b7a",
+      "bytes": 6117
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\RuntimeUserSession.php",
+      "sha256": "05169b99c27983b826987b97e92b1a755cd546ec759d4cc00d7aaefe80151cae",
+      "bytes": 8183
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\ScreenDefinition.php",
+      "sha256": "11d01865c472ed722802ebdf2de33517ec0b6de61f995ca67adbb4e2bb472ce3",
+      "bytes": 3376
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\SystemLiteralTranslation.php",
+      "sha256": "01f2ae8901ef58d6684daa7154e67e954f7879c971f4c59a4bc4e1875f710806",
+      "bytes": 3758
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\SystemOption.php",
+      "sha256": "e5ce1b7dc5a84ef205f2158020fb1a3c6e981d862fd485acc7adef68de989c06",
+      "bytes": 3457
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\SystemOptionList.php",
+      "sha256": "20507057f4986bd43446b46c696ec8406e4f29561700c11f6732bd95c5f0636c",
+      "bytes": 2789
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\SystemParameter.php",
+      "sha256": "9aea02c98e7af608f01c30c3c1af6124b400f44773a864ab7f783424760ac2a4",
+      "bytes": 4615
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\SystemParameterValue.php",
+      "sha256": "d6c63ba5083ec78a571058ff91d1f57f00b4cc87e8c9f447ca76155ee9c3d778",
+      "bytes": 3698
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\SystemRecordIntegrity.php",
+      "sha256": "d18cd5b67994632e97716cd909cc04fa1244068a555dbae290aa8c3e34e052ce",
+      "bytes": 4656
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\SystemUpdateConsent.php",
+      "sha256": "2c876dfb36e65ad71a25dd6d227290590d53eed0a1d269add6094dc9ff869457",
+      "bytes": 4484
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\SystemUpdateExecution.php",
+      "sha256": "bfce82a3e6ca0909b619de82aa3f76a0fb3d86f401391ceb6e6f75b1854c55d3",
+      "bytes": 9300
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\SystemUpdateRelease.php",
+      "sha256": "baf08c224df48f8d3ae90d8f2e85545750ec378e24e49bfa90411a8808173417",
+      "bytes": 8516
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\SystemUpdateTenantActivation.php",
+      "sha256": "f0a9726b0b3a7b2fc2837f74422910c184edf3a7e0d66ec6c0d23d659ffb9ce7",
+      "bytes": 4434
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\UserFilterPreference.php",
+      "sha256": "eda62c6bd0a1fad6b5c0db07cda0d0515771683d37127c2035ae7dc6a42e6431",
+      "bytes": 3756
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\UserGridLayoutPreference.php",
+      "sha256": "28bec059b1203670baf9c16ff28dc6c4056edbcd95055e6e2d5c26709ad5c280",
+      "bytes": 7499
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\UserGroupPreference.php",
+      "sha256": "0c7f1d3eef30640e4368d6ab7b313cdca7a01c73b69bbed5d2ae919f88589d85",
+      "bytes": 4108
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\UserLayoutPreference.php",
+      "sha256": "69c6f05b6909bf5cb949ea2d709fe2c67e2d58afabde2132ed89c17bf7ac3d16",
+      "bytes": 3865
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\UserLookupUsage.php",
+      "sha256": "88efe015fa5b5c94509104ce9571e814cecf0526a881d78d8a3e7f33d60acec8",
+      "bytes": 4748
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\UserMobileGridTemplatePreference.php",
+      "sha256": "756a649cdc68c61807d149d35b5bcede243eddc842f841bb2d2ddada807ce97d",
+      "bytes": 5703
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Entity\\UserSortPreference.php",
+      "sha256": "a9626d277f0627ad76755c6edadb935aef0e70d7924e4889d4ad30306a626b9b",
+      "bytes": 3749
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\ImportExport\\ImportExportDestinationWriter.php",
+      "sha256": "7ead9826967373c60ca74d5ae083c579ccb5883a4a008a16c8dedf349caeda82",
+      "bytes": 4083
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\ImportExport\\ImportExportEncodingHelper.php",
+      "sha256": "b6b6e24e0383457b5a094d03df947ebf8cca6429b71ed359b832b4b82a7b8321",
+      "bytes": 1181
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\ImportExport\\ImportExportMappingService.php",
+      "sha256": "ded2ef28cb04ee5f5d0e90dc2c367814701bbc6bd1bc2836dc3cdc88767679bb",
+      "bytes": 49854
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\ImportExport\\ImportExportSourceLoader.php",
+      "sha256": "85f6e039ddfba3a554ca36f1676f302b53be1606151b67610d626ed0a554f0b1",
+      "bytes": 11370
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\ImportExport\\ImportExportTxtLayoutRenderer.php",
+      "sha256": "721cd9823b9792f09a2cc18a7a0b98de8096e34bfc02fd87836da45489dae58f",
+      "bytes": 15262
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\ImportExport\\ImportExportValueMapper.php",
+      "sha256": "564c009dfeded89776ec4480fbd555eaf525748f6ac2a2d1b97f42ee624d440e",
+      "bytes": 6709
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\ImportExport\\ImportExportXmlRenderer.php",
+      "sha256": "541e8b3a7bd7b32d64e1a0c1bdc6f828152ce49f7caea622a9eec99c924a5869",
+      "bytes": 13672
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Install\\InstallationActivationService.php",
+      "sha256": "0bfb2af2ec73e55b6a0d71502f9e81a2d9aa46338ef85efbd9dc881cd807badc",
+      "bytes": 9321
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Install\\InstallerActivationCenterService.php",
+      "sha256": "e359e79d3a08e02897b94adb68f96d2d4d2202f778ec1b2ef70a20f03d161b73",
+      "bytes": 23253
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Install\\SystemInstallService.php",
+      "sha256": "c6149833110437cbbc9d8d040f52073e1fc525914cb3dbd61532a6ed94aa4a69",
+      "bytes": 30748
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Kernel.php",
+      "sha256": "e3cd21d3498e4efdbba804a21cc2e96af6b556e0c900206dc241e592cbad1ebc",
+      "bytes": 212
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Odoo\\OdooClient.php",
+      "sha256": "215d201313ac9bbb1a8066775d1aebea29b279d6be836d566f1749e4f98c7021",
+      "bytes": 20208
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Odoo\\OdooExecutionContext.php",
+      "sha256": "7595a847a56803b75747c3bfd70e55e0b206855622b9d625b8d4abae8d411434",
+      "bytes": 365
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\Contract\\DocumentArtifactGeneratorInterface.php",
+      "sha256": "4d4074a83fd75138382b2273dc00dca0f86a4da05a25b32556d46f6d37bcd36d",
+      "bytes": 287
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\Contract\\LabelBuilderInterface.php",
+      "sha256": "302ca495a63d9befe6cf4608831048da9ea2bfa9da7f42a9d1e0dee856c128ae",
+      "bytes": 318
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\Contract\\PrinterTransportInterface.php",
+      "sha256": "c1258bf171b9e5696a20534bba12380c69d0dd24903e7aca5775b02fe6a94cba",
+      "bytes": 301
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\Contract\\ReceiptBuilderInterface.php",
+      "sha256": "695a9f1f348f25ab7a98eba31ad7e8e0ccf2948e7c20c10819bfb540dd741529",
+      "bytes": 320
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\Contract\\ReportGeneratorInterface.php",
+      "sha256": "c10d481af7178ae768c0b422eaabd03c67cd8f4bb8140cdbeaf147f59407c326",
+      "bytes": 259
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\Contract\\TemplateRendererInterface.php",
+      "sha256": "71725b5fcadbdd310afa70b8ec7e64bc336b82f43d080d02f21b6f7a6b805c65",
+      "bytes": 256
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\Delivery\\DownloadArtifactDelivery.php",
+      "sha256": "9069c91e4a8fdda76a2183bcc48e615a22b67d45d313105bdee2ba107641f838",
+      "bytes": 1168
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\Delivery\\QzTrayArtifactDelivery.php",
+      "sha256": "694adb66a1fcb8eb83dfd511890cfa404de7de7dbc01202837d6ed10e11912cc",
+      "bytes": 1800
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\Document\\AbstractCallbackDocumentArtifactGenerator.php",
+      "sha256": "a61d3865f570be2a2a05fb8188296c548e4814e3557a789bdbbbde7d7988e25e",
+      "bytes": 989
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\Document\\InternalRegulatedDocumentHtmlGenerator.php",
+      "sha256": "fef26ed3971205dd422d23d1280b27bd717a25bd9f1f808ef8e9895763d148a9",
+      "bytes": 321
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\Document\\InternalRegulatedDocumentPdfGenerator.php",
+      "sha256": "e84926ac3b49202671ae46e68f3810d896825354d4e7afcffc8b736117389890",
+      "bytes": 319
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\Document\\InternalSpecialDocumentHtmlGenerator.php",
+      "sha256": "7a2cec5873f667b5d5f6788b282906c7bc366ff6bb77590ba29303cca7d2f753",
+      "bytes": 319
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\Document\\InternalSpecialDocumentPdfGenerator.php",
+      "sha256": "ebdfd13b170ad8f5b767bee25bcb90acaef5b6a2f65040bbf5571b8b0f5bb13c",
+      "bytes": 317
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\DTO\\DocumentArtifactRequest.php",
+      "sha256": "7df7be890a3bb4650b2fe752ac39ff32b0eb2467d9a839d8a191733f385d7988",
+      "bytes": 369
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\DTO\\PrinterConfig.php",
+      "sha256": "3ce44dc1144ff9ecd86b84d9ccd8f3ead2ea2c73a6a1b5cb932b31e7f6986618",
+      "bytes": 400
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\DTO\\PrintJob.php",
+      "sha256": "64d8323388bf5a864099e2e09e13be2af49dd26682639205f7bb9ab0640caeae",
+      "bytes": 412
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\DTO\\PrintResult.php",
+      "sha256": "70b647d6286890d0216d3f84a997d46b6722f5a389d5a469cba1669e161f85ad",
+      "bytes": 522
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\DTO\\ReportRequest.php",
+      "sha256": "dfc852036585ccfb1a189a7673b16a6b4b6b2808eb0087be846aed3d11c48df2",
+      "bytes": 357
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\DTO\\ReportResult.php",
+      "sha256": "f5bbfa7f24a8a79a074a9b7fa9f3e05bf286309611bb57bc15b887ba774a33c6",
+      "bytes": 448
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\Enum\\ContentType.php",
+      "sha256": "0de9ce3f9379bdde74c3970fce304bf3d69b588cedf5215d9cd53e3270f40c54",
+      "bytes": 354
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\Enum\\PrinterLanguage.php",
+      "sha256": "619a9b69f0e8be8fcd7bafd8b8d1cf49fd9422ac2d5f67042d038a6ead927f1f",
+      "bytes": 251
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\Enum\\PrintStatus.php",
+      "sha256": "538934128e696435fbb3607282bd551f3574cb93055b235eba157a1b9e109394",
+      "bytes": 271
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\Exception\\InvalidTemplateException.php",
+      "sha256": "256c20ffc560e37e93d7a4ee929ee0765b8e897d424150b53705a5398461b484",
+      "bytes": 138
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\Exception\\MissingDependencyException.php",
+      "sha256": "f6470a42ea6ac70f4681ede944961ea483e814a7fd6d0e0f36745cfd0d7d5b9b",
+      "bytes": 140
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\Exception\\PrinterConnectionException.php",
+      "sha256": "66b84ed29c7b1000f0691b1286208edea3f7b26a31fe98a5f197f79e3592ce97",
+      "bytes": 140
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\Exception\\PrintingException.php",
+      "sha256": "1e8c20ef3081b29ec00366f0fcc648399cd86f1ac25014236bba6985883e9440",
+      "bytes": 131
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\Exception\\UnsupportedPrinterLanguageException.php",
+      "sha256": "8ade37e63f531451acabe735b775a4e45e4c2d465d02d0c7dfbf8f9dd1a72a11",
+      "bytes": 149
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\Report\\AbstractCallbackReportGenerator.php",
+      "sha256": "5d7fa63e8b86aeccf8fa35b9f802fa0183a24f53e32b61777a826a4beb4cf8e0",
+      "bytes": 859
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\Report\\InternalReportCsvGenerator.php",
+      "sha256": "84456d4dd8d4a1940e7cc84810b40e812ff8708a9214577de031f068abcd0396",
+      "bytes": 296
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\Report\\InternalReportPdfGenerator.php",
+      "sha256": "93a89d9651f86fe813e6f1128b95ba9460e3910e602b94ca3861129664dc3c5a",
+      "bytes": 296
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\Report\\InternalReportXlsxGenerator.php",
+      "sha256": "fe7bdcf7b8f2e7adaa38ecc7b612ef993ee24f4a9a01d787a17850372ded9782",
+      "bytes": 298
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\Template\\SimpleTemplateRenderer.php",
+      "sha256": "aaf16098314c43c1bcc3a2855e3eea69230c2f5441f2f520c12ee9b3acc6f93c",
+      "bytes": 922
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Printing\\Transport\\NullPrinterTransport.php",
+      "sha256": "0624ed4ccde4e88f52244943d88642f112f01eaeb5127fd8a37c809af5e7d17f",
+      "bytes": 568
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Privacy\\PrivacySubjectRequestService.php",
+      "sha256": "750aaf192a84dfad4f591c1815ee14d9fb19b066a7cfc530ec68966040f9298f",
+      "bytes": 18273
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Provisioning\\OnPremPackageBuilderService.php",
+      "sha256": "7d8fffc4547c5bc0fda40502141bc54f65b0cce5a53fe97144addf17480a66bb",
+      "bytes": 7775
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Provisioning\\ProvisioningSecretStore.php",
+      "sha256": "6c1fbf954d5bda48f045b5d257516a22b4f2e9aa015c7d5f56a0c10df5ba01d0",
+      "bytes": 1722
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Provisioning\\SubscriberEnvironmentProvisionJobHandler.php",
+      "sha256": "c43999ef706d9c52b4b4bf1cf0d9cb7e7f5c87ea861c98a10bb13350c7ba77d3",
+      "bytes": 11364
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Provisioning\\SubscriberProvisioningService.php",
+      "sha256": "0f5d8cabe4ee814f242aabdd284707fdd9c7d0e1e7dac4b72b3024eb86ed997f",
+      "bytes": 41129
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\AuthLoginChallengeRepository.php",
+      "sha256": "f7b9d3eae58ac26ecdd2bed6b2c2b64110443ae1556340f8ed5415f1a41c33da",
+      "bytes": 634
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\AuthPasswordResetTokenRepository.php",
+      "sha256": "bb1ec3793f3e37bd5bb4a742d6b92a8d084127a129e97bd15f06dc15f8c005a4",
+      "bytes": 987
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\AuthProviderConfigRepository.php",
+      "sha256": "52098fc4b6cb09349af87a9103b79f4b2ce0763fcc75503e58f1da743e3ed22b",
+      "bytes": 819
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\AuthRememberTokenRepository.php",
+      "sha256": "0230c41f9a6e812d2fcf3d2b7e71719e71c9f6b13a27e47bfa3d4b29be42bc10",
+      "bytes": 939
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\AuthSubscriberRepository.php",
+      "sha256": "06ce1d03d45b903398c4687de27da87cd97146448b47639d42c6fc3ceef35698",
+      "bytes": 944
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\AuthUserRepository.php",
+      "sha256": "1ce8debae33deac19d74b9940392482327f96a7d176d9d8a8a4664313a8c45b6",
+      "bytes": 2071
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\AuthUserSubscriberRepository.php",
+      "sha256": "309e59d36ff2c60dcd4250c1191edb0a82296f0d596247f7b840456992975a56",
+      "bytes": 1718
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\BuilderApiSourceRepository.php",
+      "sha256": "1c069fde8863ddc1590c3ca61fbcf3955e41bdbbb27173491790d3493899086a",
+      "bytes": 401
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\BuilderEditorLockRepository.php",
+      "sha256": "e557249e59aa930f90efe45c45a5cca8a941741e124d6df5e2f6583fde5cab4a",
+      "bytes": 1393
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\BuilderEntityRepository.php",
+      "sha256": "c04db0baeabecc2cc758b91f0996b3eea87a3cfaf516c0f1333991a918fbb5b9",
+      "bytes": 392
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\BuilderEntitySituationRepository.php",
+      "sha256": "6096a3304b45eb0b14be9127442ead216503142f6185d16c0fa2407765cace60",
+      "bytes": 926
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\BuilderEntitySituationTransitionRepository.php",
+      "sha256": "3a9713e9904e13c61eae7dbb0cf64cd128e0bac5a2a20cd0e95150d753d36d5b",
+      "bytes": 966
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\BuilderEntityVersionRepository.php",
+      "sha256": "d5374ce741a5ecbc6a2d731ec206b3190f14ddda5e47514fa07f1742de2a6ef5",
+      "bytes": 1485
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\BuilderFieldRepository.php",
+      "sha256": "8ff818ff0ab0c60fcc0e96d8dacd8df0100f836f40db3df416692670b8a054b6",
+      "bytes": 389
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\BuilderModuleRepository.php",
+      "sha256": "3b1d0c41d04d3e69d6519ed72ab9dcc950343266fa21c25c44a18698dcce3d8f",
+      "bytes": 392
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\BuilderProgramOverlayRepository.php",
+      "sha256": "84a88cc73e9d558e312a0eb4b1cfcca3733003606d80f33ff7b8fb294ea230f7",
+      "bytes": 759
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\BuilderProgramOverlayVersionRepository.php",
+      "sha256": "03ed6a34fab15e124e3faafee35b82079ae577a0b3420c824f4e56d3115f78ac",
+      "bytes": 2922
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\BuilderProgramVersionRepository.php",
+      "sha256": "b6467df66560cadd7c8cf5b4d0e59435495284d46393459f8027563e6d71f408",
+      "bytes": 1781
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\ClienteRepository.php",
+      "sha256": "1a410370a7063cf71a7848f0d7bc94ef1f94a4ae3f38ce99ac929015c05098cc",
+      "bytes": 374
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\ImportExportExecutionRepository.php",
+      "sha256": "4e529f4d93c56b233b737c5216cde3838b7f4e4a5a2e8a3dd137e118a5719383",
+      "bytes": 1212
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\ImportExportMappingRepository.php",
+      "sha256": "46544abbe796386087335b2cad760736ee4aa520824d663a5b51201b712e9f5c",
+      "bytes": 410
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\ImportExportMappingVersionRepository.php",
+      "sha256": "f321d2ef1d86358a455c8c240e66dc5d33f951620b619785368488fd5186fb74",
+      "bytes": 1269
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\ImportExportScheduleRepository.php",
+      "sha256": "3d086493d7c1d54c365d117f4e73928b60e9aad31e2dcad51571a48edde6d83d",
+      "bytes": 819
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\InstallerActivationLicenseRepository.php",
+      "sha256": "e41296433758fd2df3eab2207b9fde0af47addd6e593ee740b0ceb25c0071f57",
+      "bytes": 818
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\InstallerActivationServiceTokenRepository.php",
+      "sha256": "8f1a219e7c593e8586e8362ee215013197922b511a5f7209c46fdff9279d05b5",
+      "bytes": 1158
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\ProgramChangeGrantRepository.php",
+      "sha256": "01e7d573d02043e2c3af1fd26970bb602622efb505e1b1e5f9815a77cef319f2",
+      "bytes": 1769
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\ProgramChangeRequestRepository.php",
+      "sha256": "b87f37f15f100abe25e4311217444ab193a459620e208caf508c2aa713c7e740",
+      "bytes": 1255
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\ProgramGovernanceRetentionRunRepository.php",
+      "sha256": "7a6132f6807e51900cef5be905ce2af00b6193735dc7aef7866f41bec65c7804",
+      "bytes": 1686
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\ProgramPublicationApprovalRepository.php",
+      "sha256": "79d9509120c82449f74a29f4bc4591b6097d03d1764313c1d3d8ade957705ac6",
+      "bytes": 1125
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\ProgramRepository.php",
+      "sha256": "d488690b1adb29817c4490f588175b14acaf471cd90ec3ff3af1fa4adc15281e",
+      "bytes": 374
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\ProgramTestExecutionRepository.php",
+      "sha256": "9809cc593689deb97a01b7b319d11ee9fcd18bc51528efb80ff3425a4b0438cf",
+      "bytes": 1119
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\RuntimeAiMessageRepository.php",
+      "sha256": "e305c8dc8a50b81a071e382bb113bafac3ff529768536ba045d6d176f75d7d52",
+      "bytes": 899
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\RuntimeAiSessionRepository.php",
+      "sha256": "b328affa0ff4474904eaef656db52dc86fed33a9fe68d7bff9a7f8279b648069",
+      "bytes": 1121
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\RuntimeAsyncJobRepository.php",
+      "sha256": "810b8110887433a62eee2b856b0567d101875a6c27bc6e6a7a03e47ca2294085",
+      "bytes": 850
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\RuntimeEndpointRepository.php",
+      "sha256": "b3a383720204204595a98bfd11a64350ca4d2ee7bb4bd03b3672e7051dffe81c",
+      "bytes": 663
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\RuntimeEntityRecordVersionRepository.php",
+      "sha256": "e7ffb990289f4cd8510608c670b0cee7398ce1ba040290f119fbeab2ba9dce1a",
+      "bytes": 1560
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\RuntimeEventDeliveryRepository.php",
+      "sha256": "fa392003a786b8ea171f1abc50b8f3b9e6958759d4cf2798f4c821277523fef8",
+      "bytes": 594
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\RuntimeEventRepository.php",
+      "sha256": "2ec88a9d7891254d06e8c4b09f2c82a399ab92850bc17288c64f974567e3c397",
+      "bytes": 389
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\RuntimeEventSubscriptionRepository.php",
+      "sha256": "ae5db9c30d8428d974a39647489f5d58187f4d3fcd6224e0ab72e72bb759debe",
+      "bytes": 1134
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\RuntimeLockPolicyRepository.php",
+      "sha256": "c13a9f543d5afaeaae4908cadb21c19f44ecdf2dba4344ee1fe15bf75644b55c",
+      "bytes": 1714
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\RuntimeRecordLockRepository.php",
+      "sha256": "f9ac114ec51b23883f21a1a5269625090a3e81bd9a1128e7a51406ce22105f3f",
+      "bytes": 1698
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\RuntimeTransactionLogRepository.php",
+      "sha256": "5ce9d6f27705677ac1e289669426a29c233595a06e8892c8ce3c578ed20cfc87",
+      "bytes": 416
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\RuntimeTransactionRepository.php",
+      "sha256": "fa11d69dc5e7a30505850b82c5939b60d61f56fef6bebeeec6ecb1be8c1a0103",
+      "bytes": 407
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\RuntimeUserMessageRepository.php",
+      "sha256": "13905791abdbc6c2ac19f2da479d6f2a0ef2eade498e903f3f47aad87ba196ee",
+      "bytes": 3777
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\RuntimeUserSessionRepository.php",
+      "sha256": "62067e04f11e8643f2e44fdc7fd711a3ad3549e12436f0a869afc1863ad10dbb",
+      "bytes": 1383
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\ScreenDefinitionRepository.php",
+      "sha256": "d35190368db2bd210181bf78732a6c2ed964d7069e47b1fd2d23809b806fbae9",
+      "bytes": 900
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\SystemLiteralTranslationRepository.php",
+      "sha256": "f3386f1c640593e5190ea364dbf68bd3af0bcd2413f1e678c9dfe0af2da8d1a9",
+      "bytes": 865
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\SystemOptionListRepository.php",
+      "sha256": "25a67795682a5f11e51807dd1a05574558272fefcd34a855d3bc6bfc9809c76d",
+      "bytes": 401
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\SystemOptionRepository.php",
+      "sha256": "51ea0f5336a7fc9744ec7dd9ce3b9d4c559f014262fb0d3a5a8a0fb07ec3dbc8",
+      "bytes": 1333
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\SystemParameterRepository.php",
+      "sha256": "70c7dafb65a28064d23116645cef1d461d6fd2256f7cb58f1f0ef7f8ae525827",
+      "bytes": 595
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\SystemParameterValueRepository.php",
+      "sha256": "110155c2ae5f1b96e7957267b2a5b8671d50c6ddbdfc8ccb633d546a569e3abe",
+      "bytes": 2206
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\SystemRecordIntegrityRepository.php",
+      "sha256": "b4b48ed6b182d2a1147e1ec524b32f8062d10d8707715b943ad3458b60787af7",
+      "bytes": 903
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\SystemUpdateConsentRepository.php",
+      "sha256": "951934611619599a29af79a23cc290167b2746689c77b3df37c23776318bd43b",
+      "bytes": 1791
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\SystemUpdateExecutionRepository.php",
+      "sha256": "02472404a32e6e57550f09257b72ec7c3eb05ff5555be034e45ccfc5be469073",
+      "bytes": 5312
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\SystemUpdateReleaseRepository.php",
+      "sha256": "5f8e1d75c46602a150a3ae8d929d05960f202cb253294384b6dcee4e1f6ffe58",
+      "bytes": 934
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\SystemUpdateTenantActivationRepository.php",
+      "sha256": "fe83c0e7721ff41c2a64cd9a8f2b44effd857417e8ebe8f6b1242142b9e2aa7e",
+      "bytes": 1431
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\UserFilterPreferenceRepository.php",
+      "sha256": "f281ed8124b466d0bceac592b49777020a4da3b632c38dea4b6a8c49d382f312",
+      "bytes": 1360
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\UserGridLayoutPreferenceRepository.php",
+      "sha256": "4c813f00f6aad8cb5f56c8b705f493a064a7625f84a4e22fda40257e1f7ad41c",
+      "bytes": 1380
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\UserGroupPreferenceRepository.php",
+      "sha256": "7726078fbd4317ea3b4361f2e8bdb02876a96a71262977f21d86713e724dd43c",
+      "bytes": 1352
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\UserLayoutPreferenceRepository.php",
+      "sha256": "34fc55bb95e171f8317e4cb1a823b3961329d414deab8c26fbb4c4633b4b8ed4",
+      "bytes": 1128
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\UserLookupUsageRepository.php",
+      "sha256": "625d5610ea9dca2ccb357373989bbe14f75332625a3c4fc91c1832a02450b160",
+      "bytes": 1850
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\UserMobileGridTemplatePreferenceRepository.php",
+      "sha256": "583ceccc04a74d735b49bb866d9f9321b44ae753b2b5c57c3cd3395b0e34f06f",
+      "bytes": 1426
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Repository\\UserSortPreferenceRepository.php",
+      "sha256": "d6b89ffa8800a1375e33b3eb5a91a47f4b1232a24da98f23d0e8b4351b587d2e",
+      "bytes": 1344
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\AbstractRuntimeBusinessRuleHandler.php",
+      "sha256": "22eb74ba3bad3f1160f36a90919ff40d335e8daaee8ef5d804a9b891dda8e63b",
+      "bytes": 511
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\ApiCompanyAuditClassifier.php",
+      "sha256": "2f647c6f5b4fb68734944a199adb9f06b3079a80e64834637df7538234048978",
+      "bytes": 2134
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\ApiCompanyBindingRegistry.php",
+      "sha256": "8a00d4889966f79fe72a7be472b3b742801fd2a831ef5a908ea618c939d03646",
+      "bytes": 4776
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\ApiCompanyContext.php",
+      "sha256": "063b9958501d22762bd15b8c23297f3ecbc7d70ac903ef60621b42fb4694528f",
+      "bytes": 1106
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\ApiCompanyContextResolver.php",
+      "sha256": "87bc1f8bc3b5e0e297efbb636bc84baee4e34fb72fbca3411e7d709e7b93cf48",
+      "bytes": 9166
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\ApiCompanyRequestAdapter.php",
+      "sha256": "89281a26e6873d28d23b0c10f383355b562cc918e2cfd94241aecceb1e4d84e6",
+      "bytes": 3520
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\ApiRequestContext.php",
+      "sha256": "8f788e9627204786fba769c083d2845fe1ff5bdd4561607727fb853e95b23918",
+      "bytes": 3545
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\BusinessRule\\ConfiguredEntityRuleMethods.php",
+      "sha256": "71a50e82f0bff5832f70e7bc975fffc17911be144d5b6e974a4f27d6bf862e29",
+      "bytes": 2979
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\CentralControlGuard.php",
+      "sha256": "0d59c9f68a91b0b120523b33fb58489b4e2993695293a62edb26285a9c857234",
+      "bytes": 519
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\CentralControlResolver.php",
+      "sha256": "c468951aed1feecca6cac18abfe81ed51b7b9d06d2ea7d40e606f77166597a7b",
+      "bytes": 2171
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\CentralOperationsService.php",
+      "sha256": "569f8e7c4f5b9410c36d3ce5768d1e1fe282e8177016a6433c0ced6e91acfe0c",
+      "bytes": 26243
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\ClienteBusinessRules.php",
+      "sha256": "9527b6c4bc2fa42223e8b0176e59c7bb7277166d7f6fd98618edd823df383c33",
+      "bytes": 2087
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\ClienteEmailConfirmationJobHandler.php",
+      "sha256": "0bb58aa40119b566ca4ca8256f1855d260662d09df8df42da73b047c7d6cfda1",
+      "bytes": 1507
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\ClienteProcessamentoJobHandler.php",
+      "sha256": "2f3da92279f44b4e1ef0e918dd5e50626de0b2e37563a0ab07f8cfeb7695ba6b",
+      "bytes": 628
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\ClienteRuntimeHandler.php",
+      "sha256": "503d36a8234f08c25d7e084265a41876cc94e51418f52e87a96e149278b985fc",
+      "bytes": 22676
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\ClienteWhatsappWelcomeJobHandler.php",
+      "sha256": "332eca030d90e6d164cac64d0fcb9148e579f15743ae2c84c0d5d2ce5769029b",
+      "bytes": 1074
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\ConfiguredRuntimeJobsBusinessRules.php",
+      "sha256": "00a94f3805656effec159cca73c62406970d46011815a2c33f66cdc18c497837",
+      "bytes": 511
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\CustomCode\\ProdutoPdmCodeGenerator.php",
+      "sha256": "25691712ef95c65053a915078a4376d0dbfe2c3123a28097706608f0e20759b2",
+      "bytes": 941
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\DeploymentModeResolver.php",
+      "sha256": "a1a31543aad116dc0c1bdca6f00bc5388c8546815e6372248fc5bb1730465970",
+      "bytes": 846
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\GovernanceRetentionPolicyService.php",
+      "sha256": "ce2fe3d75c0ed970ce79dc1ca9c683c77b3ba0f7c46141e22baca1ee07fe0ed2",
+      "bytes": 6255
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\HomeRuntimeHandler.php",
+      "sha256": "6826a64f7cea09b4f016555b7fab4350e751930f201cb497ade237df4fd6f5b6",
+      "bytes": 16959
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\HomeSupportService.php",
+      "sha256": "f2ee57f855d7c133a62d12fb2fecfa82c7e50a5d96e05378b05a7a1a4093605f",
+      "bytes": 18758
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\PermissionResolver.php",
+      "sha256": "b43c0f66c0b932aac496d2cdb4c6fc6124031f8aa40bf2dca7708fbdfd0c9202",
+      "bytes": 24836
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\ProgramCustomizationResolver.php",
+      "sha256": "afae07b20b490353b5bee60f23e48a688a72450a5f4fe20a0a683bd31e853742",
+      "bytes": 1796
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\ProgramGovernanceRetentionHistoryService.php",
+      "sha256": "a87dc07ca93dc3dfede431690e3369d23b303520ee4c59d9752c6fcf8836105a",
+      "bytes": 6183
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\ProgramGovernanceService.php",
+      "sha256": "e0a189f05eefb46703bcb9944bfac8ad80d10154548490a366fde597019a7c62",
+      "bytes": 73784
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\ProgramOverlayService.php",
+      "sha256": "4739c7da045cb13913364c41b1fba706288ecb9092a095b858a2f933a05773f1",
+      "bytes": 37163
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\PublishedModuleCatalog.php",
+      "sha256": "09edda2322853273d926f551628969135ec05ee91944a3dcc2b180716d180f64",
+      "bytes": 2303
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeAnalyticsApiDatasetService.php",
+      "sha256": "c5d12eaae56764f01ec85b598c0208915bfc71d2b0c2ecfe7d7c005d6b2c0e7d",
+      "bytes": 6058
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeAnalyticsAuditAdminService.php",
+      "sha256": "18fd95d4dcf184cece6780a04e246e968e25a1fc078907c46c76b413056577ff",
+      "bytes": 2500
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeAnalyticsAuditStore.php",
+      "sha256": "f7c1a044f0e06c6d6c2e24b58aa89b94fdbd337aaef254da33ece051e40ff6bb",
+      "bytes": 21879
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeAnalyticsEndpointHandler.php",
+      "sha256": "d3f3a5aeac8d6fb3d9e68fdaa9a4389bc70d3c371bb00bd159b97ade26ac29b1",
+      "bytes": 5118
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeAnalyticsMaterializeJobHandler.php",
+      "sha256": "a8b4fc3c377920c99201db774860cb8555945746c20fc3a2b57d500a12715d25",
+      "bytes": 894
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeAnalyticsPipelineAdminService.php",
+      "sha256": "ba223e9fc418e9c03970348e4c006425169bcddd903b7344bc09441d619120d0",
+      "bytes": 8367
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeAnalyticsPipelineJobHandler.php",
+      "sha256": "0fc2e7246d43977d3251015cbe9c63d772c969667e617dccd3ebe3275cd9e0d7",
+      "bytes": 858
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeAnalyticsPipelineService.php",
+      "sha256": "f698530b5cc39a75825015d8b5be2c5bd8340cf859463afdca6c0f0e8b4674a2",
+      "bytes": 80502
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeAnalyticsPipelineStore.php",
+      "sha256": "6f0f21cc568c6ef320162e8a6a19137b5104186eb4ee9875b42c33e0e42c2e7e",
+      "bytes": 26943
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeAnalyticsService.php",
+      "sha256": "e1bad7ab4daedbca9457c827610bb228f60a3c8cf85febed79f84fd22689116c",
+      "bytes": 56470
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeApiEntityActionService.php",
+      "sha256": "d5413e3085c445107aedc22d8c07a374259dc056ef5550cccf0c7d8dc388a7bb",
+      "bytes": 127310
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeAsyncJobService.php",
+      "sha256": "c57bffe7b710ebbe58a03edd36e2c68fb4769e0521eb411bf23992d7a17a8622",
+      "bytes": 7412
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeAttachmentWriteCoordinator.php",
+      "sha256": "02041b559ca2ecbadd61a8d09870fd34744c0cf4fe0bd4b0adf095aac6e541b1",
+      "bytes": 4583
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeAuditAccessPolicy.php",
+      "sha256": "c75a8ba44000c01e13a0e5d94df2371be95659b8405726f6819c4fa0e24193e3",
+      "bytes": 5174
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeAuditAccessScope.php",
+      "sha256": "2e523b4abc78a36d0f557cd79897ab55711fcc46b52f4d57f7d71550fcbf07ea",
+      "bytes": 348
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeAuditResourceGuard.php",
+      "sha256": "94bc42fc4ec6b9987b5955d8096fb2121ffa88cf58b45a6f0dbede2abc882214",
+      "bytes": 1434
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeAuditSubscriber.php",
+      "sha256": "a9be39e6a54c9d1b45cb93ed9da75938c2c49070afa35ce1c5e0dc717fe20537",
+      "bytes": 7719
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeBusinessRuleContext.php",
+      "sha256": "6c2f114429c3befd8dde8c411af2d6f0587e51411c574b48aedeebfec2dc28f8",
+      "bytes": 3751
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeBusinessRuleHandlerInterface.php",
+      "sha256": "d3cd629c070a14f41a4d00cbfe62cf842860ffb58ca1d64d65df2c4ba61f81ba",
+      "bytes": 608
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeBusinessRuleRegistry.php",
+      "sha256": "204bd0da7c85c3617b9265b650c86b29d34e40992424eb4c0df5efd71167a704",
+      "bytes": 1282
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeCiwCadastroAudit.php",
+      "sha256": "a95953d34b99a5725b74b40d0f2cd20990fc6aa2e245672cad79c6806fcd5ab2",
+      "bytes": 3505
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeCiwComparisonRead.php",
+      "sha256": "115fedfa064cdebfadd7dc1a5cc7ed6b29d0cc9024ed025b433ba73781e24246",
+      "bytes": 4372
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeCiwCotacaoAudit.php",
+      "sha256": "bace517346f4f3282d659a98be5c6f6e028491948fb1346afc7128a8d4ed2336",
+      "bytes": 6662
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeCiwErpQuery.php",
+      "sha256": "ec83a005dfaf87ed7e6bcebd03b5b2c221f39ea0d8f0c72a34a67c62aef46b44",
+      "bytes": 15981
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeCiwParametroAudit.php",
+      "sha256": "bf14485e6ad2a0ec813e57c930695ba2a977231da41c181e70fc245c433880f5",
+      "bytes": 3717
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeConcurrencyGuard.php",
+      "sha256": "ea41c1a0e97c06a1c71e8d073f4f09aac534d427d4d9b6226604152707e06097",
+      "bytes": 933
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeConfiguredJobScheduler.php",
+      "sha256": "fc7ee8794477d222f6975914568443b827061fc1a1f74a5c1940b39d856d1944",
+      "bytes": 10039
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeConfiguredRuleExecutor.php",
+      "sha256": "971e2d1f8e8503b87bc0f15abad20e966183677ee41bb7c04469def998bf2607",
+      "bytes": 20455
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeContainerAllocationAudit.php",
+      "sha256": "ed0e7955ba79fc9e38a78bfcc9b0346242d0581d2db5f379b99879294af653f2",
+      "bytes": 5974
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeContainerAudit.php",
+      "sha256": "3cd4448cd1a28b61a42cce9003e84d434a1e58c7b11c1a89599456f5e8d6931b",
+      "bytes": 29217
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeContainerExpenseBatch.php",
+      "sha256": "b2de2ed168fabd929bf47a5abc0a07af965fc4cd350591d7119f7f206b6a19b7",
+      "bytes": 12555
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeContainerExpenseDefaultsAudit.php",
+      "sha256": "e3229be6b584f8e53e38243d6f003f9b3f45b48d2f7aaefc9b792e3b16c26c9d",
+      "bytes": 4403
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeContainerNfAvailableRead.php",
+      "sha256": "19602f88757a307950cfc78dbd16c87ba846645e2cd1083beb5dca3102fb6362",
+      "bytes": 5317
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeContainerTaxAudit.php",
+      "sha256": "fbbac1ba035a56928227ab3b5d3609a78ab97fe0f046138eeb3c35808e730790",
+      "bytes": 2750
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeCostDistributionLedgerRead.php",
+      "sha256": "f2273437e55865d3ba66ea5fbea0e96d7aa01ea2bd7c6e0bc2bde906ae7e457c",
+      "bytes": 2654
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeCostDistributionRead.php",
+      "sha256": "eb33d141610deae16638e1d61e175391ce6a7261e0981982c9d7db3950a37257",
+      "bytes": 2277
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeCustomCodeService.php",
+      "sha256": "41a4d42ee3f4e40cd229a21deceb270941f730fd8db591c6c1c7d1feba792d95",
+      "bytes": 9265
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeEndpointDispatcher.php",
+      "sha256": "1788ee477d05d80ef4e314dac7c8d89892565e933a0c400d81c82f6c11c938e8",
+      "bytes": 18385
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeEntityActionService.php",
+      "sha256": "9eda11a47b3f3316d93773438709b94718efcf2611dc824d4c85d004c43a7906",
+      "bytes": 86371
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeEntityDefinitionResolver.php",
+      "sha256": "27e1df8286269a3df7254ae2c33cad7f47da51d8257c6f3fd6f8415f31ac2339",
+      "bytes": 29177
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeEntityVersionService.php",
+      "sha256": "1aea1a57d3213e61653bcfc899788634f2ea3234e7a1522b2791563685742a48",
+      "bytes": 5373
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeEnvironmentIdentityResolver.php",
+      "sha256": "5aa82ae50fef87cfca5fc81adbbcc5dcae5926a8dd8ac83834565afc0172f405",
+      "bytes": 790
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeEstoqueTermoAudit.php",
+      "sha256": "b87df57ff8b1993291ac11f5076211ec8cff34d95a8495154c59ee41016ce114",
+      "bytes": 3227
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeEventHandler.php",
+      "sha256": "d8085381c4c485149246e28bfa2691299c0fe1b7491cb34d88af7a5c0fa988d2",
+      "bytes": 384
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeEventMessage.php",
+      "sha256": "96f570c8de80c5822329abf130c42834f4379e107e91d05a6ce680febc044fbd",
+      "bytes": 239
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeEventService.php",
+      "sha256": "d474d24bf310b5438c95da7ca5397027db56089cec8aa7f4c721600e6f46191f",
+      "bytes": 19900
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeExecutionContext.php",
+      "sha256": "1c9f22540c3e7e6ac5eb1619e0e189fed579cce6c8700536a0b2781001994006",
+      "bytes": 964
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeExpenseTaxRelationsRead.php",
+      "sha256": "9999a613925d9b36d22c1c98ae648fa1566802633259e6aa92f8b22f51aea8e4",
+      "bytes": 4077
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeExternalJsonClient.php",
+      "sha256": "2db96cdb9c99cd53c80f5537c2ddef017b35db885b7ddba83c78f423d7e9168f",
+      "bytes": 15184
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeFileTransferContext.php",
+      "sha256": "30c79c8a5fecaf140227549e5aecafe248c5c8012799110efd47293a8a10e2e2",
+      "bytes": 4171
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeHttpException.php",
+      "sha256": "9ac7eb0e8b43d9bd2489841587c0bffc6859504040f60a622789fe64400fc160",
+      "bytes": 628
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeImportDiscountRead.php",
+      "sha256": "d89428668214f8901cd02a32176200afa3433f645fddd3cf42cd749e8545893a",
+      "bytes": 7705
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeItemCostManualRead.php",
+      "sha256": "946490ec5c2ebdd22933370a82909c4ca5bbe1cc163b859647e29350d3aa734f",
+      "bytes": 2527
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeItemCostManualSchema.php",
+      "sha256": "e9834759baa01b2659f31e68c73c2fe85ed5f30eee670d213b8f74a883d5c5cb",
+      "bytes": 1290
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeJobEnqueueService.php",
+      "sha256": "b5e794ef07e9676a72dcf76bb1cfd50fddffbe946882cd633209d6091227fbdc",
+      "bytes": 9307
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeJobHandler.php",
+      "sha256": "aba17e474e193de3b02f6e11cf0523aa18a9c618b10e00e9326778b9ddee7d6d",
+      "bytes": 3954
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeJobHandlerInterface.php",
+      "sha256": "64d912237eef21db8cfd3df51f48333fbd323a41a31c09fe88183d3d8ef9bd1f",
+      "bytes": 402
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeJobMessage.php",
+      "sha256": "dc73dbc23377839807b152f278c07dc77cd52eeeee4c3ed397c987fa68eae783",
+      "bytes": 243
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeJobRegistry.php",
+      "sha256": "84d5c71c8f26e70d97e87595bcbcc5629461cf533ffdbbe960ddb2bc5368e482",
+      "bytes": 1028
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeLiteralService.php",
+      "sha256": "5c7d7db44dde031f8659b2b6729b0b504e2035a8ef5c6b820ccd4202f696df60",
+      "bytes": 972
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeLivePermissionResolver.php",
+      "sha256": "136017b23119213453193dccc6fa31410a1abecca3ee12ca16c243003af107f3",
+      "bytes": 1335
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeLockService.php",
+      "sha256": "5d0f8580d6f64c651c5834171242302f92d62a3ae762b99fbdcbe7916204891e",
+      "bytes": 12268
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeMasterDetailActionService.php",
+      "sha256": "6976c29b32f8f7fc108747b658e7a3b665c1862b71e38a5ac399888ee66f4ebe",
+      "bytes": 5828
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeMessageService.php",
+      "sha256": "b51658027f59f8bdc9c511343ab48ef81bba90bf993d81a8aeb4560d0f317ced",
+      "bytes": 3921
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeMetadataSanitizer.php",
+      "sha256": "4839dbab18d5eb4608a7ebb24e3d7ccbe940dd683d1f629756a375f25520bed9",
+      "bytes": 20637
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeNotificationService.php",
+      "sha256": "cdc296ee823614ba5aecf8a02f65a1d24a704d530f2e0e9174c05ffafd598aa8",
+      "bytes": 30666
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeOdooEntityActionService.php",
+      "sha256": "9a98a2fa6281e5df16c8798d4fe23f01093ee52d1198569f92426cc06f18db41",
+      "bytes": 12070
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeProcessHandler.php",
+      "sha256": "54d50bc345e89b4290add1633bff38297c250237df931cc744d85bd05b9b382e",
+      "bytes": 13046
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeProcessLookupPolicy.php",
+      "sha256": "1d951f160be0af979de1f94f47a1c9b63309163c7eb0a37803fd058d13501c3a",
+      "bytes": 1085
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeProgressAuditSchema.php",
+      "sha256": "c4b9ae1baae8108e2fbc91c68f4ec8d0e9e5031a6a1ad0282f3e8806ad49b22e",
+      "bytes": 3555
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimePurchaseAttachmentAudit.php",
+      "sha256": "3e4fe5c101bf83f6c056137f026ade74abe1040efe9af04466c7a9058f36733e",
+      "bytes": 5364
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimePurchaseContextAudit.php",
+      "sha256": "2e638a96424fa5d38b12174c022e78ce70bdaacbb527f90032b0cec07b1b6d80",
+      "bytes": 2330
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimePurchaseContextPayload.php",
+      "sha256": "764f91fd8a10110fbcdfe58a364b76be4d5b59873d6905d70225d2c447d03912",
+      "bytes": 3536
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimePurchaseExpenseAudit.php",
+      "sha256": "7edd5931965ee7e78418412b2c3fc1165ed2b324e32f85d11145891bb6a08c50",
+      "bytes": 5704
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimePurchaseItemAudit.php",
+      "sha256": "7469b045e0219b9a7de69d317b28e98c8863278e59845fbd8b6a49a97b9497fd",
+      "bytes": 10435
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimePurchaseOrderAudit.php",
+      "sha256": "ba2386d9d71a8532139f77b07f4c474f06d1969a2436c237196bf084d6e38b26",
+      "bytes": 6894
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimePurchasePaymentAudit.php",
+      "sha256": "a9ca0050cc1b9a2a7c9c58dcc3eea0cf6a6b7aee29a6c95f03276c6ebeddc251",
+      "bytes": 7251
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimePurchaseSampleAudit.php",
+      "sha256": "cbbb7695391780d64e38ff1da5718cb711c792fa2f382cadb6d73d252ff6fe92",
+      "bytes": 4064
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimePurchaseTaxAudit.php",
+      "sha256": "1fce7cc119487dd46d3c54ea34949d829eac1e164f185e78e392ac24961d47ff",
+      "bytes": 4691
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeRegulatedDocumentAdminService.php",
+      "sha256": "c0eabce3bdcdad9b6891fc281a29193a242be04cf626120d87aa464078ec4cc4",
+      "bytes": 5603
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeRegulatedDocumentAuthenticityService.php",
+      "sha256": "0a1310f8897ed90cd61867703f5d908d513715eccbc360a89fadba6aa968af90",
+      "bytes": 2940
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeRegulatedDocumentEndpointHandler.php",
+      "sha256": "13655efc8918c0100d3472c9379becb6cf8d91f9bd4c7263ff4736f4291ced20",
+      "bytes": 1902
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeRegulatedDocumentService.php",
+      "sha256": "f21222c3213fc7c38a4536ae2e3422e7150cba7f17af18da988c3481a4ff4bc5",
+      "bytes": 52887
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeRegulatedDocumentStore.php",
+      "sha256": "1341a0034d05b188b831e3fbda5691d0435705eed51547538611ce0634a680df",
+      "bytes": 28238
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeReportAuditAdminService.php",
+      "sha256": "2b91433e162d454074db06c0008bee2420e6d54740cc753ac57d07e35eff7fd3",
+      "bytes": 3777
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeReportAuthenticityService.php",
+      "sha256": "88d4d77b00764f9a5ad1099e7f719a36324763e550c6ff27f79816c56d7dbfac",
+      "bytes": 3651
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeReportEndpointHandler.php",
+      "sha256": "e3617464aeb10ab97fdcd6382f4d38c3929fe566b8c7e5ed8381af8c54e99d00",
+      "bytes": 1545
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeReportService.php",
+      "sha256": "ca657c063dd14c60662b5ce587582546c3c4dbc79ad7820bc10d9ad6cb2e13ad",
+      "bytes": 69902
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeSampleContainerItemsRead.php",
+      "sha256": "e2b0f5683aadff8ab24c90d71f6976321bbdeb0ce11b638cd54de31878dda173",
+      "bytes": 2551
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeSessionGuard.php",
+      "sha256": "674fd360b77d87717d2cf3003e47c78839034e4134e86196722bbd4f1d8b6816",
+      "bytes": 11341
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeSituationService.php",
+      "sha256": "9bf1314c8a3f210dcefc65b21978f297755302311ff8f13ee01b3d593bdd264d",
+      "bytes": 11005
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeSpecialDocumentEndpointHandler.php",
+      "sha256": "bfa1d11c7214086f68245e594240b4ea7f27872298892fcca33069688a63125e",
+      "bytes": 1623
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeSpecialDocumentService.php",
+      "sha256": "65b44c5e300a2d33456126029fa5a9ee553899532eea39c48210de1647228c6e",
+      "bytes": 52636
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeSystemHandler.php",
+      "sha256": "5788e6f71d5ddd3c764b25c666d1a8fa2250f632cabcfd9382f7c36675eaa40f",
+      "bytes": 7469
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeTransactionService.php",
+      "sha256": "10b3b5fd0cbf4222befdbf5bda29ad0b7d8463e0e2147bee750e6b52f29e53f9",
+      "bytes": 21185
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\RuntimeValidationException.php",
+      "sha256": "085ee57fce5eee887b941e7e2d99fec1033b7296580383ef6fb2c5d324b30c50",
+      "bytes": 767
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\ScreenDefinitionService.php",
+      "sha256": "accaa7aa35f5037d9af28de9b169c6f95a366af27ab27123cd270f10f6653f47",
+      "bytes": 14585
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\StructuralIntegrityService.php",
+      "sha256": "7f82a2b92e212199557f2de6bcd2356f98097275e0ed70121339fe0e02efddd2",
+      "bytes": 67449
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\SystemUpdateApplyJobHandler.php",
+      "sha256": "c930ce71d6738dffcf93f95a9795f0408b2160bc6a838dacb4b98866bc1b1e1b",
+      "bytes": 1814
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\SystemUpdateManifestLoader.php",
+      "sha256": "803b2d78502109d16d7af9cc398c4404b1b118d2d8fa03658e3bc012f755f6a2",
+      "bytes": 5146
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\SystemUpdateManifestRulesValidator.php",
+      "sha256": "730e2e47cae4956e9e887309d2ec942dd54c04b227591184e7c48497b229aafb",
+      "bytes": 16049
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\SystemUpdateOrchestratorClient.php",
+      "sha256": "37c54f9e1a31f21b691cffba7223aa49e60726690cccf59b3ff11bb23b9f77d9",
+      "bytes": 4121
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\SystemUpdatePackageDownloader.php",
+      "sha256": "78d97f19b4944757bbc7fd97343f585fd4fa9258d67bdadd658359b12465c64f",
+      "bytes": 5771
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\SystemUpdatePublicationService.php",
+      "sha256": "2dae479a44ecfae9b7a46e34a3b14a9047fa8ac25a3921d6829672acf47b2623",
+      "bytes": 12920
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\SystemUpdateService.php",
+      "sha256": "7aa885b7fcaaa8a75a7d97efe163584a0729b3a1a7cc8cac95a73b2419514ee2",
+      "bytes": 155670
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\SystemUpdateStepCatalog.php",
+      "sha256": "ebc44007902a5fed6d285ce0c1af5cd6685ae95ee03d861d2f2f1a774b4da38e",
+      "bytes": 5557
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\SystemUpdateStepRunner.php",
+      "sha256": "84447a1c0f8fc4b9ccae9c24732552dd2492588d4524d80538372c946ad9fbd4",
+      "bytes": 2269
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\SystemVersionResolver.php",
+      "sha256": "7351fa76a8844e75b4fbffd92f49c9bd4abc2cc9fd155cac91c1a80511f40064",
+      "bytes": 944
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\Runtime\\UserLayoutService.php",
+      "sha256": "38b7d2f43c8337cc898bb8f972e807ccab476795efe5184e9c8019e6a77c1024",
+      "bytes": 39305
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage\\System\\SystemParameterResolver.php",
+      "sha256": "c7ea93cc5e409331c963c148ac0a0339437264f620c098cfc34b989309b80cc4",
+      "bytes": 9446
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage-bootstrap.php",
+      "sha256": "921ac83b019d4bef48095ed48c24757783b413c1cc38605db33dc5f0ae7f6216",
+      "bytes": 1177
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage-loader-proof.json",
+      "sha256": "f15afcbbe81fc82adc73ffaa5e11865b89600aeabb5b19a21a569b544a785bcb",
+      "bytes": 112025
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\php-stage-manifest.json",
+      "sha256": "f3d51f0cc3efd3190154c6a215cf1c8f5c8be4904ba28078c876fe67cd2f976d",
+      "bytes": 162868
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\phpunit.xml",
+      "sha256": "f97eb509cc0f144425d99bea19376fc78fb798d65a5deaa4473a078ee43cab16",
+      "bytes": 514
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\request-basic-traces.json",
+      "sha256": "90569cdc2e0a062cea464a9a45a7246017088d8a6c0709f43a5967e1ba597c9f",
+      "bytes": 892
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\request-boundary-traces.json",
+      "sha256": "66b7982aff6e0fec0dca7515f9a5a892f232cc51ef39166c67fc79aaa7add510",
+      "bytes": 1549
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\final-local-v1\\signed-native-traces.json",
+      "sha256": "6e51b307270c14f598acebea7accc295b23899cfb14ed9c638bf62f18e875418",
+      "bytes": 1881
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\generated\\op1002-before.json",
+      "sha256": "bed4c84e59db5590dc7de1daf1c26a6f51528823d4e497bbdc69bedbdf32154a",
+      "bytes": 106925
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\generated\\op1002-candidate.json",
+      "sha256": "c8bd12bab438c8155a2d8bee47ee52aab84a95cfcb29f527445c58371d33fc50",
+      "bytes": 107782
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\generated\\op1008-before.json",
+      "sha256": "4535a7904f7e4a6406c27956571f7e2325d3b368d7c59e752f0cfc7aeeca331d",
+      "bytes": 194757
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\generated\\op1008-candidate.json",
+      "sha256": "7c4e2e2d4f7296c1df423ec387dfa9189323fd3ec2eadb5e45477ea142f1bb25",
+      "bytes": 196027
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\generated\\op1014-before.json",
+      "sha256": "7959984da0fdd55b0f41679fc01ba2270710730697b0895311361ffc91426ee8",
+      "bytes": 176901
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\generated\\op1014-candidate.json",
+      "sha256": "058c090329696e289b95f19292406722485614afc449632db12694f4553dfee3",
+      "bytes": 177122
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\generated\\op1056-before.json",
+      "sha256": "945a36374a5caa13eb14cb3f49a22f6bb2339bf9128fa60575375120030466e2",
+      "bytes": 165445
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\generated\\op1056-candidate.json",
+      "sha256": "c5c250443c1b26ab6f7c5ca1ba70e964b393e2624fa88b502fe7d24d11f52f52",
+      "bytes": 165560
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\generated\\op1056-external-test-input.json",
+      "sha256": "032f4bc00a1730b8cf35a6821e397587083c29d3a67d3d0e5b82d881e6c7f314",
+      "bytes": 20703
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\generic-profile-green-v2.log",
+      "sha256": "dc4c9d01d313250816467e1b55f6c7570212bba1ebe07c6cd07b125b17966aa7",
+      "bytes": 1065
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\generic-profile-green.log",
+      "sha256": "44e89132c9ef67fe48bfd5cb24aa2604876afe32711d7800c50c42c1f3ebb320",
+      "bytes": 2070
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\generic-profile-red.log",
+      "sha256": "5bf6b05da1a617c6a24e1265d2da427d465180b1cbeb7001f4da700e0bedb212",
+      "bytes": 4404
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\helper-red.xml",
+      "sha256": "94ab257b773f3a02e7b942eb1834180cd6933d2ffb2d5628115af31869a27d16",
+      "bytes": 2663
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\native-focused-scope.log",
+      "sha256": "bea10958e89d25a6a5354f1fd86bfd3acff1bb57b134670bb40837e7b3ee3ede",
+      "bytes": 3285
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\native-green-initial.log",
+      "sha256": "692a2b4b6860c1eb60305381ef85540e3d7e4e46639cb014243daa2d4a956b16",
+      "bytes": 877
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\native-red.log",
+      "sha256": "5b1ee35af876a43dbb891fedfa814ea9050220d38810a5b0062c5f061fd7f43a",
+      "bytes": 4624
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\php-focused-scope.xml",
+      "sha256": "cbd3ea901c390a609b3f3fcb6da5e2dfb30439fc369ac62b353b70f33e154bff",
+      "bytes": 9111
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\php-green-generic.xml",
+      "sha256": "daad6cf57a29cf46d69c9004005537b87a80722a352bd25526699581000e8f5f",
+      "bytes": 4940
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\php-green-initial.xml",
+      "sha256": "4b38684949bacc0359ab04c6268d50121141bb1c0439c84ecae540b5bf8a4348",
+      "bytes": 3509
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\php-metadata-initial.xml",
+      "sha256": "9957a7a0e5985186370636c4fcc189ae288e77f513d54549417dcd05ef3a6045",
+      "bytes": 1139
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\request-basic-traces.json",
+      "sha256": "90569cdc2e0a062cea464a9a45a7246017088d8a6c0709f43a5967e1ba597c9f",
+      "bytes": 892
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\request-boundary-traces.json",
+      "sha256": "66b7982aff6e0fec0dca7515f9a5a892f232cc51ef39166c67fc79aaa7add510",
+      "bytes": 1549
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-supplier-discounts-integer-range-v2\\signed-native-traces.json",
+      "sha256": "6e51b307270c14f598acebea7accc295b23899cfb14ed9c638bf62f18e875418",
+      "bytes": 1881
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "relative": "public/metadata/schemas/crud-definition-v1.schema.json",
+  "role": "generic-native-capability",
+  "baselineSha256": "c8631a7a5ca50cf4d7911ed1fc372a81b10a5f9011ec366f632e1ecdbf33a8b0",
+  "candidateSha256": "1889d1c3b290af83f441ace3293d18b3969f78c0837b1788cdf8b60fb2c2054c",
+  "hunks": [
+    {
+      "baselineStart": 305,
+      "baselineEnd": 305,
+      "candidateStart": 305,
+      "candidateEnd": 945,
+      "beforeBase64": "",
+      "afterBase64": "ICBdLA0KICAiYWxsT2YiOiBbDQogICAgew0KICAgICAgImlmIjogeyJyZXF1aXJlZCI6IFsiY29udGV4dEZpZWxkcyJdLCAicHJvcGVydGllcyI6IHsiY29udGV4dEZpZWxkcyI6IHsiY29udGFpbnMiOiB7InR5cGUiOiAib2JqZWN0IiwgInJlcXVpcmVkIjogWyJpbnRlZ2VyUmFuZ2UiXX19fX0sDQogICAgICAidGhlbiI6IHsNCiAgICAgICAgInByb3BlcnRpZXMiOiB7DQogICAgICAgICAgInBlcm1pc3Npb25zIjogeyJyZXF1aXJlZCI6IFsiY3JlYXRlIiwgImVkaXQiLCAiZGVsZXRlIl0sICJwcm9wZXJ0aWVzIjogeyJjcmVhdGUiOiB7ImNvbnN0IjogZmFsc2V9LCAiZWRpdCI6IHsiY29uc3QiOiBmYWxzZX0sICJkZWxldGUiOiB7ImNvbnN0IjogZmFsc2V9fX0sDQogICAgICAgICAgImRhdGFNb2RlbCI6IHsicHJvcGVydGllcyI6IHsiZmllbGRzIjogeyJhZGRpdGlvbmFsUHJvcGVydGllcyI6IHsibm90IjogeyJhbnlPZiI6IFt7InJlcXVpcmVkIjogWyJvcHRpb25zU291cmNlIl19LCB7InJlcXVpcmVkIjogWyJhdHRhY2htZW50Il19LCB7InJlcXVpcmVkIjogWyJlZGl0b3IiXSwgInByb3BlcnRpZXMiOiB7ImVkaXRvciI6IHsiY29uc3QiOiAiZmlsZSJ9fX1dfX19fX0NCiAgICAgICAgfQ0KICAgICAgfQ0KICAgIH0NCg=="
+    },
+    {
+      "baselineStart": 63030,
+      "baselineEnd": 63030,
+      "candidateStart": 63670,
+      "candidateEnd": 63973,
+      "beforeBase64": "",
+      "afterBase64": "ICAgICAgICB9LA0KICAgICAgICAiaW50ZWdlclJhbmdlIjogew0KICAgICAgICAgICJ0eXBlIjogIm9iamVjdCIsICJyZXF1aXJlZCI6IFsibWluIiwgIm1heCJdLCAiYWRkaXRpb25hbFByb3BlcnRpZXMiOiBmYWxzZSwNCiAgICAgICAgICAicHJvcGVydGllcyI6IHsibWluIjogeyJ0eXBlIjogImludGVnZXIiLCAibWluaW11bSI6IC0yMTQ3NDgzNjQ4LCAibWF4aW11bSI6IDIxNDc0ODM2NDd9LCAibWF4IjogeyJ0eXBlIjogImludGVnZXIiLCAibWluaW11bSI6IC0yMTQ3NDgzNjQ4LCAibWF4aW11bSI6IDIxNDc0ODM2NDd9fQ0K"
+    },
+    {
+      "baselineStart": 63435,
+      "baselineEnd": 63435,
+      "candidateStart": 64378,
+      "candidateEnd": 64680,
+      "beforeBase64": "",
+      "afterBase64": "ICAgICAgICB9LA0KICAgICAgICB7DQogICAgICAgICAgImlmIjogeyJyZXF1aXJlZCI6IFsiaW50ZWdlclJhbmdlIl19LA0KICAgICAgICAgICJ0aGVuIjogeyJyZXF1aXJlZCI6IFsiZmllbGQiLCAicmVxdWlyZWQiLCAicmVhZG9ubHkiLCAiZmlsdGVyIiwgImNyZWF0ZURlZmF1bHQiXSwgInByb3BlcnRpZXMiOiB7InJlcXVpcmVkIjogeyJjb25zdCI6IHRydWV9LCAicmVhZG9ubHkiOiB7ImNvbnN0IjogdHJ1ZX0sICJmaWx0ZXIiOiB7ImNvbnN0IjogdHJ1ZX0sICJjcmVhdGVEZWZhdWx0IjogeyJjb25zdCI6IGZhbHNlfX19DQo="
+    }
+  ],
+  "unchangedRanges": [
+    {
+      "baselineStart": 0,
+      "baselineEnd": 305,
+      "candidateStart": 0,
+      "candidateEnd": 305,
+      "sha256": "e1ec0927d28ddefa0186f46724d994d29d4cf65b6b881ede1bbc86918ddc0ac5"
+    },
+    {
+      "baselineStart": 305,
+      "baselineEnd": 63030,
+      "candidateStart": 945,
+      "candidateEnd": 63670,
+      "sha256": "f5d51c5efdf1becf22422f5f6dd3b0c43bf46438664bd7bf647c685d7aa698e7"
+    },
+    {
+      "baselineStart": 63030,
+      "baselineEnd": 63435,
+      "candidateStart": 63973,
+      "candidateEnd": 64378,
+      "sha256": "6e0436363a7f4ce6739ea4f0855a5e70a1863daf6f4fc1eb513aa165e5108bf4"
+    },
+    {
+      "baselineStart": 63435,
+      "baselineEnd": 66878,
+      "candidateStart": 64680,
+      "candidateEnd": 68123,
+      "sha256": "735f8d0cf47edbe952ada8bd3dbc3a159e4a3e5e80c10e54a18e0f1cfa018b60"
+    }
+  ],
+  "applyOnlyByExactBaseline": true
+}

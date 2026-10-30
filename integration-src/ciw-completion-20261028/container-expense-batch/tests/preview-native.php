@@ -1,0 +1,15 @@
+<?php
+declare(strict_types=1);
+require 'D:/opencode/construtor-pg/backend/vendor/autoload.php';
+require $argv[1].'/backend/src/Builder/ProgramBuilderService.php';
+$root=dirname(__DIR__);$state=$argv[2];$r=new ReflectionClass(App\Builder\ProgramBuilderService::class);$builder=$r->newInstanceWithoutConstructor();$invoke=fn(string $name,...$args)=>$r->getMethod($name)->invoke($builder,...$args);
+$sourceData=json_decode(file_get_contents($root.'/metadata/api-source.json'),true,512,JSON_THROW_ON_ERROR);$ops=$invoke('normalizeApiOperationsRegistry',$sourceData['operations'],$sourceData['baseUrl']);
+$source=(new App\Entity\BuilderApiSource())->setCode($sourceData['code'])->setName($sourceData['name'])->setBaseUrl($sourceData['baseUrl'])->setMetadata(['operations'=>$ops,'responseContract'=>'sursum-programs']);
+$draft=json_decode(file_get_contents($root.'/metadata/despesas-lote-builder-draft.json'),true,512,JSON_THROW_ON_ERROR);$d=$draft['entityDraft'];$binding=$invoke('resolveApiSourceBinding',$source,$d['apiListOperationCode'],$d['apiDetailOperationCode'],'','','',$d['apiBatchOperationCode']);
+$entity=(new App\Entity\BuilderEntity())->setCode($d['code'])->setName($d['name'])->setEntityType('api')->setMetadata(['apiSource'=>$binding]);
+foreach($d['fields']as$v){$options=$v['options'];$options['api']=['jsonPath'=>$v['apiJsonPath'],'writePath'=>$v['apiWritePath'],'showInGrid'=>$v['apiShowInGrid'],'showInForm'=>$v['apiShowInForm'],'showInFilter'=>$v['apiShowInFilter']];$field=(new App\Entity\BuilderField())->setCode($v['code'])->setLabel($v['label'])->setDataType($v['dataType'])->setPrimaryKey($v['primaryKey'])->setRequired($v['primaryKey']||$v['required'])->setPosition($v['position'])->setOptions($options);if(isset($v['length']))$field->setLength($v['length']);$entity->addField($field);}
+$config=$draft['programDraft']+['_entity'=>$entity,'icon'=>'table','customizationPolicy'=>'standard','subscriberId'=>null,'baseProgramCode'=>null,'baseProgramVersionId'=>null,'upgradeFrozen'=>false,'frozenReason'=>null];
+$config['contextFields']=$invoke('normalizeContextFields',$config['contextFields'],$entity);$config['crudOptions']=$invoke('normalizeCrudOptions',$config['crudOptions'],$entity,'crud');$config['formOptions']=$invoke('normalizeFormOptions',$config['formOptions'],$entity,'crud',$config['contextFields']);$config['rowLinks']=$invoke('normalizeRowLinks',[],$entity);
+$definition=$invoke('generateCrudDefinition',$config);file_put_contents($state.'/native-preview.json',json_encode($definition,JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE|JSON_THROW_ON_ERROR));
+foreach([['originalFields'=>['missing'],'contextFields'=>['container_id']],['originalFields'=>['vl_prev','vl_prev'],'contextFields'=>['container_id']],['originalFields'=>['vl_prev'],'contextFields'=>['container_id'],'extra'=>true]]as$bad){try{$invoke('normalizeCrudOptions',['batchSnapshot'=>$bad],$entity,'crud');throw new RuntimeException('Accepted malformed snapshot config');}catch(App\Runtime\RuntimeHttpException $e){if($e->getStatusCode()!==422)throw$e;}}
+echo 'PASS native Builder batch14/3 snapshot, context and closed config'.PHP_EOL;

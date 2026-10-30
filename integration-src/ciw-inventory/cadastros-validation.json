@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-20",
+  "instance": "sursum-api/med",
+  "resources": [
+    {
+      "resource": "coloracoes",
+      "screenId": "ciw.coloracoes",
+      "programCode": "cd0094",
+      "version": "1.0.0",
+      "applications": [
+        "form_pub_coloracoes",
+        "grid_pub_coloracoes"
+      ],
+      "runtimeCrudValidated": true,
+      "auditValidated": true,
+      "visualValidation": "pending"
+    },
+    {
+      "resource": "situacoes_container",
+      "screenId": "ciw.situacoes-container",
+      "programCode": "cd0095",
+      "version": "1.0.0",
+      "applications": [
+        "form_situacoes_container",
+        "grid_situacoes_container"
+      ],
+      "runtimeCrudValidated": true,
+      "auditValidated": true,
+      "visualValidation": "pending"
+    },
+    {
+      "resource": "tipos_versao_custo",
+      "screenId": "ciw.tipos-versao-custo",
+      "programCode": "cd0096",
+      "version": "1.0.0",
+      "applications": [
+        "form_tipos_versao_custo",
+        "cons_tipos_versao_custo"
+      ],
+      "runtimeCrudValidated": true,
+      "auditValidated": true,
+      "visualValidation": "pending"
+    },
+    {
+      "resource": "motivos_desconto",
+      "screenId": "ciw.motivos-desconto",
+      "programCode": "cd0097",
+      "version": "1.0.0",
+      "applications": [
+        "form_motivos_desconto",
+        "grid_motivos_desconto"
+      ],
+      "runtimeCrudValidated": true,
+      "auditValidated": true,
+      "visualValidation": "pending"
+    }
+  ]
+}

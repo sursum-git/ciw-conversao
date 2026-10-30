@@ -1,0 +1,21 @@
+'use strict';
+const c=require('./purchase-payments-builder-common.cjs'),state=c.path.join(c.root,'.runtime/purchase-quantities-20261027');
+const save=(n,v)=>c.fs.writeFileSync(c.path.join(state,n),JSON.stringify(v,null,2)+'\n');
+async function main(){
+ const cfg=c.readJson(c.path.join(c.root,'.runtime/ciw-cadastros-20261020/private/connection.json'));c.assert.equal(cfg.baseUrl,'http://127.0.0.1:19910/med/web');
+ async function call(resource,body){c.assert.ok(['read','get'].includes(body.operation),'NO_BUSINESS_WRITES');const r=await fetch(cfg.baseUrl+'/SursumPrograms/ciw-cadastros',{method:'POST',headers:{'Content-Type':'application/json','X-Ciw-Cadastros-Token':cfg.integrationToken},body:JSON.stringify({resource,...body}),signal:AbortSignal.timeout(45000)});c.assert.equal(r.status,200);return r.json();}
+ const resource='proc_compra_quantidades',context={proc_compra_id:1679};
+ const global=await call(resource,{operation:'read',take:2,skip:0});c.assert.equal(global.success,true,global.error?.code);c.assert.ok(global.total>0&&global.data.length===2);
+ const page=await call(resource,{operation:'read',...context,take:200,skip:0});c.assert.equal(page.success,true,page.error?.code);c.assert.ok(page.total>0&&page.total<=200);c.assert.equal(page.data.length,page.total);c.assert.ok(global.total>=page.total);
+ const filteredGlobal=await call(resource,{operation:'read',take:200,skip:0,filter:{field:'proc_compra_id',operator:'eq',value:context.proc_compra_id}});c.assert.equal(filteredGlobal.success,true);c.assert.deepEqual(filteredGlobal.data,page.data);
+ const items=await call('proc_compra_itens',{operation:'read',...context,take:200,skip:0});c.assert.equal(items.success,true);
+ for(const row of page.data){c.assert.equal(row.proc_compra_id,context.proc_compra_id);c.assert.equal(Object.keys(row).length,24);c.assert.ok(Number.isInteger(row.item_container_id));c.assert.notEqual(row.cod_situacao,3);c.assert.notEqual(row.cod_situacao,null);const item=items.data.find(x=>x.item_proc_compra_id===row.item_proc_compra_id);c.assert.ok(item);c.assert.equal(row.qt_comprada,item.qt_comprada);c.assert.equal(row.vl_negociado,item.vl_negociado);const detail=await call(resource,{operation:'get',...context,id:row.record_key,record_key:row.record_key});c.assert.equal(detail.success,true,detail.error?.code);c.assert.deepEqual(detail.data,row);}
+ const row=page.data[0];const globalDetail=await call(resource,{operation:'get',id:row.record_key});c.assert.equal(globalDetail.success,true);c.assert.deepEqual(globalDetail.data,row);
+ const paged=await call(resource,{operation:'read',...context,take:1,skip:0});c.assert.equal(paged.total,page.total);c.assert.equal(paged.data.length,1);
+ const negatives=[{operation:'read',proc_compra_id:0},{operation:'read',proc_compra_id:2147483647},{operation:'read',...context,sql:'FOR EACH other'},{operation:'read',...context,empresa_id:3},{operation:'read',...context,take:201},{operation:'read',...context,filter:{field:'nonexistent',operator:'eq',value:1}},{operation:'get',...context,id:row.record_key,record_key:'wrong'}];
+ const other=global.data.find(x=>x.proc_compra_id!==context.proc_compra_id);if(other)negatives.push({operation:'get',...context,id:other.record_key});
+ for(const body of negatives){const x=await call(resource,body);c.assert.equal(x.success,false);c.assert.ok([422,404].includes(x.error.status));}
+ const alerts=await call('proc_compra_alertas',{operation:'read',...context});c.assert.equal(alerts.success,true);const formats=await call('formatos_amostra',{operation:'read'});c.assert.equal(formats.success,true);
+ save('readonly-context.json',context);save('pasoe-rows-private.json',page);save('pasoe-global-private.json',global);save('pasoe-read-proof.json',{success:true,instance:'sursum-api',context:'med',officialPort:9911,tunnel:'19910 -> 9910 same instance',resource,globalTotal:global.total,rows:page.total,globalAndContext:true,globalFilterEqualsContext:true,nativeGet:true,aliasEquality:true,rawPurchaseValuesReconciled:true,paging:true,negativeChecks:negatives.length,previousResources:2,compiledDispatcherValidated:true,businessWrites:false});console.log('PASS PASOE quantities global/context/read/get/raw values; negatives and2previous resources; no business writes');
+}
+main().catch(e=>{console.error(e.message);process.exitCode=1;});

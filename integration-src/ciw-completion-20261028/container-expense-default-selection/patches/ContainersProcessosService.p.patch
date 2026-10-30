@@ -1,0 +1,42 @@
+--- D:\opencode\motor-progress\v2\sursum-api\programs\ContainersProcessosService.p
++++ D:\opencode\motor-progress\v2\sursum-api\programs\ContainersProcessosService.p
+@@ -63,13 +63,18 @@
+   IF servicePath=? THEN servicePath=SEARCH("ContainersImpostosService.r").
+  END.
+  IF servicePath=? THEN UNDO, THROW NEW Progress.Lang.AppError("Servico compilado ausente.",1).
++ IF op="options" THEN DO:
++  clean:Set("operation","opcoes_despesas_selecao").
++  RUN VALUE(servicePath)(phFiscal[1],phFiscal[2],phFiscal[3],phFiscal[4],phFiscal[5],phFiscal[6],phFiscal[7],phFiscal[8],phFiscal[9],phFiscal[10],phFiscal[11],phHeaderRuntime,policy,?,clean,OUTPUT poResponse).
++  RETURN.
++ END.
+  rootTransaction: DO TRANSACTION ON ERROR UNDO, THROW:
+   failureCode="CONTAINER_PROCESS_BUSY". failureStatus=409.
+   foundValue=master:FIND-FIRST("WHERE " + master:NAME + ".nr-container=" + TRIM(STRING(cid,"->>>>>>>>>9")),EXCLUSIVE-LOCK,NO-WAIT) NO-ERROR.
+   IF master:LOCKED THEN UNDO, THROW NEW Progress.Lang.AppError("Container em uso.",1).
+   DO n=1 TO ERROR-STATUS:NUM-MESSAGES: IF ERROR-STATUS:GET-NUMBER(n)<>565 THEN UNDO, THROW NEW Progress.Lang.AppError("Falha ao bloquear container.",1). END.
+   IF NOT foundValue THEN DO: failureCode="CONTAINER_NOT_FOUND". failureStatus=404. UNDO, THROW NEW Progress.Lang.AppError("Container nao encontrado.",1). END.
+-  IF op="calcular_impostos" THEN DO:
++  IF op="calcular_impostos" OR op="selecionar_despesas" THEN DO:
+    failureCode="CONTAINER_PROCESS_MED_REQUIRED". failureStatus=422.
+    IF master:BUFFER-FIELD("cod-estabel"):BUFFER-VALUE=? OR NOT STRING(master:BUFFER-FIELD("cod-estabel"):BUFFER-VALUE) BEGINS "5" THEN UNDO, THROW NEW Progress.Lang.AppError("Comando fiscal exige container MED sob lock.",1).
+    failureCode="CONTAINER_PROCESS_BUSY". failureStatus=409.
+@@ -84,7 +89,7 @@
+   IF NOT VALID-OBJECT(resultValue) THEN UNDO, THROW NEW Progress.Lang.AppError("Servico sem resultado.",1).
+   IF NOT resultValue:GetLogical("success") THEN DO: poResponse=CAST(resultValue:Clone(),JsonObject). UNDO rootTransaction, LEAVE rootTransaction. END.
+   IF resultValue:Has("audit") OR NOT resultValue:Has("pendingChanges") THEN UNDO, THROW NEW Progress.Lang.AppError("Servico confirmou auditoria antes da raiz.",1).
+-  IF op="sincronizar" OR op="calcular_impostos" THEN DO:
++  IF op="sincronizar" OR op="calcular_impostos" OR op="selecionar_despesas" THEN DO:
+    IF resultValue:GetJsonObject("data"):GetLogical("committed")<>FALSE THEN UNDO, THROW NEW Progress.Lang.AppError("Fiscal nao confirmou composicao pendente.",1).
+   END.
+   ELSE IF resultValue:GetLogical("committed")<>FALSE THEN UNDO, THROW NEW Progress.Lang.AppError("Servico nao confirmou composicao pendente.",1).
+@@ -110,8 +115,8 @@
+  END.
+  IF op="gerar" THEN messageValue=messageValue + "versoes geradas: " + idsValue + ".".
+  ELSE IF op="fechar" THEN messageValue=messageValue + "versao " + STRING(poRequest:GetInteger("versao_id")) + "; custos gravados: " + idsValue + ".".
+- ELSE messageValue=messageValue + (IF op="calcular_impostos" THEN "impostos calculados; memoria " ELSE "impostos sincronizados; memoria ") + STRING(resultValue:GetJsonObject("data"):GetInteger("calc_imp_container_id")) + ".".
+- poResponse=NEW JsonObject(). IF op="calcular_impostos" THEN poResponse:Add("committed",TRUE). dataValue=NEW JsonObject(). dataValue:Add("type","message"). dataValue:Add("message",messageValue). poResponse:Add("success",TRUE). poResponse:Add("data",dataValue).
++ ELSE messageValue=messageValue + (IF op="calcular_impostos" THEN "impostos calculados; memoria " ELSE IF op="selecionar_despesas" THEN "defaults e despesas selecionadas processados; memoria " ELSE "impostos sincronizados; memoria ") + STRING(resultValue:GetJsonObject("data"):GetInteger("calc_imp_container_id")) + ".".
++ poResponse=NEW JsonObject(). IF op="calcular_impostos" OR op="selecionar_despesas" THEN poResponse:Add("committed",TRUE). dataValue=NEW JsonObject(). dataValue:Add("type","message"). dataValue:Add("message",messageValue). poResponse:Add("success",TRUE). poResponse:Add("data",dataValue).
+  auditValue=NEW JsonObject(). auditValue:Add("version",1). auditValue:Add("source","progress-transaction"). auditValue:Add("resource","container_processes"). auditValue:Add("operation",op).
+  actorValue=NEW JsonObject(). actorValue:Add("login",poHeaderPolicy:GetJsonObject("actor"):GetCharacter("login")).
+  auditValue:Add("recordId",cid). auditValue:Add("container_id",cid). auditValue:Add("before",beforeValue). auditValue:Add("after",afterValue). auditValue:Add("changes",changes). auditValue:Add("actor",actorValue).

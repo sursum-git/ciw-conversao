@@ -1,0 +1,17 @@
+--- a/programs/ImportDiscountsReadApi.p
++++ b/programs/ImportDiscountsReadApi.p
+@@ -17,12 +17,12 @@
+  IF NOT VALID-OBJECT(poRequest) OR NOT CONNECTED('espec') THEN UNDO, THROW NEW Progress.Lang.AppError('IMPORT_DISCOUNTS_CONFIGURATION',1).
+  IF NOT poRequest:Has('resource') OR poRequest:GetType('resource')<>JsonDataType:STRING THEN UNDO, THROW NEW Progress.Lang.AppError('IMPORT_DISCOUNTS_REQUEST',1).
+  resourceName=poRequest:GetCharacter('resource').
+- IF resourceName<>'import_descontos_geral' AND resourceName<>'import_descontos_lancamentos' THEN UNDO, THROW NEW Progress.Lang.AppError('IMPORT_DISCOUNTS_RESOURCE',1).
++ IF resourceName<>'import_descontos_geral' AND resourceName<>'import_descontos_lancamentos' AND resourceName<>'import_descontos_fornecedor' THEN UNDO, THROW NEW Progress.Lang.AppError('IMPORT_DISCOUNTS_RESOURCE',1).
+  servicePath=SEARCH('sursum-api/programs/ImportDiscountsReadService.r').
+  IF servicePath=? THEN UNDO, THROW NEW Progress.Lang.AppError('IMPORT_DISCOUNTS_CONFIGURATION',1).
+  CREATE BUFFER discountBuffer FOR TABLE 'espec.descontos_importacao'.
+  CREATE BUFFER ledgerBuffer FOR TABLE 'espec.cta_corren_desconto'.
+- IF resourceName='import_descontos_geral' THEN DO:
++ IF resourceName='import_descontos_geral' OR resourceName='import_descontos_fornecedor' THEN DO:
+   IF NOT CONNECTED('ems2cad') THEN UNDO, THROW NEW Progress.Lang.AppError('IMPORT_DISCOUNTS_CONFIGURATION',1).
+   CREATE BUFFER currentAllocations FOR TABLE 'espec.itens_container'.
+   CREATE BUFFER currentItems FOR TABLE 'espec.itens_proc_compra'.

@@ -1,0 +1,284 @@
+{
+  "package": "container-attachments-download",
+  "version": "1",
+  "program": "op1004",
+  "entity": "container_anexos_progress",
+  "screen": "ciw.container-anexos",
+  "status": "candidate-ready-authenticated-readonly-download-review",
+  "newProgram": false,
+  "writerEnabled": false,
+  "uploadEnabled": false,
+  "businessExecuted": false,
+  "canonicalChanged": false,
+  "testCommand": "powershell -NoProfile -ExecutionPolicy Bypass -File integration-src/ciw-completion-20261028/container-attachments-download/tests/verify-all.ps1",
+  "verificationPath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-attachments-download/verification-v1.json",
+  "verificationSha256": "57e4ed82a49d90e50eae805d1d1f75e71299e802aa37f3a3a0d54cb78392eef7",
+  "localEvidence": {
+    "success": true,
+    "businessExecuted": false,
+    "canonicalChanged": false,
+    "remoteExecuted": false,
+    "official122Compiled": false,
+    "numDbs": 0,
+    "ablChecksPerCombination": 368,
+    "ablNewChecks": 21,
+    "ablLegacyPanelChecks": 347,
+    "combinations": 4,
+    "codepages": [
+      "UTF-8",
+      "ISO8859-1"
+    ],
+    "cultures": [
+      "AMERICAN",
+      "EUROPEAN"
+    ],
+    "phpTests": 78,
+    "phpAssertions": 567,
+    "nativeAjvAndKendoChecks": 12,
+    "wiringChecks": 73,
+    "sourceRealNormalizerOperations": 11,
+    "companion1051RealNormalizerOperations": 134,
+    "logs": [
+      {
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-attachments-download/red-final.log",
+        "sha256": "d5cb0b917cdd18cf2fc3f583b134340264ff9c0438e1707728a7df42536d6991"
+      },
+      {
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-attachments-download/abl-final.log",
+        "sha256": "25f3c5b6860d5e3ccc397a157766734c2a666afa10ab5b2daed5791753df4163"
+      },
+      {
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-attachments-download/phpunit-final.log",
+        "sha256": "4aab1e131d76d5e1ebf33959a2f6b5175486bbd274b24995a9950fef5ead6b3b"
+      },
+      {
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-attachments-download/builder-final.log",
+        "sha256": "fdbae3a641dd92c215b3d216263cd1d67b5b660c332aa3a2ee2e3197aba5d125"
+      },
+      {
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-attachments-download/verify-wiring.py.log",
+        "sha256": "5a877b9f7f393e1b136893e31b58052794668012cb4d57a644742b93b1e27a35"
+      },
+      {
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-attachments-download/native-final.log",
+        "sha256": "b12806d3e6d3fc70ad7d49796c84354e10a3f2bf0e0ee86538b1d6c308d3a4b0"
+      },
+      {
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-attachments-download/suite-complete.log",
+        "sha256": "39fe6707880a383cb8288fb942a47c5ea40b9f627db9307cad48daf241344df7"
+      }
+    ]
+  },
+  "sharedBaselines": [
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersPainelReadService.p",
+      "baselineSha256": "23b931071947c4486bda5ffcfb520b1c429f4ea4e3dec6f0b9f6546eecd6f78e",
+      "candidateRuntimePath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-attachments-download/local/sursum-api/programs/ContainersPainelReadService.p",
+      "candidateSha256": "e421c456b996bef57341c1de6bbe267e37ca17452bbef2317aeb0d448d163342",
+      "patchPlan": "patches/patch-plan.json",
+      "applyMode": "byte-exact-sequential-anchors; do not normalize EOL",
+      "preservesBytesOutsideAnchors": true
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeApiEntityActionService.php",
+      "baselineSha256": "6f52ddca37b15b3494989b71b6f7ac05ce3b73c31d4562db62a61edd48ed51ff",
+      "candidateRuntimePath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-attachments-download/local/php/RuntimeApiEntityActionService.php",
+      "candidateSha256": "705db7d9e82d45b4b6112f7d3f6e8572956cb0c81762070d2a0c2917ca6459ad",
+      "patchPlan": "patches/patch-plan.json",
+      "applyMode": "byte-exact-sequential-anchors; do not normalize EOL",
+      "preservesBytesOutsideAnchors": true
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Builder/ProgramBuilderService.php",
+      "baselineSha256": "5a667b65a39d717983e96532d9ab25d7e4c79a9162bfed10639a5810278f5024",
+      "candidateRuntimePath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-attachments-download/local/php/ProgramBuilderService.php",
+      "candidateSha256": "407f784ff69d3650f5d561b69aefc7b5b308f867f109289a8460f7ec49f96a1b",
+      "patchPlan": "patches/patch-plan.json",
+      "applyMode": "byte-exact-sequential-anchors; do not normalize EOL",
+      "preservesBytesOutsideAnchors": true
+    }
+  ],
+  "newSources": [
+    {
+      "source": "php/RuntimeContainerAttachmentDownload.php",
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeContainerAttachmentDownload.php"
+    }
+  ],
+  "unchangedBrokerPolicyTransportAndFrontend": [
+    {
+      "path": "D:/opencode/construtor-pg/backend/src/Attachments/AttachmentStorageClient.php",
+      "sha256": "0ba35c21666e739e9c5f9922b1c0d8279e5523d1cbc4db52dbdc7decf70f1fe5"
+    },
+    {
+      "path": "D:/opencode/construtor-pg/backend/src/Attachments/AttachmentStorageBroker.php",
+      "sha256": "7232f1e771ebaa3d528882579a32b08c14601f3564db0341a19e6267a243d739"
+    },
+    {
+      "path": "D:/opencode/construtor-pg/backend/src/Attachments/AttachmentFilePolicy.php",
+      "sha256": "ce1f056e6c236d2a289bcd480140d4930792e94ab08c68c5a597bec1fecfd1c3"
+    },
+    {
+      "path": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeFileTransferContext.php",
+      "sha256": "30c79c8a5fecaf140227549e5aecafe248c5c8012799110efd47293a8a10e2e2"
+    },
+    {
+      "path": "D:/opencode/construtor-pg/src/crud-engine/CrudKendoFormRenderer.js",
+      "sha256": "d3028663b4c006771f7b8eac06d12ff7398c3e73a5c58391c328070a9d1047d9"
+    },
+    {
+      "path": "D:/opencode/construtor-pg/src/crud-engine/CrudHttpClient.js",
+      "sha256": "eb736fb7f5c1ffd9e46bd8238802b26a587f8b8b4ee85b308c582bf2fcde68b5"
+    },
+    {
+      "path": "D:/opencode/construtor-pg/kendo/js/kendo.all.min.js",
+      "sha256": "a058d121e96cd6a0ca4c2224ba83283847e2d470997786ce499f48b846ee333a"
+    }
+  ],
+  "contract": {
+    "source": "motor_progress_container_painel",
+    "newOperationCode": "anexos_arquivo_get",
+    "operationType": "detail",
+    "resource": "anexos-arquivo",
+    "method": "POST",
+    "operation": "get",
+    "requiredContext": [
+      "container_id"
+    ],
+    "primaryKey": "anexo_container_id",
+    "referenceRawFields": 10,
+    "mappedFields": 9,
+    "masterRule": "cod-estabel prefix5 before child/reference lookup",
+    "lookup": "one physical unique PK constrained to requested container; no new scan/pagination",
+    "authentication": "existing fixed Progress wrapper and native runtime session/read permission",
+    "fileReference": "authoritative persisted basename only; browser path never sent to storage",
+    "fileSizeExtensionPolicy": "unchanged broker historical policy; new upload limit not applied to downloads",
+    "storageRoot": "existing configured broker root only; no arbitrary root/URL/path"
+  },
+  "metadata": {
+    "preparedOnly": true,
+    "liveSnapshotsUsed": true,
+    "sourceDelta": "metadata/source-addition.json",
+    "entityDelta": "metadata/entity-delta.json",
+    "programDelta": "metadata/program-delta.json",
+    "sourceOperations": "10 unchanged plus one detail",
+    "entityFields": "8 unchanged plus one readonly file reference",
+    "auth": "nested sanitized auth omitted; operations/property deltas only; never replace DTO"
+  },
+  "knownPresentationLimit": "existing readonly file editor shows disabled picker/upload20MB hint; not an actual download limit; native frontend unchanged",
+  "gates": [
+    "independent root/manager review including inherited readonly upload hint",
+    "root readonly preflight proves configured document root/file availability for container basenames; specific legacy doc.php missing from collected source",
+    "compare live metadata hashes before native Builder mutation; preserve source authentication and all existing fields/config",
+    "root hash-guarded byte composition; never normalize mixed EOL or copy full stage over shared files",
+    "official OpenEdge12.2/.42 compile and TT four combinations before any publication",
+    "root publication/real readonly native validation only sursum-api/med; no grants/upload/business writes authorized"
+  ],
+  "companion1051": {
+    "receipt": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-attachments-download/1051-registry-companion-proof.json",
+    "sha256": "4990d0969d19301ae700d5db322b8c3dd587df5343ba6c7495ac6f284600bc27",
+    "frozen1051Changed": false,
+    "typeCorrectionRequired": false
+  },
+  "files": [
+    {
+      "path": "metadata/api-source-preview.json",
+      "sha256": "356c58d244e55f9fee4268e2b273bc859d85fc72ffa1e489d110d63e0ff43aaf"
+    },
+    {
+      "path": "metadata/builder-preview-input.json",
+      "sha256": "3432eb6b78ddf9982e8cceba4aa2ac33a62efa16f0514fcebd6a20acf1e31e19"
+    },
+    {
+      "path": "metadata/entity-delta.json",
+      "sha256": "aadcbd25c0877d3b545df82edc43200347a99f686ef262e6d1123f27043c3304"
+    },
+    {
+      "path": "metadata/program-delta.json",
+      "sha256": "a0c5201f6ba0e6439626883f9e881362c1988ca050ef17c2bbb3877c6c4b92eb"
+    },
+    {
+      "path": "metadata/source-addition.json",
+      "sha256": "887bb70cb181c69f3cf76b937b11c70c407546a9683fff77db5d28c4b3b35676"
+    },
+    {
+      "path": "patches/ContainersPainelReadService.p.patch",
+      "sha256": "c88dc221c8dba26be1f2abf4a051f0460e9243f65a967f72e7b3fc7359c7acaf"
+    },
+    {
+      "path": "patches/patch-plan.json",
+      "sha256": "074b551f5602d4bd0c6b1ca26b6dfb7f17404e83b80892d340d4f0f736b85d56"
+    },
+    {
+      "path": "patches/ProgramBuilderService.php.patch",
+      "sha256": "694299215c8353a1e69208f0eb55509470b1620da4c65e24b546cbf96e74c978"
+    },
+    {
+      "path": "patches/RuntimeApiEntityActionService.php.patch",
+      "sha256": "ed316175e6491c0df1c885f55ffde86c95a4fef4113df43c5a0feec90f63f7b0"
+    },
+    {
+      "path": "php/RuntimeContainerAttachmentDownload.php",
+      "sha256": "a2d725119309722a4befe7aa4b57323caa42fae7f842533a80e0da6ba3a4f851"
+    },
+    {
+      "path": "PLAN.md",
+      "sha256": "4e0f4c2b3a06eacd18977da44e85fef7ad6efb35052d2534ab0773e0f1b9e211"
+    },
+    {
+      "path": "REVIEW.md",
+      "sha256": "de66ded169d6dbfed6d07463da1e08a8566baa5856be8a1e6ffa73a45a1d4c8d"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "be8a956538004aeee0939b76c3c1c2e8f08c52bc4e68dcccf5910ae691718b03"
+    },
+    {
+      "path": "tests/bootstrap.php",
+      "sha256": "82c6121859d4671f5894482a10140520f8e1f2f2522f85b13ccc8d5be91e1cc1"
+    },
+    {
+      "path": "tests/ContainerAttachmentReferenceTest.p",
+      "sha256": "6eb2fe1fb7cd3032716d0bd43c220857ba6f0dbdde87a602ec37ea35108df236"
+    },
+    {
+      "path": "tests/freeze.py",
+      "sha256": "bada07bb9b5cc7884a1434d2bbdedde3f19a87a5b612adf83aa8a37f800a7671"
+    },
+    {
+      "path": "tests/native-download.cjs",
+      "sha256": "608a2041043ad2518dd1a94e954b680ddf2066da97817b9902a2490969cdbe2c"
+    },
+    {
+      "path": "tests/phpunit.xml",
+      "sha256": "94b1ac32e0d74aa3c0ed8bcd19a7a65b12964b2fe653bc2403ca0bbd5c73b309"
+    },
+    {
+      "path": "tests/prepare-metadata.py",
+      "sha256": "f5c58347b34b6fb747f92ef0da33339f5bfdd907fe4811ddab1d5e88acd3a8bd"
+    },
+    {
+      "path": "tests/prepare.py",
+      "sha256": "4a1ad2d6beede54ca062c7ae2dc8ffff169c57a3a32be14a204da404c7cebe52"
+    },
+    {
+      "path": "tests/preview-native.php",
+      "sha256": "1e8c2d27ff7e3c61d5c1f74c396cdd211de55dc3d1583538863cf93c9a33fd92"
+    },
+    {
+      "path": "tests/run-abl.ps1",
+      "sha256": "bb21a025e5b26e1b3d0c9e87560001558caa70d84413bb5ff8088c50ee10f05a"
+    },
+    {
+      "path": "tests/RuntimeContainerAttachmentDownloadTest.php",
+      "sha256": "58223c091a568ac4e239b990c638a1c1085ce73e40a4e6acca19803b544e5b1c"
+    },
+    {
+      "path": "tests/verify-all.ps1",
+      "sha256": "b01d827ffc79857ca8185330551ba967176db4d319bfe3875e442f09ee30c33d"
+    },
+    {
+      "path": "tests/verify-wiring.py",
+      "sha256": "a9f466e11c789b1f7b3efde6007fa226a4163b4cb94ba8c4f7cde3032720e2bc"
+    }
+  ]
+}

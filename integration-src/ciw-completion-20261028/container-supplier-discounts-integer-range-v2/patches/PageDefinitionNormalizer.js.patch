@@ -1,0 +1,50 @@
+--- a/src/page-engine/PageDefinitionNormalizer.js
++++ b/src/page-engine/PageDefinitionNormalizer.js
+@@ -23,7 +23,7 @@
+       const source = global.CrudUtils.clone(definition);
+       const program = source.program || {};
+       const crud = source.crud || {};
+-      if (Object.prototype.hasOwnProperty.call(source, "contextFields")) { source.contextFields = this.normalizeContextFields(source.contextFields, source.dataModel || crud.dataModel); }
++      if (Object.prototype.hasOwnProperty.call(source, "contextFields")) { source.contextFields = this.normalizeContextFields(source.contextFields, source.dataModel || crud.dataModel, source); }
+       const dataSource = source.dataSource || {};
+       const query = this.normalizeQueryConfig(crud.query || source.query || {});
+       const filter = this.normalizeFilterConfig(crud.filter || source.filter, crud.query || source.query || {});
+@@ -72,7 +72,7 @@
+ 
+     normalizeLegacyCrudDefinition(definition) {
+       const source = global.CrudUtils.clone(definition);
+-      if (Object.prototype.hasOwnProperty.call(source, "contextFields")) { source.contextFields = this.normalizeContextFields(source.contextFields, source.dataModel); }
++      if (Object.prototype.hasOwnProperty.call(source, "contextFields")) { source.contextFields = this.normalizeContextFields(source.contextFields, source.dataModel, source); }
+       const query = this.normalizeQueryConfig(source.query || {});
+       const filter = this.normalizeFilterConfig(source.filter, source.query || {});
+       const program = {
+@@ -114,17 +114,27 @@
+       });
+     }
+ 
+-    normalizeContextFields(value, model) {
++    normalizeContextFields(value, model, definition) {
+       if (!Array.isArray(value)) { return value; }
+       value.forEach((item) => {
++        if (item && typeof item === "object" && Object.prototype.hasOwnProperty.call(item, "integerRange")) { PageDefinitionNormalizer.integerContextRange(definition, item); }
+         if (!item || typeof item !== "object" || !Object.prototype.hasOwnProperty.call(item, "filterOnly")) { return; }
+         const field = model && model.fields && model.fields[item.field];
+-        if (Object.keys(item).some((key) => ["field", "filter", "createDefault", "readonly", "required", "filterOnly"].indexOf(key) === -1) || typeof item.filterOnly !== "boolean" || (item.filterOnly && (!field || field.type !== "integer" || item.required !== false || item.filter !== true || item.readonly !== true || item.createDefault !== false))) {
++        if (Object.keys(item).some((key) => ["field", "filter", "createDefault", "readonly", "required", "filterOnly", "integerRange"].indexOf(key) === -1) || typeof item.filterOnly !== "boolean" || (item.filterOnly && (!field || field.type !== "integer" || item.required !== false || item.filter !== true || item.readonly !== true || item.createDefault !== false))) {
+           throw global.CrudUtils.makeError("CRUD_CONTEXT_INVALID", "filterOnly exige contexto integer opcional readonly, filtro ativo e sem default de criacao.");
+         }
+         if (item.filterOnly === false) { delete item.filterOnly; }
+       });
+       return value;
++    }
++
++    static integerContextRange(definition, item) {
++      if (!Object.prototype.hasOwnProperty.call(item, "integerRange")) { return null; }
++      const range = item.integerRange, model = definition.dataModel || {}, fields = model.fields || {}, permissions = definition.permissions || {};
++      if (definition.pageType !== "crud" || permissions.create !== false || permissions.edit !== false || permissions.delete !== false || item.field === model.primaryKey || Object.values(fields).some((field) => Object.prototype.hasOwnProperty.call(field, "optionsSource") || Object.prototype.hasOwnProperty.call(field, "attachment") || field.editor === "file") || !fields[item.field] || fields[item.field].type !== "integer" || item.required !== true || item.readonly !== true || item.filter !== true || item.createDefault !== false || Object.keys(item).some((key) => ["field", "filter", "createDefault", "readonly", "required", "filterOnly", "integerRange"].indexOf(key) === -1) || !range || typeof range !== "object" || Array.isArray(range) || Object.keys(range).length !== 2 || !Object.prototype.hasOwnProperty.call(range, "min") || !Object.prototype.hasOwnProperty.call(range, "max") || !Number.isInteger(range.min) || !Number.isInteger(range.max) || range.min < -2147483648 || range.max > 2147483647 || range.min > range.max) {
++        throw global.CrudUtils.makeError("CRUD_CONTEXT_INVALID", "integerRange exige CRUD readonly, integer nao PK, sem opcoes remotas/arquivos e limites int32 fechados.");
++      }
++      return range;
+     }
+ 
+     normalizeQueryConfig(queryConfig) {

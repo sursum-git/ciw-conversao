@@ -1,0 +1,94 @@
+{
+  "scope": [
+    "form_anexos_proc_compra_item",
+    "grid_anexos_proc_compra_item",
+    "grid_anexos_proc_compra_item_amostra"
+  ],
+  "analysis_copies": true,
+  "files": [
+    {
+      "application": "form_anexos_proc_compra_item",
+      "file": "form_anexos_proc_compra_item.php",
+      "remote_sha256": "1d5f6d120c1fe12ef0c5ed584524fc7844e50186c7f0375f87e004368a7bf983",
+      "copied_sha256": "1d5f6d120c1fe12ef0c5ed584524fc7844e50186c7f0375f87e004368a7bf983",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "form_anexos_proc_compra_item",
+      "file": "form_anexos_proc_compra_item_apl.php",
+      "remote_sha256": "61eb8940183dc7b199cc39be49f2b97ac35dd2625c91cccaaccf85e64c2fcf4e",
+      "copied_sha256": "3a6bfb3508b31685d6302303b8ef7f645514afeed4b94078509308467310828d",
+      "sensitive_literals_omitted": 3
+    },
+    {
+      "application": "form_anexos_proc_compra_item",
+      "file": "form_anexos_proc_compra_item_form0.php",
+      "remote_sha256": "da4c98c7403a79fe70aab50281ae6006b94e513b6b29d57ce5a98e756e1d6c6b",
+      "copied_sha256": "37944b7ef0f4971961d1ac65cbdef0d78e190ead90bd0358872b38d358dd5dc9",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "form_anexos_proc_compra_item",
+      "file": "form_anexos_proc_compra_item_js0.php",
+      "remote_sha256": "435649f9065f24ca1edb218312708b5844ae6d8fdf10c0766cf74c3200b215df",
+      "copied_sha256": "435649f9065f24ca1edb218312708b5844ae6d8fdf10c0766cf74c3200b215df",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "form_anexos_proc_compra_item",
+      "file": "form_anexos_proc_compra_item_sajax.php",
+      "remote_sha256": "3933da62f5b842c7e511b694ee8533963eca8cab0c730b2de51d270f66af3969",
+      "copied_sha256": "3933da62f5b842c7e511b694ee8533963eca8cab0c730b2de51d270f66af3969",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "form_anexos_proc_compra_item",
+      "file": "index.php",
+      "remote_sha256": "e31dd55df15ac5e8b70ffd5458e8400293763028ae397de18ed19aaa7596ce2e",
+      "copied_sha256": "7eb7a033150e581501be8737e715d86e85ef34a78d1b9697e6a0bfdab1aa12b2",
+      "sensitive_literals_omitted": 15
+    },
+    {
+      "application": "grid_anexos_proc_compra_item",
+      "file": "grid_anexos_proc_compra_item.php",
+      "remote_sha256": "5509b3fffab6d5607e3e7ef4a3fc3a7b6724d9121331fb2be532ade0d03ae65c",
+      "copied_sha256": "5509b3fffab6d5607e3e7ef4a3fc3a7b6724d9121331fb2be532ade0d03ae65c",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "grid_anexos_proc_compra_item",
+      "file": "grid_anexos_proc_compra_item_grid.class.php",
+      "remote_sha256": "0faa923d6d6fd593e987d6751b8215cafc96453d412c1ec13896bb165240d69a",
+      "copied_sha256": "024ba39fe37e18e854a8363e8650bc963d5c4497f03bc2e94355e653520d7190",
+      "sensitive_literals_omitted": 4
+    },
+    {
+      "application": "grid_anexos_proc_compra_item",
+      "file": "index.php",
+      "remote_sha256": "00086ea7ccc40d2b0518c1e8b2880ce4083b42a78ddf1dd3acbc2d1fadc6dd7a",
+      "copied_sha256": "12e18e0e7e5f85bc238b8f26b8847d808cd046dd7c53883092c9b6a8f1047a84",
+      "sensitive_literals_omitted": 7
+    },
+    {
+      "application": "grid_anexos_proc_compra_item_amostra",
+      "file": "grid_anexos_proc_compra_item_amostra.php",
+      "remote_sha256": "bdc152715b5282fdfd9ed17605759302838fb80c142b31b1d0829e9964b2dafa",
+      "copied_sha256": "bdc152715b5282fdfd9ed17605759302838fb80c142b31b1d0829e9964b2dafa",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "grid_anexos_proc_compra_item_amostra",
+      "file": "grid_anexos_proc_compra_item_amostra_grid.class.php",
+      "remote_sha256": "003abc2d1f4ebff6350fceeba7f7521b3e77b7e44729e09f9e71c51d035ff724",
+      "copied_sha256": "d1660ee134a67290eb909b307b6e809ca51b21f4c4a94c76de13026bb261794b",
+      "sensitive_literals_omitted": 4
+    },
+    {
+      "application": "grid_anexos_proc_compra_item_amostra",
+      "file": "index.php",
+      "remote_sha256": "f7e87d0dae0170f13ddea97cc8df5d089320ee2590b05a95495a6fbb746e7679",
+      "copied_sha256": "3d6eafb64e40c9a25ce16b02d1f8966c792ac3339e34750649afb5ac342dc676",
+      "sensitive_literals_omitted": 7
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+/* Candidate only: explicit authorization and fresh identity high-water check
+   are required. Never reapply or lower/reset an existing sequence. */
+ADD SEQUENCE "seq_anexos_proc_compra"
+  INITIAL 0
+  INCREMENT 1
+  MIN-VAL 0
+  MAX-VAL 2147483647
+  CYCLE-ON-LIMIT no
+.

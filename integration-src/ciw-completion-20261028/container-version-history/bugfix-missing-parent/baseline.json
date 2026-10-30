@@ -1,0 +1,6 @@
+{
+  "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersVersionHistoryService.p",
+  "baselineSha256": "32e81cdfa54c1494d573a83fb9977302fc9da6720b8bf7a8a638e7fff4a05a19",
+  "local": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-version-history\\bugfix-parent-local",
+  "scope": "service + TT test only; no canonical changes"
+}

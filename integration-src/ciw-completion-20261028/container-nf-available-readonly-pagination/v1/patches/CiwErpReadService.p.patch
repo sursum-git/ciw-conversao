@@ -1,0 +1,76 @@
+--- baseline/sursum-api/programs/CiwErpReadService.p
++++ candidate/sursum-api/programs/CiwErpReadService.p
+@@ -45,7 +45,7 @@
+  DEFINE VARIABLE n AS INTEGER NO-UNDO.
+  n=LOOKUP(nameValue,cAliasList).
+  IF n=0 THEN RUN Fail('CIW_ERP_FIELD_INVALID',422).
+- IF pcResource='despesas_impostos_geral' AND NOT COMPARE(nameValue,'=',ENTRY(n,cAliasList),'RAW') THEN RUN Fail('CIW_ERP_FIELD_INVALID',422).
++ IF (pcResource='despesas_impostos_geral' OR pcResource='container_nfs_disponiveis') AND NOT COMPARE(nameValue,'=',ENTRY(n,cAliasList),'RAW') THEN RUN Fail('CIW_ERP_FIELD_INVALID',422).
+  RETURN b:BUFFER-FIELD(ENTRY(n,cFieldList)).
+ END FUNCTION.
+ FUNCTION TextChecked RETURNS CHARACTER (v AS CHARACTER):
+@@ -76,6 +76,8 @@
+  CASE f:DATA-TYPE:
+   WHEN 'CHARACTER' THEN DO:
+    IF o:GetType(nameValue)<>JsonDataType:STRING THEN RUN Fail('CIW_ERP_VALUE_INVALID',422).
++   IF pcResource='container_nfs_disponiveis' THEN
++    RETURN QUOTER(REPLACE(TextChecked(o:GetCharacter(nameValue)),CHR(126),CHR(126) + CHR(126))).
+    RETURN QUOTER(TextChecked(o:GetCharacter(nameValue))).
+   END.
+   WHEN 'INTEGER' THEN RETURN NumText(IntValue(o,nameValue,-2147483648,2147483647)).
+@@ -172,6 +174,13 @@
+  DEFINE VARIABLE n AS INTEGER NO-UNDO.
+  DEFINE VARIABLE nameValue AS CHARACTER NO-UNDO.
+  DEFINE VARIABLE lc AS LONGCHAR NO-UNDO.
++ IF pcResource='container_nfs_disponiveis' THEN DO:
++  /* This private fixed TT is supplied by the Finance service only. Return
++     its NfRow JSON verbatim; do not rebuild the NF mapper or opaque key. */
++  FIX-CODEPAGE(lc)='UTF-8'. lc=b:BUFFER-FIELD('nf_original_json'):BUFFER-VALUE.
++  IF NOT VALID-OBJECT(parser) THEN parser=NEW ObjectModelParser().
++  RETURN CAST(parser:Parse(lc),JsonObject).
++ END.
+  IF pcResource='procs_compra_med' THEN RETURN PurchaseOrderData(b).
+  o=NEW JsonObject(). k=NEW JsonObject().
+  DO n=1 TO NUM-ENTRIES(cFieldList):
+@@ -204,6 +213,7 @@
+  IF NOT VALID-HANDLE(phData) OR NOT VALID-OBJECT(poRequest) THEN RUN Fail('CIW_ERP_UNAVAILABLE',503).
+  CREATE BUFFER b FOR TABLE phData BUFFER-NAME 'bCiwErpRead'.
+  CASE pcResource:
++  WHEN 'container_nfs_disponiveis' THEN ASSIGN cFieldList='container_id,nf_key,documento_localizado,estab,documento,serie,cod_emitente,nat_operacao,especie,dt_emissao,dt_trans,tot_valor,despesa_nota,valor_embal,valor_frete,valor_mercad,valor_outras,valor_seguro' cAliasList=cFieldList cKeyList='nf_key' baseWhere='TRUE'.
+   WHEN 'despesas_impostos_geral' THEN ASSIGN cFieldList='despesa_id,imposto_id,empresa_id' cAliasList=cFieldList cKeyList=cFieldList baseWhere='TRUE'.
+   WHEN 'item_custos_manual' THEN ASSIGN cFieldList='item_custo_id,dt_hr_custo,vl_unit_novo,dt_referencia,caminho_arquivo,cod_tipo_custo,memoria_calculo,it_codigo,qt_estoque,qt_nf_mae,qt_etiq_container,qt_etiq_branco,qt_etiq_outros_container,vl_unit_anterior,cod_situacao,cod_usuario,qt_estoque_selecionado,it_codigo_media,qt_estoque_media,vl_unit_media,vl_unit_container,qt_container,media_custo_id' cAliasList=cFieldList cKeyList='item_custo_id' baseWhere=b:NAME + '.cod_tipo_custo = 1'.
+   WHEN 'item_container_amostra' THEN ASSIGN cFieldList='item_container_id,codigo_erp,descricao,container_id' cAliasList=cFieldList cKeyList='item_container_id' baseWhere='TRUE'.
+@@ -302,6 +312,7 @@
+  END CASE.
+  IF NOT poRequest:Has('operation') OR poRequest:GetType('operation')<>JsonDataType:STRING THEN RUN Fail('CIW_ERP_REQUEST_INVALID',422).
+  op=poRequest:GetCharacter('operation'). IF LOOKUP(op,'read,get')=0 THEN RUN Fail('CIW_ERP_READ_ONLY',405).
++ IF pcResource='container_nfs_disponiveis' AND op<>'read' THEN RUN Fail('CIW_ERP_READ_ONLY',405).
+  EXTENT(names)=?. names=poRequest:GetNames().
+  DO i=1 TO EXTENT(names):
+   IF LOOKUP(names[i],IF op='get' THEN 'operation,id,record_key' ELSE 'operation,skip,take,filter,sort')=0 THEN RUN Fail('CIW_ERP_REQUEST_INVALID',422).
+@@ -327,6 +338,8 @@
+    orderText=orderText + ' BY ' + b:NAME + '.' + FieldHandle(fieldName):NAME + (IF direction='desc' THEN ' DESCENDING' ELSE ''). ordered:Add(fieldName,TRUE).
+   END.
+  END.
++ IF pcResource='container_nfs_disponiveis' AND orderText='' THEN
++  orderText=' BY ' + b:NAME + '.documento BY ' + b:NAME + '.serie BY ' + b:NAME + '.nat_operacao'.
+  DO i=1 TO NUM-ENTRIES(cKeyList):
+   fieldName=ENTRY(i,cKeyList). IF NOT ordered:Has(fieldName) THEN orderText=orderText + ' BY ' + b:NAME + '.' + FieldHandle(fieldName):NAME.
+  END.
+@@ -359,6 +372,7 @@
+  q:QUERY-OPEN(). q:GET-FIRST(NO-LOCK).
+  DO WHILE NOT q:QUERY-OFF-END:
+   totalValue=totalValue + 1.
++  IF pcResource='container_nfs_disponiveis' AND totalValue>50000 THEN RUN Fail('CONTAINER_NF_SOURCE_LIMIT',503).
+   IF (pcResource='item_custos_manual' OR pcResource='despesas_impostos_geral') AND totalValue>50000 THEN RUN Fail('CIW_ERP_QUERY_LIMIT',503).
+   IF op='get' AND totalValue>1 THEN RUN Fail('CIW_ERP_KEY_AMBIGUOUS',409).
+   IF pcResource='despesas_impostos_geral' THEN DO:
+@@ -369,7 +383,7 @@
+    CREATE ttRelationIdentity. ttRelationIdentity.record_key=fieldName. RELEASE ttRelationIdentity.
+   END.
+   IF op='get' OR totalValue>skipValue AND rows:Length<takeValue THEN DO:
+-   item=RowJson(). fieldName=IF LOOKUP(pcResource,'procs_compra_med,proc_compra_resumo')>0 THEN NumText(item:GetInteger('proc_compra_id')) ELSE IF pcResource='container_calculos_impostos_med' THEN NumText(item:GetInteger('calc_imp_container_id')) ELSE IF pcResource='container_despesa_memoria_med' THEN NumText(item:GetInteger('despesa_container_id')) ELSE IF pcResource='container_despesas_lote' THEN NumText(item:GetInteger('despesa_container_id')) ELSE IF pcResource='proc_compra_alocacoes' THEN NumText(item:GetInteger('item_container_id')) ELSE IF pcResource='proc_compra_itens' THEN NumText(item:GetInteger('item_proc_compra_id')) ELSE IF LOOKUP(pcResource,'proc_compra_anexos,proc_compra_documentos')>0 THEN NumText(item:GetInteger('anexo_proc_compra_id')) ELSE IF pcResource='proc_compra_despesas' THEN NumText(item:GetInteger('despesa_proc_compra_id')) ELSE IF pcResource='proc_compra_amostras' THEN NumText(item:GetInteger('envio_amostra_repres_id')) ELSE item:GetCharacter('record_key').
++   item=RowJson(). fieldName=IF LOOKUP(pcResource,'procs_compra_med,proc_compra_resumo')>0 THEN NumText(item:GetInteger('proc_compra_id')) ELSE IF pcResource='container_calculos_impostos_med' THEN NumText(item:GetInteger('calc_imp_container_id')) ELSE IF pcResource='container_despesa_memoria_med' THEN NumText(item:GetInteger('despesa_container_id')) ELSE IF pcResource='container_despesas_lote' THEN NumText(item:GetInteger('despesa_container_id')) ELSE IF pcResource='proc_compra_alocacoes' THEN NumText(item:GetInteger('item_container_id')) ELSE IF pcResource='proc_compra_itens' THEN NumText(item:GetInteger('item_proc_compra_id')) ELSE IF LOOKUP(pcResource,'proc_compra_anexos,proc_compra_documentos')>0 THEN NumText(item:GetInteger('anexo_proc_compra_id')) ELSE IF pcResource='proc_compra_despesas' THEN NumText(item:GetInteger('despesa_proc_compra_id')) ELSE IF pcResource='proc_compra_amostras' THEN NumText(item:GetInteger('envio_amostra_repres_id')) ELSE IF pcResource='container_nfs_disponiveis' THEN item:GetCharacter('nf_key') ELSE item:GetCharacter('record_key').
+    IF seen:Has(fieldName) THEN RUN Fail('CIW_ERP_KEY_AMBIGUOUS',409).
+    seen:Add(fieldName,TRUE). rows:Add(item).
+   END.

@@ -1,0 +1,42 @@
+diff --git a/RuntimeApiEntityActionService.php b/RuntimeApiEntityActionService.php
+index 7afa3a0..9710d37 100644
+--- a/RuntimeApiEntityActionService.php
++++ b/RuntimeApiEntityActionService.php
+@@ -977,6 +977,9 @@ class RuntimeApiEntityActionService
+         if (RuntimeCostDistributionLedgerRead::supports($definition)) {
+             foreach ($body['data'] as $row) { RuntimeCostDistributionLedgerRead::assertRow($row,$query); }
+         }
++        if (RuntimeSampleContainerItemsRead::supports($definition)) {
++            foreach ($body['data'] as $row) { RuntimeSampleContainerItemsRead::assertRow($row); }
++        }
+         $data = array_map(fn (array $row): array => $this->mapItem($definition, $row), $body['data']);
+ 
+         $this->transactions->log($definition['entityCode'] . '.api.read', 'Consulta ERP MED executada com paginação no servidor.', metadata: [
+@@ -999,6 +1002,7 @@ class RuntimeApiEntityActionService
+         if (RuntimeContainerExpenseBatch::supports($definition)) { return $this->containerExpenseBatchRequest($definition,[],$payload,'get'); }
+ 
+         $id = $this->extractRecordId($definition, $payload);
++        if (RuntimeSampleContainerItemsRead::supports($definition)) { RuntimeSampleContainerItemsRead::submittedAliases($payload,$id); }
+         if (RuntimeImportDiscountRead::supports($definition)) { RuntimeImportDiscountRead::submittedAliases($payload,$id); }
+         if (RuntimeCostDistributionRead::supports($definition)) { RuntimeCostDistributionRead::submittedAliases($payload,$id); }
+         if (RuntimeCostDistributionLedgerRead::supports($definition)) { RuntimeCostDistributionLedgerRead::submittedAliases($payload,$id); }
+@@ -1019,7 +1023,7 @@ class RuntimeApiEntityActionService
+ 
+             [$id] = $this->purchaseOrderIdentity($definition, $detailEndpoint, 'get', is_array($payload['record'] ?? null) ? $payload['record'] : [], $id, $payload['id'] ?? null);
+ 
+-            $context = RuntimeImportDiscountRead::supports($definition) ? RuntimeImportDiscountRead::resolveContext($definition,$detailEndpoint,$payload) : (RuntimeCostDistributionRead::supports($definition) ? RuntimeCostDistributionRead::resolveContext($definition,$detailEndpoint,$payload) : (RuntimeCostDistributionLedgerRead::supports($definition) ? RuntimeCostDistributionLedgerRead::resolveContext($definition,$detailEndpoint,$payload) : (ApiRequestContext::resolve($definition, $detailEndpoint, $payload))));
++            $context = RuntimeSampleContainerItemsRead::supports($definition) ? RuntimeSampleContainerItemsRead::resolveContext($definition,$detailEndpoint,$payload) : (RuntimeImportDiscountRead::supports($definition) ? RuntimeImportDiscountRead::resolveContext($definition,$detailEndpoint,$payload) : (RuntimeCostDistributionRead::supports($definition) ? RuntimeCostDistributionRead::resolveContext($definition,$detailEndpoint,$payload) : (RuntimeCostDistributionLedgerRead::supports($definition) ? RuntimeCostDistributionLedgerRead::resolveContext($definition,$detailEndpoint,$payload) : (ApiRequestContext::resolve($definition, $detailEndpoint, $payload)))));
+ 
+             $startedAt = microtime(true);
+ 
+@@ -1065,6 +1069,10 @@ class RuntimeApiEntityActionService
+                 if (($response['body']['success']??null)!==true || isset($response['body']['error'])) { throw new RuntimeHttpException('COST_DISTRIBUTION_RESPONSE_INVALID','Resposta de distribuição inválida.',502); }
+                 RuntimeCostDistributionLedgerRead::assertRow($item,$context,$id);
+             }
++            if (RuntimeSampleContainerItemsRead::supports($definition)) {
++                if (($response['body']['success']??null)!==true || isset($response['body']['error'])) { throw new RuntimeHttpException('SAMPLE_CONTAINER_ITEMS_RESPONSE_INVALID','Resposta de itens de amostra inválida.',502); }
++                RuntimeSampleContainerItemsRead::assertRow($item,$id);
++            }
+             $mapped = $this->enrichRows($definition, [$this->mapItem($definition, $item)])[0] ?? [];
+ 
+             ApiRequestContext::assertRows([$mapped], $context);

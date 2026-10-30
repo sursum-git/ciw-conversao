@@ -1,0 +1,149 @@
+{
+  "status": "CANDIDATE_READY_REQUIRES_ROOT_OFFICIAL_COMPILE_AND_REVIEW",
+  "scope": "op1049 eligible read only; 1048 gated; ledger separate",
+  "files": [
+    {
+      "path": "abl/CostDistributionEligibleCollector.p",
+      "sha256": "5435da46101508ca45ec5f1a129dee8cad83b863eea3ee87fe68ca5c2e4de1e2",
+      "bytes": 7813
+    },
+    {
+      "path": "abl/CostDistributionEligibleReadApi.p",
+      "sha256": "b5866d57722d5b290938f3658f7c9835003c1b68b2f236adb9d214f380455379",
+      "bytes": 2594
+    },
+    {
+      "path": "abl/CostDistributionEligibleReadService.p",
+      "sha256": "6c01b0eb3f8b72f7003e1b004a638bea8f5b99956227f207283dc62ba8b82d3f",
+      "bytes": 3581
+    },
+    {
+      "path": "baselines.json",
+      "sha256": "ed70dfe4169774dfc55073b2a3bee7f670f68f0dc7ad5a25d34d16c95c37931c",
+      "bytes": 1729
+    },
+    {
+      "path": "EXTRATO_SQL_PROBE.md",
+      "sha256": "84c0e6bf0fda77f018b182ba2e12ccb6e7d7eb2dfbed66c6ec22b6b6d3e2212b",
+      "bytes": 3524
+    },
+    {
+      "path": "includes/CostDistributionEligibleTable.i",
+      "sha256": "fa332e1e40971d9eefa7f9d267176346b76219f5f2f1c901eb506f120f241afc",
+      "bytes": 568
+    },
+    {
+      "path": "metadata/api-source-additions.json",
+      "sha256": "8ff3a85a6e2ec8ee759cb69845e37795cd29fab75514a5068fa76e6f29962c71",
+      "bytes": 983
+    },
+    {
+      "path": "metadata/custo_distribuicao_itens_aptos-builder-draft.json",
+      "sha256": "0f99b933c0156440145b3b979715b88d41e4d7708a16b10d127aeda25404d571",
+      "bytes": 8506
+    },
+    {
+      "path": "metadata/source-patch.json",
+      "sha256": "644cedfd2305ffed3d1265be88b283f3f39f40f2cedacab1a92811f6fee9cebe",
+      "bytes": 1432
+    },
+    {
+      "path": "patches/CiwCadastrosCrud.p.patch",
+      "sha256": "2a4d27134b10b6870ef7b9a1fedcb12c68acdea7223394e8be29b2e9671b5bd5",
+      "bytes": 1029
+    },
+    {
+      "path": "patches/CiwErpReadService.p.patch",
+      "sha256": "12bf92afc3b2d795d57ca2ad05c92d4b52f99a8dca619ae3dfdbf5d0bee30811",
+      "bytes": 1442
+    },
+    {
+      "path": "patches/RuntimeApiEntityActionService.php.patch",
+      "sha256": "f4a203da0f3954adb179f1e1345a42d9b5f29ba036b6d832b92855635a17abc2",
+      "bytes": 2848
+    },
+    {
+      "path": "patches/RuntimeCiwErpQuery.php.patch",
+      "sha256": "98cc3a23bfdc4ec1a036b789d8f91031c2cf80dfd8eb65983a00d29dc1f1b3e4",
+      "bytes": 5175
+    },
+    {
+      "path": "php/RuntimeCostDistributionRead.php",
+      "sha256": "eb33d141610deae16638e1d61e175391ce6a7261e0981982c9d7db3950a37257",
+      "bytes": 2277
+    },
+    {
+      "path": "PLAN.md",
+      "sha256": "1d5c43a8b7faef3fb7d85987f5f8f4375401ff91d1b6a1d68f269fa351bb40eb",
+      "bytes": 1905
+    },
+    {
+      "path": "README.md",
+      "sha256": "fd2edadd043dfb818619351bee14adc6db163d1713939c60fcbe6ccb92382e11",
+      "bytes": 3692
+    },
+    {
+      "path": "source-proof.json",
+      "sha256": "e0201a2fbb008d174a6ee08302e5e4fb5f52f703ceea9445fb8e51f74fa9048b",
+      "bytes": 12132
+    },
+    {
+      "path": "tests/abl/CostDistributionEligibleTest.p",
+      "sha256": "2b2b086f7591bc726e13d8f94c86aea680a9acc4e4bfada21c999d8c4af5b05b",
+      "bytes": 9830
+    },
+    {
+      "path": "tests/abl/CostDistributionFixtures.i",
+      "sha256": "0e036f617c489921415c7eda8777f0c6f241d1dcc97093079449c217c642d9dd",
+      "bytes": 11192
+    },
+    {
+      "path": "tests/CostDistributionBuilderNativeTest.php",
+      "sha256": "c3f3d7f406bdbc3e1730b2a467c85e079a6f29cfff2a40c23c95c75e9cf7fefc",
+      "bytes": 2260
+    },
+    {
+      "path": "tests/native-preview.cjs",
+      "sha256": "fd2103b1632379808fee4b1d7225f05b473d6814612e1c9d7296c3c607b18a52",
+      "bytes": 948
+    },
+    {
+      "path": "tests/runtime-bootstrap.php",
+      "sha256": "e40a71427f0e3bc841ecff1d7d85f9a9d3f9fd758af6943832d3c15e4b294868",
+      "bytes": 404
+    },
+    {
+      "path": "tests/RuntimeCostDistributionReadIntegrationTest.php",
+      "sha256": "5636441b93b6bfa04bc77a0743d982af067e77eb1b8b0c72454e730fd17edcf2",
+      "bytes": 5030
+    },
+    {
+      "path": "views.json",
+      "sha256": "83cb1499403e7be1379cde3eec614dbcbb28e75b0667b63b32930e78054bdd66",
+      "bytes": 242
+    }
+  ],
+  "dependencies": {
+    "path": "integration-src/ciw-completion-20261028/container-version-history/frozen-lookups-v2/abl/ContainersVersionHistoryLabels.p",
+    "sha256": "9bfe21dc6ff9d86105d7602d376a2adc3cc3b9fe61783a68f7d1cd03f9d100bb"
+  },
+  "validation": {
+    "localOpenEdge": "12.8 development only",
+    "compilesPerCodepage": 7,
+    "ttChecks": 33,
+    "combinations": 4,
+    "phpTests": 7,
+    "phpAssertions": 41,
+    "builderTests": 1,
+    "builderAssertions": 4,
+    "nativeValidator": true
+  },
+  "gates": [
+    "official12.2",
+    "same MED PASOE",
+    "metadata native preview",
+    "read permission authorization"
+  ],
+  "canonicalWrites": false,
+  "published": false
+}

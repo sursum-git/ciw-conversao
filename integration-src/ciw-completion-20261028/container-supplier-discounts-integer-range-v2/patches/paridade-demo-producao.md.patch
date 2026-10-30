@@ -1,0 +1,8 @@
+--- a/docs/paridade-demo-producao.md
++++ b/docs/paridade-demo-producao.md
+@@ -197,3 +197,5 @@
+ 
+ 
+ Empresa API 21/10/2026: editor e exemplo usam um unico adaptador por entidade API, aplicado a todas as chamadas registradas. O construtor nao classifica tabelas nem escolhe bancos ERP; essas regras pertencem a API. Configuracoes publicadas anteriores sao preservadas ate migracao explicita.
++
++| 2026-10-29 | Contexto integerRange readonly nativo; uso preparado1056 | examples/supplier-discounts-integer-range.json e cinco fontes nativas | Perfil generico readonlyCRUD/naoPK, sem opcoes remotas/arquivos/processo; Engine e helperprivado reutilizados; sem mock/frontendparalelo | preparado | Compor filterOnly + helper1056 e rebasear Action/Query13 por hunks; validar runtime real antes publicar | 31testes nativos/AJV/prototipos e FULL903/6005;278Appstage; exemplos0/-9/MIN sinteticos, sem afirmar linhas reais/DOM publicado. Skill local de paridade indisponivel, checklist seguido |

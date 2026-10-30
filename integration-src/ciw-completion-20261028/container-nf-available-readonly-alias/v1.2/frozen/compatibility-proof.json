@@ -1,0 +1,19 @@
+{
+  "success": true,
+  "onlyProductionLineChanged": true,
+  "baselineCandidateV1_1Sha256": "d7990991fd7e1d7675927c8cc4a0ecde7a4ffa8e2368e08b04b3f8361d1d238a",
+  "candidateV1_2Sha256": "614795f3af80f29a51c467e8170f954540a76a8902034b9cf6186b1c328ac7b5",
+  "rootSynthetic122Diagnostic": {
+    "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\nf-keybytes-diagnostic-v3\\diagnostic.json",
+    "sha256": "9b5d775421450031b3232fb67960c5e884b37ac3b11f08650fc9311d05e0f1a3",
+    "completed": true,
+    "equal": true,
+    "errors": [],
+    "numDbs": 0
+  },
+  "expression": "SUBSTRING(HEX-ENCODE(bytesValue),1,134)",
+  "reason": "OE12.2 rejects RAW HEX-ENCODE12117; direct MEMPTR supported",
+  "capsValidKeyIdWrapperPhpUnchanged": true,
+  "fullServiceOfficial122StillPending": true,
+  "v1_1AndOfficial10Preserved": true
+}

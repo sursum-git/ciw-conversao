@@ -1,0 +1,21 @@
+{
+  "container_id": 123,
+  "versao_id": 7,
+  "item_container_custo_id": 1001,
+  "item_container_id": 42,
+  "codigo_erp": "SYNTHETIC",
+  "descricao": "Current item",
+  "qt_alocada": 0.0,
+  "qt_confirm_emb": 0.0,
+  "vl_custo_prev": 100.0,
+  "vl_desp_prev": 20.0,
+  "vl_tot_prev": 120.0,
+  "vl_unit_prev": 12.0,
+  "vl_desp_prev_sem_distr_custo": 10.0,
+  "vl_tot_sem_distr_custo": 110.0,
+  "vl_unit_sem_distr_custo": 11.0,
+  "vl_desp_prev_perc_fixo": 5.0,
+  "vl_tot_perc_fixo": 105.0,
+  "vl_unit_perc_fixo": 10.5,
+  "record_key": "{\"container_id\":123,\"versao_id\":7,\"item_container_custo_id\":1001}"
+}

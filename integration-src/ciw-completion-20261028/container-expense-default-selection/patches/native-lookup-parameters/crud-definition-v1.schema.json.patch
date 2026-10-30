@@ -1,0 +1,5732 @@
+--- D:/opencode/construtor-pg/public/metadata/schemas/crud-definition-v1.schema.json
++++ D:/opencode/construtor-pg/public/metadata/schemas/crud-definition-v1.schema.json
+@@ -1,879 +1,889 @@
+-{
+-  "$schema": "https://json-schema.org/draft/2020-12/schema",
+-  "$id": "crud-definition-v1.schema.json",
+-  "title": "Page Definition v1",
+-  "type": "object",
+-  "required": [
+-    "schemaVersion",
+-    "pageType",
+-    "program",
+-    "permissions",
+-    "dataSource",
+-    "dataModel",
+-    "crud"
+-  ],
+-  "properties": {
+-    "contextFields": {
+-      "type": "array",
+-      "maxItems": 10,
+-      "items": {
+-        "$ref": "#/$defs/contextField"
+-      }
+-    },
+-    "schemaVersion": {
+-      "type": "string"
+-    },
+-    "pageType": {
+-      "type": "string",
+-      "const": "crud"
+-    },
+-    "program": {
+-      "type": "object",
+-      "required": [
+-        "id",
+-        "module",
+-        "entity",
+-        "title"
+-      ],
+-      "properties": {
+-        "id": {
+-          "type": "string"
+-        },
+-        "module": {
+-          "type": "string"
+-        },
+-        "entity": {
+-          "type": "string"
+-        },
+-        "title": {
+-          "type": "string"
+-        },
+-        "version": {
+-          "type": "string"
+-        },
+-        "subtitle": {
+-          "type": "string",
+-          "maxLength": 80
+-        },
+-        "subtitleTooltip": {
+-          "type": "string",
+-          "maxLength": 300
+-        },
+-        "help": {
+-          "$ref": "#/$defs/help"
+-        },
+-        "logs": {
+-          "$ref": "#/$defs/logs"
+-        }
+-      }
+-    },
+-    "permissions": {
+-      "type": "object",
+-      "additionalProperties": {
+-        "type": "boolean"
+-      }
+-    },
+-    "security": {
+-      "type": "object",
+-      "properties": {
+-        "userGroups": {
+-          "type": "array",
+-          "items": {
+-            "type": "string"
+-          }
+-        },
+-        "groups": {
+-          "type": "array",
+-          "items": {
+-            "type": "string"
+-          }
+-        }
+-      },
+-      "additionalProperties": true
+-    },
+-    "currentUser": {
+-      "type": "object",
+-      "properties": {
+-        "id": {
+-          "type": "string"
+-        },
+-        "name": {
+-          "type": "string"
+-        },
+-        "groups": {
+-          "type": "array",
+-          "items": {
+-            "type": "string"
+-          }
+-        }
+-      },
+-      "additionalProperties": true
+-    },
+-    "runtime": {
+-      "type": "object",
+-      "properties": {
+-        "entityCode": {
+-          "type": "string"
+-        },
+-        "programId": {
+-          "type": "string"
+-        },
+-        "lock": {
+-          "type": "object",
+-          "properties": {
+-            "enabled": {
+-              "type": "boolean"
+-            },
+-            "lockTtlSeconds": {
+-              "type": "integer",
+-              "minimum": 30
+-            },
+-            "heartbeatIntervalSeconds": {
+-              "type": "integer",
+-              "minimum": 10
+-            },
+-            "modes": {
+-              "type": "array",
+-              "items": {
+-                "type": "string",
+-                "enum": [
+-                  "edit",
+-                  "update",
+-                  "delete"
+-                ]
+-              }
+-            }
+-          },
+-          "additionalProperties": true
+-        },
+-        "messages": {
+-          "type": "object",
+-          "properties": {
+-            "enabled": {
+-              "type": "boolean"
+-            },
+-            "pollIntervalSeconds": {
+-              "type": "integer",
+-              "minimum": 10
+-            },
+-            "events": {
+-              "type": "object",
+-              "properties": {
+-                "enabled": {
+-                  "type": "boolean"
+-                },
+-                "url": {
+-                  "type": "string"
+-                }
+-              },
+-              "additionalProperties": true
+-            },
+-            "eventSourceUrl": {
+-              "type": "string"
+-            }
+-          },
+-          "additionalProperties": true
+-        }
+-      },
+-      "additionalProperties": true
+-    },
+-    "dataSource": {
+-      "type": "object",
+-      "required": [
+-        "api"
+-      ],
+-      "properties": {
+-        "api": {
+-          "type": "object",
+-          "additionalProperties": {
+-            "$ref": "#/$defs/endpoint"
+-          }
+-        }
+-      }
+-    },
+-    "dataModel": {
+-      "type": "object",
+-      "required": [
+-        "primaryKey",
+-        "fields"
+-      ],
+-      "properties": {
+-        "primaryKey": {
+-          "type": "string"
+-        },
+-        "fields": {
+-          "type": "object",
+-          "additionalProperties": {
+-            "$ref": "#/$defs/field"
+-          }
+-        }
+-      }
+-    },
+-    "crud": {
+-      "type": "object",
+-      "required": [
+-        "grid",
+-        "form"
+-      ],
+-      "properties": {
+-        "auditSummary": {
+-          "$ref": "#/$defs/auditSummary"
+-        },
+-        "features": {
+-          "type": "object",
+-          "properties": {
+-            "filterPanel": {
+-              "type": "boolean",
+-              "default": true
+-            }
+-          },
+-          "additionalProperties": false
+-        },
+-        "query": {
+-          "$ref": "#/$defs/query"
+-        },
+-        "filter": {
+-          "$ref": "#/$defs/filter"
+-        },
+-        "grid": {
+-          "$ref": "#/$defs/grid"
+-        },
+-        "form": {
+-          "$ref": "#/$defs/form"
+-        },
+-        "userLayout": {
+-          "type": "object"
+-        }
+-      }
+-    },
+-    "apiCompany": {
+-      "$ref": "#/$defs/apiCompanyDescriptor"
+-    }
+-  },
+-  "$defs": {
+-    "auditDiffMapping": {
+-      "type": "object",
+-      "required": [
+-        "beforeField",
+-        "afterField"
+-      ],
+-      "properties": {
+-        "beforeField": {
+-          "type": "string"
+-        },
+-        "afterField": {
+-          "type": "string"
+-        },
+-        "eventTypeField": {
+-          "type": "string"
+-        },
+-        "metadataField": {
+-          "type": "string"
+-        }
+-      },
+-      "dependentRequired": {
+-        "eventTypeField": [
+-          "metadataField"
+-        ],
+-        "metadataField": [
+-          "eventTypeField"
+-        ]
+-      },
+-      "additionalProperties": false
+-    },
+-    "auditSummary": {
+-      "type": "object",
+-      "required": [
+-        "contextField",
+-        "field",
+-        "auditDiff"
+-      ],
+-      "properties": {
+-        "enabled": {
+-          "type": "boolean",
+-          "default": true
+-        },
+-        "contextField": {
+-          "type": "string"
+-        },
+-        "field": {
+-          "type": "string"
+-        },
+-        "maxRows": {
+-          "type": "integer",
+-          "minimum": 1,
+-          "maximum": 500,
+-          "default": 500
+-        },
+-        "actorNameField": {
+-          "type": "string"
+-        },
+-        "actorIdField": {
+-          "type": "string"
+-        },
+-        "auditDiff": {
+-          "$ref": "#/$defs/auditDiffMapping"
+-        }
+-      },
+-      "additionalProperties": false
+-    },
+-    "endpoint": {
+-      "type": "object",
+-      "properties": {
+-        "id": {
+-          "type": "string"
+-        },
+-        "endpointId": {
+-          "type": "string"
+-        },
+-        "actionId": {
+-          "type": "string"
+-        },
+-        "url": {
+-          "type": "string"
+-        },
+-        "method": {
+-          "type": "string",
+-          "enum": [
+-            "GET",
+-            "POST",
+-            "PUT",
+-            "PATCH",
+-            "DELETE"
+-          ]
+-        }
+-      },
+-      "additionalProperties": true
+-    },
+-    "printConfig": {
+-      "type": "object",
+-      "properties": {
+-        "enabled": {
+-          "type": "boolean",
+-          "default": true
+-        },
+-        "label": {
+-          "type": "string"
+-        },
+-        "icon": {
+-          "type": "string"
+-        },
+-        "fileName": {
+-          "type": "string"
+-        },
+-        "requiresRecord": {
+-          "type": "boolean",
+-          "default": true
+-        },
+-        "formats": {
+-          "type": "array",
+-          "items": {
+-            "type": "string",
+-            "enum": [
+-              "excel",
+-              "pdf",
+-              "csv"
+-            ]
+-          }
+-        },
+-        "options": {
+-          "type": "array",
+-          "items": {
+-            "oneOf": [
+-              {
+-                "type": "string",
+-                "enum": [
+-                  "excel",
+-                  "pdf",
+-                  "csv"
+-                ]
+-              },
+-              {
+-                "$ref": "#/$defs/printOption"
+-              }
+-            ]
+-          }
+-        },
+-        "excel": {
+-          "type": "object"
+-        },
+-        "pdf": {
+-          "type": "object"
+-        }
+-      },
+-      "additionalProperties": false
+-    },
+-    "printOption": {
+-      "type": "object",
+-      "properties": {
+-        "id": {
+-          "type": "string"
+-        },
+-        "format": {
+-          "type": "string",
+-          "enum": [
+-            "excel",
+-            "pdf",
+-            "csv"
+-          ]
+-        },
+-        "type": {
+-          "type": "string",
+-          "enum": [
+-            "excel",
+-            "pdf",
+-            "csv"
+-          ]
+-        },
+-        "label": {
+-          "type": "string"
+-        },
+-        "icon": {
+-          "type": "string"
+-        },
+-        "fileName": {
+-          "type": "string"
+-        },
+-        "source": {
+-          "type": "string",
+-          "enum": [
+-            "browser",
+-            "api"
+-          ]
+-        },
+-        "mode": {
+-          "type": "string",
+-          "enum": [
+-            "browser",
+-            "api"
+-          ]
+-        },
+-        "action": {
+-          "type": "string"
+-        },
+-        "browser": {
+-          "type": "boolean"
+-        },
+-        "endpointId": {
+-          "type": "string"
+-        },
+-        "actionId": {
+-          "type": "string"
+-        },
+-        "endpoint": {
+-          "$ref": "#/$defs/endpoint"
+-        },
+-        "api": {
+-          "$ref": "#/$defs/endpoint"
+-        },
+-        "url": {
+-          "type": "string"
+-        },
+-        "method": {
+-          "type": "string",
+-          "enum": [
+-            "GET",
+-            "POST",
+-            "PUT",
+-            "PATCH",
+-            "DELETE"
+-          ]
+-        },
+-        "pageMethod": {
+-          "type": "string",
+-          "enum": [
+-            "GET",
+-            "POST"
+-          ]
+-        },
+-        "submitMethod": {
+-          "type": "string",
+-          "enum": [
+-            "GET",
+-            "POST"
+-          ]
+-        },
+-        "target": {
+-          "type": "string",
+-          "enum": [
+-            "request",
+-            "window",
+-            "newTab"
+-          ]
+-        },
+-        "openAs": {
+-          "type": "string",
+-          "enum": [
+-            "request",
+-            "window",
+-            "newTab"
+-          ]
+-        },
+-        "successMessage": {
+-          "type": "string"
+-        },
+-        "errorMessage": {
+-          "type": "string"
+-        },
+-        "confirm": {
+-          "type": "object"
+-        }
+-      },
+-      "additionalProperties": false
+-    },
+-    "help": {
+-      "type": "object",
+-      "properties": {
+-        "enabled": {
+-          "type": "boolean",
+-          "default": true
+-        },
+-        "title": {
+-          "type": "string"
+-        },
+-        "kind": {
+-          "type": "string",
+-          "enum": [
+-            "text",
+-            "link",
+-            "video"
+-          ]
+-        },
+-        "summary": {
+-          "type": "string"
+-        },
+-        "body": {
+-          "type": "string"
+-        },
+-        "linkUrl": {
+-          "type": "string"
+-        },
+-        "linkText": {
+-          "type": "string"
+-        },
+-        "videoUrl": {
+-          "type": "string"
+-        },
+-        "readEndpoint": {
+-          "$ref": "#/$defs/endpoint"
+-        },
+-        "items": {
+-          "type": "array",
+-          "items": {
+-            "$ref": "#/$defs/helpItem"
+-          }
+-        }
+-      }
+-    },
+-    "helpItem": {
+-      "type": "object",
+-      "required": [
+-        "id",
+-        "title"
+-      ],
+-      "properties": {
+-        "id": {
+-          "type": "string"
+-        },
+-        "title": {
+-          "type": "string"
+-        },
+-        "kind": {
+-          "type": "string",
+-          "enum": [
+-            "text",
+-            "link",
+-            "video"
+-          ]
+-        },
+-        "summary": {
+-          "type": "string"
+-        },
+-        "body": {
+-          "type": "string"
+-        },
+-        "linkUrl": {
+-          "type": "string"
+-        },
+-        "linkText": {
+-          "type": "string"
+-        },
+-        "videoUrl": {
+-          "type": "string"
+-        }
+-      }
+-    },
+-    "logs": {
+-      "type": "object",
+-      "properties": {
+-        "enabled": {
+-          "type": "boolean",
+-          "default": true
+-        },
+-        "title": {
+-          "type": "string",
+-          "default": "Logs"
+-        },
+-        "url": {
+-          "type": "string"
+-        },
+-        "linkText": {
+-          "type": "string",
+-          "default": "Abrir logs em nova aba"
+-        },
+-        "documentId": {
+-          "type": "string"
+-        },
+-        "endpointId": {
+-          "type": "string"
+-        },
+-        "actionId": {
+-          "type": "string"
+-        },
+-        "mode": {
+-          "type": "string",
+-          "enum": [
+-            "transactions",
+-            "transactionEvents",
+-            "deletions",
+-            "recordEvents"
+-          ]
+-        },
+-        "requiresRecord": {
+-          "type": "boolean",
+-          "default": true
+-        },
+-        "screenId": {
+-          "type": "string"
+-        }
+-      },
+-      "additionalProperties": false
+-    },
+-    "field": {
+-      "type": "object",
+-      "required": [
+-        "type",
+-        "label"
+-      ],
+-      "properties": {
+-        "type": {
+-          "type": "string",
+-          "enum": [
+-            "string",
+-            "text",
+-            "integer",
+-            "decimal",
+-            "number",
+-            "boolean",
+-            "date",
+-            "datetime",
+-            "email",
+-            "enum",
+-            "lookup",
+-            "hidden",
+-            "array",
+-            "json"
+-          ]
+-        },
+-        "label": {
+-          "type": "string"
+-        },
+-        "editable": {
+-          "type": "boolean"
+-        },
+-        "nullable": {
+-          "type": "boolean"
+-        },
+-        "format": {
+-          "type": "string"
+-        },
+-        "editor": {
+-          "type": "string"
+-        },
+-        "validation": {
+-          "type": "object"
+-        },
+-        "options": {
+-          "type": "array"
+-        },
+-        "itemType": {
+-          "const": "integer"
+-        },
+-        "decimals": {
+-          "type": "integer",
+-          "minimum": 0,
+-          "maximum": 10
+-        },
+-        "defaultValue": {},
+-        "readonlyOnEdit": {
+-          "type": "boolean"
+-        },
+-        "visibleWhen": {
+-          "$ref": "#/$defs/fieldCondition"
+-        },
+-        "enabledWhen": {
+-          "$ref": "#/$defs/fieldCondition"
+-        },
+-        "optionsSource": {
+-          "type": "object",
+-          "required": [
+-            "endpointId"
+-          ],
+-          "properties": {
+-            "endpointId": {
+-              "type": "string",
+-              "pattern": "^options\\.[A-Za-z_][A-Za-z0-9_]*$"
+-            },
+-            "excludeCurrent": {
+-              "type": "boolean"
+-            },
+-            "copyFields": {
+-              "type": "array",
+-              "maxItems": 10,
+-              "uniqueItems": true,
+-              "items": {
+-                "type": "string"
+-              }
+-            }
+-          },
+-          "additionalProperties": false
+-        }
+-      }
+-    },
+-    "query": {
+-      "type": "object",
+-      "properties": {
+-        "defaultPageSize": {
+-          "type": "integer"
+-        },
+-        "pageSizes": {
+-          "type": "array",
+-          "items": {
+-            "type": "integer"
+-          }
+-        },
+-        "defaultSort": {
+-          "type": "array"
+-        },
+-        "defaultGroup": {
+-          "type": "array",
+-          "maxItems": 3,
+-          "items": {
+-            "type": "object",
+-            "required": [
+-              "field",
+-              "dir"
+-            ],
+-            "properties": {
+-              "field": {
+-                "type": "string",
+-                "pattern": "^[A-Za-z_][A-Za-z0-9_.]*$"
+-              },
+-              "dir": {
+-                "type": "string",
+-                "enum": [
+-                  "asc",
+-                  "desc"
+-                ]
+-              }
+-            },
+-            "additionalProperties": false
+-          }
+-        }
+-      }
+-    },
+-    "filter": {
+-      "type": "object",
+-      "properties": {
+-        "type": {
+-          "type": "string",
+-          "enum": [
+-            "window"
+-          ]
+-        },
+-        "mode": {
+-          "type": "string",
+-          "enum": [
+-            "basic"
+-          ]
+-        },
+-        "title": {
+-          "type": "string"
+-        },
+-        "openOnLoad": {
+-          "type": "boolean",
+-          "default": false
+-        },
+-        "maximizeFilter": {
+-          "type": "boolean",
+-          "default": false
+-        },
+-        "waitForSubmitOnLoad": {
+-          "type": "boolean",
+-          "default": true
+-        },
+-        "showAppliedFilters": {
+-          "type": "boolean",
+-          "default": true
+-        },
+-        "showAppliedSummary": {
+-          "type": "boolean",
+-          "default": true
+-        },
+-        "tabs": {
+-          "type": "object",
+-          "properties": {
+-            "enabled": {
+-              "type": "boolean",
+-              "default": false
+-            },
+-            "otherTitle": {
+-              "type": "string",
+-              "default": "Outros"
+-            },
+-            "items": {
+-              "type": "array",
+-              "items": {
+-                "type": "object",
+-                "required": [
+-                  "id",
+-                  "title",
+-                  "fields"
+-                ],
+-                "properties": {
+-                  "id": {
+-                    "type": "string"
+-                  },
+-                  "title": {
+-                    "type": "string"
+-                  },
+-                  "fields": {
+-                    "type": "array",
+-                    "items": {
+-                      "type": "string"
+-                    }
+-                  }
+-                },
+-                "additionalProperties": false
+-              }
+-            }
+-          },
+-          "additionalProperties": false
+-        },
+-        "fields": {
+-          "type": "array",
+-          "items": {
+-            "type": "object"
+-          }
+-        }
+-      }
+-    },
+-    "grid": {
+-      "type": "object",
+-      "required": [
+-        "columns"
+-      ],
+-      "properties": {
++{
++  "$schema": "https://json-schema.org/draft/2020-12/schema",
++  "$id": "crud-definition-v1.schema.json",
++  "title": "Page Definition v1",
++  "type": "object",
++  "required": [
++    "schemaVersion",
++    "pageType",
++    "program",
++    "permissions",
++    "dataSource",
++    "dataModel",
++    "crud"
++  ],
++  "properties": {
++    "contextFields": {
++      "type": "array",
++      "maxItems": 10,
++      "items": {
++        "$ref": "#/$defs/contextField"
++      }
++    },
++    "schemaVersion": {
++      "type": "string"
++    },
++    "pageType": {
++      "type": "string",
++      "const": "crud"
++    },
++    "program": {
++      "type": "object",
++      "required": [
++        "id",
++        "module",
++        "entity",
++        "title"
++      ],
++      "properties": {
++        "id": {
++          "type": "string"
++        },
++        "module": {
++          "type": "string"
++        },
++        "entity": {
++          "type": "string"
++        },
++        "title": {
++          "type": "string"
++        },
++        "version": {
++          "type": "string"
++        },
++        "subtitle": {
++          "type": "string",
++          "maxLength": 80
++        },
++        "subtitleTooltip": {
++          "type": "string",
++          "maxLength": 300
++        },
++        "help": {
++          "$ref": "#/$defs/help"
++        },
++        "logs": {
++          "$ref": "#/$defs/logs"
++        }
++      }
++    },
++    "permissions": {
++      "type": "object",
++      "additionalProperties": {
++        "type": "boolean"
++      }
++    },
++    "security": {
++      "type": "object",
++      "properties": {
++        "userGroups": {
++          "type": "array",
++          "items": {
++            "type": "string"
++          }
++        },
++        "groups": {
++          "type": "array",
++          "items": {
++            "type": "string"
++          }
++        }
++      },
++      "additionalProperties": true
++    },
++    "currentUser": {
++      "type": "object",
++      "properties": {
++        "id": {
++          "type": "string"
++        },
++        "name": {
++          "type": "string"
++        },
++        "groups": {
++          "type": "array",
++          "items": {
++            "type": "string"
++          }
++        }
++      },
++      "additionalProperties": true
++    },
++    "runtime": {
++      "type": "object",
++      "properties": {
++        "entityCode": {
++          "type": "string"
++        },
++        "programId": {
++          "type": "string"
++        },
++        "lock": {
++          "type": "object",
++          "properties": {
++            "enabled": {
++              "type": "boolean"
++            },
++            "lockTtlSeconds": {
++              "type": "integer",
++              "minimum": 30
++            },
++            "heartbeatIntervalSeconds": {
++              "type": "integer",
++              "minimum": 10
++            },
++            "modes": {
++              "type": "array",
++              "items": {
++                "type": "string",
++                "enum": [
++                  "edit",
++                  "update",
++                  "delete"
++                ]
++              }
++            }
++          },
++          "additionalProperties": true
++        },
++        "messages": {
++          "type": "object",
++          "properties": {
++            "enabled": {
++              "type": "boolean"
++            },
++            "pollIntervalSeconds": {
++              "type": "integer",
++              "minimum": 10
++            },
++            "events": {
++              "type": "object",
++              "properties": {
++                "enabled": {
++                  "type": "boolean"
++                },
++                "url": {
++                  "type": "string"
++                }
++              },
++              "additionalProperties": true
++            },
++            "eventSourceUrl": {
++              "type": "string"
++            }
++          },
++          "additionalProperties": true
++        }
++      },
++      "additionalProperties": true
++    },
++    "dataSource": {
++      "type": "object",
++      "required": [
++        "api"
++      ],
++      "properties": {
++        "api": {
++          "type": "object",
++          "additionalProperties": {
++            "$ref": "#/$defs/endpoint"
++          }
++        }
++      }
++    },
++    "dataModel": {
++      "type": "object",
++      "required": [
++        "primaryKey",
++        "fields"
++      ],
++      "properties": {
++        "primaryKey": {
++          "type": "string"
++        },
++        "fields": {
++          "type": "object",
++          "additionalProperties": {
++            "$ref": "#/$defs/field"
++          }
++        }
++      }
++    },
++    "crud": {
++      "type": "object",
++      "required": [
++        "grid",
++        "form"
++      ],
++      "properties": {
++        "auditSummary": {
++          "$ref": "#/$defs/auditSummary"
++        },
++        "features": {
++          "type": "object",
++          "properties": {
++            "filterPanel": {
++              "type": "boolean",
++              "default": true
++            }
++          },
++          "additionalProperties": false
++        },
++        "query": {
++          "$ref": "#/$defs/query"
++        },
++        "filter": {
++          "$ref": "#/$defs/filter"
++        },
++        "grid": {
++          "$ref": "#/$defs/grid"
++        },
++        "form": {
++          "$ref": "#/$defs/form"
++        },
++        "userLayout": {
++          "type": "object"
++        }
++      }
++    },
++    "apiCompany": {
++      "$ref": "#/$defs/apiCompanyDescriptor"
++    }
++  },
++  "$defs": {
++    "auditDiffMapping": {
++      "type": "object",
++      "required": [
++        "beforeField",
++        "afterField"
++      ],
++      "properties": {
++        "beforeField": {
++          "type": "string"
++        },
++        "afterField": {
++          "type": "string"
++        },
++        "eventTypeField": {
++          "type": "string"
++        },
++        "metadataField": {
++          "type": "string"
++        }
++      },
++      "dependentRequired": {
++        "eventTypeField": [
++          "metadataField"
++        ],
++        "metadataField": [
++          "eventTypeField"
++        ]
++      },
++      "additionalProperties": false
++    },
++    "auditSummary": {
++      "type": "object",
++      "required": [
++        "contextField",
++        "field",
++        "auditDiff"
++      ],
++      "properties": {
++        "enabled": {
++          "type": "boolean",
++          "default": true
++        },
++        "contextField": {
++          "type": "string"
++        },
++        "field": {
++          "type": "string"
++        },
++        "maxRows": {
++          "type": "integer",
++          "minimum": 1,
++          "maximum": 500,
++          "default": 500
++        },
++        "actorNameField": {
++          "type": "string"
++        },
++        "actorIdField": {
++          "type": "string"
++        },
++        "auditDiff": {
++          "$ref": "#/$defs/auditDiffMapping"
++        }
++      },
++      "additionalProperties": false
++    },
++    "endpoint": {
++      "type": "object",
++      "properties": {
++        "id": {
++          "type": "string"
++        },
++        "endpointId": {
++          "type": "string"
++        },
++        "actionId": {
++          "type": "string"
++        },
++        "url": {
++          "type": "string"
++        },
++        "method": {
++          "type": "string",
++          "enum": [
++            "GET",
++            "POST",
++            "PUT",
++            "PATCH",
++            "DELETE"
++          ]
++        }
++      },
++      "additionalProperties": true
++    },
++    "printConfig": {
++      "type": "object",
++      "properties": {
++        "enabled": {
++          "type": "boolean",
++          "default": true
++        },
++        "label": {
++          "type": "string"
++        },
++        "icon": {
++          "type": "string"
++        },
++        "fileName": {
++          "type": "string"
++        },
++        "requiresRecord": {
++          "type": "boolean",
++          "default": true
++        },
++        "formats": {
++          "type": "array",
++          "items": {
++            "type": "string",
++            "enum": [
++              "excel",
++              "pdf",
++              "csv"
++            ]
++          }
++        },
++        "options": {
++          "type": "array",
++          "items": {
++            "oneOf": [
++              {
++                "type": "string",
++                "enum": [
++                  "excel",
++                  "pdf",
++                  "csv"
++                ]
++              },
++              {
++                "$ref": "#/$defs/printOption"
++              }
++            ]
++          }
++        },
++        "excel": {
++          "type": "object"
++        },
++        "pdf": {
++          "type": "object"
++        }
++      },
++      "additionalProperties": false
++    },
++    "printOption": {
++      "type": "object",
++      "properties": {
++        "id": {
++          "type": "string"
++        },
++        "format": {
++          "type": "string",
++          "enum": [
++            "excel",
++            "pdf",
++            "csv"
++          ]
++        },
++        "type": {
++          "type": "string",
++          "enum": [
++            "excel",
++            "pdf",
++            "csv"
++          ]
++        },
++        "label": {
++          "type": "string"
++        },
++        "icon": {
++          "type": "string"
++        },
++        "fileName": {
++          "type": "string"
++        },
++        "source": {
++          "type": "string",
++          "enum": [
++            "browser",
++            "api"
++          ]
++        },
++        "mode": {
++          "type": "string",
++          "enum": [
++            "browser",
++            "api"
++          ]
++        },
++        "action": {
++          "type": "string"
++        },
++        "browser": {
++          "type": "boolean"
++        },
++        "endpointId": {
++          "type": "string"
++        },
++        "actionId": {
++          "type": "string"
++        },
++        "endpoint": {
++          "$ref": "#/$defs/endpoint"
++        },
++        "api": {
++          "$ref": "#/$defs/endpoint"
++        },
++        "url": {
++          "type": "string"
++        },
++        "method": {
++          "type": "string",
++          "enum": [
++            "GET",
++            "POST",
++            "PUT",
++            "PATCH",
++            "DELETE"
++          ]
++        },
++        "pageMethod": {
++          "type": "string",
++          "enum": [
++            "GET",
++            "POST"
++          ]
++        },
++        "submitMethod": {
++          "type": "string",
++          "enum": [
++            "GET",
++            "POST"
++          ]
++        },
++        "target": {
++          "type": "string",
++          "enum": [
++            "request",
++            "window",
++            "newTab"
++          ]
++        },
++        "openAs": {
++          "type": "string",
++          "enum": [
++            "request",
++            "window",
++            "newTab"
++          ]
++        },
++        "successMessage": {
++          "type": "string"
++        },
++        "errorMessage": {
++          "type": "string"
++        },
++        "confirm": {
++          "type": "object"
++        }
++      },
++      "additionalProperties": false
++    },
++    "help": {
++      "type": "object",
++      "properties": {
++        "enabled": {
++          "type": "boolean",
++          "default": true
++        },
++        "title": {
++          "type": "string"
++        },
++        "kind": {
++          "type": "string",
++          "enum": [
++            "text",
++            "link",
++            "video"
++          ]
++        },
++        "summary": {
++          "type": "string"
++        },
++        "body": {
++          "type": "string"
++        },
++        "linkUrl": {
++          "type": "string"
++        },
++        "linkText": {
++          "type": "string"
++        },
++        "videoUrl": {
++          "type": "string"
++        },
++        "readEndpoint": {
++          "$ref": "#/$defs/endpoint"
++        },
++        "items": {
++          "type": "array",
++          "items": {
++            "$ref": "#/$defs/helpItem"
++          }
++        }
++      }
++    },
++    "helpItem": {
++      "type": "object",
++      "required": [
++        "id",
++        "title"
++      ],
++      "properties": {
++        "id": {
++          "type": "string"
++        },
++        "title": {
++          "type": "string"
++        },
++        "kind": {
++          "type": "string",
++          "enum": [
++            "text",
++            "link",
++            "video"
++          ]
++        },
++        "summary": {
++          "type": "string"
++        },
++        "body": {
++          "type": "string"
++        },
++        "linkUrl": {
++          "type": "string"
++        },
++        "linkText": {
++          "type": "string"
++        },
++        "videoUrl": {
++          "type": "string"
++        }
++      }
++    },
++    "logs": {
++      "type": "object",
++      "properties": {
++        "enabled": {
++          "type": "boolean",
++          "default": true
++        },
++        "title": {
++          "type": "string",
++          "default": "Logs"
++        },
++        "url": {
++          "type": "string"
++        },
++        "linkText": {
++          "type": "string",
++          "default": "Abrir logs em nova aba"
++        },
++        "documentId": {
++          "type": "string"
++        },
++        "endpointId": {
++          "type": "string"
++        },
++        "actionId": {
++          "type": "string"
++        },
++        "mode": {
++          "type": "string",
++          "enum": [
++            "transactions",
++            "transactionEvents",
++            "deletions",
++            "recordEvents"
++          ]
++        },
++        "requiresRecord": {
++          "type": "boolean",
++          "default": true
++        },
++        "screenId": {
++          "type": "string"
++        }
++      },
++      "additionalProperties": false
++    },
++    "field": {
++      "type": "object",
++      "required": [
++        "type",
++        "label"
++      ],
++      "properties": {
++        "type": {
++          "type": "string",
++          "enum": [
++            "string",
++            "text",
++            "integer",
++            "decimal",
++            "number",
++            "boolean",
++            "date",
++            "datetime",
++            "email",
++            "enum",
++            "lookup",
++            "hidden",
++            "array",
++            "json"
++          ]
++        },
++        "label": {
++          "type": "string"
++        },
++        "editable": {
++          "type": "boolean"
++        },
++        "nullable": {
++          "type": "boolean"
++        },
++        "format": {
++          "type": "string"
++        },
++        "editor": {
++          "type": "string"
++        },
++        "validation": {
++          "type": "object"
++        },
++        "options": {
++          "type": "array"
++        },
++        "itemType": {
++          "const": "integer"
++        },
++        "decimals": {
++          "type": "integer",
++          "minimum": 0,
++          "maximum": 10
++        },
++        "defaultValue": {},
++        "readonlyOnEdit": {
++          "type": "boolean"
++        },
++        "visibleWhen": {
++          "$ref": "#/$defs/fieldCondition"
++        },
++        "enabledWhen": {
++          "$ref": "#/$defs/fieldCondition"
++        },
++        "optionsSource": {
++          "type": "object",
++          "required": [
++            "endpointId"
++          ],
++          "properties": {
++            "endpointId": {
++              "type": "string",
++              "pattern": "^options\\.[A-Za-z_][A-Za-z0-9_]*$"
++            },
++            "excludeCurrent": {
++              "type": "boolean"
++            },
++            "copyFields": {
++              "type": "array",
++              "maxItems": 10,
++              "uniqueItems": true,
++              "items": {
++                "type": "string"
++              }
++            },
++            "parameterFields": {
++              "type": "array",
++              "minItems": 1,
++              "maxItems": 2,
++              "uniqueItems": true,
++              "items": {
++                "type": "string",
++                "pattern": "^(?!context$|operation$|resource$|parameters$)[a-z][a-z0-9_]*$"
++              }
++            }
++          },
++          "additionalProperties": false
++        }
++      }
++    },
++    "query": {
++      "type": "object",
++      "properties": {
++        "defaultPageSize": {
++          "type": "integer"
++        },
++        "pageSizes": {
++          "type": "array",
++          "items": {
++            "type": "integer"
++          }
++        },
++        "defaultSort": {
++          "type": "array"
++        },
++        "defaultGroup": {
++          "type": "array",
++          "maxItems": 3,
++          "items": {
++            "type": "object",
++            "required": [
++              "field",
++              "dir"
++            ],
++            "properties": {
++              "field": {
++                "type": "string",
++                "pattern": "^[A-Za-z_][A-Za-z0-9_.]*$"
++              },
++              "dir": {
++                "type": "string",
++                "enum": [
++                  "asc",
++                  "desc"
++                ]
++              }
++            },
++            "additionalProperties": false
++          }
++        }
++      }
++    },
++    "filter": {
++      "type": "object",
++      "properties": {
++        "type": {
++          "type": "string",
++          "enum": [
++            "window"
++          ]
++        },
++        "mode": {
++          "type": "string",
++          "enum": [
++            "basic"
++          ]
++        },
++        "title": {
++          "type": "string"
++        },
++        "openOnLoad": {
++          "type": "boolean",
++          "default": false
++        },
++        "maximizeFilter": {
++          "type": "boolean",
++          "default": false
++        },
++        "waitForSubmitOnLoad": {
++          "type": "boolean",
++          "default": true
++        },
++        "showAppliedFilters": {
++          "type": "boolean",
++          "default": true
++        },
++        "showAppliedSummary": {
++          "type": "boolean",
++          "default": true
++        },
++        "tabs": {
++          "type": "object",
++          "properties": {
++            "enabled": {
++              "type": "boolean",
++              "default": false
++            },
++            "otherTitle": {
++              "type": "string",
++              "default": "Outros"
++            },
++            "items": {
++              "type": "array",
++              "items": {
++                "type": "object",
++                "required": [
++                  "id",
++                  "title",
++                  "fields"
++                ],
++                "properties": {
++                  "id": {
++                    "type": "string"
++                  },
++                  "title": {
++                    "type": "string"
++                  },
++                  "fields": {
++                    "type": "array",
++                    "items": {
++                      "type": "string"
++                    }
++                  }
++                },
++                "additionalProperties": false
++              }
++            }
++          },
++          "additionalProperties": false
++        },
++        "fields": {
++          "type": "array",
++          "items": {
++            "type": "object"
++          }
++        }
++      }
++    },
++    "grid": {
++      "type": "object",
++      "required": [
++        "columns"
++      ],
++      "properties": {
+         "editing": {
+           "type": "object",
+           "properties": {
+@@ -940,1983 +950,1983 @@
+               }
+             }
+           ]
+-        },
+-        "id": {
+-          "type": "string"
+-        },
+-        "freezeColumns": {
+-          "type": "object",
+-          "properties": {
+-            "enabled": {
+-              "type": "boolean",
+-              "default": false
+-            },
+-            "fields": {
+-              "type": "array",
+-              "items": {
+-                "type": "string"
+-              },
+-              "description": "Campos que podem ser congelados. Vazio permite todas as colunas visiveis.",
+-              "default": []
+-            }
+-          },
+-          "additionalProperties": false
+-        },
+-        "mobile": {
+-          "$ref": "#/$defs/mobileGrid"
+-        },
+-        "ai": {
+-          "$ref": "#/$defs/gridAi"
+-        },
+-        "print": {
+-          "$ref": "#/$defs/printConfig"
+-        },
+-        "groupable": {
+-          "type": "boolean"
+-        },
+-        "columns": {
+-          "type": "array",
+-          "items": {
+-            "$ref": "#/$defs/gridColumn"
+-          }
+-        },
+-        "toolbar": {
+-          "type": "array"
+-        },
+-        "bulkActions": {
+-          "type": "object",
+-          "properties": {
+-            "enabled": {
+-              "type": "boolean",
+-              "default": false
+-            },
+-            "label": {
+-              "type": "string"
+-            },
+-            "icon": {
+-              "type": "string"
+-            },
+-            "selectable": {
+-              "type": "string"
+-            },
+-            "actions": {
+-              "type": "array",
+-              "items": {
+-                "type": "object",
+-                "required": [
+-                  "id",
+-                  "label",
+-                  "action"
+-                ],
+-                "properties": {
+-                  "id": {
+-                    "type": "string"
+-                  },
+-                  "label": {
+-                    "type": "string"
+-                  },
+-                  "icon": {
+-                    "type": "string"
+-                  },
+-                  "action": {
+-                    "type": "string"
+-                  },
+-                  "endpointId": {
+-                    "type": "string"
+-                  },
+-                  "actionId": {
+-                    "type": "string"
+-                  },
+-                  "endpoint": {
+-                    "$ref": "#/$defs/endpoint"
+-                  },
+-                  "permission": {
+-                    "type": "string"
+-                  },
+-                  "value": {},
+-                  "data": {
+-                    "type": "object"
+-                  },
+-                  "confirm": {
+-                    "type": "object"
+-                  },
+-                  "successMessage": {
+-                    "type": "string"
+-                  }
+-                }
+-              }
+-            }
+-          }
+-        },
+-        "rowActions": {
+-          "type": "array"
+-        },
+-        "rowLinks": {
+-          "type": "array",
+-          "maxItems": 10,
+-          "items": {
+-            "$ref": "#/$defs/rowLink"
+-          }
+-        }
+-      }
+-    },
+-    "gridAi": {
+-      "type": "object",
+-      "properties": {
+-        "enabled": {
+-          "type": "boolean",
+-          "default": false
+-        },
+-        "provider": {
+-          "type": "string",
+-          "enum": [
+-            "mock",
+-            "service"
+-          ],
+-          "default": "mock"
+-        },
+-        "tool": {
+-          "type": "string",
+-          "enum": [
+-            "smartbox"
+-          ],
+-          "default": "smartbox"
+-        },
+-        "activeMode": {
+-          "type": "string",
+-          "enum": [
+-            "Search",
+-            "AIAssistant"
+-          ]
+-        },
+-        "placeholder": {
+-          "type": "string"
+-        },
+-        "searchPlaceholder": {
+-          "type": "string"
+-        },
+-        "searchEnabled": {
+-          "type": "boolean",
+-          "default": true
+-        },
+-        "searchFields": {
+-          "type": "array",
+-          "items": {
+-            "type": "string"
+-          }
+-        },
+-        "promptSuggestions": {
+-          "type": "array",
+-          "items": {
+-            "type": "string"
+-          }
+-        },
+-        "serviceUrl": {
+-          "type": "string"
+-        },
+-        "service": {
+-          "type": "object",
+-          "properties": {
+-            "url": {
+-              "type": "string"
+-            }
+-          },
+-          "additionalProperties": false
+-        }
+-      },
+-      "additionalProperties": false
+-    },
+-    "gridColumn": {
+-      "type": "object",
+-      "required": [
+-        "field",
+-        "title"
+-      ],
+-      "properties": {
+-        "field": {
+-          "type": "string"
+-        },
+-        "title": {
+-          "type": "string"
+-        },
+-        "width": {
+-          "type": [
+-            "integer",
+-            "string"
+-          ]
+-        },
+-        "visible": {
+-          "type": "boolean"
+-        },
+-        "filterable": {
+-          "type": "boolean"
+-        },
+-        "sortable": {
+-          "type": "boolean"
+-        },
+-        "groupable": {
+-          "type": "boolean"
+-        },
+-        "format": {
+-          "type": "string"
+-        },
+-        "align": {
+-          "type": "string",
+-          "enum": [
+-            "left",
+-            "center",
+-            "right"
+-          ]
+-        }
+-      }
+-    },
+-    "mobileGrid": {
+-      "type": "object",
+-      "properties": {
+-        "enabled": {
+-          "type": "boolean",
+-          "default": true
+-        },
+-        "breakpoint": {
+-          "type": "integer",
+-          "default": 720
+-        },
+-        "mode": {
+-          "type": "string",
+-          "enum": [
+-            "columns",
+-            "template"
+-          ]
+-        },
+-        "columns": {
+-          "type": "array",
+-          "items": {
+-            "type": "string"
+-          }
+-        },
+-        "title": {
+-          "type": "string"
+-        },
+-        "cardActions": {
+-          "type": "boolean",
+-          "default": true
+-        },
+-        "template": {
+-          "$ref": "#/$defs/mobileGridTemplate"
+-        }
+-      },
+-      "additionalProperties": false
+-    },
+-    "mobileGridTemplate": {
+-      "type": "object",
+-      "properties": {
+-        "titleField": {
+-          "type": "string"
+-        },
+-        "subtitleField": {
+-          "type": "string"
+-        },
+-        "badges": {
+-          "type": "array",
+-          "items": {
+-            "type": "string"
+-          }
+-        },
+-        "fields": {
+-          "type": "array",
+-          "items": {
+-            "type": "string"
+-          }
+-        },
+-        "tabs": {
+-          "type": "object",
+-          "properties": {
+-            "enabled": {
+-              "type": "boolean",
+-              "default": false
+-            },
+-            "items": {
+-              "type": "array",
+-              "items": {
+-                "type": "object",
+-                "required": [
+-                  "id",
+-                  "title",
+-                  "fields"
+-                ],
+-                "properties": {
+-                  "id": {
+-                    "type": "string"
+-                  },
+-                  "title": {
+-                    "type": "string"
+-                  },
+-                  "fields": {
+-                    "type": "array",
+-                    "items": {
+-                      "type": "string"
+-                    }
+-                  }
+-                },
+-                "additionalProperties": false
+-              }
+-            }
+-          },
+-          "additionalProperties": false
+-        }
+-      },
+-      "additionalProperties": false
+-    },
+-    "form": {
+-      "type": "object",
+-      "required": [
+-        "id",
+-        "mode",
+-        "layout"
+-      ],
+-      "properties": {
+-        "id": {
+-          "type": "string"
+-        },
+-        "mode": {
+-          "type": "string",
+-          "enum": [
+-            "popup",
+-            "embedded"
+-          ]
+-        },
+-        "returnScreenId": {
+-          "type": "string",
+-          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+-        },
+-        "openOnLoadField": {
+-          "type": "string",
+-          "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+-        },
+-        "layout": {
+-          "type": "string",
+-          "enum": [
+-            "tabs",
+-            "sections",
+-            "single",
+-            "steps"
+-          ]
+-        },
+-        "width": {
+-          "type": "integer"
+-        },
+-        "maximizeForm": {
+-          "type": "boolean",
+-          "default": false
+-        },
+-        "maximizeOnOpen": {
+-          "type": "boolean",
+-          "default": false,
+-          "description": "Alias de maximizeForm."
+-        },
+-        "behavior": {
+-          "type": "object",
+-          "properties": {
+-            "closeOnSave": {
+-              "type": "boolean",
+-              "default": true
+-            },
+-            "closeOnCancel": {
+-              "type": "boolean",
+-              "default": false
+-            }
+-          },
+-          "additionalProperties": false
+-        },
+-        "navigation": {
+-          "type": "object",
+-          "properties": {
+-            "enabled": {
+-              "type": "boolean",
+-              "default": true
+-            }
+-          },
+-          "additionalProperties": false
+-        },
+-        "mobile": {
+-          "type": "object",
+-          "properties": {
+-            "breakpoint": {
+-              "type": "integer",
+-              "default": 720
+-            },
+-            "showHeaderActions": {
+-              "type": "boolean",
+-              "default": false
+-            }
+-          },
+-          "additionalProperties": false
+-        },
+-        "concurrencyWarning": {
+-          "$ref": "#/$defs/formConcurrencyWarning"
+-        },
+-        "concurrentWarning": {
+-          "$ref": "#/$defs/formConcurrencyWarning",
+-          "description": "Alias de concurrencyWarning."
+-        },
+-        "logs": {
+-          "$ref": "#/$defs/logs"
+-        },
+-        "print": {
+-          "$ref": "#/$defs/printConfig"
+-        },
+-        "otherActions": {
+-          "oneOf": [
+-            {
+-              "$ref": "#/$defs/formOtherActions"
+-            },
+-            {
+-              "type": "array",
+-              "items": {
+-                "$ref": "#/$defs/formButton"
+-              }
+-            }
+-          ]
+-        },
+-        "situation": {
+-          "$ref": "#/$defs/formSituation"
+-        },
+-        "statusFlow": {
+-          "$ref": "#/$defs/formSituation"
+-        },
+-        "title": {
+-          "type": "object"
+-        },
+-        "tabs": {
+-          "type": "array",
+-          "items": {
+-            "$ref": "#/$defs/formTab"
+-          }
+-        },
+-        "sections": {
+-          "type": "array",
+-          "items": {
+-            "$ref": "#/$defs/formSection"
+-          }
+-        },
+-        "steps": {
+-          "type": "array",
+-          "items": {
+-            "$ref": "#/$defs/formStep"
+-          }
+-        },
+-        "buttons": {
+-          "type": "array",
+-          "items": {
+-            "$ref": "#/$defs/formButton"
+-          }
+-        },
+-        "events": {
+-          "type": "array",
+-          "items": {
+-            "$ref": "#/$defs/formEvent"
+-          }
+-        }
+-      }
+-    },
+-    "formConcurrencyWarning": {
+-      "oneOf": [
+-        {
+-          "type": "string"
+-        },
+-        {
+-          "type": "object",
+-          "properties": {
+-            "enabled": {
+-              "type": "boolean",
+-              "default": true
+-            },
+-            "actions": {
+-              "oneOf": [
+-                {
+-                  "type": "string"
+-                },
+-                {
+-                  "type": "array",
+-                  "items": {
+-                    "type": "string",
+-                    "enum": [
+-                      "edit",
+-                      "delete"
+-                    ]
+-                  }
+-                }
+-              ]
+-            },
+-            "visibleIn": {
+-              "oneOf": [
+-                {
+-                  "type": "string"
+-                },
+-                {
+-                  "type": "array",
+-                  "items": {
+-                    "type": "string",
+-                    "enum": [
+-                      "edit",
+-                      "delete"
+-                    ]
+-                  }
+-                }
+-              ]
+-            },
+-            "modes": {
+-              "oneOf": [
+-                {
+-                  "type": "string"
+-                },
+-                {
+-                  "type": "array",
+-                  "items": {
+-                    "type": "string",
+-                    "enum": [
+-                      "edit",
+-                      "delete"
+-                    ]
+-                  }
+-                }
+-              ]
+-            },
+-            "title": {
+-              "type": "string"
+-            },
+-            "message": {
+-              "type": "string"
+-            },
+-            "editMessage": {
+-              "type": "string"
+-            },
+-            "deleteMessage": {
+-              "type": "string"
+-            },
+-            "confirm": {
+-              "type": "boolean",
+-              "default": true
+-            },
+-            "blocking": {
+-              "type": "boolean",
+-              "default": true
+-            },
+-            "confirmText": {
+-              "type": "string"
+-            },
+-            "cancelText": {
+-              "type": "string"
+-            },
+-            "confirmIcon": {
+-              "type": "string"
+-            },
+-            "themeColor": {
+-              "type": "string"
+-            },
+-            "type": {
+-              "type": "string",
+-              "enum": [
+-                "success",
+-                "error",
+-                "info",
+-                "warning"
+-              ]
+-            },
+-            "width": {
+-              "type": "integer"
+-            },
+-            "messages": {
+-              "type": "object",
+-              "properties": {
+-                "edit": {
+-                  "type": "string"
+-                },
+-                "delete": {
+-                  "type": "string"
+-                }
+-              },
+-              "additionalProperties": false
+-            },
+-            "edit": {
+-              "oneOf": [
+-                {
+-                  "type": "string"
+-                },
+-                {
+-                  "$ref": "#/$defs/formConcurrencyWarningAction"
+-                }
+-              ]
+-            },
+-            "delete": {
+-              "oneOf": [
+-                {
+-                  "type": "string"
+-                },
+-                {
+-                  "$ref": "#/$defs/formConcurrencyWarningAction"
+-                }
+-              ]
+-            }
+-          },
+-          "additionalProperties": false
+-        }
+-      ]
+-    },
+-    "formConcurrencyWarningAction": {
+-      "type": "object",
+-      "properties": {
+-        "enabled": {
+-          "type": "boolean",
+-          "default": true
+-        },
+-        "message": {
+-          "type": "string"
+-        },
+-        "title": {
+-          "type": "string"
+-        },
+-        "confirm": {
+-          "type": "boolean"
+-        },
+-        "blocking": {
+-          "type": "boolean"
+-        },
+-        "confirmText": {
+-          "type": "string"
+-        },
+-        "cancelText": {
+-          "type": "string"
+-        },
+-        "confirmIcon": {
+-          "type": "string"
+-        },
+-        "themeColor": {
+-          "type": "string"
+-        },
+-        "type": {
+-          "type": "string",
+-          "enum": [
+-            "success",
+-            "error",
+-            "info",
+-            "warning"
+-          ]
+-        },
+-        "width": {
+-          "type": "integer"
+-        }
+-      },
+-      "additionalProperties": false
+-    },
+-    "formSituation": {
+-      "type": "object",
+-      "required": [
+-        "field"
+-      ],
+-      "properties": {
+-        "enabled": {
+-          "type": "boolean",
+-          "default": true
+-        },
+-        "field": {
+-          "type": "string"
+-        },
+-        "label": {
+-          "type": "string"
+-        },
+-        "display": {
+-          "type": "string",
+-          "enum": [
+-            "stepper",
+-            "arrowstep",
+-            "badge"
+-          ],
+-          "default": "stepper"
+-        },
+-        "mode": {
+-          "type": "string",
+-          "enum": [
+-            "stepper",
+-            "arrowstep",
+-            "badge"
+-          ]
+-        },
+-        "orientation": {
+-          "type": "string",
+-          "enum": [
+-            "horizontal",
+-            "vertical"
+-          ],
+-          "default": "horizontal"
+-        },
+-        "steps": {
+-          "type": "array",
+-          "items": {
+-            "type": "object",
+-            "required": [
+-              "value",
+-              "text"
+-            ],
+-            "properties": {
+-              "value": {},
+-              "text": {
+-                "type": "string"
+-              },
+-              "description": {
+-                "type": "string"
+-              }
+-            },
+-            "additionalProperties": false
+-          }
+-        },
+-        "historyTitle": {
+-          "type": "string"
+-        },
+-        "historyWidth": {
+-          "type": "integer"
+-        },
+-        "historyEndpointId": {
+-          "type": "string"
+-        },
+-        "endpointId": {
+-          "type": "string"
+-        },
+-        "actionId": {
+-          "type": "string"
+-        },
+-        "historyEndpoint": {
+-          "$ref": "#/$defs/endpoint"
+-        },
+-        "endpoint": {
+-          "$ref": "#/$defs/endpoint"
+-        },
+-        "api": {
+-          "$ref": "#/$defs/endpoint"
+-        },
+-        "url": {
+-          "type": "string"
+-        },
+-        "method": {
+-          "type": "string",
+-          "enum": [
+-            "GET",
+-            "POST",
+-            "PUT",
+-            "PATCH",
+-            "DELETE"
+-          ]
+-        }
+-      },
+-      "additionalProperties": false
+-    },
+-    "formTab": {
+-      "type": "object",
+-      "required": [
+-        "id",
+-        "title"
+-      ],
+-      "properties": {
+-        "id": {
+-          "type": "string"
+-        },
+-        "title": {
+-          "type": "string"
+-        },
+-        "type": {
+-          "type": "string",
+-          "enum": [
+-            "fields",
+-            "linkedPage",
+-            "linked_page"
+-          ]
+-        },
+-        "kind": {
+-          "type": "string",
+-          "enum": [
+-            "fields",
+-            "linkedPage",
+-            "linked_page"
+-          ]
+-        },
+-        "screenId": {
+-          "type": "string"
+-        },
+-        "definition": {
+-          "type": "object"
+-        },
+-        "linkedPage": {
+-          "$ref": "#/$defs/linkedPageTabConfig"
+-        },
+-        "columns": {
+-          "type": "integer"
+-        },
+-        "fields": {
+-          "type": "array",
+-          "items": {
+-            "oneOf": [
+-              {
+-                "type": "string"
+-              },
+-              {
+-                "$ref": "#/$defs/formField"
+-              }
+-            ]
+-          }
+-        },
+-        "sections": {
+-          "type": "array",
+-          "items": {
+-            "$ref": "#/$defs/formSection"
+-          }
+-        }
+-      },
+-      "additionalProperties": false
+-    },
+-    "linkedPageTabConfig": {
+-      "type": "object",
+-      "properties": {
+-        "engine": {
+-          "type": "string",
+-          "enum": [
+-            "crud",
+-            "process"
+-          ]
+-        },
+-        "screenId": {
+-          "type": "string"
+-        },
+-        "definition": {
+-          "type": "object"
+-        },
+-        "title": {
+-          "type": "string"
+-        },
+-        "description": {
+-          "type": "string"
+-        },
+-        "height": {
+-          "type": [
+-            "integer",
+-            "string"
+-          ]
+-        },
+-        "hideHeader": {
+-          "type": "boolean",
+-          "default": true
+-        },
+-        "requireRecord": {
+-          "type": "boolean",
+-          "default": true
+-        },
+-        "runtimeMessages": {
+-          "type": "boolean",
+-          "default": false
+-        },
+-        "emptyMessage": {
+-          "type": "string"
+-        },
+-        "filters": {
+-          "type": "array",
+-          "items": {
+-            "$ref": "#/$defs/linkedPageFilter"
+-          }
+-        },
+-        "parentFilters": {
+-          "type": "array",
+-          "items": {
+-            "$ref": "#/$defs/linkedPageFilter"
+-          }
+-        },
+-        "params": {
+-          "$ref": "#/$defs/linkedPageParams"
+-        },
+-        "query": {
+-          "$ref": "#/$defs/linkedPageParams"
+-        }
+-      },
+-      "additionalProperties": false
+-    },
+-    "linkedPageFilter": {
+-      "type": "object",
+-      "properties": {
+-        "id": {
+-          "type": "string"
+-        },
+-        "field": {
+-          "type": "string"
+-        },
+-        "targetField": {
+-          "type": "string"
+-        },
+-        "label": {
+-          "type": "string"
+-        },
+-        "operator": {
+-          "type": "string",
+-          "enum": [
+-            "eq",
+-            "neq",
+-            "startsWith",
+-            "contains",
+-            "notContains",
+-            "isEmpty",
+-            "isNotEmpty",
+-            "isNull",
+-            "isNotNull",
+-            "between",
+-            "in",
+-            "notIn",
+-            "gt",
+-            "gte",
+-            "lt",
+-            "lte",
+-            "relative"
+-          ]
+-        },
+-        "value": {},
+-        "displayValue": {},
+-        "sourceField": {
+-          "type": "string"
+-        },
+-        "fieldValue": {
+-          "type": "string"
+-        },
+-        "fromField": {
+-          "type": "string"
+-        },
+-        "sourcePath": {
+-          "type": "string"
+-        },
+-        "path": {
+-          "type": "string"
+-        },
+-        "valueFrom": {
+-          "type": "string"
+-        },
+-        "type": {
+-          "type": "string"
+-        },
+-        "dataType": {
+-          "type": "string"
+-        },
+-        "includeEmpty": {
+-          "type": "boolean",
+-          "default": false
+-        }
+-      },
+-      "additionalProperties": false
+-    },
+-    "linkedPageParams": {
+-      "oneOf": [
+-        {
+-          "type": "array",
+-          "items": {
+-            "$ref": "#/$defs/linkedPageParam"
+-          }
+-        },
+-        {
+-          "type": "object",
+-          "additionalProperties": {
+-            "oneOf": [
+-              {
+-                "type": [
+-                  "string",
+-                  "number",
+-                  "boolean"
+-                ]
+-              },
+-              {
+-                "$ref": "#/$defs/linkedPageSource"
+-              }
+-            ]
+-          }
+-        }
+-      ]
+-    },
+-    "linkedPageParam": {
+-      "type": "object",
+-      "properties": {
+-        "name": {
+-          "type": "string"
+-        },
+-        "param": {
+-          "type": "string"
+-        },
+-        "key": {
+-          "type": "string"
+-        },
+-        "value": {},
+-        "sourceField": {
+-          "type": "string"
+-        },
+-        "fieldValue": {
+-          "type": "string"
+-        },
+-        "fromField": {
+-          "type": "string"
+-        },
+-        "sourcePath": {
+-          "type": "string"
+-        },
+-        "path": {
+-          "type": "string"
+-        },
+-        "valueFrom": {
+-          "type": "string"
+-        }
+-      },
+-      "additionalProperties": false
+-    },
+-    "linkedPageSource": {
+-      "type": "object",
+-      "properties": {
+-        "value": {},
+-        "sourceField": {
+-          "type": "string"
+-        },
+-        "fieldValue": {
+-          "type": "string"
+-        },
+-        "fromField": {
+-          "type": "string"
+-        },
+-        "sourcePath": {
+-          "type": "string"
+-        },
+-        "path": {
+-          "type": "string"
+-        },
+-        "valueFrom": {
+-          "type": "string"
+-        }
+-      },
+-      "additionalProperties": false
+-    },
+-    "formSection": {
+-      "type": "object",
+-      "required": [
+-        "id",
+-        "title",
+-        "fields"
+-      ],
+-      "properties": {
+-        "id": {
+-          "type": "string"
+-        },
+-        "title": {
+-          "type": "string"
+-        },
+-        "columns": {
+-          "type": "integer"
+-        },
+-        "fields": {
+-          "type": "array",
+-          "items": {
+-            "$ref": "#/$defs/formField"
+-          }
+-        }
+-      },
+-      "additionalProperties": false
+-    },
+-    "formField": {
+-      "type": "object",
+-      "required": [
+-        "field"
+-      ],
+-      "properties": {
+-        "id": {
+-          "type": "string"
+-        },
+-        "field": {
+-          "type": "string"
+-        },
+-        "label": {
+-          "type": "string"
+-        },
+-        "colSpan": {
+-          "type": "integer"
+-        },
+-        "readonly": {
+-          "type": "boolean"
+-        },
+-        "auditDiff": {
+-          "$ref": "#/$defs/auditDiffMapping"
+-        },
+-        "renderAs": {
+-          "type": "string",
+-          "enum": [
+-            "label",
+-            "readonly",
+-            "audit-diff"
+-          ]
+-        },
+-        "display": {
+-          "type": "string",
+-          "enum": [
+-            "label",
+-            "readonly"
+-          ]
+-        },
+-        "mode": {
+-          "type": "string",
+-          "enum": [
+-            "label",
+-            "readonly"
+-          ]
+-        }
+-      },
+-      "additionalProperties": false
+-    },
+-    "formOtherActions": {
+-      "type": "object",
+-      "properties": {
+-        "enabled": {
+-          "type": "boolean",
+-          "default": true
+-        },
+-        "label": {
+-          "type": "string"
+-        },
+-        "icon": {
+-          "type": "string"
+-        },
+-        "actions": {
+-          "type": "array",
+-          "items": {
+-            "$ref": "#/$defs/formButton"
+-          }
+-        }
+-      },
+-      "additionalProperties": false
+-    },
+-    "formStep": {
+-      "type": "object",
+-      "required": [
+-        "id",
+-        "title"
+-      ],
+-      "properties": {
+-        "id": {
+-          "type": "string"
+-        },
+-        "title": {
+-          "type": "string"
+-        },
+-        "label": {
+-          "type": "string"
+-        },
+-        "description": {
+-          "type": "string"
+-        },
+-        "visible": {
+-          "type": "boolean",
+-          "default": true
+-        },
+-        "readonly": {
+-          "type": "boolean"
+-        },
+-        "editable": {
+-          "type": "boolean"
+-        },
+-        "permission": {
+-          "type": "string"
+-        },
+-        "editableGroups": {
+-          "type": "array",
+-          "items": {
+-            "type": "string"
+-          }
+-        },
+-        "readonlyGroups": {
+-          "type": "array",
+-          "items": {
+-            "type": "string"
+-          }
+-        },
+-        "requiredFields": {
+-          "type": "array",
+-          "items": {
+-            "oneOf": [
+-              {
+-                "type": "string"
+-              },
+-              {
+-                "type": "object",
+-                "required": [
+-                  "field"
+-                ],
+-                "properties": {
+-                  "field": {
+-                    "type": "string"
+-                  }
+-                },
+-                "additionalProperties": false
+-              }
+-            ]
+-          }
+-        },
+-        "required": {
+-          "type": "array",
+-          "items": {
+-            "type": "string"
+-          }
+-        },
+-        "columns": {
+-          "type": "integer"
+-        },
+-        "fields": {
+-          "type": "array",
+-          "items": {
+-            "oneOf": [
+-              {
+-                "type": "string"
+-              },
+-              {
+-                "$ref": "#/$defs/formField"
+-              }
+-            ]
+-          }
+-        },
+-        "sections": {
+-          "type": "array",
+-          "items": {
+-            "$ref": "#/$defs/formSection"
+-          }
+-        },
+-        "logs": {
+-          "$ref": "#/$defs/formStepLog"
+-        },
+-        "log": {
+-          "$ref": "#/$defs/formStepLog"
+-        },
+-        "history": {
+-          "$ref": "#/$defs/formStepLog"
+-        }
+-      },
+-      "additionalProperties": false
+-    },
+-    "formStepLog": {
+-      "type": "object",
+-      "properties": {
+-        "enabled": {
+-          "type": "boolean",
+-          "default": true
+-        },
+-        "label": {
+-          "type": "string"
+-        },
+-        "title": {
+-          "type": "string"
+-        },
+-        "icon": {
+-          "type": "string"
+-        },
+-        "endpointId": {
+-          "type": "string"
+-        },
+-        "actionId": {
+-          "type": "string"
+-        },
+-        "endpoint": {
+-          "$ref": "#/$defs/endpoint"
+-        },
+-        "api": {
+-          "$ref": "#/$defs/endpoint"
+-        },
+-        "url": {
+-          "type": "string"
+-        },
+-        "method": {
+-          "type": "string",
+-          "enum": [
+-            "GET",
+-            "POST",
+-            "PUT",
+-            "PATCH",
+-            "DELETE"
+-          ]
+-        },
+-        "requiresRecord": {
+-          "type": "boolean",
+-          "default": true
+-        },
+-        "width": {
+-          "type": "integer"
+-        }
+-      },
+-      "additionalProperties": false
+-    },
+-    "formButton": {
+-      "type": "object",
+-      "properties": {
+-        "id": {
+-          "type": "string"
+-        },
+-        "label": {
+-          "type": "string"
+-        },
+-        "title": {
+-          "type": "string"
+-        },
+-        "action": {
+-          "type": "string"
+-        },
+-        "icon": {
+-          "type": "string"
+-        },
+-        "placement": {
+-          "type": "string",
+-          "enum": [
+-            "header",
+-            "footer"
+-          ]
+-        },
+-        "permission": {
+-          "type": "string"
+-        },
+-        "visible": {
+-          "type": "boolean"
+-        },
+-        "disabled": {
+-          "type": "boolean"
+-        },
+-        "visibleIn": {
+-          "type": "array",
+-          "items": {
+-            "type": "string",
+-            "enum": [
+-              "create",
+-              "edit",
+-              "view",
+-              "delete"
+-            ]
+-          }
+-        },
+-        "requiresRecord": {
+-          "type": "boolean",
+-          "default": true
+-        },
+-        "endpointId": {
+-          "type": "string"
+-        },
+-        "actionId": {
+-          "type": "string"
+-        },
+-        "endpoint": {
+-          "$ref": "#/$defs/endpoint"
+-        },
+-        "api": {
+-          "$ref": "#/$defs/endpoint"
+-        },
+-        "url": {
+-          "type": "string"
+-        },
+-        "method": {
+-          "type": "string",
+-          "enum": [
+-            "GET",
+-            "POST",
+-            "PUT",
+-            "PATCH",
+-            "DELETE"
+-          ]
+-        },
+-        "pageMethod": {
+-          "type": "string",
+-          "enum": [
+-            "GET",
+-            "POST"
+-          ]
+-        },
+-        "submitMethod": {
+-          "type": "string",
+-          "enum": [
+-            "GET",
+-            "POST"
+-          ]
+-        },
+-        "target": {
+-          "type": "string",
+-          "enum": [
+-            "request",
+-            "window",
+-            "newTab"
+-          ]
+-        },
+-        "openAs": {
+-          "type": "string",
+-          "enum": [
+-            "request",
+-            "window",
+-            "newTab"
+-          ]
+-        },
+-        "endpoints": {
+-          "type": "object",
+-          "additionalProperties": {
+-            "$ref": "#/$defs/formButtonEndpoint"
+-          }
+-        },
+-        "endpointByMode": {
+-          "type": "object",
+-          "additionalProperties": {
+-            "$ref": "#/$defs/formButtonEndpoint"
+-          }
+-        },
+-        "data": {
+-          "type": "object"
+-        },
+-        "passFormValues": {
+-          "type": "boolean"
+-        },
+-        "sendFormValues": {
+-          "type": "boolean"
+-        },
+-        "includeFormValues": {
+-          "type": "boolean"
+-        },
+-        "formValues": {
+-          "$ref": "#/$defs/formButtonValues"
+-        },
+-        "valuesPayload": {
+-          "$ref": "#/$defs/formButtonValues"
+-        },
+-        "confirm": {
+-          "type": "object"
+-        },
+-        "successMessage": {
+-          "type": "string"
+-        },
+-        "errorMessage": {
+-          "type": "string"
+-        },
+-        "refreshGrid": {
+-          "type": "boolean",
+-          "default": false
+-        },
+-        "linkText": {
+-          "type": "string"
+-        },
+-        "width": {
+-          "type": "integer"
+-        }
+-      },
+-      "additionalProperties": false
+-    },
+-    "formButtonValues": {
+-      "oneOf": [
+-        {
+-          "type": "boolean"
+-        },
+-        {
+-          "type": "array",
+-          "items": {
+-            "type": "string"
+-          }
+-        },
+-        {
+-          "type": "object",
+-          "properties": {
+-            "enabled": {
+-              "type": "boolean",
+-              "default": true
+-            },
+-            "source": {
+-              "type": "string",
+-              "enum": [
+-                "record",
+-                "values",
+-                "data"
+-              ],
+-              "default": "record"
+-            },
+-            "transport": {
+-              "type": "string",
+-              "enum": [
+-                "auto",
+-                "query",
+-                "post",
+-                "form",
+-                "body",
+-                "querystring",
+-                "get"
+-              ]
+-            },
+-            "mode": {
+-              "type": "string",
+-              "enum": [
+-                "auto",
+-                "query",
+-                "post",
+-                "form",
+-                "body",
+-                "querystring",
+-                "get"
+-              ]
+-            },
+-            "submitAs": {
+-              "type": "string",
+-              "enum": [
+-                "auto",
+-                "query",
+-                "post",
+-                "form",
+-                "body",
+-                "querystring",
+-                "get"
+-              ]
+-            },
+-            "fields": {
+-              "type": "array",
+-              "items": {
+-                "type": "string"
+-              }
+-            },
+-            "include": {
+-              "type": "array",
+-              "items": {
+-                "type": "string"
+-              }
+-            },
+-            "exclude": {
+-              "type": "array",
+-              "items": {
+-                "type": "string"
+-              }
+-            },
+-            "excludes": {
+-              "type": "array",
+-              "items": {
+-                "type": "string"
+-              }
+-            },
+-            "prefix": {
+-              "type": "string"
+-            },
+-            "payloadParam": {
+-              "type": "string"
+-            },
+-            "includeRuntime": {
+-              "type": "boolean",
+-              "default": false
+-            }
+-          },
+-          "additionalProperties": false
+-        }
+-      ]
+-    },
+-    "formButtonEndpoint": {
+-      "oneOf": [
+-        {
+-          "type": "string"
+-        },
+-        {
+-          "type": "object",
+-          "properties": {
+-            "endpointId": {
+-              "type": "string"
+-            },
+-            "actionId": {
+-              "type": "string"
+-            },
+-            "url": {
+-              "type": "string"
+-            },
+-            "method": {
+-              "type": "string",
+-              "enum": [
+-                "GET",
+-                "POST",
+-                "PUT",
+-                "PATCH",
+-                "DELETE"
+-              ]
+-            }
+-          },
+-          "additionalProperties": false
+-        }
+-      ]
+-    },
+-    "formEvent": {
+-      "type": "object",
+-      "properties": {
+-        "id": {
+-          "type": "string"
+-        },
+-        "source": {
+-          "type": "string"
+-        },
+-        "field": {
+-          "type": "string"
+-        },
+-        "event": {
+-          "type": "string",
+-          "enum": [
+-            "change",
+-            "blur",
+-            "focus",
+-            "enter",
+-            "open",
+-            "afterLoad"
+-          ]
+-        },
+-        "endpointId": {
+-          "type": "string"
+-        },
+-        "actionId": {
+-          "type": "string"
+-        },
+-        "endpoint": {
+-          "$ref": "#/$defs/endpoint"
+-        },
+-        "api": {
+-          "$ref": "#/$defs/endpoint"
+-        },
+-        "url": {
+-          "type": "string"
+-        },
+-        "method": {
+-          "type": "string",
+-          "enum": [
+-            "GET",
+-            "POST",
+-            "PUT",
+-            "PATCH",
+-            "DELETE"
+-          ]
+-        },
+-        "request": {
+-          "type": "object"
+-        },
+-        "data": {
+-          "type": "object"
+-        },
+-        "when": {
+-          "$ref": "#/$defs/formCondition"
+-        },
+-        "effects": {
+-          "type": "array",
+-          "items": {
+-            "$ref": "#/$defs/formEffect"
+-          }
+-        },
+-        "response": {
+-          "type": "object",
+-          "properties": {
+-            "effects": {
+-              "type": "array",
+-              "items": {
+-                "$ref": "#/$defs/formEffect"
+-              }
+-            }
+-          },
+-          "additionalProperties": false
+-        },
+-        "errorMessage": {
+-          "type": "string"
+-        }
+-      },
+-      "additionalProperties": false
+-    },
+-    "formEffect": {
+-      "type": "object",
+-      "required": [
+-        "action"
+-      ],
+-      "properties": {
+-        "target": {
+-          "type": "string"
+-        },
+-        "field": {
+-          "type": "string"
+-        },
+-        "action": {
+-          "type": "string",
+-          "enum": [
+-            "setValue",
+-            "clearValue",
+-            "readonly",
+-            "enabled",
+-            "disabled",
+-            "visible",
+-            "show",
+-            "hide",
+-            "required",
+-            "setOptions",
+-            "reloadOptions",
+-            "showMessage"
+-          ]
+-        },
+-        "value": {},
+-        "options": {
+-          "type": "array"
+-        },
+-        "optionsFrom": {
+-          "type": "string"
+-        },
+-        "valueFrom": {
+-          "type": "string"
+-        },
+-        "selectedValue": {},
+-        "selectedValueFrom": {
+-          "type": "string"
+-        },
+-        "clearInvalidValue": {
+-          "type": "boolean",
+-          "default": true
+-        },
+-        "disableWhenEmpty": {
+-          "type": "boolean",
+-          "default": false
+-        },
+-        "valueWhen": {
+-          "$ref": "#/$defs/formCondition"
+-        },
+-        "fieldValue": {
+-          "type": "string"
+-        },
+-        "responseField": {
+-          "type": "string"
+-        },
+-        "message": {
+-          "type": "string"
+-        },
+-        "type": {
+-          "type": "string",
+-          "enum": [
+-            "success",
+-            "error",
+-            "info",
+-            "warning"
+-          ]
+-        },
+-        "when": {
+-          "$ref": "#/$defs/formCondition"
+-        }
+-      },
+-      "additionalProperties": false
+-    },
+-    "formCondition": {
+-      "type": "object",
+-      "properties": {
+-        "field": {
+-          "type": "string"
+-        },
+-        "responseField": {
+-          "type": "string"
+-        },
+-        "path": {
+-          "type": "string"
+-        },
+-        "operator": {
+-          "type": "string",
+-          "enum": [
+-            "eq",
+-            "neq",
+-            "in",
+-            "notIn",
+-            "contains",
+-            "isEmpty",
+-            "isNotEmpty",
+-            "isNull",
+-            "isNotNull",
+-            "truthy",
+-            "falsy"
+-          ]
+-        },
+-        "value": {},
+-        "all": {
+-          "type": "array",
+-          "items": {
+-            "$ref": "#/$defs/formCondition"
+-          }
+-        },
+-        "any": {
+-          "type": "array",
+-          "items": {
+-            "$ref": "#/$defs/formCondition"
+-          }
+-        },
+-        "not": {
+-          "$ref": "#/$defs/formCondition"
+-        }
+-      },
+-      "additionalProperties": false
+-    },
+-    "contextField": {
+-      "type": "object",
+-      "required": [
+-        "field"
+-      ],
+-      "properties": {
+-        "field": {
+-          "type": "string"
+-        },
+-        "filter": {
+-          "type": "boolean"
+-        },
+-        "createDefault": {
+-          "type": "boolean"
+-        },
+-        "readonly": {
+-          "type": "boolean"
+-        },
+-        "required": {
+-          "type": "boolean"
+-        }
+-      },
+-      "additionalProperties": false
+-    },
+-    "fieldCondition": {
+-      "type": "object",
+-      "required": [
+-        "field",
+-        "value"
+-      ],
+-      "properties": {
+-        "field": {
+-          "type": "string"
+-        },
+-        "operator": {
+-          "const": "eq"
+-        },
+-        "value": {
+-          "type": [
+-            "string",
+-            "number",
+-            "boolean"
+-          ]
+-        }
+-      },
+-      "additionalProperties": false
+-    },
+-    "rowLink": {
+-      "type": "object",
+-      "required": [
+-        "id",
+-        "label",
+-        "screenId",
+-        "parameters"
+-      ],
+-      "properties": {
+-        "id": {
+-          "type": "string"
+-        },
+-        "label": {
+-          "type": "string"
+-        },
+-        "screenId": {
+-          "type": "string",
+-          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
+-        },
+-        "position": {
+-          "type": "string",
+-          "enum": [
+-            "start",
+-            "end"
+-          ],
+-          "default": "end"
+-        },
+-        "parameters": {
+-          "type": "array",
+-          "maxItems": 10,
+-          "items": {
+-            "type": "object",
+-            "required": [
+-              "field",
+-              "sourceField"
+-            ],
+-            "properties": {
+-              "field": {
+-                "type": "string"
+-              },
+-              "sourceField": {
+-                "type": "string"
+-              }
+-            },
+-            "additionalProperties": false
+-          }
+-        },
+-        "icon": {
+-          "type": "string",
+-          "pattern": "^[a-z][a-z0-9-]{0,79}$"
+-        },
+-        "iconOnly": {
+-          "type": "boolean",
+-          "default": false
+-        }
+-      },
+-      "additionalProperties": false,
+-      "allOf": [
+-        {
+-          "if": {
+-            "properties": {
+-              "iconOnly": {
+-                "const": true
+-              }
+-            },
+-            "required": [
+-              "iconOnly"
+-            ]
+-          },
+-          "then": {
+-            "required": [
+-              "icon"
+-            ]
+-          }
+-        }
+-      ]
+-    },
+-    "apiCompanyDescriptor": {
+-      "type": "object",
+-      "additionalProperties": false,
+-      "required": [
+-        "version",
+-        "moduleId",
+-        "screenId",
+-        "endpointModes"
+-      ],
+-      "properties": {
+-        "version": {
+-          "const": 1
+-        },
+-        "moduleId": {
+-          "type": "string",
+-          "pattern": "^[a-z0-9_-]{1,64}$"
+-        },
+-        "screenId": {
+-          "type": "string",
+-          "minLength": 1,
+-          "maxLength": 160
+-        },
+-        "endpointModes": {
+-          "type": "object",
+-          "minProperties": 1,
+-          "additionalProperties": {
+-            "type": "object",
+-            "additionalProperties": false,
+-            "required": [
+-              "mode",
+-              "operation"
+-            ],
+-            "properties": {
+-              "mode": {
+-                "enum": [
+-                  "shared",
+-                  "company",
+-                  "record"
+-                ]
+-              },
+-              "operation": {
+-                "type": "string",
+-                "minLength": 1,
+-                "maxLength": 64
+-              }
+-            }
+-          }
+-        }
+-      }
+-    }
+-  }
+-}
++        },
++        "id": {
++          "type": "string"
++        },
++        "freezeColumns": {
++          "type": "object",
++          "properties": {
++            "enabled": {
++              "type": "boolean",
++              "default": false
++            },
++            "fields": {
++              "type": "array",
++              "items": {
++                "type": "string"
++              },
++              "description": "Campos que podem ser congelados. Vazio permite todas as colunas visiveis.",
++              "default": []
++            }
++          },
++          "additionalProperties": false
++        },
++        "mobile": {
++          "$ref": "#/$defs/mobileGrid"
++        },
++        "ai": {
++          "$ref": "#/$defs/gridAi"
++        },
++        "print": {
++          "$ref": "#/$defs/printConfig"
++        },
++        "groupable": {
++          "type": "boolean"
++        },
++        "columns": {
++          "type": "array",
++          "items": {
++            "$ref": "#/$defs/gridColumn"
++          }
++        },
++        "toolbar": {
++          "type": "array"
++        },
++        "bulkActions": {
++          "type": "object",
++          "properties": {
++            "enabled": {
++              "type": "boolean",
++              "default": false
++            },
++            "label": {
++              "type": "string"
++            },
++            "icon": {
++              "type": "string"
++            },
++            "selectable": {
++              "type": "string"
++            },
++            "actions": {
++              "type": "array",
++              "items": {
++                "type": "object",
++                "required": [
++                  "id",
++                  "label",
++                  "action"
++                ],
++                "properties": {
++                  "id": {
++                    "type": "string"
++                  },
++                  "label": {
++                    "type": "string"
++                  },
++                  "icon": {
++                    "type": "string"
++                  },
++                  "action": {
++                    "type": "string"
++                  },
++                  "endpointId": {
++                    "type": "string"
++                  },
++                  "actionId": {
++                    "type": "string"
++                  },
++                  "endpoint": {
++                    "$ref": "#/$defs/endpoint"
++                  },
++                  "permission": {
++                    "type": "string"
++                  },
++                  "value": {},
++                  "data": {
++                    "type": "object"
++                  },
++                  "confirm": {
++                    "type": "object"
++                  },
++                  "successMessage": {
++                    "type": "string"
++                  }
++                }
++              }
++            }
++          }
++        },
++        "rowActions": {
++          "type": "array"
++        },
++        "rowLinks": {
++          "type": "array",
++          "maxItems": 10,
++          "items": {
++            "$ref": "#/$defs/rowLink"
++          }
++        }
++      }
++    },
++    "gridAi": {
++      "type": "object",
++      "properties": {
++        "enabled": {
++          "type": "boolean",
++          "default": false
++        },
++        "provider": {
++          "type": "string",
++          "enum": [
++            "mock",
++            "service"
++          ],
++          "default": "mock"
++        },
++        "tool": {
++          "type": "string",
++          "enum": [
++            "smartbox"
++          ],
++          "default": "smartbox"
++        },
++        "activeMode": {
++          "type": "string",
++          "enum": [
++            "Search",
++            "AIAssistant"
++          ]
++        },
++        "placeholder": {
++          "type": "string"
++        },
++        "searchPlaceholder": {
++          "type": "string"
++        },
++        "searchEnabled": {
++          "type": "boolean",
++          "default": true
++        },
++        "searchFields": {
++          "type": "array",
++          "items": {
++            "type": "string"
++          }
++        },
++        "promptSuggestions": {
++          "type": "array",
++          "items": {
++            "type": "string"
++          }
++        },
++        "serviceUrl": {
++          "type": "string"
++        },
++        "service": {
++          "type": "object",
++          "properties": {
++            "url": {
++              "type": "string"
++            }
++          },
++          "additionalProperties": false
++        }
++      },
++      "additionalProperties": false
++    },
++    "gridColumn": {
++      "type": "object",
++      "required": [
++        "field",
++        "title"
++      ],
++      "properties": {
++        "field": {
++          "type": "string"
++        },
++        "title": {
++          "type": "string"
++        },
++        "width": {
++          "type": [
++            "integer",
++            "string"
++          ]
++        },
++        "visible": {
++          "type": "boolean"
++        },
++        "filterable": {
++          "type": "boolean"
++        },
++        "sortable": {
++          "type": "boolean"
++        },
++        "groupable": {
++          "type": "boolean"
++        },
++        "format": {
++          "type": "string"
++        },
++        "align": {
++          "type": "string",
++          "enum": [
++            "left",
++            "center",
++            "right"
++          ]
++        }
++      }
++    },
++    "mobileGrid": {
++      "type": "object",
++      "properties": {
++        "enabled": {
++          "type": "boolean",
++          "default": true
++        },
++        "breakpoint": {
++          "type": "integer",
++          "default": 720
++        },
++        "mode": {
++          "type": "string",
++          "enum": [
++            "columns",
++            "template"
++          ]
++        },
++        "columns": {
++          "type": "array",
++          "items": {
++            "type": "string"
++          }
++        },
++        "title": {
++          "type": "string"
++        },
++        "cardActions": {
++          "type": "boolean",
++          "default": true
++        },
++        "template": {
++          "$ref": "#/$defs/mobileGridTemplate"
++        }
++      },
++      "additionalProperties": false
++    },
++    "mobileGridTemplate": {
++      "type": "object",
++      "properties": {
++        "titleField": {
++          "type": "string"
++        },
++        "subtitleField": {
++          "type": "string"
++        },
++        "badges": {
++          "type": "array",
++          "items": {
++            "type": "string"
++          }
++        },
++        "fields": {
++          "type": "array",
++          "items": {
++            "type": "string"
++          }
++        },
++        "tabs": {
++          "type": "object",
++          "properties": {
++            "enabled": {
++              "type": "boolean",
++              "default": false
++            },
++            "items": {
++              "type": "array",
++              "items": {
++                "type": "object",
++                "required": [
++                  "id",
++                  "title",
++                  "fields"
++                ],
++                "properties": {
++                  "id": {
++                    "type": "string"
++                  },
++                  "title": {
++                    "type": "string"
++                  },
++                  "fields": {
++                    "type": "array",
++                    "items": {
++                      "type": "string"
++                    }
++                  }
++                },
++                "additionalProperties": false
++              }
++            }
++          },
++          "additionalProperties": false
++        }
++      },
++      "additionalProperties": false
++    },
++    "form": {
++      "type": "object",
++      "required": [
++        "id",
++        "mode",
++        "layout"
++      ],
++      "properties": {
++        "id": {
++          "type": "string"
++        },
++        "mode": {
++          "type": "string",
++          "enum": [
++            "popup",
++            "embedded"
++          ]
++        },
++        "returnScreenId": {
++          "type": "string",
++          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
++        },
++        "openOnLoadField": {
++          "type": "string",
++          "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
++        },
++        "layout": {
++          "type": "string",
++          "enum": [
++            "tabs",
++            "sections",
++            "single",
++            "steps"
++          ]
++        },
++        "width": {
++          "type": "integer"
++        },
++        "maximizeForm": {
++          "type": "boolean",
++          "default": false
++        },
++        "maximizeOnOpen": {
++          "type": "boolean",
++          "default": false,
++          "description": "Alias de maximizeForm."
++        },
++        "behavior": {
++          "type": "object",
++          "properties": {
++            "closeOnSave": {
++              "type": "boolean",
++              "default": true
++            },
++            "closeOnCancel": {
++              "type": "boolean",
++              "default": false
++            }
++          },
++          "additionalProperties": false
++        },
++        "navigation": {
++          "type": "object",
++          "properties": {
++            "enabled": {
++              "type": "boolean",
++              "default": true
++            }
++          },
++          "additionalProperties": false
++        },
++        "mobile": {
++          "type": "object",
++          "properties": {
++            "breakpoint": {
++              "type": "integer",
++              "default": 720
++            },
++            "showHeaderActions": {
++              "type": "boolean",
++              "default": false
++            }
++          },
++          "additionalProperties": false
++        },
++        "concurrencyWarning": {
++          "$ref": "#/$defs/formConcurrencyWarning"
++        },
++        "concurrentWarning": {
++          "$ref": "#/$defs/formConcurrencyWarning",
++          "description": "Alias de concurrencyWarning."
++        },
++        "logs": {
++          "$ref": "#/$defs/logs"
++        },
++        "print": {
++          "$ref": "#/$defs/printConfig"
++        },
++        "otherActions": {
++          "oneOf": [
++            {
++              "$ref": "#/$defs/formOtherActions"
++            },
++            {
++              "type": "array",
++              "items": {
++                "$ref": "#/$defs/formButton"
++              }
++            }
++          ]
++        },
++        "situation": {
++          "$ref": "#/$defs/formSituation"
++        },
++        "statusFlow": {
++          "$ref": "#/$defs/formSituation"
++        },
++        "title": {
++          "type": "object"
++        },
++        "tabs": {
++          "type": "array",
++          "items": {
++            "$ref": "#/$defs/formTab"
++          }
++        },
++        "sections": {
++          "type": "array",
++          "items": {
++            "$ref": "#/$defs/formSection"
++          }
++        },
++        "steps": {
++          "type": "array",
++          "items": {
++            "$ref": "#/$defs/formStep"
++          }
++        },
++        "buttons": {
++          "type": "array",
++          "items": {
++            "$ref": "#/$defs/formButton"
++          }
++        },
++        "events": {
++          "type": "array",
++          "items": {
++            "$ref": "#/$defs/formEvent"
++          }
++        }
++      }
++    },
++    "formConcurrencyWarning": {
++      "oneOf": [
++        {
++          "type": "string"
++        },
++        {
++          "type": "object",
++          "properties": {
++            "enabled": {
++              "type": "boolean",
++              "default": true
++            },
++            "actions": {
++              "oneOf": [
++                {
++                  "type": "string"
++                },
++                {
++                  "type": "array",
++                  "items": {
++                    "type": "string",
++                    "enum": [
++                      "edit",
++                      "delete"
++                    ]
++                  }
++                }
++              ]
++            },
++            "visibleIn": {
++              "oneOf": [
++                {
++                  "type": "string"
++                },
++                {
++                  "type": "array",
++                  "items": {
++                    "type": "string",
++                    "enum": [
++                      "edit",
++                      "delete"
++                    ]
++                  }
++                }
++              ]
++            },
++            "modes": {
++              "oneOf": [
++                {
++                  "type": "string"
++                },
++                {
++                  "type": "array",
++                  "items": {
++                    "type": "string",
++                    "enum": [
++                      "edit",
++                      "delete"
++                    ]
++                  }
++                }
++              ]
++            },
++            "title": {
++              "type": "string"
++            },
++            "message": {
++              "type": "string"
++            },
++            "editMessage": {
++              "type": "string"
++            },
++            "deleteMessage": {
++              "type": "string"
++            },
++            "confirm": {
++              "type": "boolean",
++              "default": true
++            },
++            "blocking": {
++              "type": "boolean",
++              "default": true
++            },
++            "confirmText": {
++              "type": "string"
++            },
++            "cancelText": {
++              "type": "string"
++            },
++            "confirmIcon": {
++              "type": "string"
++            },
++            "themeColor": {
++              "type": "string"
++            },
++            "type": {
++              "type": "string",
++              "enum": [
++                "success",
++                "error",
++                "info",
++                "warning"
++              ]
++            },
++            "width": {
++              "type": "integer"
++            },
++            "messages": {
++              "type": "object",
++              "properties": {
++                "edit": {
++                  "type": "string"
++                },
++                "delete": {
++                  "type": "string"
++                }
++              },
++              "additionalProperties": false
++            },
++            "edit": {
++              "oneOf": [
++                {
++                  "type": "string"
++                },
++                {
++                  "$ref": "#/$defs/formConcurrencyWarningAction"
++                }
++              ]
++            },
++            "delete": {
++              "oneOf": [
++                {
++                  "type": "string"
++                },
++                {
++                  "$ref": "#/$defs/formConcurrencyWarningAction"
++                }
++              ]
++            }
++          },
++          "additionalProperties": false
++        }
++      ]
++    },
++    "formConcurrencyWarningAction": {
++      "type": "object",
++      "properties": {
++        "enabled": {
++          "type": "boolean",
++          "default": true
++        },
++        "message": {
++          "type": "string"
++        },
++        "title": {
++          "type": "string"
++        },
++        "confirm": {
++          "type": "boolean"
++        },
++        "blocking": {
++          "type": "boolean"
++        },
++        "confirmText": {
++          "type": "string"
++        },
++        "cancelText": {
++          "type": "string"
++        },
++        "confirmIcon": {
++          "type": "string"
++        },
++        "themeColor": {
++          "type": "string"
++        },
++        "type": {
++          "type": "string",
++          "enum": [
++            "success",
++            "error",
++            "info",
++            "warning"
++          ]
++        },
++        "width": {
++          "type": "integer"
++        }
++      },
++      "additionalProperties": false
++    },
++    "formSituation": {
++      "type": "object",
++      "required": [
++        "field"
++      ],
++      "properties": {
++        "enabled": {
++          "type": "boolean",
++          "default": true
++        },
++        "field": {
++          "type": "string"
++        },
++        "label": {
++          "type": "string"
++        },
++        "display": {
++          "type": "string",
++          "enum": [
++            "stepper",
++            "arrowstep",
++            "badge"
++          ],
++          "default": "stepper"
++        },
++        "mode": {
++          "type": "string",
++          "enum": [
++            "stepper",
++            "arrowstep",
++            "badge"
++          ]
++        },
++        "orientation": {
++          "type": "string",
++          "enum": [
++            "horizontal",
++            "vertical"
++          ],
++          "default": "horizontal"
++        },
++        "steps": {
++          "type": "array",
++          "items": {
++            "type": "object",
++            "required": [
++              "value",
++              "text"
++            ],
++            "properties": {
++              "value": {},
++              "text": {
++                "type": "string"
++              },
++              "description": {
++                "type": "string"
++              }
++            },
++            "additionalProperties": false
++          }
++        },
++        "historyTitle": {
++          "type": "string"
++        },
++        "historyWidth": {
++          "type": "integer"
++        },
++        "historyEndpointId": {
++          "type": "string"
++        },
++        "endpointId": {
++          "type": "string"
++        },
++        "actionId": {
++          "type": "string"
++        },
++        "historyEndpoint": {
++          "$ref": "#/$defs/endpoint"
++        },
++        "endpoint": {
++          "$ref": "#/$defs/endpoint"
++        },
++        "api": {
++          "$ref": "#/$defs/endpoint"
++        },
++        "url": {
++          "type": "string"
++        },
++        "method": {
++          "type": "string",
++          "enum": [
++            "GET",
++            "POST",
++            "PUT",
++            "PATCH",
++            "DELETE"
++          ]
++        }
++      },
++      "additionalProperties": false
++    },
++    "formTab": {
++      "type": "object",
++      "required": [
++        "id",
++        "title"
++      ],
++      "properties": {
++        "id": {
++          "type": "string"
++        },
++        "title": {
++          "type": "string"
++        },
++        "type": {
++          "type": "string",
++          "enum": [
++            "fields",
++            "linkedPage",
++            "linked_page"
++          ]
++        },
++        "kind": {
++          "type": "string",
++          "enum": [
++            "fields",
++            "linkedPage",
++            "linked_page"
++          ]
++        },
++        "screenId": {
++          "type": "string"
++        },
++        "definition": {
++          "type": "object"
++        },
++        "linkedPage": {
++          "$ref": "#/$defs/linkedPageTabConfig"
++        },
++        "columns": {
++          "type": "integer"
++        },
++        "fields": {
++          "type": "array",
++          "items": {
++            "oneOf": [
++              {
++                "type": "string"
++              },
++              {
++                "$ref": "#/$defs/formField"
++              }
++            ]
++          }
++        },
++        "sections": {
++          "type": "array",
++          "items": {
++            "$ref": "#/$defs/formSection"
++          }
++        }
++      },
++      "additionalProperties": false
++    },
++    "linkedPageTabConfig": {
++      "type": "object",
++      "properties": {
++        "engine": {
++          "type": "string",
++          "enum": [
++            "crud",
++            "process"
++          ]
++        },
++        "screenId": {
++          "type": "string"
++        },
++        "definition": {
++          "type": "object"
++        },
++        "title": {
++          "type": "string"
++        },
++        "description": {
++          "type": "string"
++        },
++        "height": {
++          "type": [
++            "integer",
++            "string"
++          ]
++        },
++        "hideHeader": {
++          "type": "boolean",
++          "default": true
++        },
++        "requireRecord": {
++          "type": "boolean",
++          "default": true
++        },
++        "runtimeMessages": {
++          "type": "boolean",
++          "default": false
++        },
++        "emptyMessage": {
++          "type": "string"
++        },
++        "filters": {
++          "type": "array",
++          "items": {
++            "$ref": "#/$defs/linkedPageFilter"
++          }
++        },
++        "parentFilters": {
++          "type": "array",
++          "items": {
++            "$ref": "#/$defs/linkedPageFilter"
++          }
++        },
++        "params": {
++          "$ref": "#/$defs/linkedPageParams"
++        },
++        "query": {
++          "$ref": "#/$defs/linkedPageParams"
++        }
++      },
++      "additionalProperties": false
++    },
++    "linkedPageFilter": {
++      "type": "object",
++      "properties": {
++        "id": {
++          "type": "string"
++        },
++        "field": {
++          "type": "string"
++        },
++        "targetField": {
++          "type": "string"
++        },
++        "label": {
++          "type": "string"
++        },
++        "operator": {
++          "type": "string",
++          "enum": [
++            "eq",
++            "neq",
++            "startsWith",
++            "contains",
++            "notContains",
++            "isEmpty",
++            "isNotEmpty",
++            "isNull",
++            "isNotNull",
++            "between",
++            "in",
++            "notIn",
++            "gt",
++            "gte",
++            "lt",
++            "lte",
++            "relative"
++          ]
++        },
++        "value": {},
++        "displayValue": {},
++        "sourceField": {
++          "type": "string"
++        },
++        "fieldValue": {
++          "type": "string"
++        },
++        "fromField": {
++          "type": "string"
++        },
++        "sourcePath": {
++          "type": "string"
++        },
++        "path": {
++          "type": "string"
++        },
++        "valueFrom": {
++          "type": "string"
++        },
++        "type": {
++          "type": "string"
++        },
++        "dataType": {
++          "type": "string"
++        },
++        "includeEmpty": {
++          "type": "boolean",
++          "default": false
++        }
++      },
++      "additionalProperties": false
++    },
++    "linkedPageParams": {
++      "oneOf": [
++        {
++          "type": "array",
++          "items": {
++            "$ref": "#/$defs/linkedPageParam"
++          }
++        },
++        {
++          "type": "object",
++          "additionalProperties": {
++            "oneOf": [
++              {
++                "type": [
++                  "string",
++                  "number",
++                  "boolean"
++                ]
++              },
++              {
++                "$ref": "#/$defs/linkedPageSource"
++              }
++            ]
++          }
++        }
++      ]
++    },
++    "linkedPageParam": {
++      "type": "object",
++      "properties": {
++        "name": {
++          "type": "string"
++        },
++        "param": {
++          "type": "string"
++        },
++        "key": {
++          "type": "string"
++        },
++        "value": {},
++        "sourceField": {
++          "type": "string"
++        },
++        "fieldValue": {
++          "type": "string"
++        },
++        "fromField": {
++          "type": "string"
++        },
++        "sourcePath": {
++          "type": "string"
++        },
++        "path": {
++          "type": "string"
++        },
++        "valueFrom": {
++          "type": "string"
++        }
++      },
++      "additionalProperties": false
++    },
++    "linkedPageSource": {
++      "type": "object",
++      "properties": {
++        "value": {},
++        "sourceField": {
++          "type": "string"
++        },
++        "fieldValue": {
++          "type": "string"
++        },
++        "fromField": {
++          "type": "string"
++        },
++        "sourcePath": {
++          "type": "string"
++        },
++        "path": {
++          "type": "string"
++        },
++        "valueFrom": {
++          "type": "string"
++        }
++      },
++      "additionalProperties": false
++    },
++    "formSection": {
++      "type": "object",
++      "required": [
++        "id",
++        "title",
++        "fields"
++      ],
++      "properties": {
++        "id": {
++          "type": "string"
++        },
++        "title": {
++          "type": "string"
++        },
++        "columns": {
++          "type": "integer"
++        },
++        "fields": {
++          "type": "array",
++          "items": {
++            "$ref": "#/$defs/formField"
++          }
++        }
++      },
++      "additionalProperties": false
++    },
++    "formField": {
++      "type": "object",
++      "required": [
++        "field"
++      ],
++      "properties": {
++        "id": {
++          "type": "string"
++        },
++        "field": {
++          "type": "string"
++        },
++        "label": {
++          "type": "string"
++        },
++        "colSpan": {
++          "type": "integer"
++        },
++        "readonly": {
++          "type": "boolean"
++        },
++        "auditDiff": {
++          "$ref": "#/$defs/auditDiffMapping"
++        },
++        "renderAs": {
++          "type": "string",
++          "enum": [
++            "label",
++            "readonly",
++            "audit-diff"
++          ]
++        },
++        "display": {
++          "type": "string",
++          "enum": [
++            "label",
++            "readonly"
++          ]
++        },
++        "mode": {
++          "type": "string",
++          "enum": [
++            "label",
++            "readonly"
++          ]
++        }
++      },
++      "additionalProperties": false
++    },
++    "formOtherActions": {
++      "type": "object",
++      "properties": {
++        "enabled": {
++          "type": "boolean",
++          "default": true
++        },
++        "label": {
++          "type": "string"
++        },
++        "icon": {
++          "type": "string"
++        },
++        "actions": {
++          "type": "array",
++          "items": {
++            "$ref": "#/$defs/formButton"
++          }
++        }
++      },
++      "additionalProperties": false
++    },
++    "formStep": {
++      "type": "object",
++      "required": [
++        "id",
++        "title"
++      ],
++      "properties": {
++        "id": {
++          "type": "string"
++        },
++        "title": {
++          "type": "string"
++        },
++        "label": {
++          "type": "string"
++        },
++        "description": {
++          "type": "string"
++        },
++        "visible": {
++          "type": "boolean",
++          "default": true
++        },
++        "readonly": {
++          "type": "boolean"
++        },
++        "editable": {
++          "type": "boolean"
++        },
++        "permission": {
++          "type": "string"
++        },
++        "editableGroups": {
++          "type": "array",
++          "items": {
++            "type": "string"
++          }
++        },
++        "readonlyGroups": {
++          "type": "array",
++          "items": {
++            "type": "string"
++          }
++        },
++        "requiredFields": {
++          "type": "array",
++          "items": {
++            "oneOf": [
++              {
++                "type": "string"
++              },
++              {
++                "type": "object",
++                "required": [
++                  "field"
++                ],
++                "properties": {
++                  "field": {
++                    "type": "string"
++                  }
++                },
++                "additionalProperties": false
++              }
++            ]
++          }
++        },
++        "required": {
++          "type": "array",
++          "items": {
++            "type": "string"
++          }
++        },
++        "columns": {
++          "type": "integer"
++        },
++        "fields": {
++          "type": "array",
++          "items": {
++            "oneOf": [
++              {
++                "type": "string"
++              },
++              {
++                "$ref": "#/$defs/formField"
++              }
++            ]
++          }
++        },
++        "sections": {
++          "type": "array",
++          "items": {
++            "$ref": "#/$defs/formSection"
++          }
++        },
++        "logs": {
++          "$ref": "#/$defs/formStepLog"
++        },
++        "log": {
++          "$ref": "#/$defs/formStepLog"
++        },
++        "history": {
++          "$ref": "#/$defs/formStepLog"
++        }
++      },
++      "additionalProperties": false
++    },
++    "formStepLog": {
++      "type": "object",
++      "properties": {
++        "enabled": {
++          "type": "boolean",
++          "default": true
++        },
++        "label": {
++          "type": "string"
++        },
++        "title": {
++          "type": "string"
++        },
++        "icon": {
++          "type": "string"
++        },
++        "endpointId": {
++          "type": "string"
++        },
++        "actionId": {
++          "type": "string"
++        },
++        "endpoint": {
++          "$ref": "#/$defs/endpoint"
++        },
++        "api": {
++          "$ref": "#/$defs/endpoint"
++        },
++        "url": {
++          "type": "string"
++        },
++        "method": {
++          "type": "string",
++          "enum": [
++            "GET",
++            "POST",
++            "PUT",
++            "PATCH",
++            "DELETE"
++          ]
++        },
++        "requiresRecord": {
++          "type": "boolean",
++          "default": true
++        },
++        "width": {
++          "type": "integer"
++        }
++      },
++      "additionalProperties": false
++    },
++    "formButton": {
++      "type": "object",
++      "properties": {
++        "id": {
++          "type": "string"
++        },
++        "label": {
++          "type": "string"
++        },
++        "title": {
++          "type": "string"
++        },
++        "action": {
++          "type": "string"
++        },
++        "icon": {
++          "type": "string"
++        },
++        "placement": {
++          "type": "string",
++          "enum": [
++            "header",
++            "footer"
++          ]
++        },
++        "permission": {
++          "type": "string"
++        },
++        "visible": {
++          "type": "boolean"
++        },
++        "disabled": {
++          "type": "boolean"
++        },
++        "visibleIn": {
++          "type": "array",
++          "items": {
++            "type": "string",
++            "enum": [
++              "create",
++              "edit",
++              "view",
++              "delete"
++            ]
++          }
++        },
++        "requiresRecord": {
++          "type": "boolean",
++          "default": true
++        },
++        "endpointId": {
++          "type": "string"
++        },
++        "actionId": {
++          "type": "string"
++        },
++        "endpoint": {
++          "$ref": "#/$defs/endpoint"
++        },
++        "api": {
++          "$ref": "#/$defs/endpoint"
++        },
++        "url": {
++          "type": "string"
++        },
++        "method": {
++          "type": "string",
++          "enum": [
++            "GET",
++            "POST",
++            "PUT",
++            "PATCH",
++            "DELETE"
++          ]
++        },
++        "pageMethod": {
++          "type": "string",
++          "enum": [
++            "GET",
++            "POST"
++          ]
++        },
++        "submitMethod": {
++          "type": "string",
++          "enum": [
++            "GET",
++            "POST"
++          ]
++        },
++        "target": {
++          "type": "string",
++          "enum": [
++            "request",
++            "window",
++            "newTab"
++          ]
++        },
++        "openAs": {
++          "type": "string",
++          "enum": [
++            "request",
++            "window",
++            "newTab"
++          ]
++        },
++        "endpoints": {
++          "type": "object",
++          "additionalProperties": {
++            "$ref": "#/$defs/formButtonEndpoint"
++          }
++        },
++        "endpointByMode": {
++          "type": "object",
++          "additionalProperties": {
++            "$ref": "#/$defs/formButtonEndpoint"
++          }
++        },
++        "data": {
++          "type": "object"
++        },
++        "passFormValues": {
++          "type": "boolean"
++        },
++        "sendFormValues": {
++          "type": "boolean"
++        },
++        "includeFormValues": {
++          "type": "boolean"
++        },
++        "formValues": {
++          "$ref": "#/$defs/formButtonValues"
++        },
++        "valuesPayload": {
++          "$ref": "#/$defs/formButtonValues"
++        },
++        "confirm": {
++          "type": "object"
++        },
++        "successMessage": {
++          "type": "string"
++        },
++        "errorMessage": {
++          "type": "string"
++        },
++        "refreshGrid": {
++          "type": "boolean",
++          "default": false
++        },
++        "linkText": {
++          "type": "string"
++        },
++        "width": {
++          "type": "integer"
++        }
++      },
++      "additionalProperties": false
++    },
++    "formButtonValues": {
++      "oneOf": [
++        {
++          "type": "boolean"
++        },
++        {
++          "type": "array",
++          "items": {
++            "type": "string"
++          }
++        },
++        {
++          "type": "object",
++          "properties": {
++            "enabled": {
++              "type": "boolean",
++              "default": true
++            },
++            "source": {
++              "type": "string",
++              "enum": [
++                "record",
++                "values",
++                "data"
++              ],
++              "default": "record"
++            },
++            "transport": {
++              "type": "string",
++              "enum": [
++                "auto",
++                "query",
++                "post",
++                "form",
++                "body",
++                "querystring",
++                "get"
++              ]
++            },
++            "mode": {
++              "type": "string",
++              "enum": [
++                "auto",
++                "query",
++                "post",
++                "form",
++                "body",
++                "querystring",
++                "get"
++              ]
++            },
++            "submitAs": {
++              "type": "string",
++              "enum": [
++                "auto",
++                "query",
++                "post",
++                "form",
++                "body",
++                "querystring",
++                "get"
++              ]
++            },
++            "fields": {
++              "type": "array",
++              "items": {
++                "type": "string"
++              }
++            },
++            "include": {
++              "type": "array",
++              "items": {
++                "type": "string"
++              }
++            },
++            "exclude": {
++              "type": "array",
++              "items": {
++                "type": "string"
++              }
++            },
++            "excludes": {
++              "type": "array",
++              "items": {
++                "type": "string"
++              }
++            },
++            "prefix": {
++              "type": "string"
++            },
++            "payloadParam": {
++              "type": "string"
++            },
++            "includeRuntime": {
++              "type": "boolean",
++              "default": false
++            }
++          },
++          "additionalProperties": false
++        }
++      ]
++    },
++    "formButtonEndpoint": {
++      "oneOf": [
++        {
++          "type": "string"
++        },
++        {
++          "type": "object",
++          "properties": {
++            "endpointId": {
++              "type": "string"
++            },
++            "actionId": {
++              "type": "string"
++            },
++            "url": {
++              "type": "string"
++            },
++            "method": {
++              "type": "string",
++              "enum": [
++                "GET",
++                "POST",
++                "PUT",
++                "PATCH",
++                "DELETE"
++              ]
++            }
++          },
++          "additionalProperties": false
++        }
++      ]
++    },
++    "formEvent": {
++      "type": "object",
++      "properties": {
++        "id": {
++          "type": "string"
++        },
++        "source": {
++          "type": "string"
++        },
++        "field": {
++          "type": "string"
++        },
++        "event": {
++          "type": "string",
++          "enum": [
++            "change",
++            "blur",
++            "focus",
++            "enter",
++            "open",
++            "afterLoad"
++          ]
++        },
++        "endpointId": {
++          "type": "string"
++        },
++        "actionId": {
++          "type": "string"
++        },
++        "endpoint": {
++          "$ref": "#/$defs/endpoint"
++        },
++        "api": {
++          "$ref": "#/$defs/endpoint"
++        },
++        "url": {
++          "type": "string"
++        },
++        "method": {
++          "type": "string",
++          "enum": [
++            "GET",
++            "POST",
++            "PUT",
++            "PATCH",
++            "DELETE"
++          ]
++        },
++        "request": {
++          "type": "object"
++        },
++        "data": {
++          "type": "object"
++        },
++        "when": {
++          "$ref": "#/$defs/formCondition"
++        },
++        "effects": {
++          "type": "array",
++          "items": {
++            "$ref": "#/$defs/formEffect"
++          }
++        },
++        "response": {
++          "type": "object",
++          "properties": {
++            "effects": {
++              "type": "array",
++              "items": {
++                "$ref": "#/$defs/formEffect"
++              }
++            }
++          },
++          "additionalProperties": false
++        },
++        "errorMessage": {
++          "type": "string"
++        }
++      },
++      "additionalProperties": false
++    },
++    "formEffect": {
++      "type": "object",
++      "required": [
++        "action"
++      ],
++      "properties": {
++        "target": {
++          "type": "string"
++        },
++        "field": {
++          "type": "string"
++        },
++        "action": {
++          "type": "string",
++          "enum": [
++            "setValue",
++            "clearValue",
++            "readonly",
++            "enabled",
++            "disabled",
++            "visible",
++            "show",
++            "hide",
++            "required",
++            "setOptions",
++            "reloadOptions",
++            "showMessage"
++          ]
++        },
++        "value": {},
++        "options": {
++          "type": "array"
++        },
++        "optionsFrom": {
++          "type": "string"
++        },
++        "valueFrom": {
++          "type": "string"
++        },
++        "selectedValue": {},
++        "selectedValueFrom": {
++          "type": "string"
++        },
++        "clearInvalidValue": {
++          "type": "boolean",
++          "default": true
++        },
++        "disableWhenEmpty": {
++          "type": "boolean",
++          "default": false
++        },
++        "valueWhen": {
++          "$ref": "#/$defs/formCondition"
++        },
++        "fieldValue": {
++          "type": "string"
++        },
++        "responseField": {
++          "type": "string"
++        },
++        "message": {
++          "type": "string"
++        },
++        "type": {
++          "type": "string",
++          "enum": [
++            "success",
++            "error",
++            "info",
++            "warning"
++          ]
++        },
++        "when": {
++          "$ref": "#/$defs/formCondition"
++        }
++      },
++      "additionalProperties": false
++    },
++    "formCondition": {
++      "type": "object",
++      "properties": {
++        "field": {
++          "type": "string"
++        },
++        "responseField": {
++          "type": "string"
++        },
++        "path": {
++          "type": "string"
++        },
++        "operator": {
++          "type": "string",
++          "enum": [
++            "eq",
++            "neq",
++            "in",
++            "notIn",
++            "contains",
++            "isEmpty",
++            "isNotEmpty",
++            "isNull",
++            "isNotNull",
++            "truthy",
++            "falsy"
++          ]
++        },
++        "value": {},
++        "all": {
++          "type": "array",
++          "items": {
++            "$ref": "#/$defs/formCondition"
++          }
++        },
++        "any": {
++          "type": "array",
++          "items": {
++            "$ref": "#/$defs/formCondition"
++          }
++        },
++        "not": {
++          "$ref": "#/$defs/formCondition"
++        }
++      },
++      "additionalProperties": false
++    },
++    "contextField": {
++      "type": "object",
++      "required": [
++        "field"
++      ],
++      "properties": {
++        "field": {
++          "type": "string"
++        },
++        "filter": {
++          "type": "boolean"
++        },
++        "createDefault": {
++          "type": "boolean"
++        },
++        "readonly": {
++          "type": "boolean"
++        },
++        "required": {
++          "type": "boolean"
++        }
++      },
++      "additionalProperties": false
++    },
++    "fieldCondition": {
++      "type": "object",
++      "required": [
++        "field",
++        "value"
++      ],
++      "properties": {
++        "field": {
++          "type": "string"
++        },
++        "operator": {
++          "const": "eq"
++        },
++        "value": {
++          "type": [
++            "string",
++            "number",
++            "boolean"
++          ]
++        }
++      },
++      "additionalProperties": false
++    },
++    "rowLink": {
++      "type": "object",
++      "required": [
++        "id",
++        "label",
++        "screenId",
++        "parameters"
++      ],
++      "properties": {
++        "id": {
++          "type": "string"
++        },
++        "label": {
++          "type": "string"
++        },
++        "screenId": {
++          "type": "string",
++          "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"
++        },
++        "position": {
++          "type": "string",
++          "enum": [
++            "start",
++            "end"
++          ],
++          "default": "end"
++        },
++        "parameters": {
++          "type": "array",
++          "maxItems": 10,
++          "items": {
++            "type": "object",
++            "required": [
++              "field",
++              "sourceField"
++            ],
++            "properties": {
++              "field": {
++                "type": "string"
++              },
++              "sourceField": {
++                "type": "string"
++              }
++            },
++            "additionalProperties": false
++          }
++        },
++        "icon": {
++          "type": "string",
++          "pattern": "^[a-z][a-z0-9-]{0,79}$"
++        },
++        "iconOnly": {
++          "type": "boolean",
++          "default": false
++        }
++      },
++      "additionalProperties": false,
++      "allOf": [
++        {
++          "if": {
++            "properties": {
++              "iconOnly": {
++                "const": true
++              }
++            },
++            "required": [
++              "iconOnly"
++            ]
++          },
++          "then": {
++            "required": [
++              "icon"
++            ]
++          }
++        }
++      ]
++    },
++    "apiCompanyDescriptor": {
++      "type": "object",
++      "additionalProperties": false,
++      "required": [
++        "version",
++        "moduleId",
++        "screenId",
++        "endpointModes"
++      ],
++      "properties": {
++        "version": {
++          "const": 1
++        },
++        "moduleId": {
++          "type": "string",
++          "pattern": "^[a-z0-9_-]{1,64}$"
++        },
++        "screenId": {
++          "type": "string",
++          "minLength": 1,
++          "maxLength": 160
++        },
++        "endpointModes": {
++          "type": "object",
++          "minProperties": 1,
++          "additionalProperties": {
++            "type": "object",
++            "additionalProperties": false,
++            "required": [
++              "mode",
++              "operation"
++            ],
++            "properties": {
++              "mode": {
++                "enum": [
++                  "shared",
++                  "company",
++                  "record"
++                ]
++              },
++              "operation": {
++                "type": "string",
++                "minLength": 1,
++                "maxLength": 64
++              }
++            }
++          }
++        }
++      }
++    }
++  }
++}

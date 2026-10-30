@@ -1,0 +1,12 @@
+{
+  "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersPainelFinanceReadService.p",
+  "baselineSha256": "d7990991fd7e1d7675927c8cc4a0ecde7a4ffa8e2368e08b04b3f8361d1d238a",
+  "candidateSha256": "614795f3af80f29a51c467e8170f954540a76a8902034b9cf6186b1c328ac7b5",
+  "scope": "one compatibility expression only; use cumulative patch-plan.json for current production09678 baseline",
+  "changes": [
+    {
+      "oldBytesHex": "68657856616c75653d4845582d454e434f4445284745542d425954455328627974657356616c75652c312c363729292e",
+      "newBytesHex": "68657856616c75653d535542535452494e47284845582d454e434f444528627974657356616c7565292c312c313334292e"
+    }
+  ]
+}

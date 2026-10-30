@@ -1,0 +1,174 @@
+{
+  "programs": {
+    "real": "op1040",
+    "dolar": "op1041"
+  },
+  "scope": "global-by-selected-version; noMED/CIDpredicate fabricated in source",
+  "sourceJoin": "version=cost.version; cost.item_container=currentAllocation.item_container; purchaseItem.item_proc_compra=currentAllocation.item_proc_compra",
+  "contextPlan": "strict selected container_id+versao_id ownership; no company narrowing; reuse central persisted snapshot",
+  "currencies": {
+    "real": {
+      "grid": "sources/scriptcase/ciw-completion-linked-20261028/cons_item_container_custos_comparacao_real/cons_item_container_custos_comparacao_real_grid.class.php",
+      "gridSha256": "cb3ba3c4b138e959a75ebc36c4aef585f460eef0aa8153d819ca8ed299cfb595",
+      "selectLine": 793,
+      "projections": [
+        {
+          "ordinal": 1,
+          "literal": "itens_pedido.codigo_erp as itens_pedido_codigo_erp"
+        },
+        {
+          "ordinal": 2,
+          "literal": "itens_pedido.descricao as itens_pedido_descricao"
+        },
+        {
+          "ordinal": 3,
+          "literal": "item_custo.qt_alocada as qt_alocada"
+        },
+        {
+          "ordinal": 4,
+          "literal": "item_custo.qt_confirm_emb as qt_confirm_emb"
+        },
+        {
+          "ordinal": 5,
+          "literal": "item_custo.vl_custo_prev_real as item_custo_vl_custo_prev_real"
+        },
+        {
+          "ordinal": 6,
+          "literal": "item_custo.vl_desp_prev_real as item_custo_vl_desp_prev_real"
+        },
+        {
+          "ordinal": 7,
+          "literal": "vl_custo_prev_real + vl_desp_prev_real as vl_tot_prev"
+        },
+        {
+          "ordinal": 8,
+          "literal": "item_custo.vl_unit_prev as item_custo_vl_unit_prev"
+        },
+        {
+          "ordinal": 9,
+          "literal": "item_custo.vl_desp_prev_real_sem_distr_cust as cmp_maior_30_1"
+        },
+        {
+          "ordinal": 10,
+          "literal": "vl_custo_prev_real + vl_desp_prev_real_sem_distr_cust as vl_tot_sem_distr_custo"
+        },
+        {
+          "ordinal": 11,
+          "literal": "(vl_custo_prev_real + vl_desp_prev_real_sem_distr_cust) / ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as vl_unit_sem_distr_custo"
+        },
+        {
+          "ordinal": 12,
+          "literal": "vl_custo_prev_real * perc_fixo_container / 100 as vl_desp_prev_perc_fixo"
+        },
+        {
+          "ordinal": 13,
+          "literal": "vl_custo_prev_real * (1 + (perc_fixo_container / 100)) as vl_tot_perc_fixo"
+        },
+        {
+          "ordinal": 14,
+          "literal": "vl_custo_prev_real * (1 + (perc_fixo_container / 100)) / ((vl_custo_prev_real + vl_desp_prev_real)  / vl_unit_prev) as vl_unit_perc_fixo"
+        }
+      ],
+      "index": {
+        "path": "sources/scriptcase/ciw-completion-linked-20261028/cons_item_container_custos_comparacao_real/index.php",
+        "sha256": "70e6ab06b3c0d9a279f37bc6ba30930f0f6abee552f6e4c53fe9b4fca2dc4496",
+        "tableLine": 1160,
+        "whereLine": 3598
+      },
+      "display": {
+        "fractionDigits": 2,
+        "isPresentationOnly": true
+      },
+      "fieldAssignmentLines": [
+        890,
+        909
+      ]
+    },
+    "dolar": {
+      "grid": "sources/scriptcase/ciw-completion-linked-20261028/cons_item_container_custos_comparacao_dolar/cons_item_container_custos_comparacao_dolar_grid.class.php",
+      "gridSha256": "297bb945f86e9fb42f3e1ebbffd002c95d1e99d36776f166e13bdd74bcccdf3c",
+      "selectLine": 793,
+      "projections": [
+        {
+          "ordinal": 1,
+          "literal": "itens_pedido.codigo_erp as itens_pedido_codigo_erp"
+        },
+        {
+          "ordinal": 2,
+          "literal": "itens_pedido.descricao as itens_pedido_descricao"
+        },
+        {
+          "ordinal": 3,
+          "literal": "item_custo.qt_alocada as qt_alocada"
+        },
+        {
+          "ordinal": 4,
+          "literal": "item_custo.qt_confirm_emb as qt_confirm_emb"
+        },
+        {
+          "ordinal": 5,
+          "literal": "item_custo.vl_custo_prev_dolar as item_custo_vl_custo_prev_dolar"
+        },
+        {
+          "ordinal": 6,
+          "literal": "item_custo.vl_desp_prev_dolar as item_custo_vl_desp_prev_dolar"
+        },
+        {
+          "ordinal": 7,
+          "literal": "vl_custo_prev_dolar + vl_desp_prev_dolar as vl_tot_prev"
+        },
+        {
+          "ordinal": 8,
+          "literal": "item_custo.vl_unit_prev_dolar as item_custo_vl_unit_prev_dolar"
+        },
+        {
+          "ordinal": 9,
+          "literal": "item_custo.vl_desp_prev_dolar_sem_distr_cus as cmp_maior_30_1"
+        },
+        {
+          "ordinal": 10,
+          "literal": "vl_custo_prev_dolar + vl_desp_prev_dolar_sem_distr_cus as vl_tot_sem_distr_custo"
+        },
+        {
+          "ordinal": 11,
+          "literal": "(vl_custo_prev_dolar + vl_desp_prev_dolar_sem_distr_cus) / ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as vl_unit_sem_distr_custo"
+        },
+        {
+          "ordinal": 12,
+          "literal": "vl_custo_prev_dolar * perc_fixo_container / 100 as vl_desp_prev_perc_fixo"
+        },
+        {
+          "ordinal": 13,
+          "literal": "vl_custo_prev_dolar * (1 + (perc_fixo_container / 100)) as vl_tot_perc_fixo"
+        },
+        {
+          "ordinal": 14,
+          "literal": "vl_custo_prev_dolar * (1 + (perc_fixo_container / 100)) / ((vl_custo_prev_dolar + vl_desp_prev_dolar)  / vl_unit_prev_dolar) as vl_unit_perc_fixo"
+        }
+      ],
+      "index": {
+        "path": "sources/scriptcase/ciw-completion-linked-20261028/cons_item_container_custos_comparacao_dolar/index.php",
+        "sha256": "f524998bb6ccbcc89f3fbc46f5fc9072b13102f9df90d9f6f3dc17f2e01a1d58",
+        "tableLine": 1160,
+        "whereLine": 3598
+      },
+      "display": {
+        "fractionDigits": 2,
+        "isPresentationOnly": true
+      },
+      "fieldAssignmentLines": [
+        890,
+        903
+      ]
+    }
+  },
+  "rawNullable": "logicalNULLpreserved; noODBCfetch0assumption",
+  "divisionZero": "whole matching query refused; no fabricated0orNULL",
+  "presentation": "2decimal numeric formatting in source; no raw2decimal rounding",
+  "joinMissing": "inner join removes rows whose current allocation/purchase item no longer exists; NULLcode/description of existing records retained",
+  "testsBeforeHelper": "unchanged core vs rounded persisted ratio 21checks×4/NUMDBS0,4differences among12closed vectors; not SQL precision parity",
+  "source1048PrepareProof": {
+    "path": ".runtime/ciw-completion-20261028/sql-distribution-prepare-only-v2.json",
+    "sha256": "b4ca992430d217dd5ad4666cdb1df41dec70dc6df6b4d519f71a62eaa0ecb054"
+  }
+}

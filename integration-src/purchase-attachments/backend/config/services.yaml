@@ -1,0 +1,75 @@
+# yaml-language-server: $schema=../vendor/symfony/dependency-injection/Loader/schema/services.schema.json
+
+# This file is the entry point to configure your own services.
+# Files in the packages/ subdirectory configure your dependencies.
+# See also https://symfony.com/doc/current/service_container/import.html
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
+parameters:
+
+services:
+    # default configuration for services in *this* file
+    _defaults:
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+    # makes classes in src/ available to be used as services
+    # this creates a service per class whose id is the fully-qualified class name
+    App\:
+        resource: '../src/'
+        exclude:
+            - '../src/Attachments/AttachmentStorageBroker.php'
+            - '../src/Attachments/AttachmentPolicyViolation.php'
+
+    App\Runtime\RuntimeBusinessRuleRegistry:
+        arguments:
+            $handlers: !tagged_iterator app.runtime_business_rule
+
+    App\Runtime\RuntimeJobRegistry:
+        arguments:
+            $handlers: !tagged_iterator app.runtime_job_handler
+
+    App\Auth\AuthProviderRegistry:
+        arguments:
+            $providers: !tagged_iterator app.auth_provider
+
+    App\Auth\LocalPasswordAuthProvider:
+        tags: ['app.auth_provider']
+
+    App\Auth\ImaUserWebAuthProvider:
+        tags: ['app.auth_provider']
+
+    App\Auth\ImaUserWebClientInterface: '@App\Auth\ImaUserWebClient'
+
+    App\Auth\LdapAuthProvider:
+        tags: ['app.auth_provider']
+
+    App\Auth\SsoAuthProvider:
+        tags: ['app.auth_provider']
+
+    App\Auth\OAuthAuthProvider:
+        tags: ['app.auth_provider']
+
+    App\Runtime\RuntimeSessionGuard:
+        arguments:
+            $authRequired: '%env(bool:AUTH_REQUIRED)%'
+
+    App\Runtime\RuntimeAnalyticsAuditStore:
+        arguments:
+            $databaseUrl: '%env(default::ANALYTICS_AUDIT_DATABASE_URL)%'
+            $enabled: '%env(bool:ANALYTICS_AUDIT_ENABLED)%'
+            $maxRows: '%env(int:ANALYTICS_AUDIT_MAX_ROWS)%'
+            $strict: '%env(bool:ANALYTICS_AUDIT_STRICT)%'
+
+    App\Runtime\RuntimeRegulatedDocumentStore:
+        arguments:
+            $databaseUrl: '%env(default::REGULATED_DOCUMENT_DATABASE_URL)%'
+            $enabled: '%env(bool:REGULATED_DOCUMENT_ENABLED)%'
+            $strict: '%env(bool:REGULATED_DOCUMENT_STRICT)%'
+
+    # add more service definitions when explicit configuration is needed
+    # please note that last definitions always *replace* previous ones
+
+    App\Ciw\CiwSqlGrantReaderInterface: '@App\Ciw\PdoCiwSqlGrantReader'
+    App\Ciw\CiwProgressIdentityClientInterface: '@App\Ciw\CiwProgressIdentityClient'

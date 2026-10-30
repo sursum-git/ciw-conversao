@@ -1,0 +1,66 @@
+--- D:/opencode/construtor-pg/backend/src/Builder/ProgramBuilderService.php
++++ D:/opencode/construtor-pg/backend/src/Builder/ProgramBuilderService.php
+@@ -3004,6 +3004,16 @@
+             $this->validateTableNamingPattern($tableName, $entityType, $originalTableName, $structure);
+         }
+ 
++        $dependentOptionParameters = [];
++        if ($entityType === 'api') {
++            foreach ($rawFields as $rawField) {
++                $lookup = is_array($rawField) ? ($rawField['options']['api']['optionsSource'] ?? null) : null;
++                if (is_array($lookup) && array_key_exists('parameterFields', $lookup)) {
++                    $lookup = $this->normalizeApiOptionsSource($lookup);
++                    foreach ($lookup['parameterFields'] as $parameterName) { $dependentOptionParameters[$parameterName] = true; }
++                }
++            }
++        }
+         $fields = [];
+         $hasPrimaryKey = false;
+         foreach ($rawFields as $index => $item) {
+@@ -3046,7 +3056,10 @@
+             $foreignKeyOnDelete = $this->normalizeForeignKeyAction($item['foreignKeyOnDelete'] ?? null);
+             $foreignKeyOnUpdate = $this->normalizeForeignKeyAction($item['foreignKeyOnUpdate'] ?? null);
+             $foreignKeyDependencyType = $this->normalizeDependencyType($item['foreignKeyDependencyType'] ?? null);
+-            $optionItems = $this->normalizeOptionItems($item['optionItems'] ?? ($options['options'] ?? null), $dataType);
++            $rawOptionItems = $item['optionItems'] ?? ($options['options'] ?? null);
++            $optionItems = isset($dependentOptionParameters[$fieldCode]) && $dataType === 'string' && ($options['editor'] ?? null) === 'dropdown'
++                ? $this->normalizeApiOptionsParameterItems($rawOptionItems)
++                : $this->normalizeOptionItems($rawOptionItems, $dataType);
+             $includeInVersion = ($item['includeInVersion'] ?? true) !== false;
+             $readonlyField = ($item['readonlyField'] ?? false) === true;
+             $versionRefEntityCode = $this->safeSqlIdentifier((string) ($item['versionRefEntityCode'] ?? ''));
+@@ -7171,9 +7184,9 @@
+     {
+         foreach ($source['parameterFields'] ?? [] as $name) {
+             $parameter=null;foreach($entity->getFields() as $field) { if ($field->getCode()===$name) { $parameter=$field; } }
+-            $options=$parameter?->getOptions() ?? []; $values=$options['options'] ?? null;
+-            if (!$parameter || $parameter->getDataType()!=='string' || ($options['editor']??null)!=='dropdown' || ($options['readonly']??false) || !is_array($values) || !array_is_list($values) || !$values || count($values)>20) { throw new RuntimeHttpException('ENTITY_API_OPTIONS_PARAMETERS','Parametro exige enum escalar fechado.',422); }
+-            $seen=[];foreach($values as $option) { if (!is_array($option) || array_diff(array_keys($option),['value','text']) || !is_string($option['value']??null) || !is_string($option['text']??null) || isset($seen[$option['value']])) { throw new RuntimeHttpException('ENTITY_API_OPTIONS_PARAMETERS','Enum de opcoes invalido.',422); } $seen[$option['value']]=true; }
++            $options=$parameter?->getOptions() ?? [];
++            if (!$parameter || $parameter->getDataType()!=='string' || ($options['editor']??null)!=='dropdown' || ($options['readonly']??false)) { throw new RuntimeHttpException('ENTITY_API_OPTIONS_PARAMETERS','Parametro exige enum escalar fechado.',422); }
++            $this->normalizeApiOptionsParameterItems($options['options'] ?? null);
+         }
+         foreach ($source['copyFields'] ?? [] as $target => $path) {
+             $valid = false;
+@@ -8390,6 +8403,21 @@
+         };
+     }
+ 
++    private function normalizeApiOptionsParameterItems(mixed $value): array
++    {
++        if (!is_array($value) || !array_is_list($value) || !$value || count($value) > 20) {
++            throw new RuntimeHttpException('ENTITY_API_OPTIONS_PARAMETERS','Parametro exige enum escalar fechado.',422);
++        }
++        $seen = [];
++        foreach ($value as $option) {
++            if (!is_array($option) || array_diff(array_keys($option), ['value','text']) || !is_string($option['value'] ?? null) || !is_string($option['text'] ?? null) || isset($seen[$option['value']])) {
++                throw new RuntimeHttpException('ENTITY_API_OPTIONS_PARAMETERS','Enum de opcoes invalido.',422);
++            }
++            $seen[$option['value']] = true;
++        }
++        return $value;
++    }
++
+     private function normalizeOptionItems(mixed $value, string $dataType): array
+     {
+         if (!in_array($dataType, ['enum', 'dropdown', 'integer'], true) || !is_array($value)) {

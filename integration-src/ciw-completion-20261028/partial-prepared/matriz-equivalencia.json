@@ -1,0 +1,347 @@
+{
+  "rows": [
+    {
+      "application": "bl_atu_dolar_dia",
+      "status": "Parcial",
+      "legacyState": "Parcial — processo BC publicado e cliente real validado",
+      "family": "Cotações e referências ERP",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "ciw.cotacoes-bc-buscar",
+      "knownGap": "Cliente PHP consultado no BC real com TLS; gravacao automatica/auditoria validadas em TTs, sem inserir cotacao operacional para demonstracao. Conferencia visual e validacao de persistencia automatica no banco real continuam delimitadas.",
+      "sourceFiles": [
+        "sources/scriptcase/phase2/bl_atu_dolar_dia/bl_atu_dolar_dia.php",
+        "sources/scriptcase/phase2/bl_atu_dolar_dia/index.php"
+      ],
+      "requiredEvidence": "API, metadata publicada e validação de leitura/navegação"
+    },
+    {
+      "application": "bl_tela_login",
+      "status": "Parcial",
+      "legacyState": "Parcial — login Progress validado; autorização positiva pendente",
+      "family": "Identidade e permissões",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "",
+      "knownGap": "Login real tasilpar validado. Integração SQL e vínculo explícito tcassimiro/thiago.cassimiro publicados; faltam login humano integrado e logout. Permissões ficaram para a etapa final por instrução de20/10.",
+      "sourceFiles": [
+        "sources/scriptcase/phase1/bl_tela_login/bl_tela_login.php",
+        "sources/scriptcase/phase1/bl_tela_login/index.php"
+      ],
+      "requiredEvidence": "API, metadata publicada e validação de leitura/navegação"
+    },
+    {
+      "application": "cons_docum_est_importacao",
+      "status": "Parcial",
+      "legacyState": "Parcial — leitura publicada; ações pendentes",
+      "family": "Containers e navegação contextual",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.container-nfs",
+      "knownGap": "Concluir associacao/desassociacao e regras de rateio.",
+      "sourceFiles": [
+        "sources/scriptcase/containers/cons_docum_est_importacao/cons_docum_est_importacao.php",
+        "sources/scriptcase/containers/cons_docum_est_importacao/cons_docum_est_importacao_grid.class.php",
+        "sources/scriptcase/containers/cons_docum_est_importacao/cons_docum_est_importacao_lookup.class.php",
+        "sources/scriptcase/containers/cons_docum_est_importacao/cons_docum_est_importacao_pesq.class.php",
+        "sources/scriptcase/containers/cons_docum_est_importacao/index.php"
+      ],
+      "requiredEvidence": "API, metadata publicada e validação de leitura/navegação"
+    },
+    {
+      "application": "cons_hist_cotacoes_bc",
+      "status": "Parcial",
+      "legacyState": "Parcial — consulta absorvida na tela publicada",
+      "family": "Cotações e referências ERP",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.cotacoes-bc",
+      "knownGap": "Consulta absorvida com oito campos, filtros e ordenacao configurados; read/get/filtro/paginacao validados por API. Processo Buscar cotacao BC publicado separadamente; conferencia visual/agrupamento legado pendentes.",
+      "sourceFiles": [
+        "sources/scriptcase/phase2/cons_hist_cotacoes_bc/cons_hist_cotacoes_bc.php",
+        "sources/scriptcase/phase2/cons_hist_cotacoes_bc/cons_hist_cotacoes_bc_grid.class.php",
+        "sources/scriptcase/phase2/cons_hist_cotacoes_bc/index.php"
+      ],
+      "requiredEvidence": "API, metadata publicada e validação de leitura/navegação"
+    },
+    {
+      "application": "cons_tit_ap",
+      "status": "Parcial",
+      "legacyState": "Parcial — consulta e seletor de compra MED publicados",
+      "family": "Cotações e referências ERP",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.titulos-pagar-med",
+      "knownGap": "Consulta independente e seletor contextual de compra MED publicados; novo cadastro ativo cd0108 publicado com aba Pagamentos. Conferir demais chamadores/origens, Itens/Anexos e o novo teste operacional antes de equivalência integral. IMA/seletor empresarial e permissões CIW gerais continuam separados.",
+      "sourceFiles": [
+        "sources/scriptcase/phase2/cons_tit_ap/cons_tit_ap.php",
+        "sources/scriptcase/phase2/cons_tit_ap/cons_tit_ap_grid.class.php",
+        "sources/scriptcase/phase2/cons_tit_ap/index.php"
+      ],
+      "requiredEvidence": "API, metadata publicada e validação de leitura/navegação"
+    },
+    {
+      "application": "cons_tit_ap_associados_container",
+      "status": "Parcial",
+      "legacyState": "Parcial — leitura publicada; ações pendentes",
+      "family": "Financeiro e contas correntes",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.container-pagamentos",
+      "knownGap": "Consulta22campos/read/get, inclusao via opcoes e desassociacao ja publicadas emop1006/1.0.2. Adiantamento/duplicidade/estorno/efeitos/Logs e limpeza comprovados em19/10. Nao manter pendencia generica de associacao/desassociacao. Conferir limite do ramo aposDI, selecao individual versus lote e acesso visual humano vigente.",
+      "sourceFiles": [
+        "sources/scriptcase/containers/cons_tit_ap_associados_container/cons_tit_ap_associados_container.php",
+        "sources/scriptcase/containers/cons_tit_ap_associados_container/cons_tit_ap_associados_container_grid.class.php",
+        "sources/scriptcase/containers/cons_tit_ap_associados_container/cons_tit_ap_associados_container_lookup.class.php",
+        "sources/scriptcase/containers/cons_tit_ap_associados_container/index.php"
+      ],
+      "requiredEvidence": "API, metadata publicada e validação de leitura/navegação"
+    },
+    {
+      "application": "cons_versoes_item_custo_container",
+      "status": "Parcial",
+      "legacyState": "Parcial — leitura publicada; ações pendentes",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.container-versoes-custo",
+      "knownGap": "Concluir geracao, distribuicao e validacao real dos servicos.",
+      "sourceFiles": [
+        "sources/scriptcase/containers/cons_versoes_item_custo_container/cons_versoes_item_custo_container.php",
+        "sources/scriptcase/containers/cons_versoes_item_custo_container/cons_versoes_item_custo_container_grid.class.php",
+        "sources/scriptcase/containers/cons_versoes_item_custo_container/cons_versoes_item_custo_container_lookup.class.php",
+        "sources/scriptcase/containers/cons_versoes_item_custo_container/cons_versoes_item_custo_container_pesq.class.php",
+        "sources/scriptcase/containers/cons_versoes_item_custo_container/index.php"
+      ],
+      "requiredEvidence": "API, metadata publicada e validação de leitura/navegação"
+    },
+    {
+      "application": "form_anexos_container",
+      "status": "Parcial",
+      "legacyState": "Parcial — leitura publicada; ações pendentes",
+      "family": "Anexos e documentos",
+      "technicalType": "Formulário em lote",
+      "targetScreen": "ciw.container-anexos",
+      "knownGap": "Implementar upload/download autenticado e vinculo; preservar acervo compartilhado.",
+      "sourceFiles": [
+        "sources/scriptcase/containers/form_anexos_container/form_anexos_container.php",
+        "sources/scriptcase/containers/form_anexos_container/form_anexos_container_apl.php",
+        "sources/scriptcase/containers/form_anexos_container/form_anexos_container_form0.php",
+        "sources/scriptcase/containers/form_anexos_container/form_anexos_container_js0.php",
+        "sources/scriptcase/containers/form_anexos_container/form_anexos_container_sajax.php",
+        "sources/scriptcase/containers/form_anexos_container/form_anexos_container_sajax_js.php",
+        "sources/scriptcase/containers/form_anexos_container/index.php"
+      ],
+      "requiredEvidence": "API, metadata publicada e validação de leitura/navegação"
+    },
+    {
+      "application": "form_pp_container",
+      "status": "Parcial",
+      "legacyState": "Parcial — cabeçalho CRUD e comandos publicados",
+      "family": "Containers e navegação contextual",
+      "technicalType": "Formulário individual",
+      "targetScreen": "ciw.container-painel",
+      "knownGap": "Painel1.0.6 com cabeçalho e comandos nativos;14abas. Conferir fluxos descendentes de pagamentos/NFs/distribuição/anexos antes de declarar conversão integral do painel.",
+      "sourceFiles": [
+        "sources/scriptcase/containers/form_pp_container/form_pp_container.php",
+        "sources/scriptcase/containers/form_pp_container/form_pp_container_apl.php",
+        "sources/scriptcase/containers/form_pp_container/form_pp_container_form0.php",
+        "sources/scriptcase/containers/form_pp_container/form_pp_container_js0.php",
+        "sources/scriptcase/containers/form_pp_container/form_pp_container_sajax.php",
+        "sources/scriptcase/containers/form_pp_container/form_pp_container_sajax_js.php",
+        "sources/scriptcase/containers/form_pp_container/index.php"
+      ],
+      "requiredEvidence": "API, metadata publicada e validação de leitura/navegação"
+    },
+    {
+      "application": "grid_despesas_container",
+      "status": "Parcial",
+      "legacyState": "Parcial — leitura publicada; ações pendentes",
+      "family": "Despesas e fiscal do container",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.container-despesas",
+      "knownGap": "Integrar manutencao e comandos proprios.",
+      "sourceFiles": [
+        "sources/scriptcase/containers/grid_despesas_container/grid_despesas_container.php",
+        "sources/scriptcase/containers/grid_despesas_container/grid_despesas_container_grid.class.php",
+        "sources/scriptcase/containers/grid_despesas_container/grid_despesas_container_lookup.class.php",
+        "sources/scriptcase/containers/grid_despesas_container/index.php"
+      ],
+      "requiredEvidence": "API, metadata publicada e validação de leitura/navegação"
+    },
+    {
+      "application": "grid_itens_container",
+      "status": "Parcial",
+      "legacyState": "Parcial — leitura publicada; ações pendentes",
+      "family": "Containers e navegação contextual",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.container-itens",
+      "knownGap": "Leitura/custos centrais e manutencao/alocacao individual publicadas; selecao/alocacao emlote tambem concluida separadamente emop1025/1.0.0 em26/10 com teste limpo. Nao manter selecao emlote como pendente generica. Calcular custo unitario/fechamento e demais acoes proprias ainda devem ser comparados por origem.",
+      "sourceFiles": [
+        "sources/scriptcase/containers/grid_itens_container/grid_itens_container.php",
+        "sources/scriptcase/containers/grid_itens_container/grid_itens_container_grid.class.php",
+        "sources/scriptcase/containers/grid_itens_container/grid_itens_container_lookup.class.php",
+        "sources/scriptcase/containers/grid_itens_container/index.php"
+      ],
+      "requiredEvidence": "API, metadata publicada e validação de leitura/navegação"
+    },
+    {
+      "application": "grid_pp_container",
+      "status": "Parcial",
+      "legacyState": "Parcial — leitura publicada; ações pendentes",
+      "family": "Containers e navegação contextual",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.containers",
+      "knownGap": "Consulta pronta; concluir acoes de manutencao e Vendas.",
+      "sourceFiles": [
+        "sources/scriptcase/containers/grid_pp_container/grid_pp_container.php",
+        "sources/scriptcase/containers/grid_pp_container/grid_pp_container_grid.class.php",
+        "sources/scriptcase/containers/grid_pp_container/grid_pp_container_lookup.class.php",
+        "sources/scriptcase/containers/grid_pp_container/grid_pp_container_pesq.class.php",
+        "sources/scriptcase/containers/grid_pp_container/index.php"
+      ],
+      "requiredEvidence": "API, metadata publicada e validação de leitura/navegação"
+    },
+    {
+      "application": "menu_container",
+      "status": "Parcial",
+      "legacyState": "Parcial — leitura publicada; ações pendentes",
+      "family": "Containers e navegação contextual",
+      "technicalType": "Menu",
+      "targetScreen": "ciw.container-painel",
+      "knownGap": "Painel 1.0.7 com 14 abas no catálogo; confirmar cobertura funcional das ações, manutenção e arquivos antes de declarar conversão integral.",
+      "sourceFiles": [
+        "sources/scriptcase/containers/menu_container/index.php",
+        "sources/scriptcase/containers/menu_container/menu_container.php"
+      ],
+      "requiredEvidence": "API, metadata publicada e validação de leitura/navegação"
+    },
+    {
+      "application": "bl_distribuir_custo_contr",
+      "status": "Preparado",
+      "legacyState": "Preparado — sem fluxo publicado",
+      "family": "Distribuição de custos",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "",
+      "knownGap": "Simular plano e executar pelo servico central usando empresa do container.",
+      "sourceFiles": [
+        "sources/scriptcase/containers/bl_distribuir_custo_contr/bl_distribuir_custo_contr.php",
+        "sources/scriptcase/containers/bl_distribuir_custo_contr/index.php"
+      ],
+      "requiredEvidence": "API/metadata publicados e cenário autorizado para processo gravador"
+    },
+    {
+      "application": "bl_item_custos",
+      "status": "Preparado",
+      "legacyState": "Preparado — sem fluxo publicado",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "",
+      "knownGap": "Reutilizar VersionService, coleta e calculo; resolver regressao de realizado ausente.",
+      "sourceFiles": [
+        "sources/scriptcase/containers/bl_item_custos/bl_item_custos.php",
+        "sources/scriptcase/containers/bl_item_custos/index.php"
+      ],
+      "requiredEvidence": "API/metadata publicados e cenário autorizado para processo gravador"
+    },
+    {
+      "application": "bl_item_custos_gravacao",
+      "status": "Preparado",
+      "legacyState": "Preparado — sem fluxo publicado",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "",
+      "knownGap": "Simular sem escrita; reler e validar todos os itens no fechamento transacional.",
+      "sourceFiles": [
+        "sources/scriptcase/containers/bl_item_custos_gravacao/bl_item_custos_gravacao.php",
+        "sources/scriptcase/containers/bl_item_custos_gravacao/index.php"
+      ],
+      "requiredEvidence": "API/metadata publicados e cenário autorizado para processo gravador"
+    },
+    {
+      "application": "cons_itens_container_simul_calc",
+      "status": "Preparado",
+      "legacyState": "Preparado — sem fluxo publicado",
+      "family": "Containers e navegação contextual",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "knownGap": "Simular sem escrita; reler e validar todos os itens no fechamento transacional.",
+      "sourceFiles": [
+        "sources/scriptcase/containers/cons_itens_container_simul_calc/cons_itens_container_simul_calc.php",
+        "sources/scriptcase/containers/cons_itens_container_simul_calc/cons_itens_container_simul_calc_grid.class.php",
+        "sources/scriptcase/containers/cons_itens_container_simul_calc/cons_itens_container_simul_calc_lookup.class.php",
+        "sources/scriptcase/containers/cons_itens_container_simul_calc/index.php"
+      ],
+      "requiredEvidence": "API/metadata publicados e cenário autorizado para processo gravador"
+    },
+    {
+      "application": "contr_item_custos",
+      "status": "Preparado",
+      "legacyState": "Preparado — sem fluxo publicado",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Controle de parâmetros/ação",
+      "targetScreen": "",
+      "knownGap": "Simular sem escrita; reler e validar todos os itens no fechamento transacional.",
+      "sourceFiles": [
+        "sources/scriptcase/containers/contr_item_custos/contr_item_custos.php",
+        "sources/scriptcase/containers/contr_item_custos/contr_item_custos_apl.php",
+        "sources/scriptcase/containers/contr_item_custos/contr_item_custos_form0.php",
+        "sources/scriptcase/containers/contr_item_custos/contr_item_custos_js0.php",
+        "sources/scriptcase/containers/contr_item_custos/contr_item_custos_sajax.php",
+        "sources/scriptcase/containers/contr_item_custos/contr_item_custos_sajax_js.php",
+        "sources/scriptcase/containers/contr_item_custos/index.php"
+      ],
+      "requiredEvidence": "API/metadata publicados e cenário autorizado para processo gravador"
+    },
+    {
+      "application": "ctrl_simul_distr_custo",
+      "status": "Preparado",
+      "legacyState": "Preparado — sem fluxo publicado",
+      "family": "Distribuição de custos",
+      "technicalType": "Controle de parâmetros/ação",
+      "targetScreen": "",
+      "knownGap": "Simular plano e executar pelo servico central usando empresa do container.",
+      "sourceFiles": [
+        "sources/scriptcase/containers/ctrl_simul_distr_custo/ctrl_simul_distr_custo.php",
+        "sources/scriptcase/containers/ctrl_simul_distr_custo/ctrl_simul_distr_custo_apl.php",
+        "sources/scriptcase/containers/ctrl_simul_distr_custo/ctrl_simul_distr_custo_form0.php",
+        "sources/scriptcase/containers/ctrl_simul_distr_custo/ctrl_simul_distr_custo_js0.php",
+        "sources/scriptcase/containers/ctrl_simul_distr_custo/ctrl_simul_distr_custo_sajax.php",
+        "sources/scriptcase/containers/ctrl_simul_distr_custo/ctrl_simul_distr_custo_sajax_js.php",
+        "sources/scriptcase/containers/ctrl_simul_distr_custo/index.php"
+      ],
+      "requiredEvidence": "API/metadata publicados e cenário autorizado para processo gravador"
+    },
+    {
+      "application": "form_despesas_container_multi_reg",
+      "status": "Preparado",
+      "legacyState": "Preparado — sem fluxo publicado",
+      "family": "Despesas e fiscal do container",
+      "technicalType": "Formulário em lote",
+      "targetScreen": "",
+      "knownGap": "Preservar diferencas de regras entre edicao individual e lote.",
+      "sourceFiles": [
+        "sources/scriptcase/containers/form_despesas_container_multi_reg/form_despesas_container_multi_reg.php",
+        "sources/scriptcase/containers/form_despesas_container_multi_reg/form_despesas_container_multi_reg_apl.php",
+        "sources/scriptcase/containers/form_despesas_container_multi_reg/form_despesas_container_multi_reg_form0.php",
+        "sources/scriptcase/containers/form_despesas_container_multi_reg/form_despesas_container_multi_reg_js0.php",
+        "sources/scriptcase/containers/form_despesas_container_multi_reg/form_despesas_container_multi_reg_sajax.php",
+        "sources/scriptcase/containers/form_despesas_container_multi_reg/form_despesas_container_multi_reg_sajax_js.php",
+        "sources/scriptcase/containers/form_despesas_container_multi_reg/index.php"
+      ],
+      "requiredEvidence": "API/metadata publicados e cenário autorizado para processo gravador"
+    },
+    {
+      "application": "form_versoes_item_custo_container",
+      "status": "Preparado",
+      "legacyState": "Preparado — sem fluxo publicado",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Formulário individual",
+      "targetScreen": "",
+      "knownGap": "Reutilizar VersionService, coleta e calculo; resolver regressao de realizado ausente.",
+      "sourceFiles": [
+        "sources/scriptcase/containers/form_versoes_item_custo_container/form_versoes_item_custo_container.php",
+        "sources/scriptcase/containers/form_versoes_item_custo_container/form_versoes_item_custo_container_apl.php",
+        "sources/scriptcase/containers/form_versoes_item_custo_container/form_versoes_item_custo_container_form0.php",
+        "sources/scriptcase/containers/form_versoes_item_custo_container/form_versoes_item_custo_container_js0.php",
+        "sources/scriptcase/containers/form_versoes_item_custo_container/form_versoes_item_custo_container_sajax.php",
+        "sources/scriptcase/containers/form_versoes_item_custo_container/form_versoes_item_custo_container_sajax_js.php",
+        "sources/scriptcase/containers/form_versoes_item_custo_container/index.php"
+      ],
+      "requiredEvidence": "API/metadata publicados e cenário autorizado para processo gravador"
+    }
+  ]
+}

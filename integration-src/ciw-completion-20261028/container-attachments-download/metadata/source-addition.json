@@ -1,0 +1,35 @@
+{
+  "target": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-attachments-current/source-current.json",
+  "baselineSha256": "487f41bb38e4b9188498a90a29259c1e738246bf55ee0ea9b304ad74b9bf28a6",
+  "targetPointer": "/apiSource",
+  "sourceCode": "motor_progress_container_painel",
+  "preserveGlobalAuthentication": true,
+  "neverWriteSanitizedDTO": true,
+  "expectedOperationCount": 10,
+  "resultOperationCount": 11,
+  "operations": [
+    {
+      "op": "add",
+      "path": "/operations/-",
+      "value": {
+        "code": "anexos_arquivo_get",
+        "name": "Referencia autenticada do anexo do container MED",
+        "type": "detail",
+        "method": "POST",
+        "path": "http://127.0.0.1:19910/med/web/SursumPrograms/containers-painel",
+        "headers": [],
+        "queryParams": [],
+        "bodyTemplate": {
+          "resource": "anexos-arquivo",
+          "operation": "get"
+        },
+        "requestContextFields": [
+          "container_id"
+        ],
+        "itemsPath": null,
+        "itemPath": "data",
+        "totalPath": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,866 @@
+<!-- BEGIN CIW13_READ_FINAL -->
+## Checkpoint17 — comparações históricas BRL/USD publicadas e validadas no runtime
+
+O lote13 está publicado na API e no construtor. Metadados: op1040/ciw.container-custos-comparacao-real1.0.0 versão126, op1041/ciw.container-custos-comparacao-dolar1.0.0 versão127 e paiop1005/ciw.container-versoes-custo1.0.3 versão128. Fonte motor_progress_ciw_cadastros146→150, preservando exatamente as146operações e autenticação real em RAM. Definição inteira do pai comparada: somente versão e dois links novos, mantendo cinco anteriores;24correções fechadas de labels nos novos drafts. Três fases de autoria concluídas/liberadas, sem concessão funcional humana ou escrita de negócio. Publicação87385 exit0; recibo build13-metadata-publication-preparation/metadata-publication.json SHA3378023ed0b4ec643747213a85794592c7a7509324eec8f38476b6772e9eae1a. NÃO repetir publicador/grants/compilação/integração/runtimepublish.
+
+PASOE13 real concluído:87chamadas para consulta/detalhe/filtros/ordem/contexto/autenticação e regressões; prova runtime-build13-v4/pasoe-read-proof.json. Seus dois conjuntos originais tinham total1. Complemento build13-pagination-complement/proof.json ficou INCONCLUSIVE com take2/critério3, preservado como tal. Sem novo scan, a versão333426/2347 já observada com dois itens foi validada em8chamadas separadas, ambas moedas, take1: páginas1/2 não vazias, distintas/ordenadas, detalhe da segunda igual e página após fim vazia. Prova build13-two-row-pagination/proof.json SHA968032dc14f46f0430726e95d84f81b06a2bb10c5155b02d7c62ec58aa3bf843. Não alegar conjunto maior que200 nesta comparação.
+
+Runtime nativo real validou as duas telas e o pai em17chamadas funcionais mais2de autenticação: bindings normalizados,19campos, consulta/detalhe/chave opaca, filtro decimal com valor observado, contexto obrigatório e segunda página não vazia nas duas moedas. Recibo build13-native-metadata-verification/runtime-read-proof.json SHAe8cfe513d69acf9805ffdac30ba1a5afb3ca71f84e51bb0aed81b97ea18b03d6. O envelope PHP nativo é exatamente data/total; o validator faz adapter fechado para reaproveitar as regras de linhas/páginas PASOE, cujo envelope inclui success. GET é discriminado por record_key. Sem alegar validação visual/DOM ou login LDAP dessas telas. Os acessos humanos novos1040/41,1053 e1055 continuam pendentes para a etapa final.
+
+Compilação oficial13-v3 mantém69fontes/88logs/8.020checks OE12.2/.42 semDB nos testes;12fontes canônicas e17artefatos runtime13-v4 já publicados em sursum-api/MED9911, MEDrestaurado/IMAinalterado. Evidências anteriores são preservadas, não reexecutadas/reclassificadas. Projeção persistida única compartilhada BRL/USD; não gera custos/versões nem aceita política privada pelo HTTP. Exportação/impressão legadas permanecem GAP separado em comparison-export-print-parity/LIMITS.json; não promover as duas origens como paridade integral só pela fatiaRO.
+
+Próximo: compor filterOnly congelado sobre PHP canônico13 atual e fixtures13, testar uma vez e integrar por patches exatos antes de freshWHOLEpreviews/navegação real. Builder205 AINDA preservado; filterOnly e integerRange1056 ainda candidatos isolados, não integrados.1042concluído/limpo sem replay,1053/1055publicados. Anexoscontainers:146referências sem arquivo físico; aguarda caminho/backup, sem probes repetidos. Lista atual: integration-src/ciw-completion-20261028/remaining-applications/PENDENCIAS_ATUAIS.md. Objetivo global ATIVO, Controles FINAL; sem credenciais, commit ou push.
+<!-- END CIW13_READ_FINAL -->
+
+<!-- BEGIN CIW13_RUNTIME_PUBLISHED -->
+## Checkpoint16 — comparação de custos compilada e API publicada; telas ainda pendentes
+
+Oficial13-v3 CONCLUÍDO, sessão5330 exit0/269downloads:69compilações OpenEdge12.2/.42 com1banco somente para esquema;22suítes/88logs/8.020checks em quatro combinações, testes com0bancos. Prova completa em .runtime/ciw-completion-20261028/build13-root-companions-v3/official-compile-verification.json. Não repetir compilação/verificadores de aplicação. Provas locais1005PHP/7903asserções/278Appstage e112checks adicionais de precisão12.8 são evidências separadas, sem reclassificá-las como oficiais. Releases13-v3: managerae932cc8..., child7694b837....
+
+Integração canônica12arquivos concluída por hashes/hunks, backups e journal em build13-root-companions-v3/canonical-manifest.json. Novos baselines prevalecem sobre os anteriores da12: Reader8ecee3d8..., Dispatcher325746bf..., Labels bce8fc89..., VersionService ee3ae5fe..., Query ec83a005..., Action d5413e30..., mais quatroABL/include/helperPHP novos. Builder205 permanece canônico e não foi alterado. Não repetir apply; os arquivos e manifestos são a referência exata.
+
+Runtime13-v4 PUBLICADO, sessão63878 exit0/doisrecibos:17artefatos no share137 e sursum-api/MED9911; include/dependências primeiro, dispatcher por último. PausaMED12,387s, WEBMED restaurado, IMA inalterado e sessões ociosas recarregadas. Sem transação/dado de negócio, rota, configuração ou grant humano alterado. Provas reais em runtime-build13-v4/active-manifest.json e publication-attempt.json. API nova ainda aguarda teste PASOE positivo/negativo; não afirmar que read/get passaram só porque a publicação passou.
+
+Os dois programas1040/41 de comparação BRL/USD e seus links ainda NÃO têm metadados publicados. Fontecadastros permanece146, proposta150. Export fresco em build13-metadata-fresh (proof8cd74686...): paiop1005/ciw.container-versoes-custo1.0.2, versão107; entidadecontainer_versoes_custo_progress; owner real confirmado por findStandardProgramVersionByEntity. Gerente prepara companion dos drafts com correções fechadas de labelsmojibake e WHOLEpreview205 de todos os deltas, sem reescrever freeze ou ignorar campos. Nenhum acesso novo1040/41 concedido.
+
+Reuso: uma projeção de operandos persistidos serve BRL/USD; não gera versões/custos. Coleta/snapshot central permanece único. Política privada permite apenas consultar versão específica sem mestre para reproduzir o SQL; defaults/callers antigos e writers preservam exigência de pai. A flag não é aceita no payloadHTTP. Orçamento50mil/prazo10s mantidos. Suplemento textual comprova domínio físicoUSD9/BRL6casas úteis, não operandos fictícios de13casas.
+
+Falhas preservadas, sem replay:8794 falhou no mkdir antes de upload/comando/AVM;68212 entrou em12.2/esquema, mas parou na guardaSEARCH antes da primeira compilação de produto por cópias idênticas na raiz. Recovery49300 foi download-only.13-v3 removeu só duas duplicatas e reparou pastas/paths do harness, com produtos iguais. Publicação98400 foi cancelada durante getpass, ANTES de SSH.connect, sem upload: repr(set()) mudava apenas a ordem textual do conjunto17. Runtimev4 usa geração determinística, revisada em dois processos/hashseeds e SHAexato a301c645.... Não executar publicador/inspectorv3 nem o probeSEARCH preparado e não executado.
+
+Próximos passos: teste PASOE13 somente read/get e regressões; depois metadados1040/41, WHOLEpreview/governança e validação nativa. Manter Builder205 até essa fase terminar. filterOnly e integerRange1056 são candidatos isolados, não integrados; etapas próprias posteriores, sem alterar Grid/Form para acomodar necessidade inventada de helper.1042 segue integralmente limpo,1053publicado/nativo26; não repetir testes/grants dessas entregas. Objetivo globalATIVO, ControlesFINAL; nenhuma credencial na memória e nenhum commit/push.
+<!-- END CIW13_RUNTIME_PUBLISHED -->
+
+<!-- BEGIN CIW1053_METADATA_PUBLISHED -->
+## Checkpoint15 — consulta de notas disponíveis publicada
+
+Publicação50945 concluída: op1053/`ciw.container-nfs-disponiveis-med`1.0.0, versão124; pai op1000/`ciw.containers`1.0.3, versão125. A fonte financeira passou de4 para6 operações, preservando integralmente as quatro anteriores e a autenticação real somente em memória. Definição inteira do pai comparada: apenas versão e um link contextual novos. Builder205 preservado; sete filtros monetários decimal/eq. Consulta de18campos, chave nf_key, read/get, contexto container obrigatório, paginação nativa; sem escrita ou exportação. Nenhuma permissão funcional humana1053 foi concedida e nenhuma validação visual LDAP dessa nova tela foi alegada.
+
+Validação nativa real concluída após a publicação: definição, consulta, detalhe por nf_key, filtros, paginação e recusa de contexto inválido aprovados; recibo runtime-read-proof.json. Não confundir os testes locais de componente com tela visual publicada. A API12-v3 permanece oficialmente validada em12.2/.42:42compilações,5.704checks TT semDB e43checks PASOE nos cinco containers, incluindo conjuntos acima de200 sem truncamento. NÃO repetir compilação, integração, runtimepublish, publicador de metadados ou consultas já provadas.
+
+Checkpoint14 continua prevalente para1042: nove passos autorizados concluídos, conflito409 específico sem efeitos, cancelamento real de grid com zero requisições de escrita e limpeza canônica comprovada por12contagens físicas zeradas, memórias vazias e404 dos registros próprios. Nenhum fixture1042 vivo; logs e triggers preservados. NÃO reexecutar o cenário, suas inspeções, grants ou metadados. Os textos históricos abaixo sobre1042 pendente e1053 não publicado são superados por estes checkpoints.
+
+Próximas frentes: composição oficial13 das comparações1040/41 sobre canônicos12 com leitura privada de órfãos e ABI preservada; corrigir lacunas específicas de navegação/moeda/visibilidade de itens com frontend nativo e fontes atuais.1056 continua dependente de contexto int32 assinado;1054 conserva gates físicos de cotação/triggers. Anexos:146referências sem arquivo físico, aguardando caminho/backup, sem novos probes. Inventário262origens/62registradas Convertido/200não encerradas não significa200telas sem implementação. Objetivo global ATIVO; Controles FINAL. Acessos novos restantes ficam na etapa final; não ampliar grants por inferência. Sem commit/push ou credenciais na memória.
+<!-- END CIW1053_METADATA_PUBLISHED -->
+
+<!-- BEGIN CIW1042_COMPLETED -->
+## Checkpoint14 — manutenção rápida1042 validada e teste removido
+
+O cenário CIW-1042-VALIDACAO-20261028-2147000110 foi CONCLUÍDO nos nove passos fixos, sem repetição de requisições. Inclusão dos dois registros próprios, alteração em lote, concorrência, recusa409 CONTAINER_EXPENSE_CHANGED sem efeitos confirmados e exclusão em lote passaram. Auditorias nativas confirmaram o usuário da sessão administrativa real admin e imagens anteriores/atuais; não foi simulada uma sessão LDAP de tadeu.parreiras. Cabeçalho foi preparado/removido pela API Progress canônica com auditoria Progress, sem alegar transação PostgreSQL para esse caller direto.
+
+Cancelamento REAL no grid de produção também comprovado: comparação dos14campos de7linhas antes/depois, valores restaurados e zero requisições de escrita no intervalo CDP completamente drenado. O teste ficou limitado ao container novo2147000110 e filhos próprios identificados por auditoria completa. Limpeza canônica concluída, triggers mantidos:12contagens físicas zeradas, memórias vazias, junção indireta vazia por ausência de itens, cabeçalho e todas as despesas próprias retornam404. Logs preservados. NÃO executar novamente o cenário, suas inspeções ou concessões já consumidas. Não há fixture1042 vivo.
+
+Provas privadas: .runtime/ciw-completion-20261028/batch1042-exercise/completion-proof.json, state.json completed=true/pending=null, nove attempt-* verified, auditorias/raw-responses e inspections/verify-cleanup. A prova não é de execução de outros processos fiscais nem de autorização de outros registros. As menções históricas abaixo a1042 ainda não executado ou limpeza pendente são superadas por este checkpoint. Fonte/tela1042 continuam publicadas e suas três permissões já foram aplicadas.
+
+Objetivo global ATIVO. Próximo passo: publicar uma única vez o companion de metadados1053, releaseab37b22d..., sobre API12 já publicada/validada; depois validar runtime nativo. Comparações1040/41 seguem preparação13; demais origens ainda exigem confronto individual. Controles FINAL. Nenhum commit/push ou credencial em memória.
+<!-- END CIW1042_COMPLETED -->
+
+# Objetivo persistente — conclusão das conversões CIW
+
+## Checkpoint13 — paginação de notas fiscais publicada e validada no PASOE
+
+O lote12-v3 está concluído na camada de código: sessão49932 finalizada com exit0 e118 downloads;42 compilações OpenEdge12.2/.42,28 logs TT/5.704 verificações com NUMDBS0 e16 comparações JSON aprovadas. FULLPHP990 testes/7.119 asserções,277 classes App100%staged e23 checks nativos locais. Cinco arquivos canônicos integrados por hashes e backups; release409a6bb3..., manager3e922a9f.... NÃO repetir compilação ou integração. As tentativas12 e12-v2 falharam apenas na preparação da compilação (closureOO ausente; depois namespace12629), foram encerradas e recuperadas em modo download-only. Nenhum produto foi modificado para contornar essas falhas;12-v3 usa classes canônicas reais, nomes simples resolvidos por SEARCH e SAVE INTO explícito. Não publicar os rcode de testes/classes auxiliares.
+
+Publicação41130 concluída: somente CiwErpReadService.p/r e ContainersPainelFinanceReadService.p/r no share137 e sursum-api/MED9911. Transporte MED restaurado em12,542s; sessões149/150 recarregadas mantendo pid3856625; estado IMA preservado. Sessão97036 validou43 chamadas reais somente read/get nos containers332526/331126/200019/333426/1525: total completo, primeira/segunda/última página, página após o fim vazia, detalhe positivo, filtro de identidade e ordenação, aliases inválidos e token ausente recusados. Total acima do antigo teto200 foi comprovado em dados reais. Contrato mantém até200 por página, orçamento10s e50mil leituras de origem; usa o coletor e leitor comuns, sem duplicar mapeamento ou chave. Metadados1053 AINDA NÃO publicados nesta etapa: gerente prepara companion com a prova12, preservando os hashes e previews históricos. Não afirmar tela disponível apenas porque a API passou.
+
+Baselines canônicos atuais para o próximo lote: FinanceService ca3a9a4a..., Reader bb4d2362..., RuntimeCiwErpQuery a444ca24..., RuntimeContainerNfAvailableRead19602f88..., RuntimeApiEntityActionService c19eb95e.... Preservar o recurso1055 e todos os demais. Provas em `.runtime/ciw-completion-20261028/official-build12-v3` e `runtime-build12`; cópias de active-manifest/publication-attempt/PASOEproof são byte exatas, não reconstruídas. Não executar novamente verify.py --official após a integração, pois seus baselines são anteriores; usar a prova oficial já salva.
+
+Entregas anteriores mantidas:1055/`ciw.despesas-impostos-geral`1.0.0 publicado e validado no runtime nativo, fonte cadastros146; nenhuma permissão funcional1055 nova foi concedida.1042/`ciw.container-despesas-lote`1.0.0 e pai1003/`ciw.container-despesas`1.0.5 publicados, read/get/contexto/14campos validados. As três permissões1042 e oito consultas AUX/descontos/distribuição autorizadas foram aplicadas/verificadas e seus gates consumidos. NÃO repetir concessões/publicadores.
+
+Cenário1042 continua AUTORIZADO e NÃO EXECUTADO: somente container novo2147000110, marcador CIW-1042-VALIDACAO-20261028-2147000110, definições4/5, até22 despesas e4 memórias novas, edição/exclusão em lote, conflito desatualizado e limpeza canônica, preservando logs/triggers. Sem itens/títulos/pagamentos/notas/estoque/custos/versões ou alterações de registros existentes. Harness fixo de9 passos está em revisão final, ainda sem manager-exercise-release. Propriedade vem somente de auditorias completas confirmadas; GET/IDs/contagens sozinhos não autorizam adotar ou apagar registros. Antes de cada write, conferir header, despesas e conjunto completo de IDs/imagens das memórias contra o manifesto próprio. Resultado incerto: preservar resposta/journal, sem retry.
+
+Inspector privado1042-v4 oficialmente compilado em12.2, sessão51573/NUMDBS0, fonte67c4bbf1... e rcode e8903fb8.... Acrescenta6campos tipados de cada memória ao inspector12tabelas/CID fixo/zeroitens/junção indireta vazia; nunca conta globalmente o ledger nem inventa campo físico container_id em cta_corren_fornec_imp. Nove planos RO frescos por passo preparados em `batch1042-exercise/inspections`, ainda NÃO executados. Cada um gera receipts UTC reais com hashes de artefato e resultado, mais captura atual da configuração via rcode oficial existente. UI de produção foi aberta legitimamente em IAB tab36 para o CID de teste; mostra indisponibilidade esperada porque o pai não existe. Nenhum cancelamento real foi alegado ainda. CDP de diagnóstico está documentado para observar requisições no teste futuro, sem injetar scripts; não repetir nem contornar o bloqueio anterior de arquivo file://.
+
+Próximas frentes: metadados1053, cenário1042 e sua limpeza; comparar1040/41 após compor com Reader12 e resolver fidelidade de órfãos;1056 aguarda contexto signedint32; Builder decimal-v2 integrado pontualmente: canônico205ebd14..., backup72c6 e bytepatch reversível em builder-decimal-filters-v2/canonical-integration. Testes contra o canônico real passaram2/26+24/48 e16checks nativos; normalização numérica do dataModel e tipos não decimais preservados. Nenhuma tela existente foi regenerada e nenhuma biblioteca Kendo/renderer foi alterada. O pin Builder72 deve ser retirado somente do harness1042 que não executa autoria; manifests históricos de publicadores permanecem imutáveis. Próximos previews1053 devem validar filtros numéricos e comparar o pai inteiro.1054 cotação diária retida pelos efeitos físicos/triggers, sem hooklogin. Anexos de containers:146 referências sem arquivo no acervo verificado; aguardam caminho/backup. Lista completa em `integration-src/ciw-completion-20261028/remaining-applications/PENDENCIAS_ATUAIS.md`:262 origens/62 registradas Convertido/200 não encerradas não significa200 telas sem implementação. Controles permanece FINAL. Objetivo global ATIVO; nenhum commit/push ou credencial em fontes/memória.
+
+
+## Checkpoint12 — metadados de despesas/impostos e manutenção em lote publicados
+
+Estado confirmado: a API1055 do build11 foi compilada no OpenEdge12.2/.42 (7 compilações, 384 verificações TT), integrada e publicada em sursum-api/MED9911 (4 artefatos; sessão97061). Os 17 testes PASOE passaram. Agora os metadados também estão publicados: op1055, `ciw.despesas-impostos-geral`, versão1.0.0, fonte `motor_progress_ciw_cadastros` ampliada de144 para146 operações. O runtime nativo validou definição, consulta, detalhe, filtros e paginação. Escopo global; PK nullable de três campos preservada. Nenhuma permissão funcional1055 nova foi concedida e nenhuma validação visual LDAP foi alegada. NÃO repetir esses publicadores ou a integração do build11.
+
+A Manutenção rápida de despesas do container também está publicada: op1042/`ciw.container-despesas-lote`1.0.0 e pai op1003/`ciw.container-despesas`1.0.5, alterado somente em versão e link. A nova fonte `motor_progress_container_despesas_lote` contém list/detail/batch; autenticação real clonada apenas em memória, fonte anterior preservada. Consulta e detalhe positivos, contexto obrigatório e14 campos originais validados pelo runtime nativo. As três permissões read/edit/delete de1042 para `tadeu.parreiras` foram aplicadas e verificadas, preservando outros acessos; gate consumido. As oito consultas AUX/descontos/distribuição autorizadas anteriormente também estão aplicadas e consumidas. NÃO repetir concessões.
+
+O cenário de negócio1042 está AUTORIZADO, ainda NÃO executado: somente container novo2147000110, marcador CIW-1042-VALIDACAO-20261028-2147000110, despesas novas das definições4/5, até22 despesas e4 memórias. Validar edição/exclusão em lote, conflito de imagem desatualizada e logs com usuário/antes/depois; limpar apenas registros próprios confirmados em auditoria, por rotinas canônicas, mantendo logs/triggers. Nenhum item, título, pagamento, nota, estoque, custo, versão ou registro existente poderá ser alterado. Harness em preparação pelo gerente, com passos fixos, manifesto de propriedade e recibos sem repetição de writes incertos.
+
+Inspector readonly1042 v3 compilado oficialmente12.2/.42, sessão79322, fonte5bd4eb7f... e rcode42906502.... Inspeção vazia84215 concluída:12 tabelas diretas zeradas e junção indireta do ledger vazia porque não há itens; não é prova de contagem global do ledger. `cta_corren_fornec_imp` não tem campo físico container_id; nunca inventar esse filtro. Planos novos com timestamps reais preparados em `batch1042-fixture-inspector-v3/{empty-before-create,owned-before-cleanup,cleaned-after-cleanup}`. Executar cada um somente na fase correspondente. Hash de artefato/resultado e receipt UTC devem comprovar frescor, nunca mtime local. IDs lidos não são automaticamente próprios; propriedade exige auditoria completa confirmada. Tentativas v1/v2 falhas foram preservadas; não repetir compilações/inspeções anteriores.
+
+Paginação1053 de notas fiscais está no candidato oficial12, ainda sem compilação/publicação remota. Reutiliza coleta e leitor ERP compartilhados, remove teto antigo de200 candidatos, preserva teto200 por página e orçamento total10s/50mil leituras de origem. Fonte/Reader/PHP devem preservar alterações do build11. Metadados de NFs permanecem retidos até validação real nos cinco containers. Comparações1040/41 congeladas aguardam revisão/oficial.1056 Descontos por fornecedor congelado aguarda companion integerRange int32; contexto assinado deve preservar0/negativos do Scriptcase. Builder decimal-v2 candidato205e revisado verde, ainda NÃO integrado; canônico72c6 preservado até resolver pins do harness1042. Nenhuma tela será regenerada automaticamente.
+
+1054 cotação diária permanece retida: diagnóstico SEARCH encontrou4.r de triggers/0 fontes; não comprova fechamento de efeitos físicos. Anexos de containers `cons_anexos_container`/`form_anexos_container`:146 referências sem arquivo no acervo verificado, aguardando caminho/backup; não criar arquivos substitutos nem alegar download validado. Inventário completo: `integration-src/ciw-completion-20261028/remaining-applications/PENDENCIAS_ATUAIS.md` (262 origens,62 registradas Convertido,200 não encerradas; isso não significa200 telas sem implementação). Controles permanece como pendência FINAL. Objetivo global ATIVO; sem commit/push ou credenciais em memória.
+
+
+## Checkpoint11 — API de relações despesa/imposto publicada e validada
+
+Estado prevalente: oficial11 sessão45391 CONCLUÍDA/exit0, sete compilações OpenEdge12.2/.42, oito logs TT/384verificações/NUMDBS0; FULLPHP986/7023 com277classesApp100%stage/413fontes. Cinco arquivos canônicos integrados por hashes/backups: doisABL, doisPHPcompartilhados e helperPHPnovo. Release4a51bdd4.../managerd6240865.... NÃOrepetircompile/integração. Publicação97061 CONCLUÍDA: somente CiwErpReadService/CiwCadastrosCrud p+r, quatro artefatos no share137/PASOEsursum-api/MED9911; MED restaurado8,797s, sessões147/148 refreshsamepid3856625, estado IMA preservado. PASOE17checksPASS: listagem GLOBAL, PK3nullable, GETpositivo/paging/filtros/aliases/campos/contextos inválidos/token. Total12éobservação, nãoinvariante. Semgravaçãocomercial/processo/rotas/auth/DDL. Provas official-build11/{official-compile-verification,canonical-manifest,active-manifest,publication-attempt,pasoe-read-proof}.json; active/attempt cópias EXATASde runtime-build11.
+
+Metadados1055 ainda NÃOpublicados: gerente/executor preparam singlechildop1055/ciw.despesas-impostos-geral e fontecadastros144→146, preservando operações/auth. Não conceder acesso nem dizertela publicadaporAPI. Inventário não promoveorigem/form porsemelhança. FinanceService614795do10 permanece inalterado. Nova1053NFs temaliascorrigido/PASOEpass,masquatrocontainers atingemlimite200candidatos; companionpaginaçãoemTT reutilizaCiwErpReadService, ainda candidato/retido. Runtime10nãoépararepetir. Comparações1040/41 recepcionarammetadadosSQL15expressõesBRL/USD viaPREPARE/DESCRIBESEMexecute; candidato congelado1649...aguardarevisão/oficial, nãoalegarparidade publicada.1056descontosfornecedoremdescoberta precisaeventualcompanionintegerRange;semcanonical. Builderfiltrosdecimal-v2 é candidato205ebd.../release418666.../2tests26+24regressões48+16native metadata checks, NÃOintegrado; preservarBuilder72c6atévalidar11/1042, não regenerarautomaticamentetelas.
+
+Oito permissões novas AUX4+descontos/distribuição4 JÁAPLICADAS/VERIFICADAS, gatesconsumidos;não repetir.1042 recebeu autorizaçãoEXATA para trêspermissõesread/edit/delete e cenário2147000110/duasdefs4e5/até22despesas4memórias/limpezacanônicalogspreservados, aindaSEMconcessão/SEMnegócio executado. Preflight1042/wholeparentpreview sóversion1.0.4→1.0.5+link/owner nativoop1003v120verde em batch1042-metadata; gerente preparapublisher/exercise. Rootgrant3ferramentasprontas, gateaguardametadata. InspectorRO13tabelas doCID: primeirocompile55631FALHOU porsintaxe deexpressões compactas, NÃOexecutouDB. V2freshprepared/source422a4010... syntax12.8SEM-SAVEPASS, aguardarevisão/compilaçãooficial122. Não usar.r12.8. Replay600/collector/closurelimpezajáprovados; testesoperacionaisprecisamguardsfrescos, semrepetir mutaçõesdesconhecidas.
+
+1054SEARCHv3compilou12.2/NUMDBS0 e executou diagnósticoquatrotriggers4.rpresentes/0.p; guardPROPATHexato falhou porqueAVMexpandeDLC, resultadojárecuperado15088. Não repetirAVMnemexecutartriggers; efeitosfísicosdeERP continuamretidos/semhooklogin. Anexoscontainers cons_anexos_container/form_anexos_container:146referências comarquivosausentes, aguardacaminho/backup; usuárioperguntouquaisappsfaltam,nãoinformouacervo. Lista completaem integration-src/ciw-completion-20261028/remaining-applications/PENDENCIAS_ATUAIS.md.262origens/62registradasConvertido/200nãoencerradas NÃOsignifica200telasporimplementar. GLOBALACTIVE/ControlesFINAL. Semsenhas/commit/push.
+
+
+
+**Autorizações novas recebidas e estado prevalente dos acessos:** call_613997... autorizou quatro consultas AUX do histórico e call_9b23eee... quatro consultas de descontos/distribuição. Oito concessões APLICADAS e VERIFICADAS, integridade nativa/snapshots LDAP/demais acessos preservados; gates consumidos. Provas wave2-aux-access e build7-readonly-access/{authorization,applied,verified}.json. Não conceder nem executar novamente. call_bc3aa... autorizou somente container_despesas_lote_progress.read/.edit/.delete e cenário CIW-1042-VALIDACAO-20261028-2147000110: container novo2147000110, despesasdefinições4/5, até22despesas e4memórias, limpeza canônica/logs preservados, sem outrosregistros existentes. AUTORIZADO mas ainda NÃOconcedido/executado; human-authorization-20261028.json no preflight1042. Continuar publicação dos metadados/preflight atual antes do cenário; antigas TT600/collector/cleanupclosure jáprovadas não precisam repetição automática.
+
+Usuário perguntou quais aplicações faltam, sem informar caminho do acervo. Relatório completo em integration-src/ciw-completion-20261028/remaining-applications/PENDENCIAS_ATUAIS.md;262origens/62registradasConvertido/200nãoencerradas não equivalem a200telas sem implementação. Pergunta dos anexos refere-se a cons_anexos_container/form_anexos_container;146arquivos ausentes, não146aplicações. ControlesFINAL e GLOBALACTIVE mantidos. Candidatoisolado Builder filtrosdecimal-v2:2testes26+24regressões48+16checagensmetadata/AJV/rendererprototype, aindaNÃOintegrado/publicado; dataModelnumber/normalizeFieldType/Kendo preservados. release418666e2... em builder-decimal-filters-v2, aguardareview. DiagnósticoSEARCH1054 v3 compilou12.2, executou NUMDBS0 e achou quatro.r/zerofontes.p, semRUNtriggers, mas guardPROPATHexato falhou porque AVM expande bibliotecasDLC; resultado privado recuperado15088, não repetirAVM. Efeitos dos triggers ainda não comprovados.
+
+
+
+## Checkpoint 10-v2 — publicado; limite da consulta identificado
+
+
+
+Este checkpoint prevalece sobre os estados históricos abaixo. Oficial11484 CONCLUÍDO/exit0: oito compilações OpenEdge12.2/.42, oito logs TT/1.160 verificações/NUMDBS0. Release5c8a489b... e manager26cebbed...; não repetir. Verificação oficial e integração de um único Service.p614795f3... concluídas, com baseline09678e8f... e backup. Runtime69021 CONCLUÍDO: somente Service.p/r, sursum-api/MED/9911 pelo share137; MED restaurado após8,173s, sessões145/146 recarregadas no mesmo pid3856625, estado IMA preservado. Sem rotas, autenticação, metadados ou negócio alterados. Recibos official-build10-v2/{official-compile-verification,canonical-manifest}.json e runtime-build10/{active-manifest,publication-attempt,manager-publication-review}.json. Não repetir publicação.
+
+
+
+Diagnóstico PASOE CONCLUÍDO: GET positivo da chave já observada no container333426 e rejeição422 de alias com espaço final, alias lowercase e ID lowercase. Consulta333426 retorna104linhas. Os quatro containers332526/331126/200019/1525 atingem especificamente CONTAINER_NF_CANDIDATE_LIMIT(200), não source-limit50mil nem timeout10s. Prova runtime-build10/pasoe-limit-diagnostic-proof.json, metadataReady=false. Metadados1053 continuam RETIDOS; falta solução completa para volume sem truncar dados e validação final antes do catálogo. Gerente deve compor o próximo companion sobre614795, preservando onze recursos antigos. Tentativa10 original40264 falhou por HEX-ENCODE(RAW) incompatível12.2; não repetir nem usar seus artefatos. Correção10-v2 usa MEMPTRdireto/SUBSTRING134, comprovada isoladamente e no pacote oficial.
+
+
+
+SQL1040/41: sessão95118 CONCLUÍDA, fixturev2 SHA8c9e15ed... e revisão b49917ee...,14SELECTs de constantes derivados com único systemanchor SYSPROGRESS.SYSCALCTABLE. Dez consultas executaram/24linhas sintéticas; quatro casos de divisor conhecido zero recusados. Resultados/nullflags/metadados em sql-comparison-source-derived-v2.json; executor deve absorver sem confundir fetchODBC0 com SQLNULL. V1 falhou apenas na sintaxe UNION sem FROM; preservar ambas as provas, não repetir. Sem dados comerciais/DML/configuração global. SQLTables34017 CONCLUÍDO: os quatro nomes PUB tipos_valor/empresas_imposto/desenhos/tipos_desenho não visíveis no perfil espec_pro observado; prova sql-four-pending-tables-metadata-v1.json, não conclui ausência universal. Processo usa ODBCINI=/etc/odbc.ini apenas no PHP filho; não alterar configuração global.
+
+
+
+Objetivo GLOBAL ACTIVE. Controles FINAL. Três reads da resposta call_5111 já concedidas/verificadas anteriormente; não conceder novamente. Novos acessos ficam para o final. 1055 ainda candidato, deve rebasear Service sobre614795 antes do próximo pacote. 1054 congelado/retido sem hooklogin ou escritaERP; anexos container aguardam caminho/backup do acervo146ausentes, não repetir probes. Manter bibliotecas de negócio reutilizáveis e auditoria com usuário e valores anteriores/atuais. Sem segredos/DDL/commit/push.
+
+
+
+
+
+**Checkpoint10, prevalente sobre os estados antigos:** tentativa oficial40264 FALHOU após8compilações12.2PASS, no primeiro TT: `identical alias bytes succeed`. Nenhuma integração/publicação10. Logs foram recuperados19457; não repetir10. Downloads opcionais ausentes deixaram arquivos locais de zero bytes, sem prova de TT. Diagnóstico sintético v1 falhou por sintaxe do próprio driver (logs9172); v2 concluído89747 comprovou erro12117: HEX-ENCODE rejeita argumentoRAW no12.2. Diagnóstico v3 concluído74366: MEMPTRdireto com SUBSTRING134 passou, completedtrue/equaltrue/errors[]/NUMDBS0. Provas em `.runtime/ciw-completion-20261028/nf-keybytes-diagnostic-v{1,2,3}`. Gerente deve preparar novo10-v2/companionimutável com apenas esse hunk; Service d799 aindaNÃOintegrado. Runtime9-v2 continua09678 e metadados1053 retidos. Inspeção runtime10 somenteleitura92508 jáconcluída, fontes/rcode9baseline corretos. SQL maisrecente:22casos literais (8+9+5),6PREPAREsemexecute e9SQLColumns concluídos, sem DML/configglobal; metadados reais9operandos em sql-comparison-operand-metadata-v1.json. Não repetir esses probes.
+
+
+
+
+
+
+
+**Estado: ACTIVE, não concluído.** O usuário determinou em 28/10 que sejam feitas todas as conversões faltantes, usando gerente/executores e objetivo persistente. A conclusão de um lote não encerra esse objetivo. O goal da conversa foi criado sem limite de tokens. Manter o escopo amplo; não substituir por sinalizadores, compras ou consultas fáceis. Respeitar as exclusões explícitas anteriores: Controles por último; item de menu Conta corrente fornecedor adiado enquanto seu destino não estiver comprovado. Isso não exclui toda a família financeira.
+
+
+
+
+
+
+
+Inventário técnico: 262 aplicações, 17 famílias; estados registrados inicialmente 61 Convertido/138 Pendente/19 Parcial/34 Triagem/1 Relacionada/9 Preparado. Esses estados têm pendências antigas; conferir recibos especializados e comportamento atual antes de converter novamente ou encerrar uma origem. Não declarar todos os 262 convertidos. Gerente ativo `/root/ciw_completion_manager`, dois executores por domínio, root responsável por integração, compilação, publicação e validação. Plano `docs/superpowers/plans/2026-10-28-ciw-completion.md`; fila/ledger privados `.runtime/ciw-completion-20261028/{ledger,queue,family-summary,reconciliation-proposal}.json`. A proposta de reconciliação não foi aplicada ao inventário global.
+
+
+
+
+
+
+
+## Build8 publicado e validado — seleção de despesas e duas consultas
+
+
+
+**Estado prevalente mais recente: API9-v2 publicada, metadados RETIDOS por falha real de validação.** Oficial85523CONCLUÍDO/exit0:23compilações12.2/.42,8logsTT/1080checks/NUMDBS0,4JSONs iguais à fixture. Release534e616a... e manager2e793c...; não repetir compilação. Integração4arquivosCONCLUÍDA porhash/backups: doisleitores ABL, ActionPHP399cf18a... ehelperPHP6015b42b.... Runtime82418CONCLUÍDO:4artefatosService/Read p+r, pausaMED8,477s, sessões142/143/144 refreshsamepid3856625, MEDrestaurado/IMAestado preservado. Recibos runtime-build9-v2/{active-manifest,publication-attempt}.json; activecopiadoEXATO paraofficial-build9-v2. Não repetir publicação.
+
+
+
+Validação PASOE encontrouP2: GET novo recurso nfs-disponiveis com alias nf_key acrescido de espaço foi aceito; comparaçãoABL ignora espaços finais. Lista333426(104linhas) eGETpositivoigual PASS. Containers332526/331126/200019/1525 retornaram503CONTAINER_NF_QUERY_LIMIT; ainda distinguir causa200candidatos versus50mil/tempo ANTES mudarcap. Gerente prioriza companion1053 restrito ao novo recurso e testesTT diretos; não alterar comportamento de recursos antigos. LC(id) já tem teste, não afirmarbuglowercase semRED. Não há pasoe-read-proof.json aprovado nem metadado/permfuncional9. Não executar publishermetadata9. Registro de tentativas pasoe9-attempts.json; linhasprivadas nf-available-333426-rows-private.json, não buscar novamente antesfix. Próxima validação deve aproveitar identidades jáobservadas.
+
+
+
+Metadados9-v2: ownerrealcontainers_progress=op1000/versionId16/1.0.2; wholepreviewreadonly tem exatamente versão1.0.2→1.0.3 e rowLinks/1 novo. Rootaprovou parent-preview-proof.json semignorarcaminhos; nada salvo emcatálogo. Ferramentas do gerente aguardam releaseapósPASOEverde. SQLPREPARE6queriessemexecuteCONCLUÍDO63281: branch3containerTRUE,ERP/FORNECfalse(código57);branch4container/ERPtrue,FORNECfalse60. JSONv1vazio porUTF8diagnóstico não éprova; v2corrigido JSON_INVALID_UTF8_SUBSTITUTE, statementExecuted/fetchedfalse. Fixture8d6a... e sql-distribution-prepare-only-v2.json. ObjetivoglobalATIVO/ControlesFINAL;1055futura descoberta global e1054adapter ainda candidatos, semescritaERP/hooklogin.
+
+
+
+
+
+Checkpoint seguinte: o lote9 do seletor de NFs NÃO foi publicado. A tentativa oficial24676 falhou na classe estável JsonProgramWebHandler.cls, linha151 (247/198), antes das suítes TT. Logs recuperados por51303. O reader novo não introduz dependência estática nessa classe; preservar seus fontes e artefatos. Gerente prepara pacote9-v2 em estágio novo, excluindo só essa compilação alheia e mantendo o produto1053 idêntico. Não repetir24676 nem usar seus artefatos como compilação aprovada. FULLPHP9 passou968 testes/6529 asserções; ainda falta oficial12.2 válida, integração e publicação9.
+
+
+
+A conexão SQL de leitura foi comprovada no servidor170 com ODBCINI=/etc/odbc.ini somente no processo PHP de diagnóstico. Nenhuma configuração global mudou. O erro1201 significava No Host Name; o driver não recebia ODBCINI. A porta10112 e o driver64bit estão presentes. Não atribuir esse erro à VPN. Recibos sql-fixed-odbcini-process-v1, sql-fixed-literal-parity-v1 e sql-fixed-aggregate-parity-v1.json. Dezessete SELECTs de constantes passaram/recusaram conforme documentado, sem projetar dados comerciais ou executar DML. Divisões porzero recusadas; SUMvazio/allNULL resultaNULL; COALESCE resulta0; UNION deduplica e ALL preserva duas linhas. NULLaritmético satisfaz IS NULL no SQL embora o fetchODBC exponha0; não confundir transporte com semântica SQL. UNIONdata+vazio retorna CHARACTER e formatoMM/DD/YYYY. Esses fatos permitem avançar1040/41/48; ainda faltam absorção no produto e decisões específicas. Não executar INSERT de vetor31 sem cenário autorizado; gate1054mantido.
+
+
+
+Reconciliação de cinco consultas de cadastros aplicada só em remaining/evidence, preservando estados/destinos/contagens; recibo cadastro-query-reconciliation-applied.json. Lookup grid_despesas_impostos coletado e sanitizado, hash0338ba51658129c761e0bcb4164e88f02fb4319bfc5d47396a6ea1a31e610b26; lookup do formulário ausente, sem fallback. Próxima descoberta1055 consulta global não substitui a manutenção existente por empresa/despesa. Controles permanece FINAL; objetivo global ATIVO.
+
+
+
+
+
+**Checkpoint prevalente pós8/dictv1.2:** OpenEdge12.2/.42 compilação e leitura do dicionário CONCLUÍDAS sessão27885/exit0, completedtrue/partialfalse/NUMDBS2/65leituras/23ms, SEM leitura ou escrita de negócio. Prova daily-currency-login-sync/dictionary-probe-v1.2/{compile.log,currency-dictionary-private.json}. Diagnóstico71472 CONCLUÍDO: fields reservado; diagnóstico local confirmou triggers reservado; v1.2 renomeou só variáveis preservando JSON keys e guardas. Não repetir49389/71472/27885. comum.cotacao cotacaoDEC10 EXTENT31 e usuarioCHAR12 EXTENT31, PK mo-codigo+ano-periodo; ems5.cotac_parid DEC10/PK4 e triggers declarados preservados. Executor1054 pode preparar adapter/TT, sem hooklogin ou escritareal. Coleta13e já CONCLUÍDA; cobertura189substantivos/1wrapperincompleto/10semPHP,262/62/200 preservados. Reconciliação8 aplicada somente evidence/remaining de3origens, recibo build8-reconciliation-applied.json, sem promover estados.
+
+
+
+
+
+**Atualização de continuidade pós8:** coleta13eCONCLUÍDA89568/exit0,13apps40PHP221literais omitidos e statfechado cons_ped_container/index.php físicamenteAUSENTE. Coberturaatual189fontessubstantivos/1wrapperincompleto/10semPHP(8diagnósticos+2ControlesFINAL) das200nãoencerradas; inventário262/62preservado. Brokerreadv3confirmouserviçosdbprod_IMA_ems2cad→10033 eems5→10032/.111, basenamesems2cad/ems5; lógico comum→ems2cadreusaregradocumentada. V1/V2inspector nãoresolviam nomesdeserviço; nãofoiVPN. Dict1054v1.1compilação49389FALHOU(329/196,NUMDBS2), probeNÃOexecutado; logsoriginaisrecuperados11184. DiagnósticoCOMPILEONLYemfreshstage71472emexecução/jácred, nãorepetir; incluiGET-MESSAGE paraidentificarerroreal, não abre dadosnegócio. DicionáriooficialaindaNÃOprovado, nãoadaptarescritafísicaEMS.1053NFreadonly eemissão1054seguemexecutores.
+
+
+
+
+
+**Estado prevalente: CONCLUÍDOS compilação, integração, publicação, metadados e validação nativa8.** Não repetir85040(compilação),55827(publicação),97103(metadados) ou95791(runtime). OpenEdge12.2/.42:74compilações/84logsTT/4.664checks(1.166×4)/NUMDBS0nos testes; compilação com1especsomenteesquema. Release8ec63cbce134d78555896dda56522140e0d781d6418b0ba92dfff5831a9b0a85/223pins/110fontes, revisão952PHP6.351. Integração24canônicos+5exemplos porbytes/hash/backup, f2271050preservado. Publicados19artefatos emsursum-api/MED pelo share137; transporteMEDrestaurado8,728s, sessões139/140/141recarregadas no mesmoagente, estadoWEBIMA preservado. Arquivos compartilhados podem ser lidos por outrasinstâncias. Semrotas/PROPATH/auth/DDL/grantsfuncionais/negócio alterados.
+
+
+
+Telas PUBLICADAS1.0.0: **op1047/ciw.container-selecionar-despesas**(container_despesas_selecao_progress), **op1051/ciw.item-custos-manuais**(item_custos_manual_progress), **op1052/ciw.itens-container-amostra**(item_container_amostra_progress). Paiop1003/ciw.container-despesas1.0.3→1.0.4: somente versão+linkcontextualGerardespesas, WHOLEpreviewcomparado/zerooutroscamposignorados. Metadatarelease4b26fb0e...; fontecadastros140→144 eprocessos6→8, todasoperaçõesanteriores/conexões/auth preservadas. Trêsentidadesnovas, grants/locksdeautoria4fases revogados/liberados. Outrostelas/processos preservados.
+
+
+
+PASOE real: duaslistas eDOISGETspositivos, paginação/ordenação/filtroPK/contradição/aliases/20negativos/auth2 passaram. Totais observados1202custosmanuais/19amostras não são invariantes. Runtime nativo: doisCrudDefinitionValidator/list/get/filtrosPK; ProcessDefinitionValidator; opçõesreadonlypositivas8combinações deordenação/contextoobrigatório/enuminválido422; linkpai/source144e8. **Nenhumrun1047executado**, nenhumregistrocriado/alterado/excluído para testar. Auditoria comusuário/imagens antes/depois e rollback do comando comprovada porTT; teste operacional positivo1047 permanecependente/autorização própria necessária. Não dizerprocessooperacionaltestado. Novasduasreads8 e container_despesas_selecao_progress.read/.process aindaNÃOsolicitadas/concedidas; deixaracessosparafinal. Quatroreads7solicitadas e4AUX/1042perms/cenário aindaaguardamrespostas;3readsW1consumidas.
+
+
+
+1047reusa ContainerExpenseDefaultsPlan.i eTaxPlan/PersistPlan/IPI existentes, respeitando empresa docontainer/ordemlegada/subconjunto calculado/fallbacktodas. Não duplicafórmulas. O P1descartedeenums no normalizeEntityPayload foi corrigido no companion62f57a0f.../Builder72c6... com4hunks/reversãoexata; helperestrito compartilhado entre normalização/validação apenasparâmetrosAPIstring/dropdownreferenciados emoptionsSource.parameterFields. normalizeOptionItems geral/guardprocess-only preservados; entrada REALvalidateExternalDraft/roundtrip epublicação real passaram. Dados1051sãoconsultaGLOBALtipo1/23físicos+chave; writersmanuaislegados continuamparciais, nãoconvertidos porsemelhança.1052consultaGLOBALtrêsjoins eambassituações=3, quatrocolunas+chave; não éopainelMEDcontextual.
+
+
+
+Recibos oficiais em official-build8/{official-compile-verification,canonical-manifest,active-manifest,publication-attempt,pasoe-read-proof,runtime-read-proof}.json; metadados em build8-metadata-publication-preparation/{metadata-publication,parent-preview-proof,native-governance-owners,publication-started}.json. Referênciascanônicas deJSON em D:/opencode/construtor-pg/integrations/ciw-completion-20261028-wave4; **jáaplicadas/NÃOreimportar**, não substituirautenticação a partir deDTOsanitizado. Exemplo/docsparidade integrados; candidatoKendo testado, acesso file://canônico bloqueado porpolíticabrowsersemcontorno. NãoalegarUI LDAP8: semnovasreadsfuncionais concedidas.
+
+
+
+**Anexos: gate deacervo real, nãorepetir probes.** Trêsprobesprivados12.2ROconcluídos(49935/7041/65585), último146referênciasMED. Stat3314encontrou0arquivos/146ausentes no rootconfiguradoqueexiste/nãosymlink/matchedlegado. Questionado usuário poroutrapasta/backup, aguardaresposta. Downloadcandidato revisado continuaNÃOativado, positivoarquivoNÃOprovado; nãoadivinharpath/nãofuzzy/nãocriararquivos. Campoausente doReaderantigo nãoimplicaausênciadearquivo; statliteral éaprovaatual.
+
+
+
+Próximos:1053seletorNFcontextualreadonly(reusoContainersPainelFinance; exportheadersatual container-header-current efinance-current); associação/desvinculação/DELETEparcialPK continuamseparadas.1054cotação diária, preservarDATAHOJE nolegado eobserved_date como referência semmudarimport-bc; esquemaEMS2/5 e30/31slots precisamprova antesadapterphysical, semhooklogin/escritareal. Inventário262/62Convertido/200nãoencerrado/17famílias; disponibilidade176fontessubstantivos/23semPHP/1wrapperincompleto. ControlesFINAL;GLOBALACTIVE. SQLgates1040/41/48 mantidos(v6inconclusivo/semSQLliteral), nãoatribuirVPN. Coleta20dconcluída20apps77files383omitidos. Semsegredos/commit/push.
+
+
+
+## Retomada seguinte — composição8 retida e preflight de anexos
+
+
+
+**Build8 em execução oficial85040:** release8ec63cbce134d78555896dda56522140e0d781d6418b0ba92dfff5831a9b0a85 recebido/conferido223pins/110fontes/15baselines+9novos+5exemplos/f227preservado. RootpreflightPASS; SSH12.2/.42 iniciado e credencial jáentrada; NÃOrepetir.74compiles/84TT4.664 esperados, aindaaguardarretorno e official-compile-verification. Nenhumcanônico8/publicação8 nesta gravação. Anexosúltimoprobe146concluído e0arquivos físicos, perguntaorigem/backupaguarda; não repetir3probes.
+
+
+
+
+
+**Atualização prevalente:** P1normalização1047 corrigido/revisado(root+gerente), helpercompanion62f57a0f.../Builder72c6... por4hunks/reversãoexata. Composição8 LOCALREADY952PHP6.351/3draftsnativos/74compilesoficiaisplanejados/84TT4.664; releasefinal aindaaguardado, nenhumSSH8/canônico8.
+
+
+
+**Anexos corpus confirmado ausente:** último probe65585/al-v1.2 compilou12.2 e terminou146referênciasMED/NUMDBS1, limitespreservados. Stat3314no170 confirmou0arquivos disponíveis/146ausentes no rootcorreto; document-all-observed-files-preflight.json. Primeiros5 e recentes5 foram observações históricas, não repetir os trêsprobes. Downloadcandidato revisado permaneceNÃOativado/positivoNÃOprovado. Pergunta assíncrona enviada ao usuário sobre outra pasta/backup; aguardaresposta, não criararquivos nem trocarroot porpalpite. Frente1053seletorNFreadonly empreparação; exportatualsanitizado container-finance-current disponível.
+
+
+
+
+
+**Build8 ainda NÃO liberado, compilado oficialmente ou publicado.** Composição local1047seleção/1051custosmanuaisreadonly/1052amostrasglobal reúne110fontes,74compiles12.2planejados,21suites/1.166checks×4/4.664.71compileslocais12.8/84logsTT/NUMDBS0 e FULL944PHP6.273 passaram, mas entrada REAL validateExternalDraft1047 retorna422ENTITY_API_OPTIONS_PARAMETERS: normalização descarta opções dos dois parâmetros string/dropdown. Gerente/executor corrigem em candidato isolado com teste da entrada completa; não integrar snapshot antigo nem relaxar validação global.1051/1052/Registry6ops passaram separadamente. ExatoPHP1050f227 e demais baselines7 continuam obrigatórios.
+
+
+
+**Anexos readonly candidato revisado, não publicado:** manifest container-attachments-download/e64108d15e24b1692c2d9ad31555cbeb4e960a6fd660a551cbe17e922d6522df e manager-review1868dae411c20fb1f4f6ed7a9587fc103e30fc6ac75021eb822cfe024861f570. Reusa op1004/broker/rota existentes, semupload/manutenção. Root170comparado ao diretório Scriptcase, existe/nãosymlink/configidêntica. Porémconsulta332526retornou0anexos; document-root-preflight-scope.json registra fileAvailabilityValidated=false. Não confundir rootPASS com arquivopositivo. Readeratual não expõe caminho_arquivo, só tem_arquivo. Probe privado12.2somente leitura de até5IDs+basenameMED,50miloperações/10s/NUMDBS1: attachment-identity-readonly-probe/plano075252d430f56666d35fa878650604af60d910d630b6bcd449d7502367290a54 CONCLUÍDO49935/exit0/12.2compilePASS/cincoidentidadesprivadas, não repetir. Statliteral170confirmou todasas cinco referências antigas AUSENTES; rootseguecorreto. document-files-preflight.json registra fileAvailabilityValidated=false, semdownload/conteúdo/write. Positivoarquivo aindaNÃOprovado; companiondereferênciasrecentes em preparação, semmatchingfuzzy/reinterpretação de basename. Sempublication ouprogramasdenegócio.
+
+
+
+**SQLODBC continua inconclusivo:** v3/4/5 falharam por erro de sintaxe no próprio diagnóstico (fecho de array), identificado por lintPHP e corrigido antesv6. Não foi falhaVPN/driverprovada. v6concluiu: DSNregistrado, credenciais presentes, conexãofalse, SQLSTATEnull, warningUTF8válido/mbdisponível, apenaspalavrasDriverManager/DataDirect/ODBC/SQLConnect. SemconsultaSQLliteral executada; gates1040/41/48 mantidos. Nenhumaviso bruto/credencial persistido. Não repetir diagnósticos sem nova hipótese concreta.
+
+
+
+**Reconciliação conservadora aplicada:** cincoorigens1045/46/49/50 tiveram apenas remaining/evidence corrigidos porhash/fontes+7recibos positivos, sem alterar state/state_group/target/sourcehistory/contagens. readonly7-reconciliation-applied.json. Inventário continua262/62Convertido/200nãoencerrado, semfecharorigemporsimilaridade.
+
+
+
+**Coleta20d CONCLUÍDA57422/exit0:**20apps/77arquivos/383literais sensíveis omitidos, sources/scriptcase/ciw-completion-next20d-20261028 e integration-src/ciw-inventory/ciw-completion-next20d-20261028-source-manifest.json. Sófontes, semexecutarPHPlegado;ControlesFINAL/menuContaCorrenteexclusão pontual preservados. Request20d não émais pendência de coleta; cobertura atualizada pelogerente:176fontessubstantivos/23semPHP/1wrapperincompleto entreas200nãoencerradas, sempromoverestados.
+
+
+
+TrêsreadsW1reiteradaspelo usuário jáestavamconsumidas/UIverificadas, não reaplicadas. QuatroAUX,quatroNOVASreads7 e1042perms/cenário continuamSEMresposta/gatefalse;nenhumgrant/write inferido. Objetivoglobal ACTIVE.
+
+
+
+## Build7 publicado e validado — quatro consultas no construtor
+
+
+
+
+
+
+
+**Atualização prevalente — quatro detalhes reais agora comprovados:** o probe privado70729 terminou/exit0, compilado emOpenEdge12.2, NUMDBS1 somente leitura, encontrou cinco pares de identidades com parentexistente dentro dos limites. Nenhum valor financeiro/nome foi projetado e não houve escrita. Usando um dono observado, **1050 passou lista/detalhe/filtroPK/contradição/cross-owner no PASOE e lista/detalhe/filtro no runtime nativo**, com igualdade dos dados. Prova official-build7/pasoe-native-ledger-positive-proof.json; linhas somente no arquivo privado ledger-probed-owner-rows-private.json. Os recibos anteriores de extratos vazios continuam observações válidas dos primeiros donos, mas NÃO são mais limitação de teste positivo. Não repetirprobe70729 ou inventarIDs.
+
+
+
+
+
+
+
+**Quatro NOVASreads1045/46/49/50 foram solicitadas em pergunta assíncrona**, ainda sem resposta nesta gravação. Gate build7-readonly-access/authorization.json authorized=false/consumed=false. Ferramentas enable-ciw-completion-build7-reads.php e verify-ciw-completion-build7-access.php lintadas; modo prepare executado somente leitura, quatro telas assinadas presentes. Aguardar autorização específica; esclarecido escopo GLOBAL das duas consultas gerais e dono obrigatório dos dois extratos, sem writers/processos. Não confundir com3W1consumidas ou4AUXanteriores pendentes. As passagens antigas abaixo sobre teste1050pendente/probeemexecução/gateem preparação são históricas e supersedidas por esta atualização.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Estado prevalente: runtime e metadados7 CONCLUÍDOS**, substituindo as seções anteriores que diziam pendente. OpenEdge12.2/.42:68compilações,72logsTT,4.120verificações, NUMDBS0nos testes;19fontes canônicos integrados. Publicados25artefatos em sursum-api/MED pelo processo24373/exit0: WEBMED restaurado após8,875s, refreshdas sessões137/138 no mesmo agente/pid3856625, estado WEBIMA preservado. Arquivos continuam compartilhados137. Não repetir compile/publicação. official-build7/{official-compile-verification,canonical-manifest,active-manifest,publication-attempt}.json comprovam.
+
+
+
+
+
+
+
+Quatro telas publicadas1.0.0: **op1045/ciw.descontos-importacao-geral** (descontos_importacao_geral_progress), **op1046/ciw.descontos-importacao-lancamentos** (descontos_importacao_lancamentos_progress), **op1049/ciw.custo-distribuicao-itens-aptos** (custo_distribuicao_itens_aptos_progress) e **op1050/ciw.custo-distribuicao-lancamentos-item** (custo_distribuicao_lancamentos_item_progress). Duas consultas são GLOBAIS, conforme origem; dois extratos exigem dono. Pai1049temlinkcontextual1050. Fonte motor_progress_ciw_cadastros132→140,132operações anteriores/auth/conexão/demais programas preservados. Nenhuma escrita de negócio, processo, DDL ou grantfuncional humano. Fonte sanitizada140final: official-build7/metadata-source-after.json. Não reimportar metadados já aplicados. Leitura nativa4telas/validadores/3detalhes/contextos/link passou: runtime-read-proof.json.
+
+
+
+
+
+
+
+PASOE real: quatro listas, filtros/paginação/rejeições de campos/contextos, quatro recusas semtoken e trêsGETspositivos. Contagens observadas93descontos/28aptos/1movimento desconto/0movimentos do item selecionado não são invariantes. **GET positivo1050 NÃO comprovado ainda**:20donos aptos e um dono observado no histórico332526/2354 retornaram extrato vazio; não inventar ID/criarnegócio. Provas pasoe-read-proof.json/pasoe-ledger-positive-proof.json; TT e Reader→PHP cobrem detalhe. Probe ABL privado de até5pares de IDs com parentexistente, NOLOCK/50mil leituras/10s/NUMDBS1/no valores financeiros em ledger-identity-readonly-probe/execution-v1.1: **execução70729 em andamento nesta gravação**, não repetir; confirmar retorno e JSON privado antes de usar IDs. Original separador PowerShell era CORRETO (CHARCODE92único); hipótese inicial de duasbarras foi leitura errada do JSON e está supersedida. Companion sóadapta helperSSH e freshstage; ABL original idêntico.
+
+
+
+
+
+
+
+**Correção real P1PHP1050 integrada:** comparação de lista ordenada de propriedades JSON rejeitava a chave válida produzida pelo próprio Reader (ledgerIDantesowner). Uma linha aceita exatamente o conjunto de dois nomes, mantendo tipos/identidades/dono e chave opaca/aliases byteexatos. Helper hashf2273437e55865d3ba66ea5fbea0e96d7aa01ea2bd7c6e0bc2bde906ae7e457c. Revisão independente0P1/P2, FULL917testes6.018asserções. canonical-keyfix-manifest.json/manager-keyfix-release.json/manager-keyfix-full.xml preservam backup e origem. Não alteraABL nem exige republicaçãoPASOE; manifest19original mantém hashantigo intencionalmente, ler junto do receiptfix. HarnessPASOE também foi corrigido para comparar conjuntos de nomes,9checks; chave opaca não alterada. Validador nativo usava detail.data??detail e confundiu o campo físico DATEdata com envelope; sóharness foi corrigido para reconhecer record_keytop-level. Não houve mudança frontend por esse diagnóstico.
+
+
+
+
+
+
+
+**Retomada de metadados concluída21262:** primeiro publisher salvou140ops, depois guarddetectou4tipos inválidos get normalizados pelo Builder para custom, antesde criarqualquer entidade/programa. NativeNormalizer REAL reproduziuRED e passou41checks com type=detail (body.operationcontinua get). Resume limitado guardou140/132/auth e mudou SOMENTEtype dos quatro novos_get custom→detail, semnovoappend; depois publicou4telas. metadata-partial-inspection.json/metadata-operation-type-correction.json/metadata-resume-started.json/metadata-publication.json e reviews registram. Metadados congelados originais continuam históricos, com companioncorrigido; próximos pacotes usam tipo nativo detail, não get. Não alterar globalBuilder para contornar. NÃOreexecutar publisher/resume concluídos.
+
+
+
+
+
+
+
+**Acessos:** três readsWave1 autorizadas emcall_5111... já consumidas/UIverificadas. QuatroAUX do loteanterior ainda aguardam resposta.1042lote aindaaguarda trêspermissõesread/edit/delete e cenário2147000110, pedidosjá feitos, sem escrita. QuatroNOVASreads1045/46/49/50 precisam autorização própria, gate/tools em preparação pelo gerente; não inferir dosoutroslotes. Pergunta deve esclarecer duasconsultasglobais e doisextratoscontextuais, semcreate/edit/delete/process.1043cálculo separado jácadastrado/sourceprocess6/pai1003v1.0.3/contextoconfirmação validado, porém suas permissões container_calcular_impostos_progress.read/.process e teste positivo continuam pendentes; autorização1042 não cobre1043/1047.
+
+
+
+
+
+
+
+Próximo lote:1047seleção despesas v1.2retido por normalização involuntária de15LF fora dos hunks emAction; lógico/P2process-only passou, aguardacompanionbyteexato.1051consulta manualreadonly e1052amostrasglobalreadonly passaram reviews separados, aguardamcomposição/fonte140companion/oficial; não implicamwriters manuais nem conversão de origem inteira. Anexos container: reutilizar consulta e transporte/broker existentes para download autenticado; exportsatuais sanitizados emcontainer-attachments-current. Não criar readerparalelo/pathlivre ou excluirlegado compartilhado. Próximasexecuções precisamrelerbaselines7+fixPHP.
+
+
+
+
+
+
+
+Objetivo GLOBAL ACTIVE, não encerrado por lote. Inventário262/62Convertido/200nãoencerrado/17famílias; disponibilidade200=156fontessubstantivos+43semPHP+1wrapperincompleto. ControlesFINAL. Request20d preparado/nãocoletado. SQLgates1040/41/48 segueminconclusivos, sematribuirVPN/inventarNULL/UNION/divisão. Túnel9080/19910→9910MESMAsursum-api/MED9911, nunca9921fallback. Semsegredos/commit/push.
+
+
+
+
+
+
+
+## Build7 oficial integrado e comando1043 cadastrado — publicação7 pendente
+
+
+
+
+
+
+
+**Estado prevalente:** official-build7 compilou no .42/OpenEdge12.2,68entradas,72logsTT/4.120verificações/NUMDBS0. As quatro consultas readonly1045/1046/1049/1050 compartilham Reader/Dispatcher/Query/Action conciliados sobre6, com19arquivos canônicos integrados porhash/backup. Revisão do gerente0P1/P2/FULLPHP910testes5.974asserções; root verificou99fontes/19baselines e todos72logs.25artefatos de produção selecionados, **ainda NÃO publicados** nesta gravação. Não repetirSSH56201: terminou após baixar resultados e root verificou official-compile-verification.json. Próximo passo é inspeção/runtime coerente MED, validaçãoPASOE e só depois metadados132→140/quatro telas. Novosprodutos ainda não encerrados. Artefatos official-build7/{manager-release,root-preflight,official-compile-verification,canonical-manifest}.json. Gerente prepara ferramentas de publicação em /tmp/ciw-completion-20261028-wave4, sem executar rede. O verificador verify-ciw-completion-build7.py é LOCAL e pode sobrescrever seu manifesto pinado: NÃO reexecutar após release; root oficial usa verify-ciw-completion-build7-official.py.
+
+
+
+
+
+
+
+**1043 metadados publicados e validados:** ciw.container-calcular-impostos/op1043/1.0.0, pai ciw.container-despesas/op1003/1.0.3 com link adicional, fonte motor_progress_container_processos5→6 preservando cinco operações/auth/conexão. Validador nativoProcessDefinitionValidator/contexto integer obrigatório readonly/confirmação passou; nenhum endpoint run chamado. Permissões reais derivadas do prefixo: container_calcular_impostos_progress.read e .process — ainda NÃO concedidas ao usuário e teste positivo NÃO autorizado. Não chamar de execução operacional encerrada. NÃO presumir op1043.read/.process, nem autorização do lote1042. Exports sanitizados para rebase1047: official-build6-v2/tax-only-metadata/{source-six-current,op1003-after}.json; contém authHeaders omitidos e não deve substituir autenticação real.
+
+
+
+
+
+
+
+**Retomada da publicação1043, concluída:** primeira tentativa parou antes de fonte porque fullDTOincluía governança alterada pelos próprios grants; guardas corrigidas removendo SOMENTE versões[].governance, com teste9casos. Segunda salvou fonte6 e parou403 antes da entidade. Política nativa findStandardProgramVersionByEntity resolveu owner REALop1016/version30, embora bootstrap listasseop1015 primeiro; exige locks program+entity com MESMOgrant. Resume final separou três fases owner1016, novo1043 e pai1003, cada uma com seus locks/grants e finally. Fonte6 NÃO reaplicada. Resume38858 concluiu; metadata-publication.json/runtime-proof.json comprovam3processos antigos e demais programas preservados, grants temporários revogados. Não alterar ou enfraquecer governança. Recibos das parciais, owners e reviews preservados. NÃO executar publishers/resume concluídos novamente.
+
+
+
+
+
+
+
+Build6 e três históricos1.0.1 continuam publicados/validados. UI LDAP do histórico de item confirmou descrição atual e filtroPULEATHER/contexto332526/2354; screenshotprivado official-build6-v2/ui-history-item-description.jpg, aba35fechada. Demais quatro consultas AUX ainda aguardam resposta ao pedido específico; três reads WAVE1 já consumidas. Lote1042: API publicada, metadados/permissões read-edit-delete/cenário2147000110 continuam aguardando respostas já solicitadas, nenhuma escrita comercial.600TTpós6 e coletorBC/triggerclosure válidos. Preservar gates e cleanup/triggers.
+
+
+
+
+
+
+
+**1047v1.1:** P2process-only fechado por revisão independente,0P1/P2, teste5/17; não entrou7. Manifest4fa5a8b489fb3857e5be5e69cce09ffb344a1ede515a211e786b30cf3744917a. Próximo rebase sobre7 e sourceprocess6/pai1003v1.0.3.1051 segue consulta manualreadonly, sem presumir correções de bugs/escritores;1052consulta GLOBALamostras itenscontainer (duas situações=3) em preparação, não equivale ao painelMEDcontextual. Anexos reutilizarão leitura existente; transporte de bytes/manutenção depende binding fechado e serviçosgenéricos existentes, sem pathlivre/removerlegado compartilhado.1040/41/48 mantêm gatesSQLNULL/divisão/UNION: diagnósticoODBC encontrou DSNregistrado/credenciais presentes/avisoDataDirectODBC, porém conexão falhou e SQLSTATE não disponível; causa inconclusiva, não atribuirVPN nem inferir semântica. sql-profile-diagnostic-v{1,2}.json contém apenas classificações, nenhum errobruto/segredo.
+
+
+
+
+
+
+
+Coleta19c concluída:19apps/56arquivos/185literais omitidos, sources/scriptcase/ciw-completion-next19c-20261028 e manifesto sanitizado. Disponibilidade das200origens nãoencerradas:156com fonte substantiva,43semPHP local e1somente wrapper(cons_ped_container inclui indexausente), source-coverage.json. Inventário permanece262/62Convertido/200nãoencerrado/17famílias, sem promoção por semelhança. Request20d preparado, ainda NÃO coletado. **Controles FINAL; objetivo global ACTIVE.** Sem negócio/DDL/grants humanos/commit/push. Túnel9080/19910→9910 mesma sursum-api/MED9911, nunca9921fallback.
+
+
+
+
+
+
+
+## Build6 publicado e validado — históricos atualizados
+
+
+
+
+
+
+
+Estado prevalente: **publicação concluída**, corrigindo a seção histórica abaixo que dizia execução em andamento. OpenEdge 12.2 no .42: 55 compilações, 56 execuções TT, 3.616 verificações nas quatro combinações de encoding/formato numérico; TT sem conexão com banco. Os 15 arquivos canônicos foram integrados por hash e backup. Publicados 21 artefatos em sursum-api/MED: transporte WEB MED pausado, sessões ociosas recarregadas e transporte restaurado em 10,193 segundos. Estado WEB IMA preservado; arquivos compartilhados podem ser lidos por outras instâncias. Não repetir publicação. Recibos: official-build6-v2/{active-manifest,publication-attempt,official-compile-verification,canonical-manifest}.json.
+
+
+
+
+
+
+
+PASOE real: cinco históricos consultados, quatro detalhes positivos, contextos inválidos rejeitados; três identificações atuais e seus filtros positivos/negativos validados. Os campos históricos persistidos permanecem exatamente iguais aos recibos anteriores; nenhuma rotina de recálculo executada. Metadados op1035, op1037 e op1039 publicados em **1.0.1**, somente acrescentando campo, coluna e filtro readonly: descrição atual do item, nome abreviado atual do emitente e descrição atual da despesa. Validação no runtime nativo das três telas passou com lista, detalhe, filtros e contexto obrigatório. Fonte cadastros permanece com 132 operações. Outros programas e permissões preservados. Recibos lookup-metadata-publication.json e lookup-runtime-proof.json. As outras telas AUX permanecem 1.0.0; pai op1005 mantém 1.0.2/cinco links, pai op1003 mantém 1.0.2.
+
+
+
+
+
+
+
+As três consultas autorizadas em call_5111d629eb42427c81f8fccf247bd988 já foram concedidas, verificadas e consumidas no wave1-access; não reaplicar. **Quatro NOVAS consultas AUX aguardam resposta humana**; wave2-aux-access/authorization.json permanece false. Não confundir com as três anteriores.
+
+
+
+
+
+
+
+**1042 lote de despesas:** código compilado e API publicada, consultas e rejeições validadas; metadados, três acessos read/edit/delete e cenário operacional ainda pendentes. O pedido assíncrono já foi apresentado ao usuário, sem resposta até esta gravação. Cenário exclusivo CIW-1042-VALIDACAO-20261028-2147000110: container novo 2147000110, despesas manuais novas 4/5, no máximo 22 despesas e quatro memórias novas, com limpeza canônica e logs preservados. Proposta privada v1.1 SHA a74be1b238e7ce0911512f7ac3127dd7405543962c77f2f846d8117d7aca86d3. Não executar antes de autorização específica; ela não inclui teste positivo 1043/1047. Replay central oficial pós6 passou 600 verificações TT/NUMDBS0; coletor BC real somente leitura passou. O trigger e seus oito artefatos/dois aliases MED estão disponíveis e preservados. Não desabilitar nem contornar triggers.
+
+
+
+
+
+
+
+**1043 cálculo de impostos separado:** executável integrado/compilado/publicado; somente rejeição por contexto ausente foi testada no PASOE. Fonte de processos 5→6, nova tela e link do pai ainda NÃO publicados. Teste positivo e novos acessos também não autorizados. Não apresentar como conversão operacional encerrada.
+
+
+
+
+
+
+
+Próximo lote readonly em preparação: descontos 1045/1046, aptos globais 1049 e extrato de distribuição do item 1050. **1047 seleção de despesas retido por P2 encontrado antes de integração**: optionsSource.parameterFields precisa ser restrito ao processo, preservando a geração intermediária existente; gerente coordena correção e RED→GREEN. Fonte manual de custos 1051 tem bugs legados de escalar versus array e saldo indefinido; não presumir regra MAX para exclusão nem corrigir cálculo silenciosamente. Comparações 1040/1041 e extrato 1048 ainda dependem de evidência SQL NULL/UNION/divisão; probes anteriores não conectaram e não provam semântica.
+
+
+
+
+
+
+
+Frontend nativo e rotinas centrais reutilizados; nenhum frontend paralelo, edição de biblioteca Kendo, DDL ou escrita comercial neste lote. Exemplo batch e schema fechados integrados; teste adicional file:// bloqueado pela política do browser, sem contorno. Novos fontes Scriptcase 20b sanitizados disponíveis: 20 aplicações/79 arquivos/319 literais omitidos. Inventário 262 origens: 62 convertidas, 200 não encerradas, 62 sem fonte local; não tratar todos como novos cadastros. **Controles permanece pendência FINAL. Objetivo global ACTIVE.** Túnel sessão9080/19910→9910 da mesma sursum-api/MED9911, sem fallback9921. Não gravar segredos, commit ou push.
+
+
+
+
+
+
+
+## Build6 oficial integrado — publicação coerente em execução
+
+
+
+
+
+
+
+**Estado prevalente em andamento:** official-build6-v2 encerrou SSH78620 e foi conferido:55compiles12.2/.42,56TT/904porcombinação/3616total/NUMDBS0,4combinações, compileCOM1sóesquema.15fontes canônicos integrados porhash/backup,885PHP5841stagedGREEN. Old official6 semsufixo CANCELADOpréSSH. **Publicação21artefatos emexecução sessão99976**, plano6-v2/publish-plan.json. Não repetir/retomar sem consultar o mesmo processo e receipts. Envolve ABI interno8→10 das duas duplas API/Service; entrada WEB MED é pausada pelo vendor OewebTransportManager, drenaIDLE, instala21, refreshAgent, reabilitaemfinally. IMA sóconsultaestado/preservado, nenhumaoutrainstância/rota/PROPATH/auth/config alterada. Inspeção provouMED/IMAenabledtrue/21baselines; OewebTransportManager e WebTransportManager são objetos diferentes, usar Oewebrealconfirmado. **AINDA não alegar runtime6PUBLICADO atéactive-manifest+retorno e regressões.**
+
+
+
+
+
+
+
+Metadados continuam132operações/op1005versões1.0.2/pai1003despesas1.0.2.6AINDA não publicoumetadados:1043cálculo de impostos separado e3nomesatuais noshistóricos são próximos.3readsWAVE1jáconsumidas/UIverificadas;4NOVASreadsAUX continuamaguardando resposta ao pedido assíncrono, gatewave2-aux-access/authorization.json false, ferramentasPHPpreparadas/nãoaplicadas. Pai1005com5links validadoUI LDAP/screenshot ui-parent-five-links.jpg, tab34fechada. Não liberar4reads porinferência.
+
+
+
+
+
+
+
+1042API5publicada/readgetnegativasprovadas; metadados/fonte3ops/grants/escritacomercial AINDAnãoexecutados. CenárioCONCRETO CID2147000110/marcaCIW-1042-VALIDACAO-20261028-2147000110/defs4+5,7etapas/payloads/bindings/allowlist/caps em proposal-private-v1.1.json SHAa74be1b238e7ce0911512f7ac3127dd7405543962c77f2f846d8117d7aca86d3, manager-review-v1.1.json. Máx1mestre22despesas4memórias,0itens/títulos/notas/custos/versões/estoque, campos<=3/totalpersistido3.04. **Reprodução OFICIAL12.2 pós6:1compileTT,600checks/NUMDBS0**,max5fiscais7despesas4memórias/fiscaiszero/stale409sem efeitos; replay-after6-v1/official-verification.json. Não confundircomescritareal. CollectorBCreal25buffers/cotacoes-fiscais/332526somenteleituraGREEN/quotation-collector-proof.json, nãoalegarcoletornovoheaderexecutado.
+
+
+
+
+
+
+
+**Corrige diagnóstico antigo do trigger:**8artefatos e2aliasesMED publicados16Oct continuam exatos, PROPATHMEDprimeirodirconfirmado (parserlocaltrimwhitespace). cleanup-runtime/cleanup-runtime-proof.json. SEARCH .42isolado vazio NÃOsignificaausentePASOE. Triggerpreservado/nãodesabilitado/definiçãointacta, exclusão nova ainda nãoexecutada. Cleanupcanônico antes/depois por IDs/CID/marcador, conservar logs, semSQLdelete.3permissões1042read/edit/delete ausentes confirmadas emaccess-prerequisite.json; aguardampedidonovoespecífico, nãoautorizadaspelas3ou4AUX. Depoispublicar/validar6RO, pedirautorização3perms+cenárioconcreto e continuar outrasfrentes; primeiraescritaprecisarespostahumana.
+
+
+
+
+
+
+
+Extensão nativabatch/exemplos/paridade:5arquivosdoc/demo integrados porbyteexato (matrizCP1252preservada); nenhum mockemprodução. SchemaP2descoberto/corrigido:editing.snapshot fechado+modebatch,14AJV2020REDGREEN, integrado32f6710c...,outrosschemasintactos. Native-batch-snapshot-{example,schema}/canonical-manifest.json. Demo12checks/screenshotpréintegração/bytesiguais; verificação adicionalcanônica nãofoifeita:8765examplesForbidden,file://bloqueadopolíticabrowser, NÃOcontornar/abriroutrasuperfície/expandirservidor;tab33fechada. Produção continuaJSONscreenId/endpointId.
+
+
+
+
+
+
+
+Novos20bfontes sanitizados: sources/scriptcase/ciw-completion-next20b-20261028,20apps/79arquivos/319literaisomitidos; PHPlegadonãoexecutado. Inventário continua62Convertido/200nãoencerrados/17famílias; semfonte62(antes82). Gerenteativo, executores1047seleção(237TT×4/PHP1611264/AJV17) e1049aptos/1050ledgeritemRO;1048saldoSQLtemgatesliteralNULL/UNION;1045/46descontosrebaseados6/PHP8855841 aguardampróximaoficial. Fonteatual132exportada emsource-132-current-after6.json,SEMheaders, nãoficar esperandoexportjáfeito. GoalglobalACTIVE/ControlesFINAL.
+
+
+
+
+
+
+
+## Wave2 publicada — build5-v6 oficial e quatro filhas históricas
+
+
+
+
+
+
+
+**Estado prevalente:** official-build5-v6 terminou; sessão48103 ENCERRADA, não esperar/repetir. OpenEdge12.2/.42:43compiles sem erro,40TT/683porcombinação/2732checks, UTF8/ISO8859-1×AMERICAN/EUROPEAN. Compilação com1conexão somente esquema espec10012;40execuçõesTT SEMbanco, Regression assertNUMDBS0 antes/depois. Net.pl da MESMAinstalação12.2 no harness; nada de PROPATHglobal/runtime. Proof official-compile-verification.json; v5 continua diagnóstico FALHOUno29º/0TT, v1–4 canceladospréSSH.
+
+
+
+
+
+
+
+Integrados16fontes canônicos(ABL/includes+4PHP+3JS) e1rotaaditiva com backups/hashes. Publicados somente16artefatos fonte/r/include +rota containers-despesas-lote no137, não43compiles/classes/fixtures. Catálogo operacional tinha campo response na rota streaming, preservado integralmente pela mescla REMOTA, não substituir porJSONcanônico. Active-manifest17targets/routeAdditions1; MEDrefresh132/133 ociosas concluído, mesma sursum-api/med/9911. Rotabaselineantes845bdf... difere canônico, preservada. Old history404Service1b723910... não alterado.
+
+
+
+
+
+
+
+**Metadados AUX publicados:** op1036 pagamentos,1037NFs,1038descontos,1039despesas históricas,1.0.0. Pai ciw.container-versoes-custo/op1005 **1.0.2**,5links(1antigo+4novos). Fonte motor_progress_ciw_cadastros **124→132**,124anteriores/outrosprogramas preservados; authoringgrants revogados. Quatro consultas readonly nativas/JSvalidators/contextos obrigatórios/página GREEN; PASOE23negativas,3getpositivos. Descontosvazio nas versões2354/2357: detalhe positivo sóTT, nãoinventar registrocomercial. Fontes continuamrawpersistido: nomes atuais/comparações nãofechados. **Quatro NOVASreads AUX aguardam autorização humana** solicitada nesta retomada; NÃO conceder como extensão das três wave1, que estão consumidas/aplicadas/UIverificadas.
+
+
+
+
+
+
+
+**1042batch:** APIpublicada, read/get14campos reais/auth401/5negativas(inklotevazio) GREEN,0businesswrites. Metadados/fonte3ops/entidade1042/pai1003AINDA NÃOpublicados. Pai1003 permanece1.0.2. Precisam cenário comercial NOVO concreto+autorização/teste/limpeza e permissões específicas; não reusar cenários antigos. Serviço central reutilizado, imagens14originais emcontextoreadonly, stale409 antesdemutação, só3camposeditáveis, lotehomogêneo1..100; fiscal/versionamento central, logsusuário+antes/depois. Extensão frontend opt-in nativa instalada; exemplos/paridade aindaemfinalização, skill local de paridade nãoencontrada e matriz prevê checklist direto.
+
+
+
+
+
+
+
+Próximo: validarUIAUX depois4reads autorizadas; completar1042cenário/metadados/UI, rebase1043tax-only sobre Actiona01949.../pai1003baselineatual, integrarlookups separados apósbaselines1035/37/39 atuais;1047seleção e1045/46descontosgerais com executores. Gerente ativo, objetivoGLOBAL ACTIVE, ControlesFINAL. Túnel9080 mantido; zeroDDL/escrita comercial nova/grant humano novo nesta wave2. Inventário62Convertido/200nãoencerrados, sem promoção automática por lotes.
+
+
+
+
+
+
+
+## Acesso wave1 concluído — autorização consumida e UI LDAP
+
+
+
+
+
+
+
+**Estado prevalente:** as três reads wave1 foram autorizadas pelo humano em `call_5111d629eb42427c81f8fccf247bd988`, aplicadas uma vez e conferidas. SOMENTE container_calculos_impostos_med_progress.read, container_despesa_memoria_med_progress.read e container_versoes_historico_med_progress.read para tadeu.parreiras. Assinatura nativa, demais permissões e quatro snapshots LDAP244/246/249/368 preservados. wave1-access/{applied,verified,authorization}.json; authorized=false/consumed=true. NÃO pedir/conceder novamente; não autoriza acessos das novas1036–39/1042 ou teste comercial.
+
+
+
+
+
+
+
+UI LDAP real: despesas→memória42784→cálculo46714, sempreCID332526; fiscal lista+Visualizar readonly. Versões1.0.1→itens históricos da versão2354/item7035, lista+Visualizar com chave JSON composta íntegra, formulário readonly. IDs inteiros sem decimais. Seis imagens e ui-verification.json no official-build3. Tabs temporárias31/32 encerradas, usertabs1/2/26 preservadas. Memória fiscal HTML legada é exibida como texto escapado; não foi ativado HTML arbitrário. Conteúdo histórico com mojibake foi preservado. Lookup/filhas/comparações continuam na fila; não declarar a família histórica inteira concluída.
+
+
+
+
+
+
+
+Inventário reconciliado por root:62Convertido/8Preparado/200origensnãoencerradas,257origensintactas. Somente bl_sincronizar_impostos foi promovido após evento ativo+recibos de teste/limpeza+catálogo atual comprovados; outras4sóremaining corrigido. inventory-reconciliation-5-applied.json. Novos20fontes pendentes coletados/sanitizados: sources/scriptcase/ciw-completion-next20-20261028,82arquivos/281literaisomitidos. Não foi executadoPHPlegado.
+
+
+
+
+
+
+
+Próxima compilação emexecução: **official-build5-v6**, sessãoSSH48103. Não duplicar/reiniciar enquanto ativa. Build5 original/v2/v3/v4 cancelados ANTESSSH. **v5 executouSSH e falhou** em28compilesbons/29ºBatchApi porNet.URI12886;0TT,0canônicos,0publicação. v6 é reparoSÓharness com OpenEdge.Net.pl gui/tty DAinstalação12.2 noPROPATH,65sources/62produto+testsiguais/16candidatosbyteiguais; root/manager885PHP5841stagedpass, local683checks×4/40TT. Oficial planeja43compiles COM1espec10012 somenteesquema e40execuçõesTT SEMbanco. **Ainda não alegar oficialGREEN/integrar/publicar5** até baixar e verificarlogs; review/hashrelease em5-v6/manager-review-final.json, root-preflight.json. Fonte atual124/pais1003v1.0.2 e1005v1.0.1 continuambaselinepois5nãointegrado.
+
+
+
+
+
+
+
+Gerente segueativo; executores agora1047seleçãodespesas e1045/46descontosRO.1043tax-only congeladorevisado219TT×4, nãooficial, precisa rebasepós1042. Lookups históricos congeladosseparados nãoentram5.1047preservaordemlegada via políticaprivada no plannerúnico, enumfechadoordenação baseadofonte, seleção1..100; fallbackvazio sósubsetcalculado. Customsort/NULL/tiessemprova permanecemgates; não duplicarfórmula nem mudar callersantigos. GoalglobalACTIVE/ControlesFINAL.
+
+
+
+
+
+
+
+## Estado atual wave1 — metadados publicados, acesso humano pendente
+
+
+
+
+
+
+
+**Prevalece sobre o estado de diagnóstico abaixo.** A correção mínima v1.4 do HistoryService foi compilada oficialmente no .42: build4,2compiles/128checks/NUMDBS0,4combinações; publicado somente Service.p/r combackup/hashes e refreshMEDidle129/130/131. PASOE final **3read/get,15negativas,página,precedência memória própria e regressão de recurso antigo GREEN**, incluindo parent inexistente404VERSION_HISTORY_PARENT. `official-build3/history-parent-fix-proof.json` fecha o gate; `official-build4/{official-compile-verification,canonical-manifest,active-manifest}.json` têm o delta real. O manifest canônico build3 é o snapshot ANTERIOR à correção; o único override é o Service registrado no build4.
+
+
+
+
+
+
+
+Metadados publicados: op1033/1.0.0 `ciw.container-calculos-impostos-med`, op1034/1.0.0 `ciw.container-despesa-memoria-med`, op1035/1.0.0 `ciw.container-versao-itens-historico`; pais op1003/despesas **1.0.2** e op1005/versões de custo **1.0.1**, cada um só com novo rowLink e versão. Fonte **118→124operações**,118anteriores e outros programas preservados. Native runtime3read/get/contexto obrigatório GREEN. Metadata-publication.json + cinco recibos individuais; source-124-after.json SANITIZADO e op1005-program-after.json são as baselines para próximos freezes. Os grants de autoria foram revogados; não concedem acesso humano.
+
+
+
+
+
+
+
+Primeira tentativa parou APÓS aplicar somente6operações: referência compartilhada safe.operations incluiu adições raw, diferentes da normalização do catálogo. Inspeção comprovou124/118preservadas/6compatíveis/entidades e programas novos ausentes/pais inalterados. Retomada --resume-source-only pulou escrita da fonte e concluiu3telas+2pais. Recibos metadata-partial-inspection/publication-resumed; **NÃO repetir** publicador, retomada, fontes ou governança concluídos. GET nativo retorna registro diretamente; primeiro harness esperou .data e foi corrigido, sem mudança no produto.
+
+
+
+
+
+
+
+UI LDAP: aba temporária31 (não fechar abas do usuário1/2/26) abriu despesas1.0.2 e link correto para CID332526/Despesa42784. Filho mostra403 esperado por falta de nova read. **Pedido assíncrono pendente de autorização para SOMENTE3reads:** container_calculos_impostos_med_progress.read, container_despesa_memoria_med_progress.read, container_versoes_historico_med_progress.read para tadeu.parreiras. Não conceder sem resposta; continuar outras conversões independentemente. Imagens ui-parent-expenses.jpg e ui-child-permission-required.jpg no build3. Não alegar UI dos três filhos concluída por prova adminAPI. Nenhuma gravação de negócio/DDL/grant humano nesta wave1.
+
+
+
+
+
+
+
+Próxima onda: executoraux prepara incremento1036–1039 sobreNOVASbaselines,8ops+4links/4entidades, semreaplicar patches cumulativos de versões antigas. Reusar snapshot central e parent565 handling.1042 manutenção rápida aindaemrevisão, rota fixa separada/fonte3ops; extensão nativa batch opt-in para contexto/originalreadonly, semJSON técnicoeditável. Gerente achou/corrige P1wrapperresource e póscommit/callback, aindaNÃOintegrar. Reservas1043tax-only e1044defaults→sync emfila;1044 sótemcallerbackup provado, não afirmarusoativo semevidência. Cotação/login é lacuna separada; oito helpers diagnósticos sem inbound não foram executados nem excluídos. GoalglobalACTIVE,ControlesFINAL.
+
+
+
+
+
+
+
+## Atualização prevalente — integração e publicação ABL wave1
+
+
+
+
+
+
+
+Objetivo global **ACTIVE**. Build1 e build2 cancelados antes de SSH; **build3 oficial executado no .42** e conferido: OpenEdge12.2,26compiles sem erro,32logs/384checks por combinação/1.536total/NUMDBS0, UTF8/ISO8859-1×AMERICAN/EUROPEAN. `official-build3/official-compile-verification.json`. Harness recebeu correções UTF8 apenas nos testes/provedor; fontes de produção não mudaram por elas. Sessão de compilação96442 terminou, não repetir.
+
+
+
+
+
+
+
+Integrados por hash/backup **8fontes ABL/include +2PHP +6JSON** nos canônicos. PHP composto em backend-package5, hashes exatos congelados antes de mesclar fiscal; fiscal56/REAL36/history5tests17assertions e regressão completa885tests5841assertions passaram. Revisão independente semP1/P2 em backend-package5/manager-review.json. As tentativas1–4 de compositor falharam isoladas, sem gravar canônicos; não usar seus arquivos parciais. Originais preservados em official-build3/canonical-backup; `canonical-manifest.json` tem hashes atuais.
+
+
+
+
+
+
+
+**15artefatos fonte/r/include publicados** no compartilhamento137 por111, backup/hashes confirmados, sem fixture/rota/DDL/escrita comercial. `official-build3/active-manifest.json`; MED teve três sessões ociosas126/127/128 recarregadas pela API oficial, mesma instância sursum-api, sem outro PASOE. Publicação e recarga concluídas; não repetir os planos wave1. PHP canônico em uso pelo servidor local.
+
+
+
+
+
+
+
+**Metadados das três novas telas AINDA NÃO PUBLICADOS**. Preflight somente leitura em official-build3/metadata-preflight.json: op1033/34/35 livres; pais REAIS `ciw.container-despesas/op1003` e `ciw.container-versoes-custo/op1005`. Drafts incrementais preservam builderConfig publicado e acrescentam só versão/rowLink. Fonte continua118operações; a proposta acrescenta6→124, sem permissão humana nova. Publicador preparado `publish-ciw-completion-wave1-metadata.cjs` exige gate de correção abaixo, não executar antes de GREEN.
+
+
+
+
+
+
+
+PASOE real: duas consultas fiscais read/get e dez negativos PASS; histórico **READ, GET, página e aliases PASS**. ÚNICA falha isolada é negativo com container_id=1 inexistente: history retorna503VERSION_HISTORY_CONFIGURATION em vez de404. `pasoe-attempts-private.json` registra etapas/sem headers. NÃO dizer que consulta normal falhou. Causa: FIND-FIRST dinâmico de parent sem NO-ERROR levanta565 antes do ramo404; fiscal trata565 corretamente. Gerente/executor produzindo freezev1.4 mínimo Service+regressões, ABI preservado. Diagnóstico privado `.42` em history-diagnostic1 confirmou o mesmo read físico em UTF8 e ISO; nenhuma instrumentação foi publicada. Corrigir, compilar12.2, publicar somente delta pertinente e validar antes de publicar metadados.
+
+
+
+
+
+
+
+Schema auxiliar oficial12.2 somente dicionário GREEN: aux-schema/*,4tabelas históricas presentes. PKs pgtos versao/título; NFs versao/documento/serie/estab/nat_operacao/cod_emitente; descontos versao/desconto; despesas versao/despesa (GROUPSUM singleton). Probe literal SQL pelo perfil legado ems206espPRO NÃO CONECTOU; sql-literal-arithmetic.json connected=false/unclassified/checks vazio. Não inventar resultado de divisão por zero/NULL para comparações1040/41.
+
+
+
+
+
+
+
+Extraídos e sanitizados os11helpers em sources/scriptcase/ciw-completion-helpers-20261028,22arquivos/180literaisomitidos, manifesto correspondente em integration-src/ciw-inventory. Gerente analisa paridade/fila. Op1042 em preparação: optar por suporte nativo explícito opt-in de original/contexto readonly no batch; não fabricar snapshotJSON editável. Próximos freezes devem rebasear os novos hashes canônicos; op1036–41 permanecem candidatos, não publicados. ControlesFINAL. Túnel9080 vigente; os demais processos citados de coleta/probe/publicação já terminaram.
+
+
+
+
+
+
+
+Próximo: receber/revisar freezev1.4, executar compilação oficial delta, publicar2artefatos se apenasService mudar, refreshMEDidle, concluir PASOE negativo404; depois publicar3telas+2links e validar runtime/UI; seguir fila ampla com gerente/executores. Goal não encerrado por lote.
+
+
+
+
+
+
+
+## Publicado nesta retomada
+
+
+
+
+
+
+
+Cinco telas existentes passaram a **1.0.1**, somente filtros explícitos por metadados: `ciw.coloracoes/cd0094`, `ciw.situacoes-container/cd0095`, `ciw.tipos-versao-custo/cd0096`, `ciw.motivos-desconto/cd0097` ganharam Descrição; `ciw.parametros-ima/cd0098` ganhou Código/Valor. Filtros anteriores preservados. Entidades, fonte de 118 operações, outros programas, grids, formulários, escritores e Logs permaneceram iguais. Nenhuma alteração PHP/ABL/Kendo, concessão humana, DDL ou registro comercial neste lote de filtros.
+
+
+
+
+
+
+
+Previews gerados nativamente: somente `program.version` e `crud.filter.fields` mudam na definição. A publicação também altera quatro derivados legítimos de `runtime.traceability`: programVersion, builderProgramVersionId, screenDefinitionVersion e schemaFingerprint. O primeiro publicador parou após cd0094 por não considerar esses derivados; estado real foi inspecionado, recibo preservado e retomadas SOMENTE as quatro restantes. Lote completo, IDs de versão93–97/aprovação92–96. Não repetir `publish-ciw-cadastro-query-filters.cjs` nem sua retomada.
+
+
+
+
+
+
+
+Revisão independente do gerente sem P1/P2; cinco validadores JS nativos, cinco GET, cinco paginações, seis filtros negativos/cinco positivos passaram. `val_param` teve somente teste negativo/vazio, não alegar positivo. Interface LDAP abriu as cinco telas/filtros: Tipos/Descrição contém Entregue retornou dois registros; Parâmetros/Código NAT-OPERACAO-IMP retornou um. Campos inteiros sem decimais. A primeira automação DOM fill não sincronizou o widget; digitação real + Tab funcionou, sem mudança no frontend. Aba temporária30 encerrada, abas do usuário1/2/26 preservadas. Nenhum teste CRUD operacional foi repetido. Paridade universal de exportações e de todos os botões do Scriptcase não foi demonstrada por esse ajuste de filtros.
+
+
+
+
+
+
+
+Candidatas/fontes de metadados: `integration-src/ciw-completion-20261028/cadastro-query-filters`; cópia canônica em `D:/opencode/construtor-pg/integrations/ciw-cadastro-query-filters-20261028`. Históricos1.0.0 preservados. Provas em `.runtime/ciw-completion-20261028/cadastros-queries/{filter-candidates,filter-validation,manager-review,metadata-publication,partial-publication-inspection,ui-verification}.json`, recibos individuais e imagens `ui-*.jpg`. Scripts prepare/validate/publish-ciw-cadastro-query-filters; não executar ferramentas antigas de CRUD que criam registros de teste sem nova autorização.
+
+
+
+
+
+
+
+## Em execução, ainda não publicado
+
+
+
+
+
+
+
+- Fiscal somente leitura: op1033/op1034 para cálculo selecionado e memória da despesa, candidatos `integration-src/ciw-completion-20261028/container-fiscal-readonly`. Freeze2 manifesto SHA `b847a16ad4406c6703490bb2fb7809dfea3fce5dc6012bc94e52e2fca7643173`. Contexto obrigatório container+PK, precedência da memória própria e validação do upstream; P1/P2 encontrados no teste real de contexto/leitura foram corrigidos antes da integração. Nenhum escritor novo; os testes locais12.8 não são compilação oficial/publicação.
+
+
+
+- Histórico: op1035, `container-version-history/frozen-v1.1` manifesto SHA `98e74bc5d224e71fcb8f2437421d6da2171a22feb65cd41a2adf76667e12d2f7`; usar PHP corrigido v1.1, não o patch PHP v1. Reutiliza `ContainersVersionService.consultar`; ABL/includes/metadados iguais ao v1, orçamento somente da consulta. Revisão independente v1 sem P1/P2; novo teste de caminho real PHP identifica e recusa alias GET divergente antes da normalização. Lookup e seis visões relacionadas não devem ser declarados convertidos por op1035.
+
+
+
+- Reservas seguintes: op1036 pagamentos, op1037 NFs, op1038 descontos históricos pelo mesmo snapshot; op1039 despesas agregadas, op1040 comparação BRL, op1041 comparação USD. Gerente/executor trabalhando; não registrar como publicado só porque o código está reservado.
+
+
+
+
+
+
+
+O pacote combinado `.runtime/ciw-completion-20261028/official-build1` foi preparado com26 compiles/45 fontes/32 logs esperados. Root conferiu hashes e três baselines, mas **NÃO iniciou SSH, upload nem compilação oficial**. O diagnóstico local encontrou no teste novo histórico um LONGCHAR sem FIX-CODEPAGE UTF-8, que falha ISO8859-1; gerente prepara build2 com correção apenas do teste. Build1 deve ficar cancelado antes de SSH, preservado; não executá-lo como se estivesse aprovado. Usar o novo manifesto/plano após conferir hashes e resultado da correção. ABL executável ainda exige OpenEdge12.2/.42, publicação no compartilhamento137 e validação PASOE sursum-api/med/9911. Não integrar pacote mutável ou fixture/r12.8.
+
+
+
+
+
+
+
+## Fontes, dicionário e rede
+
+
+
+
+
+
+
+Extraídos em leitura/sanitizados antes de salvar: `sources/scriptcase/ciw-completion-20261028/cons_det_versoes_item_custo_container` (quatro arquivos) e `sources/scriptcase/ciw-completion-linked-20261028` (sete consultas históricas e quatro programas desenhos/tipos,48 arquivos). Manifestos em `integration-src/ciw-inventory/ciw-completion*-source-manifest.json`. Origem permanece root@192.168.0.170:22, `/var/www/clients/client1/web2/web/ciw`. Não executar o PHP legado para análise nem persistir suas credenciais.
+
+
+
+
+
+
+
+Probe oficial12.2 somente de dicionário, sem registros/DDL: `.runtime/ciw-completion-20261028/schema/`. Confirmou item_container_custos31campos/3índices, versoes_item_custo_container22/2, calcs_imp_container6/3, despesas_container14/5 e itens_container15/3. `desenhos`, `tipos_desenho` e nome alternativo `pp_container` ausentes; o container real usa `pp-container`. Não inventar schema. A tentativa1 do probe falhou no parser antes de execução; tentativa2 somente leitura GREEN. Perfis desenhos resolvidos sem segredos em `source-profiles.json`: ems206espPRO→espec_pro e especw→espec_w_pro, ambos apontam espec/.111 SQL10112. O ABL10012 não tem as tabelas de desenhos; esclarecer origem/uso enquanto outras frentes avançam, sem DDL presumida.
+
+
+
+
+
+
+
+Rede autorizada do compilador.42, PASOE.111 e Scriptcase.170 confirmada. O túnel95725 encerrou depois de três reconexões; **vigente sessão9080**, helper `tools/construtor-local/med-runtime-tunnel.py`, `127.0.0.1:19910→.111 loopback9910`, mesma instância sursum-api/med; manter enquanto necessário. Sem mudança de rota/VPN/firewall/autenticação/PROPATH ou fallback9921. Snapshot sanitizado de fonte118 para integração: `.runtime/ciw-completion-20261028/source-118-before.json`, sem authheaders, SHA `2bbff65351a30f396a163ee3b2e60c6208e22ed5bbc95e719ac1732f9ec3a098`.
+
+
+
+
+
+
+
+Próxima ação: conferir build2 combinado e executar12.2; integrar por hash os patches compartilhados e PHP de freezes corrigidos, testes pertinentes, publicar e validar as três novas consultas; seguir com as filhas históricas e demais famílias da fila. Não esperar o usuário dizer “continue” entre pacotes. Atualizar este estado conforme a evidência real. Objetivo global permanece ativo até auditoria completa, sem concluir por um lote.
+
+
+

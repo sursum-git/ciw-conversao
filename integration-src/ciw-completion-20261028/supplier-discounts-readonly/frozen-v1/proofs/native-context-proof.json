@@ -1,0 +1,67 @@
+{
+  "success": true,
+  "checks": 24,
+  "realNativeValidator": true,
+  "ajv2020": true,
+  "permissionResolution": "SYNTHETIC_READONLY_FOR_SCHEMA_ONLY_NO_GRANT",
+  "networkExecuted": false,
+  "nativeState": "HELD_SIGNED_INTEGER_CONTEXT",
+  "apiContextType": "integer",
+  "positiveContextPreserved": true,
+  "currentNativeGate": [
+    {
+      "value": 0,
+      "currentNativeError": "CRUD_CONTEXT_INVALID",
+      "apiAcceptsSignedInteger": true
+    },
+    {
+      "value": "0",
+      "currentNativeError": "CRUD_CONTEXT_INVALID",
+      "apiAcceptsSignedInteger": true
+    },
+    {
+      "value": -9,
+      "currentNativeError": "CRUD_CONTEXT_INVALID",
+      "apiAcceptsSignedInteger": true
+    },
+    {
+      "value": "-9",
+      "currentNativeError": "CRUD_CONTEXT_INVALID",
+      "apiAcceptsSignedInteger": true
+    },
+    {
+      "value": -2147483648,
+      "currentNativeError": "CRUD_CONTEXT_INVALID",
+      "apiAcceptsSignedInteger": true
+    },
+    {
+      "value": "-2147483648",
+      "currentNativeError": "CRUD_CONTEXT_INVALID",
+      "apiAcceptsSignedInteger": true
+    }
+  ],
+  "decimalFilterGate": "Builder72c6 maps decimal filter fields to text/contains; separate central decimal companion required before numeric native parity",
+  "numericFilterShape": [],
+  "files": [
+    {
+      "path": "D:\\opencode\\construtor-pg\\src\\page-engine\\PageDefinitionNormalizer.js",
+      "sha256": "fb038ccb2446957902432473535aad0b1e7b61ba8152b02e04aa6c7baf60ecca"
+    },
+    {
+      "path": "D:\\opencode\\construtor-pg\\src\\crud-engine\\CrudUtils.js",
+      "sha256": "7f7464041bced73069e1f21f72f7b56011eaeaa85d182117f939fe853fca47d4"
+    },
+    {
+      "path": "D:\\opencode\\construtor-pg\\src\\crud-engine\\CrudDefinitionValidator.js",
+      "sha256": "d02d5d03e569d8f3e78621c7ff5b72d700f191957ed5900f2e428863d625047b"
+    },
+    {
+      "path": "D:\\opencode\\construtor-pg\\src\\crud-engine\\CrudEngine.js",
+      "sha256": "5d78f77bc72c56c1bbd345d92ae3e4714a71f1d04e5b76e0453855a8c193bba7"
+    },
+    {
+      "path": "D:\\opencode\\construtor-pg\\public\\metadata\\schemas\\crud-definition-v1.schema.json",
+      "sha256": "5a1511bf85cdad06c6fb53db72ef649f66fd00410f7ae7b79ee6cab5c27cc751"
+    }
+  ]
+}

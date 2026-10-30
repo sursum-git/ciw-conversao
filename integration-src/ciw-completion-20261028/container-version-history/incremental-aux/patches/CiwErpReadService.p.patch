@@ -1,0 +1,15 @@
+diff --git a/CiwErpReadService.p b/CiwErpReadService.p
+index 0ef8196..1ad5565 100644
+--- a/CiwErpReadService.p
++++ b/CiwErpReadService.p
+@@ -198,6 +198,10 @@ DO ON ERROR UNDO, THROW:
+  IF NOT VALID-HANDLE(phData) OR NOT VALID-OBJECT(poRequest) THEN RUN Fail('CIW_ERP_UNAVAILABLE',503).
+  CREATE BUFFER b FOR TABLE phData BUFFER-NAME 'bCiwErpRead'.
+  CASE pcResource:
++  WHEN 'container_versao_pagtos_historico_med' THEN ASSIGN cFieldList='container_id,versao_id,num_id_tit_ap,vl_real,vl_dolar' cAliasList=cFieldList cKeyList='container_id,versao_id,num_id_tit_ap' baseWhere='TRUE'.
++  WHEN 'container_versao_nfs_historico_med' THEN ASSIGN cFieldList='container_id,versao_id,documento,serie,estab,nat_operacao,cod_emitente,vl_mercadoria,vl_despesa' cAliasList=cFieldList cKeyList='container_id,versao_id,documento,serie,estab,nat_operacao,cod_emitente' baseWhere='TRUE'.
++  WHEN 'container_versao_descontos_historico_med' THEN ASSIGN cFieldList='container_id,versao_id,desconto_importacao_id,vl_autoriz_real,vl_autoriz_dolar,log_custo' cAliasList=cFieldList cKeyList='container_id,versao_id,desconto_importacao_id' baseWhere='TRUE'.
++  WHEN 'container_versao_despesas_historico_med' THEN ASSIGN cFieldList='container_id,versao_id,despesa_id,vl_prev,vl_base_imp,vl_negociado,log_custo' cAliasList=cFieldList cKeyList='container_id,versao_id,despesa_id' baseWhere='TRUE'.
+   WHEN 'container_versoes_historico_med' THEN ASSIGN
+    cFieldList='container_id,item_container_custo_id,versao_id,item_container_id,it_codigo,item_custo_id,memoria_calculo,vl_desp_prev_real,vl_custo_prev_real,vl_pago_real,qt_alocada,qt_confirm_emb,qt_recebto_fisico,vl_desp_realiz_real,vl_unit_prev,vl_unit_realiz,vl_desp_prev_dolar,vl_custo_prev_dolar,vl_pago_dolar,vl_desp_realiz_dolar,vl_desconto_utiliz_dolar,vl_unit_prev_dolar,vl_unit_realiz_dolar,vl_custo_distribuido,vl_negociado,vl_desp_prev_real_sem_distr_cust,vl_desp_prev_dolar_sem_distr_cus,qt_embarcada,vl_desconto_utiliz_real'
+    cAliasList=cFieldList cKeyList='container_id,versao_id,item_container_custo_id' baseWhere='TRUE'.

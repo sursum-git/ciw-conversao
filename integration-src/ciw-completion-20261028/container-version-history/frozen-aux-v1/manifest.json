@@ -1,0 +1,264 @@
+{
+  "status": "CANDIDATE_READY_FOR_INDEPENDENT_REVIEW_NOT_PUBLISHED",
+  "version": "aux-v1",
+  "scope": {
+    "programs": [
+      "op1036",
+      "op1037",
+      "op1038",
+      "op1039"
+    ],
+    "newEntities": 4,
+    "newSourceOperations": 8,
+    "newParentLinks": 4,
+    "parentNextVersion": "1.0.2",
+    "canonicalWrites": false
+  },
+  "excludes": [
+    "ContainersVersionHistoryApi.p",
+    "ContainersVersionHistoryService.p",
+    "ContainersVersionService.p",
+    "fiscal metadata or operations",
+    "main history entity and its two operations",
+    "current-label lookups",
+    "BRL/USD comparisons"
+  ],
+  "abi": {
+    "newApi": "ContainersVersionAuxHistoryApi.p",
+    "newService": "ContainersVersionAuxHistoryService.p",
+    "fixedBuffers": 8,
+    "existingServiceSignaturesChanged": false
+  },
+  "baselines": [
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeCiwErpQuery.php",
+      "baselineSha256": "88f4a4c8ef3f95029d2275b58e6f77916549dd900ccfd3259ea8313eb3aa118f",
+      "candidateSha256": "076d9f9b7dc324743191f9ccada5b43e7c3461cdaaa8506d92fb297ce520a116",
+      "patch": "patches/RuntimeCiwErpQuery.php.patch"
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeApiEntityActionService.php",
+      "baselineSha256": "4fad16103637b00a0c424f947441c21105c411f9232f84ca55f9a9b0201c1530",
+      "candidateSha256": "b3aaa4b203793f3bd1c6cd936479276fccb98830b60b7c27d1df6e0cda50e4ec",
+      "patch": "patches/RuntimeApiEntityActionService.php.patch"
+    },
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwErpReadService.p",
+      "baselineSha256": "906e77bcf395d0ff8b391688e336344ca727ef1dfcaac18aec0d09f08d71cd80",
+      "candidateSha256": "56c424fbdcaea700650d29d2e247d6f4e861872af9b1c329cce33d4f70c0274f",
+      "patch": "patches/CiwErpReadService.p.patch"
+    },
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwCadastrosCrud.p",
+      "baselineSha256": "d4ffe29139ff2c7349be9895434f6b811f5cabef6aba4120ab03f5e14b63acf1",
+      "candidateSha256": "a167b039396533829ede08ab1569215f27b0c6b643af30b6bbe6ae60c8b893b1",
+      "patch": "patches/CiwCadastrosCrud.p.patch"
+    }
+  ],
+  "metadataBaselines": [
+    {
+      "path": ".runtime/ciw-completion-20261028/official-build3/source-124-after.json",
+      "sha256": "382ab3163f9553ccb8121025252b1f0ea9e71e0e988074d04c4f581f6a25b8c4",
+      "operations": 124
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/official-build3/op1005-program-after.json",
+      "sha256": "9fa6d4102e350ed1fff305d8d845df5c393f6af95ef183e847f97f93984cde1f",
+      "version": "1.0.1"
+    }
+  ],
+  "dependency": {
+    "path": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersVersionService.p",
+    "sha256": "beeda66faf880b271263ac98617046a0ecb1790c994ef576153fd9343885e590",
+    "changed": false,
+    "operation": "consultar"
+  },
+  "validation": {
+    "localOpenEdge": "12.8 development only",
+    "compiledSourceUnitsPerCodepage": 6,
+    "tempTableChecksPerCombination": 24,
+    "codepages": [
+      "UTF-8",
+      "ISO8859-1"
+    ],
+    "cultures": [
+      "AMERICAN",
+      "EUROPEAN"
+    ],
+    "numDbs": 0,
+    "phpTests": 6,
+    "phpAssertions": 41,
+    "realRuntimeMethods": [
+      "readCiwErpPage",
+      "getApiEntityItem"
+    ],
+    "transport": "mocked, no network",
+    "canonicalBaselinesVerified": 4,
+    "metadataSimulation": "124 to132 operations;1 to5 parent links; preserved prefix byte data"
+  },
+  "gates": [
+    "Independent review",
+    "Root compile OpenEdge12.2 on42 with fixed database aliases",
+    "Coherent API/service/include/read-service/dispatcher and PHP deployment before metadata enablement",
+    "Root PASOE sursum-api/med read/get/context/missing parent validation",
+    "Create native parent draft1.0.2 and publish via Builder lifecycle; never mutate published export in place"
+  ],
+  "reconciliation": {
+    "headers": "Already covered by published op1005",
+    "snapshotItems": "Already integrated by root op1035; excluded here",
+    "auxiliaryRawViews": "Payments, NF, discounts and positive persisted expenses in this candidate",
+    "pending": [
+      "Current lookup descriptions are a separate delta",
+      "Historical comparison BRL/USD awaits SQL NULL/division proof and reusable helper"
+    ],
+    "allSevenViewsConverted": false
+  },
+  "receipts": [
+    {
+      "path": ".runtime/ciw-completion-20261028/container-version-history/incremental-aux-final-green.xml",
+      "sha256": "621c04f63cb6e3c9f735bb17d83d3efe84e32eb6f1cf242473fff572b1de5be8"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/container-version-history/incremental-aux-red.xml",
+      "sha256": "a44f03906a99532be047ae8a6612ffe78b241b0bdc36c71432a047284698a9c8"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/container-version-history/incremental-aux-local/compile-UTF-8.log",
+      "sha256": "305c77df54c80f151a8e38ff3817219d487d7ad0b636177515ceba307b140a41"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/container-version-history/incremental-aux-local/green-UTF-8-AMERICAN.log",
+      "sha256": "dcbc11110de6b0ec9e2af9186b278e2a4a7b9d782035d766c2da1be4a38be041"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/container-version-history/incremental-aux-local/green-UTF-8-EUROPEAN.log",
+      "sha256": "dcbc11110de6b0ec9e2af9186b278e2a4a7b9d782035d766c2da1be4a38be041"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/container-version-history/incremental-aux-local/compile-ISO8859-1.log",
+      "sha256": "305c77df54c80f151a8e38ff3817219d487d7ad0b636177515ceba307b140a41"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/container-version-history/incremental-aux-local/green-ISO8859-1-AMERICAN.log",
+      "sha256": "dcbc11110de6b0ec9e2af9186b278e2a4a7b9d782035d766c2da1be4a38be041"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/container-version-history/incremental-aux-local/green-ISO8859-1-EUROPEAN.log",
+      "sha256": "dcbc11110de6b0ec9e2af9186b278e2a4a7b9d782035d766c2da1be4a38be041"
+    }
+  ],
+  "files": [
+    {
+      "path": "abl/ContainersVersionAuxHistoryApi.p",
+      "sha256": "ba4a614c58c841ca5715929cd1e0a8d967224bfe360a4051e169dea322f56073"
+    },
+    {
+      "path": "abl/ContainersVersionAuxHistoryService.p",
+      "sha256": "8e795b43200b54ff4299fde78f4e8de565cc6b5444ab1adea3b3fc85fa26867f"
+    },
+    {
+      "path": "auxiliary-views.json",
+      "sha256": "a27eae3440cf56f92343845a98c15160e80a67c6d93460f34bba4705001d1294"
+    },
+    {
+      "path": "baselines.json",
+      "sha256": "5f89ba9c499d0b425c3a405dfca87d2e6d1856b8aad713a06ecfa6084c743802"
+    },
+    {
+      "path": "dictionary-proof.json",
+      "sha256": "e6c0c4b4c17220fc1929ad7aa3d40e5ee46b24cb6cddaf185c8819cc3eaa64b7"
+    },
+    {
+      "path": "finalize-metadata.cjs",
+      "sha256": "8bc96724d94a9415fd5db72f902c0d485672ad9415bff4394a245c40e6cf1547"
+    },
+    {
+      "path": "freeze.cjs",
+      "sha256": "725d11d06275d6134341153782660496f018ead921ceedff871d7fd64d965ba5"
+    },
+    {
+      "path": "includes/ContainersVersionAuxHistoryTables.i",
+      "sha256": "9767cd882b20f1f08f5807e5d1f88a269f6229217ce62fc01eb0b5886959e5a2"
+    },
+    {
+      "path": "metadata/api-source-additions.json",
+      "sha256": "84e43f360eceb6b539cb80e64ae77553ac966774c55f8fdada64c75a10d2d645"
+    },
+    {
+      "path": "metadata/container_versao_descontos_historico_med-builder-draft.json",
+      "sha256": "2f3c320219d2f7bf4f46a4fb633ce4d9a15dca3e9cb63e000df9fd1c390b0f0a"
+    },
+    {
+      "path": "metadata/container_versao_despesas_historico_med-builder-draft.json",
+      "sha256": "d9c4bfab869ee464096f8016adec14bcd4349ac9f8035b45c80cd6b5ec6ecf35"
+    },
+    {
+      "path": "metadata/container_versao_nfs_historico_med-builder-draft.json",
+      "sha256": "4dbced784195753f83ff3d781ff9260f920ca3677d2fdbb35f263c477847c6f6"
+    },
+    {
+      "path": "metadata/container_versao_pagtos_historico_med-builder-draft.json",
+      "sha256": "5fe61d863c590396996e836eca6e8fe611ac67820b3006d5e711252f8dba7924"
+    },
+    {
+      "path": "metadata/parent-additions.json",
+      "sha256": "84221378e0ec2c8e9a11eecc9e496dced556b3730ca4b761896d910cee5ad749"
+    },
+    {
+      "path": "metadata/parent-patch.json",
+      "sha256": "35a37cab075da73143a4f318a7cec1fe9f4dde158c4ae46c72faeade60cbcddf"
+    },
+    {
+      "path": "metadata/source-patch.json",
+      "sha256": "10ded15696413a13bb1b873d1ce607e2ede540f37c131129cbdb24f556cb9cb9"
+    },
+    {
+      "path": "patches/CiwCadastrosCrud.p.patch",
+      "sha256": "2f74bb31e8975fb67a793399147164f3e706c9b94dc415bf88692dd642a46626"
+    },
+    {
+      "path": "patches/CiwErpReadService.p.patch",
+      "sha256": "e4e46b9c4720453fdb35bc34bdd0d93deb59874c94e7a70ed5181d894b6aadb2"
+    },
+    {
+      "path": "patches/RuntimeApiEntityActionService.php.patch",
+      "sha256": "82cfeb9f35a368b1b7ee0b74755a5ada0775d55ec72d749067da8519a7cb5651"
+    },
+    {
+      "path": "patches/RuntimeCiwErpQuery.php.patch",
+      "sha256": "a6097e41c6f0887bb44cc5f85a1f0cdf405b8eadde76fc4eab82dfb3a95178b3"
+    },
+    {
+      "path": "prepare-local.cjs",
+      "sha256": "f161db2f0fbd5d0ce20eb86cfc03b209ccc97fcdc79892232f7dc4e47bd6f7bd"
+    },
+    {
+      "path": "prepare.cjs",
+      "sha256": "ebeb33498447d81720162d6ca8cff5b9135b503a55cc8d477b33196e7eda0ddf"
+    },
+    {
+      "path": "README.md",
+      "sha256": "8f9c537ba560c99411b9272b3c44c1b6dcb57794532903981f358c9bc786b901"
+    },
+    {
+      "path": "tests/abl/ContainersVersionAuxHistoryTest.p",
+      "sha256": "5e0fd8b231a72a4bf0cac42a4fa27e40c6761ac367fdec6cdadf30e598a8294b"
+    },
+    {
+      "path": "tests/abl/ContainersVersionHistoryTestTables.i",
+      "sha256": "24480f748f0b71bf28b27ef4abf117540238ebc8cdf992a4e883940ab907262d"
+    },
+    {
+      "path": "tests/runtime-bootstrap.php",
+      "sha256": "8b3311f6251c53fbce9af85dfcc9659d314446e36ad8f1931565aeda92388abb"
+    },
+    {
+      "path": "tests/RuntimeContainerVersionHistoryIntegrationTest.php",
+      "sha256": "bfd262c8ed3e1bb599e239d479100e27cee8c0862c0c0c5255738f7bd665f671"
+    },
+    {
+      "path": "verify.cjs",
+      "sha256": "89eb27995dfac5fd4570295b66edd95f6f532ac2d455033f5d45adbf49f7903a"
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "schemaAndNativeStructurePassed": true,
+  "schemaPermissions": "Boolean snapshot of native ACL hydration; raw drafts unchanged; no grant proof",
+  "renderedBrowser": false,
+  "canonicalLibrariesChanged": false,
+  "publicationHeld": true,
+  "results": [
+    {
+      "currency": "real",
+      "structuralSchemaValid": true,
+      "nativeValidatorValid": true,
+      "columns": 14,
+      "numericFilters": [
+        {
+          "field": "qt_alocada",
+          "builderType": "text",
+          "rendererType": "text",
+          "operator": "contains"
+        },
+        {
+          "field": "qt_confirm_emb",
+          "builderType": "text",
+          "rendererType": "text",
+          "operator": "contains"
+        },
+        {
+          "field": "vl_custo_prev",
+          "builderType": "text",
+          "rendererType": "text",
+          "operator": "contains"
+        },
+        {
+          "field": "vl_desp_prev",
+          "builderType": "text",
+          "rendererType": "text",
+          "operator": "contains"
+        },
+        {
+          "field": "vl_tot_prev",
+          "builderType": "text",
+          "rendererType": "text",
+          "operator": "contains"
+        },
+        {
+          "field": "vl_unit_prev",
+          "builderType": "text",
+          "rendererType": "text",
+          "operator": "contains"
+        },
+        {
+          "field": "vl_desp_prev_sem_distr_custo",
+          "builderType": "text",
+          "rendererType": "text",
+          "operator": "contains"
+        },
+        {
+          "field": "vl_tot_sem_distr_custo",
+          "builderType": "text",
+          "rendererType": "text",
+          "operator": "contains"
+        },
+        {
+          "field": "vl_unit_sem_distr_custo",
+          "builderType": "text",
+          "rendererType": "text",
+          "operator": "contains"
+        },
+        {
+          "field": "vl_desp_prev_perc_fixo",
+          "builderType": "text",
+          "rendererType": "text",
+          "operator": "contains"
+        },
+        {
+          "field": "vl_tot_perc_fixo",
+          "builderType": "text",
+          "rendererType": "text",
+          "operator": "contains"
+        },
+        {
+          "field": "vl_unit_perc_fixo",
+          "builderType": "text",
+          "rendererType": "text",
+          "operator": "contains"
+        }
+      ],
+      "numericFiltersFunctional": false
+    },
+    {
+      "currency": "dolar",
+      "structuralSchemaValid": true,
+      "nativeValidatorValid": true,
+      "columns": 14,
+      "numericFilters": [
+        {
+          "field": "qt_alocada",
+          "builderType": "text",
+          "rendererType": "text",
+          "operator": "contains"
+        },
+        {
+          "field": "qt_confirm_emb",
+          "builderType": "text",
+          "rendererType": "text",
+          "operator": "contains"
+        },
+        {
+          "field": "vl_custo_prev",
+          "builderType": "text",
+          "rendererType": "text",
+          "operator": "contains"
+        },
+        {
+          "field": "vl_desp_prev",
+          "builderType": "text",
+          "rendererType": "text",
+          "operator": "contains"
+        },
+        {
+          "field": "vl_tot_prev",
+          "builderType": "text",
+          "rendererType": "text",
+          "operator": "contains"
+        },
+        {
+          "field": "vl_unit_prev",
+          "builderType": "text",
+          "rendererType": "text",
+          "operator": "contains"
+        },
+        {
+          "field": "vl_desp_prev_sem_distr_custo",
+          "builderType": "text",
+          "rendererType": "text",
+          "operator": "contains"
+        },
+        {
+          "field": "vl_tot_sem_distr_custo",
+          "builderType": "text",
+          "rendererType": "text",
+          "operator": "contains"
+        },
+        {
+          "field": "vl_unit_sem_distr_custo",
+          "builderType": "text",
+          "rendererType": "text",
+          "operator": "contains"
+        },
+        {
+          "field": "vl_desp_prev_perc_fixo",
+          "builderType": "text",
+          "rendererType": "text",
+          "operator": "contains"
+        },
+        {
+          "field": "vl_tot_perc_fixo",
+          "builderType": "text",
+          "rendererType": "text",
+          "operator": "contains"
+        },
+        {
+          "field": "vl_unit_perc_fixo",
+          "builderType": "text",
+          "rendererType": "text",
+          "operator": "contains"
+        }
+      ],
+      "numericFiltersFunctional": false
+    }
+  ]
+}

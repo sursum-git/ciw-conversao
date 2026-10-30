@@ -1,0 +1,51 @@
+--- baseline/src/crud-engine/CrudEngine.js
++++ candidate/src/crud-engine/CrudEngine.js
+@@ -196,7 +196,7 @@
+         deferInitialRead: shouldDeferInitialRead,
+         initialFilters: this.currentFilters,
+         initialNavigationState: this.navigationGridState,
+-        contextValues: this.contextValues || {},
++        contextValues: this.getRequestContextValues(),
+         handlers: {
+           create: () => this.openCreate(),
+           view: (id, options) => this.openRecord("view", id, options),
+@@ -241,7 +241,7 @@
+         httpClient: this.httpClient,
+         config: this.config,
+         securityPolicy: this.securityPolicy,
+-        contextValues: this.contextValues || {},
++        contextValues: this.getRequestContextValues(),
+         onSaved: (record, mode) => this.afterRecordSaved(record, mode),
+         onCreate: () => this.openCreate(),
+         onEdit: (record) => this.openRecord("edit", record[this.definition.dataModel.primaryKey]),
+@@ -1381,6 +1381,7 @@
+       const supplied = this.options.contextValues || {};
+       global.CrudUtils.ensureArray(this.definition.contextFields).forEach((item) => {
+         const raw = supplied[item.field];
++        if (item.filterOnly === true && Object.prototype.hasOwnProperty.call(supplied, item.field) && (raw == null || raw === "")) { throw global.CrudUtils.makeError("CRUD_CONTEXT_INVALID", "Selecao informada invalida: " + item.field + "."); }
+         if (raw == null || raw === "") {
+           if (item.required) { throw global.CrudUtils.makeError("CRUD_CONTEXT_REQUIRED", "Informe o contexto de " + item.field + "."); }
+           return;
+@@ -1403,6 +1404,13 @@
+       });
+     }
+ 
++    getRequestContextValues() {
++      const values = this.contextValues || {};
++      const excluded = global.CrudUtils.ensureArray(this.definition && this.definition.contextFields).filter((item) => item.filterOnly === true).map((item) => item.field);
++      if (!excluded.length) { return values; }
++      return Object.fromEntries(Object.entries(values).filter(([field]) => excluded.indexOf(field) === -1));
++    }
++
+     withContextFilters(filters) {
+       const fixed = global.CrudUtils.ensureArray(this.definition && this.definition.contextFields).filter((item) => item.filter && Object.prototype.hasOwnProperty.call(this.contextValues || {}, item.field));
+       return global.CrudUtils.ensureArray(filters).filter((filter) => !fixed.some((item) => item.field === filter.field)).concat(fixed.map((item) => ({ field: item.field, operator: "eq", value: this.contextValues[item.field] })));
+@@ -1452,7 +1460,7 @@
+       return this.httpClient.request({
+         url,
+         method: endpoint.method || "GET",
+-        data: Object.assign({ [primaryKey]: id, id, context: Object.assign({}, this.contextValues || {}) }, record ? { record } : {})
++        data: Object.assign({ [primaryKey]: id, id, context: Object.assign({}, this.getRequestContextValues()) }, record ? { record } : {})
+       });
+     }
+ 

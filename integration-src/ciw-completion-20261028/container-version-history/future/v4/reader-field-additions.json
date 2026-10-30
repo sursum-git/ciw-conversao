@@ -1,0 +1,18 @@
+{
+  "status": "FUTURE_SYMBOLIC_DELTA_NO_SHARED_PATCH",
+  "afterWave1RebaseRequired": true,
+  "fields": [
+    {
+      "resource": "container_versoes_historico_med",
+      "add": "item_descricao_atual"
+    },
+    {
+      "resource": "container_versao_nfs_historico_med",
+      "add": "emitente_nome_abrev_atual"
+    },
+    {
+      "resource": "container_versao_despesas_historico_med",
+      "add": "despesa_descricao_atual"
+    }
+  ]
+}

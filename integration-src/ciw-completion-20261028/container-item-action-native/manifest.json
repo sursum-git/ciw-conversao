@@ -1,0 +1,106 @@
+{
+  "state": "EXPORT_TOOL_READY_NATIVE_LIMITS_PROVEN_PRODUCT_DELTA_NOT_APPLIED",
+  "createdAtUtc": "2026-10-29T01:52:37.831349+00:00",
+  "scope": "Existing op1008/op1002/purchase-item target only; no new program or writer",
+  "auditManifestSha256": "b4beeabe50c20fe6c3a7f1c3fd3ce5ae979f4ec45a5ad0faaf77a1a8b825306e",
+  "managerAuditReviewSha256": "c1b72190a1333a80b299a5fc21b97a302be96435ec8ead76a18e3464c4d55f54",
+  "exportToolSha256": "4bb6cd20107b422d98a5c3425d34fa85ef8a2487a4dcd1c7eeab27fb35d97a64",
+  "rootOnlyCommand": "node tools/construtor-local/export-ciw-container-item-action-current.cjs --export-readonly",
+  "freshExportExpectedDirectory": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-action-native\\current",
+  "localProof": {
+    "exporterOfflineTests": 8,
+    "realNativePrototypeTests": 5,
+    "realPhpContextChecks": 3
+  },
+  "findings": [
+    "No native CRUD toolbar/read-choice transport found; integer row-link constants unsupported",
+    "visibleWhen applies to form inputs, not conditional grid columns",
+    "Undeclared target item context is discarded; link needs actual target selection contract"
+  ],
+  "productPatchPrepared": false,
+  "canonicalWrites": false,
+  "networkExecuted": false,
+  "businessWrites": false,
+  "oldFreezesTouched": false,
+  "freshBaselineGate": "Read current exports before any metadata delta; shared future patches must use exact then-current hash",
+  "files": [
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-action-native\\PLAN.md",
+      "sha256": "352d5f9d59072b5e9eecfe2109c0f1a850016d1cecb8866c932ec2ded381daec"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-action-native\\tests\\export-current.test.cjs",
+      "sha256": "186222aeba382b071a162be2e05cde583217e864031d368be576461ed80a51af"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-action-native\\tests\\native-capabilities.test.cjs",
+      "sha256": "446d66e067ff806c84fc20c7570da254dfc39c2101525f941c092d595e9eb592"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-action-native\\tests\\request-context-capability.php",
+      "sha256": "828fbb22b535dd16357acb05e37a521cc5483d8de55d35409aed4ecbb5c77ba9"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-action-native\\verify-local.py",
+      "sha256": "0cf05c95d9061c29b42b5af92598f71b6dd20a0f4aab52e00cdb4a8fb67c113f"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\tools\\construtor-local\\export-ciw-container-item-action-current.cjs",
+      "sha256": "4bb6cd20107b422d98a5c3425d34fa85ef8a2487a4dcd1c7eeab27fb35d97a64"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-action-audit\\manifest.json",
+      "sha256": "b4beeabe50c20fe6c3a7f1c3fd3ce5ae979f4ec45a5ad0faaf77a1a8b825306e"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-action-audit\\manager-review.json",
+      "sha256": "c1b72190a1333a80b299a5fc21b97a302be96435ec8ead76a18e3464c4d55f54"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-action-native\\local-review-v1\\verification.json",
+      "sha256": "1722550967706f60e139f5f06c0f34cb92635b81ac60ca83d81e7c1ff9bd0f0e"
+    }
+  ],
+  "observedCanonicalSourcesReadOnly": [
+    {
+      "path": "D:\\opencode\\construtor-pg\\src\\crud-engine\\CrudEngine.js",
+      "sha256": "5d78f77bc72c56c1bbd345d92ae3e4714a71f1d04e5b76e0453855a8c193bba7"
+    },
+    {
+      "path": "D:\\opencode\\construtor-pg\\src\\crud-engine\\CrudKendoGridRenderer.js",
+      "sha256": "e8c1211702ad756a5f55e74952fda3530b39cc70de1229cd6eb86e45165c223c"
+    },
+    {
+      "path": "D:\\opencode\\construtor-pg\\src\\crud-engine\\CrudKendoFormRenderer.js",
+      "sha256": "d3028663b4c006771f7b8eac06d12ff7398c3e73a5c58391c328070a9d1047d9"
+    },
+    {
+      "path": "D:\\opencode\\construtor-pg\\src\\crud-engine\\CrudToolbarRenderer.js",
+      "sha256": "f3bf27da65d058b5e04bcdec6d6836c94a076b61929c8c5bfb76254ee5c89f3d"
+    },
+    {
+      "path": "D:\\opencode\\construtor-pg\\src\\crud-engine\\CrudDefinitionValidator.js",
+      "sha256": "d02d5d03e569d8f3e78621c7ff5b72d700f191957ed5900f2e428863d625047b"
+    },
+    {
+      "path": "D:\\opencode\\construtor-pg\\public\\metadata\\schemas\\crud-definition-v1.schema.json",
+      "sha256": "5a1511bf85cdad06c6fb53db72ef649f66fd00410f7ae7b79ee6cab5c27cc751"
+    },
+    {
+      "path": "D:\\opencode\\construtor-pg\\backend\\src\\Builder\\ProgramBuilderService.php",
+      "sha256": "205ebd14329f8e8896d07c07716939db8a12d58345fecf76cab5252f4e0694a7"
+    },
+    {
+      "path": "D:\\opencode\\construtor-pg\\backend\\src\\Runtime\\ApiRequestContext.php",
+      "sha256": "8f788e9627204786fba769c083d2845fe1ff5bdd4561607727fb853e95b23918"
+    },
+    {
+      "path": "D:\\opencode\\construtor-pg\\backend\\src\\Runtime\\RuntimeApiEntityActionService.php",
+      "sha256": "c19eb95eb1ef39633a7b196593a8d943b234eb8a3c782514e07618ae4c7cbb60"
+    },
+    {
+      "path": "D:\\opencode\\motor-progress\\v2\\sursum-api\\programs\\ContainersCustoReadService.p",
+      "sha256": "e2dfde473c806008742dc62e3095ec6cbdb1ba0bfac8a1a1893a62ac0d5ac8fd"
+    }
+  ]
+}

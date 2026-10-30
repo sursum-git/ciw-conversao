@@ -1,0 +1,34 @@
+{
+  "target": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-processes-source-before.json",
+  "baselineSha256": "f623263ac90dcc2c6ff8adf1410ee55f8468ca331ec9af093e0a65ab4ced3213",
+  "sourceCode": "motor_progress_container_processos",
+  "preserveGlobalAuthentication": true,
+  "expectedOperationCount": 5,
+  "resultOperationCount": 6,
+  "operations": [
+    {
+      "op": "add",
+      "path": "/operations/-",
+      "value": {
+        "code": "calcular_impostos",
+        "name": "Calcular somente impostos do container MED",
+        "type": "custom",
+        "method": "POST",
+        "allowProcess": true,
+        "path": "http://127.0.0.1:19910/med/web/SursumPrograms/containers-processos",
+        "headers": [],
+        "queryParams": [],
+        "bodyTemplate": {
+          "resource": "impostos",
+          "operation": "calcular_impostos"
+        },
+        "requestContextFields": [
+          "container_id"
+        ],
+        "itemsPath": null,
+        "itemPath": "data",
+        "totalPath": null
+      }
+    }
+  ]
+}

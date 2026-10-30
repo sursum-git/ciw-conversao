@@ -1,0 +1,330 @@
+{
+  "package": "container-expense-batch",
+  "version": 1,
+  "status": "candidate-ready-local",
+  "program": "op1042",
+  "entity": "container_despesas_lote_progress",
+  "createdAt": "2026-10-28T19:18:43.643009+00:00",
+  "sourceCode": "motor_progress_container_despesas_lote",
+  "sourceOperations": 3,
+  "officialCompile": false,
+  "integrated": false,
+  "published": false,
+  "businessExecuted": false,
+  "sharedApplied": false,
+  "files": [
+    {
+      "path": "abl/ContainerExpenseBatchSnapshot.i",
+      "sha256": "5e4a204ab904d8c6e277281c6c2c7923c193f9d6c36c3ce971017c444b35c75b",
+      "bytes": 2570
+    },
+    {
+      "path": "abl/ContainersDespesasBatchApi.p",
+      "sha256": "dfaf5805ce6055208ea5b440b22830696360f5e44c2503b5f744ac578021fb2a",
+      "bytes": 3691
+    },
+    {
+      "path": "abl/ContainersDespesasBatchService.p",
+      "sha256": "5dcb7e0d2fd2f0e0426622c48f7735253341413cbc7f36630b386c40a8ab19d2",
+      "bytes": 10088
+    },
+    {
+      "path": "metadata/api-source.json",
+      "sha256": "2e5c2845f6a217891518ecae041e11d2dd5411ab9e87114b57e8cba04b85e663",
+      "bytes": 1628
+    },
+    {
+      "path": "metadata/despesas-lote-builder-draft.json",
+      "sha256": "579d886026a1a9edc332518333bd144d4058ad378cc6b444be4cfbe68532be81",
+      "bytes": 10814
+    },
+    {
+      "path": "patches/bridge/CiwErpReadService.p.patch",
+      "sha256": "0831ca4752340e1615916eb3766e8a2aaed8e540b1c0f4045ce43f2d94a47911",
+      "bytes": 4161
+    },
+    {
+      "path": "patches/bridge/parent-navigation.json",
+      "sha256": "45c6df52cb104940b61e78437edaae92b62b1416d3d3484a76d8a4912b6c79e0",
+      "bytes": 806
+    },
+    {
+      "path": "patches/bridge/patch-plan.json",
+      "sha256": "7b55aa6337cf8998641aa6b12daa312c1131c5b61f8a59f54fbf4bea146ba5f9",
+      "bytes": 4486
+    },
+    {
+      "path": "patches/bridge/route-addition.json",
+      "sha256": "03cad2c7f1c6961256f77aa0fa7dedb011e78ff224339bbe5bd885d3880e46d3",
+      "bytes": 451
+    },
+    {
+      "path": "patches/bridge/RuntimeApiEntityActionService.php.patch",
+      "sha256": "22f1b62db7022bdfa3b154a091f4d055e1254b5e514a203aec9c5cd6ff2dcd90",
+      "bytes": 2470
+    },
+    {
+      "path": "patches/ContainersDespesasCrudService.p.patch",
+      "sha256": "54bd44d27c2a1d485ed056fdf77dd51e9fff9309a4a14fddd97dd7ca292cef5b",
+      "bytes": 4615
+    },
+    {
+      "path": "patches/native-batch-context/CrudDefinitionValidator.js.patch",
+      "sha256": "5c79450903538b62bc541f3e74a4fb54c1e3d9d4b316b4f175ff77a8a443ffa4",
+      "bytes": 2131
+    },
+    {
+      "path": "patches/native-batch-context/CrudEngine.js.patch",
+      "sha256": "7b42f8e4116677bab24caffc1778359bf3f690a19b8c2c4c7ceb6ff3b71bfe83",
+      "bytes": 493
+    },
+    {
+      "path": "patches/native-batch-context/CrudKendoGridRenderer.js.patch",
+      "sha256": "f5c37c0c8cff24254881f767802b87eff8cac47d5bb9969a64f28c2637bd4262",
+      "bytes": 2758
+    },
+    {
+      "path": "patches/native-batch-context/patch-plan.json",
+      "sha256": "e5bfe7f8701e86767203b598b5716dca321a62c058507cf46c1da51ead8d582b",
+      "bytes": 6574
+    },
+    {
+      "path": "patches/native-batch-context/ProgramBuilderService.php.patch",
+      "sha256": "14c94c8e849b12a54a479b8ec5f16852c8ea65d7def3e6a07f51b16ec151dc29",
+      "bytes": 3090
+    },
+    {
+      "path": "patches/seam-plan.json",
+      "sha256": "cda713c823213f1704bd7aa23fca93a6e8ea3fdb7c5755b1696a7684fe752e8c",
+      "bytes": 2926
+    },
+    {
+      "path": "php/RuntimeContainerExpenseBatch.php",
+      "sha256": "b2de2ed168fabd929bf47a5abc0a07af965fc4cd350591d7119f7f206b6a19b7",
+      "bytes": 12555
+    },
+    {
+      "path": "PLAN.md",
+      "sha256": "4128fd4e842bd0e81c4eb07c5ac0988429c52466d4c8f9f610e90f0849bb41f8",
+      "bytes": 2260
+    },
+    {
+      "path": "REVIEW.md",
+      "sha256": "e22814bbc2cad06b20521293d8483b3297e49c2154500484841ce1b481607b69",
+      "bytes": 3967
+    },
+    {
+      "path": "tests/browser-native.cjs",
+      "sha256": "3740a822cfa524cbca4e865e726b020d635e37d28d4c74d0cc323012b0ede9ed",
+      "bytes": 2837
+    },
+    {
+      "path": "tests/ContainerExpenseBatchBridgeTests.i",
+      "sha256": "baa9c0eaf02d1f2d1969a35f5efa6e665b5fae1d12691657beddcd36ef27727f",
+      "bytes": 6274
+    },
+    {
+      "path": "tests/ContainerExpenseBatchSeamTests.i",
+      "sha256": "d69142016dd14ab21fbe979699814439f75b81e2e20a6d4fb0be7be00da1f8ea",
+      "bytes": 7828
+    },
+    {
+      "path": "tests/freeze.py",
+      "sha256": "d6db89b0d004589ab9629831bf31a4adf460bfd77e30b7cfdd6592110f2b22f8",
+      "bytes": 4469
+    },
+    {
+      "path": "tests/native-batch.cjs",
+      "sha256": "3a8bccbecd88e2d43476e7f003b180e9156848658890f8a4339acedb105b7972",
+      "bytes": 4836
+    },
+    {
+      "path": "tests/phpunit-bootstrap.php",
+      "sha256": "7fec41674c2f474801b53e559186e8491896c71eba0f8ef4980a1df9396b1030",
+      "bytes": 271
+    },
+    {
+      "path": "tests/prepare-bridge.py",
+      "sha256": "8032a422e7707bc06da8c44a7b722e567a35753b376caf2095e3d414a0264e8a",
+      "bytes": 9740
+    },
+    {
+      "path": "tests/prepare-native.py",
+      "sha256": "d6990ae6dc024d7c40b7fc8949047ec32ff99ed6cdedf2be648d4d86a7e0d18b",
+      "bytes": 7085
+    },
+    {
+      "path": "tests/prepare-seam.py",
+      "sha256": "f92914b9eeeb68edba849a67fe437abfdd595442daa667bfd5da235fc088524e",
+      "bytes": 7036
+    },
+    {
+      "path": "tests/preview-native.php",
+      "sha256": "42559abf96dadf9e59014ee87010b035aa457c79df5564a3c5c86f03a03b519b",
+      "bytes": 3129
+    },
+    {
+      "path": "tests/run-seam.ps1",
+      "sha256": "343882087e61db3599fb591fb6036137290d5a325d28b9687fd836cc5e86aa7d",
+      "bytes": 2434
+    },
+    {
+      "path": "tests/runtime-boundary.php",
+      "sha256": "98bec0f2902a97049def962d8e71424434803b5c40094296008ba87fe7c7c368",
+      "bytes": 10837
+    },
+    {
+      "path": "tests/verify-all.ps1",
+      "sha256": "94c3b11acd9f075d571cf0b992a794f86b6670b806ab5b1d0e931fc24ea057ec",
+      "bytes": 2608
+    },
+    {
+      "path": "tests/verify-wiring.py",
+      "sha256": "bdeafd79bb45a9e8b66974f8d63f5af7c17a1ba8272716e285b19224b070d938",
+      "bytes": 2135
+    }
+  ],
+  "baselines": [
+    {
+      "plan": "patches/seam-plan.json",
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersDespesasCrudService.p",
+      "baselineSha256": "7ed534b101b301ada32050fab4e77250b16187bfc7e4f32f0fbf645999a05b06"
+    },
+    {
+      "plan": "patches/bridge/patch-plan.json",
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwErpReadService.p",
+      "baselineSha256": "906e77bcf395d0ff8b391688e336344ca727ef1dfcaac18aec0d09f08d71cd80"
+    },
+    {
+      "plan": "patches/bridge/patch-plan.json",
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeApiEntityActionService.php",
+      "baselineSha256": "4fad16103637b00a0c424f947441c21105c411f9232f84ca55f9a9b0201c1530"
+    },
+    {
+      "plan": "patches/native-batch-context/patch-plan.json",
+      "target": "D:/opencode/construtor-pg/backend/src/Builder/ProgramBuilderService.php",
+      "baselineSha256": "4daaac37c2c947ba28d91b880c428447e3bdbeb07185881ab77da98783bfbf4a"
+    },
+    {
+      "plan": "patches/native-batch-context/patch-plan.json",
+      "target": "D:/opencode/construtor-pg/src/crud-engine/CrudEngine.js",
+      "baselineSha256": "e0d3f4cdb3ae73862b535a492f2c94bd9b89a8e49a2c0a982a0a2d8c6d929f39"
+    },
+    {
+      "plan": "patches/native-batch-context/patch-plan.json",
+      "target": "D:/opencode/construtor-pg/src/crud-engine/CrudKendoGridRenderer.js",
+      "baselineSha256": "d5076ccbcab0676b5740b84f92622d86e4febff3135d3b6a26976b4144449119"
+    },
+    {
+      "plan": "patches/native-batch-context/patch-plan.json",
+      "target": "D:/opencode/construtor-pg/src/crud-engine/CrudDefinitionValidator.js",
+      "baselineSha256": "0c4f704b8460e47abcc00d0ca9f5dd26a377233fa8b6a0ec8032007d019147b7"
+    },
+    {
+      "plan": "patches/bridge/route-addition.json",
+      "target": "D:/opencode/motor-progress/v2/conf-web-handler/program-routes.json",
+      "baselineSha256": "4f70f87269b0c661108c3dd8aac4e3ed2b57eb5ca3b40306f1d9c36025fc374e"
+    },
+    {
+      "plan": "patches/bridge/parent-navigation.json",
+      "target": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/official-build3/op1003-program-after.json",
+      "baselineSha256": "a656a2c5e9c34ee12cc223b78155dcab6a664770f81bf0a4229e06b705195de9"
+    }
+  ],
+  "auditedInputs": [
+    {
+      "path": "sources/scriptcase/containers/form_despesas_container_multi_reg/form_despesas_container_multi_reg_apl.php",
+      "sha256": "13287e5ac63f59488b6d1f3f4541930b0c91d7c8470e719726c686b300a6266a"
+    },
+    {
+      "path": "docs/containers-despesas-crud-inventario.md",
+      "sha256": "defca902de5992628a05a94a1ea8a034ced532de34f796868f858a89619b13b7"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/schema/schema-despesas_container.json",
+      "sha256": "8328dab88c34a735c3088ba268fee9c3949fe4f4cd6296a215de185f6377b67b"
+    }
+  ],
+  "evidence": [
+    {
+      "path": ".runtime/ciw-completion-20261028/container-expense-batch/public-wiring-final.log",
+      "sha256": "1210708e371059d8de04ce83d7ad54ea437fb94c59b0c57b1a59a3e38abb9e8b"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/container-expense-batch/abl-final.log",
+      "sha256": "cad7748400591e1fa98a5b67f47fbec0ab108d8e2407ad0012a79ee7aa598f79"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/container-expense-batch/runtime-boundary-final.log",
+      "sha256": "e2a7124afa7e286157e7b2b6091f18432c1d21581f17d2b89340e534b46378cd"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/container-expense-batch/builder-final.log",
+      "sha256": "1c50992570d8f5a68f5a570973f6b6f8374a33fc5749b3e70e1375a5b766924a"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/container-expense-batch/native-batch-final.log",
+      "sha256": "0fb8f976d946aef6c0eb46735384cecc7aaf711a5981e4f43d6cc06e4eed10ad"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/container-expense-batch/kendo-final.log",
+      "sha256": "7ea76e4f70db79d5f1212bb979ed0bae3d0775e810f24b2927c1eeaafeddbc98"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/container-expense-batch/legacy-batch-final.log",
+      "sha256": "9a4801743a85c0075e97bd2ef7cfc18fff04db7ec3881202702cb498d6c3dc4d"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/container-expense-batch/phpunit-existing-batch-final.log",
+      "sha256": "f09379b2eed827d73646523cfb79628a766169a2c2229dffea517b783ecba326"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/container-expense-batch/local/compile.log",
+      "sha256": "716d8337a243b0c18af313d59fb7974b1907918199065d5a4144893553eccd84"
+    }
+  ],
+  "command": "powershell -NoProfile -ExecutionPolicy Bypass -File integration-src/ciw-completion-20261028/container-expense-batch/tests/verify-all.ps1",
+  "results": {
+    "localOpenEdge": "12.8 NUM-DBS=0",
+    "localCompileEntries": 7,
+    "ablChecksPerCombination": 271,
+    "combinations": [
+      "UTF-8/AMERICAN",
+      "UTF-8/EUROPEAN",
+      "ISO8859-1/AMERICAN",
+      "ISO8859-1/EUROPEAN"
+    ],
+    "realRuntimeBoundaryChecks": 42,
+    "publicWiringParentChecks": 12,
+    "nativeJsChecks": 16,
+    "realKendoChecks": 8,
+    "existingKendoBatch": "PASS",
+    "existingPhpUnitTests": 28,
+    "existingPhpUnitAssertions": 478
+  },
+  "destinations": {
+    "abl/ContainerExpenseBatchSnapshot.i": "D:/opencode/motor-progress/v2/sursum-api/includes/ContainerExpenseBatchSnapshot.i",
+    "abl/ContainersDespesasBatchService.p": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersDespesasBatchService.p",
+    "abl/ContainersDespesasBatchApi.p": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersDespesasBatchApi.p",
+    "php/RuntimeContainerExpenseBatch.php": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeContainerExpenseBatch.php"
+  },
+  "limits": {
+    "readMaximumRows": 50000,
+    "readStopAfterSeconds": 10,
+    "pageMaximum": 200,
+    "batchMaximum": 100,
+    "batchOperations": [
+      "update",
+      "delete"
+    ],
+    "mixedBatch": false,
+    "physicalOriginalFields": 14,
+    "editableFields": [
+      "vl_prev",
+      "vl_base_imp",
+      "log_manual"
+    ]
+  },
+  "gatesReference": "REVIEW.md",
+  "fiscalV2Preserved": true
+}

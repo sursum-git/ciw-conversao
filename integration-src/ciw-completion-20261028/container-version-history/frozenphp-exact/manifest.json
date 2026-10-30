@@ -1,0 +1,18 @@
+{
+  "state": "FROZEN_EXACT_V1_3_PHP",
+  "sourceFreezeSha256": "ccf6e6fa74af52d37ef71d58853c2eba03b35f02d67669242caa19cccf826bb2",
+  "files": [
+    {
+      "name": "RuntimeCiwErpQuery.php",
+      "sha256": "1e8d944320f8c57e7dbfe83b339a33c36c1deda0bdd0c78d85a39a70e02a12c2",
+      "baselineSha256": "13d240f5b1030fb8678e13811338e95d6b19ea571472dd2a62d4d29335498ad2"
+    },
+    {
+      "name": "RuntimeApiEntityActionService.php",
+      "sha256": "dc4a4d371ccb5bed1f2a9ff721cfbe73014788247327f565e457edf66fd5376d",
+      "baselineSha256": "ac07816fbaa0c2b91027b2dbc6e38008f649ccd7fb85e4be6ba23df2820b3ac0"
+    }
+  ],
+  "canonicalChanged": false,
+  "auxiliaryEntitiesAdded": false
+}

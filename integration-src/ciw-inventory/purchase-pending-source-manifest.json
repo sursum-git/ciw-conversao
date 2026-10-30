@@ -1,0 +1,102 @@
+{
+  "scope": [
+    "cons_itens_compra_alocado",
+    "cons_itens_proc_compra_sinaliz",
+    "cons_procs_compra",
+    "ctrl_envios_repres_amostra"
+  ],
+  "analysis_copies": true,
+  "files": [
+    {
+      "application": "cons_itens_compra_alocado",
+      "file": "cons_itens_compra_alocado.php",
+      "remote_sha256": "e00e562635a23170b6a2729d5a2d064acdfe8f9a4ecb843ac7ff5a6fb96fcd67",
+      "copied_sha256": "e00e562635a23170b6a2729d5a2d064acdfe8f9a4ecb843ac7ff5a6fb96fcd67",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_itens_compra_alocado",
+      "file": "cons_itens_compra_alocado_grid.class.php",
+      "remote_sha256": "ab24bef6b624bd3cb35070f279fbe7203ded353143ef56f9819ed7b642fdc4fb",
+      "copied_sha256": "6ff51da8d4d40685cb8eae8e0cea823f0d4f4de24373fbf7d090a826f5b336ec",
+      "sensitive_literals_omitted": 5
+    },
+    {
+      "application": "cons_itens_compra_alocado",
+      "file": "index.php",
+      "remote_sha256": "f5e6485ab1ec687e922441fc674960a19cb396e49cb64244844b63571ad90ef9",
+      "copied_sha256": "7256c8781629f3b88b8d2586763f9e3eb4d562de15ff3c59927d4c92ff1bc332",
+      "sensitive_literals_omitted": 21
+    },
+    {
+      "application": "cons_itens_proc_compra_sinaliz",
+      "file": "cons_itens_proc_compra_sinaliz.php",
+      "remote_sha256": "cc369b3e5bd42fa3ed639ffe61951e13fa4551e870750f3159f7cd13f2ea2a08",
+      "copied_sha256": "cc369b3e5bd42fa3ed639ffe61951e13fa4551e870750f3159f7cd13f2ea2a08",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_itens_proc_compra_sinaliz",
+      "file": "cons_itens_proc_compra_sinaliz_grid.class.php",
+      "remote_sha256": "224b6052bd746c5b3c4c496c5bce65232360219371e4055a505a355bac1b4836",
+      "copied_sha256": "a59aa187da9436964d83bdca1387acb18df1a3250bd645d492be7576baa6a251",
+      "sensitive_literals_omitted": 3
+    },
+    {
+      "application": "cons_itens_proc_compra_sinaliz",
+      "file": "index.php",
+      "remote_sha256": "ef00a28914d39269ffe644e1fe8e146e10b33e301c6b7d1c7a122dfffdac9902",
+      "copied_sha256": "c5da854c68a8ab62903f48a0baf3383769db287cb3533c5be39ba1f339e0c209",
+      "sensitive_literals_omitted": 21
+    },
+    {
+      "application": "cons_procs_compra",
+      "file": "cons_procs_compra.php",
+      "remote_sha256": "3453b4b48bacb4741bdadfeec568537829aae42412294fa3ec5274949ac42519",
+      "copied_sha256": "3453b4b48bacb4741bdadfeec568537829aae42412294fa3ec5274949ac42519",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_procs_compra",
+      "file": "cons_procs_compra_grid.class.php",
+      "remote_sha256": "de235118b8eaa593649c57f8dfc9ea5b631b7a7cfc74b5e1b77a26c3a4b71288",
+      "copied_sha256": "124739c9a82ddc224b3288fb8aa122a58da6ab981ff818faf691485a4f1f1ce2",
+      "sensitive_literals_omitted": 8
+    },
+    {
+      "application": "cons_procs_compra",
+      "file": "index.php",
+      "remote_sha256": "05596604b44af4ee389bb6b0c1ec28a6802874a743b35467b09b30c0de6d9512",
+      "copied_sha256": "9cf828ad50801770b3f58be4796581bb8ae95c09aa35aba6db42a16f56f6fffa",
+      "sensitive_literals_omitted": 9
+    },
+    {
+      "application": "ctrl_envios_repres_amostra",
+      "file": "ctrl_envios_repres_amostra.php",
+      "remote_sha256": "a0be97baed27f2e3870a48dfedc2fb9935a9d991b1da879ac4b2a99546bf302d",
+      "copied_sha256": "a0be97baed27f2e3870a48dfedc2fb9935a9d991b1da879ac4b2a99546bf302d",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "ctrl_envios_repres_amostra",
+      "file": "ctrl_envios_repres_amostra_apl.php",
+      "remote_sha256": "d34142a3d990390fabe79bc7b85cc506dc2a30e28e83c1b23a91f6166f182123",
+      "copied_sha256": "7874ee9752d11e213965aaceeb4b43085e9d03b27e75997adf8f6603cd293192",
+      "sensitive_literals_omitted": 2
+    },
+    {
+      "application": "ctrl_envios_repres_amostra",
+      "file": "ctrl_envios_repres_amostra_form0.php",
+      "remote_sha256": "7256e4bb4a2ed31b6986b16d3d6cb8e9d12c8f4f6d5518009f44731a18a59371",
+      "copied_sha256": "752d4dcb7153bd0412b172e80f982c379a88ef38323c82f03e98a02fcd00d6cc",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "ctrl_envios_repres_amostra",
+      "file": "index.php",
+      "remote_sha256": "3b4953085cbcf1a7794d6d74913903266d02ed4e36dcbd86c0e87f844a699340",
+      "copied_sha256": "557c6a3e0a0c55231423efdef0a34103dc41b4aa6af5e26edebe27574d5bc220",
+      "sensitive_literals_omitted": 2
+    }
+  ]
+}

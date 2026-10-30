@@ -1,0 +1,32 @@
+{
+  "kind": "RFC6902-append-only",
+  "versionPolicy": "manager chooses next version after reconciling concurrent additions",
+  "patches": [
+    {
+      "target": "D:/opencode/construtor-pg/integrations/ciw-container-painel/despesas-1.0.1-builder-draft-candidate.json",
+      "baselineSha256": "6cc9b5fd8f8716e56437f44395053763683aad757041af606a28593313a18ff4",
+      "operations": [
+        {
+          "op": "add",
+          "path": "/programDraft/rowLinks/-",
+          "value": {
+            "id": "memoria_calculo",
+            "label": "Memória de cálculo",
+            "screenId": "ciw.container-despesa-memoria-med",
+            "parameters": [
+              {
+                "field": "container_id",
+                "sourceField": "container_id"
+              },
+              {
+                "field": "despesa_container_id",
+                "sourceField": "despesa_container_id"
+              }
+            ],
+            "position": "end"
+          }
+        }
+      ]
+    }
+  ]
+}

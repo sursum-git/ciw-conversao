@@ -1,0 +1,22 @@
+diff --git a/RuntimeApiEntityActionService.php b/RuntimeApiEntityActionService.php
+index 3763942..65bd896 100644
+--- a/RuntimeApiEntityActionService.php
++++ b/RuntimeApiEntityActionService.php
+@@ -932,7 +932,7 @@ class RuntimeApiEntityActionService
+ 
+         }
+ 
+-        if (($definition['entityCode'] ?? null) === 'container_versoes_historico_med_progress') {
++        if (in_array($definition['entityCode'] ?? null, ['container_versoes_historico_med_progress','container_versao_pagtos_historico_med_progress','container_versao_nfs_historico_med_progress','container_versao_descontos_historico_med_progress','container_versao_despesas_historico_med_progress'], true)) {
+             ApiRequestContext::assertRows($body['data'], ['container_id' => $query['container_id'], 'versao_id' => $query['versao_id']]);
+         }
+ 
+@@ -966,7 +966,7 @@ class RuntimeApiEntityActionService
+ 
+         $id = $this->extractRecordId($definition, $payload);
+ 
+-        if (($definition['entityCode'] ?? null) === 'container_versoes_historico_med_progress') {
++        if (in_array($definition['entityCode'] ?? null, ['container_versoes_historico_med_progress','container_versao_pagtos_historico_med_progress','container_versao_nfs_historico_med_progress','container_versao_descontos_historico_med_progress','container_versao_despesas_historico_med_progress'], true)) {
+             foreach ([$payload, is_array($payload['record'] ?? null) ? $payload['record'] : []] as $submitted) {
+                 foreach (['id','record_key'] as $alias) {
+                     if (array_key_exists($alias, $submitted) && (!is_string($submitted[$alias]) || !is_string($id) || $submitted[$alias] !== $id)) {

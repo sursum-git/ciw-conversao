@@ -1,0 +1,112 @@
+{
+  "database": "espec",
+  "table": "despesas_proc_compra",
+  "fields": [
+    {
+      "name": "despesa_proc_compra_id",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "despesa_id",
+      "type": "integer",
+      "format": ">>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "vl_prev",
+      "type": "decimal",
+      "format": ">,>>>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "proc_compra_id",
+      "type": "decimal",
+      "format": ">>,>>9.99",
+      "decimals": 2,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "calc_imp_proc_compra_id",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    }
+  ],
+  "indexes": [
+    {
+      "name": "ind_calc",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "calc_imp_proc_compra_id"
+      ]
+    },
+    {
+      "name": "ind_despesas_proc_compra",
+      "unique": true,
+      "primary": true,
+      "fields": [
+        "despesa_proc_compra_id"
+      ]
+    },
+    {
+      "name": "ind_despesa_id",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "despesa_id"
+      ]
+    },
+    {
+      "name": "ind_proc_compra_id",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "proc_compra_id"
+      ]
+    }
+  ],
+  "triggers": [
+  ],
+  "despesaIdTables": [
+    "despesas_impostos",
+    "despesas_proc_compra",
+    "despesas",
+    "despesas_container",
+    "empresas_despesa",
+    "item_container_custo_despesas",
+    "relacs_desp_calculada",
+    "relacs_desp_calculadas"
+  ]
+}

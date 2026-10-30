@@ -1,0 +1,1317 @@
+{
+  "schemaVersion": "1.0",
+  "pageType": "crud",
+  "screenId": "ciw.consultas",
+  "program": {
+    "id": "op1000",
+    "module": "operacional",
+    "entity": "consultas",
+    "title": "Consulta",
+    "version": "1.0.0",
+    "subtitle": "Regressao de filtros numericos",
+    "icon": null,
+    "permission": "op1000.read",
+    "programOrigin": "standard",
+    "ownerScope": "system",
+    "customizationPolicy": "overlay_only",
+    "subscriberId": null,
+    "baseProgramCode": null,
+    "baseProgramVersionId": null,
+    "upgradeFrozen": false,
+    "frozenReason": null,
+    "publicationPolicy": {
+      "allowedDatabaseEnvironments": []
+    }
+  },
+  "permissions": {
+    "read": "op1000.read",
+    "create": false,
+    "edit": false,
+    "delete": false,
+    "saveLayout": "user.preferences"
+  },
+  "dataSource": {
+    "api": {
+      "read": {
+        "endpointId": "read",
+        "method": "POST"
+      },
+      "get": {
+        "endpointId": "get",
+        "method": "POST"
+      },
+      "saveLayout": {
+        "endpointId": "saveLayout",
+        "method": "POST"
+      },
+      "restoreLayout": {
+        "endpointId": "restoreLayout",
+        "method": "POST"
+      },
+      "saveSort": {
+        "endpointId": "saveSort",
+        "method": "POST"
+      },
+      "deleteSort": {
+        "endpointId": "deleteSort",
+        "method": "POST"
+      },
+      "saveGroup": {
+        "endpointId": "saveGroup",
+        "method": "POST"
+      },
+      "deleteGroup": {
+        "endpointId": "deleteGroup",
+        "method": "POST"
+      },
+      "saveFilter": {
+        "endpointId": "saveFilter",
+        "method": "POST"
+      },
+      "deleteFilter": {
+        "endpointId": "deleteFilter",
+        "method": "POST"
+      },
+      "lookupFrequent": {
+        "endpointId": "lookupFrequent",
+        "method": "POST"
+      },
+      "recordLookupUsage": {
+        "endpointId": "recordLookupUsage",
+        "method": "POST"
+      },
+      "saveMobileTemplate": {
+        "endpointId": "saveMobileTemplate",
+        "method": "POST"
+      },
+      "deleteMobileTemplate": {
+        "endpointId": "deleteMobileTemplate",
+        "method": "POST"
+      }
+    }
+  },
+  "runtime": {
+    "entityCode": "consultas",
+    "programId": "op1000",
+    "mode": "readonly-api",
+    "lock": {
+      "enabled": false,
+      "modes": []
+    },
+    "messages": {
+      "enabled": false,
+      "pollIntervalSeconds": 30,
+      "events": {
+        "enabled": false
+      }
+    }
+  },
+  "contextFields": [],
+  "dataModel": {
+    "primaryKey": "field_2",
+    "fields": {
+      "field_1": {
+        "label": "Campo 1",
+        "type": "number",
+        "nullable": true,
+        "technicalProperties": [
+          {
+            "section": "Modelo",
+            "label": "Campo",
+            "value": "field_1"
+          },
+          {
+            "section": "Modelo",
+            "label": "Entidade",
+            "value": "consultas"
+          },
+          {
+            "section": "Modelo",
+            "label": "Tipo de dado",
+            "value": "number"
+          },
+          {
+            "section": "Modelo",
+            "label": "Obrigatorio",
+            "value": "Nao",
+            "critical": false
+          },
+          {
+            "section": "Modelo",
+            "label": "Chave primaria",
+            "value": "Nao",
+            "critical": false
+          },
+          {
+            "section": "Runtime",
+            "label": "Somente leitura",
+            "value": "Sim",
+            "critical": true
+          }
+        ],
+        "readonly": true,
+        "editable": false,
+        "decimals": 2,
+        "format": "n2",
+        "validation": {
+          "required": false
+        }
+      },
+      "field_2": {
+        "label": "Campo 2",
+        "type": "integer",
+        "nullable": true,
+        "technicalProperties": [
+          {
+            "section": "Modelo",
+            "label": "Campo",
+            "value": "field_2"
+          },
+          {
+            "section": "Modelo",
+            "label": "Entidade",
+            "value": "consultas"
+          },
+          {
+            "section": "Modelo",
+            "label": "Tipo de dado",
+            "value": "integer"
+          },
+          {
+            "section": "Modelo",
+            "label": "Obrigatorio",
+            "value": "Nao",
+            "critical": false
+          },
+          {
+            "section": "Modelo",
+            "label": "Chave primaria",
+            "value": "Sim",
+            "critical": true
+          },
+          {
+            "section": "Runtime",
+            "label": "Somente leitura",
+            "value": "Sim",
+            "critical": true
+          }
+        ],
+        "readonly": true,
+        "editable": false,
+        "validation": {
+          "required": false
+        }
+      },
+      "field_3": {
+        "label": "Campo 3",
+        "type": "boolean",
+        "nullable": true,
+        "technicalProperties": [
+          {
+            "section": "Modelo",
+            "label": "Campo",
+            "value": "field_3"
+          },
+          {
+            "section": "Modelo",
+            "label": "Entidade",
+            "value": "consultas"
+          },
+          {
+            "section": "Modelo",
+            "label": "Tipo de dado",
+            "value": "boolean"
+          },
+          {
+            "section": "Modelo",
+            "label": "Obrigatorio",
+            "value": "Nao",
+            "critical": false
+          },
+          {
+            "section": "Modelo",
+            "label": "Chave primaria",
+            "value": "Nao",
+            "critical": false
+          },
+          {
+            "section": "Runtime",
+            "label": "Somente leitura",
+            "value": "Sim",
+            "critical": true
+          }
+        ],
+        "readonly": true,
+        "editable": false,
+        "validation": {
+          "required": false
+        }
+      },
+      "field_4": {
+        "label": "Campo 4",
+        "type": "text",
+        "nullable": true,
+        "technicalProperties": [
+          {
+            "section": "Modelo",
+            "label": "Campo",
+            "value": "field_4"
+          },
+          {
+            "section": "Modelo",
+            "label": "Entidade",
+            "value": "consultas"
+          },
+          {
+            "section": "Modelo",
+            "label": "Tipo de dado",
+            "value": "text"
+          },
+          {
+            "section": "Modelo",
+            "label": "Obrigatorio",
+            "value": "Nao",
+            "critical": false
+          },
+          {
+            "section": "Modelo",
+            "label": "Chave primaria",
+            "value": "Nao",
+            "critical": false
+          },
+          {
+            "section": "Runtime",
+            "label": "Somente leitura",
+            "value": "Sim",
+            "critical": true
+          }
+        ],
+        "readonly": true,
+        "editable": false,
+        "validation": {
+          "required": false
+        }
+      },
+      "field_5": {
+        "label": "Campo 5",
+        "type": "date",
+        "nullable": true,
+        "technicalProperties": [
+          {
+            "section": "Modelo",
+            "label": "Campo",
+            "value": "field_5"
+          },
+          {
+            "section": "Modelo",
+            "label": "Entidade",
+            "value": "consultas"
+          },
+          {
+            "section": "Modelo",
+            "label": "Tipo de dado",
+            "value": "date"
+          },
+          {
+            "section": "Modelo",
+            "label": "Obrigatorio",
+            "value": "Nao",
+            "critical": false
+          },
+          {
+            "section": "Modelo",
+            "label": "Chave primaria",
+            "value": "Nao",
+            "critical": false
+          },
+          {
+            "section": "Runtime",
+            "label": "Somente leitura",
+            "value": "Sim",
+            "critical": true
+          }
+        ],
+        "readonly": true,
+        "editable": false,
+        "validation": {
+          "required": false
+        }
+      },
+      "field_6": {
+        "label": "Campo 6",
+        "type": "datetime",
+        "nullable": true,
+        "technicalProperties": [
+          {
+            "section": "Modelo",
+            "label": "Campo",
+            "value": "field_6"
+          },
+          {
+            "section": "Modelo",
+            "label": "Entidade",
+            "value": "consultas"
+          },
+          {
+            "section": "Modelo",
+            "label": "Tipo de dado",
+            "value": "datetime"
+          },
+          {
+            "section": "Modelo",
+            "label": "Obrigatorio",
+            "value": "Nao",
+            "critical": false
+          },
+          {
+            "section": "Modelo",
+            "label": "Chave primaria",
+            "value": "Nao",
+            "critical": false
+          },
+          {
+            "section": "Runtime",
+            "label": "Somente leitura",
+            "value": "Sim",
+            "critical": true
+          }
+        ],
+        "readonly": true,
+        "editable": false,
+        "validation": {
+          "required": false
+        }
+      },
+      "field_7": {
+        "label": "Campo 7",
+        "type": "enum",
+        "nullable": true,
+        "technicalProperties": [
+          {
+            "section": "Modelo",
+            "label": "Campo",
+            "value": "field_7"
+          },
+          {
+            "section": "Modelo",
+            "label": "Entidade",
+            "value": "consultas"
+          },
+          {
+            "section": "Modelo",
+            "label": "Tipo de dado",
+            "value": "enum"
+          },
+          {
+            "section": "Modelo",
+            "label": "Obrigatorio",
+            "value": "Nao",
+            "critical": false
+          },
+          {
+            "section": "Modelo",
+            "label": "Chave primaria",
+            "value": "Nao",
+            "critical": false
+          },
+          {
+            "section": "Runtime",
+            "label": "Somente leitura",
+            "value": "Sim",
+            "critical": true
+          }
+        ],
+        "readonly": true,
+        "editable": false,
+        "validation": {
+          "required": false
+        }
+      },
+      "json_data": {
+        "label": "JSON",
+        "type": "json",
+        "nullable": true,
+        "technicalProperties": [
+          {
+            "section": "Modelo",
+            "label": "Campo",
+            "value": "json_data"
+          },
+          {
+            "section": "Modelo",
+            "label": "Entidade",
+            "value": "consultas"
+          },
+          {
+            "section": "Modelo",
+            "label": "Tipo de dado",
+            "value": "json"
+          },
+          {
+            "section": "Modelo",
+            "label": "Obrigatorio",
+            "value": "Nao",
+            "critical": false
+          },
+          {
+            "section": "Modelo",
+            "label": "Chave primaria",
+            "value": "Nao",
+            "critical": false
+          }
+        ],
+        "editor": "textarea",
+        "validation": {
+          "required": false
+        }
+      }
+    }
+  },
+  "crud": {
+    "query": {
+      "pageSize": 20,
+      "defaultSort": [
+        {
+          "field": "field_2",
+          "dir": "asc"
+        }
+      ]
+    },
+    "filter": {
+      "type": "window",
+      "mode": "basic",
+      "title": "Filtros",
+      "openOnLoad": false,
+      "showAppliedFilters": true,
+      "fields": [
+        {
+          "id": "field_1",
+          "field": "field_1",
+          "label": "Campo 1",
+          "type": "decimal",
+          "operator": "eq",
+          "technicalProperties": [
+            {
+              "section": "Exibicao",
+              "label": "Superficie",
+              "value": "Filtro"
+            },
+            {
+              "section": "Exibicao",
+              "label": "Operador inicial",
+              "value": "contains"
+            },
+            {
+              "section": "Modelo",
+              "label": "Campo",
+              "value": "field_1"
+            },
+            {
+              "section": "Modelo",
+              "label": "Entidade",
+              "value": "consultas"
+            },
+            {
+              "section": "Modelo",
+              "label": "Tipo de dado",
+              "value": "number"
+            },
+            {
+              "section": "Modelo",
+              "label": "Obrigatorio",
+              "value": "Nao",
+              "critical": false
+            },
+            {
+              "section": "Modelo",
+              "label": "Chave primaria",
+              "value": "Nao",
+              "critical": false
+            },
+            {
+              "section": "Runtime",
+              "label": "Somente leitura",
+              "value": "Sim",
+              "critical": true
+            }
+          ]
+        },
+        {
+          "id": "field_2",
+          "field": "field_2",
+          "label": "Campo 2",
+          "type": "integer",
+          "operator": "eq",
+          "technicalProperties": [
+            {
+              "section": "Exibicao",
+              "label": "Superficie",
+              "value": "Filtro"
+            },
+            {
+              "section": "Exibicao",
+              "label": "Operador inicial",
+              "value": "eq"
+            },
+            {
+              "section": "Modelo",
+              "label": "Campo",
+              "value": "field_2"
+            },
+            {
+              "section": "Modelo",
+              "label": "Entidade",
+              "value": "consultas"
+            },
+            {
+              "section": "Modelo",
+              "label": "Tipo de dado",
+              "value": "integer"
+            },
+            {
+              "section": "Modelo",
+              "label": "Obrigatorio",
+              "value": "Nao",
+              "critical": false
+            },
+            {
+              "section": "Modelo",
+              "label": "Chave primaria",
+              "value": "Sim",
+              "critical": true
+            },
+            {
+              "section": "Runtime",
+              "label": "Somente leitura",
+              "value": "Sim",
+              "critical": true
+            }
+          ]
+        },
+        {
+          "id": "field_3",
+          "field": "field_3",
+          "label": "Campo 3",
+          "type": "boolean",
+          "operator": "eq",
+          "technicalProperties": [
+            {
+              "section": "Exibicao",
+              "label": "Superficie",
+              "value": "Filtro"
+            },
+            {
+              "section": "Exibicao",
+              "label": "Operador inicial",
+              "value": "eq"
+            },
+            {
+              "section": "Modelo",
+              "label": "Campo",
+              "value": "field_3"
+            },
+            {
+              "section": "Modelo",
+              "label": "Entidade",
+              "value": "consultas"
+            },
+            {
+              "section": "Modelo",
+              "label": "Tipo de dado",
+              "value": "boolean"
+            },
+            {
+              "section": "Modelo",
+              "label": "Obrigatorio",
+              "value": "Nao",
+              "critical": false
+            },
+            {
+              "section": "Modelo",
+              "label": "Chave primaria",
+              "value": "Nao",
+              "critical": false
+            },
+            {
+              "section": "Runtime",
+              "label": "Somente leitura",
+              "value": "Sim",
+              "critical": true
+            }
+          ]
+        },
+        {
+          "id": "field_4",
+          "field": "field_4",
+          "label": "Campo 4",
+          "type": "text",
+          "operator": "contains",
+          "technicalProperties": [
+            {
+              "section": "Exibicao",
+              "label": "Superficie",
+              "value": "Filtro"
+            },
+            {
+              "section": "Exibicao",
+              "label": "Operador inicial",
+              "value": "contains"
+            },
+            {
+              "section": "Modelo",
+              "label": "Campo",
+              "value": "field_4"
+            },
+            {
+              "section": "Modelo",
+              "label": "Entidade",
+              "value": "consultas"
+            },
+            {
+              "section": "Modelo",
+              "label": "Tipo de dado",
+              "value": "text"
+            },
+            {
+              "section": "Modelo",
+              "label": "Obrigatorio",
+              "value": "Nao",
+              "critical": false
+            },
+            {
+              "section": "Modelo",
+              "label": "Chave primaria",
+              "value": "Nao",
+              "critical": false
+            },
+            {
+              "section": "Runtime",
+              "label": "Somente leitura",
+              "value": "Sim",
+              "critical": true
+            }
+          ]
+        },
+        {
+          "id": "field_5",
+          "field": "field_5",
+          "label": "Campo 5",
+          "type": "date",
+          "operator": "eq",
+          "technicalProperties": [
+            {
+              "section": "Exibicao",
+              "label": "Superficie",
+              "value": "Filtro"
+            },
+            {
+              "section": "Exibicao",
+              "label": "Operador inicial",
+              "value": "contains"
+            },
+            {
+              "section": "Modelo",
+              "label": "Campo",
+              "value": "field_5"
+            },
+            {
+              "section": "Modelo",
+              "label": "Entidade",
+              "value": "consultas"
+            },
+            {
+              "section": "Modelo",
+              "label": "Tipo de dado",
+              "value": "date"
+            },
+            {
+              "section": "Modelo",
+              "label": "Obrigatorio",
+              "value": "Nao",
+              "critical": false
+            },
+            {
+              "section": "Modelo",
+              "label": "Chave primaria",
+              "value": "Nao",
+              "critical": false
+            },
+            {
+              "section": "Runtime",
+              "label": "Somente leitura",
+              "value": "Sim",
+              "critical": true
+            }
+          ]
+        },
+        {
+          "id": "field_6",
+          "field": "field_6",
+          "label": "Campo 6",
+          "type": "datetime",
+          "operator": "eq",
+          "technicalProperties": [
+            {
+              "section": "Exibicao",
+              "label": "Superficie",
+              "value": "Filtro"
+            },
+            {
+              "section": "Exibicao",
+              "label": "Operador inicial",
+              "value": "contains"
+            },
+            {
+              "section": "Modelo",
+              "label": "Campo",
+              "value": "field_6"
+            },
+            {
+              "section": "Modelo",
+              "label": "Entidade",
+              "value": "consultas"
+            },
+            {
+              "section": "Modelo",
+              "label": "Tipo de dado",
+              "value": "datetime"
+            },
+            {
+              "section": "Modelo",
+              "label": "Obrigatorio",
+              "value": "Nao",
+              "critical": false
+            },
+            {
+              "section": "Modelo",
+              "label": "Chave primaria",
+              "value": "Nao",
+              "critical": false
+            },
+            {
+              "section": "Runtime",
+              "label": "Somente leitura",
+              "value": "Sim",
+              "critical": true
+            }
+          ]
+        },
+        {
+          "id": "field_7",
+          "field": "field_7",
+          "label": "Campo 7",
+          "type": "enum",
+          "operator": "eq",
+          "technicalProperties": [
+            {
+              "section": "Exibicao",
+              "label": "Superficie",
+              "value": "Filtro"
+            },
+            {
+              "section": "Exibicao",
+              "label": "Operador inicial",
+              "value": "eq"
+            },
+            {
+              "section": "Modelo",
+              "label": "Campo",
+              "value": "field_7"
+            },
+            {
+              "section": "Modelo",
+              "label": "Entidade",
+              "value": "consultas"
+            },
+            {
+              "section": "Modelo",
+              "label": "Tipo de dado",
+              "value": "enum"
+            },
+            {
+              "section": "Modelo",
+              "label": "Obrigatorio",
+              "value": "Nao",
+              "critical": false
+            },
+            {
+              "section": "Modelo",
+              "label": "Chave primaria",
+              "value": "Nao",
+              "critical": false
+            },
+            {
+              "section": "Runtime",
+              "label": "Somente leitura",
+              "value": "Sim",
+              "critical": true
+            }
+          ]
+        }
+      ]
+    },
+    "grid": {
+      "editing": {
+        "mode": "form"
+      },
+      "pageable": true,
+      "sortable": true,
+      "filterable": false,
+      "groupable": false,
+      "resizable": true,
+      "reorderable": true,
+      "columnMenu": true,
+      "toolbar": [
+        {
+          "id": "filters",
+          "label": "Filtros",
+          "action": "filters",
+          "icon": "filter"
+        },
+        {
+          "id": "refresh",
+          "label": "Atualizar",
+          "action": "refresh",
+          "icon": "arrow-rotate-cw"
+        },
+        {
+          "id": "layout",
+          "label": "Leiaute",
+          "action": "layout",
+          "icon": "columns",
+          "permission": "saveLayout"
+        }
+      ],
+      "columns": [
+        {
+          "field": "field_1",
+          "title": "Campo 1",
+          "width": 150,
+          "technicalProperties": [
+            {
+              "section": "Exibicao",
+              "label": "Superficie",
+              "value": "Grid"
+            },
+            {
+              "section": "Exibicao",
+              "label": "Largura sugerida",
+              "value": "150"
+            },
+            {
+              "section": "Modelo",
+              "label": "Campo",
+              "value": "field_1"
+            },
+            {
+              "section": "Modelo",
+              "label": "Entidade",
+              "value": "consultas"
+            },
+            {
+              "section": "Modelo",
+              "label": "Tipo de dado",
+              "value": "number"
+            },
+            {
+              "section": "Modelo",
+              "label": "Obrigatorio",
+              "value": "Nao",
+              "critical": false
+            },
+            {
+              "section": "Modelo",
+              "label": "Chave primaria",
+              "value": "Nao",
+              "critical": false
+            },
+            {
+              "section": "Runtime",
+              "label": "Somente leitura",
+              "value": "Sim",
+              "critical": true
+            }
+          ]
+        },
+        {
+          "field": "field_2",
+          "title": "Campo 2",
+          "width": 150,
+          "technicalProperties": [
+            {
+              "section": "Exibicao",
+              "label": "Superficie",
+              "value": "Grid"
+            },
+            {
+              "section": "Exibicao",
+              "label": "Largura sugerida",
+              "value": "150"
+            },
+            {
+              "section": "Modelo",
+              "label": "Campo",
+              "value": "field_2"
+            },
+            {
+              "section": "Modelo",
+              "label": "Entidade",
+              "value": "consultas"
+            },
+            {
+              "section": "Modelo",
+              "label": "Tipo de dado",
+              "value": "integer"
+            },
+            {
+              "section": "Modelo",
+              "label": "Obrigatorio",
+              "value": "Nao",
+              "critical": false
+            },
+            {
+              "section": "Modelo",
+              "label": "Chave primaria",
+              "value": "Sim",
+              "critical": true
+            },
+            {
+              "section": "Runtime",
+              "label": "Somente leitura",
+              "value": "Sim",
+              "critical": true
+            }
+          ]
+        },
+        {
+          "field": "field_3",
+          "title": "Campo 3",
+          "width": 150,
+          "technicalProperties": [
+            {
+              "section": "Exibicao",
+              "label": "Superficie",
+              "value": "Grid"
+            },
+            {
+              "section": "Exibicao",
+              "label": "Largura sugerida",
+              "value": "150"
+            },
+            {
+              "section": "Modelo",
+              "label": "Campo",
+              "value": "field_3"
+            },
+            {
+              "section": "Modelo",
+              "label": "Entidade",
+              "value": "consultas"
+            },
+            {
+              "section": "Modelo",
+              "label": "Tipo de dado",
+              "value": "boolean"
+            },
+            {
+              "section": "Modelo",
+              "label": "Obrigatorio",
+              "value": "Nao",
+              "critical": false
+            },
+            {
+              "section": "Modelo",
+              "label": "Chave primaria",
+              "value": "Nao",
+              "critical": false
+            },
+            {
+              "section": "Runtime",
+              "label": "Somente leitura",
+              "value": "Sim",
+              "critical": true
+            }
+          ]
+        },
+        {
+          "field": "field_4",
+          "title": "Campo 4",
+          "width": 220,
+          "technicalProperties": [
+            {
+              "section": "Exibicao",
+              "label": "Superficie",
+              "value": "Grid"
+            },
+            {
+              "section": "Exibicao",
+              "label": "Largura sugerida",
+              "value": "220"
+            },
+            {
+              "section": "Modelo",
+              "label": "Campo",
+              "value": "field_4"
+            },
+            {
+              "section": "Modelo",
+              "label": "Entidade",
+              "value": "consultas"
+            },
+            {
+              "section": "Modelo",
+              "label": "Tipo de dado",
+              "value": "text"
+            },
+            {
+              "section": "Modelo",
+              "label": "Obrigatorio",
+              "value": "Nao",
+              "critical": false
+            },
+            {
+              "section": "Modelo",
+              "label": "Chave primaria",
+              "value": "Nao",
+              "critical": false
+            },
+            {
+              "section": "Runtime",
+              "label": "Somente leitura",
+              "value": "Sim",
+              "critical": true
+            }
+          ]
+        },
+        {
+          "field": "field_5",
+          "title": "Campo 5",
+          "width": 150,
+          "technicalProperties": [
+            {
+              "section": "Exibicao",
+              "label": "Superficie",
+              "value": "Grid"
+            },
+            {
+              "section": "Exibicao",
+              "label": "Largura sugerida",
+              "value": "150"
+            },
+            {
+              "section": "Modelo",
+              "label": "Campo",
+              "value": "field_5"
+            },
+            {
+              "section": "Modelo",
+              "label": "Entidade",
+              "value": "consultas"
+            },
+            {
+              "section": "Modelo",
+              "label": "Tipo de dado",
+              "value": "date"
+            },
+            {
+              "section": "Modelo",
+              "label": "Obrigatorio",
+              "value": "Nao",
+              "critical": false
+            },
+            {
+              "section": "Modelo",
+              "label": "Chave primaria",
+              "value": "Nao",
+              "critical": false
+            },
+            {
+              "section": "Runtime",
+              "label": "Somente leitura",
+              "value": "Sim",
+              "critical": true
+            }
+          ]
+        },
+        {
+          "field": "field_6",
+          "title": "Campo 6",
+          "width": 220,
+          "technicalProperties": [
+            {
+              "section": "Exibicao",
+              "label": "Superficie",
+              "value": "Grid"
+            },
+            {
+              "section": "Exibicao",
+              "label": "Largura sugerida",
+              "value": "220"
+            },
+            {
+              "section": "Modelo",
+              "label": "Campo",
+              "value": "field_6"
+            },
+            {
+              "section": "Modelo",
+              "label": "Entidade",
+              "value": "consultas"
+            },
+            {
+              "section": "Modelo",
+              "label": "Tipo de dado",
+              "value": "datetime"
+            },
+            {
+              "section": "Modelo",
+              "label": "Obrigatorio",
+              "value": "Nao",
+              "critical": false
+            },
+            {
+              "section": "Modelo",
+              "label": "Chave primaria",
+              "value": "Nao",
+              "critical": false
+            },
+            {
+              "section": "Runtime",
+              "label": "Somente leitura",
+              "value": "Sim",
+              "critical": true
+            }
+          ]
+        }
+      ],
+      "rowActions": [
+        {
+          "id": "view",
+          "label": "Visualizar",
+          "action": "view",
+          "icon": "eye",
+          "permission": "read"
+        }
+      ],
+      "rowLinks": [],
+      "bulkActions": {
+        "enabled": false,
+        "actions": []
+      },
+      "print": {
+        "enabled": false,
+        "options": []
+      }
+    },
+    "form": {
+      "id": "ciw-consultas-form",
+      "mode": "popup",
+      "layout": "tabs",
+      "maximizeForm": true,
+      "title": {
+        "create": "Incluir consulta",
+        "view": "Detalhe de consulta",
+        "edit": "Alterar consulta",
+        "delete": "Excluir consulta"
+      },
+      "behavior": {
+        "closeOnSave": true,
+        "closeOnCancel": true
+      },
+      "tabs": [
+        {
+          "id": "geral",
+          "title": "Geral",
+          "sections": [
+            {
+              "id": "principal",
+              "title": "Principal",
+              "columns": 2,
+              "fields": [
+                {
+                  "field": "field_1",
+                  "readonly": true
+                },
+                {
+                  "field": "field_2",
+                  "readonly": true
+                },
+                {
+                  "field": "field_3",
+                  "readonly": true
+                },
+                {
+                  "field": "field_4",
+                  "readonly": true
+                },
+                {
+                  "field": "field_5",
+                  "readonly": true
+                },
+                {
+                  "field": "field_6",
+                  "readonly": true
+                },
+                {
+                  "field": "field_7",
+                  "readonly": true
+                },
+                {
+                  "field": "json_data"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "field": "field_1",
+          "readonly": true
+        },
+        {
+          "field": "field_2",
+          "readonly": true
+        },
+        {
+          "field": "field_3",
+          "readonly": true
+        },
+        {
+          "field": "field_4",
+          "readonly": true
+        },
+        {
+          "field": "field_5",
+          "readonly": true
+        },
+        {
+          "field": "field_6",
+          "readonly": true
+        },
+        {
+          "field": "field_7",
+          "readonly": true
+        },
+        {
+          "field": "json_data"
+        }
+      ],
+      "logs": {
+        "enabled": false
+      },
+      "print": {
+        "enabled": false,
+        "options": []
+      },
+      "otherActions": {
+        "enabled": false,
+        "actions": []
+      }
+    },
+    "userLayout": {
+      "enabled": true,
+      "storageKey": "ciw-consultas-layout"
+    }
+  }
+}

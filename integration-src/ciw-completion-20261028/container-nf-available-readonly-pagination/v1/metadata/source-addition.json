@@ -1,0 +1,50 @@
+{
+  "sourceCode": "motor_progress_container_financeiro",
+  "baselinePath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-finance-current/source-current.json",
+  "baselineSha256": "f1a71442c8fbea7d53940a9d702c6a7769cc16a145701e56876da7767272b5d8",
+  "preserveExactlyExistingOperations": 4,
+  "applyMode": "append-only-specific-properties-never-replace-authentication",
+  "operations": [
+    {
+      "op": "append",
+      "path": "operations",
+      "value": {
+        "code": "nfs_disponiveis_read",
+        "name": "NFs disponiveis MED — read",
+        "method": "POST",
+        "type": "list",
+        "path": "/SursumPrograms/containers-financeiro",
+        "requestContextFields": [
+          "container_id"
+        ],
+        "bodyTemplate": {
+          "operation": "read",
+          "resource": "nfs-disponiveis"
+        },
+        "itemsPath": "data",
+        "totalPath": "total"
+      }
+    },
+    {
+      "op": "append",
+      "path": "operations",
+      "value": {
+        "code": "nfs_disponiveis_get",
+        "name": "NFs disponiveis MED — get",
+        "method": "POST",
+        "type": "detail",
+        "path": "/SursumPrograms/containers-financeiro",
+        "requestContextFields": [
+          "container_id"
+        ],
+        "bodyTemplate": {
+          "operation": "get",
+          "resource": "nfs-disponiveis"
+        },
+        "itemPath": "data"
+      }
+    }
+  ],
+  "supersedesHeldProposalOnly": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-nf-available-readonly\\frozen-v1\\metadata\\source-addition.json",
+  "requiresCurrentExportBeforePublication": true
+}

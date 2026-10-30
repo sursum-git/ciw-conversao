@@ -1,0 +1,40 @@
+{
+  "textPatches": [
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwErpReadService.p",
+      "baselineSha256": "906e77bcf395d0ff8b391688e336344ca727ef1dfcaac18aec0d09f08d71cd80",
+      "changes": [
+        {
+          "old": " IF LOOKUP(pcResource,'proc_compra_itens,proc_compra_amostras,proc_compra_anexos,proc_compra_documentos,proc_compra_despesas,proc_compra_resumo,proc_compra_alocacoes,container_calculos_impostos_med,container_despesa_memoria_med')>0 THEN DO: DELETE OBJECT k. RETURN o. END.",
+          "new": " IF LOOKUP(pcResource,'proc_compra_itens,proc_compra_amostras,proc_compra_anexos,proc_compra_documentos,proc_compra_despesas,proc_compra_resumo,proc_compra_alocacoes,container_calculos_impostos_med,container_despesa_memoria_med,container_despesas_lote')>0 THEN DO: DELETE OBJECT k. RETURN o. END."
+        },
+        {
+          "old": "  WHEN 'proc_compra_alocacoes' THEN DO:",
+          "new": "  WHEN 'container_despesas_lote' THEN DO:\n   IF pcCompany=? OR pcCompany='' THEN RUN Fail('CIW_ERP_COMPANY_UNAVAILABLE',503).\n   ASSIGN cFieldList='despesa_container_id,despesa_id,vl_prev,container_id,calc_imp_container_id,vl_base_imp,vl_negociado,vl_proforma,cta_corren_custo_distr_id,log_utilizado,log_manual,perc_calc,memoria_calculo,item_container_id' cAliasList=cFieldList cKeyList='despesa_container_id' baseWhere=b:NAME + '.container_id = ' + NumText(DECIMAL(pcCompany)).\n  END.\n  WHEN 'proc_compra_alocacoes' THEN DO:"
+        },
+        {
+          "old": "ELSE IF pcResource='proc_compra_alocacoes' THEN NumText(item:GetInteger('item_container_id'))",
+          "new": "ELSE IF pcResource='container_despesas_lote' THEN NumText(item:GetInteger('despesa_container_id')) ELSE IF pcResource='proc_compra_alocacoes' THEN NumText(item:GetInteger('item_container_id'))"
+        }
+      ]
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeApiEntityActionService.php",
+      "baselineSha256": "4fad16103637b00a0c424f947441c21105c411f9232f84ca55f9a9b0201c1530",
+      "changes": [
+        {
+          "old": "    private function read(array $definition, array $payload): array\n\n    {",
+          "new": "    private function containerExpenseBatchRequest(array $definition,array $config,array $payload,string $operation):array\n    {\n        $actor='';\n        if ($operation==='batch') {\n            $session=$this->authenticatedSessions?->resolve();\n            if (!$session || $session->getStatus()!=='active') { throw new RuntimeHttpException('AUTH_REQUIRED','Sessao ativa obrigatoria para o lote.',401); }\n            $actor=$this->attachmentActor();\n        }\n        return RuntimeContainerExpenseBatch::run($definition,$config,$payload,$operation,$actor,\n            fn(string $permission):bool=>$this->permissions?->hasPermission($permission) ?? false,\n            fn(array $endpoint,array $request):array=>$this->requestEndpoint($definition,$endpoint,$definition['apiSource']['authHeaders'] ?? [],[],$request),\n            fn(array $row):array=>$this->mapItem($definition,$row),\n            fn(string $event,array $before,array $after,array $metadata)=>$this->transactions->log($definition['entityCode'].'.api.'.$event,'Operacao nativa de despesas do container.',before:$before,after:$after,metadata:['entityCode'=>$definition['entityCode']]+(($metadata['available']??false)===true ? ['audit'=>$metadata] : $metadata)));\n    }\n\n    private function read(array $definition, array $payload): array\n\n    {\n        if (RuntimeContainerExpenseBatch::supports($definition)) { return $this->containerExpenseBatchRequest($definition,[],$payload,'read'); }"
+        },
+        {
+          "old": "    private function get(array $definition, array $payload): array\n\n    {",
+          "new": "    private function get(array $definition, array $payload): array\n\n    {\n        if (RuntimeContainerExpenseBatch::supports($definition)) { return $this->containerExpenseBatchRequest($definition,[],$payload,'get'); }"
+        },
+        {
+          "old": "    private function batch(array $definition, array $config, array $payload): array\n\n    {",
+          "new": "    private function batch(array $definition, array $config, array $payload): array\n\n    {\n        if (RuntimeContainerExpenseBatch::supports($definition)) { return $this->containerExpenseBatchRequest($definition,$config,$payload,'batch'); }"
+        }
+      ]
+    }
+  ]
+}

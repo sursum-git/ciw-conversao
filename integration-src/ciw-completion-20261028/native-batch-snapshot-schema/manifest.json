@@ -1,0 +1,27 @@
+{
+  "status": "CANDIDATE_ONLY_SCHEMA_P2",
+  "target": "D:\\opencode\\construtor-pg\\public\\metadata\\schemas\\crud-definition-v1.schema.json",
+  "baselineSha256": "34cf50cc88e78459d6275b5c2fb043979dc683b51bd8d4db035a65fcdc98315a",
+  "candidateSha256": "32f6710c532eae8004448b64794cc02b07b1ada2620aec59c3f730c74c0923e5",
+  "delta": "only $defs.grid.properties.editing snapshot and conditional mode=batch",
+  "existingFieldCrossReference": "existing JS CrudDefinitionValidator checks all names against dataModel and mandatory readonly context; JSON Schema checks closed shape and identifier syntax",
+  "canonicalWrites": false,
+  "files": [
+    {
+      "path": "crud-definition-v1.schema.json",
+      "sha256": "32f6710c532eae8004448b64794cc02b07b1ada2620aec59c3f730c74c0923e5"
+    },
+    {
+      "path": "README.md",
+      "sha256": "148f03b5931c32775bacbcb767ee242cad236274d4d7fd2c39a15121606dd2fd"
+    },
+    {
+      "path": "schema.patch",
+      "sha256": "c1110acf9a91b93de0928ae44e2fff7d110d4701467d5f7f0ca4d78309ba3abe"
+    },
+    {
+      "path": "tests/verify-schema.cjs",
+      "sha256": "b9c5171ea7feb19ea8f55fd6b9230a77307de011624f134be106932585e16e4f"
+    }
+  ]
+}

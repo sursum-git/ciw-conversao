@@ -1,0 +1,53 @@
+[
+  {
+    "path": "D:/opencode/conversao-sc/sources/scriptcase/containers/grid_despesas_container/grid_despesas_container_grid.class.php",
+    "sha256": "d3022408ff0094b847667495532ba2ddda4bf80a9462d59d26aebf8d111e0833",
+    "lineRanges": [
+      [
+        5477,
+        5484
+      ]
+    ],
+    "role": "active caller"
+  },
+  {
+    "path": "D:/opencode/conversao-sc/sources/scriptcase/containers/cons_selec_despesas/index.php",
+    "sha256": "0157b436304fce48d4d2ea70ba1e9ab6b5592364e9f7982d60e98384c08d8c16",
+    "lineRanges": [
+      [
+        7359,
+        7416
+      ]
+    ],
+    "role": "NM_index_reg direct selected order and onFinish sequence"
+  },
+  {
+    "path": "D:/opencode/conversao-sc/sources/scriptcase/containers/cons_selec_despesas/cons_selec_despesas_grid.class.php",
+    "sha256": "fbe49106e7cc541af23b5b1dc488e65274946e7ecb1dd9b92b4558067c3d5fb0",
+    "lineRanges": [
+      [
+        838,
+        913
+      ],
+      [
+        5549,
+        5565
+      ],
+      [
+        10705,
+        10800
+      ],
+      [
+        11192,
+        11240
+      ]
+    ],
+    "role": "query/order, checked DOM order, ALLdefaults/mark-used and sync"
+  },
+  {
+    "path": "D:/opencode/conversao-sc/docs/containers-despesas-crud-inventario.md",
+    "sha256": "defca902de5992628a05a94a1ea8a034ced532de34f796868f858a89619b13b7",
+    "lineRanges": [],
+    "role": "legacy inventory"
+  }
+]

@@ -1,0 +1,197 @@
+{
+  "scope": [
+    "bl_painel_proc_compra_sinaliz",
+    "bl_sinaliz",
+    "cons_itens_proc_compra_sinaliz",
+    "cons_proc_compra_sinaliz",
+    "form_PUB_sinalizadores_importacao",
+    "form_proc_compra",
+    "grid_PUB_sinalizadores_importacao",
+    "menu_proc_compra_sinaliz"
+  ],
+  "analysis_copies": true,
+  "files": [
+    {
+      "application": "bl_painel_proc_compra_sinaliz",
+      "file": "bl_painel_proc_compra_sinaliz.php",
+      "remote_sha256": "6773e00e058c27e67dc2c759f491696ac19be2ea4d347acc9d06c52871cb35ec",
+      "copied_sha256": "6773e00e058c27e67dc2c759f491696ac19be2ea4d347acc9d06c52871cb35ec",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_painel_proc_compra_sinaliz",
+      "file": "index.php",
+      "remote_sha256": "d1c9bace3629ddf8bedecf2413b341355db5055553786ec2b2537404d208bdd8",
+      "copied_sha256": "354203ca28448ce2bec946fa6a8248fd51ba53675dfdbc9d364be0b666a56de3",
+      "sensitive_literals_omitted": 16
+    },
+    {
+      "application": "bl_sinaliz",
+      "file": "bl_sinaliz.php",
+      "remote_sha256": "6b74b2e949c1bb8b74971c25d542cc51007757132aa968c7eae8b605d1ea16ac",
+      "copied_sha256": "6b74b2e949c1bb8b74971c25d542cc51007757132aa968c7eae8b605d1ea16ac",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "bl_sinaliz",
+      "file": "index.php",
+      "remote_sha256": "7cc43036ec624e12de62e7fdaafd94c06472de22499014a9386f3cc487f499fd",
+      "copied_sha256": "919f9e100b0927a9f9d14dd4fe2db6d711336e85be1bc7db1f7de8f75a3274e2",
+      "sensitive_literals_omitted": 16
+    },
+    {
+      "application": "cons_itens_proc_compra_sinaliz",
+      "file": "cons_itens_proc_compra_sinaliz.php",
+      "remote_sha256": "cc369b3e5bd42fa3ed639ffe61951e13fa4551e870750f3159f7cd13f2ea2a08",
+      "copied_sha256": "cc369b3e5bd42fa3ed639ffe61951e13fa4551e870750f3159f7cd13f2ea2a08",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_itens_proc_compra_sinaliz",
+      "file": "cons_itens_proc_compra_sinaliz_grid.class.php",
+      "remote_sha256": "224b6052bd746c5b3c4c496c5bce65232360219371e4055a505a355bac1b4836",
+      "copied_sha256": "a59aa187da9436964d83bdca1387acb18df1a3250bd645d492be7576baa6a251",
+      "sensitive_literals_omitted": 3
+    },
+    {
+      "application": "cons_itens_proc_compra_sinaliz",
+      "file": "cons_itens_proc_compra_sinaliz_lookup.class.php",
+      "remote_sha256": "70705a1ebe0c4dc7f672eaf7d3437d4699c69f1328419dfd2259f6664c262bf1",
+      "copied_sha256": "70705a1ebe0c4dc7f672eaf7d3437d4699c69f1328419dfd2259f6664c262bf1",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_itens_proc_compra_sinaliz",
+      "file": "index.php",
+      "remote_sha256": "ef00a28914d39269ffe644e1fe8e146e10b33e301c6b7d1c7a122dfffdac9902",
+      "copied_sha256": "c5da854c68a8ab62903f48a0baf3383769db287cb3533c5be39ba1f339e0c209",
+      "sensitive_literals_omitted": 21
+    },
+    {
+      "application": "cons_proc_compra_sinaliz",
+      "file": "cons_proc_compra_sinaliz.php",
+      "remote_sha256": "302f2dca9444d3198bed818a46f33442a521c5dde8237c894ab0677a9793e172",
+      "copied_sha256": "302f2dca9444d3198bed818a46f33442a521c5dde8237c894ab0677a9793e172",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_proc_compra_sinaliz",
+      "file": "cons_proc_compra_sinaliz_grid.class.php",
+      "remote_sha256": "80a8ae1551b12d6b1c39100eb1d1f064bfb06faeab5dbc3e0642fe3769ccc773",
+      "copied_sha256": "aec4fb8879d140ad6c7ae10ec739bb14c84e523b3ce0f372a7f38572249d4018",
+      "sensitive_literals_omitted": 4
+    },
+    {
+      "application": "cons_proc_compra_sinaliz",
+      "file": "cons_proc_compra_sinaliz_lookup.class.php",
+      "remote_sha256": "5f6ea45e31e712987df388dea51ad319a332e6d3e1a62c929fb83148662e4620",
+      "copied_sha256": "5f6ea45e31e712987df388dea51ad319a332e6d3e1a62c929fb83148662e4620",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_proc_compra_sinaliz",
+      "file": "index.php",
+      "remote_sha256": "fc83ec95d8b38dab95fc368a114827c63807b0575f733e72a8ebe479d7b4b562",
+      "copied_sha256": "d4c32a9de74c8518b645cb5b4ea52c1e7e22c05ed4209aa4fa4cbf673c963819",
+      "sensitive_literals_omitted": 8
+    },
+    {
+      "application": "form_PUB_sinalizadores_importacao",
+      "file": "form_PUB_sinalizadores_importacao.php",
+      "remote_sha256": "82fc12da4dd712979d9a8f1a17645630adc95e08642c5ddd9e5b563f86596f41",
+      "copied_sha256": "82fc12da4dd712979d9a8f1a17645630adc95e08642c5ddd9e5b563f86596f41",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "form_PUB_sinalizadores_importacao",
+      "file": "form_PUB_sinalizadores_importacao_apl.php",
+      "remote_sha256": "cf7132159fef376e2d46c41014065137feaf6395054241887c541da35cabfaef",
+      "copied_sha256": "35ae7dd951a82b824b9d29fb0175b01c30f787228416a55bc8c5ac67dbcdec2c",
+      "sensitive_literals_omitted": 3
+    },
+    {
+      "application": "form_PUB_sinalizadores_importacao",
+      "file": "form_PUB_sinalizadores_importacao_form0.php",
+      "remote_sha256": "dbd958674aabf350904bed8ae8c59cd207b0a3c5a58c269a423e1ddc71f87596",
+      "copied_sha256": "ab0be1c4a49916b78c8d8425dfe4d19ca1f917481ffb1daae16604bb1d26136d",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "form_PUB_sinalizadores_importacao",
+      "file": "index.php",
+      "remote_sha256": "167faecf4c323c0b6ef94e4add718e27d4242e49ccd4cbf036a1dcafa30b509d",
+      "copied_sha256": "5f4dac160529ed8f8876bdd4f7019d689793359b42930022155f2ac53c1810e8",
+      "sensitive_literals_omitted": 15
+    },
+    {
+      "application": "form_proc_compra",
+      "file": "form_proc_compra.php",
+      "remote_sha256": "cb76bb09f74fe3b13286bcf8e5e74c4bcad8e676e7a7e4943ef8a424d88b11ef",
+      "copied_sha256": "cb76bb09f74fe3b13286bcf8e5e74c4bcad8e676e7a7e4943ef8a424d88b11ef",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "form_proc_compra",
+      "file": "form_proc_compra_apl.php",
+      "remote_sha256": "93745b3a889ba028dad7e866746cf52e8fcf5893f837f7ed1cc8b1d4b3d31a01",
+      "copied_sha256": "bc44a0c7e157dfcdf8f6df5b66459094e199a88cdf525f8be97018a5970a3d61",
+      "sensitive_literals_omitted": 3
+    },
+    {
+      "application": "form_proc_compra",
+      "file": "form_proc_compra_form0.php",
+      "remote_sha256": "45e91012f81e3180266560edc9cf0c54064e21ab640e1e06ee473f95fde0c0a1",
+      "copied_sha256": "4381e38e1d7500129ba7a0407448127ca06c2655815fdccba597dcf1e479d6e4",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "form_proc_compra",
+      "file": "index.php",
+      "remote_sha256": "6671cc24438c5b0d830ccebe0cf51f0541847d262f57f4fff8f62f6f836cc55b",
+      "copied_sha256": "765dc44017c161ea763adf33a474d856ef7529340bbe28746207551f73576def",
+      "sensitive_literals_omitted": 15
+    },
+    {
+      "application": "grid_PUB_sinalizadores_importacao",
+      "file": "grid_PUB_sinalizadores_importacao.php",
+      "remote_sha256": "1f47d85e5756f7156f1765b98e2fdad3e8d427fda84ee65782a48ad4391911bd",
+      "copied_sha256": "1f47d85e5756f7156f1765b98e2fdad3e8d427fda84ee65782a48ad4391911bd",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "grid_PUB_sinalizadores_importacao",
+      "file": "grid_PUB_sinalizadores_importacao_grid.class.php",
+      "remote_sha256": "506827debe7f9e05b90f025d6bfba56e44d145c63d43a50605548b3749987506",
+      "copied_sha256": "dea28bfddd1052b33c3cb5706d2b1aa0dc78cfabb539566e7f8e64201637d511",
+      "sensitive_literals_omitted": 5
+    },
+    {
+      "application": "grid_PUB_sinalizadores_importacao",
+      "file": "grid_PUB_sinalizadores_importacao_lookup.class.php",
+      "remote_sha256": "1ab90bdb35575b62a9275abf3fcad3a9b1beac973008e085031b83f8762a9f74",
+      "copied_sha256": "1ab90bdb35575b62a9275abf3fcad3a9b1beac973008e085031b83f8762a9f74",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "grid_PUB_sinalizadores_importacao",
+      "file": "index.php",
+      "remote_sha256": "9b66bd1232eb1291a6fbd67885b2407d0a9b8754b5038dc21da630f8cabd159e",
+      "copied_sha256": "7dfff3b39794387d92b8432101257bcfd11bfba7bf3299b1ebd387bb397f349d",
+      "sensitive_literals_omitted": 23
+    },
+    {
+      "application": "menu_proc_compra_sinaliz",
+      "file": "index.php",
+      "remote_sha256": "203db7c1c73d9a93690677e0a612343163b4223fcc7d13ef2dffc18c5cb62fa5",
+      "copied_sha256": "f256f0ae00fc85edb2558ad7e3b7dcb168c46a5f79a55bdf12f1ce34e8166b95",
+      "sensitive_literals_omitted": 2
+    },
+    {
+      "application": "menu_proc_compra_sinaliz",
+      "file": "menu_proc_compra_sinaliz.php",
+      "remote_sha256": "8e251234912f90ccdc493ef5525048daa501691fe97b1ca68bf81bc3d3636461",
+      "copied_sha256": "8e251234912f90ccdc493ef5525048daa501691fe97b1ca68bf81bc3d3636461",
+      "sensitive_literals_omitted": 0
+    }
+  ]
+}

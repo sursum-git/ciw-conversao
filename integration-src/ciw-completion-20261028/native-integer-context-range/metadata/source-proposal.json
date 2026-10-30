@@ -1,0 +1,47 @@
+{
+  "target": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\build11-metadata-publication-preparation\\metadata-source-after.json",
+  "baselineSha256": "e03349faf62bc8b7a507c6b003c5783349f0901017eeb4499476cea811ff8fcc",
+  "before": 146,
+  "after": 148,
+  "apiSourceCode": "motor_progress_ciw_cadastros",
+  "operations": [
+    {
+      "code": "import_descontos_fornecedor_read",
+      "name": "Descontos por fornecedor — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "import_descontos_fornecedor",
+        "operation": "read"
+      },
+      "requestContextFields": [
+        "fornecedor_id"
+      ],
+      "itemsPath": "data",
+      "totalPath": "total"
+    },
+    {
+      "code": "import_descontos_fornecedor_get",
+      "name": "Descontos por fornecedor — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "import_descontos_fornecedor",
+        "operation": "get"
+      },
+      "requestContextFields": [
+        "fornecedor_id"
+      ],
+      "itemPath": "data"
+    }
+  ],
+  "preserveActualAuthInMemory": true,
+  "neverReplaceWithSanitizedDto": true,
+  "rootMustRecheckFreshExport": true
+}

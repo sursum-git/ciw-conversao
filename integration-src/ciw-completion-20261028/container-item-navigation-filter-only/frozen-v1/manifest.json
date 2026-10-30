@@ -1,0 +1,2191 @@
+{
+  "success": true,
+  "state": "CANDIDATE_READY_LOCAL_GREEN_ROOT_REVIEW_REQUIRED",
+  "createdAtUtc": "2026-10-29T02:35:01.022045+00:00",
+  "scope": "Native CRUD filterOnly navigation for existing1008/1002/1014; no API ABI/audit relaxation",
+  "baselineExportProofSha256": "d4f647a3d11cbd2e35f1dcda1555e8b57bffd175d48ceb362ce9efb1affab1ee",
+  "sharedFiles": [
+    {
+      "canonical": "D:\\opencode\\construtor-pg\\backend\\src\\Builder\\ProgramBuilderService.php",
+      "relative": "backend/src/Builder/ProgramBuilderService.php",
+      "baselineSha256": "205ebd14329f8e8896d07c07716939db8a12d58345fecf76cab5252f4e0694a7",
+      "candidateSha256": "a58a98b85127c85377b1592c2f6bde38b0a8bf78ce86d343bed239cf084e0401",
+      "roundTripExact": true,
+      "role": "native-runtime-capability"
+    },
+    {
+      "canonical": "D:\\opencode\\construtor-pg\\src\\page-engine\\PageDefinitionNormalizer.js",
+      "relative": "src/page-engine/PageDefinitionNormalizer.js",
+      "baselineSha256": "fb038ccb2446957902432473535aad0b1e7b61ba8152b02e04aa6c7baf60ecca",
+      "candidateSha256": "fb8a5b4612e4c5b7c839712d582515214022df809d86083dfb2c2d158868d533",
+      "roundTripExact": true,
+      "role": "native-runtime-capability"
+    },
+    {
+      "canonical": "D:\\opencode\\construtor-pg\\src\\crud-engine\\CrudDefinitionValidator.js",
+      "relative": "src/crud-engine/CrudDefinitionValidator.js",
+      "baselineSha256": "d02d5d03e569d8f3e78621c7ff5b72d700f191957ed5900f2e428863d625047b",
+      "candidateSha256": "a42792d03c65ef1e9b7c2a1b21f32c834861d63347789cde7e1e68202c6dfa0a",
+      "roundTripExact": true,
+      "role": "native-runtime-capability"
+    },
+    {
+      "canonical": "D:\\opencode\\construtor-pg\\src\\crud-engine\\CrudEngine.js",
+      "relative": "src/crud-engine/CrudEngine.js",
+      "baselineSha256": "5d78f77bc72c56c1bbd345d92ae3e4714a71f1d04e5b76e0453855a8c193bba7",
+      "candidateSha256": "ae49f19edb1cc37fd7725c86ce85300b07868d693cc72a2f27a64f716d233d81",
+      "roundTripExact": true,
+      "role": "native-runtime-capability"
+    },
+    {
+      "canonical": "D:\\opencode\\construtor-pg\\src\\crud-engine\\CrudKendoFormRenderer.js",
+      "relative": "src/crud-engine/CrudKendoFormRenderer.js",
+      "baselineSha256": "d3028663b4c006771f7b8eac06d12ff7398c3e73a5c58391c328070a9d1047d9",
+      "candidateSha256": "430173106a0c9b420f346ab007f423cce4791821122ebec406bdc425e432338e",
+      "roundTripExact": true,
+      "role": "native-runtime-capability"
+    },
+    {
+      "canonical": "D:\\opencode\\construtor-pg\\public\\metadata\\schemas\\crud-definition-v1.schema.json",
+      "relative": "public/metadata/schemas/crud-definition-v1.schema.json",
+      "baselineSha256": "5a1511bf85cdad06c6fb53db72ef649f66fd00410f7ae7b79ee6cab5c27cc751",
+      "candidateSha256": "c8631a7a5ca50cf4d7911ed1fc372a81b10a5f9011ec366f632e1ecdbf33a8b0",
+      "roundTripExact": true,
+      "role": "native-runtime-capability"
+    },
+    {
+      "canonical": "D:\\opencode\\construtor-pg\\docs\\paridade-demo-producao.md",
+      "relative": "docs/paridade-demo-producao.md",
+      "baselineSha256": "d0634a264dfc151c242af05a7c1274cd22c27e0678d4a1e52124740100dc363c",
+      "candidateSha256": "9386954538c919367e6ef1b5bae9fe80b1b4d0da9e274231349b1d9e2ee411f0",
+      "roundTripExact": true,
+      "role": "documentation-parity-only"
+    }
+  ],
+  "sourceFiles": 6,
+  "documentationFiles": 1,
+  "tests": {
+    "fullPhpTests": 892,
+    "fullPhpAssertions": 5916,
+    "loadedAppDefinitions": 277,
+    "allLoadedAppStaged": true,
+    "phpStagedSourceFiles": 409,
+    "nativePrototypeAndAjvTests": 22,
+    "runtimeBoundaryTests": 2,
+    "runtimeBoundaryAssertions": 19
+  },
+  "metadata": {
+    "programs": [
+      "op1008",
+      "op1002",
+      "op1014"
+    ],
+    "wholeCompared": true,
+    "ignoredPaths": [],
+    "wholeDeltaCounts": {
+      "op1008": 3,
+      "op1002": 3,
+      "op1014": 12
+    },
+    "extraRegeneration205Deltas": 10,
+    "extraDecimalFields": [
+      "vl_custo_dolar",
+      "vl_negociado",
+      "qt_comprada",
+      "qt_alocada",
+      "qt_saldo"
+    ],
+    "rootFreshWholePreviewRequired": true,
+    "rootExplicitExtraDeltaReviewRequired": true
+  },
+  "providedEmptyFilterOnlyRejected": true,
+  "externalApiContextUnchanged": "parent-only",
+  "permissionsChanged": false,
+  "sourceOperationsChanged": false,
+  "businessWrites": false,
+  "networkExecuted": false,
+  "canonicalWrites": false,
+  "grants": false,
+  "ddl": false,
+  "oldFreezesTouched": false,
+  "limits": [
+    "No published screen/LDAP/DOM/business proof claimed",
+    "Export existing take>=1000 may fail ERP200; fixed PK retained; no new export guarantee",
+    "USD/BRL, visibility and descriptions remain separate",
+    "Root must rebase by exact current hashes, integrate and publish after review"
+  ],
+  "files": [
+    {
+      "path": "D:\\opencode\\construtor-pg\\backend\\src\\Runtime\\ApiRequestContext.php",
+      "sha256": "8f788e9627204786fba769c083d2845fe1ff5bdd4561607727fb853e95b23918"
+    },
+    {
+      "path": "D:\\opencode\\construtor-pg\\backend\\src\\Runtime\\RuntimePurchaseItemAudit.php",
+      "sha256": "7469b045e0219b9a7de69d317b28e98c8863278e59845fbd8b6a49a97b9497fd"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-action-native\\current\\container_custo_itens_progress-entity.json",
+      "sha256": "f4a67874b8b8876890dfd48656e14efdc8bd786ee4294b41ac4d6bb66ecd746b"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-action-native\\current\\container_itens_progress-entity.json",
+      "sha256": "57ddd94dca0140e35fe1555d7749d251e23b74432b09740524bcacdff2381bfb"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-action-native\\current\\export-proof.json",
+      "sha256": "d4f647a3d11cbd2e35f1dcda1555e8b57bffd175d48ceb362ce9efb1affab1ee"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-action-native\\current\\op1002-program.json",
+      "sha256": "5d2a62928cdac1b86f559ba293916aeebbcbcf5270f458328c39b1a9c85892ef"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-action-native\\current\\op1008-program.json",
+      "sha256": "62adf30c0b11c53db9e350b6bae662929b67da4c09930ee7cb67e3ec31185fc2"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-action-native\\current\\op1014-program.json",
+      "sha256": "73ad2ea400d10ab3443713c58d213908db8038d1aea52787259f7729933b748c"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-action-native\\current\\proc_compra_itens_progress-entity.json",
+      "sha256": "5937187cff7f20ef1d7d2267c43db10505c3a741de1915e5cf2ee7c050a272b4"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-action-native\\current\\source-motor_progress_ciw_cadastros.json",
+      "sha256": "75dcbb4112be105b30627a09dbc37b2fb1120f990c51c636c23fda43398d10e9"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-action-native\\current\\source-motor_progress_container_custos.json",
+      "sha256": "e79d71614ca0c75027585e7dfec2637a0195a3025084c3a6da1c821424abab23"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-action-native\\current\\source-motor_progress_container_itens.json",
+      "sha256": "89da6e274b919aa9df149889534f04b1585511c15136271b9e9c39c13e4c3650"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\baseline205\\op1002.json",
+      "sha256": "bed4c84e59db5590dc7de1daf1c26a6f51528823d4e497bbdc69bedbdf32154a"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\baseline205\\op1008.json",
+      "sha256": "4535a7904f7e4a6406c27956571f7e2325d3b368d7c59e752f0cfc7aeeca331d"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\baseline205\\op1014.json",
+      "sha256": "7959984da0fdd55b0f41679fc01ba2270710730697b0895311361ffc91426ee8"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\final-local-v1\\generated\\op1002-before.json",
+      "sha256": "bed4c84e59db5590dc7de1daf1c26a6f51528823d4e497bbdc69bedbdf32154a"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\final-local-v1\\generated\\op1002-candidate.json",
+      "sha256": "c8bd12bab438c8155a2d8bee47ee52aab84a95cfcb29f527445c58371d33fc50"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\final-local-v1\\generated\\op1008-before.json",
+      "sha256": "4535a7904f7e4a6406c27956571f7e2325d3b368d7c59e752f0cfc7aeeca331d"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\final-local-v1\\generated\\op1008-candidate.json",
+      "sha256": "7c4e2e2d4f7296c1df423ec387dfa9189323fd3ec2eadb5e45477ea142f1bb25"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\final-local-v1\\generated\\op1014-before.json",
+      "sha256": "7959984da0fdd55b0f41679fc01ba2270710730697b0895311361ffc91426ee8"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\final-local-v1\\generated\\op1014-candidate.json",
+      "sha256": "058c090329696e289b95f19292406722485614afc449632db12694f4553dfee3"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\final-local-v1\\native.log",
+      "sha256": "ed78246bd007948bc6be6d9995c8437061712ff7b2d374a279b5d807663fd174"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\final-local-v1\\php-full.log",
+      "sha256": "a9323115315e935665577be848d96558e63025dce8a85edaec5521d858720cac"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\final-local-v1\\php-full.xml",
+      "sha256": "33e08c3131a777043481aa39d1a6b3f0b5a239d3ce79a06c63d2e116835c8714"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\final-local-v1\\php-stage-loader-proof.json",
+      "sha256": "eacb771d73c98c86c24c4876a0e03702ba3ee0ffcf1cd7bb5699f995d079a70c"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\final-local-v1\\request-basic-traces.json",
+      "sha256": "90569cdc2e0a062cea464a9a45a7246017088d8a6c0709f43a5967e1ba597c9f"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\final-local-v1\\request-boundary-traces.json",
+      "sha256": "66b7982aff6e0fec0dca7515f9a5a892f232cc51ef39166c67fc79aaa7add510"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\generated\\op1002-before.json",
+      "sha256": "bed4c84e59db5590dc7de1daf1c26a6f51528823d4e497bbdc69bedbdf32154a"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\generated\\op1002-candidate.json",
+      "sha256": "c8bd12bab438c8155a2d8bee47ee52aab84a95cfcb29f527445c58371d33fc50"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\generated\\op1008-before.json",
+      "sha256": "4535a7904f7e4a6406c27956571f7e2325d3b368d7c59e752f0cfc7aeeca331d"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\generated\\op1008-candidate.json",
+      "sha256": "7c4e2e2d4f7296c1df423ec387dfa9189323fd3ec2eadb5e45477ea142f1bb25"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\generated\\op1014-before.json",
+      "sha256": "7959984da0fdd55b0f41679fc01ba2270710730697b0895311361ffc91426ee8"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\generated\\op1014-candidate.json",
+      "sha256": "058c090329696e289b95f19292406722485614afc449632db12694f4553dfee3"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\native-boundaries-initial.log",
+      "sha256": "5f5703b5dc2e8f41ee6629df14841098af99fe199ceeedca1f5ae422871a2f3f"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\native-complete.log",
+      "sha256": "2460fa83016610e83c1c62488141041a1c09e6af63fa9175b27504e2e3fc2137"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\native-green.log",
+      "sha256": "6a1d7861992bdba86c6908ff042dd3dcc8abe76b9294bc3d65ddb91733896dca"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\native-initial-schema-permissions.log",
+      "sha256": "5fdf7a27bc74f7cb90110015696f859658fb1e27e6c4dbaf83165028ee774485"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\native-red.log",
+      "sha256": "4f447851f9a4fe7571c89129f2946471ed543ad837775a963b2b77c6cecde8a8"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-baseline205.xml",
+      "sha256": "b428000e29ac63b961cfbe6b94a57a48115c724b34c248f46f99011b764ef326"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-full-initial-json-float.xml",
+      "sha256": "b77178e7229f15aa4a0341d5496bf4a34fb4ad545888a7751dd33e188f887747"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-full.xml",
+      "sha256": "7804ddce22147d5a3e2cff24a897941c54c437eb2581ed595384997e7be75db6"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-metadata.xml",
+      "sha256": "558de06e4294dbaeb41ca2e236597624b5f9959fe4f623f9e09ba20b314fa203"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-runtime.xml",
+      "sha256": "d89f4fe9c3328f7defb138167330338a6862a61b5abe62b931b2454f86ca8522"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage-bootstrap.php",
+      "sha256": "586295bcf292644407290754db8c55fa24b5a098a649451043b09bf733e5cfc9"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage-loader-proof.json",
+      "sha256": "eacb771d73c98c86c24c4876a0e03702ba3ee0ffcf1cd7bb5699f995d079a70c"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage-manifest.json",
+      "sha256": "d6c4a127a26f92b72151a1d3d56c9788c17f3f2539c4ff45ae78db345659e43c"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Admin\\AdminCrudDefinitionFactory.php",
+      "sha256": "1f5db651c900c7e80db94df5aa59df50af327bd30fd19591de1678607dadf92c"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Attachments\\AttachmentFilePolicy.php",
+      "sha256": "ce1f056e6c236d2a289bcd480140d4930792e94ab08c68c5a597bec1fecfd1c3"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Attachments\\AttachmentPolicyViolation.php",
+      "sha256": "8e685e12d6fc4409c28d5287c7aa5e396ef005031b14a65ad12564cc2a25fd0b"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Attachments\\AttachmentStorageBroker.php",
+      "sha256": "7232f1e771ebaa3d528882579a32b08c14601f3564db0341a19e6267a243d739"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Attachments\\AttachmentStorageClient.php",
+      "sha256": "0ba35c21666e739e9c5f9922b1c0d8279e5523d1cbc4db52dbdc7decf70f1fe5"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Attachments\\AttachmentStorageConfiguration.php",
+      "sha256": "a81a76364c5065b1067dc8e648d920f8d4b1c946e6bb882102d8111508f32310"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Auth\\AuthenticatedSessionResolver.php",
+      "sha256": "27a90a2a5c43a89ae742bddebafb4d1641585d35feb31f09daa087dfc1d3852f"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Auth\\AuthenticatedUser.php",
+      "sha256": "54b859082579ffb11af79de2851f6bbf2f313d11b4cd96436d7432af6ebb88ff"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Auth\\AuthProviderInterface.php",
+      "sha256": "8099c6f5bab1e95abb539a1c2d4428df98cb4f598ec3c3875ae23cccbb312946"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Auth\\AuthProviderRegistry.php",
+      "sha256": "5c776829c57896f89e6d806ea7fedda42aabb8103ca7cdd78628f9b7d50cd72c"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Auth\\AuthService.php",
+      "sha256": "6393bfb45ff05d87452eb8a5c1a1bdd0e6b524a2ed944be006ec18bd0f80f25f"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Auth\\ImaUserWebAuthProvider.php",
+      "sha256": "60fd70fa664b322369a1424e751a72e148f15710377f1c412bbeeba349ed2497"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Auth\\ImaUserWebClient.php",
+      "sha256": "5ac38361f8b6b8104d75c0753ce1874e1499bb140c99a1c920cde5c01c568130"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Auth\\ImaUserWebClientInterface.php",
+      "sha256": "bfd945b1c338a2fe9130d762ca558846f3060991bf60b953a1274e430b950571"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Auth\\ImaUserWebProviderConfiguration.php",
+      "sha256": "9bf904a2e314e93dec026f3a161c43922d180ac67c5b7bb3769de782fc57afe0"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Auth\\ImaUserWebProviderRegistration.php",
+      "sha256": "bbfaacb762977bda98fff9b2c8a8262ae788368e66e9f6ddb8b75817f47ab38a"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Auth\\LdapAuthProvider.php",
+      "sha256": "6f006616c8721751b0ae80b01956b8243021f6e50ad2081094143bc4c0d93bc0"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Auth\\LocalPasswordAuthProvider.php",
+      "sha256": "270b34e3a1ff6f4c69d05252f13030c0966ca254599efc95ad6c59a80d88276e"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Auth\\OAuthAuthProvider.php",
+      "sha256": "f0a6c50cae2e15c2c339a3666e3ad5ba00cdca32379dce0ace0b9ba5b3b35da9"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Auth\\PasswordPolicy.php",
+      "sha256": "fb01b8dfc2596eac85e56ef590f5a1c095e85ba8d67fd43052d082361ffb0682"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Auth\\SsoAuthProvider.php",
+      "sha256": "55d8e3a4a26e2420fad3f2815b63319262bf084a98f10f40f547c842577b10ed"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Builder\\AnalyticsApiDashboardConfig.php",
+      "sha256": "d41225de74404e11f27eb3f27b600373703ba80353ba3c6d0841e652ba1bfa94"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Builder\\ApiCompanyContextValidator.php",
+      "sha256": "a6bd825aad4622742e9d6ab2b52130ba87c63c5e0205886c2ff767242a3be2d7"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Builder\\BuilderAiService.php",
+      "sha256": "61007c873e12ea37bb114a46de72f2b14ff1eff254eb0a58328e0019d460d920"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Builder\\BuilderAiSessionService.php",
+      "sha256": "d3a8969d364535ec48b961d929ad27c39257a561174bbb7647fcc3512b5cc936"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Builder\\BuilderAiSettingsService.php",
+      "sha256": "8c503296da1a2f956eccc97c94db06b663d32191da84a2662b25fc2dc8709620"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Builder\\ExternalBuilderContextService.php",
+      "sha256": "81556528c636409be193e3fc53bf9e3dbe32d0d308b2d4245482e7ebd0ef03b9"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Builder\\ExternalBuilderImportService.php",
+      "sha256": "bffa55ca4de34410d349f50a24254f6f64401ffd92f555f1ca3ff9b66e332b51"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Builder\\ProgramBuilderService.php",
+      "sha256": "a58a98b85127c85377b1592c2f6bde38b0a8bf78ce86d343bed239cf084e0401"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Catalog\\ProgramTableCatalogService.php",
+      "sha256": "fe7314e190d021c4199b8456aab6f5f18f6396dd69be633e8705d7420a5cf328"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Ciw\\BancoCentralSgsClient.php",
+      "sha256": "912a16638b468e2dfb19af6b5b32cb339b51a2eddfce07c7bfc1f73b37e3b75a"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Ciw\\CiwAccessService.php",
+      "sha256": "2be1ef5d48a35915abcd032507813cb00cd0e0b77841675af89c0136e1eb3f2a"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Ciw\\CiwColoracoesPolicy.php",
+      "sha256": "00a7a94e7ecab05fded0295db423e6c7d9a71d04f49c3b72389997f1c9b60eb8"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Ciw\\CiwIdentityRegistration.php",
+      "sha256": "170d03c23d4211d09dbf61ea7f9e6a4261c67e24d9d7ad7cb3f3fcb4b1b65102"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Ciw\\CiwProgressIdentityClient.php",
+      "sha256": "d522de63d1f36609e977bea1977fda3597c53c3c7971c947ad3246739a2e09f6"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Ciw\\CiwProgressIdentityClientInterface.php",
+      "sha256": "d1efb50d334f466f2d9911c3d32ed97c1569fc71850d5ff26775fdfa4624870a"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Ciw\\CiwSqlConnectionConfiguration.php",
+      "sha256": "db213ff0816e4271ba6b36f6b5c3c36af2629e3ee99e6ba3452fbaca573565e8"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Ciw\\CiwSqlGrantReaderInterface.php",
+      "sha256": "2f16e6068ae2fd55f77cf1ec28df59bdf6e8063ff809de281b977f5c2129a334"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Ciw\\CiwSqlTunnelOwnership.php",
+      "sha256": "d843b844bb5b4d86e8cb34657ae64c38c5c331c104ef25035abd23cc68374d1e"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Ciw\\CiwSubjectResolver.php",
+      "sha256": "e81926e7d018500b4361ea5a3551eb8c35e39bb3f2778fff91ba0ab4ec6bcd9b"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Ciw\\PdoCiwSqlGrantReader.php",
+      "sha256": "7eb6478eaf72d7baf48798a9bd334c6f846dfe3fb0ba4374aa35a175f84b1124"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\ApplySystemUpdateCommand.php",
+      "sha256": "a0603a175091130b88f7887e6051e7587e7523e888b4555fbcdcca196815fcdb"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\BootstrapRegulatedDocumentDemoCommand.php",
+      "sha256": "7090c1c5eb918031b4e9eda1fadc6ecd3761ce5e984fe3e3078b9e46e3d0c8f4"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\BuildProgramTableCatalogCommand.php",
+      "sha256": "92ae72cd8e571589389326df3c9dcaef64ca8f8066928a8fadeec771384c4620"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\CheckStructuralIntegrityCommand.php",
+      "sha256": "ae9d5b9b342cbe8e4d1ff97cfba0ed878dc99d99ca12aa08f11907480a9885c5"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\CheckSystemUpdatesCommand.php",
+      "sha256": "bac3565a845193098e02b3d0fe2481acb3235a6e746facba30270caaebdc42b6"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\CleanupGovernanceHistoryCommand.php",
+      "sha256": "4349d484fd681d8f4370f4267754f77e7a083cbc9aa3940eb1241253533d6d10"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\CleanupRegulatedDocumentStoreCommand.php",
+      "sha256": "e349a1cfaed16b31db66f5179b0a374dce635ccfd20940f1362c67de39b6b785"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\ConfigureCiwIdentityCommand.php",
+      "sha256": "ecea8fcd08370352712e1ac2d256937ffa858217e97e654fa0402619640fbc2b"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\ConfigureImaUserWebProviderCommand.php",
+      "sha256": "c393ab74d6f0339a0e30a2e0ae98064702cbfe40d28ac652d7cab056d1e4e036"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\CopyParamDatabaseCommand.php",
+      "sha256": "23f27e79c9569a48c4759d52961e77c581ccbfcef22afd3260126a8a7f4120d5"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\CreateSubscriberCommand.php",
+      "sha256": "20f645b230a7bc52ab3bb89c4ffafb924142e135a291002e84b17fbb6abb6e7d"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\DispatchSystemUpdateRolloutCommand.php",
+      "sha256": "ba785bc637f0f4beb9e3c1b8c64d028c5201e05177eb54f0cde60368a350e050"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\DownloadPendingCriticalSystemUpdateCommand.php",
+      "sha256": "ee7106d3dca1a95bf2031ddb5e8cf1bc71ba83a3f9ff3d3945e9b48b1b1c0eee"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\DownloadSystemUpdatePackageCommand.php",
+      "sha256": "22a115656fac7ade5afbfc8d7a88340144b438010b2c1eaef1fb163df4485719"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\ExportSystemUpdateRolloutPlanCommand.php",
+      "sha256": "547db8fd7e860ad49ee37a67cf79a0bf6ceac2387de5235f58f0e7ea71542fc3"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\InitializeAnalyticsAuditStoreCommand.php",
+      "sha256": "d59fef06d1f671010262e7eddd6bf5ec434a7ef8ca53151dcc356844069e869b"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\InitializeRegulatedDocumentStoreCommand.php",
+      "sha256": "df03eb127d937892a9aa2ba9eeebd25c93996b3735cfc80cfdf4a0a246226f65"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\InstallBootstrapCommand.php",
+      "sha256": "38cfd9f572f370ab3420949bc0f3161e57092c5cc1f31abd367d3fa6cbe9a99c"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\MonitorProgramGovernanceCommand.php",
+      "sha256": "ebd2fdbe1a44e4c590e13bc1c86d4f77b6473aab132a32e79ae1a5eac711aefe"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\MonitorStructuralIntegrityCommand.php",
+      "sha256": "acc93450f74d6a316f2d3c8536d90350d1423fa92f98588c52de11b248514200"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\PublishRuntimeDefaultsCommand.php",
+      "sha256": "a7054ea6b90c385f2725fc4c1fa45db08cb851306c84b49b56c5223b239335a4"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\PublishSystemUpdateArtifactsCommand.php",
+      "sha256": "f3d0e3822d1cafa2e6828a3588da75babce2ffc380bf2f3375fa121724e51813"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\QuerySqlCommand.php",
+      "sha256": "281892a27ecf982eebf4b47e6101966b0b352fb5a2692dccf8f3f7fc8089498a"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\ResignStructuralIntegrityCommand.php",
+      "sha256": "35d2062feae380e2216e940bcebd8b01163f17dd41f0bd7fbaab015b3a10f302"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\RollbackSystemUpdateCommand.php",
+      "sha256": "44928dad55195c2c3e46eb46e0e118ae739c656d356d6e68bc9d8a50ea85e69e"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\RunGovernanceOperationsCommand.php",
+      "sha256": "aca95b67e68ba89914d68caf955d65e7e33ba6e80c3c12635896c727bc6e41ae"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\RunImportExportSchedulesCommand.php",
+      "sha256": "b2dcb427362d1b1ab4bbc954e7f34267d9a3a029f4d7abc524b7334e418aab31"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\RunPendingSystemUpdatesCommand.php",
+      "sha256": "4ffe7d1e61425cf14faf1d570e31bc714c1a11443b8bfb7f2ae02e84fecb58f1"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\RunSaasSystemUpdateCycleCommand.php",
+      "sha256": "0531a2507b1bd841ec6315a985d1d8bacd9b6574ebd5ee1ec19d07c6d41645b0"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\SeedRegulatedDocumentSamplesCommand.php",
+      "sha256": "3d8927e7bfbd9b98f7a22bdd25687522ec1dc27ef6932db174bf8a41b09e7ed3"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\SeedRuntimeMetadataCommand.php",
+      "sha256": "042f3d785277087ee289b342c134955092176a4b58660638b15285d19cc4da53"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\SetupRegulatedDocumentModuleCommand.php",
+      "sha256": "71532424398872295501d5a2d10644b01e26e90ef77c1f504c524254e828246b"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Command\\SimulateSystemUpdateCommand.php",
+      "sha256": "f9779da9c645d21843152eb43cfa5c88263c2cea1aea9005413b1b4f1f1213df"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Controller\\AnalyticsAuditAdminController.php",
+      "sha256": "00b239509bf7ca61fcbe03e6349d2167ddbf798a8dbc52096c1bcba9c296a0eb"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Controller\\AnalyticsPipelineAdminController.php",
+      "sha256": "ef542e13b701d3e21dafa5a0da32129f7b38d447a6e90170991dd0de7c89700b"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Controller\\ApiCompanyContextController.php",
+      "sha256": "db886128033a9d7b4968c50e38b427ab0d18c4cc4f0c8ce36d405ff76a310ee5"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Controller\\AuthController.php",
+      "sha256": "553c15490d77da2f4a63d63174901eda4e71b4f90038decd535c8dc9005ac2c9"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Controller\\CentralOperationsController.php",
+      "sha256": "f1fcbf4b61fbb7d951e868bfd093e4e26086f46e30a166835c2c36824f799b96"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Controller\\CiwAccessController.php",
+      "sha256": "b17d9411e0d52428f9c414bd5823559c684ee005da717dd47a6cb59d72221368"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Controller\\HealthController.php",
+      "sha256": "e7a835e2b4826a370bf403a44c907aacf665a85af5b02e46141a8b51274fec58"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Controller\\ImportExportMappingController.php",
+      "sha256": "01e2d7aec8ac1e0b131f81bfb8c74fc187d9fb214193c25734b9b02e6adc02a5"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Controller\\InstallerActivationController.php",
+      "sha256": "c3e4d02db2d338cf4356a0ec67af501d105dd8b6d2f2057676868e13a5a80c83"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Controller\\ProgramBuilderController.php",
+      "sha256": "dfeb3f567622c42c9f6f6604e8049e53ec00412e4e78995a17b63d74c289f599"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Controller\\PublicPrivacyRequestController.php",
+      "sha256": "00eb199175e5e35352245272c88cdfd7954d606830a2aed78c736644d5c36e6e"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Controller\\PublicProgramBuilderController.php",
+      "sha256": "bee4af25bd0f5986f16c79042cf99e2155f6e7562331f2db20890c474cb4786f"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Controller\\PublicRegulatedDocumentController.php",
+      "sha256": "a68ed3ff9ea5fd1b5129326a19a9bed5b09b0dd39b11b1c134253fe42ed28157"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Controller\\PublicReportAuthenticityController.php",
+      "sha256": "5e5067f19153d2accfcae008bcd1b1fd5fb747ebe70d224bec27eb0b344b68bb"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Controller\\RegulatedDocumentAdminController.php",
+      "sha256": "444d6ee7020c3aebb1464d9693992fa555beac2c66bdf95c1e539240cdb2da0a"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Controller\\ReportAuditAdminController.php",
+      "sha256": "1cb05f596328d2e41856d3233668c7e749a006d26b3206b2b6b24c7b37faba5e"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Controller\\RuntimeController.php",
+      "sha256": "04e3e3ed5ede0e85e63dac4e97305052e1ef1eef87a321a0943c0b8d48d4c55a"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Controller\\RuntimeSystemUpdateController.php",
+      "sha256": "94760a134df21fbe549e9c307f72c93bb6a1e9f4e5ce648705d256147973346a"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Controller\\SubscriberProvisioningController.php",
+      "sha256": "105e6af860b37f908be186984c94a736f7d8092657e9dc107f82334e3d996f15"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Controller\\SystemInstallController.php",
+      "sha256": "ce0c2408afc966cb8e5456389542c872e9cf93f9c55922c7077836512750a8e5"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Controller\\SystemUpdateController.php",
+      "sha256": "106dfb01723b107a16131f2e770d378a0f581221d3e43bb85f5222c2bf352ca9"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\AuthLoginChallenge.php",
+      "sha256": "0cfadfe8b5d18a9e113f0908eae592a26399f4e5469fb6e83c27740f4681daa0"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\AuthPasswordResetToken.php",
+      "sha256": "83b6cf8824f4e2933e9c42c82f7f58e4bf1ebc420bb1b41d342f0dc036bec5cf"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\AuthProviderConfig.php",
+      "sha256": "2a01b8d4fed22a8e2c188e411ca9657635649324381897fd0a7e4d355c6290aa"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\AuthRememberToken.php",
+      "sha256": "630b3b80cec6f9d4585762ae56e8187a36ff1c38b947bc5989910d8d06b363d6"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\AuthSubscriber.php",
+      "sha256": "1c02647e776a7694ad0204f0dadb5f12f7d97eea7127aecb85c890d4aa5b9549"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\AuthUser.php",
+      "sha256": "575dbfb7a47aa7bc26e1234b4c8bb2fd882e092a8e6b3594e5d0d72e2cdd6861"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\AuthUserSubscriber.php",
+      "sha256": "8a9386a01631208aa800bee452a09f5b7cdcb7d1e53eef88249043e2da220635"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\BuilderApiSource.php",
+      "sha256": "79301eead74dab1c97782a29c0fea3a27ce2eaf66adfb2487805d127a5854d4e"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\BuilderEditorLock.php",
+      "sha256": "27e0d1f6bba687ddd97f7ece63627ad9cbfcbb92db0fb41581355704208a180e"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\BuilderEntity.php",
+      "sha256": "264b4b0f02137805ba27f974f88ff4fb51d8f7c7557c8425310f390c80f73120"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\BuilderEntitySituation.php",
+      "sha256": "a5d05133c45049ac4f62c566709fd94168d0bb174c6194634711213ef9514f01"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\BuilderEntitySituationTransition.php",
+      "sha256": "80ea04c5bc437373831a3153616a97ed13bfe1670d16cd15d43eedd63c4a411e"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\BuilderEntityVersion.php",
+      "sha256": "6ae74b765fded91f4ac0d7fbf766472edeb0e3d840c3d968f938ff7e6ade8255"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\BuilderField.php",
+      "sha256": "83b7e4a347ce31c6bf1b8c6e567657b265341784989f624050132cb762473c40"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\BuilderModule.php",
+      "sha256": "900ca72625c3a5ea4a5c78e1b3d64e2a57627f674945d508fd1025107cbac0ea"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\BuilderProgramOverlay.php",
+      "sha256": "872956883f2f1bebadb43e40ac8846075084da5902ad816955b88ab9b3c1086c"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\BuilderProgramOverlayVersion.php",
+      "sha256": "72f398bfa7f1de22d7f84cda992fc39e142bae5a1c880f7cad64038b80c1c453"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\BuilderProgramVersion.php",
+      "sha256": "20c1a99ef87a606885d00e4bdbaf6dff81481d7d5403a3900865ccbf09c8ed50"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\Cliente.php",
+      "sha256": "fd8b9678dce0aeb0c03ddab8f9df269f7de48fabee177d57f26640f9cd06d47f"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\ImportExportExecution.php",
+      "sha256": "e6f04b4e54d169e27aab505111d6d562397f35fc66388ed82171fed31bf5e79d"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\ImportExportMapping.php",
+      "sha256": "2118ae314510a902f310a376c3adfb300f398d3f6de92681fa217640a8bc6dcf"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\ImportExportMappingVersion.php",
+      "sha256": "6b6a15cd46ff0d81e572335d821c9157e91cbffe49cdc7912836c0803d7b32b2"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\ImportExportSchedule.php",
+      "sha256": "558e337cdd8051cdacbf83a82968fa3602827951035d6d0582e87471b3fe18a9"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\InstallerActivationLicense.php",
+      "sha256": "07b7f33e3385ad186db5b17956c8792333296f4020be15cba2e653dc0c451bc0"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\InstallerActivationServiceToken.php",
+      "sha256": "9bec2e71f595e05c1c70ab96ad1604bfd1aa9ddf724e2788d72e1d4606361252"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\Program.php",
+      "sha256": "6ca28f75fd7d7cda94d851e255e6478e6da81914d2e40421f1e94a3c58898203"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\ProgramChangeGrant.php",
+      "sha256": "1c52b41cf78402accf25b22b00e897a37a863695d86382b7978cbf97695627d8"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\ProgramChangeRequest.php",
+      "sha256": "adba832934893ceb44631d2abe99e635ae2ecad8281f62baab60af9a3ae04d65"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\ProgramGovernanceRetentionRun.php",
+      "sha256": "b397500b63efcb3a3d01b5a9fe2bc1e520c01ed9415999566a2a3013ce74a7fd"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\ProgramPublicationApproval.php",
+      "sha256": "03365455b4507ca042d3d0858a9aafd8e26ec4a964947f01f68f3704374cee84"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\ProgramTestExecution.php",
+      "sha256": "8fef7084336db2ebf6fc143f6d4b5889ddcc8225b5d7b62335b78290895f7020"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\RuntimeAiMessage.php",
+      "sha256": "a46192815df4d735b460d532e8f163e4c0f95511813144312c3ec2d9d0119a8b"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\RuntimeAiSession.php",
+      "sha256": "cc6226aa45e96e38dde0e7b2bb8661472b2b012308c7e807fe468f23b9f08ba5"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\RuntimeAsyncJob.php",
+      "sha256": "02dede40d2ac53ad587f615c06895e7a816dc5e52361dcdc1743525ad585836c"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\RuntimeEndpoint.php",
+      "sha256": "02f6e117d543b68ffc2c88ffb5f71d3ff09eb99159ea743d9b83ae98ff123ae3"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\RuntimeEntityRecordVersion.php",
+      "sha256": "718630e4e4490cdff8eb38b14f8831705b42afdcf44e8f9308e487c8402fbba1"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\RuntimeEvent.php",
+      "sha256": "8e3fa5dcda942381f8835526aeb3cd1c30ec0034a67c0f96fd9884f4f1540864"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\RuntimeEventDelivery.php",
+      "sha256": "34d1c731c4cb452ef9f079ef8576415debc620baffd763236128d81e6acea9e6"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\RuntimeEventSubscription.php",
+      "sha256": "2ab14e53676764193e6c34f9445a5a4757a8e6dc50ed59738e5849cfaadfc024"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\RuntimeLockPolicy.php",
+      "sha256": "62fc6857c2d5fce7a4a558602495a4d3f65a944627af0fc1f7cbbef428a36e33"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\RuntimeRecordLock.php",
+      "sha256": "59ea93e9b270738e26b2f738bd6210bbe3bce8d69016a110b175dce3811579f0"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\RuntimeTransaction.php",
+      "sha256": "7aaee3fd10549be3f8d970bcf0aff88b3ac3a1e418fc7702d7df1f88dcb07308"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\RuntimeTransactionLog.php",
+      "sha256": "6b7b86cb83e27dfa91e81960b6afbe4fba4fe1b62cc424f58340df9a1e3f7589"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\RuntimeUserMessage.php",
+      "sha256": "4dc93896fb39387e8a9ef1fdb19153b21ce74bd169f3e2926857b3b7b7a70b7a"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\RuntimeUserSession.php",
+      "sha256": "05169b99c27983b826987b97e92b1a755cd546ec759d4cc00d7aaefe80151cae"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\ScreenDefinition.php",
+      "sha256": "11d01865c472ed722802ebdf2de33517ec0b6de61f995ca67adbb4e2bb472ce3"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\SystemLiteralTranslation.php",
+      "sha256": "01f2ae8901ef58d6684daa7154e67e954f7879c971f4c59a4bc4e1875f710806"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\SystemOption.php",
+      "sha256": "e5ce1b7dc5a84ef205f2158020fb1a3c6e981d862fd485acc7adef68de989c06"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\SystemOptionList.php",
+      "sha256": "20507057f4986bd43446b46c696ec8406e4f29561700c11f6732bd95c5f0636c"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\SystemParameter.php",
+      "sha256": "9aea02c98e7af608f01c30c3c1af6124b400f44773a864ab7f783424760ac2a4"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\SystemParameterValue.php",
+      "sha256": "d6c63ba5083ec78a571058ff91d1f57f00b4cc87e8c9f447ca76155ee9c3d778"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\SystemRecordIntegrity.php",
+      "sha256": "d18cd5b67994632e97716cd909cc04fa1244068a555dbae290aa8c3e34e052ce"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\SystemUpdateConsent.php",
+      "sha256": "2c876dfb36e65ad71a25dd6d227290590d53eed0a1d269add6094dc9ff869457"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\SystemUpdateExecution.php",
+      "sha256": "bfce82a3e6ca0909b619de82aa3f76a0fb3d86f401391ceb6e6f75b1854c55d3"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\SystemUpdateRelease.php",
+      "sha256": "baf08c224df48f8d3ae90d8f2e85545750ec378e24e49bfa90411a8808173417"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\SystemUpdateTenantActivation.php",
+      "sha256": "f0a9726b0b3a7b2fc2837f74422910c184edf3a7e0d66ec6c0d23d659ffb9ce7"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\UserFilterPreference.php",
+      "sha256": "eda62c6bd0a1fad6b5c0db07cda0d0515771683d37127c2035ae7dc6a42e6431"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\UserGridLayoutPreference.php",
+      "sha256": "28bec059b1203670baf9c16ff28dc6c4056edbcd95055e6e2d5c26709ad5c280"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\UserGroupPreference.php",
+      "sha256": "0c7f1d3eef30640e4368d6ab7b313cdca7a01c73b69bbed5d2ae919f88589d85"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\UserLayoutPreference.php",
+      "sha256": "69c6f05b6909bf5cb949ea2d709fe2c67e2d58afabde2132ed89c17bf7ac3d16"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\UserLookupUsage.php",
+      "sha256": "88efe015fa5b5c94509104ce9571e814cecf0526a881d78d8a3e7f33d60acec8"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\UserMobileGridTemplatePreference.php",
+      "sha256": "756a649cdc68c61807d149d35b5bcede243eddc842f841bb2d2ddada807ce97d"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Entity\\UserSortPreference.php",
+      "sha256": "a9626d277f0627ad76755c6edadb935aef0e70d7924e4889d4ad30306a626b9b"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\ImportExport\\ImportExportDestinationWriter.php",
+      "sha256": "7ead9826967373c60ca74d5ae083c579ccb5883a4a008a16c8dedf349caeda82"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\ImportExport\\ImportExportEncodingHelper.php",
+      "sha256": "b6b6e24e0383457b5a094d03df947ebf8cca6429b71ed359b832b4b82a7b8321"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\ImportExport\\ImportExportMappingService.php",
+      "sha256": "ded2ef28cb04ee5f5d0e90dc2c367814701bbc6bd1bc2836dc3cdc88767679bb"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\ImportExport\\ImportExportSourceLoader.php",
+      "sha256": "85f6e039ddfba3a554ca36f1676f302b53be1606151b67610d626ed0a554f0b1"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\ImportExport\\ImportExportTxtLayoutRenderer.php",
+      "sha256": "721cd9823b9792f09a2cc18a7a0b98de8096e34bfc02fd87836da45489dae58f"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\ImportExport\\ImportExportValueMapper.php",
+      "sha256": "564c009dfeded89776ec4480fbd555eaf525748f6ac2a2d1b97f42ee624d440e"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\ImportExport\\ImportExportXmlRenderer.php",
+      "sha256": "541e8b3a7bd7b32d64e1a0c1bdc6f828152ce49f7caea622a9eec99c924a5869"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Install\\InstallationActivationService.php",
+      "sha256": "0bfb2af2ec73e55b6a0d71502f9e81a2d9aa46338ef85efbd9dc881cd807badc"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Install\\InstallerActivationCenterService.php",
+      "sha256": "e359e79d3a08e02897b94adb68f96d2d4d2202f778ec1b2ef70a20f03d161b73"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Install\\SystemInstallService.php",
+      "sha256": "c6149833110437cbbc9d8d040f52073e1fc525914cb3dbd61532a6ed94aa4a69"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Kernel.php",
+      "sha256": "e3cd21d3498e4efdbba804a21cc2e96af6b556e0c900206dc241e592cbad1ebc"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Odoo\\OdooClient.php",
+      "sha256": "215d201313ac9bbb1a8066775d1aebea29b279d6be836d566f1749e4f98c7021"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Odoo\\OdooExecutionContext.php",
+      "sha256": "7595a847a56803b75747c3bfd70e55e0b206855622b9d625b8d4abae8d411434"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\Contract\\DocumentArtifactGeneratorInterface.php",
+      "sha256": "4d4074a83fd75138382b2273dc00dca0f86a4da05a25b32556d46f6d37bcd36d"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\Contract\\LabelBuilderInterface.php",
+      "sha256": "302ca495a63d9befe6cf4608831048da9ea2bfa9da7f42a9d1e0dee856c128ae"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\Contract\\PrinterTransportInterface.php",
+      "sha256": "c1258bf171b9e5696a20534bba12380c69d0dd24903e7aca5775b02fe6a94cba"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\Contract\\ReceiptBuilderInterface.php",
+      "sha256": "695a9f1f348f25ab7a98eba31ad7e8e0ccf2948e7c20c10819bfb540dd741529"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\Contract\\ReportGeneratorInterface.php",
+      "sha256": "c10d481af7178ae768c0b422eaabd03c67cd8f4bb8140cdbeaf147f59407c326"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\Contract\\TemplateRendererInterface.php",
+      "sha256": "71725b5fcadbdd310afa70b8ec7e64bc336b82f43d080d02f21b6f7a6b805c65"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\Delivery\\DownloadArtifactDelivery.php",
+      "sha256": "9069c91e4a8fdda76a2183bcc48e615a22b67d45d313105bdee2ba107641f838"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\Delivery\\QzTrayArtifactDelivery.php",
+      "sha256": "694adb66a1fcb8eb83dfd511890cfa404de7de7dbc01202837d6ed10e11912cc"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\Document\\AbstractCallbackDocumentArtifactGenerator.php",
+      "sha256": "a61d3865f570be2a2a05fb8188296c548e4814e3557a789bdbbbde7d7988e25e"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\Document\\InternalRegulatedDocumentHtmlGenerator.php",
+      "sha256": "fef26ed3971205dd422d23d1280b27bd717a25bd9f1f808ef8e9895763d148a9"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\Document\\InternalRegulatedDocumentPdfGenerator.php",
+      "sha256": "e84926ac3b49202671ae46e68f3810d896825354d4e7afcffc8b736117389890"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\Document\\InternalSpecialDocumentHtmlGenerator.php",
+      "sha256": "7a2cec5873f667b5d5f6788b282906c7bc366ff6bb77590ba29303cca7d2f753"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\Document\\InternalSpecialDocumentPdfGenerator.php",
+      "sha256": "ebdfd13b170ad8f5b767bee25bcb90acaef5b6a2f65040bbf5571b8b0f5bb13c"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\DTO\\DocumentArtifactRequest.php",
+      "sha256": "7df7be890a3bb4650b2fe752ac39ff32b0eb2467d9a839d8a191733f385d7988"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\DTO\\PrinterConfig.php",
+      "sha256": "3ce44dc1144ff9ecd86b84d9ccd8f3ead2ea2c73a6a1b5cb932b31e7f6986618"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\DTO\\PrintJob.php",
+      "sha256": "64d8323388bf5a864099e2e09e13be2af49dd26682639205f7bb9ab0640caeae"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\DTO\\PrintResult.php",
+      "sha256": "70b647d6286890d0216d3f84a997d46b6722f5a389d5a469cba1669e161f85ad"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\DTO\\ReportRequest.php",
+      "sha256": "dfc852036585ccfb1a189a7673b16a6b4b6b2808eb0087be846aed3d11c48df2"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\DTO\\ReportResult.php",
+      "sha256": "f5bbfa7f24a8a79a074a9b7fa9f3e05bf286309611bb57bc15b887ba774a33c6"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\Enum\\ContentType.php",
+      "sha256": "0de9ce3f9379bdde74c3970fce304bf3d69b588cedf5215d9cd53e3270f40c54"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\Enum\\PrinterLanguage.php",
+      "sha256": "619a9b69f0e8be8fcd7bafd8b8d1cf49fd9422ac2d5f67042d038a6ead927f1f"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\Enum\\PrintStatus.php",
+      "sha256": "538934128e696435fbb3607282bd551f3574cb93055b235eba157a1b9e109394"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\Exception\\InvalidTemplateException.php",
+      "sha256": "256c20ffc560e37e93d7a4ee929ee0765b8e897d424150b53705a5398461b484"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\Exception\\MissingDependencyException.php",
+      "sha256": "f6470a42ea6ac70f4681ede944961ea483e814a7fd6d0e0f36745cfd0d7d5b9b"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\Exception\\PrinterConnectionException.php",
+      "sha256": "66b84ed29c7b1000f0691b1286208edea3f7b26a31fe98a5f197f79e3592ce97"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\Exception\\PrintingException.php",
+      "sha256": "1e8c20ef3081b29ec00366f0fcc648399cd86f1ac25014236bba6985883e9440"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\Exception\\UnsupportedPrinterLanguageException.php",
+      "sha256": "8ade37e63f531451acabe735b775a4e45e4c2d465d02d0c7dfbf8f9dd1a72a11"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\Report\\AbstractCallbackReportGenerator.php",
+      "sha256": "5d7fa63e8b86aeccf8fa35b9f802fa0183a24f53e32b61777a826a4beb4cf8e0"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\Report\\InternalReportCsvGenerator.php",
+      "sha256": "84456d4dd8d4a1940e7cc84810b40e812ff8708a9214577de031f068abcd0396"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\Report\\InternalReportPdfGenerator.php",
+      "sha256": "93a89d9651f86fe813e6f1128b95ba9460e3910e602b94ca3861129664dc3c5a"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\Report\\InternalReportXlsxGenerator.php",
+      "sha256": "fe7bdcf7b8f2e7adaa38ecc7b612ef993ee24f4a9a01d787a17850372ded9782"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\Template\\SimpleTemplateRenderer.php",
+      "sha256": "aaf16098314c43c1bcc3a2855e3eea69230c2f5441f2f520c12ee9b3acc6f93c"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Printing\\Transport\\NullPrinterTransport.php",
+      "sha256": "0624ed4ccde4e88f52244943d88642f112f01eaeb5127fd8a37c809af5e7d17f"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Privacy\\PrivacySubjectRequestService.php",
+      "sha256": "750aaf192a84dfad4f591c1815ee14d9fb19b066a7cfc530ec68966040f9298f"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Provisioning\\OnPremPackageBuilderService.php",
+      "sha256": "7d8fffc4547c5bc0fda40502141bc54f65b0cce5a53fe97144addf17480a66bb"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Provisioning\\ProvisioningSecretStore.php",
+      "sha256": "6c1fbf954d5bda48f045b5d257516a22b4f2e9aa015c7d5f56a0c10df5ba01d0"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Provisioning\\SubscriberEnvironmentProvisionJobHandler.php",
+      "sha256": "c43999ef706d9c52b4b4bf1cf0d9cb7e7f5c87ea861c98a10bb13350c7ba77d3"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Provisioning\\SubscriberProvisioningService.php",
+      "sha256": "0f5d8cabe4ee814f242aabdd284707fdd9c7d0e1e7dac4b72b3024eb86ed997f"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\AuthLoginChallengeRepository.php",
+      "sha256": "f7b9d3eae58ac26ecdd2bed6b2c2b64110443ae1556340f8ed5415f1a41c33da"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\AuthPasswordResetTokenRepository.php",
+      "sha256": "bb1ec3793f3e37bd5bb4a742d6b92a8d084127a129e97bd15f06dc15f8c005a4"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\AuthProviderConfigRepository.php",
+      "sha256": "52098fc4b6cb09349af87a9103b79f4b2ce0763fcc75503e58f1da743e3ed22b"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\AuthRememberTokenRepository.php",
+      "sha256": "0230c41f9a6e812d2fcf3d2b7e71719e71c9f6b13a27e47bfa3d4b29be42bc10"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\AuthSubscriberRepository.php",
+      "sha256": "06ce1d03d45b903398c4687de27da87cd97146448b47639d42c6fc3ceef35698"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\AuthUserRepository.php",
+      "sha256": "1ce8debae33deac19d74b9940392482327f96a7d176d9d8a8a4664313a8c45b6"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\AuthUserSubscriberRepository.php",
+      "sha256": "309e59d36ff2c60dcd4250c1191edb0a82296f0d596247f7b840456992975a56"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\BuilderApiSourceRepository.php",
+      "sha256": "1c069fde8863ddc1590c3ca61fbcf3955e41bdbbb27173491790d3493899086a"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\BuilderEditorLockRepository.php",
+      "sha256": "e557249e59aa930f90efe45c45a5cca8a941741e124d6df5e2f6583fde5cab4a"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\BuilderEntityRepository.php",
+      "sha256": "c04db0baeabecc2cc758b91f0996b3eea87a3cfaf516c0f1333991a918fbb5b9"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\BuilderEntitySituationRepository.php",
+      "sha256": "6096a3304b45eb0b14be9127442ead216503142f6185d16c0fa2407765cace60"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\BuilderEntitySituationTransitionRepository.php",
+      "sha256": "3a9713e9904e13c61eae7dbb0cf64cd128e0bac5a2a20cd0e95150d753d36d5b"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\BuilderEntityVersionRepository.php",
+      "sha256": "d5374ce741a5ecbc6a2d731ec206b3190f14ddda5e47514fa07f1742de2a6ef5"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\BuilderFieldRepository.php",
+      "sha256": "8ff818ff0ab0c60fcc0e96d8dacd8df0100f836f40db3df416692670b8a054b6"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\BuilderModuleRepository.php",
+      "sha256": "3b1d0c41d04d3e69d6519ed72ab9dcc950343266fa21c25c44a18698dcce3d8f"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\BuilderProgramOverlayRepository.php",
+      "sha256": "84a88cc73e9d558e312a0eb4b1cfcca3733003606d80f33ff7b8fb294ea230f7"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\BuilderProgramOverlayVersionRepository.php",
+      "sha256": "03ed6a34fab15e124e3faafee35b82079ae577a0b3420c824f4e56d3115f78ac"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\BuilderProgramVersionRepository.php",
+      "sha256": "b6467df66560cadd7c8cf5b4d0e59435495284d46393459f8027563e6d71f408"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\ClienteRepository.php",
+      "sha256": "1a410370a7063cf71a7848f0d7bc94ef1f94a4ae3f38ce99ac929015c05098cc"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\ImportExportExecutionRepository.php",
+      "sha256": "4e529f4d93c56b233b737c5216cde3838b7f4e4a5a2e8a3dd137e118a5719383"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\ImportExportMappingRepository.php",
+      "sha256": "46544abbe796386087335b2cad760736ee4aa520824d663a5b51201b712e9f5c"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\ImportExportMappingVersionRepository.php",
+      "sha256": "f321d2ef1d86358a455c8c240e66dc5d33f951620b619785368488fd5186fb74"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\ImportExportScheduleRepository.php",
+      "sha256": "3d086493d7c1d54c365d117f4e73928b60e9aad31e2dcad51571a48edde6d83d"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\InstallerActivationLicenseRepository.php",
+      "sha256": "e41296433758fd2df3eab2207b9fde0af47addd6e593ee740b0ceb25c0071f57"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\InstallerActivationServiceTokenRepository.php",
+      "sha256": "8f1a219e7c593e8586e8362ee215013197922b511a5f7209c46fdff9279d05b5"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\ProgramChangeGrantRepository.php",
+      "sha256": "01e7d573d02043e2c3af1fd26970bb602622efb505e1b1e5f9815a77cef319f2"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\ProgramChangeRequestRepository.php",
+      "sha256": "b87f37f15f100abe25e4311217444ab193a459620e208caf508c2aa713c7e740"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\ProgramGovernanceRetentionRunRepository.php",
+      "sha256": "7a6132f6807e51900cef5be905ce2af00b6193735dc7aef7866f41bec65c7804"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\ProgramPublicationApprovalRepository.php",
+      "sha256": "79d9509120c82449f74a29f4bc4591b6097d03d1764313c1d3d8ade957705ac6"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\ProgramRepository.php",
+      "sha256": "d488690b1adb29817c4490f588175b14acaf471cd90ec3ff3af1fa4adc15281e"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\ProgramTestExecutionRepository.php",
+      "sha256": "9809cc593689deb97a01b7b319d11ee9fcd18bc51528efb80ff3425a4b0438cf"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\RuntimeAiMessageRepository.php",
+      "sha256": "e305c8dc8a50b81a071e382bb113bafac3ff529768536ba045d6d176f75d7d52"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\RuntimeAiSessionRepository.php",
+      "sha256": "b328affa0ff4474904eaef656db52dc86fed33a9fe68d7bff9a7f8279b648069"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\RuntimeAsyncJobRepository.php",
+      "sha256": "810b8110887433a62eee2b856b0567d101875a6c27bc6e6a7a03e47ca2294085"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\RuntimeEndpointRepository.php",
+      "sha256": "b3a383720204204595a98bfd11a64350ca4d2ee7bb4bd03b3672e7051dffe81c"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\RuntimeEntityRecordVersionRepository.php",
+      "sha256": "e7ffb990289f4cd8510608c670b0cee7398ce1ba040290f119fbeab2ba9dce1a"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\RuntimeEventDeliveryRepository.php",
+      "sha256": "fa392003a786b8ea171f1abc50b8f3b9e6958759d4cf2798f4c821277523fef8"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\RuntimeEventRepository.php",
+      "sha256": "2ec88a9d7891254d06e8c4b09f2c82a399ab92850bc17288c64f974567e3c397"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\RuntimeEventSubscriptionRepository.php",
+      "sha256": "ae5db9c30d8428d974a39647489f5d58187f4d3fcd6224e0ab72e72bb759debe"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\RuntimeLockPolicyRepository.php",
+      "sha256": "c13a9f543d5afaeaae4908cadb21c19f44ecdf2dba4344ee1fe15bf75644b55c"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\RuntimeRecordLockRepository.php",
+      "sha256": "f9ac114ec51b23883f21a1a5269625090a3e81bd9a1128e7a51406ce22105f3f"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\RuntimeTransactionLogRepository.php",
+      "sha256": "5ce9d6f27705677ac1e289669426a29c233595a06e8892c8ce3c578ed20cfc87"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\RuntimeTransactionRepository.php",
+      "sha256": "fa11d69dc5e7a30505850b82c5939b60d61f56fef6bebeeec6ecb1be8c1a0103"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\RuntimeUserMessageRepository.php",
+      "sha256": "13905791abdbc6c2ac19f2da479d6f2a0ef2eade498e903f3f47aad87ba196ee"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\RuntimeUserSessionRepository.php",
+      "sha256": "62067e04f11e8643f2e44fdc7fd711a3ad3549e12436f0a869afc1863ad10dbb"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\ScreenDefinitionRepository.php",
+      "sha256": "d35190368db2bd210181bf78732a6c2ed964d7069e47b1fd2d23809b806fbae9"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\SystemLiteralTranslationRepository.php",
+      "sha256": "f3386f1c640593e5190ea364dbf68bd3af0bcd2413f1e678c9dfe0af2da8d1a9"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\SystemOptionListRepository.php",
+      "sha256": "25a67795682a5f11e51807dd1a05574558272fefcd34a855d3bc6bfc9809c76d"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\SystemOptionRepository.php",
+      "sha256": "51ea0f5336a7fc9744ec7dd9ce3b9d4c559f014262fb0d3a5a8a0fb07ec3dbc8"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\SystemParameterRepository.php",
+      "sha256": "70c7dafb65a28064d23116645cef1d461d6fd2256f7cb58f1f0ef7f8ae525827"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\SystemParameterValueRepository.php",
+      "sha256": "110155c2ae5f1b96e7957267b2a5b8671d50c6ddbdfc8ccb633d546a569e3abe"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\SystemRecordIntegrityRepository.php",
+      "sha256": "b4b48ed6b182d2a1147e1ec524b32f8062d10d8707715b943ad3458b60787af7"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\SystemUpdateConsentRepository.php",
+      "sha256": "951934611619599a29af79a23cc290167b2746689c77b3df37c23776318bd43b"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\SystemUpdateExecutionRepository.php",
+      "sha256": "02472404a32e6e57550f09257b72ec7c3eb05ff5555be034e45ccfc5be469073"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\SystemUpdateReleaseRepository.php",
+      "sha256": "5f8e1d75c46602a150a3ae8d929d05960f202cb253294384b6dcee4e1f6ffe58"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\SystemUpdateTenantActivationRepository.php",
+      "sha256": "fe83c0e7721ff41c2a64cd9a8f2b44effd857417e8ebe8f6b1242142b9e2aa7e"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\UserFilterPreferenceRepository.php",
+      "sha256": "f281ed8124b466d0bceac592b49777020a4da3b632c38dea4b6a8c49d382f312"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\UserGridLayoutPreferenceRepository.php",
+      "sha256": "4c813f00f6aad8cb5f56c8b705f493a064a7625f84a4e22fda40257e1f7ad41c"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\UserGroupPreferenceRepository.php",
+      "sha256": "7726078fbd4317ea3b4361f2e8bdb02876a96a71262977f21d86713e724dd43c"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\UserLayoutPreferenceRepository.php",
+      "sha256": "34fc55bb95e171f8317e4cb1a823b3961329d414deab8c26fbb4c4633b4b8ed4"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\UserLookupUsageRepository.php",
+      "sha256": "625d5610ea9dca2ccb357373989bbe14f75332625a3c4fc91c1832a02450b160"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\UserMobileGridTemplatePreferenceRepository.php",
+      "sha256": "583ceccc04a74d735b49bb866d9f9321b44ae753b2b5c57c3cd3395b0e34f06f"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Repository\\UserSortPreferenceRepository.php",
+      "sha256": "d6b89ffa8800a1375e33b3eb5a91a47f4b1232a24da98f23d0e8b4351b587d2e"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\AbstractRuntimeBusinessRuleHandler.php",
+      "sha256": "22eb74ba3bad3f1160f36a90919ff40d335e8daaee8ef5d804a9b891dda8e63b"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\ApiCompanyAuditClassifier.php",
+      "sha256": "2f647c6f5b4fb68734944a199adb9f06b3079a80e64834637df7538234048978"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\ApiCompanyBindingRegistry.php",
+      "sha256": "8a00d4889966f79fe72a7be472b3b742801fd2a831ef5a908ea618c939d03646"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\ApiCompanyContext.php",
+      "sha256": "063b9958501d22762bd15b8c23297f3ecbc7d70ac903ef60621b42fb4694528f"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\ApiCompanyContextResolver.php",
+      "sha256": "87bc1f8bc3b5e0e297efbb636bc84baee4e34fb72fbca3411e7d709e7b93cf48"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\ApiCompanyRequestAdapter.php",
+      "sha256": "89281a26e6873d28d23b0c10f383355b562cc918e2cfd94241aecceb1e4d84e6"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\ApiRequestContext.php",
+      "sha256": "8f788e9627204786fba769c083d2845fe1ff5bdd4561607727fb853e95b23918"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\BusinessRule\\ConfiguredEntityRuleMethods.php",
+      "sha256": "71a50e82f0bff5832f70e7bc975fffc17911be144d5b6e974a4f27d6bf862e29"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\CentralControlGuard.php",
+      "sha256": "0d59c9f68a91b0b120523b33fb58489b4e2993695293a62edb26285a9c857234"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\CentralControlResolver.php",
+      "sha256": "c468951aed1feecca6cac18abfe81ed51b7b9d06d2ea7d40e606f77166597a7b"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\CentralOperationsService.php",
+      "sha256": "569f8e7c4f5b9410c36d3ce5768d1e1fe282e8177016a6433c0ced6e91acfe0c"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\ClienteBusinessRules.php",
+      "sha256": "9527b6c4bc2fa42223e8b0176e59c7bb7277166d7f6fd98618edd823df383c33"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\ClienteEmailConfirmationJobHandler.php",
+      "sha256": "0bb58aa40119b566ca4ca8256f1855d260662d09df8df42da73b047c7d6cfda1"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\ClienteProcessamentoJobHandler.php",
+      "sha256": "2f3da92279f44b4e1ef0e918dd5e50626de0b2e37563a0ab07f8cfeb7695ba6b"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\ClienteRuntimeHandler.php",
+      "sha256": "503d36a8234f08c25d7e084265a41876cc94e51418f52e87a96e149278b985fc"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\ClienteWhatsappWelcomeJobHandler.php",
+      "sha256": "332eca030d90e6d164cac64d0fcb9148e579f15743ae2c84c0d5d2ce5769029b"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\ConfiguredRuntimeJobsBusinessRules.php",
+      "sha256": "00a94f3805656effec159cca73c62406970d46011815a2c33f66cdc18c497837"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\CustomCode\\ProdutoPdmCodeGenerator.php",
+      "sha256": "25691712ef95c65053a915078a4376d0dbfe2c3123a28097706608f0e20759b2"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\DeploymentModeResolver.php",
+      "sha256": "a1a31543aad116dc0c1bdca6f00bc5388c8546815e6372248fc5bb1730465970"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\GovernanceRetentionPolicyService.php",
+      "sha256": "ce2fe3d75c0ed970ce79dc1ca9c683c77b3ba0f7c46141e22baca1ee07fe0ed2"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\HomeRuntimeHandler.php",
+      "sha256": "6826a64f7cea09b4f016555b7fab4350e751930f201cb497ade237df4fd6f5b6"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\HomeSupportService.php",
+      "sha256": "f2ee57f855d7c133a62d12fb2fecfa82c7e50a5d96e05378b05a7a1a4093605f"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\PermissionResolver.php",
+      "sha256": "b43c0f66c0b932aac496d2cdb4c6fc6124031f8aa40bf2dca7708fbdfd0c9202"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\ProgramCustomizationResolver.php",
+      "sha256": "afae07b20b490353b5bee60f23e48a688a72450a5f4fe20a0a683bd31e853742"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\ProgramGovernanceRetentionHistoryService.php",
+      "sha256": "a87dc07ca93dc3dfede431690e3369d23b303520ee4c59d9752c6fcf8836105a"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\ProgramGovernanceService.php",
+      "sha256": "e0a189f05eefb46703bcb9944bfac8ad80d10154548490a366fde597019a7c62"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\ProgramOverlayService.php",
+      "sha256": "4739c7da045cb13913364c41b1fba706288ecb9092a095b858a2f933a05773f1"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\PublishedModuleCatalog.php",
+      "sha256": "09edda2322853273d926f551628969135ec05ee91944a3dcc2b180716d180f64"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeAnalyticsApiDatasetService.php",
+      "sha256": "c5d12eaae56764f01ec85b598c0208915bfc71d2b0c2ecfe7d7c005d6b2c0e7d"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeAnalyticsAuditAdminService.php",
+      "sha256": "18fd95d4dcf184cece6780a04e246e968e25a1fc078907c46c76b413056577ff"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeAnalyticsAuditStore.php",
+      "sha256": "f7c1a044f0e06c6d6c2e24b58aa89b94fdbd337aaef254da33ece051e40ff6bb"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeAnalyticsEndpointHandler.php",
+      "sha256": "d3f3a5aeac8d6fb3d9e68fdaa9a4389bc70d3c371bb00bd159b97ade26ac29b1"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeAnalyticsMaterializeJobHandler.php",
+      "sha256": "a8b4fc3c377920c99201db774860cb8555945746c20fc3a2b57d500a12715d25"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeAnalyticsPipelineAdminService.php",
+      "sha256": "ba223e9fc418e9c03970348e4c006425169bcddd903b7344bc09441d619120d0"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeAnalyticsPipelineJobHandler.php",
+      "sha256": "0fc2e7246d43977d3251015cbe9c63d772c969667e617dccd3ebe3275cd9e0d7"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeAnalyticsPipelineService.php",
+      "sha256": "f698530b5cc39a75825015d8b5be2c5bd8340cf859463afdca6c0f0e8b4674a2"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeAnalyticsPipelineStore.php",
+      "sha256": "6f0f21cc568c6ef320162e8a6a19137b5104186eb4ee9875b42c33e0e42c2e7e"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeAnalyticsService.php",
+      "sha256": "e1bad7ab4daedbca9457c827610bb228f60a3c8cf85febed79f84fd22689116c"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeApiEntityActionService.php",
+      "sha256": "c19eb95eb1ef39633a7b196593a8d943b234eb8a3c782514e07618ae4c7cbb60"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeAsyncJobService.php",
+      "sha256": "c57bffe7b710ebbe58a03edd36e2c68fb4769e0521eb411bf23992d7a17a8622"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeAttachmentWriteCoordinator.php",
+      "sha256": "02041b559ca2ecbadd61a8d09870fd34744c0cf4fe0bd4b0adf095aac6e541b1"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeAuditAccessPolicy.php",
+      "sha256": "c75a8ba44000c01e13a0e5d94df2371be95659b8405726f6819c4fa0e24193e3"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeAuditAccessScope.php",
+      "sha256": "2e523b4abc78a36d0f557cd79897ab55711fcc46b52f4d57f7d71550fcbf07ea"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeAuditResourceGuard.php",
+      "sha256": "94bc42fc4ec6b9987b5955d8096fb2121ffa88cf58b45a6f0dbede2abc882214"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeAuditSubscriber.php",
+      "sha256": "a9be39e6a54c9d1b45cb93ed9da75938c2c49070afa35ce1c5e0dc717fe20537"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeBusinessRuleContext.php",
+      "sha256": "6c2f114429c3befd8dde8c411af2d6f0587e51411c574b48aedeebfec2dc28f8"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeBusinessRuleHandlerInterface.php",
+      "sha256": "d3cd629c070a14f41a4d00cbfe62cf842860ffb58ca1d64d65df2c4ba61f81ba"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeBusinessRuleRegistry.php",
+      "sha256": "204bd0da7c85c3617b9265b650c86b29d34e40992424eb4c0df5efd71167a704"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeCiwCadastroAudit.php",
+      "sha256": "a95953d34b99a5725b74b40d0f2cd20990fc6aa2e245672cad79c6806fcd5ab2"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeCiwCotacaoAudit.php",
+      "sha256": "bace517346f4f3282d659a98be5c6f6e028491948fb1346afc7128a8d4ed2336"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeCiwErpQuery.php",
+      "sha256": "a444ca243817d97416d455820f63799e2b86a5516bfbeb1dbbfe9a272b6151e4"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeCiwParametroAudit.php",
+      "sha256": "bf14485e6ad2a0ec813e57c930695ba2a977231da41c181e70fc245c433880f5"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeConcurrencyGuard.php",
+      "sha256": "ea41c1a0e97c06a1c71e8d073f4f09aac534d427d4d9b6226604152707e06097"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeConfiguredJobScheduler.php",
+      "sha256": "fc7ee8794477d222f6975914568443b827061fc1a1f74a5c1940b39d856d1944"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeConfiguredRuleExecutor.php",
+      "sha256": "971e2d1f8e8503b87bc0f15abad20e966183677ee41bb7c04469def998bf2607"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeContainerAllocationAudit.php",
+      "sha256": "ed0e7955ba79fc9e38a78bfcc9b0346242d0581d2db5f379b99879294af653f2"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeContainerAudit.php",
+      "sha256": "3cd4448cd1a28b61a42cce9003e84d434a1e58c7b11c1a89599456f5e8d6931b"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeContainerExpenseBatch.php",
+      "sha256": "b2de2ed168fabd929bf47a5abc0a07af965fc4cd350591d7119f7f206b6a19b7"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeContainerExpenseDefaultsAudit.php",
+      "sha256": "e3229be6b584f8e53e38243d6f003f9b3f45b48d2f7aaefc9b792e3b16c26c9d"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeContainerNfAvailableRead.php",
+      "sha256": "19602f88757a307950cfc78dbd16c87ba846645e2cd1083beb5dca3102fb6362"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeContainerTaxAudit.php",
+      "sha256": "fbbac1ba035a56928227ab3b5d3609a78ab97fe0f046138eeb3c35808e730790"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeCostDistributionLedgerRead.php",
+      "sha256": "f2273437e55865d3ba66ea5fbea0e96d7aa01ea2bd7c6e0bc2bde906ae7e457c"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeCostDistributionRead.php",
+      "sha256": "eb33d141610deae16638e1d61e175391ce6a7261e0981982c9d7db3950a37257"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeCustomCodeService.php",
+      "sha256": "41a4d42ee3f4e40cd229a21deceb270941f730fd8db591c6c1c7d1feba792d95"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeEndpointDispatcher.php",
+      "sha256": "1788ee477d05d80ef4e314dac7c8d89892565e933a0c400d81c82f6c11c938e8"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeEntityActionService.php",
+      "sha256": "9eda11a47b3f3316d93773438709b94718efcf2611dc824d4c85d004c43a7906"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeEntityDefinitionResolver.php",
+      "sha256": "27e1df8286269a3df7254ae2c33cad7f47da51d8257c6f3fd6f8415f31ac2339"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeEntityVersionService.php",
+      "sha256": "1aea1a57d3213e61653bcfc899788634f2ea3234e7a1522b2791563685742a48"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeEnvironmentIdentityResolver.php",
+      "sha256": "5aa82ae50fef87cfca5fc81adbbcc5dcae5926a8dd8ac83834565afc0172f405"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeEstoqueTermoAudit.php",
+      "sha256": "b87df57ff8b1993291ac11f5076211ec8cff34d95a8495154c59ee41016ce114"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeEventHandler.php",
+      "sha256": "d8085381c4c485149246e28bfa2691299c0fe1b7491cb34d88af7a5c0fa988d2"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeEventMessage.php",
+      "sha256": "96f570c8de80c5822329abf130c42834f4379e107e91d05a6ce680febc044fbd"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeEventService.php",
+      "sha256": "d474d24bf310b5438c95da7ca5397027db56089cec8aa7f4c721600e6f46191f"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeExecutionContext.php",
+      "sha256": "1c9f22540c3e7e6ac5eb1619e0e189fed579cce6c8700536a0b2781001994006"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeExpenseTaxRelationsRead.php",
+      "sha256": "9999a613925d9b36d22c1c98ae648fa1566802633259e6aa92f8b22f51aea8e4"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeExternalJsonClient.php",
+      "sha256": "2db96cdb9c99cd53c80f5537c2ddef017b35db885b7ddba83c78f423d7e9168f"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeFileTransferContext.php",
+      "sha256": "30c79c8a5fecaf140227549e5aecafe248c5c8012799110efd47293a8a10e2e2"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeHttpException.php",
+      "sha256": "9ac7eb0e8b43d9bd2489841587c0bffc6859504040f60a622789fe64400fc160"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeImportDiscountRead.php",
+      "sha256": "da183dfadf900d516a577495d8348293c0aa1a9b36954cde50de9be819cd0197"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeItemCostManualRead.php",
+      "sha256": "946490ec5c2ebdd22933370a82909c4ca5bbe1cc163b859647e29350d3aa734f"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeItemCostManualSchema.php",
+      "sha256": "e9834759baa01b2659f31e68c73c2fe85ed5f30eee670d213b8f74a883d5c5cb"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeJobEnqueueService.php",
+      "sha256": "b5e794ef07e9676a72dcf76bb1cfd50fddffbe946882cd633209d6091227fbdc"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeJobHandler.php",
+      "sha256": "aba17e474e193de3b02f6e11cf0523aa18a9c618b10e00e9326778b9ddee7d6d"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeJobHandlerInterface.php",
+      "sha256": "64d912237eef21db8cfd3df51f48333fbd323a41a31c09fe88183d3d8ef9bd1f"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeJobMessage.php",
+      "sha256": "dc73dbc23377839807b152f278c07dc77cd52eeeee4c3ed397c987fa68eae783"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeJobRegistry.php",
+      "sha256": "84d5c71c8f26e70d97e87595bcbcc5629461cf533ffdbbe960ddb2bc5368e482"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeLiteralService.php",
+      "sha256": "5c7d7db44dde031f8659b2b6729b0b504e2035a8ef5c6b820ccd4202f696df60"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeLivePermissionResolver.php",
+      "sha256": "136017b23119213453193dccc6fa31410a1abecca3ee12ca16c243003af107f3"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeLockService.php",
+      "sha256": "5d0f8580d6f64c651c5834171242302f92d62a3ae762b99fbdcbe7916204891e"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeMasterDetailActionService.php",
+      "sha256": "6976c29b32f8f7fc108747b658e7a3b665c1862b71e38a5ac399888ee66f4ebe"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeMessageService.php",
+      "sha256": "b51658027f59f8bdc9c511343ab48ef81bba90bf993d81a8aeb4560d0f317ced"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeMetadataSanitizer.php",
+      "sha256": "4839dbab18d5eb4608a7ebb24e3d7ccbe940dd683d1f629756a375f25520bed9"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeNotificationService.php",
+      "sha256": "cdc296ee823614ba5aecf8a02f65a1d24a704d530f2e0e9174c05ffafd598aa8"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeOdooEntityActionService.php",
+      "sha256": "9a98a2fa6281e5df16c8798d4fe23f01093ee52d1198569f92426cc06f18db41"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeProcessHandler.php",
+      "sha256": "54d50bc345e89b4290add1633bff38297c250237df931cc744d85bd05b9b382e"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeProcessLookupPolicy.php",
+      "sha256": "1d951f160be0af979de1f94f47a1c9b63309163c7eb0a37803fd058d13501c3a"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeProgressAuditSchema.php",
+      "sha256": "c4b9ae1baae8108e2fbc91c68f4ec8d0e9e5031a6a1ad0282f3e8806ad49b22e"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimePurchaseAttachmentAudit.php",
+      "sha256": "3e4fe5c101bf83f6c056137f026ade74abe1040efe9af04466c7a9058f36733e"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimePurchaseContextAudit.php",
+      "sha256": "2e638a96424fa5d38b12174c022e78ce70bdaacbb527f90032b0cec07b1b6d80"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimePurchaseContextPayload.php",
+      "sha256": "764f91fd8a10110fbcdfe58a364b76be4d5b59873d6905d70225d2c447d03912"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimePurchaseExpenseAudit.php",
+      "sha256": "7edd5931965ee7e78418412b2c3fc1165ed2b324e32f85d11145891bb6a08c50"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimePurchaseItemAudit.php",
+      "sha256": "7469b045e0219b9a7de69d317b28e98c8863278e59845fbd8b6a49a97b9497fd"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimePurchaseOrderAudit.php",
+      "sha256": "ba2386d9d71a8532139f77b07f4c474f06d1969a2436c237196bf084d6e38b26"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimePurchasePaymentAudit.php",
+      "sha256": "a9ca0050cc1b9a2a7c9c58dcc3eea0cf6a6b7aee29a6c95f03276c6ebeddc251"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimePurchaseSampleAudit.php",
+      "sha256": "cbbb7695391780d64e38ff1da5718cb711c792fa2f382cadb6d73d252ff6fe92"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimePurchaseTaxAudit.php",
+      "sha256": "1fce7cc119487dd46d3c54ea34949d829eac1e164f185e78e392ac24961d47ff"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeRegulatedDocumentAdminService.php",
+      "sha256": "c0eabce3bdcdad9b6891fc281a29193a242be04cf626120d87aa464078ec4cc4"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeRegulatedDocumentAuthenticityService.php",
+      "sha256": "0a1310f8897ed90cd61867703f5d908d513715eccbc360a89fadba6aa968af90"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeRegulatedDocumentEndpointHandler.php",
+      "sha256": "13655efc8918c0100d3472c9379becb6cf8d91f9bd4c7263ff4736f4291ced20"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeRegulatedDocumentService.php",
+      "sha256": "f21222c3213fc7c38a4536ae2e3422e7150cba7f17af18da988c3481a4ff4bc5"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeRegulatedDocumentStore.php",
+      "sha256": "1341a0034d05b188b831e3fbda5691d0435705eed51547538611ce0634a680df"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeReportAuditAdminService.php",
+      "sha256": "2b91433e162d454074db06c0008bee2420e6d54740cc753ac57d07e35eff7fd3"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeReportAuthenticityService.php",
+      "sha256": "88d4d77b00764f9a5ad1099e7f719a36324763e550c6ff27f79816c56d7dbfac"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeReportEndpointHandler.php",
+      "sha256": "e3617464aeb10ab97fdcd6382f4d38c3929fe566b8c7e5ed8381af8c54e99d00"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeReportService.php",
+      "sha256": "ca657c063dd14c60662b5ce587582546c3c4dbc79ad7820bc10d9ad6cb2e13ad"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeSampleContainerItemsRead.php",
+      "sha256": "e2b0f5683aadff8ab24c90d71f6976321bbdeb0ce11b638cd54de31878dda173"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeSessionGuard.php",
+      "sha256": "674fd360b77d87717d2cf3003e47c78839034e4134e86196722bbd4f1d8b6816"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeSituationService.php",
+      "sha256": "9bf1314c8a3f210dcefc65b21978f297755302311ff8f13ee01b3d593bdd264d"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeSpecialDocumentEndpointHandler.php",
+      "sha256": "bfa1d11c7214086f68245e594240b4ea7f27872298892fcca33069688a63125e"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeSpecialDocumentService.php",
+      "sha256": "65b44c5e300a2d33456126029fa5a9ee553899532eea39c48210de1647228c6e"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeSystemHandler.php",
+      "sha256": "5788e6f71d5ddd3c764b25c666d1a8fa2250f632cabcfd9382f7c36675eaa40f"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeTransactionService.php",
+      "sha256": "10b3b5fd0cbf4222befdbf5bda29ad0b7d8463e0e2147bee750e6b52f29e53f9"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\RuntimeValidationException.php",
+      "sha256": "085ee57fce5eee887b941e7e2d99fec1033b7296580383ef6fb2c5d324b30c50"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\ScreenDefinitionService.php",
+      "sha256": "accaa7aa35f5037d9af28de9b169c6f95a366af27ab27123cd270f10f6653f47"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\StructuralIntegrityService.php",
+      "sha256": "7f82a2b92e212199557f2de6bcd2356f98097275e0ed70121339fe0e02efddd2"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\SystemUpdateApplyJobHandler.php",
+      "sha256": "c930ce71d6738dffcf93f95a9795f0408b2160bc6a838dacb4b98866bc1b1e1b"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\SystemUpdateManifestLoader.php",
+      "sha256": "803b2d78502109d16d7af9cc398c4404b1b118d2d8fa03658e3bc012f755f6a2"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\SystemUpdateManifestRulesValidator.php",
+      "sha256": "730e2e47cae4956e9e887309d2ec942dd54c04b227591184e7c48497b229aafb"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\SystemUpdateOrchestratorClient.php",
+      "sha256": "37c54f9e1a31f21b691cffba7223aa49e60726690cccf59b3ff11bb23b9f77d9"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\SystemUpdatePackageDownloader.php",
+      "sha256": "78d97f19b4944757bbc7fd97343f585fd4fa9258d67bdadd658359b12465c64f"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\SystemUpdatePublicationService.php",
+      "sha256": "2dae479a44ecfae9b7a46e34a3b14a9047fa8ac25a3921d6829672acf47b2623"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\SystemUpdateService.php",
+      "sha256": "7aa885b7fcaaa8a75a7d97efe163584a0729b3a1a7cc8cac95a73b2419514ee2"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\SystemUpdateStepCatalog.php",
+      "sha256": "ebc44007902a5fed6d285ce0c1af5cd6685ae95ee03d861d2f2f1a774b4da38e"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\SystemUpdateStepRunner.php",
+      "sha256": "84447a1c0f8fc4b9ccae9c24732552dd2492588d4524d80538372c946ad9fbd4"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\SystemVersionResolver.php",
+      "sha256": "7351fa76a8844e75b4fbffd92f49c9bd4abc2cc9fd155cac91c1a80511f40064"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\Runtime\\UserLayoutService.php",
+      "sha256": "38b7d2f43c8337cc898bb8f972e807ccab476795efe5184e9c8019e6a77c1024"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-stage\\System\\SystemParameterResolver.php",
+      "sha256": "c7ea93cc5e409331c963c148ac0a0339437264f620c098cfc34b989309b80cc4"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\php-unit.xml",
+      "sha256": "5efd14f627177adcf0d2696cf3c541cea2a7e35808273e04062d981a11125017"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\phpunit.xml",
+      "sha256": "4a5fc9400dffe5b272230667a30004e2f145cd857d5ee234d7697d5c01a01643"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\request-basic-traces.json",
+      "sha256": "90569cdc2e0a062cea464a9a45a7246017088d8a6c0709f43a5967e1ba597c9f"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\request-boundary-traces.json",
+      "sha256": "66b7982aff6e0fec0dca7515f9a5a892f232cc51ef39166c67fc79aaa7add510"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-item-navigation-filter-only\\whole-preview-local.json",
+      "sha256": "8fd6aebaf37fe1c725b98c80c284c21e89e267b616d7416aa9deff235cb6d273"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\baseline\\backend\\src\\Builder\\ProgramBuilderService.php",
+      "sha256": "205ebd14329f8e8896d07c07716939db8a12d58345fecf76cab5252f4e0694a7"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\baseline\\docs\\paridade-demo-producao.md",
+      "sha256": "d0634a264dfc151c242af05a7c1274cd22c27e0678d4a1e52124740100dc363c"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\baseline\\public\\metadata\\schemas\\crud-definition-v1.schema.json",
+      "sha256": "5a1511bf85cdad06c6fb53db72ef649f66fd00410f7ae7b79ee6cab5c27cc751"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\baseline\\src\\crud-engine\\CrudDefinitionValidator.js",
+      "sha256": "d02d5d03e569d8f3e78621c7ff5b72d700f191957ed5900f2e428863d625047b"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\baseline\\src\\crud-engine\\CrudEngine.js",
+      "sha256": "5d78f77bc72c56c1bbd345d92ae3e4714a71f1d04e5b76e0453855a8c193bba7"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\baseline\\src\\crud-engine\\CrudKendoFormRenderer.js",
+      "sha256": "d3028663b4c006771f7b8eac06d12ff7398c3e73a5c58391c328070a9d1047d9"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\baseline\\src\\page-engine\\PageDefinitionNormalizer.js",
+      "sha256": "fb038ccb2446957902432473535aad0b1e7b61ba8152b02e04aa6c7baf60ecca"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\baselines.json",
+      "sha256": "7a2a1fff3b025c3f9d7e815d9d9df24c71c0cb635fc5d27d90e7d08e4918bd78"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\candidate\\backend\\src\\Builder\\ProgramBuilderService.php",
+      "sha256": "a58a98b85127c85377b1592c2f6bde38b0a8bf78ce86d343bed239cf084e0401"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\candidate\\docs\\paridade-demo-producao.md",
+      "sha256": "9386954538c919367e6ef1b5bae9fe80b1b4d0da9e274231349b1d9e2ee411f0"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\candidate\\public\\metadata\\schemas\\crud-definition-v1.schema.json",
+      "sha256": "c8631a7a5ca50cf4d7911ed1fc372a81b10a5f9011ec366f632e1ecdbf33a8b0"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\candidate\\src\\crud-engine\\CrudDefinitionValidator.js",
+      "sha256": "a42792d03c65ef1e9b7c2a1b21f32c834861d63347789cde7e1e68202c6dfa0a"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\candidate\\src\\crud-engine\\CrudEngine.js",
+      "sha256": "ae49f19edb1cc37fd7725c86ce85300b07868d693cc72a2f27a64f716d233d81"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\candidate\\src\\crud-engine\\CrudKendoFormRenderer.js",
+      "sha256": "430173106a0c9b420f346ab007f423cce4791821122ebec406bdc425e432338e"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\candidate\\src\\page-engine\\PageDefinitionNormalizer.js",
+      "sha256": "fb8a5b4612e4c5b7c839712d582515214022df809d86083dfb2c2d158868d533"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\examples\\ciw-container-itens-filter-only.json",
+      "sha256": "c8bd12bab438c8155a2d8bee47ee52aab84a95cfcb29f527445c58371d33fc50"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\EXEMPLO_E_PARIDADE.md",
+      "sha256": "9f9b732e61307b7e0163cd420be7cfdae014adc305ed4009960ae074ee147019"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\metadata\\before\\op1002-external-test-input.json",
+      "sha256": "2b1213bc534cc5353aea96fa8f8bc4f07288a76281e066fb3f2384db8b849c90"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\metadata\\before\\op1002-program-draft.json",
+      "sha256": "21e28b957db43461810528bee392f43a31d4f19c5b030c514e8ceedbefe2108f"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\metadata\\before\\op1008-external-test-input.json",
+      "sha256": "c9f12c121a6963720326843835e4dacb431418dda70a43243002ae07909e0872"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\metadata\\before\\op1008-program-draft.json",
+      "sha256": "6f96df996ba1eb4f8233b137a3c72ee3adda6428a2f0ceb96604ef5b818551ae"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\metadata\\before\\op1014-external-test-input.json",
+      "sha256": "7f898e83714344f78a49f53cc70772c8ae7789f37f54a1362ed1b94172e0e9c9"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\metadata\\before\\op1014-program-draft.json",
+      "sha256": "a83084fbe6338ca56575883401131e852ba0c3b673666936a7c36f9990fb9143"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\metadata\\candidate\\op1002-external-test-input.json",
+      "sha256": "fe18a915ee56efabdad27108f66b2def3618286a0c8e47212b517e38b8fb16ea"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\metadata\\candidate\\op1002-program-draft.json",
+      "sha256": "a51740a6555e96a4df4190fe404f17ce90199186ef37407389492e2e27095e84"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\metadata\\candidate\\op1008-external-test-input.json",
+      "sha256": "159135bd3ccca98f7a9fc8224c2e788bd97cf602d69f2f34a7b29d837c98b08e"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\metadata\\candidate\\op1008-program-draft.json",
+      "sha256": "7c5b86c937149607acbd6246ae8445dba17811e38c1b636c2927d18b91a2e4de"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\metadata\\candidate\\op1014-external-test-input.json",
+      "sha256": "c46773c0355d375c34097081c84cd430c80c2f0df9400ab8e25d83dfe5833031"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\metadata\\candidate\\op1014-program-draft.json",
+      "sha256": "983d65b4bedb53c2d68d3b9da5db55bef3f3762b6aa954dd3af34db701b3a7ca"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\patches\\backend__src__Builder__ProgramBuilderService.php.bytepatch.json",
+      "sha256": "244422240eab7920eacbef8189b2fed1eab77e7cdad7370f07d3def85e5e8d42"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\patches\\backend__src__Builder__ProgramBuilderService.php.patch",
+      "sha256": "a9a53769a758cb746c38ba2cd4395c8d5b8b8db644d3a164be35cb12518bc7ad"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\patches\\docs__paridade-demo-producao.md.bytepatch.json",
+      "sha256": "cb1b5fcdc047c8fd3e416f6986cbcf0123e9a9bd957957d55c5ba4be5f2a710d"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\patches\\docs__paridade-demo-producao.md.patch",
+      "sha256": "d3ffd1111b5da5e3ddfef31337e7cd48d187ef96cfa4b59288a9fa3e91715921"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\patches\\public__metadata__schemas__crud-definition-v1.schema.json.bytepatch.json",
+      "sha256": "8d2eae35f2f85ddab385285dbdcf478cc75f7005ae4266e665c89e48e75491c6"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\patches\\public__metadata__schemas__crud-definition-v1.schema.json.patch",
+      "sha256": "4e242770fe5280c350030c0457951a6332d38de43618e4c81f6f5913a4fd81de"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\patches\\src__crud-engine__CrudDefinitionValidator.js.bytepatch.json",
+      "sha256": "02edda518640e0f13b37228e7b5033524c973797f813c85e2fd7e798b5533999"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\patches\\src__crud-engine__CrudDefinitionValidator.js.patch",
+      "sha256": "d938a72a3ea65603d072732950370c3deda22dd58a6f1edf67e5ed90f31789d0"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\patches\\src__crud-engine__CrudEngine.js.bytepatch.json",
+      "sha256": "8976049c290fc3914adf3e147e98cf5e93dabfab95938d90b4ccbbfcf216f002"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\patches\\src__crud-engine__CrudEngine.js.patch",
+      "sha256": "52063f1da5164d8fb7d8de995aa9af113b8a22c905c2f33bb22138b1e241fd51"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\patches\\src__crud-engine__CrudKendoFormRenderer.js.bytepatch.json",
+      "sha256": "9d4f1448e2646e15b599d3dd3acb526465b913e16bf0e0048ea5468766526e13"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\patches\\src__crud-engine__CrudKendoFormRenderer.js.patch",
+      "sha256": "4104cc05fea3361c612f4cd4417e7db6855ecb2d994a334289c444d1f04c7cdf"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\patches\\src__page-engine__PageDefinitionNormalizer.js.bytepatch.json",
+      "sha256": "660cd3bd25748685273c0ece7722d566a0e7f33603b5e8eec94eb5d90b799baa"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\patches\\src__page-engine__PageDefinitionNormalizer.js.patch",
+      "sha256": "e305e67290767e2c001240c41b06694986e328fef7136b95329b0b97cfe6e419"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\PLAN.md",
+      "sha256": "1007056be250692872646c1707ff49f42979567c08540996595fe7b6991ea7ed"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\prepare-candidate.py",
+      "sha256": "887383951244485034fe8ddf81a7e0a54f278eedf2f2c357266b1185a0b5219f"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\prepare-metadata.py",
+      "sha256": "ce63a81787779d08b88bd75a496549c4c9c9d5b8c4e79f343043f24864420225"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\prepare-php-stage.py",
+      "sha256": "eabc69a5a74c13e246df7aeb117c179dd7eea3a142efa75912861aa23c793c52"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\REVIEW.md",
+      "sha256": "21b2f0c7687cb7e133aeb01666aa48df2d14d866f479cf91493f3b2ef760ff57"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\seal-candidate.py",
+      "sha256": "252856dd37f3a82c6c6ddc5cb68aca7b835a72e844d27ce40b320999c58843d0"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\TESTES.md",
+      "sha256": "32e9d9c027cf7253d529a25bc64d142491a4eb5a382cc2d5e77e051a60c44208"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\tests\\bootstrap.php",
+      "sha256": "fd7fde943fcc1c1041eb31f525d252571ae083b8b918ff0185f276ba1c88080c"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\tests\\check-context.php",
+      "sha256": "c234230703a28cf7e14bc091ef6f8e87e7b885fd7f04e8fd02105cd1e09800d2"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\tests\\FilterOnlyBuilderTest.php",
+      "sha256": "ace3df8958eb8f7011ec67b35aa819ca9e7d46b1072a10e509af2f8d93253183"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\tests\\native-boundaries.test.cjs",
+      "sha256": "d9ea5a5182e61bb1dd5d623c4b05c0a340438ac08ba98ef13c030f6362e63c44"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\tests\\native-filter-only.test.cjs",
+      "sha256": "a2d094f30f190fa6b791dc45e639214b62e69300d7620b95aa273c7b7275b29d"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\tests\\NavigationMetadataTest.php",
+      "sha256": "fcca82643386be3abc7087c18444793cc564a9f8f815eb8206b2a7d7cff68617"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\tests\\NavigationRuntimeBoundaryTest.php",
+      "sha256": "b84773a5724a37ee420b205540ba934f2846678dcf30afbd8c5277fe879a5ff6"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-item-navigation-filter-only\\verify-freeze.py",
+      "sha256": "75cb5d15e04b54b7ea109c06b02c6b8154a298b38185f43a7f250a4a9e5f5392"
+    }
+  ]
+}

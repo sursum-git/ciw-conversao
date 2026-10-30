@@ -1,0 +1,32 @@
+{
+  "status": "PROPOSAL_NOT_APPLIED",
+  "inventoryBaselineSha256": "9f6b28d731a24a7d9d0f328ba55db2d63124bac947a4674e040eb3c023e3c21d",
+  "applicationCount": 262,
+  "scope": "remaining/evidence only; no target/state changes",
+  "entries": [
+    {
+      "application": "cons_item_container_custos_comparacao_real",
+      "preserve": {
+        "state": "Não convertido identificado",
+        "state_group": "Pendente",
+        "target_screen": "",
+        "target_version": ""
+      },
+      "remainingBefore": "Preservar previsto/realizado, moedas e vínculos item/versão; reutilizar coleta, matemática e persistência de versões. CRUD de leitura por JSON/API ABL; manter filtros, totais, detalhe e contexto; separar ações de escrita.",
+      "remainingProposed": "Consulta comparativa1040/41 preparada sobre core reutilizável e runtime13 publicado/validado read-get/filtros/requisições de página; autoria de metadados é etapa separada. Exportação/impressão permanecem lacunas: gerador Scriptcase habilita formatos e ramo PDF/FULL consulta conjunto completo; native toolbar e print atuais não implementam essas ações. Não aumentar limite200 nem declarar equivalência integral/Convertido por leitura; conferir runtime efetivo e prover recurso nativo reutilizável se necessário. Segunda página não-vazia ainda exige complemento real; totals1 do primeiro teste não a comprovaram.",
+      "evidenceAppendProposed": "Auditoria estática comparison-export-print-parity/LIMITS.json: hashes e linhas dos dois grid/index, defaults export/print ON, Db->Execute semSelectLimit no ramoPDF/FULL e caminho all→count_ger. Native205 local toolbar filters/refresh/layout, print.enabled=false. Nenhum PHPlegado/export/HTTP foi executado por esta auditoria."
+    },
+    {
+      "application": "cons_item_container_custos_comparacao_dolar",
+      "preserve": {
+        "state": "Não convertido identificado",
+        "state_group": "Pendente",
+        "target_screen": "",
+        "target_version": ""
+      },
+      "remainingBefore": "Preservar previsto/realizado, moedas e vínculos item/versão; reutilizar coleta, matemática e persistência de versões. CRUD de leitura por JSON/API ABL; manter filtros, totais, detalhe e contexto; separar ações de escrita.",
+      "remainingProposed": "Consulta comparativa1040/41 preparada sobre core reutilizável e runtime13 publicado/validado read-get/filtros/requisições de página; autoria de metadados é etapa separada. Exportação/impressão permanecem lacunas: gerador Scriptcase habilita formatos e ramo PDF/FULL consulta conjunto completo; native toolbar e print atuais não implementam essas ações. Não aumentar limite200 nem declarar equivalência integral/Convertido por leitura; conferir runtime efetivo e prover recurso nativo reutilizável se necessário. Segunda página não-vazia ainda exige complemento real; totals1 do primeiro teste não a comprovaram.",
+      "evidenceAppendProposed": "Auditoria estática comparison-export-print-parity/LIMITS.json: hashes e linhas dos dois grid/index, defaults export/print ON, Db->Execute semSelectLimit no ramoPDF/FULL e caminho all→count_ger. Native205 local toolbar filters/refresh/layout, print.enabled=false. Nenhum PHPlegado/export/HTTP foi executado por esta auditoria."
+    }
+  ]
+}

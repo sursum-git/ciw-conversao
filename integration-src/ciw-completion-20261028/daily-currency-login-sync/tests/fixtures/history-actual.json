@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "source": "progress-transaction",
+  "resource": "hist_cotacoes_bc",
+  "operation": "import-bc",
+  "recordId": 101,
+  "before": {
+  },
+  "after": {
+    "hist_cotacao_bc_id": 101,
+    "data": "2026-10-28",
+    "serie": 1,
+    "valor": 5.12345,
+    "dt_hr_busca": "2026-10-28T19:56:40.567",
+    "nome_serie": "",
+    "log_ok": true,
+    "log_manual": false,
+    "row_stamp": "73025A16CEB7C383BA4043094653FF4B5B53A5024AA9887A13DD17748DF7DF13"
+  },
+  "changes": [
+  ]
+}

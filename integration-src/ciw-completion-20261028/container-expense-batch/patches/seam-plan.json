@@ -1,0 +1,26 @@
+{
+  "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersDespesasCrudService.p",
+  "baselineSha256": "7ed534b101b301ada32050fab4e77250b16187bfc7e4f32f0fbf645999a05b06",
+  "changes": [
+    {
+      "old": "DEFINE TEMP-TABLE ttRow NO-UNDO",
+      "new": "DEFINE VARIABLE oBatchExpected AS JsonObject NO-UNDO.\n{sursum-api/includes/ContainerExpenseBatchSnapshot.i}\nDEFINE TEMP-TABLE ttRow NO-UNDO"
+    },
+    {
+      "old": "  oMasterBefore=Snapshot(phContainer). cPrefix=phContainer:BUFFER-FIELD(\"cod-estabel\"):BUFFER-VALUE.",
+      "new": "  oMasterBefore=Snapshot(phContainer). cPrefix=phContainer:BUFFER-FIELD(\"cod-estabel\"):BUFFER-VALUE.\n  IF VALID-OBJECT(oBatchExpected) THEN DO:\n   cFailure=\"CONTAINER_EXPENSE_COMPANY\".\n   IF cPrefix=? OR NOT cPrefix BEGINS \"5\" THEN UNDO, THROW NEW Progress.Lang.AppError(\"Native expense batch requires locked MED owner.\",1).\n  END."
+    },
+    {
+      "old": " cFailure=\"CONTAINER_EXPENSE_CONFIGURATION\".\n IF NOT VALID-HANDLE(phContainer)",
+      "new": " IF VALID-OBJECT(poPolicy) THEN IF poPolicy:Has(\"batch_expected_before\") THEN DO:\n  IF NOT lBatch OR poPolicy:GetType(\"batch_expected_before\")<>JsonDataType:OBJECT THEN UNDO, THROW NEW Progress.Lang.AppError(\"Expected images require private batch opt-in.\",1).\n  oBatchExpected=poPolicy:GetJsonObject(\"batch_expected_before\"). EXTENT(cNames)=?. cNames=oBatchExpected:GetNames().\n  IF EXTENT(cNames)<>oRows:Length THEN UNDO, THROW NEW Progress.Lang.AppError(\"Complete batch expected images required.\",1).\n  FOR EACH ttRow:\n   cField=TRIM(STRING(ttRow.id,\"->>>>>>>>>9\")).\n   IF NOT oBatchExpected:Has(cField) OR oBatchExpected:GetType(cField)<>JsonDataType:OBJECT THEN UNDO, THROW NEW Progress.Lang.AppError(\"Expected row missing.\",1).\n   oRow=oBatchExpected:GetJsonObject(cField).\n   IF NOT ExpenseBatchImageValid(oRow) THEN UNDO, THROW NEW Progress.Lang.AppError(\"Invalid physical expected image.\",1).\n   IF oRow:GetInteger(\"despesa_container_id\")<>ttRow.id OR oRow:GetInteger(\"container_id\")<>iContainer THEN UNDO, THROW NEW Progress.Lang.AppError(\"Expected identity differs.\",1).\n  END.\n END.\n cFailure=\"CONTAINER_EXPENSE_CONFIGURATION\".\n IF NOT VALID-HANDLE(phContainer)"
+    },
+    {
+      "old": "   oBeforeRows[ttRow.ordinal]=oBefore.",
+      "new": "   IF VALID-OBJECT(oBatchExpected) THEN DO:\n    cFailure=\"CONTAINER_EXPENSE_CHANGED\".\n    IF NOT ExpenseBatchImageSame(oBefore,oBatchExpected:GetJsonObject(TRIM(STRING(ttRow.id,\"->>>>>>>>>9\")))) THEN UNDO, THROW NEW Progress.Lang.AppError(\"Despesa alterada; recarregue o lote.\",1).\n   END.\n   oBeforeRows[ttRow.ordinal]=oBefore."
+    },
+    {
+      "old": "\"CONTAINER_BUSY,CONTAINER_EXPENSE_PERSISTENCE,CONTAINER_TRANSACTION_CONTEXT\"",
+      "new": "\"CONTAINER_BUSY,CONTAINER_EXPENSE_PERSISTENCE,CONTAINER_TRANSACTION_CONTEXT,CONTAINER_EXPENSE_CHANGED\""
+    }
+  ]
+}

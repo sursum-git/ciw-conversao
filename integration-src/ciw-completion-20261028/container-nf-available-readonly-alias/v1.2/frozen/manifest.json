@@ -1,0 +1,184 @@
+{
+  "status": "CANDIDATE_READY_LOCAL_ROOT_REVIEW_OFFICIAL122_PENDING",
+  "domain": "container-nf-available-readonly-alias",
+  "version": "1.2",
+  "baselineSha256": "09678e8fabe46c2fd35ea3bf814e587765490135533a034822236da2ed5c37cf",
+  "candidateSha256": "614795f3af80f29a51c467e8170f954540a76a8902034b9cf6186b1c328ac7b5",
+  "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersPainelFinanceReadService.p",
+  "sourceFiles": [
+    {
+      "path": "compatibility-proof.json",
+      "sha256": "df2edf3f8e9a14ec4f843cbb64f04a496403e948d274e84d080c1bc9420d9d88"
+    },
+    {
+      "path": "incremental-from-v1.1.json",
+      "sha256": "ce463d3724041941178e5f6b916f28c6952c4ab23559e95a788249393a0f8845"
+    },
+    {
+      "path": "patch-plan.json",
+      "sha256": "54a3e54058988e2504380a357ebdce4fb69f145a0f82bb82b4d965d7623dd693"
+    },
+    {
+      "path": "PLAN.md",
+      "sha256": "b947b26cd4ac88b33d9e58ff5c542ca0402b48782c2e7f1330e4fe8f98c31547"
+    },
+    {
+      "path": "REVIEW.md",
+      "sha256": "c4c6a53bef61e2792b3be7d893b454928f501e50fb41bed638d5c0a2ed1b04bf"
+    },
+    {
+      "path": "tests/AvailableNfAliasTest.p",
+      "sha256": "c089a80f1dffb637905fafcf2d73ddf64f1fc3519da33a0d5670bb055ccffaa1"
+    },
+    {
+      "path": "tests/AvailableNfCompanionTest.p",
+      "sha256": "2f7afd003219c439d53c146d1317c8ff262a6ff05a5dcc34fa507243e6ccc284"
+    },
+    {
+      "path": "tests/AvailableNfTimeoutTest.p",
+      "sha256": "9548fbdd32bdd8dfd8edef5417ad4d4b77f545cbdfb9fd184a275b70d125dadd"
+    },
+    {
+      "path": "tests/build-patch.py",
+      "sha256": "08698a6cbe610d9e8641cd4dcc0ea24041f6c95764925311e43edd8b47c78a81"
+    },
+    {
+      "path": "tests/compatibility.py",
+      "sha256": "89759f4c2822e171051cd29853d1f5101a00279941824c8dedd921fee6d63a9f"
+    },
+    {
+      "path": "tests/freeze.py",
+      "sha256": "0b978fab3bf0869c2953468e778e0a66f30d3ef17eb94684e26463ef15f503e6"
+    },
+    {
+      "path": "tests/prepare.py",
+      "sha256": "84e952fbe0f58549954c320acd8571583389450c7a3c575c01ae208032a7bef1"
+    },
+    {
+      "path": "tests/run-abl.ps1",
+      "sha256": "8f22f481c2b36d1a14914c5b7e0c226423c17d242d009f1fda65d446197ebc53"
+    }
+  ],
+  "runtimeFiles": [
+    {
+      "path": "candidate/sursum-api/programs/ContainersPainelFinanceReadService.p",
+      "sha256": "614795f3af80f29a51c467e8170f954540a76a8902034b9cf6186b1c328ac7b5"
+    },
+    {
+      "path": "testinputs/AvailableNfAliasTest.p",
+      "sha256": "c089a80f1dffb637905fafcf2d73ddf64f1fc3519da33a0d5670bb055ccffaa1"
+    },
+    {
+      "path": "testinputs/AvailableNfCompanionTest.p",
+      "sha256": "2f7afd003219c439d53c146d1317c8ff262a6ff05a5dcc34fa507243e6ccc284"
+    },
+    {
+      "path": "testinputs/AvailableNfFixture.i",
+      "sha256": "3b29e4bb8cfc12bc41fcaadae03fa1f87081a584e9f0e46ec53caa95f409676d"
+    },
+    {
+      "path": "testinputs/AvailableNfTimeoutTest.p",
+      "sha256": "9548fbdd32bdd8dfd8edef5417ad4d4b77f545cbdfb9fd184a275b70d125dadd"
+    },
+    {
+      "path": "testinputs/CauseExecute.p",
+      "sha256": "8f40448e4dc1a4def17f4f2598c4c6ed824450ab1e1da81dd3e29e8d0b82beb4"
+    },
+    {
+      "path": "testinputs/Compile.p",
+      "sha256": "7fc36ac407f1d8959014cdbb3dbfd382298b8cee2cfa874f66dc0ad180b73c56"
+    },
+    {
+      "path": "testinputs/ContainerNfAvailableTest.p",
+      "sha256": "a716157bcc013ba9f6bfd5e0770f6b0e24c4bb307745efa242b3ddce7a8f6b37"
+    },
+    {
+      "path": "testinputs/ContainersPainelFinanceReadService.p",
+      "sha256": "c49c34c953dc027803563e322a993e8744655688f837b973e75c001e51489cbc"
+    },
+    {
+      "path": "testinputs/ContainersPainelFinanceReadTest.p",
+      "sha256": "46751e8ee8ed618bc84582e9ae7caaf1799cc2eade2e3820b086118e64f65030"
+    },
+    {
+      "path": "testinputs/Execute.p",
+      "sha256": "ed6ff04ab9ceb388f90f11217d1b61a89e65227469284f039449ed4dd085feed"
+    },
+    {
+      "path": "testinputs/sursum-api/includes/ContainerFinancePolicy.i",
+      "sha256": "27c4710b9c3dc051aaa2c6867118f3a502f7b2f9bf0a816a2cd4f301a8213b35"
+    },
+    {
+      "path": "testinputs/sursum-api/includes/ContainerPaymentIdentity.i",
+      "sha256": "cffe626b2d85df3cd43932879041cc473890be1069e732e6b27a943459f0c102"
+    },
+    {
+      "path": "testinputs/sursum-api/programs/ContainersPainelFinanceReadService.p",
+      "sha256": "614795f3af80f29a51c467e8170f954540a76a8902034b9cf6186b1c328ac7b5"
+    },
+    {
+      "path": "testinputs/sursum-api/programs/FinanceTimeoutFixture.p",
+      "sha256": "8a6b4249817b82207c47cd8262eeaeba66e498af843e61b7f2ca97afb7c6ce38"
+    },
+    {
+      "path": "testinputs/TimeoutExecute.p",
+      "sha256": "d3ec33208b85e40794228612ab6ddc86583c77297a94f302b85b89661cf81aea"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-nf-available-readonly-alias\\v1.2\\byte-proof.json",
+      "sha256": "b21046ac3ab3a7f8082d22cc00a94c15eafa8933c845413943559776f91f1789"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-nf-available-readonly-alias\\v1.2\\red\\expected-red.log",
+      "sha256": "178131a4e795d4f567633f00ba6025c99873d455d03228a3d9ca6b0acfd00e8b"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-nf-available-readonly-alias\\v1.2\\local\\test-UTF-8-AMERICAN.log",
+      "sha256": "92317a2081ab4ac13f7f381f7d8ad86227ecb4e6a1da72474e81b405640bb98d"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-nf-available-readonly-alias\\v1.2\\local\\test-UTF-8-EUROPEAN.log",
+      "sha256": "471c96f51634fac17783689cf2424cd0f9288f9b7b5bb656d068dbf6307b4baa"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-nf-available-readonly-alias\\v1.2\\local\\test-ISO8859-1-AMERICAN.log",
+      "sha256": "92317a2081ab4ac13f7f381f7d8ad86227ecb4e6a1da72474e81b405640bb98d"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-nf-available-readonly-alias\\v1.2\\local\\test-ISO8859-1-EUROPEAN.log",
+      "sha256": "471c96f51634fac17783689cf2424cd0f9288f9b7b5bb656d068dbf6307b4baa"
+    }
+  ],
+  "checks": 1160,
+  "combinations": 4,
+  "localVersion": "12.8 diagnostic only",
+  "gates": {
+    "official122": false,
+    "published": false,
+    "metadataChanged": false,
+    "canonicalChanged": false,
+    "businessWritten": false
+  },
+  "productionAllowlist": [
+    "ContainersPainelFinanceReadService.p",
+    "ContainersPainelFinanceReadService.r"
+  ],
+  "neverPublish": [
+    "FinanceTimeoutFixture.p",
+    "FinanceTimeoutFixture.r",
+    "all TT tests",
+    "wrapper/OO/PHP/frontend/metadados"
+  ],
+  "limits": {
+    "candidates": 200,
+    "sourceReads": 50000,
+    "seconds": 10
+  },
+  "codes503": [
+    "CONTAINER_NF_CANDIDATE_LIMIT",
+    "CONTAINER_NF_SOURCE_LIMIT",
+    "CONTAINER_NF_QUERY_TIMEOUT"
+  ]
+}

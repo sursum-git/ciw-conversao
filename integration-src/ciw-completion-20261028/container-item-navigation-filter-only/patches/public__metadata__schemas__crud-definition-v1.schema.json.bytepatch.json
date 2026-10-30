@@ -1,0 +1,42 @@
+{
+  "canonical": "D:\\opencode\\construtor-pg\\public\\metadata\\schemas\\crud-definition-v1.schema.json",
+  "relative": "public/metadata/schemas/crud-definition-v1.schema.json",
+  "baselineSha256": "5a1511bf85cdad06c6fb53db72ef649f66fd00410f7ae7b79ee6cab5c27cc751",
+  "candidateSha256": "c8631a7a5ca50cf4d7911ed1fc372a81b10a5f9011ec366f632e1ecdbf33a8b0",
+  "edits": [
+    {
+      "start": 62964,
+      "end": 62964,
+      "beforeBase64": "",
+      "afterBase64": "ICAgICAgICB9LA0KICAgICAgICAiZmlsdGVyT25seSI6IHsNCiAgICAgICAgICAidHlwZSI6ICJib29sZWFuIg0K"
+    },
+    {
+      "start": 62985,
+      "end": 62985,
+      "beforeBase64": "",
+      "afterBase64": "ICAgICAgImFsbE9mIjogWw0KICAgICAgICB7DQogICAgICAgICAgImlmIjogeyJwcm9wZXJ0aWVzIjogeyJmaWx0ZXJPbmx5IjogeyJjb25zdCI6IHRydWV9fSwgInJlcXVpcmVkIjogWyJmaWx0ZXJPbmx5Il19LA0KICAgICAgICAgICJ0aGVuIjogew0KICAgICAgICAgICAgInJlcXVpcmVkIjogWyJmaWx0ZXIiLCAicmVxdWlyZWQiLCAicmVhZG9ubHkiLCAiY3JlYXRlRGVmYXVsdCJdLA0KICAgICAgICAgICAgInByb3BlcnRpZXMiOiB7ImZpbHRlciI6IHsiY29uc3QiOiB0cnVlfSwgInJlcXVpcmVkIjogeyJjb25zdCI6IGZhbHNlfSwgInJlYWRvbmx5IjogeyJjb25zdCI6IHRydWV9LCAiY3JlYXRlRGVmYXVsdCI6IHsiY29uc3QiOiBmYWxzZX19DQogICAgICAgICAgfQ0KICAgICAgICB9DQogICAgICBdLA0K"
+    }
+  ],
+  "unchangedByteRanges": [
+    {
+      "baselineStart": 0,
+      "candidateStart": 0,
+      "bytes": 62964,
+      "sha256": "edc8038c41426f3c58d5fd3c3250d687f3f9885c87fbb9f066695815585740cd"
+    },
+    {
+      "baselineStart": 62964,
+      "candidateStart": 63030,
+      "bytes": 21,
+      "sha256": "2e4f7b9d03d76247facd2bbd09ebcc16565195f5d4d049ba798b7bd5a0c405f9"
+    },
+    {
+      "baselineStart": 62985,
+      "candidateStart": 63456,
+      "bytes": 3422,
+      "sha256": "82475c02a55cc383fce1d9743d26b5c194faa021df3f3a21070a0d2203f33a86"
+    }
+  ],
+  "roundTripExact": true,
+  "role": "native-runtime-capability"
+}

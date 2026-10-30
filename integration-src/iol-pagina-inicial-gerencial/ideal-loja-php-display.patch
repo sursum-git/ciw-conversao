@@ -1,0 +1,14 @@
+--- a/bl_pag_ini_ger/index.php
++++ b/bl_pag_ini_ger/index.php
+@@ -6941,9 +6941,9 @@
+ 							<div class="meta-col">
+ 								<span class="meta-label">% Ideal</span>
+ 								<div class="progress-bar small">
+-									<div class="progress-fill" style="width: 0%"></div>
++									<div class="progress-fill" style="width: <?php echo $percMetaIdealFormat; ?>"></div>
+ 								</div>
+-								<span class="meta-value">0%</span>
++								<span class="meta-value"><?php echo $percMetaIdeal; ?>%</span>
+ 							</div>
+ 						</div>
+ 

@@ -1,0 +1,75 @@
+--- D:\opencode\construtor-pg\backend\src\Runtime\RuntimeApiEntityActionService.php
++++ D:\opencode\construtor-pg\backend\src\Runtime\RuntimeApiEntityActionService.php
+@@ -346,6 +346,12 @@
+         if ($containerTaxOnly) {
+             if (!RuntimeContainerTaxAudit::binding($definition, $endpoint) || $names !== [] || $requestData !== $context) { $invalid('Calculo fiscal exige operacao fixa e somente contexto do container.'); }
+             $containerTaxActor = $this->attachmentActor();
++        }
++        $expenseDefaults=RuntimeContainerExpenseDefaultsAudit::supports($definition);$expenseDefaultsActor=null;
++        if ($expenseDefaults) {
++            $order=array_intersect_key($requestData,array_flip(RuntimeContainerExpenseDefaultsAudit::PARAMETERS));
++            if (!RuntimeContainerExpenseDefaultsAudit::binding($definition,$endpoint,'process') || $names!==['ordem_campo','ordem_direcao','despesa_ids'] || !RuntimeContainerExpenseDefaultsAudit::order($order) || !RuntimeProgressAuditSchema::exact($requestData,['container_id','ordem_campo','ordem_direcao','despesa_ids'])) { $invalid('Selecao exige contexto, IDs e ordenacao fechados.'); }
++            $expenseDefaultsActor=$this->attachmentActor();
+         }
+         $allocationProcess = RuntimeContainerAllocationAudit::supports($definition);
+         $allocationActor = null;
+@@ -398,11 +404,12 @@
+             }
+ 
+             $response = $this->requestEndpoint($definition, $endpoint, $definition['apiSource']['authHeaders'] ?? [], [], $requestData);
++            if ($expenseDefaults && ($response['body']['committed']??null)!==true) { throw new RuntimeHttpException('CONTAINER_SELECTION_UNCONFIRMED','Selecao nao confirmada. Consulte a transacao antes de repetir.',502); }
+             if ($containerTaxOnly && ($response['body']['committed'] ?? null) !== true) { throw new RuntimeHttpException('CONTAINER_TAX_UNCONFIRMED','Calculo fiscal nao confirmado. Consulte a transacao antes de repetir.',502); }
+             if ($allocationProcess && ($response['body']['committed'] ?? null) !== true) { throw new RuntimeHttpException('CONTAINER_ALLOCATION_UNCONFIRMED', 'Alocacao nao confirmada. Consulte a transacao antes de repetir.', 502); }
+             if ($expenseGeneration && ($response['body']['committed']??null)!==true) { throw new RuntimeHttpException('PURCHASE_EXPENSE_UNCONFIRMED','Geracao de despesas nao confirmada. Consulte a transacao antes de repetir.',502); }
+ 
+-            if (!$allocationProcess && !($containerTaxOnly && ($response['body']['committed']??null)===true) && (($response['body']['success'] ?? true) === false || isset($response['body']['error']))) { throw new RuntimeHttpException('ENTITY_API_PROCESS_FAILED', 'A API recusou o processo.', 422); }
++            if (!$allocationProcess && !(($containerTaxOnly || $expenseDefaults) && ($response['body']['committed']??null)===true) && (($response['body']['success'] ?? true) === false || isset($response['body']['error']))) { throw new RuntimeHttpException('ENTITY_API_PROCESS_FAILED', 'A API recusou o processo.', 422); }
+ 
+             try {
+ 
+@@ -432,6 +439,7 @@
+             }
+ 
+             if ($containerTaxOnly) { $audit = RuntimeContainerTaxAudit::inspect($definition,$endpoint,$response['body'],$context,$containerTaxActor); }
++            if ($expenseDefaults) { $audit=RuntimeContainerExpenseDefaultsAudit::inspect($definition,$endpoint,$response['body'],$context,$expenseDefaultsActor); }
+             if (RuntimeCiwCotacaoAudit::isImportEndpoint($definition, $endpoint)) {
+ 
+                 $audit = RuntimeCiwCotacaoAudit::inspect($definition, $endpoint, $response['body'], 'import-bc', null);
+@@ -647,6 +655,7 @@
+         // Endpoint configuration selects the field. Browser input cannot select an operation or URL.
+ 
+         $allowedContext = ['entityCode', 'operation', 'actionId', 'programId', 'permissionPrefix', 'traceability', '_runtime', '_runtimeEndpoint', 'id', 'context'];
++        if (RuntimeContainerExpenseDefaultsAudit::supports($definition)) { $allowedContext[]='parameters'; }
+ 
+         if (array_diff(array_keys($payload), $allowedContext)) {
+ 
+@@ -726,9 +735,12 @@
+ 
+         }
+ 
+-        $context = ApiRequestContext::resolve($definition, $endpoint, $payload);
++        $expenseDefaults=RuntimeContainerExpenseDefaultsAudit::supports($definition);
++        if ($expenseDefaults && (!RuntimeContainerExpenseDefaultsAudit::binding($definition,$endpoint,'options') || ($config['lookupParameterFields']??null)!==RuntimeContainerExpenseDefaultsAudit::PARAMETERS || ($source['parameterFields']??null)!==RuntimeContainerExpenseDefaultsAudit::PARAMETERS || !RuntimeContainerExpenseDefaultsAudit::order($payload['parameters']??null))) { throw new RuntimeHttpException('CONTAINER_SELECTION_OPTIONS_INVALID','Opcoes exigem contexto e os dois enums assinados.',422); }
++        $context = ApiRequestContext::resolve($definition, $endpoint, $expenseDefaults ? ['context'=>$payload['context']??[]] : $payload);
+ 
+         $requestData = $context ?: null;
++        if($expenseDefaults){$requestData+=$payload['parameters'];}
+ 
+         if (array_key_exists('id', $payload)) {
+ 
+@@ -746,6 +758,7 @@
+ 
+         $items = $this->extractItems($response['body'], (string) ($operation['itemsPath'] ?? 'data'));
+ 
++        if (RuntimeContainerExpenseDefaultsAudit::supports($definition) && !RuntimeContainerExpenseDefaultsAudit::options($response['body'],$context)) { throw new RuntimeHttpException('CONTAINER_SELECTION_OPTIONS_RESPONSE','Resposta de selecao invalida ou fora do contexto.',502); }
+         if (RuntimePurchaseItemAudit::supports($definition) || RuntimePurchaseExpenseAudit::supports($definition)) {
+ 
+             $b=$response['body'];$seen=[];
+@@ -806,6 +819,7 @@
+ 
+         }
+ 
++        if (RuntimeContainerExpenseDefaultsAudit::supports($definition)) { $this->transactions->log($definition['entityCode'].'.api.options','Consulta tecnica de despesas selecionaveis.',metadata:['technical'=>true,'itemsCount'=>count($result),'containerContext'=>['version'=>1,'source'=>'runtime-validated-context','containerId'=>$context['container_id']]]); }
+         return ['data' => $result];
+ 
+     }

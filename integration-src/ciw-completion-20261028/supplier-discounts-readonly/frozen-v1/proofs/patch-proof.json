@@ -1,0 +1,14 @@
+{
+  "success": true,
+  "sharedFiles": 9,
+  "hunks": 23,
+  "outsideHunksBytePreserved": true,
+  "actionIsolatedLfPreserved": true,
+  "uniqueCollectorExtraction": {
+    "bodyByteEqualAfterRemovingOnlyTwoNewSelectionLines": true,
+    "originalBodySha256": "eeb220204b07611905b2ef0c64b4adba012c27c22fdad810f5291a0fa30e4718",
+    "oldPublicParameterSignatureUnchanged": true,
+    "noFinancialRuleDelta": true
+  },
+  "canonicalWrites": false
+}

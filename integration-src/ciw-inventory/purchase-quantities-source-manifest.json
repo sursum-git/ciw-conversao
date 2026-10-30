@@ -1,0 +1,65 @@
+{
+  "scope": [
+    "cons_item_qt_imp",
+    "cons_item_qt_imp_union"
+  ],
+  "analysis_copies": true,
+  "files": [
+    {
+      "application": "cons_item_qt_imp",
+      "file": "cons_item_qt_imp.php",
+      "remote_sha256": "8a1a87ce88dbc7ae5499759fdd4d44cdd9e58ff79163ee78ceac5b7803f12dc2",
+      "copied_sha256": "8a1a87ce88dbc7ae5499759fdd4d44cdd9e58ff79163ee78ceac5b7803f12dc2",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_item_qt_imp",
+      "file": "cons_item_qt_imp_grid.class.php",
+      "remote_sha256": "79900118a976d62e4577f85c96f5e847bb45ea1d852d27c266e629f2c8f94353",
+      "copied_sha256": "b350bb04b797d27b52669a06d5cd196d6c2e23543879283714242b002cf266d9",
+      "sensitive_literals_omitted": 8
+    },
+    {
+      "application": "cons_item_qt_imp",
+      "file": "cons_item_qt_imp_lookup.class.php",
+      "remote_sha256": "e8db1b4ecd669582d1b79b6146c1ce798c8188960cd93532c619c2048c015a6b",
+      "copied_sha256": "e8db1b4ecd669582d1b79b6146c1ce798c8188960cd93532c619c2048c015a6b",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_item_qt_imp",
+      "file": "index.php",
+      "remote_sha256": "a616a59454a0d30218b0cc71d0efede69370700d24707107b7383712ab92b97c",
+      "copied_sha256": "9e24ced1fe6071dc4f63a3d17e37aaf1efc3acb291dab3cee036fa8ae43facb9",
+      "sensitive_literals_omitted": 11
+    },
+    {
+      "application": "cons_item_qt_imp_union",
+      "file": "cons_item_qt_imp_union.php",
+      "remote_sha256": "85c7091ebd61ce5af4700b1a10d89c7b435baafe7bd017a24e2e72b79898a387",
+      "copied_sha256": "85c7091ebd61ce5af4700b1a10d89c7b435baafe7bd017a24e2e72b79898a387",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_item_qt_imp_union",
+      "file": "cons_item_qt_imp_union_grid.class.php",
+      "remote_sha256": "fa36657c6df54a3832c7a09e71201b667370c381280f1077efe727ab0da05e4c",
+      "copied_sha256": "4e1d8c9a3483028983f346058d2dc53ecb8bf8cc84aee680325e0387650bbbf9",
+      "sensitive_literals_omitted": 10
+    },
+    {
+      "application": "cons_item_qt_imp_union",
+      "file": "cons_item_qt_imp_union_lookup.class.php",
+      "remote_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copied_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_item_qt_imp_union",
+      "file": "index.php",
+      "remote_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "copied_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sensitive_literals_omitted": 0
+    }
+  ]
+}

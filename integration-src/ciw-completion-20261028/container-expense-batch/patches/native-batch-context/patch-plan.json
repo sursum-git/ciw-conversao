@@ -1,0 +1,68 @@
+{
+  "textPatches": [
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Builder/ProgramBuilderService.php",
+      "baselineSha256": "4daaac37c2c947ba28d91b880c428447e3bdbeb07185881ab77da98783bfbf4a",
+      "changes": [
+        {
+          "old": "['pageSize', 'gridFields', 'filterFields', 'defaultSort', 'defaultGroup'], 'crudOptions'",
+          "new": "['pageSize', 'gridFields', 'filterFields', 'defaultSort', 'defaultGroup', 'batchSnapshot'], 'crudOptions'"
+        },
+        {
+          "old": "        return $result;\n    }\n\n    private function normalizeMasterDetailBuilderConfig",
+          "new": "        if (array_key_exists('batchSnapshot', $input)) {\n            $snapshot = $this->closedObject($input['batchSnapshot'], ['originalFields','contextFields'], 'crudOptions.batchSnapshot');\n            $available = []; foreach ($entity->getFields() as $field) { $available[$field->getCode()] = $field; }\n            foreach (['originalFields','contextFields'] as $key) {\n                $items = $snapshot[$key] ?? null;\n                if (!is_array($items) || !array_is_list($items) || !$items || count($items)>64 || count(array_unique($items,SORT_REGULAR))!==count($items)) { $invalid('batchSnapshot.'.$key); }\n                foreach ($items as $name) {\n                    if (!is_string($name) || !isset($available[$name]) || !in_array($available[$name]->getDataType(),['integer','decimal','boolean','string','date','datetime'],true)) { $invalid('batchSnapshot.'.$key); }\n                }\n            }\n            $result['batchSnapshot'] = $snapshot;\n        }\n        return $result;\n    }\n\n    private function normalizeMasterDetailBuilderConfig"
+        },
+        {
+          "old": "'editing' => ['mode' => $config['gridEditMode'] ?? 'form'],",
+          "new": "'editing' => ['mode' => $config['gridEditMode'] ?? 'form'] + (isset($crudOptions['batchSnapshot']) ? ['snapshot' => $crudOptions['batchSnapshot']] : []),"
+        },
+        {
+          "old": "                'allowCreate' => $version->isAllowCreate(),",
+          "new": "                ...($endpointId === 'batch' && isset($version->getBuilderConfig()['crudOptions']['batchSnapshot']) ? ['batchSnapshot' => $version->getBuilderConfig()['crudOptions']['batchSnapshot']] : []),\n                'allowCreate' => $version->isAllowCreate(),"
+        }
+      ]
+    },
+    {
+      "target": "D:/opencode/construtor-pg/src/crud-engine/CrudEngine.js",
+      "baselineSha256": "e0d3f4cdb3ae73862b535a492f2c94bd9b89a8e49a2c0a982a0a2d8c6d929f39",
+      "changes": [
+        {
+          "old": "        initialNavigationState: this.navigationGridState,",
+          "new": "        initialNavigationState: this.navigationGridState,\n        contextValues: this.contextValues || {},"
+        }
+      ]
+    },
+    {
+      "target": "D:/opencode/construtor-pg/src/crud-engine/CrudKendoGridRenderer.js",
+      "baselineSha256": "d5076ccbcab0676b5740b84f92622d86e4febff3135d3b6a26976b4144449119",
+      "changes": [
+        {
+          "old": "      this.filters = global.CrudUtils.ensureArray(options.initialFilters);",
+          "new": "      this.filters = global.CrudUtils.ensureArray(options.initialFilters);\n      this.contextValues = options.contextValues || {};"
+        },
+        {
+          "old": "    batchValuesEqual(left, right) {",
+          "new": "    batchOriginalValues(row) {\n      const snapshot = this.definition.grid && this.definition.grid.editing && this.definition.grid.editing.snapshot;\n      if (!snapshot) { return this.batchValues(row); }\n      const original = {};\n      snapshot.originalFields.forEach((name) => { original[name] = row[name] == null ? null : row[name]; });\n      return original;\n    }\n\n    batchValuesEqual(left, right) {"
+        },
+        {
+          "old": "this.batchOriginals.set(String(row[this.definition.dataModel.primaryKey]), this.batchValues(row));",
+          "new": "this.batchOriginals.set(String(row[this.definition.dataModel.primaryKey]), this.batchOriginalValues(row));"
+        },
+        {
+          "old": "        await this.httpClient.request({url: endpoint.url, method: endpoint.method || \"POST\", data: {changes}});",
+          "new": "        const data = {changes};\n        const snapshot = this.definition.grid && this.definition.grid.editing && this.definition.grid.editing.snapshot;\n        if (snapshot) {\n          data.context = {};\n          snapshot.contextFields.forEach((name) => {\n            if (!Object.prototype.hasOwnProperty.call(this.contextValues, name)) { throw new Error(\"Contexto obrigatorio do lote: \" + name + \".\"); }\n            data.context[name] = this.contextValues[name];\n          });\n        }\n        await this.httpClient.request({url: endpoint.url, method: endpoint.method || \"POST\", data});"
+        }
+      ]
+    },
+    {
+      "target": "D:/opencode/construtor-pg/src/crud-engine/CrudDefinitionValidator.js",
+      "baselineSha256": "0c4f704b8460e47abcc00d0ca9f5dd26a377233fa8b6a0ec8032007d019147b7",
+      "changes": [
+        {
+          "old": "      global.CrudUtils.ensureArray(definition.grid && definition.grid.rowLinks).forEach((link) => {",
+          "new": "      const snapshot = definition.grid && definition.grid.editing && definition.grid.editing.snapshot;\n      if (snapshot != null) {\n        if (closed(snapshot, [\"originalFields\", \"contextFields\"], \"grid.editing.snapshot\")) {\n          if (definition.grid.editing.mode !== \"batch\") { errors.push(\"Snapshot exige modo batch.\"); }\n          [\"originalFields\", \"contextFields\"].forEach((key) => {\n            const names = snapshot[key];\n            if (!Array.isArray(names) || !names.length || names.length > 64 || new Set(names).size !== names.length || names.some((name) => typeof name !== \"string\" || !fields[name] || [\"integer\",\"decimal\",\"number\",\"boolean\",\"string\",\"text\",\"date\",\"datetime\"].indexOf(fields[name].type) === -1)) { errors.push(\"Campos de snapshot invalidos.\"); }\n          });\n          global.CrudUtils.ensureArray(snapshot.contextFields).forEach((name) => {\n            if (!global.CrudUtils.ensureArray(definition.contextFields).some((item) => item.field === name && item.required && item.readonly)) { errors.push(\"Snapshot exige contexto obrigatorio readonly.\"); }\n          });\n        }\n      }\n      global.CrudUtils.ensureArray(definition.grid && definition.grid.rowLinks).forEach((link) => {"
+        }
+      ]
+    }
+  ]
+}

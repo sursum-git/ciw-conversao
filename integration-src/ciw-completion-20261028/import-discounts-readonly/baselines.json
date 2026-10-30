@@ -1,0 +1,39 @@
+{
+  "status": "POST_BUILD5_CANONICAL_GUARDED_NOT_APPLIED",
+  "canonicalWrites": false,
+  "baselines": [
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwErpReadService.p",
+      "baselineKind": "Post-build5 published aux+batch canonical; guarded additive proposal only",
+      "baselineSha256": "33d24e2f8ab0208841ddfacb8319c4f2e9bd0f242aee7672add6b02950a49921",
+      "candidateSha256": "71d710a50c2ef974df02aa875bbfc94b892c13143903d5ff7562e98be5115864",
+      "patch": "patches/CiwErpReadService.p.patch"
+    },
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwCadastrosCrud.p",
+      "baselineKind": "Post-build5 published aux+batch canonical; guarded additive proposal only",
+      "baselineSha256": "a167b039396533829ede08ab1569215f27b0c6b643af30b6bbe6ae60c8b893b1",
+      "candidateSha256": "7c0e717180db8d877ad8536119898dfd5577f4466951f179f9d99a787960cd65",
+      "patch": "patches/CiwCadastrosCrud.p.patch"
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeCiwErpQuery.php",
+      "baselineKind": "Post-build5 published aux+batch canonical; guarded additive proposal only",
+      "baselineSha256": "076d9f9b7dc324743191f9ccada5b43e7c3461cdaaa8506d92fb297ce520a116",
+      "candidateSha256": "65aa509cc3d2459771fd229cc31e65bd545644da331411dd01152b77475639a8",
+      "patch": "patches/RuntimeCiwErpQuery.php.patch"
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeApiEntityActionService.php",
+      "baselineKind": "Post-build5 published aux+batch canonical; guarded additive proposal only",
+      "baselineSha256": "a01949ced3219e92ae5d809d101de0882ff3bdda8c593214ea1879c2a68f5615",
+      "candidateSha256": "74975cd7d927b1ced6f6564b5fb4199a761f4d53470a048eb30940c78dc422c1",
+      "patch": "patches/RuntimeApiEntityActionService.php.patch"
+    }
+  ],
+  "newPhpFile": {
+    "source": "php/RuntimeImportDiscountRead.php",
+    "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeImportDiscountRead.php",
+    "sha256": "da183dfadf900d516a577495d8348293c0aa1a9b36954cde50de9be819cd0197"
+  }
+}

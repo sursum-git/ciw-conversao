@@ -1,0 +1,76 @@
+{
+  "database": "espec",
+  "table": "im-param",
+  "fields": [
+    {
+      "name": "cod-param",
+      "type": "character",
+      "format": "x(50)",
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "val-param",
+      "type": "character",
+      "format": "x(500)",
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "tp-param",
+      "type": "integer",
+      "format": "9",
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "agrup_im_param_id",
+      "type": "integer",
+      "format": ">,>>>,>>9",
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    }
+  ],
+  "indexes": [
+    {
+      "name": "ind-agrup",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "agrup_im_param_id",
+        "cod-param"
+      ]
+    },
+    {
+      "name": "primario",
+      "unique": true,
+      "primary": true,
+      "fields": [
+        "cod-param"
+      ]
+    }
+  ],
+  "triggers": [
+  ],
+  "tipoAnexoIdTables": [
+    "dt-ext-it-docum-est",
+    "dt-ext-docum-est",
+    "lisa-param"
+  ]
+}

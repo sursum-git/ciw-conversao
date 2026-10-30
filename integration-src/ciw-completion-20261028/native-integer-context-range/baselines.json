@@ -1,0 +1,38 @@
+{
+  "files": [
+    {
+      "source": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\builder-decimal-filters-v2\\ProgramBuilderService.php",
+      "target": "D:\\opencode\\construtor-pg\\backend\\src\\Builder\\ProgramBuilderService.php",
+      "baselineSha256": "205ebd14329f8e8896d07c07716939db8a12d58345fecf76cab5252f4e0694a7",
+      "canonicalTargetSha256AtPreparation": "72c6dafbfa0e93196b443ec45cd6d7c743fddd6415719febd70a0965d1fe18ee",
+      "baselineFile": "baseline-exact/ProgramBuilderService.php",
+      "candidateFile": "candidate-exact/ProgramBuilderService.php"
+    },
+    {
+      "source": "D:\\opencode\\construtor-pg\\public\\metadata\\schemas\\crud-definition-v1.schema.json",
+      "target": "D:\\opencode\\construtor-pg\\public\\metadata\\schemas\\crud-definition-v1.schema.json",
+      "baselineSha256": "5a1511bf85cdad06c6fb53db72ef649f66fd00410f7ae7b79ee6cab5c27cc751",
+      "canonicalTargetSha256AtPreparation": "5a1511bf85cdad06c6fb53db72ef649f66fd00410f7ae7b79ee6cab5c27cc751",
+      "baselineFile": "baseline-exact/crud-definition-v1.schema.json",
+      "candidateFile": "candidate-exact/crud-definition-v1.schema.json"
+    },
+    {
+      "source": "D:\\opencode\\construtor-pg\\src\\crud-engine\\CrudDefinitionValidator.js",
+      "target": "D:\\opencode\\construtor-pg\\src\\crud-engine\\CrudDefinitionValidator.js",
+      "baselineSha256": "d02d5d03e569d8f3e78621c7ff5b72d700f191957ed5900f2e428863d625047b",
+      "canonicalTargetSha256AtPreparation": "d02d5d03e569d8f3e78621c7ff5b72d700f191957ed5900f2e428863d625047b",
+      "baselineFile": "baseline-exact/CrudDefinitionValidator.js",
+      "candidateFile": "candidate-exact/CrudDefinitionValidator.js"
+    },
+    {
+      "source": "D:\\opencode\\construtor-pg\\src\\crud-engine\\CrudEngine.js",
+      "target": "D:\\opencode\\construtor-pg\\src\\crud-engine\\CrudEngine.js",
+      "baselineSha256": "5d78f77bc72c56c1bbd345d92ae3e4714a71f1d04e5b76e0453855a8c193bba7",
+      "canonicalTargetSha256AtPreparation": "5d78f77bc72c56c1bbd345d92ae3e4714a71f1d04e5b76e0453855a8c193bba7",
+      "baselineFile": "baseline-exact/CrudEngine.js",
+      "candidateFile": "candidate-exact/CrudEngine.js"
+    }
+  ],
+  "canonicalBuilderIsNotIntegrationBaseline": true,
+  "dependency": "builder-decimal-filters-v2 candidate205e, canonical72c6 unchanged"
+}

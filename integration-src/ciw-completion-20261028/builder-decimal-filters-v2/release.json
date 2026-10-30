@@ -1,0 +1,65 @@
+{
+  "status": "CANDIDATE_REVIEW_PENDING_NOT_INTEGRATED",
+  "files": [
+    {
+      "path": "ProgramBuilderService.php",
+      "sha256": "205ebd14329f8e8896d07c07716939db8a12d58345fecf76cab5252f4e0694a7"
+    },
+    {
+      "path": "DecimalFilterGenerationTest.php",
+      "sha256": "12c0563370533218adb960956d8ea0d08ab0191d1445b2b36fffec6b447ad991"
+    },
+    {
+      "path": "bootstrap.php",
+      "sha256": "5fda2c5e854f341f557178ec2250837e07e953fbd7c7e917d3beb778d6d6e9cd"
+    },
+    {
+      "path": "verify-native.cjs",
+      "sha256": "e40ea8334043d6a9c2fc81e7a54dcef0e45f324661033af11f294675a78ebc29"
+    },
+    {
+      "path": "patch-manifest.json",
+      "sha256": "e1e67a2d1d31eed4af1e2f8928f693148d334d664150217c90ee902d3ab9acbf"
+    },
+    {
+      "path": "byte-patch.json",
+      "sha256": "9cf15e2866fbe0e5f36f973ac11646bdbc57a2a0694e9a9426e113e7c02d7aca"
+    },
+    {
+      "path": "example-generated.json",
+      "sha256": "0e5e80dbc96cb9acc6aab6e92161074867124306dc8dd3bc28918a9ef2ad389c"
+    }
+  ],
+  "evidence": [
+    {
+      "path": ".runtime\\ciw-completion-20261028\\builder-decimal-filters-v2\\baseline-schema-input.xml",
+      "sha256": "c0657cd8a17602857e56ad36d9fcd7081632047cefc0553a25cd4e4a83ac12a5"
+    },
+    {
+      "path": ".runtime\\ciw-completion-20261028\\builder-decimal-filters-v2\\candidate-schema-input.xml",
+      "sha256": "0d72475ff02dc5c2098c271c814dade932bf22f25d139f65a3dd00fc9b7fb787"
+    },
+    {
+      "path": ".runtime\\ciw-completion-20261028\\builder-decimal-filters-v2\\crud-options-regression.xml",
+      "sha256": "29a679fd7921982ced6d1f54906d9a41a2851beb0f4cca4858688f2e188cd813"
+    },
+    {
+      "path": ".runtime\\ciw-completion-20261028\\builder-decimal-filters-v2\\native-verification.json",
+      "sha256": "37cc1a64fc80750d1043a808e038f69c37a5d0f57633c4ce145cb6c793b4e46a"
+    }
+  ],
+  "baseline": "72c6dafbfa0e93196b443ec45cd6d7c743fddd6415719febd70a0965d1fe18ee",
+  "canonicalChanged": false,
+  "published": false,
+  "newTests": 2,
+  "newAssertions": 26,
+  "regressionTests": 24,
+  "regressionAssertions": 48,
+  "nativeMetadataChecks": 16,
+  "kendoChanged": false,
+  "rendererChanged": false,
+  "otherTypesPreserved": true,
+  "dataModelNormalizationPreserved": true,
+  "failedV1": "arrays-only addition did not fix raw decimal normalized to number; preserved as RED",
+  "unrelatedFixture": "nonempty subtitle supplied to satisfy existing schema; no product subtitle change"
+}

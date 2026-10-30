@@ -1,0 +1,147 @@
+{
+  "date": "2026-10-28",
+  "applyAutomatically": false,
+  "target": "integration-src/ciw-inventory/inventory-reviewed.json",
+  "baselineSHA256": "3e9b91debb5c9b162896503a8f5e46e5c9e8ca2ed1403553244304e7a0ce52dc",
+  "patches": [
+    {
+      "application": "ctrl_envios_repres_amostra",
+      "expected": {
+        "state": "Não convertido identificado",
+        "state_group": "Pendente",
+        "target_screen": ""
+      },
+      "proposal": {
+        "name": "ctrl_envios_repres_amostra",
+        "proposedStateGroup": "Pendente",
+        "reviewStatus": "SOURCE_REVIEWED_NO_BUSINESS_COMMAND",
+        "targetScreen": "ciw.representantes-ativos",
+        "targetVersion": "1.0.0",
+        "remaining": "Origem somente captura data e abre representantes; eventos selecionados vazios. Não há comando de lote comprovado. Não afirmar que lote de envios foi convertido."
+      },
+      "evidence": "integration-src/purchase-pending-20261028/sample-batch/evidence.json"
+    },
+    {
+      "application": "cons_representante_ativos",
+      "expected": {
+        "state": "Convertido — consulta somente leitura validada",
+        "state_group": "Convertido",
+        "target_screen": "ciw.representantes-ativos"
+      },
+      "proposal": {
+        "name": "cons_representante_ativos",
+        "proposedStateGroup": "Convertido",
+        "reviewStatus": "EXISTING_READONLY_REUSED",
+        "targetScreen": "ciw.representantes-ativos",
+        "targetVersion": "1.0.0",
+        "remaining": "Consulta EMS5 existente preservada; botão legado sem implementação não equivale ao writer EMS2 contextual de amostras."
+      },
+      "evidence": "integration-src/purchase-pending-20261028/sample-batch/evidence.json"
+    },
+    {
+      "application": "cons_procs_compra",
+      "expected": {
+        "state": "Não convertido identificado",
+        "state_group": "Pendente",
+        "target_screen": ""
+      },
+      "proposal": {
+        "name": "cons_procs_compra",
+        "proposedStateGroup": "Pendente",
+        "reviewStatus": "MED_FIELDS_COVERED_GENERAL_SCOPE_UNPROVED",
+        "targetScreen": "ciw.processos-compra-med",
+        "targetVersion": "1.0.8",
+        "remaining": "Sete campos cobertos para consulta MED pelo pai existente. Legado sem filtro de empresa e chamador de conta corrente fora do recorte; não declarar equivalência multiempresa ou criar tela duplicada."
+      },
+      "evidence": "integration-src/purchase-pending-20261028/sample-batch/evidence.json"
+    },
+    {
+      "application": "control_selec_proc_compra",
+      "expected": {
+        "state": "Pendente",
+        "state_group": "Pendente",
+        "target_screen": ""
+      },
+      "proposal": {
+        "name": "control_selec_proc_compra",
+        "proposedStateGroup": "Convertido",
+        "reviewStatus": "COMPLETED_CLEANED_PREVIOUSLY",
+        "targetScreen": "ciw.container-alocar-itens",
+        "targetVersion": "1.0.0",
+        "remaining": "Nenhum trabalho obrigatório neste fluxo; publicação, teste e limpeza já concluídos em26/10."
+      },
+      "evidence": "integration-src/purchase-pending-20261028/sample-batch/evidence.json"
+    },
+    {
+      "application": "grid_itens_proc_compra_selecao",
+      "expected": {
+        "state": "Pendente",
+        "state_group": "Pendente",
+        "target_screen": ""
+      },
+      "proposal": {
+        "name": "grid_itens_proc_compra_selecao",
+        "proposedStateGroup": "Convertido",
+        "reviewStatus": "COMPLETED_CLEANED_PREVIOUSLY",
+        "targetScreen": "ciw.container-alocar-itens",
+        "targetVersion": "1.0.0",
+        "remaining": "Nenhum trabalho obrigatório neste fluxo; publicação, teste e limpeza já concluídos em26/10."
+      },
+      "evidence": "integration-src/purchase-pending-20261028/sample-batch/evidence.json"
+    },
+    {
+      "application": "bl_selecao_pagto_proc_compra",
+      "expected": {
+        "state": "Não convertido identificado",
+        "state_group": "Pendente",
+        "target_screen": ""
+      },
+      "proposal": {
+        "name": "bl_selecao_pagto_proc_compra",
+        "proposedStateGroup": "Convertido",
+        "reviewStatus": "MED_NAVIGATION_ABSORBED_EXISTING",
+        "targetScreen": "ciw.proc-compra-pagamentos",
+        "targetVersion": "1.0.1",
+        "remaining": "Fonte revisada: ponte somente sessão/filtrosNOTIN/redirecionamento. ParaMED a seleção está absorvida pelo Incluir/MultiSelect existente, contexto físico obrigatório e opções globalmente livres. Nenhum código/publicação novo; não declarar igualdadeSQLlinhaalinha nem ampliar empresa."
+      },
+      "evidence": "integration-src/purchase-pending-20261028/sample-batch/evidence.json"
+    },
+    {
+      "application": "bl_selecionado_pagto_proc_compra",
+      "expected": {
+        "state": "Não convertido identificado",
+        "state_group": "Pendente",
+        "target_screen": ""
+      },
+      "proposal": {
+        "name": "bl_selecionado_pagto_proc_compra",
+        "proposedStateGroup": "Convertido",
+        "reviewStatus": "MED_NAVIGATION_ABSORBED_EXISTING",
+        "targetScreen": "ciw.proc-compra-pagamentos",
+        "targetVersion": "1.0.1",
+        "remaining": "Fonte revisada: ponte somente sessão/filtrosIN/redirecionamento. ParaMED a consulta/retorno está absorvida pela grade/readget/delete existente. Nenhum writer é invocado na entrada do blank; não copiar bibliotecas financeiras nem limitar histórico por sessão antiga."
+      },
+      "evidence": "integration-src/purchase-pending-20261028/sample-batch/evidence.json"
+    },
+    {
+      "application": "form_proc_compra",
+      "expected": {
+        "state": "Não convertido identificado",
+        "state_group": "Pendente",
+        "target_screen": ""
+      },
+      "proposal": {
+        "name": "form_proc_compra",
+        "proposedStateGroup": "Pendente",
+        "reviewStatus": "VARIANT_MED_MAINTENANCE_RECONCILIATION",
+        "targetScreen": "ciw.processos-compra-med",
+        "targetVersion": "1.0.8",
+        "remaining": "Variante de manutenção chamada por sinalização. Campos MED cobertos pelo cadastro existente, mas cascata de exclusão e eventos diferem. Reconciliar navegação do painel de sinalização, preservando writer atual, sem portar predicado legado incorreto."
+      },
+      "evidence": "integration-src/purchase-pending-20261028/sample-batch/evidence.json"
+    }
+  ],
+  "globalLedgerModified": false,
+  "controlsFinalUntouched": true,
+  "quantityPeriodsOp1030Untouched": true
+}

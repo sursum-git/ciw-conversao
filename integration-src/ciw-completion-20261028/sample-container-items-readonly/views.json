@@ -1,0 +1,9 @@
+[
+  {
+    "code": 1052,
+    "entity": "item_container_amostra_progress",
+    "resource": "item_container_amostra",
+    "screen": "ciw.itens-container-amostra",
+    "name": "Itens de containers de amostra"
+  }
+]

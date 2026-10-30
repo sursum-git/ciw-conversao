@@ -1,0 +1,32 @@
+diff --git a/RuntimeApiEntityActionService.php b/RuntimeApiEntityActionService.php
+index 3812788..c16f9de 100644
+--- a/RuntimeApiEntityActionService.php
++++ b/RuntimeApiEntityActionService.php
+@@ -922,6 +922,10 @@ class RuntimeApiEntityActionService
+ 
+         }
+ 
++        if (($definition['entityCode'] ?? null) === 'container_versoes_historico_med_progress') {
++            ApiRequestContext::assertRows($body['data'], ['container_id' => $query['container_id'], 'versao_id' => $query['versao_id']]);
++        }
++
+         if (($definition['entityCode'] ?? null) === 'proc_compra_sinalizados_med_progress') {
+             ApiRequestContext::assertRows($body['data'], ['sinaliz_imp_id' => $query['sinaliz_imp_id']]);
+         }
+@@ -952,6 +956,16 @@ class RuntimeApiEntityActionService
+ 
+         $id = $this->extractRecordId($definition, $payload);
+ 
++        if (($definition['entityCode'] ?? null) === 'container_versoes_historico_med_progress') {
++            foreach ([$payload, is_array($payload['record'] ?? null) ? $payload['record'] : []] as $submitted) {
++                foreach (['id','record_key'] as $alias) {
++                    if (array_key_exists($alias, $submitted) && (!is_string($submitted[$alias]) || !is_string($id) || $submitted[$alias] !== $id)) {
++                        throw new RuntimeHttpException('VERSION_HISTORY_KEY_INVALID', 'Identidade histórica conflitante.', 422);
++                    }
++                }
++            }
++        }
++
+         $detailEndpoint = is_array($definition['apiSource']['detailEndpoint'] ?? null) ? $definition['apiSource']['detailEndpoint'] : null;
+ 
+         if ($detailEndpoint) {

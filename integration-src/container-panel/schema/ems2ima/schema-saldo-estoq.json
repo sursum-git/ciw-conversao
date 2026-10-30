@@ -1,0 +1,585 @@
+{
+  "database": "ems2ima",
+  "table": "saldo-estoq",
+  "fields": [
+    {
+      "name": "cod-estabel",
+      "type": "character",
+      "format": "x(5)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": "can-find(estabelec of saldo-estoq)",
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod-depos",
+      "type": "character",
+      "format": "x(3)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": "can-find(deposito of saldo-estoq)",
+      "triggers": [
+      ]
+    },
+    {
+      "name": "lote",
+      "type": "character",
+      "format": "x(40)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "it-codigo",
+      "type": "character",
+      "format": "x(16)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": "can-find(item of saldo-estoq)",
+      "triggers": [
+      ]
+    },
+    {
+      "name": "qtidade-ini",
+      "type": "decimal",
+      "format": "->>>,>>>,>>9.9999",
+      "decimals": 4,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "qtidade-atu",
+      "type": "decimal",
+      "format": "->>>,>>>,>>9.9999",
+      "decimals": 4,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "data-ult-ent",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dt-vali-lote",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dt-ul-contag",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "qtidade-fin",
+      "type": "decimal",
+      "format": "->>>,>>>,>>9.9999",
+      "decimals": 4,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod-refer",
+      "type": "character",
+      "format": "x(8)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "qt-aloc-prod",
+      "type": "decimal",
+      "format": ">>>>,>>9.9999",
+      "decimals": 4,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "qt-alocada",
+      "type": "decimal",
+      "format": ">>>>,>>9.9999",
+      "decimals": 4,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "qt-aloc-ped",
+      "type": "decimal",
+      "format": ">>>>,>>9.9999",
+      "decimals": 4,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "concentracao",
+      "type": "decimal",
+      "format": ">>>9,9999",
+      "decimals": 4,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": "concentracao > 0",
+      "triggers": [
+      ]
+    },
+    {
+      "name": "rendimento",
+      "type": "decimal",
+      "format": ">>>9,9999",
+      "decimals": 4,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": "rendimento > 0",
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cd-referencia",
+      "type": "character",
+      "format": "x(4)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "cod-localiz",
+      "type": "character",
+      "format": "x(20)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dt-fabric",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": "TODAY",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "char-1",
+      "type": "character",
+      "format": "x(100)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "char-2",
+      "type": "character",
+      "format": "x(100)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dec-1",
+      "type": "decimal",
+      "format": "->>>>>>>>>>>9.99999999",
+      "decimals": 8,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "dec-2",
+      "type": "decimal",
+      "format": "->>>>>>>>>>>9.99999999",
+      "decimals": 8,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "int-1",
+      "type": "integer",
+      "format": "->>>>>>>>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "int-2",
+      "type": "integer",
+      "format": "->>>>>>>>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log-1",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log-2",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "data-1",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "data-2",
+      "type": "date",
+      "format": "99\/99\/9999",
+      "decimals": null,
+      "initial": null,
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "check-sum",
+      "type": "character",
+      "format": "x(20)",
+      "decimals": null,
+      "initial": "",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "num-id-saldo-estoq",
+      "type": "integer",
+      "format": ">>>,>>>,>>9",
+      "decimals": null,
+      "initial": "0",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "qt-mensal-ate",
+      "type": "decimal",
+      "format": "->>>,>>>,>>9.9999",
+      "decimals": 4,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "per-ppm",
+      "type": "decimal",
+      "format": ">>>>,>>9.9999",
+      "decimals": 4,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "qtd-transi",
+      "type": "decimal",
+      "format": "->>>,>>>,>>9.9999",
+      "decimals": 4,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "log-reg-zero",
+      "type": "logical",
+      "format": "Sim\/Não",
+      "decimals": null,
+      "initial": "no",
+      "mandatory": true,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    },
+    {
+      "name": "qtidade-ini-geren",
+      "type": "decimal",
+      "format": "->>>,>>>,>>9.9999",
+      "decimals": 4,
+      "initial": "0",
+      "mandatory": false,
+      "extent": 0,
+      "validation": null,
+      "triggers": [
+      ]
+    }
+  ],
+  "indexes": [
+    {
+      "name": "dep-estabel",
+      "unique": true,
+      "primary": false,
+      "fields": [
+        "cod-depos",
+        "cod-estabel",
+        "cod-localiz",
+        "lote",
+        "it-codigo",
+        "cod-refer"
+      ]
+    },
+    {
+      "name": "dep-item",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod-depos",
+        "it-codigo",
+        "cod-estabel",
+        "cod-localiz",
+        "lote",
+        "cod-refer"
+      ]
+    },
+    {
+      "name": "dt-vali-lote",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod-estabel",
+        "cod-depos",
+        "it-codigo",
+        "cod-refer",
+        "dt-vali-lote"
+      ]
+    },
+    {
+      "name": "est-dep-loc",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod-estabel",
+        "cod-depos",
+        "cod-localiz",
+        "lote",
+        "cod-refer",
+        "it-codigo"
+      ]
+    },
+    {
+      "name": "estabel-dep",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod-estabel",
+        "cod-depos",
+        "cod-localiz",
+        "lote",
+        "it-codigo",
+        "cod-refer"
+      ]
+    },
+    {
+      "name": "estabel-item",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod-estabel",
+        "it-codigo"
+      ]
+    },
+    {
+      "name": "item",
+      "unique": false,
+      "primary": true,
+      "fields": [
+        "it-codigo",
+        "cod-estabel",
+        "cod-refer"
+      ]
+    },
+    {
+      "name": "item-lote",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "it-codigo",
+        "cod-estabel",
+        "lote"
+      ]
+    },
+    {
+      "name": "localizacao",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "cod-localiz",
+        "it-codigo",
+        "cod-depos",
+        "cod-estabel"
+      ]
+    },
+    {
+      "name": "lote",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "lote",
+        "it-codigo",
+        "cod-refer"
+      ]
+    },
+    {
+      "name": "sdoestoq-13",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "log-reg-zero",
+        "cod-estabel"
+      ]
+    },
+    {
+      "name": "token",
+      "unique": false,
+      "primary": false,
+      "fields": [
+        "num-id-saldo-estoq"
+      ]
+    }
+  ],
+  "triggers": [
+    {
+      "event": "Create",
+      "procedure": "database\/tgin\/tcp\/tcin403.p"
+    },
+    {
+      "event": "Delete",
+      "procedure": "database\/tgin\/tdp\/tdin403.p"
+    },
+    {
+      "event": "Write",
+      "procedure": "database\/tgin\/twp\/twin403.p"
+    }
+  ]
+}

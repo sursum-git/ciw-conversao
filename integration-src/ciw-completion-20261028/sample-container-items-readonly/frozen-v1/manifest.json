@@ -1,0 +1,233 @@
+{
+  "status": "CANDIDATE_READY_REQUIRES_REVIEW_SOURCE140_REBASE_AND_OFFICIAL12_2",
+  "scope": "op1052 global sample container items readonly",
+  "files": [
+    {
+      "path": "abl/SampleContainerItemsCollector.p",
+      "sha256": "532e8154c07fb0cf5de120ae5b81d3363a4b4016d70a796e6887044537cf4679",
+      "bytes": 5026
+    },
+    {
+      "path": "abl/SampleContainerItemsReadApi.p",
+      "sha256": "d846bde9a8b4eebae0b64912352beccb3ab7c5351d37b463b9f58e2687cfb9a8",
+      "bytes": 2247
+    },
+    {
+      "path": "abl/SampleContainerItemsReadService.p",
+      "sha256": "9947a2dfef0f478e5cdaac0cf38afdd03356fa502dc72939166470d37e275d54",
+      "bytes": 3978
+    },
+    {
+      "path": "baseline-exact/CiwCadastrosCrud.p",
+      "sha256": "62cc9bdd4dc11b316f2c541e33ce09fb1506f7013b751dcdc1e75ffdf767c330",
+      "bytes": 16330
+    },
+    {
+      "path": "baseline-exact/CiwErpReadService.p",
+      "sha256": "8d7d6da8069bdee82e5c4c95fca3df643e918ae10b96ef22d8a77459ac7bd3cc",
+      "bytes": 29637
+    },
+    {
+      "path": "baseline-exact/RuntimeApiEntityActionService.php",
+      "sha256": "6f52ddca37b15b3494989b71b6f7ac05ce3b73c31d4562db62a61edd48ed51ff",
+      "bytes": 120938
+    },
+    {
+      "path": "baseline-exact/RuntimeCiwErpQuery.php",
+      "sha256": "4b772859b435de0b0eaac360bf581400f8df771b8eeb7af037f43f53d659b0a9",
+      "bytes": 14720
+    },
+    {
+      "path": "baselines.json",
+      "sha256": "2699afdeb3dc469535e7da385e1a65cce9c0ea0ce1230384f630104d8950e6f6",
+      "bytes": 1584
+    },
+    {
+      "path": "candidate-exact/CiwCadastrosCrud.p",
+      "sha256": "63dcfd6e30bac1ad75c5bb2b726e3ba6b07d2ed29d053efc98bf0373c89bef59",
+      "bytes": 16627
+    },
+    {
+      "path": "candidate-exact/CiwErpReadService.p",
+      "sha256": "9bdf97039d504714c4393c3a15c201430914c6255a86d4c12b2a4e791874dc04",
+      "bytes": 29816
+    },
+    {
+      "path": "candidate-exact/RuntimeApiEntityActionService.php",
+      "sha256": "08a7077ec0fd4d8f9d122aac5d3a081fc025e8f815c110b80ec3f87d70bcb00d",
+      "bytes": 121794
+    },
+    {
+      "path": "candidate-exact/RuntimeCiwErpQuery.php",
+      "sha256": "2ce8596e144417d31b9e1a8014feaab9671be73be7e78fe86bebc79f8e3ee16c",
+      "bytes": 14983
+    },
+    {
+      "path": "examples/ciw-itens-container-amostra-builder-draft.json",
+      "sha256": "a9548935a03deb685039d2515d8000e473dd2649ab5a2bc8b160ab87902cd45b",
+      "bytes": 4200
+    },
+    {
+      "path": "includes/SampleContainerItemsTable.i",
+      "sha256": "e945db7e9ef46a364f08720196f217a8453ed94ed56e13110f5cf0671107e494",
+      "bytes": 264
+    },
+    {
+      "path": "metadata/api-source-additions.json",
+      "sha256": "e86ecd6d8179cd228d0d36c0663677caa3199eb39f295fc332058ebbe88d18fc",
+      "bytes": 937
+    },
+    {
+      "path": "metadata/item_container_amostra-builder-draft.json",
+      "sha256": "a9548935a03deb685039d2515d8000e473dd2649ab5a2bc8b160ab87902cd45b",
+      "bytes": 4200
+    },
+    {
+      "path": "metadata/source-patch-proposal.json",
+      "sha256": "c50fb6d8b2ade06f648ce360539ff30d3e363322c12b39494c8617711101709c",
+      "bytes": 1491
+    },
+    {
+      "path": "patches/CiwCadastrosCrud.p.patch",
+      "sha256": "91a8dcadbd384d82944d642065c40ea9974c16d1c07b8f306d125aadfceaa8db",
+      "bytes": 891
+    },
+    {
+      "path": "patches/CiwErpReadService.p.patch",
+      "sha256": "4ece955a24dd728ac7bcda174f005d0bef9c046a83c5b40aa7d363dcecc78284",
+      "bytes": 1539
+    },
+    {
+      "path": "patches/RuntimeApiEntityActionService.php.patch",
+      "sha256": "b4b0aa964f89fd5221af07454782f613191807507f6e2b3c4ca3c2f8a4d9fd96",
+      "bytes": 4084
+    },
+    {
+      "path": "patches/RuntimeCiwErpQuery.php.patch",
+      "sha256": "8a78e9af9ebcf1fbb8fe0f6d216abb7ae305d8562bc7896f312bcec8606569ca",
+      "bytes": 5488
+    },
+    {
+      "path": "php/RuntimeSampleContainerItemsRead.php",
+      "sha256": "e2b0f5683aadff8ab24c90d71f6976321bbdeb0ce11b638cd54de31878dda173",
+      "bytes": 2551
+    },
+    {
+      "path": "PLAN.md",
+      "sha256": "29d9d36743daad406e2fcfe79d83a33aedb7e8a0db0fb81d42f94463f109844e",
+      "bytes": 2606
+    },
+    {
+      "path": "README.md",
+      "sha256": "6de43b0f0a07f33d96383f2a47e25b8f984d6201f0de56226e6cc8d30d069362",
+      "bytes": 4160
+    },
+    {
+      "path": "source-proof.json",
+      "sha256": "fc882baec24c352962c0d62b8a9cf8bfae006eaa3f405bb2718cc47222798e7b",
+      "bytes": 5256
+    },
+    {
+      "path": "tests/abl/SampleContainerItemsFixtures.i",
+      "sha256": "d50f56b6c387c300ddc8b30e7ae314ed8cc23aadb34738b2fb6b958b46acb71d",
+      "bytes": 4212
+    },
+    {
+      "path": "tests/abl/SampleContainerItemsTest.p",
+      "sha256": "edd7e959c258a6dcf8f8a78bd9c89070e22210ce9d04f8c3e55272219973c88a",
+      "bytes": 8715
+    },
+    {
+      "path": "tests/native-preview.cjs",
+      "sha256": "ce0b4dac04706b4dc77e65993cb9cc0f9dd1e7e9dc4c1b9b5706f55f95cbe2b6",
+      "bytes": 953
+    },
+    {
+      "path": "tests/runtime-bootstrap.php",
+      "sha256": "acfcca4857b27c6c1448d5f823ee894ce2ddb441d3801a70bae720d37811b4a5",
+      "bytes": 553
+    },
+    {
+      "path": "tests/RuntimeSampleContainerItemsReadIntegrationTest.php",
+      "sha256": "8ddc396ef2116bdf9777ef647a0d871728a38d41b98612ce5dcf3e3532f98e76",
+      "bytes": 5485
+    },
+    {
+      "path": "tests/SampleContainerItemsBuilderNativeTest.php",
+      "sha256": "514c4217921b41ac15fe5f24a7bbc846849dd257cf4a2a88aa16ca30a1cf0a1e",
+      "bytes": 2261
+    },
+    {
+      "path": "tests/verify-local.ps1",
+      "sha256": "b9025f197ee2d7daa76928c522e3d5e73a1afa302218bbcd42e5c076e52f1442",
+      "bytes": 1367
+    },
+    {
+      "path": "views.json",
+      "sha256": "ca598f5ee62560151dde8ac3e98cf689e93a8d5eac2bbe47e461f4e3a46ae1fd",
+      "bytes": 211
+    }
+  ],
+  "validation": {
+    "status": "LOCAL_PRODUCT_PASS_SOURCE140_REBASE_REQUIRED",
+    "newPrograms": 3,
+    "newIncludes": 1,
+    "sharedProposals": 4,
+    "localDevelopmentOpenEdge": "12.8",
+    "compilesPerCodepage": 6,
+    "ttChecksPerCombination": 35,
+    "combinations": 4,
+    "numDbs": 0,
+    "phpTests": 8,
+    "phpAssertions": 57,
+    "fullPhpTests": 918,
+    "fullPhpAssertions": 6031,
+    "builderTests": 1,
+    "builderAssertions": 4,
+    "nativeValidator": true,
+    "metadataScreens": 1,
+    "sourceAdditions": 2,
+    "published": false,
+    "canonicalWrites": false,
+    "grants": false,
+    "convertedOrigins": false,
+    "gates": [
+      "independent review",
+      "source export140 companion rebase",
+      "official physical12.2/.42 compilation",
+      "same MED PASOE read/get/negatives",
+      "metadata native publication",
+      "read permission authorization"
+    ]
+  },
+  "sharedBaselines": [
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwErpReadService.p",
+      "baselineSha256": "8d7d6da8069bdee82e5c4c95fca3df643e918ae10b96ef22d8a77459ac7bd3cc",
+      "candidateSha256": "9bdf97039d504714c4393c3a15c201430914c6255a86d4c12b2a4e791874dc04",
+      "patch": "patches/CiwErpReadService.p.patch"
+    },
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwCadastrosCrud.p",
+      "baselineSha256": "62cc9bdd4dc11b316f2c541e33ce09fb1506f7013b751dcdc1e75ffdf767c330",
+      "candidateSha256": "63dcfd6e30bac1ad75c5bb2b726e3ba6b07d2ed29d053efc98bf0373c89bef59",
+      "patch": "patches/CiwCadastrosCrud.p.patch"
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeCiwErpQuery.php",
+      "baselineSha256": "4b772859b435de0b0eaac360bf581400f8df771b8eeb7af037f43f53d659b0a9",
+      "candidateSha256": "2ce8596e144417d31b9e1a8014feaab9671be73be7e78fe86bebc79f8e3ee16c",
+      "patch": "patches/RuntimeCiwErpQuery.php.patch"
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeApiEntityActionService.php",
+      "baselineSha256": "6f52ddca37b15b3494989b71b6f7ac05ce3b73c31d4562db62a61edd48ed51ff",
+      "candidateSha256": "08a7077ec0fd4d8f9d122aac5d3a081fc025e8f815c110b80ec3f87d70bcb00d",
+      "patch": "patches/RuntimeApiEntityActionService.php.patch"
+    }
+  ],
+  "sourcePatch": "metadata/source-patch-proposal.json",
+  "sourcePatchGate": "132 evidence only; root publishes140, append2 must be rebased in NEW companion without modifying this freeze",
+  "canonicalWrites": false,
+  "published": false
+}

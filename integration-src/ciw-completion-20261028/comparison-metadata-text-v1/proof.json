@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "at": "2026-10-29T02:52:43.273925+00:00",
+  "sourceFreezeSha256": "17acb3059051f6eb87f3aef20ba1f7c79aae6de05c52d208dd8748a350a2d6e0",
+  "closedDisplayPaths": 24,
+  "perDraft": 12,
+  "rootInventoryOrCanonicalWrites": false,
+  "productChanged": false,
+  "sourceFreezeChanged": false,
+  "wholeJsonReversalExact": true,
+  "baselineMojibakeWitness": true,
+  "candidateDisplayAccentsCorrect": true,
+  "executedTest": "PASS24closed-display-paths; wholeJSONreversalexact; no product/database text changed",
+  "files": [
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\comparison-metadata-text-v1\\container_custos_comparacao_real-builder-draft.json",
+      "sha256": "f3157f4c41a181ba9cd0e3fa2894ad956ebae3127665913e9a215332832a423c",
+      "sourceSha256": "fbfb56bf643f5c0c7133c6e52883e30af1882a3fec51fc25d63112dc04204c6c"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\comparison-metadata-text-v1\\container_custos_comparacao_dolar-builder-draft.json",
+      "sha256": "16a3583b4bf57f361eeef3980fa098b442610f29edff261ef9d7303db84d7ded",
+      "sourceSha256": "0d65e009f5c73b293273ee0438338a5cf1b46b15647bf9d4307b3c0ee2a06cbd"
+    }
+  ]
+}

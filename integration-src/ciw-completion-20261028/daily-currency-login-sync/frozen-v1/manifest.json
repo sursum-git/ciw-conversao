@@ -1,0 +1,237 @@
+{
+  "status": "CANDIDATE_READY_INCREMENTAL_HELD_PHYSICAL_WRAPPER",
+  "domain": "daily-currency-login-sync",
+  "programCodeReserved": "op1054",
+  "metadataAdditions": 0,
+  "canonicalWrites": false,
+  "network": false,
+  "official12_2ProductionCandidate": "PENDING_ROOT",
+  "baselineFiles": [
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwCotacoesService.p",
+      "baselineFile": "baseline-exact/CiwCotacoesService.p",
+      "baselineSha256": "64c35d1616afb509836665bf8550341d705a487bdb12d56c8df0ded66ba61a4a",
+      "candidateFile": "candidate-exact/CiwCotacoesService.p",
+      "candidateSha256": "0f9683eaf6cc09bb6627df182b4a4a7f5437f5f3347fdba043bab70f7baf5ea8"
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeCiwCotacaoAudit.php",
+      "baselineFile": "baseline-exact/RuntimeCiwCotacaoAudit.php",
+      "baselineSha256": "bace517346f4f3282d659a98be5c6f6e028491948fb1346afc7128a8d4ed2336",
+      "candidateFile": "candidate-exact/RuntimeCiwCotacaoAudit.php",
+      "candidateSha256": "99737df043dafa89657a140d4c30c38a69fac5e9e5141dccbf569380bfcb8949"
+    }
+  ],
+  "files": [
+    {
+      "path": "abl/CiwCotacaoHistoryParticipant.p",
+      "sha256": "f9a89a338cdd95b347fb00944309abaa465ad88242ca33480a83db3ee8681101",
+      "bytes": 15561
+    },
+    {
+      "path": "abl/CiwDailyCurrencyErpParticipant.p",
+      "sha256": "c1e7b018b0389e3a4ae7f4fdde2f874f840dc2a06725c8b0d8950c1c099c7fbe",
+      "bytes": 13819
+    },
+    {
+      "path": "abl/CiwDailyCurrencyHistoryCollector.p",
+      "sha256": "462779ddd8a0da41e59353c756033de64def50bd0e7bed6b9d9404bc0cc7251b",
+      "bytes": 4823
+    },
+    {
+      "path": "baseline-exact/CiwCotacoesService.p",
+      "sha256": "64c35d1616afb509836665bf8550341d705a487bdb12d56c8df0ded66ba61a4a",
+      "bytes": 15187
+    },
+    {
+      "path": "baseline-exact/RuntimeCiwCotacaoAudit.php",
+      "sha256": "bace517346f4f3282d659a98be5c6f6e028491948fb1346afc7128a8d4ed2336",
+      "bytes": 6662
+    },
+    {
+      "path": "baselines-seam.json",
+      "sha256": "2bcfda660dcbc641d5a2490bbda8a28a4852349892f3d357c05d48c0e8722f9c",
+      "bytes": 568
+    },
+    {
+      "path": "baselines.json",
+      "sha256": "ce3f4b7fe29d40461577b2198f74044bb39e5f1c8c4b97a03d6e40c6a9cf84b0",
+      "bytes": 1641
+    },
+    {
+      "path": "byte-patch-plan.json",
+      "sha256": "5e813acd6729a919a082cbd2ee4c3a2a78eb70a583b42da7768038444a55aae6",
+      "bytes": 35479
+    },
+    {
+      "path": "candidate-exact/CiwCotacoesService.p",
+      "sha256": "0f9683eaf6cc09bb6627df182b4a4a7f5437f5f3347fdba043bab70f7baf5ea8",
+      "bytes": 1398
+    },
+    {
+      "path": "candidate-exact/RuntimeCiwCotacaoAudit.php",
+      "sha256": "99737df043dafa89657a140d4c30c38a69fac5e9e5141dccbf569380bfcb8949",
+      "bytes": 7187
+    },
+    {
+      "path": "CiwCotacoesService.p.review.patch",
+      "sha256": "590a94e467dbb1412ffec081ae75b008d0009e55d20ab7ff37fa805442b90062",
+      "bytes": 16767
+    },
+    {
+      "path": "DESIGN.md",
+      "sha256": "519ae3884592b9d8d2fcad2e19036a066d72cf47857b4fb252f7a339db636072",
+      "bytes": 4035
+    },
+    {
+      "path": "php/DailyCurrencySyncAudit.php",
+      "sha256": "7dad99ba4a1349579d27dc9b1bb8e99ff09422e1754e46d5cbc5581bfd7401f5",
+      "bytes": 6915
+    },
+    {
+      "path": "php/DailyCurrencySyncCoordinator.php",
+      "sha256": "727febfd6751723d99418e1c435f7524f4ae7efa3653d5cc05e8a728a0c59755",
+      "bytes": 6451
+    },
+    {
+      "path": "PLAN.md",
+      "sha256": "5693bc8db5f5411aef27d5187174706efbe087e85dec8851444d1d0af8132646",
+      "bytes": 1948
+    },
+    {
+      "path": "probes/ems2-literal-cases.json",
+      "sha256": "5feb9172002e49e390922f3fdfac12b01ffc6c617902e50b9f14c992941ad2f8",
+      "bytes": 1877
+    },
+    {
+      "path": "probes/EMS_SQL_PROOF_REQUEST.md",
+      "sha256": "65258891374042c497cde72f5728964c893401a5430e60555f7f435ff227c03c",
+      "bytes": 2257
+    },
+    {
+      "path": "REVIEW.md",
+      "sha256": "de84bee8eaefad3113df0d5d398004cab3a54c763285d82eaba8013a3d264799",
+      "bytes": 3062
+    },
+    {
+      "path": "RuntimeCiwCotacaoAudit.php.review.patch",
+      "sha256": "7324f43df9a5b94756f9847c1393deb6d7bc7fbf0b8a0d79fc0162017522c858",
+      "bytes": 1488
+    },
+    {
+      "path": "test-inputs/CiwCotacoesTest.p",
+      "sha256": "2dd84d8d32acb42961edf77efad93ab80fc9ddc43a740a9c03d61502f104835f",
+      "bytes": 10936
+    },
+    {
+      "path": "test-inputs/ContainerCostInvalidation.p",
+      "sha256": "380cd70517722a5b2b0bd1b59ca17684f9c416191021e1bb3d13ed2595c15320",
+      "bytes": 3365
+    },
+    {
+      "path": "test-list.json",
+      "sha256": "fb623f9c62c5dde35e00382271c1ad814975f91de364012462aedfbe47c6fdc6",
+      "bytes": 1754
+    },
+    {
+      "path": "tests/abl/CurrencyDailyRootTransactionTest.p",
+      "sha256": "577cd0fbf5f9358b1ab71ad353b9286dfcf82057b53a590c09dc2c5f53b69a39",
+      "bytes": 4220
+    },
+    {
+      "path": "tests/abl/CurrencyErpTestTables.i",
+      "sha256": "d495ab87f40f404e6756ed3416750c47ec5c556e7653ce4967a22ec36833aba0",
+      "bytes": 1595
+    },
+    {
+      "path": "tests/abl/CurrencyHistoryParticipantTest.p",
+      "sha256": "09c8ff512a5333d848cdd365e639871b67b5a45e85f2e1f6caf3fdb18e4a8212",
+      "bytes": 4518
+    },
+    {
+      "path": "tests/abl/DailyCurrencyErpParticipantTest.p",
+      "sha256": "d4aa0a662349797bee7d18d79e82ca821e7f772f848379739786f0d4d457394f",
+      "bytes": 7135
+    },
+    {
+      "path": "tests/abl/DailyCurrencyHistoryCollectorTest.p",
+      "sha256": "aa1d624f669decc30ec79a12d2ac1d6d0f1070478b68e3f8b18f247e0a15ce40",
+      "bytes": 5223
+    },
+    {
+      "path": "tests/bootstrap.php",
+      "sha256": "21f619d41c478c9143c963048512741a6777012d8ec50b6e0a7d4414d81aa4ec",
+      "bytes": 458
+    },
+    {
+      "path": "tests/DailyCurrencySyncAuditTest.php",
+      "sha256": "69f3c41231c1565e364e6a39320785250af227720ec6ab9ff14b553189c6f92c",
+      "bytes": 4946
+    },
+    {
+      "path": "tests/DailyCurrencySyncCoordinatorTest.php",
+      "sha256": "e4a20103ef030d1aa1fb2d7d784911337c5a604303b6bb82de0f62017d8356e2",
+      "bytes": 9452
+    },
+    {
+      "path": "tests/fixtures/erp-insert-actual.json",
+      "sha256": "029be12c290e4f4d74bcb417db8c123321979ff3da107f6ea20fa49868c53791",
+      "bytes": 4469
+    },
+    {
+      "path": "tests/fixtures/erp-update-actual.json",
+      "sha256": "2f23ddcaed4c56d811d8d9e98d1c09a9ccec97eaad137dccac7894cc93d69c86",
+      "bytes": 6757
+    },
+    {
+      "path": "tests/fixtures/history-actual.json",
+      "sha256": "c7d418529f23ccfffbe2af752926d91878c68475de16f65b1cef3179f6eeaa46",
+      "bytes": 485
+    },
+    {
+      "path": "tests/local-compile-list.json",
+      "sha256": "ec85d0c18a528c75ebc8069bcc0eb935143b7b66eb0518fff7839403aca48cde",
+      "bytes": 1121
+    },
+    {
+      "path": "tests/run-local-collector.ps1",
+      "sha256": "b80730fe1402e36a0c5033b38d7d13195857effe4efac8c50dc1aa5cc7206eef",
+      "bytes": 2273
+    },
+    {
+      "path": "tests/run-local-erp.ps1",
+      "sha256": "29594ee3175f5cd557f89016a1e87753fda4c86582c947865a419fc52a1d430a",
+      "bytes": 2546
+    },
+    {
+      "path": "tests/run-local-root.ps1",
+      "sha256": "0a2ab969a32b0260125fa29f23233236d09b855bb8c1dae4d16be81c5ab81098",
+      "bytes": 2549
+    },
+    {
+      "path": "tests/run-local-seam.ps1",
+      "sha256": "967107649c71526b9b410e768299f8701e8c771b2e66477acb95836550c8369f",
+      "bytes": 2718
+    }
+  ],
+  "proofManifest": {
+    "path": ".runtime/ciw-completion-20261028/daily-currency-login-sync/incremental-v1/local-evidence.json",
+    "sha256": "a1a6a01597493076e3e1d9a16d6e81945895f5ff16c90bfa794102af186371a3"
+  },
+  "checks": {
+    "local12_8Compiles": 10,
+    "ttSuites": 5,
+    "ttLogs": 20,
+    "ttChecks": 1072,
+    "phpTests": 903,
+    "phpAssertions": 5962
+  },
+  "gates": [
+    "OFFICIAL12_2",
+    "SQL_EXTENT_INSERT_LITERAL",
+    "TRIGGER_DRIVER_RUNTIME_CLOSURE",
+    "MANUAL_DAILY_CONCURRENCY",
+    "ROOT_WRAPPER_AND_GLOBAL_BUDGET",
+    "ACTUAL144_8_METADATA_AFTER_ENDPOINT"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "relative": "docs/paridade-demo-producao.md",
+  "role": "parity-documentation",
+  "baselineSha256": "9386954538c919367e6ef1b5bae9fe80b1b4d0da9e274231349b1d9e2ee411f0",
+  "candidateSha256": "e4e2a4ef8f32ec8f1f695044e742981d6183865a99dc8e7ee9592612692cd9ab",
+  "hunks": [
+    {
+      "baselineStart": 108311,
+      "baselineEnd": 108311,
+      "candidateStart": 108311,
+      "candidateEnd": 108904,
+      "beforeBase64": "",
+      "afterBase64": "DQp8IDIwMjYtMTAtMjkgfCBDb250ZXh0byBpbnRlZ2VyUmFuZ2UgcmVhZG9ubHkgbmF0aXZvOyB1c28gcHJlcGFyYWRvMTA1NiB8IGV4YW1wbGVzL3N1cHBsaWVyLWRpc2NvdW50cy1pbnRlZ2VyLXJhbmdlLmpzb24gZSBjaW5jbyBmb250ZXMgbmF0aXZhcyB8IFBlcmZpbCBnZW5lcmljbyByZWFkb25seUNSVUQvbmFvUEssIHNlbSBvcGNvZXMgcmVtb3Rhcy9hcnF1aXZvcy9wcm9jZXNzbzsgRW5naW5lIGUgaGVscGVycHJpdmFkbyByZXV0aWxpemFkb3M7IHNlbSBtb2NrL2Zyb250ZW5kcGFyYWxlbG8gfCBwcmVwYXJhZG8gfCBDb21wb3IgZmlsdGVyT25seSArIGhlbHBlcjEwNTYgZSByZWJhc2VhciBBY3Rpb24vUXVlcnkxMyBwb3IgaHVua3M7IHZhbGlkYXIgcnVudGltZSByZWFsIGFudGVzIHB1YmxpY2FyIHwgMzF0ZXN0ZXMgbmF0aXZvcy9BSlYvcHJvdG90aXBvcyBlIEZVTEw5MDMvNjAwNTsyNzhBcHBzdGFnZTsgZXhlbXBsb3MwLy05L01JTiBzaW50ZXRpY29zLCBzZW0gYWZpcm1hciBsaW5oYXMgcmVhaXMvRE9NIHB1YmxpY2Fkby4gU2tpbGwgbG9jYWwgZGUgcGFyaWRhZGUgaW5kaXNwb25pdmVsLCBjaGVja2xpc3Qgc2VndWlkbyB8DQo="
+    }
+  ],
+  "unchangedRanges": [
+    {
+      "baselineStart": 0,
+      "baselineEnd": 108311,
+      "candidateStart": 0,
+      "candidateEnd": 108311,
+      "sha256": "9386954538c919367e6ef1b5bae9fe80b1b4d0da9e274231349b1d9e2ee411f0"
+    }
+  ],
+  "applyOnlyByExactBaseline": true
+}

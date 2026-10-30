@@ -1,0 +1,480 @@
+{
+  "state": "PREPARED_HELD_REBASE_AFTER12_AND_MANAGER_REVIEW",
+  "sourceBaseline": "official11; candidate only, must compose NF12 delta before final official13 release",
+  "canonicalWrites": false,
+  "networkExecuted": false,
+  "businessWrites": false,
+  "programCodes": [
+    "op1040",
+    "op1041"
+  ],
+  "compiles": [
+    "sursum-api/programs/CiwErpReadService.p",
+    "sursum-api/programs/CiwCadastrosCrud.p",
+    "sursum-api/programs/ContainersVersionHistoryLabels.p",
+    "sursum-api/programs/ContainersVersionService.p",
+    "sursum-api/programs/ContainersVersionHistoryService.p",
+    "sursum-api/programs/ContainersVersionAuxHistoryService.p",
+    "sursum-api/programs/ImportDiscountsCollector.p",
+    "sursum-api/programs/ImportDiscountsReadService.p",
+    "sursum-api/programs/CostDistributionEligibleCollector.p",
+    "sursum-api/programs/CostDistributionEligibleReadService.p",
+    "sursum-api/programs/CostDistributionLedgerCollector.p",
+    "sursum-api/programs/CostDistributionLedgerReadService.p",
+    "sursum-api/programs/SampleContainerItemsCollector.p",
+    "sursum-api/programs/SampleContainerItemsReadService.p",
+    "sursum-api/programs/ContainersVersionComparisonProjection.p",
+    "sursum-api/programs/ContainersVersionComparisonMaterializer.p",
+    "sursum-api/programs/ContainersVersionComparisonService.p",
+    "sursum-api/programs/ContainersVersionComparisonApi.p",
+    "sursum-api/programs/ContainersCustoCalculator.p",
+    "ComparisonProjectionTest.p",
+    "ComparisonRoundingEvidenceTest.p",
+    "ComparisonItemJoinTest.p",
+    "ComparisonMaterializerTest.p",
+    "ComparisonReaderTest.p",
+    "ComparisonSqlObservedTest.p",
+    "ComparisonServiceTest.p",
+    "ContainersVersionHistoryTest.p",
+    "ContainersVersionTest.p",
+    "CiwErpReadTest.p",
+    "PurchaseItemsReadTest.p",
+    "ContainersVersionAuxHistoryTest.p",
+    "ImportDiscountsLabelsTest.p",
+    "ImportDiscountsReadTest.p",
+    "CostDistributionEligibleTest.p",
+    "CostDistributionLedgerTest.p",
+    "ItemCostManualReadTest.p",
+    "SampleContainerItemsTest.p",
+    "ExpenseTaxRelationsReadTest.p",
+    "ContainersVersionFixture.p"
+  ],
+  "expectedCompileCount": 39,
+  "compileNumDbs": 1,
+  "testNumDbs": 0,
+  "suites": 19,
+  "checksPerCombination": 923,
+  "combinations": 4,
+  "expectedChecks": 3692,
+  "expectedLogs": 76,
+  "builder205ePrivateTestOnly": true,
+  "builderCanonicalIntegrationRequiredBeforeMetadata": true,
+  "orphanMaster404Gate": true,
+  "files": [
+    {
+      "relative": "ApiExecutionRepository.cls",
+      "sha256": "10019842295b4330c6fdc78d7df6e44095e38ad24eac7f97dc07fd6e024735af",
+      "bytes": 34549
+    },
+    {
+      "relative": "CiwErpReadTest.p",
+      "sha256": "321e247e04e397c8fde6541bdb0c6fda06a67f27d47d7496b52b5fa9cae82a34",
+      "bytes": 8050
+    },
+    {
+      "relative": "ComparisonCoreFixture.i",
+      "sha256": "bb0f0fabcbab26e837f921233f0747b698ea5d4e112de8f7ca4c17897f1f2c7a",
+      "bytes": 1519
+    },
+    {
+      "relative": "ComparisonItemJoinTest.p",
+      "sha256": "75941bea44db5a4ed932ae57cf8f511b3b67451e7e30f0b761756eb61860ddd0",
+      "bytes": 3059
+    },
+    {
+      "relative": "ComparisonMaterializerTest.p",
+      "sha256": "d073735845417381ad0b836a0c7294af7efc95ecd1f78081ca2fb1ce4f8ce910",
+      "bytes": 4909
+    },
+    {
+      "relative": "ComparisonProjectionTest.p",
+      "sha256": "03b7d72f2fa06ee1696a1b0a9021f43463053e2716cb764ed6c45eef5374d080",
+      "bytes": 4313
+    },
+    {
+      "relative": "ComparisonReaderTest.p",
+      "sha256": "f647e5d6532d98b41368007f9da60af87e71f09488555932327fd9db23131adc",
+      "bytes": 4146
+    },
+    {
+      "relative": "ComparisonRoundingEvidenceTest.p",
+      "sha256": "cb540ecb3abe3ce444bd0e3c7e50ed60f0d48109de073214faa061950479f99d",
+      "bytes": 4568
+    },
+    {
+      "relative": "ComparisonServiceTest.p",
+      "sha256": "952af6d8f1ff1cdf5eb88d1eb83ab4590a0605df63447cd437ab3909ebef38e8",
+      "bytes": 7308
+    },
+    {
+      "relative": "ComparisonSnapshotTestTables.i",
+      "sha256": "24480f748f0b71bf28b27ef4abf117540238ebc8cdf992a4e883940ab907262d",
+      "bytes": 2145
+    },
+    {
+      "relative": "ComparisonSqlObservedTest.p",
+      "sha256": "8afda4db9e164cad170352eef47c4ea4e9ad8ad94eb07e381bf6f8beb0f70f3d",
+      "bytes": 3117
+    },
+    {
+      "relative": "Compile.p",
+      "sha256": "4194805531a29ed27f37c7f4c990c9e61854b0d94bf378d461312bd7f4f7545a",
+      "bytes": 18180
+    },
+    {
+      "relative": "ContainersVersionAuxHistoryTest.p",
+      "sha256": "b2194fabceea481a7b482be23ce826fab859d519aa10c87de48aa0b4a3111060",
+      "bytes": 12557
+    },
+    {
+      "relative": "ContainersVersionComparisonTable.i",
+      "sha256": "71895e8fe06bff39219d0f4491a300e47a956125d07a491babea94d16d307199",
+      "bytes": 927
+    },
+    {
+      "relative": "ContainersVersionCompositionFixture.i",
+      "sha256": "de6d1f189e5d2486bd55ba8671434af9cdf33bb14f821b4308b7c962281d2207",
+      "bytes": 3911
+    },
+    {
+      "relative": "ContainersVersionFixture.p",
+      "sha256": "8a51aa36071a0b3767e5c087a9a3722ffb8ca8d8be1b1860c0855ab57283b42b",
+      "bytes": 8767
+    },
+    {
+      "relative": "ContainersVersionHistoryTest.p",
+      "sha256": "e9cde6bcf0b4a5942c7bb991800be9b5220c233d284d905324044517808b5075",
+      "bytes": 12154
+    },
+    {
+      "relative": "ContainersVersionHistoryTestTables.i",
+      "sha256": "24480f748f0b71bf28b27ef4abf117540238ebc8cdf992a4e883940ab907262d",
+      "bytes": 2145
+    },
+    {
+      "relative": "ContainersVersionRuntimeFixture.i",
+      "sha256": "e70eca87a0d00e774fb1aa96650616ac2dc3ce3ce87ae27a66a0498ccf160377",
+      "bytes": 9260
+    },
+    {
+      "relative": "ContainersVersionTest.p",
+      "sha256": "80504be79a48caf04126b5a196441ae17730d4b409f273855f027d967f905f9f",
+      "bytes": 15651
+    },
+    {
+      "relative": "ContainersVersionTestTables.i",
+      "sha256": "24480f748f0b71bf28b27ef4abf117540238ebc8cdf992a4e883940ab907262d",
+      "bytes": 2145
+    },
+    {
+      "relative": "CostDistributionEligibleTest.p",
+      "sha256": "2b2b086f7591bc726e13d8f94c86aea680a9acc4e4bfada21c999d8c4af5b05b",
+      "bytes": 9830
+    },
+    {
+      "relative": "CostDistributionFixtures.i",
+      "sha256": "0e036f617c489921415c7eda8777f0c6f241d1dcc97093079449c217c642d9dd",
+      "bytes": 11192
+    },
+    {
+      "relative": "CostDistributionLedgerTest.p",
+      "sha256": "a168ddcc4a6fb3d5bb4d52c71cfc97399254e7da7f76f85470c0f970aca41d67",
+      "bytes": 7347
+    },
+    {
+      "relative": "DynamicQueryRequestModel.cls",
+      "sha256": "447e0aec7069516ca770ec352a16466973940725e3a175a32880fbb25cbe0c7a",
+      "bytes": 10458
+    },
+    {
+      "relative": "DynamicQueryRequestSerializer.cls",
+      "sha256": "a35ad277e74791851a5c07ec4373df05261425a29f841d839659d41d187b7ab6",
+      "bytes": 18356
+    },
+    {
+      "relative": "ExpenseTaxRelationsReadTest.p",
+      "sha256": "963675398b7fbd708401cb8335569006060c1f43d718b8de42d2002cdec1dc80",
+      "bytes": 7113
+    },
+    {
+      "relative": "ImportDiscountCurrentFixtures.i",
+      "sha256": "5057a938491603a8ab25ca1608a995edb761d53a54f193283601b2d533e1590f",
+      "bytes": 711
+    },
+    {
+      "relative": "ImportDiscountsLabelsTest.p",
+      "sha256": "71a08b4c66f434bd1ccd596c7b6b618ec678d615b7469e021bfe8275946c9ef0",
+      "bytes": 6112
+    },
+    {
+      "relative": "ImportDiscountSourceFixtures.i",
+      "sha256": "076f38cb3427a465a871cc1789880948ada244367afebe4df2976f245f362f4e",
+      "bytes": 898
+    },
+    {
+      "relative": "ImportDiscountsReadTest.p",
+      "sha256": "cc83171fa68ddc298d674e03b4e9f935318acaa5a5c56393de5a9534c65ff1b0",
+      "bytes": 11642
+    },
+    {
+      "relative": "ItemCostManualReadTest.p",
+      "sha256": "724b45dace64b64f6ce51723d75d42966b6c845694c43619259cbca0441cfaad",
+      "bytes": 7357
+    },
+    {
+      "relative": "LedgerFixtures.i",
+      "sha256": "99401916bd23c998e28de730cf5e3b2d235b17248298343da4615cf98a05ed6a",
+      "bytes": 403
+    },
+    {
+      "relative": "PasoeExecutionContext.cls",
+      "sha256": "9ea6b5ef99d7e888dbdc5c90cf779de243c49df78469ba3ed360251ef2209fb8",
+      "bytes": 13420
+    },
+    {
+      "relative": "PasoeRuntimeIdentity.cls",
+      "sha256": "76a735350bed6f483289fda10e4089e977790e10199b6c24887e56c4fb5fcd28",
+      "bytes": 1483
+    },
+    {
+      "relative": "PurchaseItemsReadTest.p",
+      "sha256": "a8c05e089db3aaed7bc4a5ea97ae5fd28e4b1298b0032d78924e7d85094def7c",
+      "bytes": 3475
+    },
+    {
+      "relative": "Regression.p",
+      "sha256": "ef69972f5537d91e62915c0cc04ce4caab99699f2f68d7fac80dbb483bceb41d",
+      "bytes": 356
+    },
+    {
+      "relative": "SampleContainerItemsFixtures.i",
+      "sha256": "d50f56b6c387c300ddc8b30e7ae314ed8cc23aadb34738b2fb6b958b46acb71d",
+      "bytes": 4212
+    },
+    {
+      "relative": "SampleContainerItemsTest.p",
+      "sha256": "edd7e959c258a6dcf8f8a78bd9c89070e22210ce9d04f8c3e55272219973c88a",
+      "bytes": 8715
+    },
+    {
+      "relative": "SelectedExpenseDefaultsTests.i",
+      "sha256": "39e93d91d2a73123ef415df0bdcdc3cc383a7d7f0a7c101c1414662e20b18ade",
+      "bytes": 12202
+    },
+    {
+      "relative": "SelectionRootTests.i",
+      "sha256": "dae82a6f03d464c69dc027324dfb5a484c3e1fb31ed301fd0e168c926fb22a8c",
+      "bytes": 866
+    },
+    {
+      "relative": "sursum-api/includes/ContainerApiIdentity.i",
+      "sha256": "77d71a5bb0367ffd35c2039396b42d0ed76d3b9b72868dfd5181270068ec7d1a",
+      "bytes": 2830
+    },
+    {
+      "relative": "sursum-api/includes/ContainerCustoBoundary.i",
+      "sha256": "bfe5d0a4714b13a6aae6776f6d9eccd6a7712b9d67a409db1b269a1ddefcbf11",
+      "bytes": 5135
+    },
+    {
+      "relative": "sursum-api/includes/ContainerExpenseBatchSnapshot.i",
+      "sha256": "5e4a204ab904d8c6e277281c6c2c7923c193f9d6c36c3ce971017c444b35c75b",
+      "bytes": 2570
+    },
+    {
+      "relative": "sursum-api/includes/ContainerExpenseDefaultsPlan.i",
+      "sha256": "ac98ab4e6eb379784017aa6c011aea57342cccefeda8281e00a1002db6b3e88d",
+      "bytes": 8047
+    },
+    {
+      "relative": "sursum-api/includes/ContainerFinancePolicy.i",
+      "sha256": "27c4710b9c3dc051aaa2c6867118f3a502f7b2f9bf0a816a2cd4f301a8213b35",
+      "bytes": 1551
+    },
+    {
+      "relative": "sursum-api/includes/ContainerMaintenancePolicy.i",
+      "sha256": "1668f425cfc83663f2e0adc301a3e08ae15c6794054988986ffb8ce700955b03",
+      "bytes": 1671
+    },
+    {
+      "relative": "sursum-api/includes/ContainerProcessBoundary.i",
+      "sha256": "6db9a0e2ed85aa442a5f345312bb59fca2b60294cb287ce02fba91f4d9c0b614",
+      "bytes": 5027
+    },
+    {
+      "relative": "sursum-api/includes/ContainersVersionAuxHistoryTables.i",
+      "sha256": "d930b8806ef0a065ebc31c071f7ed5d9400a6c9c10eea8400521c53c3c403be6",
+      "bytes": 1463
+    },
+    {
+      "relative": "sursum-api/includes/ContainersVersionComparisonTable.i",
+      "sha256": "71895e8fe06bff39219d0f4491a300e47a956125d07a491babea94d16d307199",
+      "bytes": 927
+    },
+    {
+      "relative": "sursum-api/includes/ContainersVersionHistoryTable.i",
+      "sha256": "e5285fabef060dd20905aced163059e735078873901b11052ab23c39836d326b",
+      "bytes": 1440
+    },
+    {
+      "relative": "sursum-api/includes/ContainerTransactionAudit.i",
+      "sha256": "08451f0d2f01e2f45f689695ba5e16f34c96e79ce06253a7e801bc815a8dab66",
+      "bytes": 7889
+    },
+    {
+      "relative": "sursum-api/includes/CostDistributionEligibleTable.i",
+      "sha256": "fa332e1e40971d9eefa7f9d267176346b76219f5f2f1c901eb506f120f241afc",
+      "bytes": 568
+    },
+    {
+      "relative": "sursum-api/includes/CostDistributionLedgerTable.i",
+      "sha256": "084ca89e33c18fcba7ea3cf96ec213046056c0db52b74c924a4b7fc977745323",
+      "bytes": 394
+    },
+    {
+      "relative": "sursum-api/includes/ImportDiscountsReadTables.i",
+      "sha256": "f1d31239a2f8c669218af4d7f968f45b8600bd4a12dd7a087e043b0726b1fbc1",
+      "bytes": 1255
+    },
+    {
+      "relative": "sursum-api/includes/parametros_ima.i",
+      "sha256": "766ee9e284d97070dfee97e9d46bfedf1983e092c82a9fbf4145fcaf90dd4e47",
+      "bytes": 12505
+    },
+    {
+      "relative": "sursum-api/includes/PurchaseItemSnapshot.i",
+      "sha256": "f7e81fbcd3fbc53f124c60d99c3065b73e2d876665ce900f8772ed1f25d7350d",
+      "bytes": 4464
+    },
+    {
+      "relative": "sursum-api/includes/PurchaseItemsReadBuffer.i",
+      "sha256": "ed977f03a856adb2f5582565b4e0a45a9520961b8262cc1d54f18d70b5b4c70f",
+      "bytes": 2065
+    },
+    {
+      "relative": "sursum-api/includes/PurchaseItemValueRules.i",
+      "sha256": "1ae6949d39fa07286e0e1c76776b9bb508de6715d1494858d7ac53c1d591c894",
+      "bytes": 3932
+    },
+    {
+      "relative": "sursum-api/includes/PurchaseJsonContract.i",
+      "sha256": "5a15f9429a83f9781a250ed3fc2ae9a855fb5d639e91a1afdeb8a99836c25935",
+      "bytes": 1345
+    },
+    {
+      "relative": "sursum-api/includes/PurchaseOrderSnapshot.i",
+      "sha256": "98b8da213a666f328747d0698608954ab646ef60fc2c86e313f6d156b3fa573a",
+      "bytes": 1687
+    },
+    {
+      "relative": "sursum-api/includes/SampleContainerItemsTable.i",
+      "sha256": "e945db7e9ef46a364f08720196f217a8453ed94ed56e13110f5cf0671107e494",
+      "bytes": 264
+    },
+    {
+      "relative": "sursum-api/programs/CiwCadastrosCrud.p",
+      "sha256": "325746bfbf416dab5b5b05614e937bd9d45203240f215cd779484584a28a427b",
+      "bytes": 18306
+    },
+    {
+      "relative": "sursum-api/programs/CiwErpReadService.p",
+      "sha256": "e5f550193203ec740ed2f234e3157ad87c5b0c4290b70a0afce078cfe0da9173",
+      "bytes": 33273
+    },
+    {
+      "relative": "sursum-api/programs/ContainersCustoCalculator.p",
+      "sha256": "9ba548fb0c49f7448b944a47a883200738ba7faf4f0d8111f13c08cb765ee6ac",
+      "bytes": 23352
+    },
+    {
+      "relative": "sursum-api/programs/ContainersItemCustoPhysical.i",
+      "sha256": "c4cc307895afc1a5539bd985a2416e35f2f114508c12a0944dc431aeadb56248",
+      "bytes": 6675
+    },
+    {
+      "relative": "sursum-api/programs/ContainersVersionAuxHistoryService.p",
+      "sha256": "6294d044179fa0faa3d990d1c034f6e39c66f0490342e9bf1722682135abdf67",
+      "bytes": 9829
+    },
+    {
+      "relative": "sursum-api/programs/ContainersVersionComparisonApi.p",
+      "sha256": "71040ad5ada2480aa0d386a10d507853d176dd6aac6679ebc5532a596953ca7a",
+      "bytes": 2469
+    },
+    {
+      "relative": "sursum-api/programs/ContainersVersionComparisonMaterializer.p",
+      "sha256": "e997fce0d59d9664fc053eca332914295140f71574216340f070cd4db2ae537b",
+      "bytes": 8232
+    },
+    {
+      "relative": "sursum-api/programs/ContainersVersionComparisonProjection.p",
+      "sha256": "146472ab7c98938a105e5f6653a7eb9799da18bf26722ca4bdaa43d24ec808ff",
+      "bytes": 5649
+    },
+    {
+      "relative": "sursum-api/programs/ContainersVersionComparisonService.p",
+      "sha256": "a5618108eda35bd542754ac156b86983add93318cdf2413e7c087b954f87e65c",
+      "bytes": 7620
+    },
+    {
+      "relative": "sursum-api/programs/ContainersVersionContextBody.i",
+      "sha256": "50e236f982a5683d8a259a1ccc173e1948525fd3ed7142be78265c916aecb231",
+      "bytes": 1809
+    },
+    {
+      "relative": "sursum-api/programs/ContainersVersionHistoryLabels.p",
+      "sha256": "bce8fc89f40c69d3407fd6e5e789dfd6ee84d6191eeeffd1da131a7e886678b8",
+      "bytes": 4107
+    },
+    {
+      "relative": "sursum-api/programs/ContainersVersionHistoryService.p",
+      "sha256": "8b6bfd5a7c7e824ec1b91a637db738c62053ee8b5f4a8534d6e2ed764b309672",
+      "bytes": 8502
+    },
+    {
+      "relative": "sursum-api/programs/ContainersVersionService.p",
+      "sha256": "beeda66faf880b271263ac98617046a0ecb1790c994ef576153fd9343885e590",
+      "bytes": 47711
+    },
+    {
+      "relative": "sursum-api/programs/CostDistributionEligibleCollector.p",
+      "sha256": "5435da46101508ca45ec5f1a129dee8cad83b863eea3ee87fe68ca5c2e4de1e2",
+      "bytes": 7813
+    },
+    {
+      "relative": "sursum-api/programs/CostDistributionEligibleReadService.p",
+      "sha256": "6c01b0eb3f8b72f7003e1b004a638bea8f5b99956227f207283dc62ba8b82d3f",
+      "bytes": 3581
+    },
+    {
+      "relative": "sursum-api/programs/CostDistributionLedgerCollector.p",
+      "sha256": "03cf680d0f6e8a9be892ec5ac6e7b0553e820591cbe652d3e8477687937b42d1",
+      "bytes": 2985
+    },
+    {
+      "relative": "sursum-api/programs/CostDistributionLedgerReadService.p",
+      "sha256": "3db516e5ef52dd874ac3e5a5a7894fa86f278aa9a9df6ae597ba3ab6c3a0e3b2",
+      "bytes": 3921
+    },
+    {
+      "relative": "sursum-api/programs/ImportDiscountsCollector.p",
+      "sha256": "710e829b911874ce17f9976bcd478d558594fb49db5eeadffdd04a588c8c51f5",
+      "bytes": 5690
+    },
+    {
+      "relative": "sursum-api/programs/ImportDiscountsReadService.p",
+      "sha256": "ad50ae2fc4a6ae5f0c4045912443f0895b9c24afb673fb3c06ebcb1a4fe3a148",
+      "bytes": 6788
+    },
+    {
+      "relative": "sursum-api/programs/SampleContainerItemsCollector.p",
+      "sha256": "532e8154c07fb0cf5de120ae5b81d3363a4b4016d70a796e6887044537cf4679",
+      "bytes": 5026
+    },
+    {
+      "relative": "sursum-api/programs/SampleContainerItemsReadService.p",
+      "sha256": "9947a2dfef0f478e5cdaac0cf38afdd03356fa502dc72939166470d37e275d54",
+      "bytes": 3978
+    }
+  ]
+}

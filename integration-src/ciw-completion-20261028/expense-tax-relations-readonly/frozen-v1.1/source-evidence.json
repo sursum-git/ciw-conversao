@@ -1,0 +1,81 @@
+{
+  "status": "READONLY_PRODUCT_PREPARED_NOT_PUBLISHED",
+  "origin": "grid_despesas_impostos",
+  "projection": [
+    "despesa_id",
+    "imposto_id"
+  ],
+  "physicalPk": [
+    "despesa_id",
+    "imposto_id",
+    "empresa_id"
+  ],
+  "physicalInts": "nullable/signedInt32; zero preserved; no FK inferred",
+  "labels": [
+    "Despesa Id",
+    "Imposto Id"
+  ],
+  "lookup": "actual collected class empty; no descriptions/options added",
+  "currentDifferentProduct": "cd0093/1.0.1 company/expense owned impostos collection",
+  "identityGate": "all bounded filtered rows checked before pagination; duplicate nullable PK409, no partial, no dedup/ROWID",
+  "usageNavigationEvidence": "usage/navigation not proven; root evaluates alongside scope; no inactivity or publication block inferred from missing local inbound",
+  "formRemaining": "create/update/delete not converted by this readonly product; legacy edit navigation omits/wrongly maps PK",
+  "sources": [
+    {
+      "path": "D:\\opencode\\conversao-sc\\sources\\scriptcase\\phase1\\grid_despesas_impostos\\index.php",
+      "sha256": "52e80cac02d7a56397f958b81d4a448db72551fd3cdd75d9fb676a42d34706c9"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\sources\\scriptcase\\phase1\\grid_despesas_impostos\\grid_despesas_impostos_grid.class.php",
+      "sha256": "cc05ac638d5e783ecf7ddeea0ac9420c6b287119acff41a1a3c905d0eabcf158"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\sources\\scriptcase\\ciw-completion-expense-tax-lookups-20261028\\grid_despesas_impostos\\grid_despesas_impostos_lookup.class.php",
+      "sha256": "0338ba51658129c761e0bcb4164e88f02fb4319bfc5d47396a6ea1a31e610b26"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\despesas\\schema\\schema-despesas_impostos.json",
+      "sha256": "fbcd75213e89c7a2011f830d38e8b4da4a33fa041369f478ce219ff7c2e7eca5"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\sources\\scriptcase\\phase1\\form_despesas_impostos\\form_despesas_impostos.php",
+      "sha256": "b791ae19db7f273e23b7915e37a4d5d3e80bbb581d0dbe1da54e7054724a8ec6"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\sources\\scriptcase\\phase1\\form_despesas_impostos\\form_despesas_impostos_apl.php",
+      "sha256": "18854a102a0b90bd75dcacf1498a6324ddfff89ab1207671554edeb2a6a6c50c"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\sources\\scriptcase\\phase1\\form_despesas_impostos\\form_despesas_impostos_form0.php",
+      "sha256": "6f210faa4a02435570e8580b8dde1db23128fc7c27787d151429bcdc69ce6c67"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\sources\\scriptcase\\phase1\\form_despesas_impostos\\index.php",
+      "sha256": "512082fa5dfe9cdfdeb32bd8ad91d7f96a62608564cb39e83266e38bbc0d592c"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-current\\catalog-current.json",
+      "sha256": "62bceb9def2e4153705f4bb646ef6a651c8ccd85a7c6be256dee66635ffecda8"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-current\\expense-company-program.json",
+      "sha256": "915135cd1ecd9607c0d65ef221ca26d5b030415044ef0eecfdcf1464780f7545"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-current\\expense-tax-entities.json",
+      "sha256": "5ea3663309c95fc320e936b126f38463de0680a3b78be666bca60248e14c4c69"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-current\\sanitization.json",
+      "sha256": "dfb449b2b12aa7af91ed7881606d781b8d586c5442c0fc77fa3d6b6b94f1e17a"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-current\\sources-current.json",
+      "sha256": "38c47d34491c42bbe24f683f74fef5e065aa8188c73378556176872fe68de5ee"
+    }
+  ],
+  "canonical9ReceiptSha256": "c13456e621f618cc8652a7b9dda70d5d60e867665cdac0e3e8e4bcba5df33bdb",
+  "networkExecuted": false,
+  "businessWritten": false,
+  "inventoryChanged": false
+}

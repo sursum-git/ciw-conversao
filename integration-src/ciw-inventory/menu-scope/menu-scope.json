@@ -1,0 +1,3423 @@
+{
+  "generatedAt": "2026-10-30T14:15:11.033803+00:00",
+  "basis": {
+    "inventory": "integration-src/ciw-inventory/inventory-reviewed.json",
+    "roots": [
+      "menu_ctrl_importacao"
+    ],
+    "coverage": "Fechamento transitivo das referências estáticas de aplicações Scriptcase.",
+    "limitation": "O SSH do servidor Scriptcase estava indisponível na geração; confirmar posteriormente as entradas ativas da tabela dinâmica itens_menu."
+  },
+  "counts": {
+    "inScope": 156,
+    "byStatus": {
+      "Convertido": 53,
+      "Parcial": 13,
+      "Preparado": 8,
+      "Pendente": 78,
+      "Triagem": 4
+    },
+    "outsideScope": 106,
+    "unresolvedReferences": 0
+  },
+  "inScope": [
+    {
+      "application": "bl_sinaliz",
+      "depth": 1,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — publicado e validado em PASOE, runtime e sessão LDAP no escopo MED",
+      "family": "Visões operacionais e sinalizadores",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "ciw.sinalizadores-importacao-med",
+      "remaining": "Sem pendência obrigatória neste recorte MED. Configuração: escrita/auditoria validadas em TT, sem alterar os cinco registros reais; Controles permanece final.",
+      "calledBy": [
+        "cons_itens_proc_compra_sinaliz",
+        "cons_proc_compra_sinaliz",
+        "grid_pp_container",
+        "menu_ctrl_importacao"
+      ],
+      "calls": [
+        "cons_itens_proc_compra_sinaliz",
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "cons_proc_compra_sinaliz",
+        "grid_pp_container"
+      ]
+    },
+    {
+      "application": "cons_item_qt_imp",
+      "depth": 1,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido e validado readonly — geral MED e contextual",
+      "family": "Pedidos de importação e alocação",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.quantidades-importadas-med",
+      "remaining": "Recorte concluído. Variante union separada; Controles permanece pendência final.",
+      "calledBy": [
+        "menu_ctrl_importacao"
+      ],
+      "calls": []
+    },
+    {
+      "application": "form_motivos_desconto",
+      "depth": 1,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — CRUD/lote e auditoria validados",
+      "family": "Cadastros e parâmetros compartilhados",
+      "technicalType": "Formulário em lote",
+      "targetScreen": "ciw.motivos-desconto",
+      "remaining": "Tela publicada pelo Builder; CRUD, conflito, rollback e limpeza comprovados no PASOE real. Conferência visual ainda pendente; integração adicional de permissões ficou para o final.",
+      "calledBy": [
+        "form_descontos_importacao",
+        "form_descontos_importacao_item",
+        "grid_motivos_desconto",
+        "menu_ctrl_importacao"
+      ],
+      "calls": [
+        "bl_timeout",
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "form_tipos_anexo",
+      "depth": 1,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — CRUD/lote",
+      "family": "Cadastros e parâmetros compartilhados",
+      "technicalType": "Formulário em lote",
+      "targetScreen": "ciw.tipos-anexo",
+      "remaining": "Manter o lote transacional e auditoria por registro.",
+      "calledBy": [
+        "form_anexos_container",
+        "form_anexos_proc_compra",
+        "form_anexos_proc_compra_item",
+        "grid_tipos_anexo",
+        "menu_ctrl_importacao"
+      ],
+      "calls": [
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "grid_PUB_sinalizadores_importacao",
+      "depth": 1,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — publicado e validado em PASOE, runtime e sessão LDAP no escopo MED",
+      "family": "Visões operacionais e sinalizadores",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.sinalizadores-importacao",
+      "remaining": "Sem pendência obrigatória neste recorte MED. Configuração: escrita/auditoria validadas em TT, sem alterar os cinco registros reais; Controles permanece final.",
+      "calledBy": [
+        "menu_ctrl_importacao"
+      ],
+      "calls": [
+        "bl_timeout",
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "form_PUB_sinalizadores_importacao"
+      ]
+    },
+    {
+      "application": "grid_despesas",
+      "depth": 1,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — CRUD/lote",
+      "family": "Cadastros e parâmetros compartilhados",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.despesas",
+      "remaining": "Manter; validar regressao quando a base mudar.",
+      "calledBy": [
+        "grid_despesas_container_bkp",
+        "grid_despesas_proc_compra",
+        "menu_ctrl_importacao"
+      ],
+      "calls": [
+        "form_despesas",
+        "grid_empresas_despesa"
+      ]
+    },
+    {
+      "application": "grid_empresas",
+      "depth": 1,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — CRUD/lote",
+      "family": "Cadastros e parâmetros compartilhados",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.empresas",
+      "remaining": "Manter; validar regressao quando a base mudar.",
+      "calledBy": [
+        "menu_ctrl_importacao"
+      ],
+      "calls": [
+        "form_empresas"
+      ]
+    },
+    {
+      "application": "grid_procs_compra",
+      "depth": 1,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — painel MED e fluxos contextuais publicados; Controles adiado",
+      "family": "Pedidos de importação e alocação",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.processos-compra-med",
+      "remaining": "Controles permanece como pendência final. Consulta de alocações dos itens publicada; liberação humana específica registrada no recorte de26/10. Outras origens e fluxos independentes continuam separados.",
+      "calledBy": [
+        "bl_voltar_selecao_ped_importacao",
+        "cons_cta_corren_fornec_imp_embarcado",
+        "cons_cta_corren_fornec_imp_entregue_old",
+        "cons_cta_corren_fornec_imp_nao_embarcado",
+        "cons_cta_fornec_imp_entregue_bkp",
+        "cons_itens_aptos_distr_custo",
+        "form_pub_procs_compra",
+        "menu_ctrl_importacao"
+      ],
+      "calls": [
+        "bl_painel_proc_compra",
+        "cons_fornecedor",
+        "form_pub_procs_compra"
+      ]
+    },
+    {
+      "application": "bl_painel_proc_compra",
+      "depth": 2,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — painel MED e fluxos contextuais publicados; Controles adiado",
+      "family": "Pedidos de importação e alocação",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "ciw.processos-compra-med",
+      "remaining": "Controles permanece como pendência final. Consulta de alocações dos itens publicada; liberação humana específica registrada no recorte de26/10. Outras origens e fluxos independentes continuam separados.",
+      "calledBy": [
+        "grid_procs_compra"
+      ],
+      "calls": [
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "menu_proc_compra"
+      ]
+    },
+    {
+      "application": "cons_fornecedor",
+      "depth": 2,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — consulta somente leitura validada",
+      "family": "Cotações e referências ERP",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.fornecedores",
+      "remaining": "Campos e predicado legado preservados; leitura/detalhe/filtros/paginação validados no PASOE e runtime. Conferência visual pendente; permissões CIW ao final.",
+      "calledBy": [
+        "cons_docum_est_importacao",
+        "cons_docum_est_importacao_old",
+        "form_pp_container",
+        "form_pp_container_cotacoes",
+        "form_proc_compra",
+        "form_pub_procs_compra",
+        "grid_pp_container",
+        "grid_procs_compra"
+      ],
+      "calls": []
+    },
+    {
+      "application": "cons_fornecedor_estrangeiro",
+      "depth": 2,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — consulta somente leitura validada",
+      "family": "Cotações e referências ERP",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.fornecedores-estrangeiros",
+      "remaining": "Campos e predicado legado preservados; leitura/detalhe/filtros/paginação validados no PASOE e runtime. Conferência visual pendente; permissões CIW ao final.",
+      "calledBy": [
+        "cons_cta_corren_custo_distr",
+        "cons_cta_corren_custo_distr_bkp",
+        "cons_cta_corren_fornec_imp",
+        "cons_cta_corren_fornec_imp_nao_embarcado",
+        "cons_cta_corren_fornec_imp_tudo",
+        "cons_distr_custo_geracao_saldo",
+        "cons_itens_aptos_distr_custo",
+        "cons_tit_ap_container",
+        "form_cons_fornec_imp",
+        "form_cta_corren_fornec_imp",
+        "grid_descontos_importacao"
+      ],
+      "calls": [
+        "bl_timeout"
+      ]
+    },
+    {
+      "application": "cons_itens_proc_compra_sinaliz",
+      "depth": 2,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — publicado e validado em PASOE, runtime e sessão LDAP no escopo MED",
+      "family": "Visões operacionais e sinalizadores",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.alertas-importacao-med",
+      "remaining": "Sem pendência obrigatória neste recorte MED. Configuração: escrita/auditoria validadas em TT, sem alterar os cinco registros reais; Controles permanece final.",
+      "calledBy": [
+        "bl_painel_proc_compra_sinaliz",
+        "bl_sinaliz"
+      ],
+      "calls": [
+        "bl_sinaliz",
+        "bl_timeout",
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "form_itens_proc_compra"
+      ]
+    },
+    {
+      "application": "cons_proc_compra_sinaliz",
+      "depth": 2,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — publicado e validado em PASOE, runtime e sessão LDAP no escopo MED",
+      "family": "Visões operacionais e sinalizadores",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.alertas-importacao-med",
+      "remaining": "Sem pendência obrigatória neste recorte MED. Configuração: escrita/auditoria validadas em TT, sem alterar os cinco registros reais; Controles permanece final.",
+      "calledBy": [
+        "bl_painel_proc_compra_sinaliz",
+        "bl_sinaliz",
+        "bl_voltar_selecao_ped_importacao_sinaliz"
+      ],
+      "calls": [
+        "bl_painel_proc_compra_sinaliz",
+        "bl_sinaliz",
+        "bl_timeout",
+        "form_proc_compra"
+      ]
+    },
+    {
+      "application": "form_PUB_sinalizadores_importacao",
+      "depth": 2,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — publicado e validado em PASOE, runtime e sessão LDAP no escopo MED",
+      "family": "Visões operacionais e sinalizadores",
+      "technicalType": "Formulário individual",
+      "targetScreen": "ciw.sinalizadores-importacao",
+      "remaining": "Sem pendência obrigatória neste recorte MED. Configuração: escrita/auditoria validadas em TT, sem alterar os cinco registros reais; Controles permanece final.",
+      "calledBy": [
+        "grid_PUB_sinalizadores_importacao"
+      ],
+      "calls": [
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "form_despesas",
+      "depth": 2,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — CRUD/lote",
+      "family": "Cadastros e parâmetros compartilhados",
+      "technicalType": "Formulário individual",
+      "targetScreen": "ciw.despesas",
+      "remaining": "Manter; validar regressao quando a base mudar.",
+      "calledBy": [
+        "grid_despesas"
+      ],
+      "calls": [
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "form_empresas",
+      "depth": 2,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — CRUD/lote",
+      "family": "Cadastros e parâmetros compartilhados",
+      "technicalType": "Formulário individual",
+      "targetScreen": "ciw.empresas",
+      "remaining": "Manter; validar regressao quando a base mudar.",
+      "calledBy": [
+        "grid_empresas"
+      ],
+      "calls": [
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "form_hist_cotacoes_bc",
+      "depth": 2,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — CRUD manual e auditoria validados",
+      "family": "Cotações e referências ERP",
+      "technicalType": "Formulário individual",
+      "targetScreen": "ciw.cotacoes-bc",
+      "remaining": "CRUD manual e limpeza validados no PASOE; serie9999/rollback somente em TTs. Conferencia visual e permissoes adicionais pendentes. Atualizacao automatica BC e processo separado.",
+      "calledBy": [
+        "cons_hist_cotacoes_bc"
+      ],
+      "calls": [
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "form_pub_procs_compra",
+      "depth": 2,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — painel MED e fluxos contextuais publicados; Controles adiado",
+      "family": "Pedidos de importação e alocação",
+      "technicalType": "Formulário individual",
+      "targetScreen": "ciw.processos-compra-med",
+      "remaining": "Controles permanece como pendência final. Consulta de alocações dos itens publicada; liberação humana específica registrada no recorte de26/10. Outras origens e fluxos independentes continuam separados.",
+      "calledBy": [
+        "grid_procs_compra",
+        "menu_proc_compra"
+      ],
+      "calls": [
+        "cons_fornecedor",
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "grid_procs_compra"
+      ]
+    },
+    {
+      "application": "grid_empresas_despesa",
+      "depth": 2,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — CRUD/lote",
+      "family": "Cadastros e parâmetros compartilhados",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.empresas-despesa",
+      "remaining": "Manter; validar regressao quando a base mudar.",
+      "calledBy": [
+        "grid_despesas"
+      ],
+      "calls": [
+        "form_empresas_despesa"
+      ]
+    },
+    {
+      "application": "bl_painel_proc_compra_sinaliz",
+      "depth": 3,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — publicado e validado em PASOE, runtime e sessão LDAP no escopo MED",
+      "family": "Visões operacionais e sinalizadores",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "ciw.alertas-importacao-med",
+      "remaining": "Sem pendência obrigatória neste recorte MED. Configuração: escrita/auditoria validadas em TT, sem alterar os cinco registros reais; Controles permanece final.",
+      "calledBy": [
+        "cons_proc_compra_sinaliz"
+      ],
+      "calls": [
+        "cons_itens_proc_compra_sinaliz",
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "cons_proc_compra_sinaliz",
+        "grid_pp_container",
+        "menu_proc_compra_sinaliz"
+      ]
+    },
+    {
+      "application": "bl_ponte_painel_container",
+      "depth": 3,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — navegação",
+      "family": "Containers e navegação contextual",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "ciw.container-painel",
+      "remaining": "Link contextual consulta → painel entregue.",
+      "calledBy": [
+        "cons_pp_container_filtro_fornecedor",
+        "grid_pp_container"
+      ],
+      "calls": [
+        "menu_container"
+      ]
+    },
+    {
+      "application": "form_empresas_despesa",
+      "depth": 3,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — CRUD/lote",
+      "family": "Cadastros e parâmetros compartilhados",
+      "technicalType": "Formulário individual",
+      "targetScreen": "ciw.empresas-despesa",
+      "remaining": "Manter; validar regressao quando a base mudar.",
+      "calledBy": [
+        "grid_empresas_despesa"
+      ],
+      "calls": [
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "form_itens_proc_compra",
+      "depth": 3,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — itens MED, amostras e anexos contextuais validados",
+      "family": "Pedidos de importação e alocação",
+      "technicalType": "Formulário individual",
+      "targetScreen": "ciw.proc-compra-itens",
+      "remaining": "Outras origens e fluxos independentes permanecem separados.",
+      "calledBy": [
+        "cons_itens_proc_compra_sinaliz",
+        "grid_itens_container",
+        "grid_itens_container_comparacao",
+        "grid_itens_container_comparacao_bkp",
+        "grid_itens_proc_compra"
+      ],
+      "calls": [
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "form_pub_coloracoes",
+        "form_pub_formatos_amostra",
+        "grid_PUB_envios_amostras_repres",
+        "grid_anexos_proc_compra_item"
+      ]
+    },
+    {
+      "application": "form_tipos_versao_custo",
+      "depth": 3,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — CRUD/lote e auditoria validados",
+      "family": "Cadastros e parâmetros compartilhados",
+      "technicalType": "Formulário individual",
+      "targetScreen": "ciw.tipos-versao-custo",
+      "remaining": "Tela publicada pelo Builder; CRUD, conflito, rollback e limpeza comprovados no PASOE real. Conferência visual ainda pendente; integração adicional de permissões ficou para o final.",
+      "calledBy": [
+        "cons_tipos_versao_custo",
+        "form_versoes_item_custo_container"
+      ],
+      "calls": [
+        "bl_timeout",
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "menu_proc_compra",
+      "depth": 3,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — painel MED e fluxos contextuais publicados; Controles adiado",
+      "family": "Pedidos de importação e alocação",
+      "technicalType": "Menu",
+      "targetScreen": "ciw.processos-compra-med",
+      "remaining": "Controles permanece como pendência final. Consulta de alocações dos itens publicada; liberação humana específica registrada no recorte de26/10. Outras origens e fluxos independentes continuam separados.",
+      "calledBy": [
+        "bl_painel_proc_compra"
+      ],
+      "calls": [
+        "bl_voltar_selecao_ped_importacao",
+        "cons_tit_ap_associados_pedido",
+        "form_pub_procs_compra",
+        "grid_anexos_proc_compra",
+        "grid_itens_proc_compra",
+        "menu"
+      ]
+    },
+    {
+      "application": "cons_tit_ap_associados_pedido",
+      "depth": 4,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — absorvido por Pagamentos do Processo de Compra — MED, com associação múltipla, estorno e auditoria publicados",
+      "family": "Financeiro e contas correntes",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.proc-compra-pagamentos",
+      "remaining": "Equivalência confirmada: títulos antecipados não estornados, contexto obrigatório do processo, associação/desvinculação atômica e logs antes/depois. Não criar fluxo paralelo; consultar ciw.proc-compra-pagamentos.",
+      "calledBy": [
+        "menu_proc_compra"
+      ],
+      "calls": [
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "cons_tit_ap_associar_pedido"
+      ]
+    },
+    {
+      "application": "form_pub_coloracoes",
+      "depth": 4,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — CRUD/lote e auditoria validados",
+      "family": "Cadastros e parâmetros compartilhados",
+      "technicalType": "Formulário individual",
+      "targetScreen": "ciw.coloracoes",
+      "remaining": "Tela publicada pelo Builder; CRUD, conflito, rollback e limpeza comprovados no PASOE real. Conferência visual ainda pendente; integração adicional de permissões ficou para o final.",
+      "calledBy": [
+        "form_itens_proc_compra",
+        "form_itens_proc_compra_amostra",
+        "grid_pub_coloracoes"
+      ],
+      "calls": []
+    },
+    {
+      "application": "form_pub_formatos_amostra",
+      "depth": 4,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — grade compartilhada, sequência, acesso, CRUD/auditoria e limpeza validados",
+      "family": "Amostras e desenhos",
+      "technicalType": "Formulário individual",
+      "targetScreen": "ciw.formatos-amostra",
+      "remaining": "Recorte concluído. Controles continua como pendência final.",
+      "calledBy": [
+        "form_itens_proc_compra",
+        "form_itens_proc_compra_amostra",
+        "grid_pub_formatos_amostra"
+      ],
+      "calls": [
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "form_situacoes_container",
+      "depth": 4,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — CRUD/lote e auditoria validados",
+      "family": "Cadastros e parâmetros compartilhados",
+      "technicalType": "Formulário individual",
+      "targetScreen": "ciw.situacoes-container",
+      "remaining": "Tela publicada pelo Builder; CRUD, conflito, rollback e limpeza comprovados no PASOE real. Conferência visual ainda pendente; integração adicional de permissões ficou para o final.",
+      "calledBy": [
+        "form_pp_container",
+        "form_pp_container_cotacoes",
+        "grid_situacoes_container"
+      ],
+      "calls": [
+        "bl_timeout",
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "grid_PUB_envios_amostras_repres",
+      "depth": 4,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — amostras contextuais MED e auditoria validadas",
+      "family": "Amostras e desenhos",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.proc-compra-amostras",
+      "remaining": "Fluxo contextual publicado e validado. Anexos contextuais publicados e validados; controlador independente de envios em lote permanece separado.",
+      "calledBy": [
+        "form_itens_proc_compra",
+        "form_itens_proc_compra_amostra"
+      ],
+      "calls": [
+        "bl_timeout",
+        "form_PUB_envios_amostras_repres"
+      ]
+    },
+    {
+      "application": "grid_anexos_proc_compra",
+      "depth": 4,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — anexos gerais MED publicados, validados e limpos",
+      "family": "Anexos e documentos",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.proc-compra-documentos",
+      "remaining": "Nenhuma pendência obrigatória deste recorte; outras aplicações/origens continuam separadas.",
+      "calledBy": [
+        "form_anexos_proc_compra",
+        "menu_proc_compra",
+        "menu_proc_compra_sinaliz"
+      ],
+      "calls": [
+        "form_anexos_proc_compra"
+      ]
+    },
+    {
+      "application": "grid_anexos_proc_compra_item",
+      "depth": 4,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — anexos contextuais MED com arquivos e auditoria validados",
+      "family": "Anexos e documentos",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.proc-compra-anexos",
+      "remaining": "Outras origens e fluxos não vinculados a este contexto permanecem fora do escopo.",
+      "calledBy": [
+        "form_anexos_proc_compra_item",
+        "form_itens_proc_compra",
+        "form_itens_proc_compra_amostra",
+        "grid_itens_proc_compra"
+      ],
+      "calls": [
+        "form_anexos_proc_compra_item"
+      ]
+    },
+    {
+      "application": "grid_itens_proc_compra",
+      "depth": 4,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — itens MED, amostras e anexos contextuais validados",
+      "family": "Pedidos de importação e alocação",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.proc-compra-itens",
+      "remaining": "Outras origens e fluxos independentes permanecem separados.",
+      "calledBy": [
+        "menu_proc_compra",
+        "menu_proc_compra_sinaliz"
+      ],
+      "calls": [
+        "bl_timeout",
+        "cons_itens_compra_alocado",
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "form_itens_proc_compra",
+        "form_itens_proc_compra_amostra",
+        "grid_anexos_proc_compra_item",
+        "grid_anexos_proc_compra_item_amostra"
+      ]
+    },
+    {
+      "application": "menu_proc_compra_sinaliz",
+      "depth": 4,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — publicado e validado em PASOE, runtime e sessão LDAP no escopo MED",
+      "family": "Visões operacionais e sinalizadores",
+      "technicalType": "Menu",
+      "targetScreen": "ciw.alertas-importacao-med",
+      "remaining": "Sem pendência obrigatória neste recorte MED. Configuração: escrita/auditoria validadas em TT, sem alterar os cinco registros reais; Controles permanece final.",
+      "calledBy": [
+        "bl_painel_proc_compra_sinaliz"
+      ],
+      "calls": [
+        "bl_selecionado_pagto_proc_compra",
+        "bl_voltar_selecao_ped_importacao_sinaliz",
+        "blank",
+        "grid_anexos_proc_compra",
+        "grid_itens_proc_compra",
+        "menu"
+      ]
+    },
+    {
+      "application": "bl_rastreabilidade_dolar",
+      "depth": 5,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — leitura",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "ciw.container-rastro-dolar",
+      "remaining": "Manter calculo central; processos associados continuam separados.",
+      "calledBy": [
+        "menu_container"
+      ],
+      "calls": []
+    },
+    {
+      "application": "bl_resumo_container",
+      "depth": 5,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — leitura",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "ciw.container-resumo",
+      "remaining": "Resumo publicado; cálculos em serviços centrais. Processos continuam separados.",
+      "calledBy": [
+        "menu_container"
+      ],
+      "calls": [
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "bl_selecionado_pagto_proc_compra",
+      "depth": 5,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — navegação/consulta MED absorvida por tela nativa existente",
+      "family": "Financeiro e contas correntes",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "ciw.proc-compra-pagamentos",
+      "remaining": "Fonte revisada: ponte somente sessão/filtrosIN/redirecionamento. ParaMED a consulta/retorno está absorvida pela grade/readget/delete existente. Nenhum writer é invocado na entrada do blank; não copiar bibliotecas financeiras nem limitar histórico por sessão antiga.",
+      "calledBy": [
+        "cons_tit_ap",
+        "menu_proc_compra_sinaliz"
+      ],
+      "calls": [
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "cons_tit_ap"
+      ]
+    },
+    {
+      "application": "bl_sincronizar_impostos",
+      "depth": 5,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — comando fiscal central publicado e validado",
+      "family": "Despesas e fiscal do container",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "ciw.container-sincronizar-impostos",
+      "remaining": "ProcessEngine op1017 ja publicado: contexto container fixo, servico fiscal central, confirmacao Kendo, auditoria e cenario novo concluido/limpo em16/10. Nao reexecutar.",
+      "calledBy": [
+        "menu_container"
+      ],
+      "calls": [
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "bl_voltar_selecao_ped_importacao_sinaliz",
+      "depth": 5,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — publicado e validado em PASOE, runtime e sessão LDAP no escopo MED",
+      "family": "Visões operacionais e sinalizadores",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "ciw.sinalizadores-importacao-med",
+      "remaining": "Sem pendência obrigatória neste recorte MED. Configuração: escrita/auditoria validadas em TT, sem alterar os cinco registros reais; Controles permanece final.",
+      "calledBy": [
+        "menu_proc_compra_sinaliz"
+      ],
+      "calls": [
+        "cons_proc_compra_sinaliz"
+      ]
+    },
+    {
+      "application": "cons_itens_compra_alocado",
+      "depth": 5,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — consulta contextual MED publicada e validada",
+      "family": "Pedidos de importação e alocação",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.proc-compra-alocacoes",
+      "remaining": "Controles permanece na lista final; fluxos independentes não ampliados.",
+      "calledBy": [
+        "grid_itens_proc_compra"
+      ],
+      "calls": [
+        "bl_timeout",
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "cons_tit_ap_associar_pedido",
+      "depth": 5,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — absorvido pelo seletor contextual da tela Pagamentos do Processo de Compra — MED",
+      "family": "Financeiro e contas correntes",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.proc-compra-pagamentos",
+      "remaining": "Equivalência confirmada: o seletor preserva títulos antecipados não estornados, exclui vínculos existentes e associa em lote dentro da transação auditada. Não criar fluxo paralelo; consultar ciw.proc-compra-pagamentos.",
+      "calledBy": [
+        "cons_tit_ap_associados_pedido"
+      ],
+      "calls": [
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "form_PUB_envios_amostras_repres",
+      "depth": 5,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — amostras contextuais MED e auditoria validadas",
+      "family": "Amostras e desenhos",
+      "technicalType": "Formulário individual",
+      "targetScreen": "ciw.proc-compra-amostras",
+      "remaining": "Fluxo contextual publicado e validado. Anexos contextuais publicados e validados; controlador independente de envios em lote permanece separado.",
+      "calledBy": [
+        "grid_PUB_envios_amostras_repres"
+      ],
+      "calls": [
+        "bl_timeout",
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "form_anexos_proc_compra",
+      "depth": 5,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — anexos gerais MED publicados, validados e limpos",
+      "family": "Anexos e documentos",
+      "technicalType": "Formulário individual",
+      "targetScreen": "ciw.proc-compra-documentos",
+      "remaining": "Nenhuma pendência obrigatória deste recorte; outras aplicações/origens continuam separadas.",
+      "calledBy": [
+        "grid_anexos_proc_compra"
+      ],
+      "calls": [
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "form_tipos_anexo",
+        "grid_anexos_proc_compra"
+      ]
+    },
+    {
+      "application": "form_anexos_proc_compra_item",
+      "depth": 5,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — anexos contextuais MED com arquivos e auditoria validados",
+      "family": "Anexos e documentos",
+      "technicalType": "Formulário individual",
+      "targetScreen": "ciw.proc-compra-anexos",
+      "remaining": "Outras origens e fluxos não vinculados a este contexto permanecem fora do escopo.",
+      "calledBy": [
+        "grid_anexos_proc_compra_item",
+        "grid_anexos_proc_compra_item_amostra"
+      ],
+      "calls": [
+        "app_login",
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "form_tipos_anexo",
+        "grid_anexos_proc_compra_item"
+      ]
+    },
+    {
+      "application": "form_itens_proc_compra_amostra",
+      "depth": 5,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — amostras contextuais MED e auditoria validadas",
+      "family": "Amostras e desenhos",
+      "technicalType": "Formulário individual",
+      "targetScreen": "ciw.proc-compra-itens",
+      "remaining": "Fluxo contextual publicado e validado. Anexos contextuais publicados e validados; controlador independente de envios em lote permanece separado.",
+      "calledBy": [
+        "grid_itens_proc_compra"
+      ],
+      "calls": [
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "form_pub_coloracoes",
+        "form_pub_formatos_amostra",
+        "grid_PUB_envios_amostras_repres",
+        "grid_anexos_proc_compra_item"
+      ]
+    },
+    {
+      "application": "grid_anexos_proc_compra_item_amostra",
+      "depth": 5,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — anexos contextuais MED com arquivos e auditoria validados",
+      "family": "Anexos e documentos",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.proc-compra-anexos",
+      "remaining": "Outras origens e fluxos não vinculados a este contexto permanecem fora do escopo.",
+      "calledBy": [
+        "grid_itens_proc_compra"
+      ],
+      "calls": [
+        "form_anexos_proc_compra_item"
+      ]
+    },
+    {
+      "application": "grid_itens_container_comparacao",
+      "depth": 5,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — leitura",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.container-comparativos",
+      "remaining": "Manter calculo central; processos associados continuam separados.",
+      "calledBy": [
+        "bl_chama_grid_itens_container_comparacao",
+        "bl_distribuir_custo_contr",
+        "ctrl_simul_distr_custo",
+        "menu_container"
+      ],
+      "calls": [
+        "bl_chama_grid_itens_container_comparacao",
+        "bl_distribuir_custo_contr",
+        "bl_item_custos",
+        "bl_timeout",
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "ctrl_simul_distr_custo",
+        "form_itens_proc_compra"
+      ]
+    },
+    {
+      "application": "cons_itens",
+      "depth": 6,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — consulta somente leitura validada",
+      "family": "Cotações e referências ERP",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.itens-erp",
+      "remaining": "Campos e predicado legado preservados; leitura/detalhe/filtros/paginação validados no PASOE e runtime. Conferência visual pendente; permissões CIW ao final.",
+      "calledBy": [
+        "form_itens_media_custo"
+      ],
+      "calls": []
+    },
+    {
+      "application": "form_despesas_container",
+      "depth": 6,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — CRUD individual de despesa",
+      "family": "Despesas e fiscal do container",
+      "technicalType": "Formulário individual",
+      "targetScreen": "ciw.container-despesas",
+      "remaining": "Manutenção individual publicada e testada. Edição em lote e seleção de despesas padrão continuam com análise própria.",
+      "calledBy": [
+        "grid_despesas_container",
+        "grid_despesas_container_bkp",
+        "grid_despesas_container_distr_custo"
+      ],
+      "calls": [
+        "bl_timeout",
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "bl_selecao_pagto_proc_compra",
+      "depth": 7,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — navegação/consulta MED absorvida por tela nativa existente",
+      "family": "Financeiro e contas correntes",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "ciw.proc-compra-pagamentos",
+      "remaining": "Fonte revisada: ponte somente sessão/filtrosNOTIN/redirecionamento. ParaMED a seleção está absorvida pelo Incluir/MultiSelect existente, contexto físico obrigatório e opções globalmente livres. Nenhum código/publicação novo; não declarar igualdadeSQLlinhaalinha nem ampliar empresa.",
+      "calledBy": [
+        "cons_tit_ap"
+      ],
+      "calls": [
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "cons_tit_ap"
+      ]
+    },
+    {
+      "application": "control_selec_proc_compra",
+      "depth": 7,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — alocação MED publicada, validada e cenário limpo em26/10",
+      "family": "Pedidos de importação e alocação",
+      "technicalType": "Controle de parâmetros/ação",
+      "targetScreen": "ciw.container-alocar-itens",
+      "remaining": "Nenhum trabalho obrigatório neste fluxo; não repetir publicação, concessões ou cenário limpo. Controles permanece final.",
+      "calledBy": [
+        "grid_itens_container",
+        "grid_itens_container_bkp",
+        "grid_itens_container_old"
+      ],
+      "calls": [
+        "bl_timeout",
+        "grid_itens_proc_compra_selecao"
+      ]
+    },
+    {
+      "application": "form_itens_container",
+      "depth": 7,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — CRUD individual de alocação",
+      "family": "Pedidos de importação e alocação",
+      "technicalType": "Formulário individual",
+      "targetScreen": "ciw.container-itens",
+      "remaining": "CRUD publicado1.0.1, saldo/locks/fiscal/financeiro/auditoria e teste real limpo. Fluxos globais de pedidos e seleção em lote não se confundem com este formulário.",
+      "calledBy": [
+        "grid_itens_container",
+        "grid_itens_container_bkp",
+        "grid_itens_container_old"
+      ],
+      "calls": [
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "form_anexos_container",
+        "grid_descontos_importacao_itens",
+        "grid_itens_container"
+      ]
+    },
+    {
+      "application": "grid_itens_proc_compra_selecao",
+      "depth": 8,
+      "reach": "chamada transitiva",
+      "status": "Convertido",
+      "state": "Convertido — alocação MED publicada, validada e cenário limpo em26/10",
+      "family": "Pedidos de importação e alocação",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.container-alocar-itens",
+      "remaining": "Nenhum trabalho obrigatório neste fluxo; não repetir publicação, concessões ou cenário limpo. Controles permanece final.",
+      "calledBy": [
+        "control_selec_proc_compra"
+      ],
+      "calls": [
+        "bl_timeout",
+        "grid_itens_container"
+      ]
+    },
+    {
+      "application": "cons_hist_cotacoes_bc",
+      "depth": 1,
+      "reach": "chamada transitiva",
+      "status": "Parcial",
+      "state": "Parcial — consulta absorvida na tela publicada",
+      "family": "Cotações e referências ERP",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.cotacoes-bc",
+      "remaining": "Consulta absorvida com oito campos, filtros e ordenacao configurados; read/get/filtro/paginacao validados por API. Processo Buscar cotacao BC publicado separadamente; conferencia visual/agrupamento legado pendentes.",
+      "calledBy": [
+        "menu_ctrl_importacao"
+      ],
+      "calls": [
+        "bl_atu_dolar_dia",
+        "form_hist_cotacoes_bc"
+      ]
+    },
+    {
+      "application": "cons_versoes_item_custo_container",
+      "depth": 1,
+      "reach": "chamada transitiva",
+      "status": "Parcial",
+      "state": "Parcial — leitura publicada; ações pendentes",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.container-versoes-custo",
+      "remaining": "Concluir geracao, distribuicao e validacao real dos servicos.",
+      "calledBy": [
+        "bl_ponte_versoes_item_custo_container",
+        "form_versoes_item_custo_container",
+        "menu_ctrl_importacao"
+      ],
+      "calls": [
+        "bl_timeout",
+        "cons_det_versoes_item_custo_container",
+        "form_versoes_item_custo_container"
+      ]
+    },
+    {
+      "application": "bl_atu_dolar_dia",
+      "depth": 2,
+      "reach": "chamada transitiva",
+      "status": "Parcial",
+      "state": "Parcial — processo BC publicado e cliente real validado",
+      "family": "Cotações e referências ERP",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "ciw.cotacoes-bc-buscar",
+      "remaining": "Cliente PHP consultado no BC real com TLS; gravacao automatica/auditoria validadas em TTs, sem inserir cotacao operacional para demonstracao. Conferencia visual e validacao de persistencia automatica no banco real continuam delimitadas.",
+      "calledBy": [
+        "cons_hist_cotacoes_bc"
+      ],
+      "calls": [
+        "menu_ctrl_importacao"
+      ]
+    },
+    {
+      "application": "bl_tela_login",
+      "depth": 2,
+      "reach": "chamada transitiva",
+      "status": "Parcial",
+      "state": "Parcial — login Progress validado; autorização positiva pendente",
+      "family": "Identidade e permissões",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "",
+      "remaining": "Login real tasilpar validado. Integração SQL e vínculo explícito tcassimiro/thiago.cassimiro publicados; faltam login humano integrado e logout. Permissões ficaram para a etapa final por instrução de20/10.",
+      "calledBy": [
+        "menu"
+      ],
+      "calls": []
+    },
+    {
+      "application": "grid_pp_container",
+      "depth": 2,
+      "reach": "chamada transitiva",
+      "status": "Parcial",
+      "state": "Parcial — leitura publicada; ações pendentes",
+      "family": "Containers e navegação contextual",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.containers",
+      "remaining": "Consulta pronta; concluir acoes de manutencao e Vendas.",
+      "calledBy": [
+        "bl_painel_proc_compra_sinaliz",
+        "bl_pp_container",
+        "bl_sinaliz",
+        "bl_voltar_selecao_container",
+        "cons_cta_corren_fornec_imp_embarcado",
+        "cons_cta_corren_fornec_imp_entregue",
+        "cons_cta_corren_fornec_imp_entregue_old",
+        "cons_cta_fornec_imp_entregue_bkp",
+        "cons_distr_custo_geracao_saldo",
+        "cons_itens_aptos_distr_custo",
+        "form_pp_container"
+      ],
+      "calls": [
+        "bl_ponte_painel_container",
+        "bl_selec_vendas_container",
+        "bl_sinaliz",
+        "cons_fornecedor",
+        "form_pp_container"
+      ]
+    },
+    {
+      "application": "form_pp_container",
+      "depth": 3,
+      "reach": "chamada transitiva",
+      "status": "Parcial",
+      "state": "Parcial — cabeçalho CRUD e comandos publicados",
+      "family": "Containers e navegação contextual",
+      "technicalType": "Formulário individual",
+      "targetScreen": "ciw.container-painel",
+      "remaining": "Painel1.0.6 com cabeçalho e comandos nativos;14abas. Conferir fluxos descendentes de pagamentos/NFs/distribuição/anexos antes de declarar conversão integral do painel.",
+      "calledBy": [
+        "cons_pp_container_filtro_fornecedor",
+        "grid_pp_container",
+        "menu_container"
+      ],
+      "calls": [
+        "bl_timeout",
+        "cons_fornecedor",
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "form_situacoes_container",
+        "grid_pp_container"
+      ]
+    },
+    {
+      "application": "menu_container",
+      "depth": 4,
+      "reach": "chamada transitiva",
+      "status": "Parcial",
+      "state": "Parcial — leitura publicada; ações pendentes",
+      "family": "Containers e navegação contextual",
+      "technicalType": "Menu",
+      "targetScreen": "ciw.container-painel",
+      "remaining": "Painel 1.0.7 com 14 abas no catálogo; confirmar cobertura funcional das ações, manutenção e arquivos antes de declarar conversão integral.",
+      "calledBy": [
+        "bl_painel_container",
+        "bl_painel_container_restore",
+        "bl_ponte_painel_container"
+      ],
+      "calls": [
+        "bl_chama_grid_itens_container",
+        "bl_ponte_versoes_item_custo_container",
+        "bl_rastreabilidade_dolar",
+        "bl_resumo_container",
+        "bl_selecionado_nf",
+        "bl_sincronizar_impostos",
+        "bl_voltar_selecao_container",
+        "cons_tit_ap_associados_container",
+        "form_anexos_container",
+        "form_pp_container",
+        "grid_despesas_container",
+        "grid_itens_container_comparacao",
+        "menu"
+      ]
+    },
+    {
+      "application": "cons_tit_ap_associados_container",
+      "depth": 5,
+      "reach": "chamada transitiva",
+      "status": "Parcial",
+      "state": "Parcial — leitura publicada; ações pendentes",
+      "family": "Financeiro e contas correntes",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.container-pagamentos",
+      "remaining": "Consulta22campos/read/get, inclusao via opcoes e desassociacao ja publicadas emop1006/1.0.2. Adiantamento/duplicidade/estorno/efeitos/Logs e limpeza comprovados em19/10. Nao manter pendencia generica de associacao/desassociacao. Conferir limite do ramo aposDI, selecao individual versus lote e acesso visual humano vigente.",
+      "calledBy": [
+        "cons_tit_ap_associar_container",
+        "cons_tit_ap_associar_container_apos_di",
+        "menu_container"
+      ],
+      "calls": [
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "cons_tit_ap_associar_container",
+        "cons_tit_ap_associar_container_apos_di"
+      ]
+    },
+    {
+      "application": "form_anexos_container",
+      "depth": 5,
+      "reach": "chamada transitiva",
+      "status": "Parcial",
+      "state": "Parcial — leitura publicada; ações pendentes",
+      "family": "Anexos e documentos",
+      "technicalType": "Formulário em lote",
+      "targetScreen": "ciw.container-anexos",
+      "remaining": "Implementar upload/download autenticado e vinculo; preservar acervo compartilhado.",
+      "calledBy": [
+        "cons_anexos_container",
+        "form_itens_container",
+        "menu_container"
+      ],
+      "calls": [
+        "bl_timeout",
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "form_tipos_anexo"
+      ]
+    },
+    {
+      "application": "grid_despesas_container",
+      "depth": 5,
+      "reach": "chamada transitiva",
+      "status": "Parcial",
+      "state": "Parcial — leitura publicada; ações pendentes",
+      "family": "Despesas e fiscal do container",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.container-despesas",
+      "remaining": "Integrar manutencao e comandos proprios.",
+      "calledBy": [
+        "bl_calcular_impostos_container",
+        "bl_criar_despesas_container",
+        "cons_selec_despesas",
+        "menu_container"
+      ],
+      "calls": [
+        "bl_calcular_impostos_container",
+        "bl_timeout",
+        "cons_calcs_imp_container",
+        "cons_despesas_container_memoria_calculo",
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "cons_selec_despesas",
+        "form_despesas_container",
+        "form_despesas_container_multi_reg"
+      ]
+    },
+    {
+      "application": "cons_docum_est_importacao",
+      "depth": 6,
+      "reach": "chamada transitiva",
+      "status": "Parcial",
+      "state": "Parcial — leitura publicada; ações pendentes",
+      "family": "Containers e navegação contextual",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.container-nfs",
+      "remaining": "Concluir associacao/desassociacao e regras de rateio.",
+      "calledBy": [
+        "bl_selecao_nf",
+        "bl_selecionado_nf"
+      ],
+      "calls": [
+        "bl_selecao_nf",
+        "bl_selecionado_nf",
+        "bl_timeout",
+        "cons_fornecedor",
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "cons_tit_ap",
+      "depth": 6,
+      "reach": "chamada transitiva",
+      "status": "Parcial",
+      "state": "Parcial — consulta e seletor de compra MED publicados",
+      "family": "Cotações e referências ERP",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.titulos-pagar-med",
+      "remaining": "Consulta independente e seletor contextual de compra MED publicados; novo cadastro ativo cd0108 publicado com aba Pagamentos. Conferir demais chamadores/origens, Itens/Anexos e o novo teste operacional antes de equivalência integral. IMA/seletor empresarial e permissões CIW gerais continuam separados.",
+      "calledBy": [
+        "bl_selecao_pagto_container",
+        "bl_selecao_pagto_proc_compra",
+        "bl_selecionado_pagto_container",
+        "bl_selecionado_pagto_proc_compra"
+      ],
+      "calls": [
+        "bl_selecao_pagto_container",
+        "bl_selecao_pagto_proc_compra",
+        "bl_selecionado_pagto_container",
+        "bl_selecionado_pagto_proc_compra",
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "grid_itens_container",
+      "depth": 6,
+      "reach": "chamada transitiva",
+      "status": "Parcial",
+      "state": "Parcial — leitura publicada; ações pendentes",
+      "family": "Containers e navegação contextual",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.container-itens",
+      "remaining": "Leitura/custos centrais e manutencao/alocacao individual publicadas; selecao/alocacao emlote tambem concluida separadamente emop1025/1.0.0 em26/10 com teste limpo. Nao manter selecao emlote como pendente generica. Calcular custo unitario/fechamento e demais acoes proprias ainda devem ser comparados por origem.",
+      "calledBy": [
+        "bl_chama_grid_itens_container",
+        "contr_item_custos",
+        "form_itens_container",
+        "grid_itens_proc_compra_selecao"
+      ],
+      "calls": [
+        "bl_chama_grid_itens_container",
+        "bl_item_custos",
+        "bl_timeout",
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "control_selec_proc_compra",
+        "form_itens_container",
+        "form_itens_proc_compra"
+      ]
+    },
+    {
+      "application": "form_versoes_item_custo_container",
+      "depth": 2,
+      "reach": "chamada transitiva",
+      "status": "Preparado",
+      "state": "Preparado — sem fluxo publicado",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Formulário individual",
+      "targetScreen": "",
+      "remaining": "Reutilizar VersionService, coleta e calculo; resolver regressao de realizado ausente.",
+      "calledBy": [
+        "cons_versoes_item_custo_container"
+      ],
+      "calls": [
+        "bl_timeout",
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "cons_versoes_item_custo_container",
+        "form_pp_container_cotacoes",
+        "form_tipos_versao_custo"
+      ]
+    },
+    {
+      "application": "bl_distribuir_custo_contr",
+      "depth": 6,
+      "reach": "chamada transitiva",
+      "status": "Preparado",
+      "state": "Preparado — sem fluxo publicado",
+      "family": "Distribuição de custos",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "",
+      "remaining": "Simular plano e executar pelo servico central usando empresa do container.",
+      "calledBy": [
+        "grid_itens_container_comparacao",
+        "grid_itens_container_comparacao_bkp"
+      ],
+      "calls": [
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "grid_itens_container_comparacao"
+      ]
+    },
+    {
+      "application": "bl_item_custos",
+      "depth": 6,
+      "reach": "chamada transitiva",
+      "status": "Preparado",
+      "state": "Preparado — sem fluxo publicado",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "",
+      "remaining": "Reutilizar VersionService, coleta e calculo; resolver regressao de realizado ausente.",
+      "calledBy": [
+        "contr_item_custos",
+        "grid_itens_container",
+        "grid_itens_container_comparacao"
+      ],
+      "calls": [
+        "contr_item_custos"
+      ]
+    },
+    {
+      "application": "ctrl_simul_distr_custo",
+      "depth": 6,
+      "reach": "chamada transitiva",
+      "status": "Preparado",
+      "state": "Preparado — sem fluxo publicado",
+      "family": "Distribuição de custos",
+      "technicalType": "Controle de parâmetros/ação",
+      "targetScreen": "",
+      "remaining": "Simular plano e executar pelo servico central usando empresa do container.",
+      "calledBy": [
+        "grid_itens_container_comparacao",
+        "grid_itens_container_comparacao_bkp"
+      ],
+      "calls": [
+        "cons_cta_corren_distr_item_container",
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "grid_itens_container_comparacao"
+      ]
+    },
+    {
+      "application": "form_despesas_container_multi_reg",
+      "depth": 6,
+      "reach": "chamada transitiva",
+      "status": "Preparado",
+      "state": "Preparado — sem fluxo publicado",
+      "family": "Despesas e fiscal do container",
+      "technicalType": "Formulário em lote",
+      "targetScreen": "",
+      "remaining": "Preservar diferencas de regras entre edicao individual e lote.",
+      "calledBy": [
+        "grid_despesas_container",
+        "grid_despesas_container_bkp",
+        "grid_despesas_container_distr_custo"
+      ],
+      "calls": [
+        "bl_timeout",
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "contr_item_custos",
+      "depth": 7,
+      "reach": "chamada transitiva",
+      "status": "Preparado",
+      "state": "Preparado — sem fluxo publicado",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Controle de parâmetros/ação",
+      "targetScreen": "",
+      "remaining": "Simular sem escrita; reler e validar todos os itens no fechamento transacional.",
+      "calledBy": [
+        "bl_item_custos"
+      ],
+      "calls": [
+        "bl_item_custos",
+        "cons_itens_container_simul_calc",
+        "grid_itens_container"
+      ]
+    },
+    {
+      "application": "cons_itens_container_simul_calc",
+      "depth": 8,
+      "reach": "chamada transitiva",
+      "status": "Preparado",
+      "state": "Preparado — sem fluxo publicado",
+      "family": "Containers e navegação contextual",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Simular sem escrita; reler e validar todos os itens no fechamento transacional.",
+      "calledBy": [
+        "bl_item_custos_gravacao",
+        "contr_item_custos"
+      ],
+      "calls": [
+        "bl_item_custos_gravacao"
+      ]
+    },
+    {
+      "application": "bl_item_custos_gravacao",
+      "depth": 9,
+      "reach": "chamada transitiva",
+      "status": "Preparado",
+      "state": "Preparado — sem fluxo publicado",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "",
+      "remaining": "Simular sem escrita; reler e validar todos os itens no fechamento transacional.",
+      "calledBy": [
+        "cons_itens_container_simul_calc"
+      ],
+      "calls": [
+        "cons_item_custos",
+        "cons_itens_container_simul_calc"
+      ]
+    },
+    {
+      "application": "menu_ctrl_importacao",
+      "depth": 0,
+      "reach": "menu",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Visões operacionais e sinalizadores",
+      "technicalType": "Menu",
+      "targetScreen": "",
+      "remaining": "Identificar os indicadores, filtros, totais e ações ativas; compor sobre APIs dos domínios já convertidos. Ação declarativa de navegação/contexto; não criar tela intermediária sem necessidade.",
+      "calledBy": [
+        "app_login_bkp",
+        "bl_atu_dolar_dia",
+        "bl_getProgUsuario",
+        "bl_sincr_cotacao"
+      ],
+      "calls": [
+        "bl_chama_cons_item_custos",
+        "bl_gerar_conta_corrente",
+        "bl_ponte_descontos_importacao",
+        "bl_pp_container",
+        "bl_sinaliz",
+        "blank",
+        "cons_cta_corren_custo_distr",
+        "cons_cta_corren_res_ped",
+        "cons_descontos_geral",
+        "cons_distr_custo_geracao_saldo",
+        "cons_hist_cotacoes_bc",
+        "cons_item_qt_imp",
+        "cons_logs",
+        "cons_planilha",
+        "cons_tit_ap_container",
+        "cons_versoes_item_custo_container",
+        "ctrl_login_html",
+        "form_motivos_desconto",
+        "form_tipos_anexo",
+        "grid_PUB_sinalizadores_importacao",
+        "grid_despesas",
+        "grid_empresas",
+        "grid_procs_compra",
+        "menu"
+      ]
+    },
+    {
+      "application": "bl_chama_cons_item_custos",
+      "depth": 1,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "",
+      "remaining": "Preservar previsto/realizado, moedas e vínculos item/versão; reutilizar coleta, matemática e persistência de versões. Ação declarativa de navegação/contexto; não criar tela intermediária sem necessidade.",
+      "calledBy": [
+        "form_item_custos",
+        "form_item_custos_container",
+        "form_item_custos_media_01",
+        "form_item_custos_media_old",
+        "menu_ctrl_importacao"
+      ],
+      "calls": [
+        "cons_item_custos"
+      ]
+    },
+    {
+      "application": "bl_gerar_conta_corrente",
+      "depth": 1,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Financeiro e contas correntes",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "",
+      "remaining": "Preservar chaves financeiras, moedas, saldo por fornecedor/item/título e estornos compensatórios; integrar auditoria. Extrair evento ativo para serviço ABL reutilizável; ProcessEngine para escrita e motor existente para leitura.",
+      "calledBy": [
+        "menu_ctrl_importacao"
+      ],
+      "calls": [
+        "cons_cta_corren_fornec_imp_saldos"
+      ]
+    },
+    {
+      "application": "bl_ponte_descontos_importacao",
+      "depth": 1,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Descontos e créditos",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "",
+      "remaining": "Implementar motivos, valores por moeda, utilização de créditos e reversões sem duplicar regras de custo. Ação declarativa de navegação/contexto; não criar tela intermediária sem necessidade.",
+      "calledBy": [
+        "menu_ctrl_importacao"
+      ],
+      "calls": [
+        "grid_descontos_importacao"
+      ]
+    },
+    {
+      "application": "cons_cta_corren_custo_distr",
+      "depth": 1,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Financeiro e contas correntes",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Preservar chaves financeiras, moedas, saldo por fornecedor/item/título e estornos compensatórios; integrar auditoria. CRUD de leitura por JSON/API ABL; manter filtros, totais, detalhe e contexto; separar ações de escrita.",
+      "calledBy": [
+        "menu_ctrl_importacao"
+      ],
+      "calls": [
+        "cons_fornecedor_estrangeiro",
+        "form_cta_corren_custo_distr"
+      ]
+    },
+    {
+      "application": "cons_cta_corren_res_ped",
+      "depth": 1,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Financeiro e contas correntes",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Preservar chaves financeiras, moedas, saldo por fornecedor/item/título e estornos compensatórios; integrar auditoria. CRUD de leitura por JSON/API ABL; manter filtros, totais, detalhe e contexto; separar ações de escrita.",
+      "calledBy": [
+        "cons_cta_corren_fornec_imp_saldos",
+        "menu_ctrl_importacao"
+      ],
+      "calls": []
+    },
+    {
+      "application": "cons_descontos_geral",
+      "depth": 1,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Descontos e créditos",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Consulta GLOBAL e labels atuais publicados; SUM reutilizado e COALESCE de utilização/saldo preservados. Falta UI LDAP após autorização e confronto final de apresentação/agrupamentos/exportações/navegação. Manutenção e estorno continuam nos programas próprios; este reader não os implementa.",
+      "calledBy": [
+        "menu_ctrl_importacao"
+      ],
+      "calls": [
+        "bl_timeout",
+        "cons_det_desconto_geral"
+      ]
+    },
+    {
+      "application": "cons_distr_custo_geracao_saldo",
+      "depth": 1,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Distribuição de custos",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Usar empresa do container e serviço central; validar delta persistível, ledger e rollback do conjunto. CRUD de leitura por JSON/API ABL; manter filtros, totais, detalhe e contexto; separar ações de escrita.",
+      "calledBy": [
+        "menu_ctrl_importacao"
+      ],
+      "calls": [
+        "cons_fornecedor_estrangeiro",
+        "grid_pp_container"
+      ]
+    },
+    {
+      "application": "cons_logs",
+      "depth": 1,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Pendente — adaptar à infraestrutura existente",
+      "family": "Logs e auditoria",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Reutilizar auditoria/transações existentes; histórico legado exige contrato próprio de consulta.",
+      "calledBy": [
+        "menu_ctrl_importacao"
+      ],
+      "calls": [
+        "cons_itens_log"
+      ]
+    },
+    {
+      "application": "cons_planilha",
+      "depth": 1,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Visões operacionais e sinalizadores",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Identificar os indicadores, filtros, totais e ações ativas; compor sobre APIs dos domínios já convertidos. CRUD de leitura por JSON/API ABL; manter filtros, totais, detalhe e contexto; separar ações de escrita.",
+      "calledBy": [
+        "menu_ctrl_importacao"
+      ],
+      "calls": []
+    },
+    {
+      "application": "cons_tit_ap_container",
+      "depth": 1,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Financeiro e contas correntes",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Preservar chaves financeiras, moedas, saldo por fornecedor/item/título e estornos compensatórios; integrar auditoria. CRUD de leitura por JSON/API ABL; manter filtros, totais, detalhe e contexto; separar ações de escrita.",
+      "calledBy": [
+        "menu_ctrl_importacao"
+      ],
+      "calls": [
+        "cons_fornecedor_estrangeiro",
+        "grid_containers"
+      ]
+    },
+    {
+      "application": "ctrl_login_html",
+      "depth": 1,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Pendente — adaptar à infraestrutura existente",
+      "family": "Identidade e permissões",
+      "technicalType": "Autenticação",
+      "targetScreen": "",
+      "remaining": "Reutilizar autenticação do construtor e resolver identidade/perfil IMA no servidor.",
+      "calledBy": [
+        "menu_ctrl_importacao"
+      ],
+      "calls": [
+        "bl_sincr_cotacao",
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "menu",
+      "depth": 1,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Navegação e utilitários transversais",
+      "technicalType": "Menu",
+      "targetScreen": "",
+      "remaining": "Ação declarativa de navegação/contexto; não criar tela intermediária sem necessidade.",
+      "calledBy": [
+        "menu_container",
+        "menu_ctrl_importacao",
+        "menu_proc_compra",
+        "menu_proc_compra_sinaliz",
+        "menu_vendas_container"
+      ],
+      "calls": [
+        "bl_tela_login"
+      ]
+    },
+    {
+      "application": "bl_sincr_cotacao",
+      "depth": 2,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Cotações e referências ERP",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "",
+      "remaining": "Criar leitura ABL tipada com contexto ERP autorizado e origem de cotação explícita; não aceitar banco/tabela do navegador. Extrair evento ativo para serviço ABL reutilizável; ProcessEngine para escrita e motor existente para leitura.",
+      "calledBy": [
+        "app_login",
+        "ctrl_login_html"
+      ],
+      "calls": [
+        "menu_ctrl_importacao"
+      ]
+    },
+    {
+      "application": "bl_timeout",
+      "depth": 2,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Pendente — adaptar à infraestrutura existente",
+      "family": "Identidade e permissões",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "",
+      "remaining": "Reutilizar autenticação do construtor e resolver identidade/perfil IMA no servidor.",
+      "calledBy": [
+        "cons_calcs_imp_container",
+        "cons_desc_geral_fornec",
+        "cons_descontos_geral",
+        "cons_descontos_imp_geral",
+        "cons_despesas_container_memoria_calculo",
+        "cons_det_desconto_geral",
+        "cons_det_versoes_item_custo_container",
+        "cons_docum_est_importacao",
+        "cons_fornecedor_estrangeiro",
+        "cons_item_container_custo_descontos",
+        "cons_item_container_custo_despesas",
+        "cons_item_container_custo_nfs",
+        "cons_item_container_custo_pgtos",
+        "cons_item_container_custos",
+        "cons_itens_compra_alocado",
+        "cons_itens_proc_compra_sinaliz",
+        "cons_nota_fiscal",
+        "cons_pedidos_por_item_ref_container",
+        "cons_pp_it_container",
+        "cons_proc_compra_sinaliz",
+        "cons_tipos_versao_custo",
+        "cons_versoes_item_custo_container",
+        "control_selec_proc_compra",
+        "form_PUB_envios_amostras_repres",
+        "form_anexos_container",
+        "form_cta_corren_desconto",
+        "form_descontos_importacao",
+        "form_descontos_importacao_item",
+        "form_despesas_container",
+        "form_despesas_container_multi_reg",
+        "form_motivos_desconto",
+        "form_pp_container",
+        "form_pp_container_cotacoes",
+        "form_proc_compra",
+        "form_situacoes_container",
+        "form_tipos_versao_custo",
+        "form_versoes_item_custo_container",
+        "grid_PUB_envios_amostras_repres",
+        "grid_PUB_sinalizadores_importacao",
+        "grid_cta_corren_desconto",
+        "grid_descontos_importacao",
+        "grid_descontos_importacao_itens",
+        "grid_despesas_container",
+        "grid_despesas_container_distr_custo",
+        "grid_despesas_proc_compra",
+        "grid_itens_container",
+        "grid_itens_container_comparacao",
+        "grid_itens_container_comparacao_bkp",
+        "grid_itens_proc_compra",
+        "grid_itens_proc_compra_selecao",
+        "grid_motivos_desconto",
+        "grid_situacoes_container"
+      ],
+      "calls": [
+        "app_login"
+      ]
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_saldos",
+      "depth": 2,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Financeiro e contas correntes",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Preservar chaves financeiras, moedas, saldo por fornecedor/item/título e estornos compensatórios; integrar auditoria. CRUD de leitura por JSON/API ABL; manter filtros, totais, detalhe e contexto; separar ações de escrita.",
+      "calledBy": [
+        "bl_gerar_conta_corrente"
+      ],
+      "calls": [
+        "cons_cta_corren_fornec_imp_embarcado",
+        "cons_cta_corren_fornec_imp_entregue",
+        "cons_cta_corren_fornec_imp_nao_embarcado",
+        "cons_cta_corren_fornec_imp_tudo",
+        "cons_cta_corren_res_ped",
+        "cons_desc_geral_fornec"
+      ]
+    },
+    {
+      "application": "cons_det_desconto_geral",
+      "depth": 2,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Descontos e créditos",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "GET por identidade do desconto e projeção de SUM bruto em vl_utiliz_detalhe disponíveis no reader único. Falta confrontar a apresentação do detalhe legado, que usa contexto desconto_importacao_id_corrente; não declarar origem convertida apenas por compartilhar a tela geral.",
+      "calledBy": [
+        "cons_desc_geral_fornec",
+        "cons_descontos_geral"
+      ],
+      "calls": [
+        "bl_timeout",
+        "grid_cta_corren_desconto"
+      ]
+    },
+    {
+      "application": "cons_det_versoes_item_custo_container",
+      "depth": 2,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Preservar previsto/realizado, moedas e vínculos item/versão; reutilizar coleta, matemática e persistência de versões. CRUD de leitura por JSON/API ABL; manter filtros, totais, detalhe e contexto; separar ações de escrita.",
+      "calledBy": [
+        "cons_versoes_item_custo_container"
+      ],
+      "calls": [
+        "bl_timeout",
+        "cons_item_container_custo_descontos",
+        "cons_item_container_custo_despesas",
+        "cons_item_container_custo_nfs",
+        "cons_item_container_custo_pgtos",
+        "cons_item_container_custos",
+        "cons_item_container_custos_comparacao_dolar",
+        "cons_item_container_custos_comparacao_real",
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "cons_item_custos",
+      "depth": 2,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Preservar previsto/realizado, moedas e vínculos item/versão; reutilizar coleta, matemática e persistência de versões. CRUD de leitura por JSON/API ABL; manter filtros, totais, detalhe e contexto; separar ações de escrita.",
+      "calledBy": [
+        "bl_chama_cons_item_custos",
+        "bl_item_custos_gravacao",
+        "cons_item_custos_det_media",
+        "form_item_custos_media_01",
+        "form_item_custos_media_cons",
+        "form_item_custos_media_old"
+      ],
+      "calls": [
+        "bl_seleciona_form_item_custos",
+        "form_item_custos_manual",
+        "form_medias_custo"
+      ]
+    },
+    {
+      "application": "cons_itens_log",
+      "depth": 2,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Pendente — adaptar à infraestrutura existente",
+      "family": "Logs e auditoria",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Reutilizar auditoria/transações existentes; histórico legado exige contrato próprio de consulta.",
+      "calledBy": [
+        "cons_logs"
+      ],
+      "calls": []
+    },
+    {
+      "application": "cons_log_apl",
+      "depth": 2,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Pendente — adaptar à infraestrutura existente",
+      "family": "Logs e auditoria",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Reutilizar auditoria/transações existentes; histórico legado exige contrato próprio de consulta.",
+      "calledBy": [
+        "app_login",
+        "bl_calcular_impostos_container",
+        "bl_calcular_impostos_proc_compra",
+        "bl_criar_despesas_container",
+        "bl_distribuir_custo_contr",
+        "bl_logs",
+        "bl_painel_container",
+        "bl_painel_container_restore",
+        "bl_painel_proc_compra",
+        "bl_painel_proc_compra_sinaliz",
+        "bl_resumo",
+        "bl_resumo_container",
+        "bl_resumo_proc_compra",
+        "bl_selecao_nf",
+        "bl_selecao_pagto_container",
+        "bl_selecao_pagto_proc_compra",
+        "bl_selecionado_nf",
+        "bl_selecionado_pagto_container",
+        "bl_selecionado_pagto_proc_compra",
+        "bl_sinaliz",
+        "bl_sincronizar_impostos",
+        "bl_teste_log",
+        "cons_despesas_container_memoria_calculo",
+        "cons_det_versoes_item_custo_container",
+        "cons_docum_est_importacao",
+        "cons_item_container_custo_descontos",
+        "cons_item_container_custo_pgtos",
+        "cons_item_qt_imp_union",
+        "cons_itens_compra_alocado",
+        "cons_itens_proc_compra_sinaliz",
+        "cons_log_inc_alt",
+        "cons_selec_despesas",
+        "cons_tit_ap",
+        "cons_tit_ap_associados_container",
+        "cons_tit_ap_associados_pedido",
+        "cons_tit_ap_associar_container",
+        "cons_tit_ap_associar_container_apos_di",
+        "cons_tit_ap_associar_pedido",
+        "ctrl_login_html",
+        "ctrl_simul_distr_custo",
+        "ctrl_tipo_log",
+        "form_PUB_envios_amostras_repres",
+        "form_PUB_sinalizadores_importacao",
+        "form_anexos_container",
+        "form_anexos_proc_compra",
+        "form_anexos_proc_compra_item",
+        "form_cta_corren_custo_distr",
+        "form_cta_corren_custo_distr_inc",
+        "form_cta_corren_desconto",
+        "form_cta_corren_fornec_imp",
+        "form_descontos_importacao",
+        "form_descontos_importacao_item",
+        "form_despesas",
+        "form_despesas_container",
+        "form_despesas_container_multi_reg",
+        "form_empresas",
+        "form_empresas_despesa",
+        "form_hist_cotacoes_bc",
+        "form_im_param",
+        "form_item_custos",
+        "form_item_custos_container",
+        "form_item_custos_manual",
+        "form_item_custos_media_01",
+        "form_item_custos_media_cons",
+        "form_item_custos_media_old",
+        "form_itens_container",
+        "form_itens_proc_compra",
+        "form_itens_proc_compra_amostra",
+        "form_motivos_desconto",
+        "form_pp_container",
+        "form_pp_container_cotacoes",
+        "form_proc_compra",
+        "form_pub_formatos_amostra",
+        "form_pub_procs_compra",
+        "form_situacoes_container",
+        "form_tipos_anexo",
+        "form_tipos_versao_custo",
+        "form_versoes_item_custo_container",
+        "grid_PUB_sinalizadores_importacao",
+        "grid_despesas_container",
+        "grid_despesas_container_distr_custo",
+        "grid_itens_container",
+        "grid_itens_container_comparacao",
+        "grid_itens_container_comparacao_bkp",
+        "grid_itens_proc_compra"
+      ],
+      "calls": [
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "cons_log_inc_alt",
+      "depth": 2,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Pendente — adaptar à infraestrutura existente",
+      "family": "Logs e auditoria",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Reutilizar auditoria/transações existentes; histórico legado exige contrato próprio de consulta.",
+      "calledBy": [
+        "app_login",
+        "bl_calcular_impostos_container",
+        "bl_calcular_impostos_proc_compra",
+        "bl_criar_despesas_container",
+        "bl_distribuir_custo_contr",
+        "bl_logs",
+        "bl_painel_container",
+        "bl_painel_container_restore",
+        "bl_painel_proc_compra",
+        "bl_painel_proc_compra_sinaliz",
+        "bl_resumo",
+        "bl_resumo_container",
+        "bl_resumo_proc_compra",
+        "bl_selecao_nf",
+        "bl_selecao_pagto_container",
+        "bl_selecao_pagto_proc_compra",
+        "bl_selecionado_nf",
+        "bl_selecionado_pagto_container",
+        "bl_selecionado_pagto_proc_compra",
+        "bl_sinaliz",
+        "bl_sincronizar_impostos",
+        "bl_teste_log",
+        "cons_despesas_container_memoria_calculo",
+        "cons_det_versoes_item_custo_container",
+        "cons_docum_est_importacao",
+        "cons_item_container_custo_descontos",
+        "cons_item_container_custo_pgtos",
+        "cons_item_qt_imp_union",
+        "cons_itens_compra_alocado",
+        "cons_itens_proc_compra_sinaliz",
+        "cons_log_apl",
+        "cons_selec_despesas",
+        "cons_tit_ap",
+        "cons_tit_ap_associados_container",
+        "cons_tit_ap_associados_pedido",
+        "cons_tit_ap_associar_container",
+        "cons_tit_ap_associar_container_apos_di",
+        "cons_tit_ap_associar_pedido",
+        "ctrl_login_html",
+        "ctrl_simul_distr_custo",
+        "ctrl_tipo_log",
+        "form_PUB_envios_amostras_repres",
+        "form_PUB_sinalizadores_importacao",
+        "form_anexos_container",
+        "form_anexos_proc_compra",
+        "form_anexos_proc_compra_item",
+        "form_cta_corren_custo_distr",
+        "form_cta_corren_custo_distr_inc",
+        "form_cta_corren_desconto",
+        "form_cta_corren_fornec_imp",
+        "form_descontos_importacao",
+        "form_descontos_importacao_item",
+        "form_despesas",
+        "form_despesas_container",
+        "form_despesas_container_multi_reg",
+        "form_empresas",
+        "form_empresas_despesa",
+        "form_hist_cotacoes_bc",
+        "form_im_param",
+        "form_item_custos",
+        "form_item_custos_container",
+        "form_item_custos_manual",
+        "form_item_custos_media_01",
+        "form_item_custos_media_cons",
+        "form_item_custos_media_old",
+        "form_itens_container",
+        "form_itens_proc_compra",
+        "form_itens_proc_compra_amostra",
+        "form_motivos_desconto",
+        "form_pp_container",
+        "form_pp_container_cotacoes",
+        "form_proc_compra",
+        "form_pub_formatos_amostra",
+        "form_pub_procs_compra",
+        "form_situacoes_container",
+        "form_tipos_anexo",
+        "form_tipos_versao_custo",
+        "form_versoes_item_custo_container",
+        "grid_PUB_sinalizadores_importacao",
+        "grid_despesas_container",
+        "grid_despesas_container_distr_custo",
+        "grid_itens_container",
+        "grid_itens_container_comparacao",
+        "grid_itens_container_comparacao_bkp",
+        "grid_itens_proc_compra"
+      ],
+      "calls": [
+        "cons_log_apl"
+      ]
+    },
+    {
+      "application": "form_cta_corren_custo_distr",
+      "depth": 2,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Financeiro e contas correntes",
+      "technicalType": "Formulário individual",
+      "targetScreen": "",
+      "remaining": "Preservar chaves financeiras, moedas, saldo por fornecedor/item/título e estornos compensatórios; integrar auditoria. Formulário CRUD existente + API ABL com regras, locks, dependências e auditoria.",
+      "calledBy": [
+        "cons_cta_corren_custo_distr",
+        "cons_cta_corren_custo_distr_bkp"
+      ],
+      "calls": [
+        "cons_itens_aptos_distr_custo",
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "grid_descontos_importacao",
+      "depth": 2,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Descontos e créditos",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Implementar motivos, valores por moeda, utilização de créditos e reversões sem duplicar regras de custo. CRUD de leitura por JSON/API ABL; manter filtros, totais, detalhe e contexto; separar ações de escrita.",
+      "calledBy": [
+        "bl_ponte_descontos_importacao"
+      ],
+      "calls": [
+        "bl_timeout",
+        "cons_fornecedor_estrangeiro",
+        "form_descontos_importacao"
+      ]
+    },
+    {
+      "application": "app_login",
+      "depth": 3,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Pendente — adaptar à infraestrutura existente",
+      "family": "Identidade e permissões",
+      "technicalType": "Autenticação",
+      "targetScreen": "",
+      "remaining": "Reutilizar autenticação do construtor e resolver identidade/perfil IMA no servidor.",
+      "calledBy": [
+        "bl_timeout",
+        "form_anexos_proc_compra_item",
+        "form_item_custos",
+        "form_item_custos_media_01",
+        "form_item_custos_media_cons",
+        "form_item_custos_media_old"
+      ],
+      "calls": [
+        "bl_sincr_cotacao",
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "bl_selec_vendas_container",
+      "depth": 3,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Visões operacionais e sinalizadores",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "",
+      "remaining": "Identificar os indicadores, filtros, totais e ações ativas; compor sobre APIs dos domínios já convertidos. Extrair evento ativo para serviço ABL reutilizável; ProcessEngine para escrita e motor existente para leitura.",
+      "calledBy": [
+        "grid_pp_container"
+      ],
+      "calls": [
+        "menu_vendas_container"
+      ]
+    },
+    {
+      "application": "bl_seleciona_form_item_custos",
+      "depth": 3,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "",
+      "remaining": "Preservar previsto/realizado, moedas e vínculos item/versão; reutilizar coleta, matemática e persistência de versões. Ação declarativa de navegação/contexto; não criar tela intermediária sem necessidade.",
+      "calledBy": [
+        "cons_item_custos"
+      ],
+      "calls": [
+        "cons_item_custos_det_media",
+        "form_item_custos",
+        "form_item_custos_container",
+        "form_item_custos_media_cons"
+      ]
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_embarcado",
+      "depth": 3,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Financeiro e contas correntes",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Preservar chaves financeiras, moedas, saldo por fornecedor/item/título e estornos compensatórios; integrar auditoria. CRUD de leitura por JSON/API ABL; manter filtros, totais, detalhe e contexto; separar ações de escrita.",
+      "calledBy": [
+        "cons_cta_corren_fornec_imp_saldos"
+      ],
+      "calls": [
+        "grid_pp_container",
+        "grid_procs_compra"
+      ]
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_entregue",
+      "depth": 3,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Financeiro e contas correntes",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Preservar chaves financeiras, moedas, saldo por fornecedor/item/título e estornos compensatórios; integrar auditoria. CRUD de leitura por JSON/API ABL; manter filtros, totais, detalhe e contexto; separar ações de escrita.",
+      "calledBy": [
+        "cons_cta_corren_fornec_imp_saldos"
+      ],
+      "calls": [
+        "cons_procs_compra",
+        "grid_pp_container"
+      ]
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_nao_embarcado",
+      "depth": 3,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Financeiro e contas correntes",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Preservar chaves financeiras, moedas, saldo por fornecedor/item/título e estornos compensatórios; integrar auditoria. CRUD de leitura por JSON/API ABL; manter filtros, totais, detalhe e contexto; separar ações de escrita.",
+      "calledBy": [
+        "cons_cta_corren_fornec_imp_saldos"
+      ],
+      "calls": [
+        "cons_fornecedor_estrangeiro",
+        "form_cta_corren_fornec_imp",
+        "grid_procs_compra"
+      ]
+    },
+    {
+      "application": "cons_cta_corren_fornec_imp_tudo",
+      "depth": 3,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Financeiro e contas correntes",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Preservar chaves financeiras, moedas, saldo por fornecedor/item/título e estornos compensatórios; integrar auditoria. CRUD de leitura por JSON/API ABL; manter filtros, totais, detalhe e contexto; separar ações de escrita.",
+      "calledBy": [
+        "cons_cta_corren_fornec_imp_saldos"
+      ],
+      "calls": [
+        "cons_fornecedor_estrangeiro",
+        "form_cta_corren_fornec_imp"
+      ]
+    },
+    {
+      "application": "cons_desc_geral_fornec",
+      "depth": 3,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Descontos e créditos",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Implementar motivos, valores por moeda, utilização de créditos e reversões sem duplicar regras de custo. CRUD de leitura por JSON/API ABL; manter filtros, totais, detalhe e contexto; separar ações de escrita.",
+      "calledBy": [
+        "cons_cta_corren_fornec_imp_saldos"
+      ],
+      "calls": [
+        "bl_timeout",
+        "cons_det_desconto_geral"
+      ]
+    },
+    {
+      "application": "cons_item_container_custo_descontos",
+      "depth": 3,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Preservar previsto/realizado, moedas e vínculos item/versão; reutilizar coleta, matemática e persistência de versões. CRUD de leitura por JSON/API ABL; manter filtros, totais, detalhe e contexto; separar ações de escrita.",
+      "calledBy": [
+        "cons_det_versoes_item_custo_container"
+      ],
+      "calls": [
+        "bl_timeout",
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "cons_item_container_custo_despesas",
+      "depth": 3,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Preservar previsto/realizado, moedas e vínculos item/versão; reutilizar coleta, matemática e persistência de versões. CRUD de leitura por JSON/API ABL; manter filtros, totais, detalhe e contexto; separar ações de escrita.",
+      "calledBy": [
+        "cons_det_versoes_item_custo_container"
+      ],
+      "calls": [
+        "bl_timeout",
+        "cons_calcs_imp_container"
+      ]
+    },
+    {
+      "application": "cons_item_container_custo_nfs",
+      "depth": 3,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Preservar previsto/realizado, moedas e vínculos item/versão; reutilizar coleta, matemática e persistência de versões. CRUD de leitura por JSON/API ABL; manter filtros, totais, detalhe e contexto; separar ações de escrita.",
+      "calledBy": [
+        "cons_det_versoes_item_custo_container"
+      ],
+      "calls": [
+        "bl_timeout"
+      ]
+    },
+    {
+      "application": "cons_item_container_custo_pgtos",
+      "depth": 3,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Preservar previsto/realizado, moedas e vínculos item/versão; reutilizar coleta, matemática e persistência de versões. CRUD de leitura por JSON/API ABL; manter filtros, totais, detalhe e contexto; separar ações de escrita.",
+      "calledBy": [
+        "cons_det_versoes_item_custo_container"
+      ],
+      "calls": [
+        "bl_timeout",
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "cons_item_container_custos",
+      "depth": 3,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Preservar previsto/realizado, moedas e vínculos item/versão; reutilizar coleta, matemática e persistência de versões. CRUD de leitura por JSON/API ABL; manter filtros, totais, detalhe e contexto; separar ações de escrita.",
+      "calledBy": [
+        "cons_det_versoes_item_custo_container"
+      ],
+      "calls": [
+        "bl_timeout"
+      ]
+    },
+    {
+      "application": "cons_item_container_custos_comparacao_dolar",
+      "depth": 3,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Preservar previsto/realizado, moedas e vínculos item/versão; reutilizar coleta, matemática e persistência de versões. CRUD de leitura por JSON/API ABL; manter filtros, totais, detalhe e contexto; separar ações de escrita.",
+      "calledBy": [
+        "cons_det_versoes_item_custo_container"
+      ],
+      "calls": []
+    },
+    {
+      "application": "cons_item_container_custos_comparacao_real",
+      "depth": 3,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Preservar previsto/realizado, moedas e vínculos item/versão; reutilizar coleta, matemática e persistência de versões. CRUD de leitura por JSON/API ABL; manter filtros, totais, detalhe e contexto; separar ações de escrita.",
+      "calledBy": [
+        "cons_det_versoes_item_custo_container"
+      ],
+      "calls": []
+    },
+    {
+      "application": "cons_itens_aptos_distr_custo",
+      "depth": 3,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Distribuição de custos",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Consulta GLOBAL aptos publicada com joins e filtro situacao<>3 originais; sem empresa do container ou flags adicionais inventadas. Falta UI LDAP e confronto da seleção/navegação para a manutenção/simulação de distribuição. O reader não simula nem persiste rateio.",
+      "calledBy": [
+        "form_cta_corren_custo_distr",
+        "form_cta_corren_custo_distr_inc"
+      ],
+      "calls": [
+        "cons_fornecedor_estrangeiro",
+        "grid_pp_container",
+        "grid_procs_compra"
+      ]
+    },
+    {
+      "application": "form_descontos_importacao",
+      "depth": 3,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Descontos e créditos",
+      "technicalType": "Formulário individual",
+      "targetScreen": "",
+      "remaining": "Implementar motivos, valores por moeda, utilização de créditos e reversões sem duplicar regras de custo. Formulário CRUD existente + API ABL com regras, locks, dependências e auditoria.",
+      "calledBy": [
+        "cons_descontos_importacao",
+        "grid_descontos_importacao"
+      ],
+      "calls": [
+        "bl_timeout",
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "form_motivos_desconto",
+        "grid_cta_corren_desconto"
+      ]
+    },
+    {
+      "application": "form_item_custos_manual",
+      "depth": 3,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Formulário individual",
+      "targetScreen": "",
+      "remaining": "Consulta GLOBAL somente leitura op1051/ciw.item-custos-manuais/1.0.0 publicada e validada para cod_tipo_custo=1, com23campos fisicos/NULL/DATETIME e chave opaca. Isto nao converte o formulario de inclusao/alteracao/exclusao: eventos de escrita manuais e seus vinculos permanecem pendentes, sem nova sequencia/DDL ou formula duplicada. Acesso humano fica na etapa final.",
+      "calledBy": [
+        "cons_item_custos"
+      ],
+      "calls": [
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "form_medias_custo",
+      "depth": 3,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Formulário individual",
+      "targetScreen": "",
+      "remaining": "Preservar previsto/realizado, moedas e vínculos item/versão; reutilizar coleta, matemática e persistência de versões. Formulário CRUD existente + API ABL com regras, locks, dependências e auditoria.",
+      "calledBy": [
+        "cons_item_custos",
+        "cons_item_custos_det_media",
+        "ctrl_desc_canc_media"
+      ],
+      "calls": [
+        "cons_itens_media_custo",
+        "ctrl_desc_canc_media"
+      ]
+    },
+    {
+      "application": "form_pp_container_cotacoes",
+      "depth": 3,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Cotações e referências ERP",
+      "technicalType": "Formulário individual",
+      "targetScreen": "",
+      "remaining": "Criar leitura ABL tipada com contexto ERP autorizado e origem de cotação explícita; não aceitar banco/tabela do navegador. Formulário CRUD existente + API ABL com regras, locks, dependências e auditoria.",
+      "calledBy": [
+        "form_versoes_item_custo_container"
+      ],
+      "calls": [
+        "bl_timeout",
+        "cons_fornecedor",
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "form_situacoes_container"
+      ]
+    },
+    {
+      "application": "form_proc_compra",
+      "depth": 3,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Pendente de paridade da variante — manutenção MED reutilizada, cascata divergente não copiada",
+      "family": "Pedidos de importação e alocação",
+      "technicalType": "Formulário individual",
+      "targetScreen": "ciw.processos-compra-med",
+      "remaining": "Variante de manutenção chamada por sinalização. Campos MED cobertos pelo cadastro existente, mas cascata de exclusão e eventos diferem. Reconciliar navegação do painel de sinalização, preservando writer atual, sem portar predicado legado incorreto.",
+      "calledBy": [
+        "cons_proc_compra_sinaliz"
+      ],
+      "calls": [
+        "bl_timeout",
+        "cons_fornecedor",
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "grid_cta_corren_desconto",
+      "depth": 3,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Descontos e créditos",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Seis campos físicos e dono desconto_importacao_id publicados com read/get/filtros; cod_usuario permanece DATE física, não ator textual. Falta UI LDAP e confronto final dos links/exportações. Escritores de lançamentos continuam separados.",
+      "calledBy": [
+        "cons_det_desconto_geral",
+        "form_descontos_importacao"
+      ],
+      "calls": [
+        "bl_timeout",
+        "form_cta_corren_desconto"
+      ]
+    },
+    {
+      "application": "bl_voltar_selecao_ped_importacao",
+      "depth": 4,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Pedidos de importação e alocação",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "",
+      "remaining": "Implementar contexto do pedido, empresa/fornecedor, saldos de itens e vínculo da alocação; reler saldos ao confirmar. Ação declarativa de navegação/contexto; não criar tela intermediária sem necessidade.",
+      "calledBy": [
+        "menu_proc_compra"
+      ],
+      "calls": [
+        "grid_procs_compra"
+      ]
+    },
+    {
+      "application": "cons_calcs_imp_container",
+      "depth": 4,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Pendente",
+      "family": "Despesas e fiscal do container",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Criar detalhe de leitura contextual usando API e componentes existentes.",
+      "calledBy": [
+        "cons_item_container_custo_despesas",
+        "grid_despesas_container",
+        "grid_despesas_container_bkp",
+        "grid_despesas_container_distr_custo"
+      ],
+      "calls": [
+        "bl_timeout"
+      ]
+    },
+    {
+      "application": "cons_item_custos_det_media",
+      "depth": 4,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Preservar previsto/realizado, moedas e vínculos item/versão; reutilizar coleta, matemática e persistência de versões. CRUD de leitura por JSON/API ABL; manter filtros, totais, detalhe e contexto; separar ações de escrita.",
+      "calledBy": [
+        "bl_seleciona_form_item_custos"
+      ],
+      "calls": [
+        "cons_item_custos",
+        "form_medias_custo"
+      ]
+    },
+    {
+      "application": "cons_itens_media_custo",
+      "depth": 4,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Preservar previsto/realizado, moedas e vínculos item/versão; reutilizar coleta, matemática e persistência de versões. CRUD de leitura por JSON/API ABL; manter filtros, totais, detalhe e contexto; separar ações de escrita.",
+      "calledBy": [
+        "form_medias_custo"
+      ],
+      "calls": [
+        "form_itens_media_custo"
+      ]
+    },
+    {
+      "application": "cons_procs_compra",
+      "depth": 4,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Pendente fora de MED — campos MED cobertos, equivalência multiempresa não comprovada",
+      "family": "Pedidos de importação e alocação",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "ciw.processos-compra-med",
+      "remaining": "Sete campos cobertos para consulta MED pelo pai existente. Legado sem filtro de empresa e chamador de conta corrente fora do recorte; não declarar equivalência multiempresa ou criar tela duplicada.",
+      "calledBy": [
+        "cons_cta_corren_fornec_imp_entregue"
+      ],
+      "calls": []
+    },
+    {
+      "application": "ctrl_desc_canc_media",
+      "depth": 4,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Descontos e créditos",
+      "technicalType": "Controle de parâmetros/ação",
+      "targetScreen": "",
+      "remaining": "Implementar motivos, valores por moeda, utilização de créditos e reversões sem duplicar regras de custo. Formulário de parâmetros + seleção/preview + comando explícito ProcessEngine.",
+      "calledBy": [
+        "form_medias_custo"
+      ],
+      "calls": [
+        "form_medias_custo"
+      ]
+    },
+    {
+      "application": "form_cta_corren_desconto",
+      "depth": 4,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Descontos e créditos",
+      "technicalType": "Formulário individual",
+      "targetScreen": "",
+      "remaining": "Implementar motivos, valores por moeda, utilização de créditos e reversões sem duplicar regras de custo. Formulário CRUD existente + API ABL com regras, locks, dependências e auditoria.",
+      "calledBy": [
+        "cons_cta_corren_desconto",
+        "grid_cta_corren_desconto"
+      ],
+      "calls": [
+        "bl_timeout",
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "cons_pp_container_filtro_fornecedor"
+      ]
+    },
+    {
+      "application": "form_cta_corren_fornec_imp",
+      "depth": 4,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Financeiro e contas correntes",
+      "technicalType": "Formulário individual",
+      "targetScreen": "",
+      "remaining": "Preservar chaves financeiras, moedas, saldo por fornecedor/item/título e estornos compensatórios; integrar auditoria. Formulário CRUD existente + API ABL com regras, locks, dependências e auditoria.",
+      "calledBy": [
+        "cons_cta_corren_fornec_imp",
+        "cons_cta_corren_fornec_imp_nao_embarcado",
+        "cons_cta_corren_fornec_imp_tudo"
+      ],
+      "calls": [
+        "cons_fornecedor_estrangeiro",
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "form_item_custos",
+      "depth": 4,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Formulário individual",
+      "targetScreen": "",
+      "remaining": "Preservar previsto/realizado, moedas e vínculos item/versão; reutilizar coleta, matemática e persistência de versões. Formulário CRUD existente + API ABL com regras, locks, dependências e auditoria.",
+      "calledBy": [
+        "bl_seleciona_form_item_custos"
+      ],
+      "calls": [
+        "app_login",
+        "bl_chama_cons_item_custos",
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "form_item_custos_container",
+      "depth": 4,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Formulário individual",
+      "targetScreen": "",
+      "remaining": "Preservar previsto/realizado, moedas e vínculos item/versão; reutilizar coleta, matemática e persistência de versões. Formulário CRUD existente + API ABL com regras, locks, dependências e auditoria.",
+      "calledBy": [
+        "bl_seleciona_form_item_custos"
+      ],
+      "calls": [
+        "bl_chama_cons_item_custos",
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "form_item_custos_media_cons",
+      "depth": 4,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Formulário individual",
+      "targetScreen": "",
+      "remaining": "Preservar previsto/realizado, moedas e vínculos item/versão; reutilizar coleta, matemática e persistência de versões. Formulário CRUD existente + API ABL com regras, locks, dependências e auditoria.",
+      "calledBy": [
+        "bl_seleciona_form_item_custos"
+      ],
+      "calls": [
+        "app_login",
+        "cons_item_custos",
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "menu_vendas_container",
+      "depth": 4,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Visões operacionais e sinalizadores",
+      "technicalType": "Menu",
+      "targetScreen": "",
+      "remaining": "Identificar os indicadores, filtros, totais e ações ativas; compor sobre APIs dos domínios já convertidos. Ação declarativa de navegação/contexto; não criar tela intermediária sem necessidade.",
+      "calledBy": [
+        "bl_selec_vendas_container"
+      ],
+      "calls": [
+        "cons_pp_it_container",
+        "menu"
+      ]
+    },
+    {
+      "application": "bl_chama_grid_itens_container",
+      "depth": 5,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Pendente",
+      "family": "Containers e navegação contextual",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "",
+      "remaining": "Substituir por acoes declarativas e contexto; conferir todos os destinos.",
+      "calledBy": [
+        "grid_itens_container",
+        "grid_itens_container_bkp",
+        "menu_container"
+      ],
+      "calls": [
+        "grid_itens_container"
+      ]
+    },
+    {
+      "application": "bl_ponte_versoes_item_custo_container",
+      "depth": 5,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Pendente",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "",
+      "remaining": "Substituir por acoes declarativas e contexto; conferir todos os destinos.",
+      "calledBy": [
+        "menu_container"
+      ],
+      "calls": [
+        "cons_versoes_item_custo_container"
+      ]
+    },
+    {
+      "application": "bl_selecionado_nf",
+      "depth": 5,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Pendente",
+      "family": "Containers e navegação contextual",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "",
+      "remaining": "Comandos transacionais de associar/desassociar com contexto e auditoria.",
+      "calledBy": [
+        "cons_docum_est_importacao",
+        "cons_docum_est_importacao_old",
+        "menu_container"
+      ],
+      "calls": [
+        "cons_docum_est_importacao",
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "bl_voltar_selecao_container",
+      "depth": 5,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Pendente",
+      "family": "Containers e navegação contextual",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "",
+      "remaining": "Substituir por acoes declarativas e contexto; conferir todos os destinos.",
+      "calledBy": [
+        "menu_container"
+      ],
+      "calls": [
+        "grid_pp_container"
+      ]
+    },
+    {
+      "application": "cons_pp_container_filtro_fornecedor",
+      "depth": 5,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Pendente",
+      "family": "Containers e navegação contextual",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Conferir menus e usuarios antes de converter, unificar ou retirar.",
+      "calledBy": [
+        "form_cta_corren_desconto"
+      ],
+      "calls": [
+        "bl_ponte_painel_container",
+        "form_pp_container"
+      ]
+    },
+    {
+      "application": "cons_pp_it_container",
+      "depth": 5,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Containers e navegação contextual",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Preservar container_id e retorno; separar consulta, manutenção e comandos associados. CRUD de leitura por JSON/API ABL; manter filtros, totais, detalhe e contexto; separar ações de escrita.",
+      "calledBy": [
+        "menu_vendas_container"
+      ],
+      "calls": [
+        "bl_timeout",
+        "cons_pedidos_por_item_ref_container"
+      ]
+    },
+    {
+      "application": "form_itens_media_custo",
+      "depth": 5,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Custos, versões e simulações",
+      "technicalType": "Formulário individual",
+      "targetScreen": "",
+      "remaining": "Preservar previsto/realizado, moedas e vínculos item/versão; reutilizar coleta, matemática e persistência de versões. Formulário CRUD existente + API ABL com regras, locks, dependências e auditoria.",
+      "calledBy": [
+        "cons_itens_media_custo"
+      ],
+      "calls": [
+        "cons_itens"
+      ]
+    },
+    {
+      "application": "bl_calcular_impostos_container",
+      "depth": 6,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Despesas e fiscal do container",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "",
+      "remaining": "Integrar bases fiscais, despesas calculadas/manuais e marcação de versão desatualizada pela rotina fiscal central. Extrair evento ativo para serviço ABL reutilizável; ProcessEngine para escrita e motor existente para leitura.",
+      "calledBy": [
+        "grid_despesas_container",
+        "grid_despesas_container_bkp",
+        "grid_despesas_container_distr_custo"
+      ],
+      "calls": [
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "grid_despesas_container"
+      ]
+    },
+    {
+      "application": "bl_chama_grid_itens_container_comparacao",
+      "depth": 6,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Containers e navegação contextual",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "",
+      "remaining": "Preservar container_id e retorno; separar consulta, manutenção e comandos associados. Ação declarativa de navegação/contexto; não criar tela intermediária sem necessidade.",
+      "calledBy": [
+        "grid_itens_container_comparacao",
+        "grid_itens_container_comparacao_bkp"
+      ],
+      "calls": [
+        "grid_itens_container_comparacao"
+      ]
+    },
+    {
+      "application": "cons_despesas_container_memoria_calculo",
+      "depth": 6,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Pendente",
+      "family": "Despesas e fiscal do container",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Criar detalhe de leitura contextual usando API e componentes existentes.",
+      "calledBy": [
+        "grid_despesas_container",
+        "grid_despesas_container_distr_custo"
+      ],
+      "calls": [
+        "bl_timeout",
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "cons_pedidos_por_item_ref_container",
+      "depth": 6,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Visões operacionais e sinalizadores",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Identificar os indicadores, filtros, totais e ações ativas; compor sobre APIs dos domínios já convertidos. CRUD de leitura por JSON/API ABL; manter filtros, totais, detalhe e contexto; separar ações de escrita.",
+      "calledBy": [
+        "cons_pp_it_container"
+      ],
+      "calls": [
+        "bl_timeout"
+      ]
+    },
+    {
+      "application": "cons_selec_despesas",
+      "depth": 6,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Pendente",
+      "family": "Despesas e fiscal do container",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Processo explicito op1047/ciw.container-selecionar-despesas/1.0.0 publicado, linkCID no paiop1003/1.0.4 e opcoes readonly das oito ordenacoes validadas. Rotinas centrais compartilhadas preservam criar defaults ativos naoimpostos, marcar selecionadas e calculadas subset/fallback, seguidas de impostos. TT/rollback/auditoria estao comprovados; execucao operacional positiva com registros novos/limpeza e acesso humano read/process permanecem pendentes e nao autorizados por esta proposta. Limites de collation/empate e selecao1..100 continuam declarados.",
+      "calledBy": [
+        "grid_despesas_container",
+        "grid_despesas_container_distr_custo"
+      ],
+      "calls": [
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "grid_despesas_container"
+      ]
+    },
+    {
+      "application": "cons_tit_ap_associar_container",
+      "depth": 6,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Pendente",
+      "family": "Financeiro e contas correntes",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Elegibilidade central de adiantamentos, opcoes contextuais e create fixo publicados; adiantamento+duplicidade+efeitos auditados comprovados e teste limpo. Reconciliar selecao multipla legada versus operacao individual nativa e navegacao contextual antes de equivalencia integral.",
+      "calledBy": [
+        "cons_tit_ap_associados_container"
+      ],
+      "calls": [
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "cons_tit_ap_associados_container"
+      ]
+    },
+    {
+      "application": "cons_tit_ap_associar_container_apos_di",
+      "depth": 6,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Pendente",
+      "family": "Financeiro e contas correntes",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Elegibilidade/opcoes centrais aposDI e mesmo create fixo ja publicados e testados emTT; opcoes reais17/10 continham modalidade aposDI. Escrita aposDI nao exercitada operacionalmente; dois titulos foram apenas lidos/preservados no cenario19/10. Reconciliar lote/navegacao sem inventar bloqueio DI/NF.",
+      "calledBy": [
+        "cons_tit_ap_associados_container"
+      ],
+      "calls": [
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "cons_tit_ap_associados_container"
+      ]
+    },
+    {
+      "application": "bl_selecao_nf",
+      "depth": 7,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Containers e navegação contextual",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "",
+      "remaining": "Preservar container_id e retorno; separar consulta, manutenção e comandos associados. Ação declarativa de navegação/contexto; não criar tela intermediária sem necessidade.",
+      "calledBy": [
+        "cons_docum_est_importacao",
+        "cons_docum_est_importacao_old"
+      ],
+      "calls": [
+        "cons_docum_est_importacao",
+        "cons_log_apl",
+        "cons_log_inc_alt"
+      ]
+    },
+    {
+      "application": "bl_selecao_pagto_container",
+      "depth": 7,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Financeiro e contas correntes",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "",
+      "remaining": "Preservar chaves financeiras, moedas, saldo por fornecedor/item/título e estornos compensatórios; integrar auditoria. Ação declarativa de navegação/contexto; não criar tela intermediária sem necessidade.",
+      "calledBy": [
+        "cons_tit_ap"
+      ],
+      "calls": [
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "cons_tit_ap"
+      ]
+    },
+    {
+      "application": "bl_selecionado_pagto_container",
+      "depth": 7,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Financeiro e contas correntes",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "",
+      "remaining": "Preservar chaves financeiras, moedas, saldo por fornecedor/item/título e estornos compensatórios; integrar auditoria. Extrair evento ativo para serviço ABL reutilizável; ProcessEngine para escrita e motor existente para leitura.",
+      "calledBy": [
+        "cons_tit_ap"
+      ],
+      "calls": [
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "cons_tit_ap"
+      ]
+    },
+    {
+      "application": "cons_cta_corren_distr_item_container",
+      "depth": 7,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Financeiro e contas correntes",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Oito campos físicos por item_container_id publicados; read/get/filtros/contexto comprovados no PASOE e no runtime nativo, incluindo chave JSON em ordem real. Falta UI LDAP e confronto final de retorno/exportações; sem fórmula nova de saldo, moedas ou estorno.",
+      "calledBy": [
+        "ctrl_simul_distr_custo"
+      ],
+      "calls": []
+    },
+    {
+      "application": "grid_descontos_importacao_itens",
+      "depth": 8,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Descontos e créditos",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Implementar motivos, valores por moeda, utilização de créditos e reversões sem duplicar regras de custo. CRUD de leitura por JSON/API ABL; manter filtros, totais, detalhe e contexto; separar ações de escrita.",
+      "calledBy": [
+        "form_itens_container"
+      ],
+      "calls": [
+        "bl_timeout",
+        "form_descontos_importacao_item"
+      ]
+    },
+    {
+      "application": "form_descontos_importacao_item",
+      "depth": 9,
+      "reach": "chamada transitiva",
+      "status": "Pendente",
+      "state": "Não convertido identificado",
+      "family": "Descontos e créditos",
+      "technicalType": "Formulário individual",
+      "targetScreen": "",
+      "remaining": "Implementar motivos, valores por moeda, utilização de créditos e reversões sem duplicar regras de custo. Formulário CRUD existente + API ABL com regras, locks, dependências e auditoria.",
+      "calledBy": [
+        "grid_descontos_importacao_itens"
+      ],
+      "calls": [
+        "bl_timeout",
+        "cons_log_apl",
+        "cons_log_inc_alt",
+        "form_motivos_desconto"
+      ]
+    },
+    {
+      "application": "bl_pp_container",
+      "depth": 1,
+      "reach": "chamada transitiva",
+      "status": "Triagem",
+      "state": "Alternativa — uso e equivalência a confirmar",
+      "family": "Alternativas de containers a confirmar",
+      "technicalType": "Blank: ação, serviço ou navegação",
+      "targetScreen": "",
+      "remaining": "Comparar com fluxo vigente; decidir reaproveitamento após confirmar uso.",
+      "calledBy": [
+        "menu_ctrl_importacao"
+      ],
+      "calls": [
+        "grid_pp_container"
+      ]
+    },
+    {
+      "application": "blank",
+      "depth": 1,
+      "reach": "chamada transitiva",
+      "status": "Triagem",
+      "state": "Variante/teste — uso a confirmar",
+      "family": "Alternativas históricas e testes",
+      "technicalType": "Página especial/blank",
+      "targetScreen": "",
+      "remaining": "Revisar uso e diferenças para o fluxo atual; não converter nem excluir automaticamente.",
+      "calledBy": [
+        "menu_ctrl_importacao",
+        "menu_proc_compra_sinaliz"
+      ],
+      "calls": []
+    },
+    {
+      "application": "grid_containers",
+      "depth": 2,
+      "reach": "chamada transitiva",
+      "status": "Triagem",
+      "state": "Alternativa — uso e equivalência a confirmar",
+      "family": "Alternativas de containers a confirmar",
+      "technicalType": "Consulta/grade",
+      "targetScreen": "",
+      "remaining": "Conferir menus e usuarios antes de converter, unificar ou retirar.",
+      "calledBy": [
+        "cons_tit_ap_container"
+      ],
+      "calls": [
+        "form_containers"
+      ]
+    },
+    {
+      "application": "form_containers",
+      "depth": 3,
+      "reach": "chamada transitiva",
+      "status": "Triagem",
+      "state": "Alternativa — uso e equivalência a confirmar",
+      "family": "Alternativas de containers a confirmar",
+      "technicalType": "Formulário individual",
+      "targetScreen": "",
+      "remaining": "Conferir menus e usuarios antes de converter, unificar ou retirar.",
+      "calledBy": [
+        "grid_containers"
+      ],
+      "calls": []
+    }
+  ],
+  "outsideScope": [
+    "app_login_bkp",
+    "bl_ajustarCtaCorrenFornec",
+    "bl_buscarCotacaoVendaContainer",
+    "bl_calcular_impostos_proc_compra",
+    "bl_cons_controle_importacao",
+    "bl_cons_planilha",
+    "bl_criar_despesas_container",
+    "bl_criar_despesas_proc_compra",
+    "bl_criar_itens_container",
+    "bl_cta_corren_fornec",
+    "bl_distr_custo",
+    "bl_eliminarLanctosCtaCorrenPedImp",
+    "bl_estornarSaldoPgtosItemPed",
+    "bl_funcoes_rateio_despesas_item",
+    "bl_gerarLanctosCtaCorrenPedImp",
+    "bl_gerarLanctosPedidosIntegrCtaCorrente",
+    "bl_gerar_log_db",
+    "bl_getCotacaoEms2",
+    "bl_getCpsTbs",
+    "bl_getGerarLogUsuarioCorrente",
+    "bl_getMovtoEstoqPorData",
+    "bl_getProgUsuario",
+    "bl_lib_container",
+    "bl_list",
+    "bl_log_calc_itens",
+    "bl_log_db",
+    "bl_logs",
+    "bl_painel_container",
+    "bl_painel_container_restore",
+    "bl_pegar_dolar",
+    "bl_permissoes",
+    "bl_processando",
+    "bl_resumo",
+    "bl_resumo_container_bkp",
+    "bl_resumo_proc_compra",
+    "bl_saldo_inicial_distr_custo",
+    "bl_sinaliz_restore",
+    "bl_sincrIpiItensContainer",
+    "bl_sincrQtEmbarcadaCtaCorrenFornec",
+    "bl_teste",
+    "bl_teste_calcDespCalculada",
+    "bl_teste_distr_custo",
+    "bl_teste_dolar",
+    "bl_teste_geral_lib",
+    "bl_teste_log",
+    "bl_transacoes",
+    "bl_tst_calcSaldoPorItemData",
+    "bl_tst_ldpa",
+    "blank_1",
+    "blank_2",
+    "cons_anexos_container",
+    "cons_cta_corren_custo_distr_bkp",
+    "cons_cta_corren_desconto",
+    "cons_cta_corren_fornec_imp",
+    "cons_cta_corren_fornec_imp_entregue_old",
+    "cons_cta_corren_res_ped_old",
+    "cons_cta_fornec_imp_entregue_bkp",
+    "cons_descontos_imp_geral",
+    "cons_descontos_importacao",
+    "cons_docum_est_importacao_old",
+    "cons_im_param",
+    "cons_item_container_amostra",
+    "cons_item_container_custos_bkp",
+    "cons_item_qt_imp_union",
+    "cons_nota_fiscal",
+    "cons_ped_container",
+    "cons_representante_ativos",
+    "cons_tipos_versao_custo",
+    "ctrl_envios_repres_amostra",
+    "ctrl_tipo_log",
+    "form_PUB_pp_container",
+    "form_cons_fornec_imp",
+    "form_controles_proc_compra",
+    "form_cta_corren_custo_distr_bkp",
+    "form_cta_corren_custo_distr_inc",
+    "form_desenhos",
+    "form_despesas_impostos",
+    "form_despesas_proc_compra",
+    "form_empresas_imposto",
+    "form_im_param",
+    "form_item_custos_media_01",
+    "form_item_custos_media_old",
+    "form_itens_controle",
+    "form_pp_container_bkp",
+    "form_sc_log",
+    "form_tipos_desenho",
+    "form_tipos_valor",
+    "grid_controles_proc_compra",
+    "grid_desenhos",
+    "grid_despesas_container_bkp",
+    "grid_despesas_container_distr_custo",
+    "grid_despesas_impostos",
+    "grid_despesas_proc_compra",
+    "grid_empresas_imposto",
+    "grid_itens_container_bkp",
+    "grid_itens_container_comparacao_bkp",
+    "grid_itens_container_old",
+    "grid_itens_controle",
+    "grid_motivos_desconto",
+    "grid_pub_coloracoes",
+    "grid_pub_formatos_amostra",
+    "grid_sc_log",
+    "grid_situacoes_container",
+    "grid_tipos_anexo",
+    "grid_tipos_desenho",
+    "grid_tipos_valor"
+  ],
+  "unresolvedReferences": []
+}

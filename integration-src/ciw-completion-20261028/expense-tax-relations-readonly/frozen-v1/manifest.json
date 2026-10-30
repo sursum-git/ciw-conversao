@@ -1,0 +1,376 @@
+{
+  "status": "CANDIDATE_READY_LOCAL_FROZEN_V1_ROOT_REVIEW_PENDING",
+  "domain": "expense-tax-relations-readonly",
+  "programCode": "op1055",
+  "entityCode": "despesas_impostos_geral_progress",
+  "screenId": "ciw.despesas-impostos-geral",
+  "resource": "despesas_impostos_geral",
+  "scope": "global physical rows; read/get only; literal legacy two-ID projection preserved",
+  "sourceFiles": [
+    {
+      "path": "discovery.json",
+      "sha256": "82e99e0a9dc8832c5f307dbd879b7c903c196db6c2ee259a9dde9b70eb8fed1d"
+    },
+    {
+      "path": "metadata/api-source-preview.json",
+      "sha256": "a0a5d9b731488329ecb652129ba1529e71c17ebaf4bbb3b312245cc88218c5db"
+    },
+    {
+      "path": "metadata/builder-draft.json",
+      "sha256": "536eeb14a5524e75948ba3aad416d2b0732bb15b33018d4878721efd7a78854a"
+    },
+    {
+      "path": "metadata/source-addition.json",
+      "sha256": "ed014e5ff9e2705aed21403c15e394f68a4085070ed2504f4a46b31d049c1ac2"
+    },
+    {
+      "path": "patches/patch-plan.json",
+      "sha256": "1f8142af90f812634216b1bef5750a2b630e04afb653d6b3e7901316295d2d2f"
+    },
+    {
+      "path": "php/RuntimeExpenseTaxRelationsRead.php",
+      "sha256": "9999a613925d9b36d22c1c98ae648fa1566802633259e6aa92f8b22f51aea8e4"
+    },
+    {
+      "path": "PLAN.md",
+      "sha256": "8304aa46e115f96db12c40d91dc3ac6dc4ff1ea43872a03f4aeba417b7f5b9ed"
+    },
+    {
+      "path": "REVIEW.md",
+      "sha256": "8ea1c7feba186a6d6087a64b98bc0ecdc8c86959651aa9f1e8a31dee338703fc"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "71aaab2bef08c278335ac973bd3a5dacd7d3a073f3a68567964a0c5280505dc3"
+    },
+    {
+      "path": "tests/bootstrap.php",
+      "sha256": "dfc1e458f59089c381e70f9dc1c0d6bcf45477323ff3fce5cd1e3fe1bbc8335c"
+    },
+    {
+      "path": "tests/build-patches.py",
+      "sha256": "bb0b895d9e3cbdb61fc340183dc11442e647ce791836f25546d4c72699a6e049"
+    },
+    {
+      "path": "tests/check-frozen.py",
+      "sha256": "1038a20e45604ab9f33955e68e56acdc9c88f690993b52367198d361714249ae"
+    },
+    {
+      "path": "tests/ExpenseTaxRelationsBuilderTest.php",
+      "sha256": "07d7d643b620ce48564acacd09d76fd76f849dd7ab3109fa5fdd910954670cea"
+    },
+    {
+      "path": "tests/ExpenseTaxRelationsReadTest.p",
+      "sha256": "963675398b7fbd708401cb8335569006060c1f43d718b8de42d2002cdec1dc80"
+    },
+    {
+      "path": "tests/freeze.py",
+      "sha256": "64d97fb1810ec116059c965c17762596ce10a0be8073f5c5fb5b747ed256221b"
+    },
+    {
+      "path": "tests/LegacyExpenseTaxContractTest.php",
+      "sha256": "90de07177cb56604c8a071ef85a2cc3cc1aa8c84da6f99fb5f65dd32638f6f2a"
+    },
+    {
+      "path": "tests/native-readonly.cjs",
+      "sha256": "3ef9946387723e3fb3736cc08d6a47fe9cf073cd905b41d934bf810dd50c72fa"
+    },
+    {
+      "path": "tests/prepare-full-stage.py",
+      "sha256": "b646f086756f06cb39b24ee7b0ead9e74b925b37bef9dbdce28e7d38412c99d8"
+    },
+    {
+      "path": "tests/prepare-metadata.py",
+      "sha256": "580afa64d0c2bd258e0db09db1271884ec9b17f87d592ad58fbb518336a8211e"
+    },
+    {
+      "path": "tests/prepare.py",
+      "sha256": "a5b6739c02b99e920f1a067feade68e2f011832d1616a4a8d70457167b9ceeab"
+    },
+    {
+      "path": "tests/rebase-9.py",
+      "sha256": "495f9cc722fbbbc8427768609c7213ea124eebd1409e805a56b11fbfe75eceb8"
+    },
+    {
+      "path": "tests/run-abl.ps1",
+      "sha256": "5aaaa298059c4d5e3c96aba3823202e785aa633209c7267ab084cf0d734fbaf7"
+    },
+    {
+      "path": "tests/RuntimeExpenseTaxRelationsReadTest.php",
+      "sha256": "7b766512978db4debac29bafc9a7a46c0726205b38a37749039511240e5a2f6f"
+    },
+    {
+      "path": "tests/verify.py",
+      "sha256": "aec73b3fb5a2704eb3390bbb0d280bc088b4c5ae029f2798dbbf8a35049f7754"
+    }
+  ],
+  "candidateSources": [
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwErpReadService.p",
+      "relative": "sursum-api/programs/CiwErpReadService.p",
+      "baselineSha256": "c734eda627f6c9289a7ff69a79d13ce696db5dc2204b74dae7e3d78690d86d76",
+      "candidateSha256": "e330e9adcf4377f09d822e2423f7262d05428ca78172667ff61a20df669711ed",
+      "frozenCandidatePath": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-relations-readonly\\frozen-v1\\candidates\\sursum-api\\programs\\CiwErpReadService.p",
+      "applyMode": "byte-exact-sequential-anchors-only"
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeCiwErpQuery.php",
+      "relative": "php/RuntimeCiwErpQuery.php",
+      "baselineSha256": "b83ce35195bd138416b2db57824431a54d48b26b9ab1a38eb5aa754a2457bea4",
+      "candidateSha256": "ee404b000f78b9ff0d482ccf9e735fcd483d196b30811b53b422d4587c819da5",
+      "frozenCandidatePath": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-relations-readonly\\frozen-v1\\candidates\\php\\RuntimeCiwErpQuery.php",
+      "applyMode": "byte-exact-sequential-anchors-only"
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeApiEntityActionService.php",
+      "relative": "php/RuntimeApiEntityActionService.php",
+      "baselineSha256": "399cf18a00bca42875c2a35c648eaa4021029b4e3473b872b16f2e62865c96d2",
+      "candidateSha256": "5f7591ae378c46c0c865c04cb03afaeb9c76fa31dbf329e5661851942ccfc7c6",
+      "frozenCandidatePath": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-relations-readonly\\frozen-v1\\candidates\\php\\RuntimeApiEntityActionService.php",
+      "applyMode": "byte-exact-sequential-anchors-only"
+    },
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwCadastrosCrud.p",
+      "relative": "sursum-api/programs/CiwCadastrosCrud.p",
+      "baselineSha256": "c82a5a7e481886b2d8559e057c3fd8f8ad4f4e66f7eae466d16f043350ed803e",
+      "candidateSha256": "5717308a591f27516341ded859ce669b4c3fab95199f93b06bae655080cf75c3",
+      "frozenCandidatePath": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-relations-readonly\\frozen-v1\\candidates\\sursum-api\\programs\\CiwCadastrosCrud.p",
+      "applyMode": "byte-exact-sequential-anchors-only"
+    }
+  ],
+  "newPhpFile": {
+    "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeExpenseTaxRelationsRead.php",
+    "path": "php/RuntimeExpenseTaxRelationsRead.php",
+    "sha256": "9999a613925d9b36d22c1c98ae648fa1566802633259e6aa92f8b22f51aea8e4"
+  },
+  "runtimeFiles": [
+    {
+      "path": "candidates/php/RuntimeApiEntityActionService.php",
+      "sha256": "5f7591ae378c46c0c865c04cb03afaeb9c76fa31dbf329e5661851942ccfc7c6"
+    },
+    {
+      "path": "candidates/php/RuntimeCiwErpQuery.php",
+      "sha256": "ee404b000f78b9ff0d482ccf9e735fcd483d196b30811b53b422d4587c819da5"
+    },
+    {
+      "path": "candidates/sursum-api/programs/CiwCadastrosCrud.p",
+      "sha256": "5717308a591f27516341ded859ce669b4c3fab95199f93b06bae655080cf75c3"
+    },
+    {
+      "path": "candidates/sursum-api/programs/CiwErpReadService.p",
+      "sha256": "e330e9adcf4377f09d822e2423f7262d05428ca78172667ff61a20df669711ed"
+    },
+    {
+      "path": "testinputs/CiwErpReadService.p",
+      "sha256": "333f6bcffcb6649487fccd384dc5880d3adf12603c8d8371c09bb38313ea417a"
+    },
+    {
+      "path": "testinputs/CiwErpReadTest.p",
+      "sha256": "321e247e04e397c8fde6541bdb0c6fda06a67f27d47d7496b52b5fa9cae82a34"
+    },
+    {
+      "path": "testinputs/CiwMedCompanyContext.p",
+      "sha256": "d1fdd9d3c822410b5922dd4070b2a1da492319f33476f81b9a607cf93d332e55"
+    },
+    {
+      "path": "testinputs/Compile.p",
+      "sha256": "f4e45576275645125a64493d09f5fa0bb48b1cf88290c237dec6ce1fe3b2c1bc"
+    },
+    {
+      "path": "testinputs/Execute.p",
+      "sha256": "eab50e9198e9745fd564fa7f8e36f13b2ad2e2038d924026296b0b968bf19c4f"
+    },
+    {
+      "path": "testinputs/expense-tax-relations-actual.json",
+      "sha256": "72dc57091b458f66b5efae8aba61811c8e5b3e7154680552e08225dc8f822632"
+    },
+    {
+      "path": "testinputs/ExpenseTaxRelationsReadTest.p",
+      "sha256": "963675398b7fbd708401cb8335569006060c1f43d718b8de42d2002cdec1dc80"
+    },
+    {
+      "path": "testinputs/LegacyExecute.p",
+      "sha256": "24092b7a886b7cd118c18a5b8ebbf8f75a3ef1b9ad056fcefa3b7ea4cdb8ad31"
+    },
+    {
+      "path": "testinputs/NullUniqueProbe.p",
+      "sha256": "e99ea966347a9e287e5e2f2961fc950a897966f04d93ec0577a89b0f07f0cdea"
+    },
+    {
+      "path": "testinputs/php/ProgramBuilderService.php",
+      "sha256": "72c6dafbfa0e93196b443ec45cd6d7c743fddd6415719febd70a0965d1fe18ee"
+    },
+    {
+      "path": "testinputs/php/RuntimeApiEntityActionService.php",
+      "sha256": "5f7591ae378c46c0c865c04cb03afaeb9c76fa31dbf329e5661851942ccfc7c6"
+    },
+    {
+      "path": "testinputs/php/RuntimeCiwErpQuery.php",
+      "sha256": "ee404b000f78b9ff0d482ccf9e735fcd483d196b30811b53b422d4587c819da5"
+    },
+    {
+      "path": "testinputs/php-full-stage-source-manifest.json",
+      "sha256": "a104b483bda3908f3ae3b08a415c09ca184ed47e71c36957bab43ba8ad801387"
+    },
+    {
+      "path": "testinputs/sursum-api/includes/PurchaseItemSnapshot.i",
+      "sha256": "f7e81fbcd3fbc53f124c60d99c3065b73e2d876665ce900f8772ed1f25d7350d"
+    },
+    {
+      "path": "testinputs/sursum-api/includes/PurchaseItemValueRules.i",
+      "sha256": "1ae6949d39fa07286e0e1c76776b9bb508de6715d1494858d7ac53c1d591c894"
+    },
+    {
+      "path": "testinputs/sursum-api/includes/PurchaseOrderSnapshot.i",
+      "sha256": "98b8da213a666f328747d0698608954ab646ef60fc2c86e313f6d156b3fa573a"
+    },
+    {
+      "path": "testinputs/sursum-api/programs/CiwCadastrosCrud.p",
+      "sha256": "5717308a591f27516341ded859ce669b4c3fab95199f93b06bae655080cf75c3"
+    },
+    {
+      "path": "testinputs/sursum-api/programs/CiwErpReadService.p",
+      "sha256": "e330e9adcf4377f09d822e2423f7262d05428ca78172667ff61a20df669711ed"
+    },
+    {
+      "path": "testinputs/sursum-api/programs/CiwMedCompanyContext.p",
+      "sha256": "892dec9eaaf6d15f34d674de0c62141182431fd2204e523a0e86b26ac1dda4e2"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-relations-readonly\\verification.json",
+      "sha256": "c20104082877683cffce8fce34bfb77d9fc5bbe935f3caaaf80d294c95922ece"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-relations-readonly\\byte-proof.json",
+      "sha256": "29dbf60f7f2475641e1062bf2ab2f4294734a70a321aef6e4c350443a525516f"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-relations-readonly\\rebase-9-proof.json",
+      "sha256": "44c62c4afde0a22af0bfdc7d0deeb32e54cabc9fb838403f700b8d2eb5d7c126"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-relations-readonly\\php-red.xml",
+      "sha256": "f65a1e11d4a19146a233958e025c1947b6d5ba1f421d8200a2b59bc7b9979c6b"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-relations-readonly\\php-rebased9.xml",
+      "sha256": "11ae114bf900fe9d414e0a16b217a7b0e63934fe0085a4b459386b394b7a0723"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-relations-readonly\\php-builder.xml",
+      "sha256": "71f3757119de6b57d8c03f68a1b8e463c74e1eff9620660dda253dbc0447745d"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-relations-readonly\\full-stage\\php-full.xml",
+      "sha256": "55f2e9be77d8f71b8f0a68513b1f3c465445239910d9a5d3d7aa63d08187ccc9"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-relations-readonly\\full-stage\\php-stage-loader-proof.json",
+      "sha256": "808038ef997fcdc4988d9725b2799f7b2685dbd4a9229e7ad1a3a8d3953e535c"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-relations-readonly\\native-result.json",
+      "sha256": "0659273689ce249bc7a99f1385a674496d81ed852fbffd51dd7b3e556c3cbff5"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-relations-readonly\\ambiguity-red.log",
+      "sha256": "7af455b37c98b47c5c7ca099c1496eac65bd1828492712db391c22bc98770cb4"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-relations-readonly\\ambiguity-red-service.p",
+      "sha256": "6b2745d3b424294925db1d996929be6e4f5acfe949f9fa099fa4d263627190e6"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-relations-readonly\\red\\execution.log",
+      "sha256": "9bda11eefe1eb19ce4c558b592ff6c874b07e062a32466cdd3c49e48906f5a86"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-relations-readonly\\local\\null-unique-proof.log",
+      "sha256": "61c2dd4a7c4ac8aebac5be08f66e4358e0a7be7284c79273cb6cd340741e658e"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-relations-readonly\\local\\test-UTF-8-AMERICAN.log",
+      "sha256": "a2c3405d5fcf369212e182b167df9d859bbf7d37a3d710a3422240acf3c4000e"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-relations-readonly\\local\\test-UTF-8-EUROPEAN.log",
+      "sha256": "4132cab59a080391b802ad6816659db4f2481dbc076aa53baaf1937f2f45552c"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-relations-readonly\\local\\test-ISO8859-1-AMERICAN.log",
+      "sha256": "a2c3405d5fcf369212e182b167df9d859bbf7d37a3d710a3422240acf3c4000e"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\expense-tax-relations-readonly\\local\\test-ISO8859-1-EUROPEAN.log",
+      "sha256": "4132cab59a080391b802ad6816659db4f2481dbc076aa53baaf1937f2f45552c"
+    }
+  ],
+  "tests": {
+    "tt": 384,
+    "combinations": 4,
+    "NUMDBS": 0,
+    "localCompiler": "12.8 diagnostic only",
+    "phpFullStage": {
+      "tests": 986,
+      "assertions": 7023,
+      "files": 413,
+      "phpFiles": 409,
+      "namedAppDefinitions": 277,
+      "outsideStage": 0
+    },
+    "realBuilder": {
+      "tests": 2,
+      "assertions": 317
+    },
+    "nativeAjv": 20
+  },
+  "metadata": {
+    "sourceOperationsBefore": 144,
+    "sourceOperationsAfter": 146,
+    "getRegistryType": "detail",
+    "preserveLiveAuthenticationInMemory": true,
+    "replaceSanitizedSource": false,
+    "declaredExtension": "optional empresa filter/detail and deterministic PK ordering; no descriptions added"
+  },
+  "identityGate": {
+    "physicalPk": [
+      "despesa_id",
+      "imposto_id",
+      "empresa_id"
+    ],
+    "nullableInt32": true,
+    "nullDuplicateScanBeforePagination": true,
+    "ambiguousStatus": 409,
+    "partialData": false,
+    "deduplication": false,
+    "rowidInContract": false,
+    "parityForAmbiguousCorpus": false
+  },
+  "limits": {
+    "take": 200,
+    "matchingRows": 50000,
+    "seconds": 10,
+    "overLimitOrTimeoutStatus": 503
+  },
+  "gates": {
+    "independentReview": false,
+    "official122": false,
+    "canonicalIntegrated": false,
+    "runtimePublished": false,
+    "metadataPublished": false,
+    "liveUsageMenuConfirmed": false,
+    "newAccessGranted": false
+  },
+  "safety": {
+    "networkExecuted": false,
+    "businessWritten": false,
+    "ddlOrSequences": false,
+    "canonicalChanged": false,
+    "otherFreezesChanged": false,
+    "inventoryChanged": false
+  },
+  "verifyReadOnly": "tests/check-frozen.py",
+  "remaining": "usage/menu gate and root official pipeline; writers/form not converted; ambiguous nullable PK corpus409 explicitly"
+}

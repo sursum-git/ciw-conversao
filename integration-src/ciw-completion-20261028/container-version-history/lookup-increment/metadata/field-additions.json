@@ -1,0 +1,95 @@
+{
+  "status": "ADDITIVE_FIELDS_ONLY_RUNTIME_METADATA_HASH_GATE",
+  "newEntities": 0,
+  "newOperations": 0,
+  "newParentLinks": 0,
+  "preserveAllExistingFields": true,
+  "newNativeDraftPerScreen": true,
+  "prerequisite": "Aux-v1.1 native metadata integrated; capture runtime entity/program export hashes before preparing final guarded append",
+  "additions": [
+    {
+      "entity": "container_versoes_historico_med_progress",
+      "screen": "ciw.container-versao-itens-historico",
+      "field": {
+        "code": "item_descricao_atual",
+        "label": "Descrição atual do item",
+        "dataType": "string",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "position": 999,
+        "apiJsonPath": "item_descricao_atual",
+        "apiWritePath": "item_descricao_atual",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "options": {
+          "readonly": true,
+          "writable": false
+        }
+      },
+      "gridAppend": {
+        "field": "item_descricao_atual",
+        "hidden": false,
+        "width": 260
+      },
+      "filterAppend": "item_descricao_atual"
+    },
+    {
+      "entity": "container_versao_nfs_historico_med_progress",
+      "screen": "ciw.container-versao-nfs-historico",
+      "field": {
+        "code": "emitente_nome_abrev_atual",
+        "label": "Nome atual do emitente",
+        "dataType": "string",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "position": 999,
+        "apiJsonPath": "emitente_nome_abrev_atual",
+        "apiWritePath": "emitente_nome_abrev_atual",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "options": {
+          "readonly": true,
+          "writable": false
+        }
+      },
+      "gridAppend": {
+        "field": "emitente_nome_abrev_atual",
+        "hidden": false,
+        "width": 260
+      },
+      "filterAppend": "emitente_nome_abrev_atual"
+    },
+    {
+      "entity": "container_versao_despesas_historico_med_progress",
+      "screen": "ciw.container-versao-despesas-historico",
+      "field": {
+        "code": "despesa_descricao_atual",
+        "label": "Descrição atual da despesa",
+        "dataType": "string",
+        "primaryKey": false,
+        "required": false,
+        "readonlyField": true,
+        "position": 999,
+        "apiJsonPath": "despesa_descricao_atual",
+        "apiWritePath": "despesa_descricao_atual",
+        "apiShowInGrid": true,
+        "apiShowInForm": true,
+        "apiShowInFilter": true,
+        "options": {
+          "readonly": true,
+          "writable": false
+        }
+      },
+      "gridAppend": {
+        "field": "despesa_descricao_atual",
+        "hidden": false,
+        "width": 260
+      },
+      "filterAppend": "despesa_descricao_atual"
+    }
+  ]
+}

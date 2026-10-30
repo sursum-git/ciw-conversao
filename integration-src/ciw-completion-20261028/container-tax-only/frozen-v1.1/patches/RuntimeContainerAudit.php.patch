@@ -1,0 +1,11 @@
+--- D:\opencode\construtor-pg\backend\src\Runtime\RuntimeContainerAudit.php
++++ D:\opencode\construtor-pg\backend\src\Runtime\RuntimeContainerAudit.php
+@@ -23,7 +23,7 @@
+         if (!$contract || ($definition['primaryKey'] ?? '') !== $contract[2] || ($definition['apiBinding']['sourceCode'] ?? '') !== $contract[0]) { return null; }
+         $path = parse_url((string) ($endpoint['url'] ?? ''), PHP_URL_PATH);
+         $template = $endpoint['bodyTemplate'] ?? [];
+-        $resource = $contract[3] === 'container_processes' ? (['gerar'=>'versoes','fechar'=>'custos','sincronizar'=>'impostos'][$operation] ?? null) : $contract[3];
++        $resource = $contract[3] === 'container_processes' ? (['gerar'=>'versoes','fechar'=>'custos','sincronizar'=>'impostos','calcular_impostos'=>'impostos'][$operation] ?? null) : $contract[3];
+         if (!$resource || $contract[3] !== 'container_processes' && !in_array($operation, $contract[3] === 'container-pagamentos' ? ['create','delete'] : ['create','update','delete'], true)
+             || !in_array($path, ['/SursumPrograms/'.$contract[1],'/med/web/SursumPrograms/'.$contract[1]], true)
+             || !is_array($template) || count($template) !== 2 || ($template['resource'] ?? null) !== $resource || ($template['operation'] ?? null) !== $operation) { return null; }

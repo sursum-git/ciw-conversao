@@ -1,0 +1,120 @@
+--- D:\opencode\construtor-pg\backend\src\Builder\ProgramBuilderService.php
++++ D:\opencode\construtor-pg\backend\src\Builder\ProgramBuilderService.php
+@@ -2114,6 +2114,7 @@
+             throw new RuntimeHttpException('PROGRAM_VERSION_NOT_FOUND', 'Versao do programa nao encontrada.', 404, ['id' => $id]);
+         }
+ 
++        $this->assertApiOptionsPageType($version->getPageType(), null, $version->getGeneratedDefinition());
+         $grant = null;
+         try {
+             if ($version->getProgramOrigin() === 'standard' && $version->getOwnerScope() === 'system') {
+@@ -3565,6 +3566,7 @@
+             throw new RuntimeHttpException('PROGRAM_GRID_BATCH_UNAVAILABLE', 'Edicao em lote exige programa CRUD com entidade API e operacao batch configurada.', 422);
+         }
+ 
++        $this->assertApiOptionsPageType($pageType, $entity);
+         $existingProgram = $this->programs->findOneBy(['code' => $programCode]);
+         if ($existingProgram) {
+             if (
+@@ -3639,6 +3641,7 @@
+             if($source){
+                 $lookup=null;foreach($entity->getMetadata()['apiSource']['operations'] ?? [] as $candidate){if(($candidate['code'] ?? null)===($source['operationCode'] ?? null)){$lookup=$candidate;}}
+                 if (!$lookup || !\App\Runtime\RuntimeProcessLookupPolicy::allows($lookup, array_column(is_array($contexts) ? $contexts : [], 'field'))) { $fail(); }
++                foreach ($source['parameterFields'] ?? [] as $dependency) { if (!in_array($dependency,$value['parameterFields'],true)) { $fail(); } }
+             }
+             $seen[$name] = true;
+         }
+@@ -4799,6 +4802,7 @@
+                 $fields[$code]['optionsSource'] = ['endpointId' => 'options.' . $code];
+                 if (isset($apiField['optionsSource']['copyFields'])) { $fields[$code]['optionsSource']['copyFields'] = array_keys($apiField['optionsSource']['copyFields']); }
+                 if (($apiField['optionsSource']['excludeCurrent'] ?? false) === true) { $fields[$code]['optionsSource']['excludeCurrent'] = true; }
++                if (isset($apiField['optionsSource']['parameterFields'])) { $fields[$code]['optionsSource']['parameterFields']=$apiField['optionsSource']['parameterFields']; }
+             }
+             if (in_array($options['editor'] ?? '', ['dropdown', 'multiselect', 'textarea'], true)) { $fields[$code]['editor'] = $options['editor']; }
+             if (($options['editor']??null)==='file') {
+@@ -5030,12 +5034,13 @@
+     private function generateProcessDefinition(array $config): array
+     {
+         $crud = $this->generateCrudDefinition($config);
++        $lookupParameters=[];foreach($config['_entity']->getFields() as $field) { $lookupParameters=array_merge($lookupParameters,$field->getOptions()['api']['optionsSource']['parameterFields'] ?? []); }
+         $contextCodes = array_column($config['contextFields'], 'field');
+         $names = array_values(array_unique(array_merge($config['processOptions']['parameterFields'], $contextCodes)));
+         $parameters = [];
+         foreach ($names as $name) {
+             $field = $crud['dataModel']['fields'][$name];
+-            $parameters[] = ['id' => $name, 'field' => $name, 'label' => $field['label'], 'type' => $field['type'],
++            $parameters[] = ['id' => $name, 'field' => $name, 'label' => $field['label'], 'type' => in_array($name,$lookupParameters,true) ? 'dropdown' : $field['type'],
+                 'required' => in_array($name, $contextCodes, true) || ($field['validation']['required'] ?? false),
+                 'readonly' => in_array($name, $contextCodes, true) || ($field['readonly'] ?? false)]
+                 + array_intersect_key($field, array_flip(['options', 'defaultValue', 'format', 'decimals', 'technicalProperties','itemType','editor','optionsSource']));
+@@ -6356,6 +6361,30 @@
+         };
+     }
+ 
++    private function assertApiOptionsPageType(string $pageType, ?BuilderEntity $entity = null, array $definition = []): void
++    {
++        if ($pageType === 'process') { return; }
++        $fail = static function (): never { throw new RuntimeHttpException('ENTITY_API_OPTIONS_PROCESS_ONLY','Opcoes dependentes sao permitidas somente em paginas de processo.',422); };
++        foreach ($entity?->getFields() ?? [] as $field) {
++            $source = $field->getOptions()['api']['optionsSource'] ?? null;
++            if (is_array($source) && array_key_exists('parameterFields',$source)) { $fail(); }
++        }
++        $pending = [$definition];
++        while ($pending) {
++            $node = array_pop($pending);
++            if (is_array($node['optionsSource'] ?? null) && array_key_exists('parameterFields',$node['optionsSource'])) { $fail(); }
++            foreach ($node as $value) { if (is_array($value)) { $pending[] = $value; } }
++        }
++    }
++
++    private function processLookupParameterConfig(BuilderProgramVersion $version,string $endpointId):array
++    {
++        if ($version->getPageType()!=='process' || !str_starts_with($endpointId,'options.')) { return []; }
++        $entity=$this->entities->findOneBy(['code'=>$version->getBuilderEntityCode()]);
++        foreach($entity?->getFields() ?? [] as $field) { if ($field->getCode()===substr($endpointId,8) && isset($field->getOptions()['api']['optionsSource']['parameterFields'])) { return ['lookupParameterFields'=>$field->getOptions()['api']['optionsSource']['parameterFields']]; } }
++        return [];
++    }
++
+     private function endpointConfig(BuilderProgramVersion $version, string $endpointId, string $handler): array
+     {
+         if (in_array($handler, ['attachments.download','entity.crud', 'entity.api.readonly', 'entity.api.crud', 'entity.api.odoo.readonly'], true)) {
+@@ -6365,6 +6394,7 @@
+                 ...(\App\Runtime\RuntimePurchaseAttachmentAudit::supports(['entityCode'=>$version->getBuilderEntityCode()]) && in_array($endpointId,['create','update'],true) ? ['fileFields'=>['arquivo_upload']] : []),
+                 ...($version->getPageType() === 'process' && $endpointId==='run' ? ['allowProcess' => true, 'processOptions' => $version->getBuilderConfig()['processOptions'], 'contextFields' => $version->getBuilderConfig()['contextFields'] ?? []] : []),
+                 ...($version->getPageType() === 'process' && str_starts_with($endpointId, 'options.') ? ['processParameterOptions'=>true, 'contextFields'=>$version->getBuilderConfig()['contextFields'] ?? []] : []),
++                ...$this->processLookupParameterConfig($version,$endpointId),
+                 'fieldCode' => str_starts_with($endpointId, 'options.') ? substr($endpointId, 8) : null,
+                 'actionId' => $endpointId,
+                 'programId' => $version->getProgramCode(),
+@@ -7116,7 +7146,7 @@
+     private function normalizeApiOptionsSource(mixed $value): ?array
+     {
+         if ($value === null) { return null; }
+-        $value = $this->closedObject($value, ['operationCode', 'valueField', 'textField', 'excludeCurrent', 'copyFields'], 'optionsSource');
++        $value = $this->closedObject($value, ['operationCode', 'valueField', 'textField', 'excludeCurrent', 'copyFields', 'parameterFields'], 'optionsSource');
+         foreach (['operationCode', 'valueField', 'textField'] as $key) {
+             if (!is_string($value[$key] ?? null) || !preg_match('/^[A-Za-z_][A-Za-z0-9_]*$/', $value[$key])) {
+                 throw new RuntimeHttpException('ENTITY_API_OPTIONS_INVALID', 'Opcao exige operacao e campos cadastrados validos.', 422);
+@@ -7129,11 +7159,22 @@
+             if (count($copy) > 10) { throw new RuntimeHttpException('ENTITY_API_OPTIONS_INVALID', 'Limite de campos de apresentacao excedido.', 422); }
+             foreach ($copy as $target => $path) { if (!preg_match('/^[A-Za-z_][A-Za-z0-9_]*$/', (string) $target) || !is_string($path) || !preg_match('/^[A-Za-z_][A-Za-z0-9_]*$/', $path)) { throw new RuntimeHttpException('ENTITY_API_OPTIONS_INVALID', 'Mapping de apresentacao invalido.', 422); } }
+         }
++        if (array_key_exists('parameterFields',$value)) {
++            $names=$value['parameterFields'];
++            if (!is_array($names) || !array_is_list($names) || !$names || count($names)>2 || count(array_unique($names,SORT_REGULAR))!==count($names)) { throw new RuntimeHttpException('ENTITY_API_OPTIONS_PARAMETERS','Parametros de opcoes invalidos.',422); }
++            foreach($names as $name) { if (!is_string($name) || !preg_match('/^[a-z][a-z0-9_]*$/D',$name) || in_array($name,['context','operation','resource','parameters'],true)) { throw new RuntimeHttpException('ENTITY_API_OPTIONS_PARAMETERS','Parametro de opcoes invalido.',422); } }
++        }
+         return $value;
+     }
+ 
+     private function validateApiOptionsOperation(BuilderEntity $entity, array $source): void
+     {
++        foreach ($source['parameterFields'] ?? [] as $name) {
++            $parameter=null;foreach($entity->getFields() as $field) { if ($field->getCode()===$name) { $parameter=$field; } }
++            $options=$parameter?->getOptions() ?? []; $values=$options['options'] ?? null;
++            if (!$parameter || $parameter->getDataType()!=='string' || ($options['editor']??null)!=='dropdown' || ($options['readonly']??false) || !is_array($values) || !array_is_list($values) || !$values || count($values)>20) { throw new RuntimeHttpException('ENTITY_API_OPTIONS_PARAMETERS','Parametro exige enum escalar fechado.',422); }
++            $seen=[];foreach($values as $option) { if (!is_array($option) || array_diff(array_keys($option),['value','text']) || !is_string($option['value']??null) || !is_string($option['text']??null) || isset($seen[$option['value']])) { throw new RuntimeHttpException('ENTITY_API_OPTIONS_PARAMETERS','Enum de opcoes invalido.',422); } $seen[$option['value']]=true; }
++        }
+         foreach ($source['copyFields'] ?? [] as $target => $path) {
+             $valid = false;
+             foreach ($entity->getFields() as $field) { if ($field->getCode() === $target && !$field->isPrimaryKey() && (($field->getOptions()['readonly'] ?? false) || ($field->getOptions()['writable'] ?? true) === false)) { $valid = true; } }

@@ -1,0 +1,15 @@
+diff --git a/RuntimeApiEntityActionService.php b/RuntimeApiEntityActionService.php
+index 3812788..80b7f7e 100644
+--- a/RuntimeApiEntityActionService.php
++++ b/RuntimeApiEntityActionService.php
+@@ -922,6 +922,10 @@ class RuntimeApiEntityActionService
+ 
+         }
+ 
++        if (($definition['entityCode'] ?? null) === 'container_versoes_historico_med_progress') {
++            ApiRequestContext::assertRows($body['data'], ['container_id' => $query['container_id'], 'versao_id' => $query['versao_id']]);
++        }
++
+         if (($definition['entityCode'] ?? null) === 'proc_compra_sinalizados_med_progress') {
+             ApiRequestContext::assertRows($body['data'], ['sinaliz_imp_id' => $query['sinaliz_imp_id']]);
+         }

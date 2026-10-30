@@ -1,0 +1,40 @@
+--- D:\opencode\construtor-pg\backend\src\Runtime\RuntimeApiEntityActionService.php
++++ D:\opencode\construtor-pg\backend\src\Runtime\RuntimeApiEntityActionService.php
+@@ -968,6 +968,9 @@
+             ApiRequestContext::assertRows($body['data'], ['proc_compra_id' => $query['proc_compra_id']]);
+         }
+ 
++        if (RuntimeImportDiscountRead::supports($definition)) {
++            foreach ($body['data'] as $row) { RuntimeImportDiscountRead::assertRow($definition,$row,$query); }
++        }
+         $data = array_map(fn (array $row): array => $this->mapItem($definition, $row), $body['data']);
+ 
+         $this->transactions->log($definition['entityCode'] . '.api.read', 'Consulta ERP MED executada com paginação no servidor.', metadata: [
+@@ -990,6 +993,7 @@
+         if (RuntimeContainerExpenseBatch::supports($definition)) { return $this->containerExpenseBatchRequest($definition,[],$payload,'get'); }
+ 
+         $id = $this->extractRecordId($definition, $payload);
++        if (RuntimeImportDiscountRead::supports($definition)) { RuntimeImportDiscountRead::submittedAliases($payload,$id); }
+ 
+         if (in_array($definition['entityCode'] ?? null, ['container_versoes_historico_med_progress','container_versao_pagtos_historico_med_progress','container_versao_nfs_historico_med_progress','container_versao_descontos_historico_med_progress','container_versao_despesas_historico_med_progress'], true)) {
+             foreach ([$payload, is_array($payload['record'] ?? null) ? $payload['record'] : []] as $submitted) {
+@@ -1007,7 +1011,7 @@
+ 
+             [$id] = $this->purchaseOrderIdentity($definition, $detailEndpoint, 'get', is_array($payload['record'] ?? null) ? $payload['record'] : [], $id, $payload['id'] ?? null);
+ 
+-            $context = ApiRequestContext::resolve($definition, $detailEndpoint, $payload);
++            $context = RuntimeImportDiscountRead::supports($definition) ? RuntimeImportDiscountRead::resolveContext($definition,$detailEndpoint,$payload) : ApiRequestContext::resolve($definition, $detailEndpoint, $payload);
+ 
+             $startedAt = microtime(true);
+ 
+@@ -1041,6 +1045,10 @@
+ 
+             }
+ 
++            if (RuntimeImportDiscountRead::supports($definition)) {
++                if (($response['body']['success']??null)!==true || isset($response['body']['error'])) { throw new RuntimeHttpException('IMPORT_DISCOUNTS_RESPONSE_INVALID','Resposta de descontos invalida.',502); }
++                RuntimeImportDiscountRead::assertRow($definition,$item,$context,$id);
++            }
+             $mapped = $this->enrichRows($definition, [$this->mapItem($definition, $item)])[0] ?? [];
+ 
+             ApiRequestContext::assertRows([$mapped], $context);

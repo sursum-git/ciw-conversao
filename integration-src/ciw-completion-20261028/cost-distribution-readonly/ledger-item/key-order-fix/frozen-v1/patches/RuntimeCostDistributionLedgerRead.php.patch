@@ -1,0 +1,13 @@
+diff --git a/RuntimeCostDistributionLedgerRead.php b/RuntimeCostDistributionLedgerRead.php
+index c26785c..da766fa 100644
+--- a/RuntimeCostDistributionLedgerRead.php
++++ b/RuntimeCostDistributionLedgerRead.php
+@@ -16,7 +16,7 @@ final class RuntimeCostDistributionLedgerRead
+  public static function assertRow(mixed $row,array $context,?string $requestedKey=null):void {
+   if(!is_array($row)||!is_string($row['record_key']??null)||strlen($row['record_key'])>2048||$requestedKey!==null&&$row['record_key']!==$requestedKey)self::invalid(502);
+   try{$key=json_decode($row['record_key'],true,4,JSON_THROW_ON_ERROR);}catch(\JsonException){self::invalid(502);}
+-  $keys=['item_container_id','cta_corren_custo_distr_id'];if(!is_array($key)||array_keys($key)!==$keys)self::invalid(502);
++  $keys=['item_container_id','cta_corren_custo_distr_id'];if(!is_array($key)||array_is_list($key)||count($key)!==count($keys)||array_diff(array_keys($key),$keys))self::invalid(502);
+   foreach($keys as $field)if(!is_int($key[$field])||!is_int($row[$field]??null)||$key[$field]!==$row[$field]||$row[$field]<-2147483648||$row[$field]>2147483647)self::invalid(502);
+   if(!is_int($context['item_container_id']??null)||$context['item_container_id']<1)self::invalid(502);
+   ApiRequestContext::assertRows([$row],['item_container_id'=>$context['item_container_id']]);

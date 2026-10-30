@@ -1,0 +1,1022 @@
+{
+  "proofPath": ".runtime/ciw-completion-20261028/sql-comparison-source-derived-v2.json",
+  "proofSha256": "51058b12cb8d0044fda2d12d24ed42775f58c0c16a43ba31c85018120fd2a157",
+  "fixtureSha256": "8c9e15ed6f87ca344d0c81d972facb2e5d5b81d19ef28f9cb91dd8c6ba5be903",
+  "scope": "Synthetic DERIVED observed cases only. Inner/output scale8 is independently supported by physical SQLDescribeCol metadata. No all-physical-values/overflow equivalence claim.",
+  "cases": [
+    {
+      "case": "real_normal_rounding",
+      "rows": [
+        {
+          "input": {
+            "qt_alocada": 0,
+            "qt_confirm_emb": 0,
+            "vl_custo_prev": 100.0,
+            "vl_desp_prev": 20.0,
+            "vl_desp_prev_sem_distr_custo": 10.0,
+            "vl_unit_prev": 12.0,
+            "perc_fixo_container": 5.0
+          },
+          "rowId": 1,
+          "success": true,
+          "expected": {
+            "vl_custo_prev": 100.0,
+            "vl_desp_prev": 20.0,
+            "vl_tot_prev": 120.0,
+            "vl_unit_prev": 12.0,
+            "vl_desp_prev_sem_distr_custo": 10.0,
+            "vl_tot_sem_distr_custo": 110.0,
+            "vl_unit_sem_distr_custo": 11.0,
+            "vl_desp_prev_perc_fixo": 5.0,
+            "vl_tot_perc_fixo": 105.0,
+            "vl_unit_perc_fixo": 10.5
+          },
+          "sqlObservedScales": {
+            "vl_custo_prev": 0,
+            "vl_desp_prev": 2,
+            "vl_tot_prev": 2,
+            "vl_unit_prev": 4,
+            "vl_desp_prev_sem_distr_custo": 2,
+            "vl_tot_sem_distr_custo": 2,
+            "vl_unit_sem_distr_custo": 8,
+            "vl_desp_prev_perc_fixo": 8,
+            "vl_tot_perc_fixo": 8,
+            "vl_unit_perc_fixo": 8
+          }
+        },
+        {
+          "input": {
+            "qt_alocada": 0,
+            "qt_confirm_emb": 0,
+            "vl_custo_prev": 0.0,
+            "vl_desp_prev": 20.0,
+            "vl_desp_prev_sem_distr_custo": 10.0,
+            "vl_unit_prev": 2.0,
+            "perc_fixo_container": 0.0
+          },
+          "rowId": 2,
+          "success": true,
+          "expected": {
+            "vl_custo_prev": 0.0,
+            "vl_desp_prev": 20.0,
+            "vl_tot_prev": 20.0,
+            "vl_unit_prev": 2.0,
+            "vl_desp_prev_sem_distr_custo": 10.0,
+            "vl_tot_sem_distr_custo": 10.0,
+            "vl_unit_sem_distr_custo": 1.0,
+            "vl_desp_prev_perc_fixo": 0.0,
+            "vl_tot_perc_fixo": 0.0,
+            "vl_unit_perc_fixo": 0.0
+          },
+          "sqlObservedScales": {
+            "vl_custo_prev": 0,
+            "vl_desp_prev": 2,
+            "vl_tot_prev": 2,
+            "vl_unit_prev": 4,
+            "vl_desp_prev_sem_distr_custo": 2,
+            "vl_tot_sem_distr_custo": 2,
+            "vl_unit_sem_distr_custo": 8,
+            "vl_desp_prev_perc_fixo": 8,
+            "vl_tot_perc_fixo": 8,
+            "vl_unit_perc_fixo": 8
+          }
+        },
+        {
+          "input": {
+            "qt_alocada": 0,
+            "qt_confirm_emb": 0,
+            "vl_custo_prev": 1450.0,
+            "vl_desp_prev": 51.31,
+            "vl_desp_prev_sem_distr_custo": 52.31,
+            "vl_unit_prev": 500.4359,
+            "perc_fixo_container": 5.0
+          },
+          "rowId": 3,
+          "success": true,
+          "expected": {
+            "vl_custo_prev": 1450.0,
+            "vl_desp_prev": 51.31,
+            "vl_tot_prev": 1501.31,
+            "vl_unit_prev": 500.4359,
+            "vl_desp_prev_sem_distr_custo": 52.31,
+            "vl_tot_sem_distr_custo": 1502.31,
+            "vl_unit_sem_distr_custo": 500.76923215,
+            "vl_desp_prev_perc_fixo": 72.5,
+            "vl_tot_perc_fixo": 1522.5,
+            "vl_unit_perc_fixo": 507.49922183
+          },
+          "sqlObservedScales": {
+            "vl_custo_prev": 0,
+            "vl_desp_prev": 2,
+            "vl_tot_prev": 2,
+            "vl_unit_prev": 4,
+            "vl_desp_prev_sem_distr_custo": 2,
+            "vl_tot_sem_distr_custo": 2,
+            "vl_unit_sem_distr_custo": 8,
+            "vl_desp_prev_perc_fixo": 8,
+            "vl_tot_perc_fixo": 8,
+            "vl_unit_perc_fixo": 8
+          }
+        }
+      ]
+    },
+    {
+      "case": "real_null_nonzero",
+      "rows": [
+        {
+          "input": {
+            "qt_alocada": 0,
+            "qt_confirm_emb": 0,
+            "vl_custo_prev": 100.0,
+            "vl_desp_prev": 20.0,
+            "vl_desp_prev_sem_distr_custo": 10.0,
+            "vl_unit_prev": 12.0,
+            "perc_fixo_container": 5.0
+          },
+          "rowId": 1,
+          "success": true,
+          "expected": {
+            "vl_custo_prev": 100.0,
+            "vl_desp_prev": 20.0,
+            "vl_tot_prev": 120.0,
+            "vl_unit_prev": 12.0,
+            "vl_desp_prev_sem_distr_custo": 10.0,
+            "vl_tot_sem_distr_custo": 110.0,
+            "vl_unit_sem_distr_custo": 11.0,
+            "vl_desp_prev_perc_fixo": 5.0,
+            "vl_tot_perc_fixo": 105.0,
+            "vl_unit_perc_fixo": 10.5
+          },
+          "sqlObservedScales": {
+            "vl_custo_prev": 0,
+            "vl_desp_prev": 0,
+            "vl_tot_prev": 0,
+            "vl_unit_prev": 0,
+            "vl_desp_prev_sem_distr_custo": 0,
+            "vl_tot_sem_distr_custo": 0,
+            "vl_unit_sem_distr_custo": 8,
+            "vl_desp_prev_perc_fixo": 8,
+            "vl_tot_perc_fixo": 8,
+            "vl_unit_perc_fixo": 8
+          }
+        },
+        {
+          "input": {
+            "qt_alocada": 0,
+            "qt_confirm_emb": 0,
+            "vl_custo_prev": null,
+            "vl_desp_prev": 1.0,
+            "vl_desp_prev_sem_distr_custo": 1.0,
+            "vl_unit_prev": 5.0,
+            "perc_fixo_container": 1.0
+          },
+          "rowId": 2,
+          "success": true,
+          "expected": {
+            "vl_custo_prev": null,
+            "vl_desp_prev": 1.0,
+            "vl_tot_prev": null,
+            "vl_unit_prev": 5.0,
+            "vl_desp_prev_sem_distr_custo": 1.0,
+            "vl_tot_sem_distr_custo": null,
+            "vl_unit_sem_distr_custo": null,
+            "vl_desp_prev_perc_fixo": null,
+            "vl_tot_perc_fixo": null,
+            "vl_unit_perc_fixo": null
+          },
+          "sqlObservedScales": {
+            "vl_custo_prev": 0,
+            "vl_desp_prev": 0,
+            "vl_tot_prev": 0,
+            "vl_unit_prev": 0,
+            "vl_desp_prev_sem_distr_custo": 0,
+            "vl_tot_sem_distr_custo": 0,
+            "vl_unit_sem_distr_custo": 8,
+            "vl_desp_prev_perc_fixo": 8,
+            "vl_tot_perc_fixo": 8,
+            "vl_unit_perc_fixo": 8
+          }
+        },
+        {
+          "input": {
+            "qt_alocada": 0,
+            "qt_confirm_emb": 0,
+            "vl_custo_prev": 1.0,
+            "vl_desp_prev": 1.0,
+            "vl_desp_prev_sem_distr_custo": null,
+            "vl_unit_prev": 5.0,
+            "perc_fixo_container": null
+          },
+          "rowId": 3,
+          "success": true,
+          "expected": {
+            "vl_custo_prev": 1.0,
+            "vl_desp_prev": 1.0,
+            "vl_tot_prev": 2.0,
+            "vl_unit_prev": 5.0,
+            "vl_desp_prev_sem_distr_custo": null,
+            "vl_tot_sem_distr_custo": null,
+            "vl_unit_sem_distr_custo": null,
+            "vl_desp_prev_perc_fixo": null,
+            "vl_tot_perc_fixo": null,
+            "vl_unit_perc_fixo": null
+          },
+          "sqlObservedScales": {
+            "vl_custo_prev": 0,
+            "vl_desp_prev": 0,
+            "vl_tot_prev": 0,
+            "vl_unit_prev": 0,
+            "vl_desp_prev_sem_distr_custo": 0,
+            "vl_tot_sem_distr_custo": 0,
+            "vl_unit_sem_distr_custo": 8,
+            "vl_desp_prev_perc_fixo": 8,
+            "vl_tot_perc_fixo": 8,
+            "vl_unit_perc_fixo": 8
+          }
+        }
+      ]
+    },
+    {
+      "case": "real_null_cost_inner_zero",
+      "rows": [
+        {
+          "input": {
+            "qt_alocada": 0,
+            "qt_confirm_emb": 0,
+            "vl_custo_prev": 100.0,
+            "vl_desp_prev": 20.0,
+            "vl_desp_prev_sem_distr_custo": 10.0,
+            "vl_unit_prev": 12.0,
+            "perc_fixo_container": 5.0
+          },
+          "rowId": 1,
+          "success": true,
+          "expected": {
+            "vl_custo_prev": 100.0,
+            "vl_desp_prev": 20.0,
+            "vl_tot_prev": 120.0,
+            "vl_unit_prev": 12.0,
+            "vl_desp_prev_sem_distr_custo": 10.0,
+            "vl_tot_sem_distr_custo": 110.0,
+            "vl_unit_sem_distr_custo": 11.0,
+            "vl_desp_prev_perc_fixo": 5.0,
+            "vl_tot_perc_fixo": 105.0,
+            "vl_unit_perc_fixo": 10.5
+          },
+          "sqlObservedScales": {
+            "vl_custo_prev": 0,
+            "vl_desp_prev": 0,
+            "vl_tot_prev": 0,
+            "vl_unit_prev": 0,
+            "vl_desp_prev_sem_distr_custo": 0,
+            "vl_tot_sem_distr_custo": 0,
+            "vl_unit_sem_distr_custo": 8,
+            "vl_desp_prev_perc_fixo": 8,
+            "vl_tot_perc_fixo": 8,
+            "vl_unit_perc_fixo": 8
+          }
+        },
+        {
+          "input": {
+            "qt_alocada": 0,
+            "qt_confirm_emb": 0,
+            "vl_custo_prev": null,
+            "vl_desp_prev": 1.0,
+            "vl_desp_prev_sem_distr_custo": 1.0,
+            "vl_unit_prev": 0.0,
+            "perc_fixo_container": 1.0
+          },
+          "rowId": 2,
+          "success": true,
+          "expected": {
+            "vl_custo_prev": null,
+            "vl_desp_prev": 1.0,
+            "vl_tot_prev": null,
+            "vl_unit_prev": 0.0,
+            "vl_desp_prev_sem_distr_custo": 1.0,
+            "vl_tot_sem_distr_custo": null,
+            "vl_unit_sem_distr_custo": null,
+            "vl_desp_prev_perc_fixo": null,
+            "vl_tot_perc_fixo": null,
+            "vl_unit_perc_fixo": null
+          },
+          "sqlObservedScales": {
+            "vl_custo_prev": 0,
+            "vl_desp_prev": 0,
+            "vl_tot_prev": 0,
+            "vl_unit_prev": 0,
+            "vl_desp_prev_sem_distr_custo": 0,
+            "vl_tot_sem_distr_custo": 0,
+            "vl_unit_sem_distr_custo": 8,
+            "vl_desp_prev_perc_fixo": 8,
+            "vl_tot_perc_fixo": 8,
+            "vl_unit_perc_fixo": 8
+          }
+        }
+      ]
+    },
+    {
+      "case": "real_null_expense_inner_zero",
+      "rows": [
+        {
+          "input": {
+            "qt_alocada": 0,
+            "qt_confirm_emb": 0,
+            "vl_custo_prev": 100.0,
+            "vl_desp_prev": 20.0,
+            "vl_desp_prev_sem_distr_custo": 10.0,
+            "vl_unit_prev": 12.0,
+            "perc_fixo_container": 5.0
+          },
+          "rowId": 1,
+          "success": true,
+          "expected": {
+            "vl_custo_prev": 100.0,
+            "vl_desp_prev": 20.0,
+            "vl_tot_prev": 120.0,
+            "vl_unit_prev": 12.0,
+            "vl_desp_prev_sem_distr_custo": 10.0,
+            "vl_tot_sem_distr_custo": 110.0,
+            "vl_unit_sem_distr_custo": 11.0,
+            "vl_desp_prev_perc_fixo": 5.0,
+            "vl_tot_perc_fixo": 105.0,
+            "vl_unit_perc_fixo": 10.5
+          },
+          "sqlObservedScales": {
+            "vl_custo_prev": 0,
+            "vl_desp_prev": 0,
+            "vl_tot_prev": 0,
+            "vl_unit_prev": 0,
+            "vl_desp_prev_sem_distr_custo": 0,
+            "vl_tot_sem_distr_custo": 0,
+            "vl_unit_sem_distr_custo": 8,
+            "vl_desp_prev_perc_fixo": 8,
+            "vl_tot_perc_fixo": 8,
+            "vl_unit_perc_fixo": 8
+          }
+        },
+        {
+          "input": {
+            "qt_alocada": 0,
+            "qt_confirm_emb": 0,
+            "vl_custo_prev": 1.0,
+            "vl_desp_prev": null,
+            "vl_desp_prev_sem_distr_custo": 1.0,
+            "vl_unit_prev": 0.0,
+            "perc_fixo_container": 1.0
+          },
+          "rowId": 2,
+          "success": true,
+          "expected": {
+            "vl_custo_prev": 1.0,
+            "vl_desp_prev": null,
+            "vl_tot_prev": null,
+            "vl_unit_prev": 0.0,
+            "vl_desp_prev_sem_distr_custo": 1.0,
+            "vl_tot_sem_distr_custo": 2.0,
+            "vl_unit_sem_distr_custo": null,
+            "vl_desp_prev_perc_fixo": 0.01,
+            "vl_tot_perc_fixo": 1.01,
+            "vl_unit_perc_fixo": null
+          },
+          "sqlObservedScales": {
+            "vl_custo_prev": 0,
+            "vl_desp_prev": 0,
+            "vl_tot_prev": 0,
+            "vl_unit_prev": 0,
+            "vl_desp_prev_sem_distr_custo": 0,
+            "vl_tot_sem_distr_custo": 0,
+            "vl_unit_sem_distr_custo": 8,
+            "vl_desp_prev_perc_fixo": 8,
+            "vl_tot_perc_fixo": 8,
+            "vl_unit_perc_fixo": 8
+          }
+        }
+      ]
+    },
+    {
+      "case": "real_null_outer_zero",
+      "rows": [
+        {
+          "input": {
+            "qt_alocada": 0,
+            "qt_confirm_emb": 0,
+            "vl_custo_prev": 100.0,
+            "vl_desp_prev": 20.0,
+            "vl_desp_prev_sem_distr_custo": 10.0,
+            "vl_unit_prev": 12.0,
+            "perc_fixo_container": 5.0
+          },
+          "rowId": 1,
+          "success": true,
+          "expected": {
+            "vl_custo_prev": 100.0,
+            "vl_desp_prev": 20.0,
+            "vl_tot_prev": 120.0,
+            "vl_unit_prev": 12.0,
+            "vl_desp_prev_sem_distr_custo": 10.0,
+            "vl_tot_sem_distr_custo": 110.0,
+            "vl_unit_sem_distr_custo": 11.0,
+            "vl_desp_prev_perc_fixo": 5.0,
+            "vl_tot_perc_fixo": 105.0,
+            "vl_unit_perc_fixo": 10.5
+          },
+          "sqlObservedScales": {
+            "vl_custo_prev": 0,
+            "vl_desp_prev": 0,
+            "vl_tot_prev": 0,
+            "vl_unit_prev": 0,
+            "vl_desp_prev_sem_distr_custo": 0,
+            "vl_tot_sem_distr_custo": 0,
+            "vl_unit_sem_distr_custo": 8,
+            "vl_desp_prev_perc_fixo": 8,
+            "vl_tot_perc_fixo": 8,
+            "vl_unit_perc_fixo": 8
+          }
+        },
+        {
+          "input": {
+            "qt_alocada": 0,
+            "qt_confirm_emb": 0,
+            "vl_custo_prev": 1.0,
+            "vl_desp_prev": -1.0,
+            "vl_desp_prev_sem_distr_custo": null,
+            "vl_unit_prev": 5.0,
+            "perc_fixo_container": null
+          },
+          "rowId": 2,
+          "success": true,
+          "expected": {
+            "vl_custo_prev": 1.0,
+            "vl_desp_prev": -1.0,
+            "vl_tot_prev": 0.0,
+            "vl_unit_prev": 5.0,
+            "vl_desp_prev_sem_distr_custo": null,
+            "vl_tot_sem_distr_custo": null,
+            "vl_unit_sem_distr_custo": null,
+            "vl_desp_prev_perc_fixo": null,
+            "vl_tot_perc_fixo": null,
+            "vl_unit_perc_fixo": null
+          },
+          "sqlObservedScales": {
+            "vl_custo_prev": 0,
+            "vl_desp_prev": 0,
+            "vl_tot_prev": 0,
+            "vl_unit_prev": 0,
+            "vl_desp_prev_sem_distr_custo": 0,
+            "vl_tot_sem_distr_custo": 0,
+            "vl_unit_sem_distr_custo": 8,
+            "vl_desp_prev_perc_fixo": 8,
+            "vl_tot_perc_fixo": 8,
+            "vl_unit_perc_fixo": 8
+          }
+        }
+      ]
+    },
+    {
+      "case": "real_inner_nonnull_zero",
+      "rows": [
+        {
+          "input": {
+            "qt_alocada": 0,
+            "qt_confirm_emb": 0,
+            "vl_custo_prev": 1.0,
+            "vl_desp_prev": 1.0,
+            "vl_desp_prev_sem_distr_custo": null,
+            "vl_unit_prev": 0.0,
+            "perc_fixo_container": null
+          },
+          "rowId": 2,
+          "success": false
+        }
+      ]
+    },
+    {
+      "case": "real_outer_known_zero",
+      "rows": [
+        {
+          "input": {
+            "qt_alocada": 0,
+            "qt_confirm_emb": 0,
+            "vl_custo_prev": 1.0,
+            "vl_desp_prev": -1.0,
+            "vl_desp_prev_sem_distr_custo": null,
+            "vl_unit_prev": 5.0,
+            "perc_fixo_container": 1.0
+          },
+          "rowId": 2,
+          "success": false
+        }
+      ]
+    },
+    {
+      "case": "dolar_normal_rounding",
+      "rows": [
+        {
+          "input": {
+            "qt_alocada": 0,
+            "qt_confirm_emb": 0,
+            "vl_custo_prev": 100.0,
+            "vl_desp_prev": 20.0,
+            "vl_desp_prev_sem_distr_custo": 10.0,
+            "vl_unit_prev": 12.0,
+            "perc_fixo_container": 5.0
+          },
+          "rowId": 1,
+          "success": true,
+          "expected": {
+            "vl_custo_prev": 100.0,
+            "vl_desp_prev": 20.0,
+            "vl_tot_prev": 120.0,
+            "vl_unit_prev": 12.0,
+            "vl_desp_prev_sem_distr_custo": 10.0,
+            "vl_tot_sem_distr_custo": 110.0,
+            "vl_unit_sem_distr_custo": 11.0,
+            "vl_desp_prev_perc_fixo": 5.0,
+            "vl_tot_perc_fixo": 105.0,
+            "vl_unit_perc_fixo": 10.5
+          },
+          "sqlObservedScales": {
+            "vl_custo_prev": 0,
+            "vl_desp_prev": 2,
+            "vl_tot_prev": 2,
+            "vl_unit_prev": 4,
+            "vl_desp_prev_sem_distr_custo": 2,
+            "vl_tot_sem_distr_custo": 2,
+            "vl_unit_sem_distr_custo": 8,
+            "vl_desp_prev_perc_fixo": 8,
+            "vl_tot_perc_fixo": 8,
+            "vl_unit_perc_fixo": 8
+          }
+        },
+        {
+          "input": {
+            "qt_alocada": 0,
+            "qt_confirm_emb": 0,
+            "vl_custo_prev": 0.0,
+            "vl_desp_prev": 20.0,
+            "vl_desp_prev_sem_distr_custo": 10.0,
+            "vl_unit_prev": 2.0,
+            "perc_fixo_container": 0.0
+          },
+          "rowId": 2,
+          "success": true,
+          "expected": {
+            "vl_custo_prev": 0.0,
+            "vl_desp_prev": 20.0,
+            "vl_tot_prev": 20.0,
+            "vl_unit_prev": 2.0,
+            "vl_desp_prev_sem_distr_custo": 10.0,
+            "vl_tot_sem_distr_custo": 10.0,
+            "vl_unit_sem_distr_custo": 1.0,
+            "vl_desp_prev_perc_fixo": 0.0,
+            "vl_tot_perc_fixo": 0.0,
+            "vl_unit_perc_fixo": 0.0
+          },
+          "sqlObservedScales": {
+            "vl_custo_prev": 0,
+            "vl_desp_prev": 2,
+            "vl_tot_prev": 2,
+            "vl_unit_prev": 4,
+            "vl_desp_prev_sem_distr_custo": 2,
+            "vl_tot_sem_distr_custo": 2,
+            "vl_unit_sem_distr_custo": 8,
+            "vl_desp_prev_perc_fixo": 8,
+            "vl_tot_perc_fixo": 8,
+            "vl_unit_perc_fixo": 8
+          }
+        },
+        {
+          "input": {
+            "qt_alocada": 0,
+            "qt_confirm_emb": 0,
+            "vl_custo_prev": 1450.0,
+            "vl_desp_prev": 51.31,
+            "vl_desp_prev_sem_distr_custo": 52.31,
+            "vl_unit_prev": 500.4359,
+            "perc_fixo_container": 5.0
+          },
+          "rowId": 3,
+          "success": true,
+          "expected": {
+            "vl_custo_prev": 1450.0,
+            "vl_desp_prev": 51.31,
+            "vl_tot_prev": 1501.31,
+            "vl_unit_prev": 500.4359,
+            "vl_desp_prev_sem_distr_custo": 52.31,
+            "vl_tot_sem_distr_custo": 1502.31,
+            "vl_unit_sem_distr_custo": 500.76923215,
+            "vl_desp_prev_perc_fixo": 72.5,
+            "vl_tot_perc_fixo": 1522.5,
+            "vl_unit_perc_fixo": 507.49922183
+          },
+          "sqlObservedScales": {
+            "vl_custo_prev": 0,
+            "vl_desp_prev": 2,
+            "vl_tot_prev": 2,
+            "vl_unit_prev": 4,
+            "vl_desp_prev_sem_distr_custo": 2,
+            "vl_tot_sem_distr_custo": 2,
+            "vl_unit_sem_distr_custo": 8,
+            "vl_desp_prev_perc_fixo": 8,
+            "vl_tot_perc_fixo": 8,
+            "vl_unit_perc_fixo": 8
+          }
+        }
+      ]
+    },
+    {
+      "case": "dolar_null_nonzero",
+      "rows": [
+        {
+          "input": {
+            "qt_alocada": 0,
+            "qt_confirm_emb": 0,
+            "vl_custo_prev": 100.0,
+            "vl_desp_prev": 20.0,
+            "vl_desp_prev_sem_distr_custo": 10.0,
+            "vl_unit_prev": 12.0,
+            "perc_fixo_container": 5.0
+          },
+          "rowId": 1,
+          "success": true,
+          "expected": {
+            "vl_custo_prev": 100.0,
+            "vl_desp_prev": 20.0,
+            "vl_tot_prev": 120.0,
+            "vl_unit_prev": 12.0,
+            "vl_desp_prev_sem_distr_custo": 10.0,
+            "vl_tot_sem_distr_custo": 110.0,
+            "vl_unit_sem_distr_custo": 11.0,
+            "vl_desp_prev_perc_fixo": 5.0,
+            "vl_tot_perc_fixo": 105.0,
+            "vl_unit_perc_fixo": 10.5
+          },
+          "sqlObservedScales": {
+            "vl_custo_prev": 0,
+            "vl_desp_prev": 0,
+            "vl_tot_prev": 0,
+            "vl_unit_prev": 0,
+            "vl_desp_prev_sem_distr_custo": 0,
+            "vl_tot_sem_distr_custo": 0,
+            "vl_unit_sem_distr_custo": 8,
+            "vl_desp_prev_perc_fixo": 8,
+            "vl_tot_perc_fixo": 8,
+            "vl_unit_perc_fixo": 8
+          }
+        },
+        {
+          "input": {
+            "qt_alocada": 0,
+            "qt_confirm_emb": 0,
+            "vl_custo_prev": null,
+            "vl_desp_prev": 1.0,
+            "vl_desp_prev_sem_distr_custo": 1.0,
+            "vl_unit_prev": 5.0,
+            "perc_fixo_container": 1.0
+          },
+          "rowId": 2,
+          "success": true,
+          "expected": {
+            "vl_custo_prev": null,
+            "vl_desp_prev": 1.0,
+            "vl_tot_prev": null,
+            "vl_unit_prev": 5.0,
+            "vl_desp_prev_sem_distr_custo": 1.0,
+            "vl_tot_sem_distr_custo": null,
+            "vl_unit_sem_distr_custo": null,
+            "vl_desp_prev_perc_fixo": null,
+            "vl_tot_perc_fixo": null,
+            "vl_unit_perc_fixo": null
+          },
+          "sqlObservedScales": {
+            "vl_custo_prev": 0,
+            "vl_desp_prev": 0,
+            "vl_tot_prev": 0,
+            "vl_unit_prev": 0,
+            "vl_desp_prev_sem_distr_custo": 0,
+            "vl_tot_sem_distr_custo": 0,
+            "vl_unit_sem_distr_custo": 8,
+            "vl_desp_prev_perc_fixo": 8,
+            "vl_tot_perc_fixo": 8,
+            "vl_unit_perc_fixo": 8
+          }
+        },
+        {
+          "input": {
+            "qt_alocada": 0,
+            "qt_confirm_emb": 0,
+            "vl_custo_prev": 1.0,
+            "vl_desp_prev": 1.0,
+            "vl_desp_prev_sem_distr_custo": null,
+            "vl_unit_prev": 5.0,
+            "perc_fixo_container": null
+          },
+          "rowId": 3,
+          "success": true,
+          "expected": {
+            "vl_custo_prev": 1.0,
+            "vl_desp_prev": 1.0,
+            "vl_tot_prev": 2.0,
+            "vl_unit_prev": 5.0,
+            "vl_desp_prev_sem_distr_custo": null,
+            "vl_tot_sem_distr_custo": null,
+            "vl_unit_sem_distr_custo": null,
+            "vl_desp_prev_perc_fixo": null,
+            "vl_tot_perc_fixo": null,
+            "vl_unit_perc_fixo": null
+          },
+          "sqlObservedScales": {
+            "vl_custo_prev": 0,
+            "vl_desp_prev": 0,
+            "vl_tot_prev": 0,
+            "vl_unit_prev": 0,
+            "vl_desp_prev_sem_distr_custo": 0,
+            "vl_tot_sem_distr_custo": 0,
+            "vl_unit_sem_distr_custo": 8,
+            "vl_desp_prev_perc_fixo": 8,
+            "vl_tot_perc_fixo": 8,
+            "vl_unit_perc_fixo": 8
+          }
+        }
+      ]
+    },
+    {
+      "case": "dolar_null_cost_inner_zero",
+      "rows": [
+        {
+          "input": {
+            "qt_alocada": 0,
+            "qt_confirm_emb": 0,
+            "vl_custo_prev": 100.0,
+            "vl_desp_prev": 20.0,
+            "vl_desp_prev_sem_distr_custo": 10.0,
+            "vl_unit_prev": 12.0,
+            "perc_fixo_container": 5.0
+          },
+          "rowId": 1,
+          "success": true,
+          "expected": {
+            "vl_custo_prev": 100.0,
+            "vl_desp_prev": 20.0,
+            "vl_tot_prev": 120.0,
+            "vl_unit_prev": 12.0,
+            "vl_desp_prev_sem_distr_custo": 10.0,
+            "vl_tot_sem_distr_custo": 110.0,
+            "vl_unit_sem_distr_custo": 11.0,
+            "vl_desp_prev_perc_fixo": 5.0,
+            "vl_tot_perc_fixo": 105.0,
+            "vl_unit_perc_fixo": 10.5
+          },
+          "sqlObservedScales": {
+            "vl_custo_prev": 0,
+            "vl_desp_prev": 0,
+            "vl_tot_prev": 0,
+            "vl_unit_prev": 0,
+            "vl_desp_prev_sem_distr_custo": 0,
+            "vl_tot_sem_distr_custo": 0,
+            "vl_unit_sem_distr_custo": 8,
+            "vl_desp_prev_perc_fixo": 8,
+            "vl_tot_perc_fixo": 8,
+            "vl_unit_perc_fixo": 8
+          }
+        },
+        {
+          "input": {
+            "qt_alocada": 0,
+            "qt_confirm_emb": 0,
+            "vl_custo_prev": null,
+            "vl_desp_prev": 1.0,
+            "vl_desp_prev_sem_distr_custo": 1.0,
+            "vl_unit_prev": 0.0,
+            "perc_fixo_container": 1.0
+          },
+          "rowId": 2,
+          "success": true,
+          "expected": {
+            "vl_custo_prev": null,
+            "vl_desp_prev": 1.0,
+            "vl_tot_prev": null,
+            "vl_unit_prev": 0.0,
+            "vl_desp_prev_sem_distr_custo": 1.0,
+            "vl_tot_sem_distr_custo": null,
+            "vl_unit_sem_distr_custo": null,
+            "vl_desp_prev_perc_fixo": null,
+            "vl_tot_perc_fixo": null,
+            "vl_unit_perc_fixo": null
+          },
+          "sqlObservedScales": {
+            "vl_custo_prev": 0,
+            "vl_desp_prev": 0,
+            "vl_tot_prev": 0,
+            "vl_unit_prev": 0,
+            "vl_desp_prev_sem_distr_custo": 0,
+            "vl_tot_sem_distr_custo": 0,
+            "vl_unit_sem_distr_custo": 8,
+            "vl_desp_prev_perc_fixo": 8,
+            "vl_tot_perc_fixo": 8,
+            "vl_unit_perc_fixo": 8
+          }
+        }
+      ]
+    },
+    {
+      "case": "dolar_null_expense_inner_zero",
+      "rows": [
+        {
+          "input": {
+            "qt_alocada": 0,
+            "qt_confirm_emb": 0,
+            "vl_custo_prev": 100.0,
+            "vl_desp_prev": 20.0,
+            "vl_desp_prev_sem_distr_custo": 10.0,
+            "vl_unit_prev": 12.0,
+            "perc_fixo_container": 5.0
+          },
+          "rowId": 1,
+          "success": true,
+          "expected": {
+            "vl_custo_prev": 100.0,
+            "vl_desp_prev": 20.0,
+            "vl_tot_prev": 120.0,
+            "vl_unit_prev": 12.0,
+            "vl_desp_prev_sem_distr_custo": 10.0,
+            "vl_tot_sem_distr_custo": 110.0,
+            "vl_unit_sem_distr_custo": 11.0,
+            "vl_desp_prev_perc_fixo": 5.0,
+            "vl_tot_perc_fixo": 105.0,
+            "vl_unit_perc_fixo": 10.5
+          },
+          "sqlObservedScales": {
+            "vl_custo_prev": 0,
+            "vl_desp_prev": 0,
+            "vl_tot_prev": 0,
+            "vl_unit_prev": 0,
+            "vl_desp_prev_sem_distr_custo": 0,
+            "vl_tot_sem_distr_custo": 0,
+            "vl_unit_sem_distr_custo": 8,
+            "vl_desp_prev_perc_fixo": 8,
+            "vl_tot_perc_fixo": 8,
+            "vl_unit_perc_fixo": 8
+          }
+        },
+        {
+          "input": {
+            "qt_alocada": 0,
+            "qt_confirm_emb": 0,
+            "vl_custo_prev": 1.0,
+            "vl_desp_prev": null,
+            "vl_desp_prev_sem_distr_custo": 1.0,
+            "vl_unit_prev": 0.0,
+            "perc_fixo_container": 1.0
+          },
+          "rowId": 2,
+          "success": true,
+          "expected": {
+            "vl_custo_prev": 1.0,
+            "vl_desp_prev": null,
+            "vl_tot_prev": null,
+            "vl_unit_prev": 0.0,
+            "vl_desp_prev_sem_distr_custo": 1.0,
+            "vl_tot_sem_distr_custo": 2.0,
+            "vl_unit_sem_distr_custo": null,
+            "vl_desp_prev_perc_fixo": 0.01,
+            "vl_tot_perc_fixo": 1.01,
+            "vl_unit_perc_fixo": null
+          },
+          "sqlObservedScales": {
+            "vl_custo_prev": 0,
+            "vl_desp_prev": 0,
+            "vl_tot_prev": 0,
+            "vl_unit_prev": 0,
+            "vl_desp_prev_sem_distr_custo": 0,
+            "vl_tot_sem_distr_custo": 0,
+            "vl_unit_sem_distr_custo": 8,
+            "vl_desp_prev_perc_fixo": 8,
+            "vl_tot_perc_fixo": 8,
+            "vl_unit_perc_fixo": 8
+          }
+        }
+      ]
+    },
+    {
+      "case": "dolar_null_outer_zero",
+      "rows": [
+        {
+          "input": {
+            "qt_alocada": 0,
+            "qt_confirm_emb": 0,
+            "vl_custo_prev": 100.0,
+            "vl_desp_prev": 20.0,
+            "vl_desp_prev_sem_distr_custo": 10.0,
+            "vl_unit_prev": 12.0,
+            "perc_fixo_container": 5.0
+          },
+          "rowId": 1,
+          "success": true,
+          "expected": {
+            "vl_custo_prev": 100.0,
+            "vl_desp_prev": 20.0,
+            "vl_tot_prev": 120.0,
+            "vl_unit_prev": 12.0,
+            "vl_desp_prev_sem_distr_custo": 10.0,
+            "vl_tot_sem_distr_custo": 110.0,
+            "vl_unit_sem_distr_custo": 11.0,
+            "vl_desp_prev_perc_fixo": 5.0,
+            "vl_tot_perc_fixo": 105.0,
+            "vl_unit_perc_fixo": 10.5
+          },
+          "sqlObservedScales": {
+            "vl_custo_prev": 0,
+            "vl_desp_prev": 0,
+            "vl_tot_prev": 0,
+            "vl_unit_prev": 0,
+            "vl_desp_prev_sem_distr_custo": 0,
+            "vl_tot_sem_distr_custo": 0,
+            "vl_unit_sem_distr_custo": 8,
+            "vl_desp_prev_perc_fixo": 8,
+            "vl_tot_perc_fixo": 8,
+            "vl_unit_perc_fixo": 8
+          }
+        },
+        {
+          "input": {
+            "qt_alocada": 0,
+            "qt_confirm_emb": 0,
+            "vl_custo_prev": 1.0,
+            "vl_desp_prev": -1.0,
+            "vl_desp_prev_sem_distr_custo": null,
+            "vl_unit_prev": 5.0,
+            "perc_fixo_container": null
+          },
+          "rowId": 2,
+          "success": true,
+          "expected": {
+            "vl_custo_prev": 1.0,
+            "vl_desp_prev": -1.0,
+            "vl_tot_prev": 0.0,
+            "vl_unit_prev": 5.0,
+            "vl_desp_prev_sem_distr_custo": null,
+            "vl_tot_sem_distr_custo": null,
+            "vl_unit_sem_distr_custo": null,
+            "vl_desp_prev_perc_fixo": null,
+            "vl_tot_perc_fixo": null,
+            "vl_unit_perc_fixo": null
+          },
+          "sqlObservedScales": {
+            "vl_custo_prev": 0,
+            "vl_desp_prev": 0,
+            "vl_tot_prev": 0,
+            "vl_unit_prev": 0,
+            "vl_desp_prev_sem_distr_custo": 0,
+            "vl_tot_sem_distr_custo": 0,
+            "vl_unit_sem_distr_custo": 8,
+            "vl_desp_prev_perc_fixo": 8,
+            "vl_tot_perc_fixo": 8,
+            "vl_unit_perc_fixo": 8
+          }
+        }
+      ]
+    },
+    {
+      "case": "dolar_inner_nonnull_zero",
+      "rows": [
+        {
+          "input": {
+            "qt_alocada": 0,
+            "qt_confirm_emb": 0,
+            "vl_custo_prev": 1.0,
+            "vl_desp_prev": 1.0,
+            "vl_desp_prev_sem_distr_custo": null,
+            "vl_unit_prev": 0.0,
+            "perc_fixo_container": null
+          },
+          "rowId": 2,
+          "success": false
+        }
+      ]
+    },
+    {
+      "case": "dolar_outer_known_zero",
+      "rows": [
+        {
+          "input": {
+            "qt_alocada": 0,
+            "qt_confirm_emb": 0,
+            "vl_custo_prev": 1.0,
+            "vl_desp_prev": -1.0,
+            "vl_desp_prev_sem_distr_custo": null,
+            "vl_unit_prev": 5.0,
+            "perc_fixo_container": 1.0
+          },
+          "rowId": 2,
+          "success": false
+        }
+      ]
+    }
+  ],
+  "physicalExpressionMetadata": {
+    "path": ".runtime/ciw-completion-20261028/sql-comparison-expression-metadata-v1.json",
+    "sha256": "7c7eeb34b077cf422f4050bc0903298fdd5e8c3a64aba12b79b2f56f7fb5ac8d"
+  }
+}

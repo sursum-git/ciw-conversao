@@ -1,0 +1,19 @@
+{
+  "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeCiwErpQuery.php",
+  "baselineSHA256": "315f28cd985d77b92e1126f290e044f7081bc9ee94875b9796c8b223726d4104",
+  "operation": "replaceMany",
+  "replacements": [
+    {
+      "anchor": "private const RESOURCES=[",
+      "replacement": "private const RESOURCES=['proc_compra_sinalizadores_med_progress'=>'proc_compra_sinalizadores','proc_compra_sinalizados_med_progress'=>'proc_compra_sinalizados',"
+    },
+    {
+      "anchor": "if (($d['entityCode']??null)==='proc_compra_quantidades_progress') {",
+      "replacement": "if (($d['entityCode']??null)==='proc_compra_sinalizados_med_progress') {\n            if (($endpoint['requestContextFields']??null)!==['sinaliz_imp_id']) { self::invalid(); }\n            $context=ApiRequestContext::resolve($d,$endpoint,$payload);\n            unset($payload['context']);\n        } elseif (($d['entityCode']??null)==='proc_compra_quantidades_progress') {"
+    },
+    {
+      "anchor": "['proc_compra_quantidades_med_progress','proc_compra_quantidades_periodo_med_progress']",
+      "replacement": "['proc_compra_sinalizadores_med_progress','proc_compra_quantidades_med_progress','proc_compra_quantidades_periodo_med_progress']"
+    }
+  ]
+}

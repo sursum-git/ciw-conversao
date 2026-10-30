@@ -1,0 +1,67 @@
+{
+  "status": "POST_BUILD5_CURRENT_HASH_GUARDS_NOT_APPLIED",
+  "canonicalWrites": false,
+  "baselines": [
+    {
+      "file": "ContainersVersionHistoryApi.p",
+      "baselinePath": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersVersionHistoryApi.p",
+      "baselineSha256": "d3101f8cccc81d637002c185074f9dd69ded7000cd6b03e0ebbd7c6ef4e99065",
+      "candidateSha256": "d0432295fca4b3b03dd629013cdb7a8f75b6c6b6ef014aa28a3db4cd64222cd5",
+      "action": "Deploy API and its matching Service atomically; internal additional2handles",
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersVersionHistoryApi.p",
+      "baselineKind": "Current published after build5; no canonical write"
+    },
+    {
+      "file": "ContainersVersionHistoryService.p",
+      "baselinePath": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersVersionHistoryService.p",
+      "baselineSha256": "1b72391027820a110e3041ea60d33fe701ef04f63b749753d96f6f88df5c3407",
+      "candidateSha256": "8b6bfd5a7c7e824ec1b91a637db738c62053ee8b5f4a8534d6e2ed764b309672",
+      "action": "Deploy API and its matching Service atomically; internal additional2handles",
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersVersionHistoryService.p",
+      "baselineKind": "Current published after build5; no canonical write"
+    },
+    {
+      "file": "ContainersVersionAuxHistoryApi.p",
+      "baselinePath": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersVersionAuxHistoryApi.p",
+      "baselineSha256": "ba4a614c58c841ca5715929cd1e0a8d967224bfe360a4051e169dea322f56073",
+      "candidateSha256": "430bfe017297fcb68db55589a046a474c88d61e6a894fbcc64061c9231715086",
+      "action": "Deploy API and its matching Service atomically; internal additional2handles",
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersVersionAuxHistoryApi.p",
+      "baselineKind": "Current published after build5; no canonical write"
+    },
+    {
+      "file": "ContainersVersionAuxHistoryService.p",
+      "baselinePath": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersVersionAuxHistoryService.p",
+      "baselineSha256": "8e795b43200b54ff4299fde78f4e8de565cc6b5444ab1adea3b3fc85fa26867f",
+      "candidateSha256": "6294d044179fa0faa3d990d1c034f6e39c66f0490342e9bf1722682135abdf67",
+      "action": "Deploy API and its matching Service atomically; internal additional2handles",
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersVersionAuxHistoryService.p",
+      "baselineKind": "Current published after build5; no canonical write"
+    },
+    {
+      "file": "CiwErpReadService.p",
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwErpReadService.p",
+      "baselinePath": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwErpReadService.p",
+      "baselineSha256": "33d24e2f8ab0208841ddfacb8319c4f2e9bd0f242aee7672add6b02950a49921",
+      "candidateSha256": "2a2111dc9fa56459b0f42796e837675b56921b852d5e012c43f4e71a8b35e1d8",
+      "patch": "patches/CiwErpReadService.p.patch"
+    }
+  ],
+  "sharedHelper": {
+    "baselinePath": "integration-src/ciw-completion-20261028/container-version-history/frozen-lookups-v1/abl/ContainersVersionHistoryLabels.p",
+    "baselineSha256": "d78961c6cf351b2acfa5c8298d58666216df3064ebdf76a6e3ea06dff3d217cb",
+    "candidateSha256": "9bfe21dc6ff9d86105d7602d376a2adc3cc3b9fe61783a68f7d1cd03f9d100bb",
+    "parameterDeclarationsUnchanged": true,
+    "changes": [
+      "item adds item_codigo_erp_atual in the same purchase-item query",
+      "new fixed motivo kind uses fourth trusted handle for espec.motivos_desconto"
+    ],
+    "oldConsumers": [
+      "item_descricao_atual",
+      "emitente_nome_abrev_atual",
+      "despesa_descricao_atual unchanged"
+    ],
+    "gate": "Do not overwrite this helper with frozen-lookups-v1 older helper when integrating history-label bundle later"
+  },
+  "helperSharedWithDiscountsSha256": "9bfe21dc6ff9d86105d7602d376a2adc3cc3b9fe61783a68f7d1cd03f9d100bb"
+}

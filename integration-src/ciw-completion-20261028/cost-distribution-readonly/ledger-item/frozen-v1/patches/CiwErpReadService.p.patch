@@ -1,0 +1,12 @@
+diff --git a/CiwErpReadService.p b/CiwErpReadService.p
+index 2301f79..8ba8a68 100644
+--- a/CiwErpReadService.p
++++ b/CiwErpReadService.p
+@@ -198,6 +198,7 @@ DO ON ERROR UNDO, THROW:
+  IF NOT VALID-HANDLE(phData) OR NOT VALID-OBJECT(poRequest) THEN RUN Fail('CIW_ERP_UNAVAILABLE',503).
+  CREATE BUFFER b FOR TABLE phData BUFFER-NAME 'bCiwErpRead'.
+  CASE pcResource:
++  WHEN 'custo_distribuicao_lancamentos_item' THEN ASSIGN cFieldList='cta_corren_custo_distr_id,data,historico,vl_lancto,login,item_container_custo_id,item_container_id,cod_tipo_movto' cAliasList=cFieldList cKeyList='item_container_id,cta_corren_custo_distr_id' baseWhere='TRUE'.
+   WHEN 'container_versao_pagtos_historico_med' THEN ASSIGN cFieldList='container_id,versao_id,num_id_tit_ap,vl_real,vl_dolar' cAliasList=cFieldList cKeyList='container_id,versao_id,num_id_tit_ap' baseWhere='TRUE'.
+   WHEN 'container_versao_nfs_historico_med' THEN ASSIGN cFieldList='container_id,versao_id,documento,serie,estab,nat_operacao,cod_emitente,vl_mercadoria,vl_despesa,emitente_nome_abrev_atual' cAliasList=cFieldList cKeyList='container_id,versao_id,documento,serie,estab,nat_operacao,cod_emitente' baseWhere='TRUE'.
+   WHEN 'container_versao_descontos_historico_med' THEN ASSIGN cFieldList='container_id,versao_id,desconto_importacao_id,vl_autoriz_real,vl_autoriz_dolar,log_custo' cAliasList=cFieldList cKeyList='container_id,versao_id,desconto_importacao_id' baseWhere='TRUE'.

@@ -1,0 +1,12 @@
+{
+  "canonicalWrites": false,
+  "baselines": [
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeCostDistributionLedgerRead.php",
+      "baselineSha256": "8cd734ac03e410d9cb5bf6a230e5f1ccd9b8352d633dc2accf274474c6e1657a",
+      "candidateSha256": "f2273437e55865d3ba66ea5fbea0e96d7aa01ea2bd7c6e0bc2bde906ae7e457c",
+      "patch": "patches/RuntimeCostDistributionLedgerRead.php.patch",
+      "exactCandidate": "candidate-exact/RuntimeCostDistributionLedgerRead.php"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "kind": "existing-destination-reconciliation",
+  "date": "2026-10-28",
+  "applyAutomatically": false,
+  "builderPublicationDocument": false,
+  "newScreens": [],
+  "newOperations": [],
+  "existingDestinations": [
+    {
+      "sourceApplication": "cons_representante_ativos",
+      "screenId": "ciw.representantes-ativos",
+      "programCode": "cd0102",
+      "version": "1.0.0",
+      "resource": "representantes_ativos",
+      "readOperation": "representantes_ativos_read",
+      "getOperation": "representantes_ativos_get",
+      "businessWrites": false,
+      "coverage": "EMS5 DISTINCT active reference consultation",
+      "sampleBatchAction": null
+    },
+    {
+      "sourceApplication": "cons_procs_compra",
+      "screenId": "ciw.processos-compra-med",
+      "programCode": "cd0108",
+      "version": "1.0.8",
+      "resource": "procs_compra_med",
+      "readOperation": "procs_compra_med_read",
+      "getOperation": "procs_compra_med_get",
+      "requiredContext": [],
+      "reuseOnlyFor": "MED consultation of existing seven fields",
+      "allCompaniesParity": false,
+      "navigationMutation": null,
+      "reasonNoNewScreen": "The existing MED parent contains all seven fields; the only catalogued inbound caller belongs to supplier current-account scope."
+    },
+    {
+      "sourceApplications": ["control_selec_proc_compra", "grid_itens_proc_compra_selecao"],
+      "screenId": "ciw.container-alocar-itens",
+      "programCode": "op1025",
+      "version": "1.0.0",
+      "status": "historically COMPLETED_CLEANED",
+      "reapply": false
+    },
+    {
+      "sourceApplications": ["bl_selecao_pagto_proc_compra", "bl_selecionado_pagto_proc_compra"],
+      "screenId": "ciw.proc-compra-pagamentos",
+      "programCode": "op1013",
+      "version": "1.0.1",
+      "requiredContext": ["proc_compra_id"],
+      "sourceBodiesReviewed": true,
+      "directWriterInvokedByBridgeEntry": false,
+      "nativeReplacement": "Incluir/MultiSelect de disponíveis; grade dos vínculos/read/get/desvinculação existentes",
+      "coverage": "MED navigation only; source filters use session values, current API resolves real parent",
+      "rowForRowLegacySqlParity": false,
+      "allCompaniesParity": false,
+      "reapply": false
+    }
+  ],
+  "sampleContextMustRemainSeparate": {
+    "screenId": "ciw.proc-compra-amostras",
+    "programCode": "op1018",
+    "version": "1.0.0",
+    "requiredContext": ["proc_compra_id", "item_proc_compra_id"],
+    "representativeCatalog": "ems2cad.repres",
+    "sequence": "espec.seq_envios_amostras_repres",
+    "reapply": false,
+    "noAutomaticMappingFromEms5": true
+  },
+  "controller": {
+    "sourceApplication": "ctrl_envios_repres_amostra",
+    "observedInput": "dt_envio",
+    "required": true,
+    "maximum": "today in legacy UI",
+    "legacySessionKey": "data_envio_corrente",
+    "observedNextApplication": "cons_representante_ativos",
+    "observedSelectionEffect": "none; per-record and finish event bodies empty",
+    "proposedWriteCommand": null,
+    "proposedSequence": null,
+    "unimplementedBatchMustNotBePresentedAsConverted": true
+  }
+}

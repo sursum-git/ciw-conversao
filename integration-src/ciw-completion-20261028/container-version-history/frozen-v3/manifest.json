@@ -1,0 +1,165 @@
+{
+  "status": "FROZEN_CANDIDATE_NOT_APPLIED_NOT_PUBLISHED",
+  "version": "v3",
+  "files": [
+    {
+      "path": "abl/ContainersVersionAuxHistoryApi.p",
+      "sha256": "ba4a614c58c841ca5715929cd1e0a8d967224bfe360a4051e169dea322f56073"
+    },
+    {
+      "path": "abl/ContainersVersionAuxHistoryService.p",
+      "sha256": "ee2b15a0ada961a868ba1bf96abbf04515c2c15aa78a6987cbe1e840c733427c"
+    },
+    {
+      "path": "abl/ContainersVersionHistoryApi.p",
+      "sha256": "d3101f8cccc81d637002c185074f9dd69ded7000cd6b03e0ebbd7c6ef4e99065"
+    },
+    {
+      "path": "abl/ContainersVersionHistoryService.p",
+      "sha256": "32e81cdfa54c1494d573a83fb9977302fc9da6720b8bf7a8a638e7fff4a05a19"
+    },
+    {
+      "path": "includes/ContainersVersionAuxHistoryTables.i",
+      "sha256": "9767cd882b20f1f08f5807e5d1f88a269f6229217ce62fc01eb0b5886959e5a2"
+    },
+    {
+      "path": "includes/ContainersVersionHistoryTable.i",
+      "sha256": "dbeff4ce3e3dab4565dd2373e87a7ca44bf36aa25c0ec71209fa60f514b19c76"
+    },
+    {
+      "path": "tests/RuntimeContainerVersionHistoryIntegrationTest.php",
+      "sha256": "bfd262c8ed3e1bb599e239d479100e27cee8c0862c0c0c5255738f7bd665f671"
+    },
+    {
+      "path": "tests/abl/ContainersVersionAuxHistoryTest.p",
+      "sha256": "e88ca2d60bce3ec2bbbed67390be8a167307b2073920368280e6d88b20561e6f"
+    },
+    {
+      "path": "tests/abl/ContainersVersionHistoryTest.p",
+      "sha256": "f45514c69453d6d0f0bd7329f8de00fb6b6d66113dfea12c7186361f6dc6d191"
+    },
+    {
+      "path": "tests/abl/ContainersVersionHistoryTestTables.i",
+      "sha256": "24480f748f0b71bf28b27ef4abf117540238ebc8cdf992a4e883940ab907262d"
+    },
+    {
+      "path": "tests/metadata.cjs",
+      "sha256": "ef6db53e4479bb25f35262186d6de33672977e524564a375f686362a08934e95"
+    },
+    {
+      "path": "tests/runtime-bootstrap.php",
+      "sha256": "8b3311f6251c53fbce9af85dfcc9659d314446e36ad8f1931565aeda92388abb"
+    },
+    {
+      "path": "tests/transport.php",
+      "sha256": "a274ca8ede600f7ddbd3e5cad2113bec70994ce361a4136b7b53451f2b0ae447"
+    },
+    {
+      "path": "metadata/api-source-additions.json",
+      "sha256": "d7d92e18fb4d20ed591ef33e569dbb4b88befa0c60c2623eada4f52706f36835"
+    },
+    {
+      "path": "metadata/auxiliary-api-source-additions.json",
+      "sha256": "84e43f360eceb6b539cb80e64ae77553ac966774c55f8fdada64c75a10d2d645"
+    },
+    {
+      "path": "metadata/container_versao_descontos_historico_med-builder-draft.json",
+      "sha256": "2f3c320219d2f7bf4f46a4fb633ce4d9a15dca3e9cb63e000df9fd1c390b0f0a"
+    },
+    {
+      "path": "metadata/container_versao_despesas_historico_med-builder-draft.json",
+      "sha256": "d9c4bfab869ee464096f8016adec14bcd4349ac9f8035b45c80cd6b5ec6ecf35"
+    },
+    {
+      "path": "metadata/container_versao_nfs_historico_med-builder-draft.json",
+      "sha256": "4dbced784195753f83ff3d781ff9260f920ca3677d2fdbb35f263c477847c6f6"
+    },
+    {
+      "path": "metadata/container_versao_pagtos_historico_med-builder-draft.json",
+      "sha256": "5fe61d863c590396996e836eca6e8fe611ac67820b3006d5e711252f8dba7924"
+    },
+    {
+      "path": "metadata/history-builder-draft.json",
+      "sha256": "da03e08f188a5f99cd190e163817ceb83cafed013e0b170bf8fb098f5541d581"
+    },
+    {
+      "path": "metadata/parent-patch.json",
+      "sha256": "c23ae26266ade129852047061fa686dfe79de42eca878c9a8baa95ebf2425e27"
+    },
+    {
+      "path": "metadata/source-patch.json",
+      "sha256": "3d8f9a5bbff7a6e9eaef3a4ad8d515bf36202a4ed026629a3febfb68ac1f6ec9"
+    },
+    {
+      "path": "patches/CiwCadastrosCrud.p.patch",
+      "sha256": "1f049fdd3dfe608c3ef2257a165d28f9c02b9db7c7fba53fbd74a140a217f6a3"
+    },
+    {
+      "path": "patches/CiwErpReadService.p.patch",
+      "sha256": "7581d6d6c263859d1c6176cec497ea3ee2c486a0ca057d84cf449b931b77ce70"
+    },
+    {
+      "path": "patches/ContainersVersionService.p.patch",
+      "sha256": "36769e7ffbe25b8f2c7130e9a5ac1b77257001032dde09f377396bae4a342cfc"
+    },
+    {
+      "path": "patches/RuntimeApiEntityActionService.php.patch",
+      "sha256": "4977e7347d1b4e5a2fabd0742bf4ef6d2eb38dfc5708f5a098cb7f75dfbd8434"
+    },
+    {
+      "path": "patches/RuntimeCiwErpQuery.php.patch",
+      "sha256": "14e85434cbb908a1b762ba32dfca31f68ea42fb73edb9770fe04b8e45ac6d3ac"
+    },
+    {
+      "path": "baselines.json",
+      "sha256": "d18cb64380c7a946094cf9affe9e05d1ce7a91384afb55a9e4380d15e3e6eabc"
+    },
+    {
+      "path": "README.md",
+      "sha256": "4d877b9ff9fc20a3ce36cb5025046d4abb4b25e80f286c2a68069b17087f4a34"
+    },
+    {
+      "path": "RECONCILIATION.md",
+      "sha256": "1d93d58aa5a8a50f217364afc3fe9ae844ff1bdc7cfa00d10bb2923209994001"
+    },
+    {
+      "path": "PLAN.md",
+      "sha256": "d0ecee530acd5cce73a0b39e05c7a079c31b89fd3c2d21833cf3622bb969dbac"
+    },
+    {
+      "path": "auxiliary-views.json",
+      "sha256": "a27eae3440cf56f92343845a98c15160e80a67c6d93460f34bba4705001d1294"
+    }
+  ],
+  "officialCompileRequired": "OpenEdge12.2/.42; sursum-api/med/9911 only",
+  "localDiagnostics": {
+    "version": "12.8 development only",
+    "compiles": 11,
+    "newChecksPerCombination": 28,
+    "auxiliaryChecksPerCombination": 20,
+    "codepages": [
+      "UTF-8",
+      "ISO8859-1"
+    ],
+    "centralRegressionPerCulture": 189,
+    "centralRegressionCodepage": "UTF-8",
+    "cultures": [
+      "AMERICAN",
+      "EUROPEAN"
+    ],
+    "numDbs": 0
+  },
+  "phpTransportChecks": 21,
+  "runtimeServiceTests": 6,
+  "runtimeServiceAssertions": 41,
+  "metadataSchemaChecks": 78,
+  "remaining": [
+    "independent-review",
+    "official12.2-four-combinations",
+    "additional-central-Composition-Boundary-regression",
+    "PASOE-and-native-runtime-readonly",
+    "current-dictionary-four-auxiliary-tables",
+    "current-item-emitter-and-expense-lookups",
+    "two-derived-historical-comparison-views"
+  ]
+}

@@ -1,0 +1,90 @@
+diff --git a/ContainersVersionService.p b/ContainersVersionService.p
+index d33c01e..67fe379 100644
+--- a/ContainersVersionService.p
++++ b/ContainersVersionService.p
+@@ -58,6 +58,11 @@ DEFINE VARIABLE pendingChanges AS JsonArray NO-UNDO.
+ DEFINE VARIABLE childEvents AS JsonArray NO-UNDO.
+ DEFINE VARIABLE auditValue AS JsonObject NO-UNDO.
+ DEFINE VARIABLE rowsValue AS JsonArray NO-UNDO.
++/* Read-only public projection shares this persisted-snapshot collector. */
++DEFINE VARIABLE readRows AS INTEGER NO-UNDO.
++DEFINE VARIABLE readMaxRows AS INTEGER NO-UNDO INITIAL 50000.
++DEFINE VARIABLE readStarted AS INTEGER NO-UNDO.
++DEFINE VARIABLE readComplete AS LOGICAL NO-UNDO.
+ DEFINE VARIABLE realRows AS JsonArray NO-UNDO.
+ DEFINE VARIABLE dollarRows AS JsonArray NO-UNDO.
+ DEFINE VARIABLE inputRows AS JsonArray NO-UNDO.
+@@ -167,15 +172,28 @@ DO ON ERROR UNDO, THROW:
+  IF NOT VALID-HANDLE(phMaster) OR NOT VALID-HANDLE(phTypes) OR NOT VALID-HANDLE(phVersions) THEN UNDO, THROW NEW Progress.Lang.AppError("Buffers fixos indisponiveis.",1).
+  DO i=1 TO 5: IF NOT VALID-HANDLE(children[i]) THEN UNDO, THROW NEW Progress.Lang.AppError("Filho fixo indisponivel.",1). END.
+  IF operationValue="consultar" THEN DO:
++  readStarted=ETIME.
++  failureCode="VERSION_CONFIGURATION".
++  /* Trusted private policy may only lower the ceiling; HTTP never supplies it. */
++  IF VALID-OBJECT(poPolicy) THEN IF poPolicy:Has("read_max_rows") THEN DO:
++   IF poPolicy:GetType("read_max_rows")<>JsonDataType:NUMBER THEN UNDO, THROW NEW Progress.Lang.AppError("Orcamento privado invalido.",1).
++   IF poPolicy:GetDecimal("read_max_rows")<1 OR poPolicy:GetDecimal("read_max_rows")>50000 OR poPolicy:GetDecimal("read_max_rows")<>TRUNCATE(poPolicy:GetDecimal("read_max_rows"),0) THEN UNDO, THROW NEW Progress.Lang.AppError("Orcamento privado invalido.",1).
++   readMaxRows=poPolicy:GetInteger("read_max_rows").
++  END.
++  DO STOP-AFTER 10 ON STOP UNDO, LEAVE:
+   failureCode="VERSION_NOT_FOUND".
+   IF NOT phMaster:FIND-FIRST("WHERE " + phMaster:NAME + ".nr-container=" + STRING(containerId),NO-LOCK) THEN UNDO, THROW NEW Progress.Lang.AppError("Container nao encontrado.",1).
+   poResponse=NEW JsonObject().
+   IF versionId>0 THEN DO:
+    RUN FindVersion(NO-LOCK).
++   RUN CheckReadBudget.
+    poResponse:Add("data",JsonRecord(phVersions,versionFields)).
+    RUN CaptureSnapshot(OUTPUT snapshotValue). poResponse:Add("snapshot",snapshotValue).
+   END.
+   ELSE DO: RUN VersionRows(OUTPUT rowsValue). poResponse:Add("data",rowsValue). END.
++  readComplete=TRUE.
++  END.
++  IF NOT readComplete THEN DO: failureCode="VERSION_READ_TIMEOUT". UNDO, THROW NEW Progress.Lang.AppError("Consulta historica excedeu 10 segundos.",1). END.
+   poResponse:Add("success",TRUE). RETURN.
+  END.
+  failureCode="VERSION_TRANSACTION_CONTEXT".
+@@ -451,10 +469,17 @@ PROCEDURE VersionRows:
+   CREATE QUERY queryValue. queryValue:SET-BUFFERS(phVersions).
+   queryValue:QUERY-PREPARE("FOR EACH " + phVersions:NAME + " NO-LOCK WHERE " + phVersions:NAME + ".container_id=" + STRING(containerId)).
+   queryValue:QUERY-OPEN(). queryValue:GET-FIRST().
+-  DO WHILE NOT queryValue:QUERY-OFF-END: resultValue:Add(JsonRecord(phVersions,versionFields)). queryValue:GET-NEXT(). END.
++  DO WHILE NOT queryValue:QUERY-OFF-END: RUN CheckReadBudget. resultValue:Add(JsonRecord(phVersions,versionFields)). queryValue:GET-NEXT(). END.
+   FINALLY: IF VALID-HANDLE(queryValue) THEN DO: queryValue:QUERY-CLOSE() NO-ERROR. DELETE OBJECT queryValue NO-ERROR. END. END FINALLY.
+  END.
+ END PROCEDURE.
++PROCEDURE CheckReadBudget:
++ /* CaptureSnapshot is also used by writers: their path is unchanged. */
++ IF NOT Exact(operationValue,"consultar") THEN RETURN.
++ readRows=readRows + 1.
++ IF readRows>readMaxRows THEN DO: failureCode="VERSION_READ_LIMIT". UNDO, THROW NEW Progress.Lang.AppError("Consulta historica excedeu orcamento de registros.",1). END.
++ IF ETIME - readStarted>10000 THEN DO: failureCode="VERSION_READ_TIMEOUT". UNDO, THROW NEW Progress.Lang.AppError("Consulta historica excedeu 10 segundos.",1). END.
++END PROCEDURE.
+ PROCEDURE ChildRows:
+  DEFINE INPUT PARAMETER bufferValue AS HANDLE NO-UNDO.
+  DEFINE INPUT PARAMETER fieldsValue AS CHARACTER NO-UNDO.
+@@ -465,7 +490,7 @@ PROCEDURE ChildRows:
+   CREATE QUERY queryValue. queryValue:SET-BUFFERS(bufferValue).
+   queryValue:QUERY-PREPARE("FOR EACH " + bufferValue:NAME + " NO-LOCK WHERE " + bufferValue:NAME + ".versao_id=" + STRING(versionId)).
+   queryValue:QUERY-OPEN(). queryValue:GET-FIRST().
+-  DO WHILE NOT queryValue:QUERY-OFF-END: resultValue:Add(JsonRecord(bufferValue,fieldsValue)). queryValue:GET-NEXT(). END.
++  DO WHILE NOT queryValue:QUERY-OFF-END: RUN CheckReadBudget. resultValue:Add(JsonRecord(bufferValue,fieldsValue)). queryValue:GET-NEXT(). END.
+   FINALLY: IF VALID-HANDLE(queryValue) THEN DO: queryValue:QUERY-CLOSE() NO-ERROR. DELETE OBJECT queryValue NO-ERROR. END. END FINALLY.
+  END.
+ END PROCEDURE.
+@@ -475,7 +500,7 @@ PROCEDURE CaptureSnapshot:
+  DEFINE VARIABLE arrayValue AS JsonArray NO-UNDO.
+  resultValue=NEW JsonObject(). resultValue:Add("header",JsonRecord(phVersions,versionFields)).
+  DO tableNo=1 TO 5:
+-  RUN ChildRows(children[tableNo],IF tableNo=1 THEN itemFields ELSE "versao_id," + childFields[tableNo],OUTPUT arrayValue).
++  RUN ChildRows(children[tableNo],IF tableNo=1 THEN itemFields + (IF Exact(operationValue,"consultar") THEN ",qt_embarcada,vl_desconto_utiliz_real" ELSE "") ELSE "versao_id," + childFields[tableNo],OUTPUT arrayValue).
+   resultValue:Add(ENTRY(tableNo,"items,expenses,nfs,payments,discounts"),arrayValue).
+  END.
+ END PROCEDURE.
+@@ -616,6 +641,6 @@ PROCEDURE Fail:
+  DEFINE VARIABLE errorValue AS JsonObject NO-UNDO.
+  poResponse=NEW JsonObject(). errorValue=NEW JsonObject().
+  errorValue:Add("code",codeValue). errorValue:Add("message",messageValue).
+- errorValue:Add("status",IF codeValue="VERSION_NOT_FOUND" OR codeValue="VERSION_TYPE_NOT_FOUND" THEN 404 ELSE IF Exact(codeValue,"VERSION_BUSY,VERSION_CONFLICT,VERSION_COMPLETE,VERSION_USED,VERSION_PERSISTENCE_REJECTED") THEN 409 ELSE IF Exact(codeValue,"VERSION_CONFIGURATION,VERSION_CALLBACK_UNAVAILABLE,VERSION_DISTRIBUTION_UNSUPPORTED") THEN 503 ELSE 422).
++ errorValue:Add("status",IF codeValue="VERSION_NOT_FOUND" OR codeValue="VERSION_TYPE_NOT_FOUND" THEN 404 ELSE IF Exact(codeValue,"VERSION_BUSY,VERSION_CONFLICT,VERSION_COMPLETE,VERSION_USED,VERSION_PERSISTENCE_REJECTED") THEN 409 ELSE IF Exact(codeValue,"VERSION_CONFIGURATION,VERSION_CALLBACK_UNAVAILABLE,VERSION_DISTRIBUTION_UNSUPPORTED,VERSION_READ_LIMIT,VERSION_READ_TIMEOUT") THEN 503 ELSE 422).
+  poResponse:Add("success",FALSE). poResponse:Add("error",errorValue).
+ END PROCEDURE.

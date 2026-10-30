@@ -1,0 +1,65 @@
+{
+  "scope": [
+    "form_pub_formatos_amostra",
+    "grid_pub_formatos_amostra"
+  ],
+  "analysis_copies": true,
+  "files": [
+    {
+      "application": "form_pub_formatos_amostra",
+      "file": "form_pub_formatos_amostra.php",
+      "remote_sha256": "dc2efe5d1ba6614f05d02a7d95a3597761be4890cff8716c0fa0bdfcee737083",
+      "copied_sha256": "dc2efe5d1ba6614f05d02a7d95a3597761be4890cff8716c0fa0bdfcee737083",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "form_pub_formatos_amostra",
+      "file": "form_pub_formatos_amostra_apl.php",
+      "remote_sha256": "457193206fd1e14f2dd8fbcdad5f5cb0c7a41716fa9113a0e44875565bd252e5",
+      "copied_sha256": "10b927b35ea592ff16b00404844459ce488d912221639c9eaa935c092ee6f9c8",
+      "sensitive_literals_omitted": 3
+    },
+    {
+      "application": "form_pub_formatos_amostra",
+      "file": "form_pub_formatos_amostra_form0.php",
+      "remote_sha256": "9852cbd6d2b09f937b3f9d7bddb5ba396eac02a94f3d00560e3b87f2ec124e46",
+      "copied_sha256": "45aff493ea820a7bd192e6d5257bb321fc270d0e23f489b5a6ebcfa58b74f863",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "form_pub_formatos_amostra",
+      "file": "index.php",
+      "remote_sha256": "f3573d5af8c85454b411c6f507720c3540814a4343be604f0aed17b247dd7d6e",
+      "copied_sha256": "213d5957e7b365c7c499542ef212700177d02cc18749b7cd4815506fb2cc1730",
+      "sensitive_literals_omitted": 15
+    },
+    {
+      "application": "grid_pub_formatos_amostra",
+      "file": "grid_pub_formatos_amostra.php",
+      "remote_sha256": "5ef245f4da824ec5d6a0c10cc8143753b8801ae5a9985901d5738ddd54f3d9a2",
+      "copied_sha256": "5ef245f4da824ec5d6a0c10cc8143753b8801ae5a9985901d5738ddd54f3d9a2",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "grid_pub_formatos_amostra",
+      "file": "grid_pub_formatos_amostra_grid.class.php",
+      "remote_sha256": "a7a7de91b55f0121d0f77776c51d785df8770258a195a9c875c2df2f9004697a",
+      "copied_sha256": "cfe5cf19946af38917886e3be4023ee06eabb4d75395a3b080eb4754c6e317a0",
+      "sensitive_literals_omitted": 4
+    },
+    {
+      "application": "grid_pub_formatos_amostra",
+      "file": "grid_pub_formatos_amostra_lookup.class.php",
+      "remote_sha256": "8563c82f4afd9212d3b59b9ba1acb43a37ed8851d454edac9b4a5dffefeb8c84",
+      "copied_sha256": "8563c82f4afd9212d3b59b9ba1acb43a37ed8851d454edac9b4a5dffefeb8c84",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "grid_pub_formatos_amostra",
+      "file": "index.php",
+      "remote_sha256": "8c662f5d22490743f50745dc6fb2c24eb3ff7dd318a09f713f05549c16882e85",
+      "copied_sha256": "c8349a6bb89df490ea21b54d41faf808a5d495e2afe939cff0c07c0d9c3095e9",
+      "sensitive_literals_omitted": 9
+    }
+  ]
+}

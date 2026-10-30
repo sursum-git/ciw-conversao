@@ -1,0 +1,248 @@
+{
+  "scope": "New metadata display labels only; no product or database text transformation",
+  "sourceFreezeSha256": "17acb3059051f6eb87f3aef20ba1f7c79aae6de05c52d208dd8748a350a2d6e0",
+  "files": [
+    {
+      "name": "container_custos_comparacao_real-builder-draft.json",
+      "sourcePath": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-cost-comparison-readonly\\frozen-rebase11-v1\\metadata\\container_custos_comparacao_real-builder-draft.json",
+      "sourceSha256": "fbfb56bf643f5c0c7133c6e52883e30af1882a3fec51fc25d63112dc04204c6c",
+      "changes": [
+        {
+          "path": [
+            "entityDraft",
+            "name"
+          ],
+          "before": "ComparaÃ§Ã£o histÃ³rica de custos â€” BRL",
+          "after": "Comparação histórica de custos — BRL"
+        },
+        {
+          "path": [
+            "entityDraft",
+            "fields",
+            2,
+            "label"
+          ],
+          "before": "VersÃ£o",
+          "after": "Versão"
+        },
+        {
+          "path": [
+            "entityDraft",
+            "fields",
+            3,
+            "label"
+          ],
+          "before": "Item histÃ³rico",
+          "after": "Item histórico"
+        },
+        {
+          "path": [
+            "entityDraft",
+            "fields",
+            5,
+            "label"
+          ],
+          "before": "CÃ³digo ERP atual",
+          "after": "Código ERP atual"
+        },
+        {
+          "path": [
+            "entityDraft",
+            "fields",
+            6,
+            "label"
+          ],
+          "before": "DescriÃ§Ã£o atual do item",
+          "after": "Descrição atual do item"
+        },
+        {
+          "path": [
+            "entityDraft",
+            "fields",
+            12,
+            "label"
+          ],
+          "before": "UnitÃ¡rio",
+          "after": "Unitário"
+        },
+        {
+          "path": [
+            "entityDraft",
+            "fields",
+            13,
+            "label"
+          ],
+          "before": "Despesa sem distribuiÃ§Ã£o",
+          "after": "Despesa sem distribuição"
+        },
+        {
+          "path": [
+            "entityDraft",
+            "fields",
+            14,
+            "label"
+          ],
+          "before": "Total sem distribuiÃ§Ã£o",
+          "after": "Total sem distribuição"
+        },
+        {
+          "path": [
+            "entityDraft",
+            "fields",
+            15,
+            "label"
+          ],
+          "before": "UnitÃ¡rio sem distribuiÃ§Ã£o",
+          "after": "Unitário sem distribuição"
+        },
+        {
+          "path": [
+            "entityDraft",
+            "fields",
+            18,
+            "label"
+          ],
+          "before": "UnitÃ¡rio percentual fixo",
+          "after": "Unitário percentual fixo"
+        },
+        {
+          "path": [
+            "programDraft",
+            "programTitle"
+          ],
+          "before": "ComparaÃ§Ã£o histÃ³rica de custos â€” BRL",
+          "after": "Comparação histórica de custos — BRL"
+        },
+        {
+          "path": [
+            "programDraft",
+            "subtitle"
+          ],
+          "before": "VersÃ£o persistida selecionada; cÃ³digo e descriÃ§Ã£o atuais. Consulta global.",
+          "after": "Versão persistida selecionada; código e descrição atuais. Consulta global."
+        }
+      ]
+    },
+    {
+      "name": "container_custos_comparacao_dolar-builder-draft.json",
+      "sourcePath": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\container-cost-comparison-readonly\\frozen-rebase11-v1\\metadata\\container_custos_comparacao_dolar-builder-draft.json",
+      "sourceSha256": "0d65e009f5c73b293273ee0438338a5cf1b46b15647bf9d4307b3c0ee2a06cbd",
+      "changes": [
+        {
+          "path": [
+            "entityDraft",
+            "name"
+          ],
+          "before": "ComparaÃ§Ã£o histÃ³rica de custos â€” USD",
+          "after": "Comparação histórica de custos — USD"
+        },
+        {
+          "path": [
+            "entityDraft",
+            "fields",
+            2,
+            "label"
+          ],
+          "before": "VersÃ£o",
+          "after": "Versão"
+        },
+        {
+          "path": [
+            "entityDraft",
+            "fields",
+            3,
+            "label"
+          ],
+          "before": "Item histÃ³rico",
+          "after": "Item histórico"
+        },
+        {
+          "path": [
+            "entityDraft",
+            "fields",
+            5,
+            "label"
+          ],
+          "before": "CÃ³digo ERP atual",
+          "after": "Código ERP atual"
+        },
+        {
+          "path": [
+            "entityDraft",
+            "fields",
+            6,
+            "label"
+          ],
+          "before": "DescriÃ§Ã£o atual do item",
+          "after": "Descrição atual do item"
+        },
+        {
+          "path": [
+            "entityDraft",
+            "fields",
+            12,
+            "label"
+          ],
+          "before": "UnitÃ¡rio",
+          "after": "Unitário"
+        },
+        {
+          "path": [
+            "entityDraft",
+            "fields",
+            13,
+            "label"
+          ],
+          "before": "Despesa sem distribuiÃ§Ã£o",
+          "after": "Despesa sem distribuição"
+        },
+        {
+          "path": [
+            "entityDraft",
+            "fields",
+            14,
+            "label"
+          ],
+          "before": "Total sem distribuiÃ§Ã£o",
+          "after": "Total sem distribuição"
+        },
+        {
+          "path": [
+            "entityDraft",
+            "fields",
+            15,
+            "label"
+          ],
+          "before": "UnitÃ¡rio sem distribuiÃ§Ã£o",
+          "after": "Unitário sem distribuição"
+        },
+        {
+          "path": [
+            "entityDraft",
+            "fields",
+            18,
+            "label"
+          ],
+          "before": "UnitÃ¡rio percentual fixo",
+          "after": "Unitário percentual fixo"
+        },
+        {
+          "path": [
+            "programDraft",
+            "programTitle"
+          ],
+          "before": "ComparaÃ§Ã£o histÃ³rica de custos â€” USD",
+          "after": "Comparação histórica de custos — USD"
+        },
+        {
+          "path": [
+            "programDraft",
+            "subtitle"
+          ],
+          "before": "VersÃ£o persistida selecionada; cÃ³digo e descriÃ§Ã£o atuais. Consulta global.",
+          "after": "Versão persistida selecionada; código e descrição atuais. Consulta global."
+        }
+      ]
+    }
+  ]
+}

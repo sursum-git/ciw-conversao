@@ -1,0 +1,2604 @@
+{
+  "code": "motor_progress_ciw_cadastros",
+  "name": "Cadastros CIW — Progress",
+  "baseUrl": "http://127.0.0.1:19910/med/web",
+  "responseContract": "sursum-programs",
+  "operations": [
+    {
+      "code": "coloracoes_read",
+      "name": "coloracoes read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "read",
+        "resource": "coloracoes"
+      },
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": null
+    },
+    {
+      "code": "coloracoes_get",
+      "name": "coloracoes get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "get",
+        "resource": "coloracoes"
+      },
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "coloracoes_create",
+      "name": "coloracoes create",
+      "type": "create",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "create",
+        "resource": "coloracoes"
+      },
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "coloracoes_update",
+      "name": "coloracoes update",
+      "type": "update",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "update",
+        "resource": "coloracoes"
+      },
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "coloracoes_delete",
+      "name": "coloracoes delete",
+      "type": "delete",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "delete",
+        "resource": "coloracoes"
+      },
+      "itemsPath": null,
+      "itemPath": null,
+      "totalPath": null
+    },
+    {
+      "code": "coloracoes_batch",
+      "name": "coloracoes batch",
+      "type": "batch",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "batch",
+        "resource": "coloracoes"
+      },
+      "itemsPath": null,
+      "itemPath": null,
+      "totalPath": null
+    },
+    {
+      "code": "situacoes_container_read",
+      "name": "situacoes_container read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "read",
+        "resource": "situacoes_container"
+      },
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": null
+    },
+    {
+      "code": "situacoes_container_get",
+      "name": "situacoes_container get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "get",
+        "resource": "situacoes_container"
+      },
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "situacoes_container_create",
+      "name": "situacoes_container create",
+      "type": "create",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "create",
+        "resource": "situacoes_container"
+      },
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "situacoes_container_update",
+      "name": "situacoes_container update",
+      "type": "update",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "update",
+        "resource": "situacoes_container"
+      },
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "situacoes_container_delete",
+      "name": "situacoes_container delete",
+      "type": "delete",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "delete",
+        "resource": "situacoes_container"
+      },
+      "itemsPath": null,
+      "itemPath": null,
+      "totalPath": null
+    },
+    {
+      "code": "situacoes_container_batch",
+      "name": "situacoes_container batch",
+      "type": "batch",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "batch",
+        "resource": "situacoes_container"
+      },
+      "itemsPath": null,
+      "itemPath": null,
+      "totalPath": null
+    },
+    {
+      "code": "tipos_versao_custo_read",
+      "name": "tipos_versao_custo read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "read",
+        "resource": "tipos_versao_custo"
+      },
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": null
+    },
+    {
+      "code": "tipos_versao_custo_get",
+      "name": "tipos_versao_custo get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "get",
+        "resource": "tipos_versao_custo"
+      },
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "tipos_versao_custo_create",
+      "name": "tipos_versao_custo create",
+      "type": "create",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "create",
+        "resource": "tipos_versao_custo"
+      },
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "tipos_versao_custo_update",
+      "name": "tipos_versao_custo update",
+      "type": "update",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "update",
+        "resource": "tipos_versao_custo"
+      },
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "tipos_versao_custo_delete",
+      "name": "tipos_versao_custo delete",
+      "type": "delete",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "delete",
+        "resource": "tipos_versao_custo"
+      },
+      "itemsPath": null,
+      "itemPath": null,
+      "totalPath": null
+    },
+    {
+      "code": "tipos_versao_custo_batch",
+      "name": "tipos_versao_custo batch",
+      "type": "batch",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "batch",
+        "resource": "tipos_versao_custo"
+      },
+      "itemsPath": null,
+      "itemPath": null,
+      "totalPath": null
+    },
+    {
+      "code": "motivos_desconto_read",
+      "name": "motivos_desconto read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "read",
+        "resource": "motivos_desconto"
+      },
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": null
+    },
+    {
+      "code": "motivos_desconto_get",
+      "name": "motivos_desconto get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "get",
+        "resource": "motivos_desconto"
+      },
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "motivos_desconto_create",
+      "name": "motivos_desconto create",
+      "type": "create",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "create",
+        "resource": "motivos_desconto"
+      },
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "motivos_desconto_update",
+      "name": "motivos_desconto update",
+      "type": "update",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "update",
+        "resource": "motivos_desconto"
+      },
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "motivos_desconto_delete",
+      "name": "motivos_desconto delete",
+      "type": "delete",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "delete",
+        "resource": "motivos_desconto"
+      },
+      "itemsPath": null,
+      "itemPath": null,
+      "totalPath": null
+    },
+    {
+      "code": "motivos_desconto_batch",
+      "name": "motivos_desconto batch",
+      "type": "batch",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "batch",
+        "resource": "motivos_desconto"
+      },
+      "itemsPath": null,
+      "itemPath": null,
+      "totalPath": null
+    },
+    {
+      "code": "im_param_read",
+      "name": "Parâmetros IMA — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "read",
+        "resource": "im_param"
+      },
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": null
+    },
+    {
+      "code": "im_param_get",
+      "name": "Parâmetros IMA — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "get",
+        "resource": "im_param"
+      },
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "im_param_create",
+      "name": "Parâmetros IMA — create",
+      "type": "create",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "create",
+        "resource": "im_param"
+      },
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "im_param_update",
+      "name": "Parâmetros IMA — update",
+      "type": "update",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "update",
+        "resource": "im_param"
+      },
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "im_param_delete",
+      "name": "Parâmetros IMA — delete",
+      "type": "delete",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "delete",
+        "resource": "im_param"
+      },
+      "itemsPath": null,
+      "itemPath": null,
+      "totalPath": null
+    },
+    {
+      "code": "fornecedores_read",
+      "name": "Fornecedores — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "read",
+        "resource": "fornecedores"
+      },
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": null
+    },
+    {
+      "code": "fornecedores_get",
+      "name": "Fornecedores — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "get",
+        "resource": "fornecedores"
+      },
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "fornecedores_estrangeiros_read",
+      "name": "Fornecedores estrangeiros — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "read",
+        "resource": "fornecedores_estrangeiros"
+      },
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": null
+    },
+    {
+      "code": "fornecedores_estrangeiros_get",
+      "name": "Fornecedores estrangeiros — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "get",
+        "resource": "fornecedores_estrangeiros"
+      },
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "itens_read",
+      "name": "Itens ERP — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "read",
+        "resource": "itens"
+      },
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": null
+    },
+    {
+      "code": "itens_get",
+      "name": "Itens ERP — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "get",
+        "resource": "itens"
+      },
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "representantes_ativos_read",
+      "name": "Representantes ativos — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "read",
+        "resource": "representantes_ativos"
+      },
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": null
+    },
+    {
+      "code": "representantes_ativos_get",
+      "name": "Representantes ativos — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "get",
+        "resource": "representantes_ativos"
+      },
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "hist_cotacoes_bc_read",
+      "name": "Cotações BC — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "read",
+        "resource": "hist_cotacoes_bc"
+      },
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": null
+    },
+    {
+      "code": "hist_cotacoes_bc_get",
+      "name": "Cotações BC — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "get",
+        "resource": "hist_cotacoes_bc"
+      },
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "hist_cotacoes_bc_create",
+      "name": "Cotações BC — create",
+      "type": "create",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "create",
+        "resource": "hist_cotacoes_bc"
+      },
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "hist_cotacoes_bc_update",
+      "name": "Cotações BC — update",
+      "type": "update",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "update",
+        "resource": "hist_cotacoes_bc"
+      },
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "hist_cotacoes_bc_delete",
+      "name": "Cotações BC — delete",
+      "type": "delete",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "delete",
+        "resource": "hist_cotacoes_bc"
+      },
+      "itemsPath": null,
+      "itemPath": null,
+      "totalPath": null
+    },
+    {
+      "code": "hist_cotacoes_bc_import",
+      "allowProcess": true,
+      "name": "Cotações BC — Buscar cotação",
+      "type": "custom",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "import-bc",
+        "resource": "hist_cotacoes_bc"
+      },
+      "requestContextFields": [],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "notas_fiscais_med_read",
+      "name": "Notas Fiscais de Importação — MED — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "read",
+        "resource": "notas_fiscais_med"
+      },
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "notas_fiscais_med_get",
+      "name": "Notas Fiscais de Importação — MED — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "get",
+        "resource": "notas_fiscais_med"
+      },
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "titulos_pagar_med_read",
+      "name": "Títulos a Pagar — MED — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "read",
+        "resource": "titulos_pagar_med"
+      },
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "titulos_pagar_med_get",
+      "name": "Títulos a Pagar — MED — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "get",
+        "resource": "titulos_pagar_med"
+      },
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "procs_compra_financeiro_med_read",
+      "name": "procs_compra_financeiro_med — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "read",
+        "resource": "procs_compra_financeiro_med"
+      },
+      "requestContextFields": [],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "procs_compra_financeiro_med_get",
+      "name": "procs_compra_financeiro_med — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "get",
+        "resource": "procs_compra_financeiro_med"
+      },
+      "requestContextFields": [],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_pagamentos_read",
+      "name": "proc_compra_pagamentos — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "read",
+        "resource": "proc_compra_pagamentos"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_pagamentos_get",
+      "name": "proc_compra_pagamentos — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "get",
+        "resource": "proc_compra_pagamentos"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_pagamentos_create",
+      "name": "proc_compra_pagamentos — create",
+      "type": "create",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "create",
+        "resource": "proc_compra_pagamentos"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_pagamentos_delete",
+      "name": "proc_compra_pagamentos — delete",
+      "type": "delete",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "delete",
+        "resource": "proc_compra_pagamentos"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_titulos_disponiveis",
+      "name": "proc_compra_titulos_disponiveis — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "read",
+        "resource": "proc_compra_titulos_disponiveis"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": null
+    },
+    {
+      "code": "procs_compra_med_read",
+      "name": "Processos de Compra — MED — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "read",
+        "resource": "procs_compra_med"
+      },
+      "requestContextFields": [],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "procs_compra_med_get",
+      "name": "Processos de Compra — MED — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "get",
+        "resource": "procs_compra_med"
+      },
+      "requestContextFields": [],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "procs_compra_med_create",
+      "name": "Processos de Compra — MED — create",
+      "type": "create",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "create",
+        "resource": "procs_compra_med"
+      },
+      "requestContextFields": [],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "procs_compra_med_update",
+      "name": "Processos de Compra — MED — update",
+      "type": "update",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "update",
+        "resource": "procs_compra_med"
+      },
+      "requestContextFields": [],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "procs_compra_med_delete",
+      "name": "Processos de Compra — MED — delete",
+      "type": "delete",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "delete",
+        "resource": "procs_compra_med"
+      },
+      "requestContextFields": [],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_itens_read",
+      "name": "Itens do Processo de Compra — MED — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_itens",
+        "operation": "read"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "proc_compra_itens_get",
+      "name": "Itens do Processo de Compra — MED — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_itens",
+        "operation": "get"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_itens_create",
+      "name": "Itens do Processo de Compra — MED — create",
+      "type": "create",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_itens",
+        "operation": "create"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_itens_update",
+      "name": "Itens do Processo de Compra — MED — update",
+      "type": "update",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_itens",
+        "operation": "update"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_itens_delete",
+      "name": "Itens do Processo de Compra — MED — delete",
+      "type": "delete",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_itens",
+        "operation": "delete"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_itens_opcoes_coloracao",
+      "name": "Opções de coloracao do item",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_itens",
+        "operation": "options",
+        "lookup": "coloracao"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "proc_compra_itens_opcoes_formato_amostra",
+      "name": "Opções de formato_amostra do item",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_itens",
+        "operation": "options",
+        "lookup": "formato_amostra"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "proc_compra_itens_opcoes_estacao",
+      "name": "Opções de estacao do item",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_itens",
+        "operation": "options",
+        "lookup": "estacao"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "proc_compra_amostras_read",
+      "name": "Envios de Amostras dos Itens — MED — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_amostras",
+        "operation": "read"
+      },
+      "requestContextFields": [
+        "proc_compra_id",
+        "item_proc_compra_id"
+      ],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "proc_compra_amostras_get",
+      "name": "Envios de Amostras dos Itens — MED — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_amostras",
+        "operation": "get"
+      },
+      "requestContextFields": [
+        "proc_compra_id",
+        "item_proc_compra_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_amostras_create",
+      "name": "Envios de Amostras dos Itens — MED — create",
+      "type": "create",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_amostras",
+        "operation": "create"
+      },
+      "requestContextFields": [
+        "proc_compra_id",
+        "item_proc_compra_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_amostras_update",
+      "name": "Envios de Amostras dos Itens — MED — update",
+      "type": "update",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_amostras",
+        "operation": "update"
+      },
+      "requestContextFields": [
+        "proc_compra_id",
+        "item_proc_compra_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_amostras_delete",
+      "name": "Envios de Amostras dos Itens — MED — delete",
+      "type": "delete",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_amostras",
+        "operation": "delete"
+      },
+      "requestContextFields": [
+        "proc_compra_id",
+        "item_proc_compra_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_amostras_opcoes_representante",
+      "name": "Representantes ativos para amostras",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_amostras",
+        "operation": "options",
+        "lookup": "representante"
+      },
+      "requestContextFields": [
+        "proc_compra_id",
+        "item_proc_compra_id"
+      ],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "proc_compra_anexos_read",
+      "name": "Anexos dos Itens — MED — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_anexos",
+        "operation": "read"
+      },
+      "requestContextFields": [
+        "proc_compra_id",
+        "item_proc_compra_id"
+      ],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "proc_compra_anexos_get",
+      "name": "Anexos dos Itens — MED — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_anexos",
+        "operation": "get"
+      },
+      "requestContextFields": [
+        "proc_compra_id",
+        "item_proc_compra_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_anexos_create",
+      "name": "Anexos dos Itens — MED — create",
+      "type": "create",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_anexos",
+        "operation": "create"
+      },
+      "requestContextFields": [
+        "proc_compra_id",
+        "item_proc_compra_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_anexos_update",
+      "name": "Anexos dos Itens — MED — update",
+      "type": "update",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_anexos",
+        "operation": "update"
+      },
+      "requestContextFields": [
+        "proc_compra_id",
+        "item_proc_compra_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_anexos_delete",
+      "name": "Anexos dos Itens — MED — delete",
+      "type": "delete",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_anexos",
+        "operation": "delete"
+      },
+      "requestContextFields": [
+        "proc_compra_id",
+        "item_proc_compra_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_anexos_opcoes_tipo",
+      "name": "Tipos de anexo do item",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_anexos",
+        "operation": "options",
+        "lookup": "tipo_anexo"
+      },
+      "requestContextFields": [
+        "proc_compra_id",
+        "item_proc_compra_id"
+      ],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "proc_compra_documentos_read",
+      "name": "Anexos do Processo — MED — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_documentos",
+        "operation": "read"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "proc_compra_documentos_get",
+      "name": "Anexos do Processo — MED — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_documentos",
+        "operation": "get"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_documentos_create",
+      "name": "Anexos do Processo — MED — create",
+      "type": "create",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_documentos",
+        "operation": "create"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_documentos_update",
+      "name": "Anexos do Processo — MED — update",
+      "type": "update",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_documentos",
+        "operation": "update"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_documentos_delete",
+      "name": "Anexos do Processo — MED — delete",
+      "type": "delete",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_documentos",
+        "operation": "delete"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_documentos_opcoes_tipo",
+      "name": "Tipos de anexo do processo",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_documentos",
+        "operation": "options",
+        "lookup": "tipo_anexo"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "proc_compra_despesas_read",
+      "name": "Despesas do processo — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_despesas",
+        "operation": "read"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "proc_compra_despesas_get",
+      "name": "Despesas do processo — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_despesas",
+        "operation": "get"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_despesas_create",
+      "name": "Despesas do processo — create",
+      "type": "create",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_despesas",
+        "operation": "create"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_despesas_update",
+      "name": "Despesas do processo — update",
+      "type": "update",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_despesas",
+        "operation": "update"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_despesas_delete",
+      "name": "Despesas do processo — delete",
+      "type": "delete",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_despesas",
+        "operation": "delete"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_despesas_opcoes_despesa",
+      "name": "Despesas do processo — options",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_despesas",
+        "operation": "options",
+        "lookup": "despesa"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "proc_compra_despesas_generate",
+      "allowProcess": true,
+      "name": "Despesas do processo — generate",
+      "type": "custom",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_despesas",
+        "operation": "generate"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_resumo_read",
+      "name": "Resumo do processo — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_resumo",
+        "operation": "read"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "proc_compra_resumo_get",
+      "name": "Resumo do processo — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_resumo",
+        "operation": "get"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_despesas_calculate_taxes",
+      "allowProcess": true,
+      "name": "Calcular impostos do processo MED",
+      "type": "custom",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_despesas",
+        "operation": "calculate_taxes"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_alocacoes_read",
+      "name": "Alocações do item — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_alocacoes",
+        "operation": "read"
+      },
+      "requestContextFields": [
+        "proc_compra_id",
+        "item_proc_compra_id"
+      ],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "proc_compra_alocacoes_get",
+      "name": "Alocações do item — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_alocacoes",
+        "operation": "get"
+      },
+      "requestContextFields": [
+        "proc_compra_id",
+        "item_proc_compra_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "formatos_amostra_read",
+      "name": "Formatos de amostra — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "read",
+        "resource": "formatos_amostra"
+      },
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "formatos_amostra_get",
+      "name": "Formatos de amostra — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "get",
+        "resource": "formatos_amostra"
+      },
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "formatos_amostra_create",
+      "name": "Formatos de amostra — create",
+      "type": "create",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "create",
+        "resource": "formatos_amostra"
+      },
+      "itemsPath": null,
+      "itemPath": null,
+      "totalPath": null
+    },
+    {
+      "code": "formatos_amostra_update",
+      "name": "Formatos de amostra — update",
+      "type": "update",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "update",
+        "resource": "formatos_amostra"
+      },
+      "itemsPath": null,
+      "itemPath": null,
+      "totalPath": null
+    },
+    {
+      "code": "formatos_amostra_delete",
+      "name": "Formatos de amostra — delete",
+      "type": "delete",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "delete",
+        "resource": "formatos_amostra"
+      },
+      "itemsPath": null,
+      "itemPath": null,
+      "totalPath": null
+    },
+    {
+      "code": "formatos_amostra_batch",
+      "name": "Formatos de amostra — batch",
+      "type": "batch",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "batch",
+        "resource": "formatos_amostra"
+      },
+      "itemsPath": null,
+      "itemPath": null,
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_alertas_read",
+      "name": "Alertas do processo — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_alertas",
+        "operation": "read"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "proc_compra_alertas_get",
+      "name": "Alertas do processo — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_alertas",
+        "operation": "get"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_quantidades_read",
+      "name": "Quantidades importadas — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_quantidades",
+        "operation": "read"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "proc_compra_quantidades_get",
+      "name": "Quantidades importadas — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_quantidades",
+        "operation": "get"
+      },
+      "requestContextFields": [
+        "proc_compra_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_quantidades_global_read",
+      "name": "Quantidades — geral MED — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_quantidades",
+        "operation": "read"
+      },
+      "requestContextFields": [],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "proc_compra_quantidades_global_get",
+      "name": "Quantidades — geral MED — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_quantidades",
+        "operation": "get"
+      },
+      "requestContextFields": [],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_quantidades_periodo_read",
+      "name": "Quantidades por período MED — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_quantidades_periodo_med",
+        "operation": "read"
+      },
+      "requestContextFields": [],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "proc_compra_quantidades_periodo_get",
+      "name": "Quantidades por período MED — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_quantidades_periodo_med",
+        "operation": "get"
+      },
+      "requestContextFields": [],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_sinalizadores_read",
+      "name": "proc_compra_sinalizadores — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_sinalizadores",
+        "operation": "read"
+      },
+      "requestContextFields": [],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "proc_compra_sinalizadores_get",
+      "name": "proc_compra_sinalizadores — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_sinalizadores",
+        "operation": "get"
+      },
+      "requestContextFields": [],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "proc_compra_sinalizados_read",
+      "name": "proc_compra_sinalizados — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_sinalizados",
+        "operation": "read"
+      },
+      "requestContextFields": [
+        "sinaliz_imp_id"
+      ],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "proc_compra_sinalizados_get",
+      "name": "proc_compra_sinalizados — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "proc_compra_sinalizados",
+        "operation": "get"
+      },
+      "requestContextFields": [
+        "sinaliz_imp_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "sinalizadores_importacao_read",
+      "name": "Sinalizadores de importação — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "read",
+        "resource": "sinalizadores_importacao"
+      },
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "sinalizadores_importacao_get",
+      "name": "Sinalizadores de importação — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "get",
+        "resource": "sinalizadores_importacao"
+      },
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "sinalizadores_importacao_update",
+      "name": "Sinalizadores de importação — update",
+      "type": "update",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "operation": "update",
+        "resource": "sinalizadores_importacao"
+      },
+      "itemsPath": null,
+      "itemPath": null,
+      "totalPath": null
+    },
+    {
+      "code": "container_calculos_impostos_med_read",
+      "name": "Histórico de cálculos fiscais do container — MED — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "container_calculos_impostos_med",
+        "operation": "read"
+      },
+      "requestContextFields": [
+        "container_id",
+        "calc_imp_container_id"
+      ],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "container_calculos_impostos_med_get",
+      "name": "Histórico de cálculos fiscais do container — MED — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "container_calculos_impostos_med",
+        "operation": "get"
+      },
+      "requestContextFields": [
+        "container_id",
+        "calc_imp_container_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "container_despesa_memoria_med_read",
+      "name": "Memória de cálculo da despesa — MED — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "container_despesa_memoria_med",
+        "operation": "read"
+      },
+      "requestContextFields": [
+        "container_id",
+        "despesa_container_id"
+      ],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "container_despesa_memoria_med_get",
+      "name": "Memória de cálculo da despesa — MED — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "container_despesa_memoria_med",
+        "operation": "get"
+      },
+      "requestContextFields": [
+        "container_id",
+        "despesa_container_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "container_versoes_historico_med_read",
+      "name": "Histórico de itens da versão — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "container_versoes_historico_med",
+        "operation": "read"
+      },
+      "requestContextFields": [
+        "container_id",
+        "versao_id"
+      ],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "container_versoes_historico_med_get",
+      "name": "Histórico de itens da versão — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "container_versoes_historico_med",
+        "operation": "get"
+      },
+      "requestContextFields": [
+        "container_id",
+        "versao_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "container_versao_pagtos_historico_med_read",
+      "name": "Pagamentos históricos da versão — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "container_versao_pagtos_historico_med",
+        "operation": "read"
+      },
+      "requestContextFields": [
+        "container_id",
+        "versao_id"
+      ],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "container_versao_pagtos_historico_med_get",
+      "name": "Pagamentos históricos da versão — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "container_versao_pagtos_historico_med",
+        "operation": "get"
+      },
+      "requestContextFields": [
+        "container_id",
+        "versao_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "container_versao_nfs_historico_med_read",
+      "name": "NFs históricas da versão — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "container_versao_nfs_historico_med",
+        "operation": "read"
+      },
+      "requestContextFields": [
+        "container_id",
+        "versao_id"
+      ],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "container_versao_nfs_historico_med_get",
+      "name": "NFs históricas da versão — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "container_versao_nfs_historico_med",
+        "operation": "get"
+      },
+      "requestContextFields": [
+        "container_id",
+        "versao_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "container_versao_descontos_historico_med_read",
+      "name": "Descontos históricos da versão — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "container_versao_descontos_historico_med",
+        "operation": "read"
+      },
+      "requestContextFields": [
+        "container_id",
+        "versao_id"
+      ],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "container_versao_descontos_historico_med_get",
+      "name": "Descontos históricos da versão — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "container_versao_descontos_historico_med",
+        "operation": "get"
+      },
+      "requestContextFields": [
+        "container_id",
+        "versao_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "container_versao_despesas_historico_med_read",
+      "name": "Despesas históricas da versão — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "container_versao_despesas_historico_med",
+        "operation": "read"
+      },
+      "requestContextFields": [
+        "container_id",
+        "versao_id"
+      ],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "container_versao_despesas_historico_med_get",
+      "name": "Despesas históricas da versão — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "container_versao_despesas_historico_med",
+        "operation": "get"
+      },
+      "requestContextFields": [
+        "container_id",
+        "versao_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "import_descontos_geral_read",
+      "name": "Descontos de importação — consulta geral — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "import_descontos_geral",
+        "operation": "read"
+      },
+      "requestContextFields": [],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "import_descontos_geral_get",
+      "name": "Descontos de importação — consulta geral — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "import_descontos_geral",
+        "operation": "get"
+      },
+      "requestContextFields": [],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "import_descontos_lancamentos_read",
+      "name": "Utilização do desconto de importação — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "import_descontos_lancamentos",
+        "operation": "read"
+      },
+      "requestContextFields": [
+        "desconto_importacao_id"
+      ],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "import_descontos_lancamentos_get",
+      "name": "Utilização do desconto de importação — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "import_descontos_lancamentos",
+        "operation": "get"
+      },
+      "requestContextFields": [
+        "desconto_importacao_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "custo_distribuicao_itens_aptos_read",
+      "name": "Itens aptos à distribuição de custo — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "custo_distribuicao_itens_aptos",
+        "operation": "read"
+      },
+      "requestContextFields": [],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "custo_distribuicao_itens_aptos_get",
+      "name": "Itens aptos à distribuição de custo — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "custo_distribuicao_itens_aptos",
+        "operation": "get"
+      },
+      "requestContextFields": [],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "custo_distribuicao_lancamentos_item_read",
+      "name": "Conta corrente de distribuição do item — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "custo_distribuicao_lancamentos_item",
+        "operation": "read"
+      },
+      "requestContextFields": [
+        "item_container_id"
+      ],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "custo_distribuicao_lancamentos_item_get",
+      "name": "Conta corrente de distribuição do item — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "custo_distribuicao_lancamentos_item",
+        "operation": "get"
+      },
+      "requestContextFields": [
+        "item_container_id"
+      ],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "item_custos_manual_read",
+      "name": "Custos manuais dos itens — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "item_custos_manual",
+        "operation": "read"
+      },
+      "requestContextFields": [],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "item_custos_manual_get",
+      "name": "Custos manuais dos itens — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "item_custos_manual",
+        "operation": "get"
+      },
+      "requestContextFields": [],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "item_container_amostra_read",
+      "name": "Itens de containers de amostra — read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "item_container_amostra",
+        "operation": "read"
+      },
+      "requestContextFields": [],
+      "itemsPath": "data",
+      "itemPath": null,
+      "totalPath": "total"
+    },
+    {
+      "code": "item_container_amostra_get",
+      "name": "Itens de containers de amostra — get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "bodyTemplate": {
+        "resource": "item_container_amostra",
+        "operation": "get"
+      },
+      "requestContextFields": [],
+      "itemsPath": null,
+      "itemPath": "data",
+      "totalPath": null
+    },
+    {
+      "code": "despesas_impostos_geral_read",
+      "name": "Relacoes globais despesa/imposto - read",
+      "type": "list",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "requestContextFields": [],
+      "bodyTemplate": {
+        "resource": "despesas_impostos_geral",
+        "operation": "read"
+      },
+      "itemsPath": "data",
+      "totalPath": "total"
+    },
+    {
+      "code": "despesas_impostos_geral_get",
+      "name": "Relacoes globais despesa/imposto - get",
+      "type": "detail",
+      "method": "POST",
+      "path": "http://127.0.0.1:19910/med/web/SursumPrograms/ciw-cadastros",
+      "headers": [],
+      "queryParams": [],
+      "requestContextFields": [],
+      "bodyTemplate": {
+        "resource": "despesas_impostos_geral",
+        "operation": "get"
+      },
+      "itemPath": "data"
+    }
+  ]
+}

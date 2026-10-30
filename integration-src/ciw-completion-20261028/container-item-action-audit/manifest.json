@@ -1,0 +1,251 @@
+{
+  "state": "REVIEW_READY_AUDIT_ONLY",
+  "businessWrites": 0,
+  "networkCalls": 0,
+  "canonicalWrites": 0,
+  "inventoryWrites": 0,
+  "sourceActions": 15,
+  "checks": 27,
+  "phpTests": 9,
+  "phpAssertions": 271,
+  "files": [
+    {
+      "path": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-item-action-audit/AUDITORIA.md",
+      "sha256": "66fc35edf726e6f6f8a645b7b0ac513ccedcd7bcacd7a5e239376f955ffbaae8",
+      "bytes": 12532
+    },
+    {
+      "path": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-item-action-audit/verify-audit.py",
+      "sha256": "64aaf0b385a77e5824b5fbd039726e5e803d6e1e1abb50ac20bb1d0172846d00",
+      "bytes": 9660
+    },
+    {
+      "path": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-item-action-audit/reconciliation-proposal.json",
+      "sha256": "db60229bac7063d63ba495431b9a17cf47aeb9cb7c8c05070cc9b2d9cb209933",
+      "bytes": 9093
+    },
+    {
+      "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-item-action-audit/verification.json",
+      "sha256": "8fb57ccfce448eb5dd221baad33bc222539520f88f549eca4d214acf75802e2d",
+      "bytes": 12659
+    },
+    {
+      "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-item-action-audit/metadata-existing.xml",
+      "sha256": "70382dccf59704516ab69854832233eeb8e6dba387b02d3b279ff2d83ad44702",
+      "bytes": 3004
+    }
+  ],
+  "evidencePins": [
+    {
+      "path": "D:/opencode/conversao-sc/sources/scriptcase/containers/grid_itens_container/grid_itens_container_grid.class.php",
+      "sha256": "d40930cd79d4fd0603a32a00910952c384e7895efa002831c485228ad6845367",
+      "bytes": 1130257
+    },
+    {
+      "path": "D:/opencode/conversao-sc/sources/scriptcase/ciw-completion-next19c-20261028/bl_criar_itens_container/index.php",
+      "sha256": "10c9b02b72e2b7174bbb128260b8d0f6c3158f19ee6bf41b05e78ed0192f1e23",
+      "bytes": 157492
+    },
+    {
+      "path": "D:/opencode/conversao-sc/sources/scriptcase/ciw-completion-next19c-20261028/bl_voltar_selecao_ped_importacao/index.php",
+      "sha256": "b6747a507207dc74b911d127a7cdb0a32631c407bc17aa50f588e3aaf2e2d394",
+      "bytes": 163158
+    },
+    {
+      "path": "D:/opencode/conversao-sc/sources/scriptcase/containers/grid_itens_container/index.php",
+      "sha256": "b557df008ebb2e178f36e5bb85f08609559c96dffb16174b042dcd5a2429de15",
+      "bytes": 1059234
+    },
+    {
+      "path": "D:/opencode/conversao-sc/sources/scriptcase/containers/grid_itens_container/grid_itens_container_lookup.class.php",
+      "sha256": "69656908ec076380eb3906768b4f79cf1d11e1251016c64b6b6cb578c5d640e6",
+      "bytes": 1762
+    },
+    {
+      "path": "D:/opencode/conversao-sc/sources/scriptcase/containers/bl_chama_grid_itens_container/index.php",
+      "sha256": "158e57615a82801734ee98a10762bd12d9ae70ef6fe048cf9f8d353d9e06a1ca",
+      "bytes": 165335
+    },
+    {
+      "path": "D:/opencode/conversao-sc/sources/scriptcase/containers/form_itens_container/form_itens_container_apl.php",
+      "sha256": "78dd3529dcba27ea4916b5c6302e887a230783f26ad64e851085d7ad9ad3d934",
+      "bytes": 820428
+    },
+    {
+      "path": "D:/opencode/conversao-sc/sources/scriptcase/containers/grid_itens_proc_compra_selecao/index.php",
+      "sha256": "dfe97a0bbc350edc450c81c69a50c03c7f2dfadcee3aede96d676ec3ee1079e0",
+      "bytes": 886969
+    },
+    {
+      "path": "D:/opencode/conversao-sc/sources/scriptcase/containers/control_selec_proc_compra/control_selec_proc_compra_apl.php",
+      "sha256": "b7448d364642be8e9c270b45bc37733d558f57dc3469e6334624acb0737dea4c",
+      "bytes": 157224
+    },
+    {
+      "path": "D:/opencode/conversao-sc/integration-src/ciw-inventory/ciw-completion-next19c-20261028-source-manifest.json",
+      "sha256": "45741610ad88ff2f6794d0fe2a4f7830f973a8f72907b09e517445a6ef222f3b",
+      "bytes": 19133
+    },
+    {
+      "path": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersItensCrud.p",
+      "sha256": "6e1780a01482b80272a618a14eddaa6aa37b6844312490a0510189ef8fbb0ada",
+      "bytes": 8175
+    },
+    {
+      "path": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersItensCrudService.p",
+      "sha256": "fbb3f21ce53741f5c6c2b8591c84ef8435bcbade2d343f3098396ff06215d8b5",
+      "bytes": 28043
+    },
+    {
+      "path": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersItensRuntime.p",
+      "sha256": "20a4a9c1ea32589e206d662b1bfacab70bd982d017f2b8a32761638f128b3aef",
+      "bytes": 28556
+    },
+    {
+      "path": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersItensFinanceiroService.p",
+      "sha256": "973f14ff63314ae2ef2928eb28c9311c4cdc34e620d5a0369863939da7a65fc3",
+      "bytes": 59775
+    },
+    {
+      "path": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersItensOptionsService.p",
+      "sha256": "9f9bf65ef691bcd222f7e4a34c3571d4f83b322436b1340b5ed2f7824fb1f2b9",
+      "bytes": 9947
+    },
+    {
+      "path": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersItensBatchService.p",
+      "sha256": "9a293e0c1c2fe0364257fae2da865540211fd707f48c6ff6bd9b13b76c1f43fe",
+      "bytes": 13953
+    },
+    {
+      "path": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersAllocationBalance.p",
+      "sha256": "956ae78ead08e585da472660ad06175b9a96e0cfd99055707e924ddf507ea550",
+      "bytes": 3414
+    },
+    {
+      "path": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersPainelReadService.p",
+      "sha256": "23b931071947c4486bda5ffcfb520b1c429f4ea4e3dec6f0b9f6546eecd6f78e",
+      "bytes": 18335
+    },
+    {
+      "path": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersCustoRead.p",
+      "sha256": "22df0b382fc313749572e2fb3496e9aae0c25555a561641afcb8401e86fbb766",
+      "bytes": 8303
+    },
+    {
+      "path": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersCustoReadService.p",
+      "sha256": "e2dfde473c806008742dc62e3095ec6cbdb1ba0bfac8a1a1893a62ac0d5ac8fd",
+      "bytes": 42102
+    },
+    {
+      "path": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersCustoCalculator.p",
+      "sha256": "9ba548fb0c49f7448b944a47a883200738ba7faf4f0d8111f13c08cb765ee6ac",
+      "bytes": 23352
+    },
+    {
+      "path": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersProcessosService.p",
+      "sha256": "9001f0f18592fac39c7f024d290cc424f6a29c51b805bea2c57ce90c8c5070b2",
+      "bytes": 11069
+    },
+    {
+      "path": "D:/opencode/construtor-pg/integrations/ciw-container-painel/itens-1.0.1-builder-draft-candidate.json",
+      "sha256": "351a5ab8fa9a8af10b3717343956158310a2804c145d2dd5099d61fa8ea2ea7f",
+      "bytes": 16237
+    },
+    {
+      "path": "D:/opencode/construtor-pg/integrations/ciw-container-painel/itens-api-source-candidate.json",
+      "sha256": "0a70137d1be95697269947958508fdc8c6e169c30e5a3cd39bd57031b7a8e81a",
+      "bytes": 2770
+    },
+    {
+      "path": "D:/opencode/construtor-pg/integrations/ciw-container-painel/custo-itens-builder-draft.json",
+      "sha256": "cfb8976e5582e81104f320981c8b5cef3b3de2f9dfb9ada6675cf362fdd6fb75",
+      "bytes": 25326
+    },
+    {
+      "path": "D:/opencode/construtor-pg/integrations/ciw-container-painel/cost-api-source.json",
+      "sha256": "1c98d7bb2943941fbae4fd98be3c2cb9d4775864dc6bf08493e535b70ee6ac3c",
+      "bytes": 3676
+    },
+    {
+      "path": "D:/opencode/construtor-pg/integrations/ciw-container-painel/custo-resumo-builder-draft.json",
+      "sha256": "b90ae941b8731c2e9e02ee06017a4c7279a302ea9a91dc8a25fee8fc70757528",
+      "bytes": 13051
+    },
+    {
+      "path": "D:/opencode/construtor-pg/integrations/ciw-container-painel/custo-rastro-builder-draft.json",
+      "sha256": "aea49642d001e1a3bb30243f694c984469ae195d87dc4aa33e36b3f12381c8df",
+      "bytes": 7577
+    },
+    {
+      "path": "D:/opencode/construtor-pg/integrations/ciw-container-painel/painel-1.0.8-builder-draft-candidate.json",
+      "sha256": "83d5019a71d69a9353fa26b313f761329237d23cc6bdccfbdfe70918b670f067",
+      "bytes": 38731
+    },
+    {
+      "path": "D:/opencode/construtor-pg/integrations/ciw-container-painel/tests/ContainerItemsMetadataTest.php",
+      "sha256": "8e761546d6417161a20763bdd80622edc55a09e484fd0f4b94833c3ed7d85bef",
+      "bytes": 10978
+    },
+    {
+      "path": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeContainerAudit.php",
+      "sha256": "3cd4448cd1a28b61a42cce9003e84d434a1e58c7b11c1a89599456f5e8d6931b",
+      "bytes": 29217
+    },
+    {
+      "path": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeContainerAllocationAudit.php",
+      "sha256": "ed0e7955ba79fc9e38a78bfcc9b0346242d0581d2db5f379b99879294af653f2",
+      "bytes": 5974
+    },
+    {
+      "path": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeApiEntityActionService.php",
+      "sha256": "c19eb95eb1ef39633a7b196593a8d943b234eb8a3c782514e07618ae4c7cbb60",
+      "bytes": 126465
+    },
+    {
+      "path": "D:/opencode/conversao-sc/.runtime/container-items-20261017/runtime-read-evidence.json",
+      "sha256": "19ea65a2458184db0a94e224fddc46f597a119a19f24140449ec0c8b50489ee1",
+      "bytes": 411
+    },
+    {
+      "path": "D:/opencode/conversao-sc/.runtime/container-items-20261017/items-final-cleanup-verification.json",
+      "sha256": "f6954dcd7ee87def5b8663bc66eff127d9bc402a2567a496169f05a9db8db4e1",
+      "bytes": 653
+    },
+    {
+      "path": "D:/opencode/conversao-sc/.runtime/container-items-20261017/items-confirmed-logs.json",
+      "sha256": "4e5ab075f3a306e964517c8a07328f61616dd4b12576a40c6ca74847944f6484",
+      "bytes": 49473
+    },
+    {
+      "path": "D:/opencode/conversao-sc/.runtime/container-items-20261017/panel-header-publication-receipt.json",
+      "sha256": "b26762a09599ddb608f060d338b3cfede5fac0355057b4998a85c2bd68401294",
+      "bytes": 483
+    },
+    {
+      "path": "D:/opencode/conversao-sc/.runtime/container-allocation-batch-20261026/final-verification.json",
+      "sha256": "213865f01f3ccb70e3468d79b8edf2a7eca3977fe1703e470dcb0ebd58563b52",
+      "bytes": 840
+    },
+    {
+      "path": "D:/opencode/conversao-sc/.runtime/container-allocation-batch-20261026/exercise/physical-audit-reconciled.json",
+      "sha256": "d352645b8e0aadc1af5b500e9ee42c918bef40110e6d921cd0510417b63192cb",
+      "bytes": 176
+    },
+    {
+      "path": "D:/opencode/conversao-sc/.runtime/container-allocation-batch-20261026/published-definitions.json",
+      "sha256": "9bb39a9587f098e07493cea5cfa3f81597be23200abd605543a29ffd59611472",
+      "bytes": 121072
+    },
+    {
+      "path": "D:/opencode/conversao-sc/.runtime/container-allocation-batch-20261026/official-compile-verification.json",
+      "sha256": "41e9eab236ce03a878cd5de223999c2555079514854546b11ed0afe0bebd3a71",
+      "bytes": 11157
+    },
+    {
+      "path": "D:/opencode/conversao-sc/.runtime/container-allocation-batch-20261026/publication-manifest.json",
+      "sha256": "9e7af171bc5d3fdd6fc767e916f2b1144cc392ceeb2d03ed6d567c2c71c7e5c9",
+      "bytes": 6225
+    }
+  ],
+  "note": "Historical receipts do not attest current runtime bytes. No application declared fully Converted."
+}

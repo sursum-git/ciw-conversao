@@ -1,0 +1,337 @@
+{
+  "package": "container-tax-only",
+  "version": "1.1",
+  "status": "FROZEN_REBASED_AFTER_BUILD5_CANDIDATE_NOT_APPLIED",
+  "createdAt": "2026-10-28T19:32:34.829557+00:00",
+  "program": "op1043",
+  "entity": "container_processos_progress",
+  "newEntity": false,
+  "source": "motor_progress_container_processos",
+  "operation": "calcular_impostos",
+  "resource": "impostos",
+  "route": "/SursumPrograms/containers-processos",
+  "abiPreserved": true,
+  "officialCompile": false,
+  "integrated": false,
+  "published": false,
+  "businessExecuted": false,
+  "sharedApplied": false,
+  "files": [
+    {
+      "path": "metadata/api-source-preview.json",
+      "sha256": "8d5019df7e7e28d104182bf69c7e32ca4390d793d53936077044ebc847c80022",
+      "bytes": 3470
+    },
+    {
+      "path": "metadata/parent-navigation.json",
+      "sha256": "ed35e31328ec30c62550fb5448347a946895a605a1899fde6e16b8f15bf13352",
+      "bytes": 854
+    },
+    {
+      "path": "metadata/source-addition.json",
+      "sha256": "b003ac02caaf5d992c0ca78c375a5456a6a752594b7a63c9205ab9ad74c63bc9",
+      "bytes": 1083
+    },
+    {
+      "path": "metadata/tax-only-builder-draft.json",
+      "sha256": "30a43eb7e03299edd30ad41fe248398c18a3ce9c68447b423c966776daef629f",
+      "bytes": 1322
+    },
+    {
+      "path": "patches/abl-plan.json",
+      "sha256": "7aca286aea26b857e3b3fe1e8de51418d4442daf8579c6e25256f868aa0aed38",
+      "bytes": 5028
+    },
+    {
+      "path": "patches/ContainerProcessBoundary.i.patch",
+      "sha256": "7e3387930815089ccb8bd0f67b65c148620f014a2b98fb549cab88fec85e81f0",
+      "bytes": 1023
+    },
+    {
+      "path": "patches/ContainersImpostosService.p.patch",
+      "sha256": "baa5bc9c06dff8104334cace672c0da873e99c6cce5669ccbc2343c5b0823199",
+      "bytes": 4452
+    },
+    {
+      "path": "patches/ContainersProcessos.p.patch",
+      "sha256": "6d2828d910d68e556e31aa794dd992af8216561238cc399aedb49f44d4b0e74a",
+      "bytes": 1172
+    },
+    {
+      "path": "patches/ContainersProcessosService.p.patch",
+      "sha256": "5228ba88cc7bef0db82726fe421aca2018de99a2c8732aee1dee4897503271bd",
+      "bytes": 4016
+    },
+    {
+      "path": "patches/php-plan.json",
+      "sha256": "4d22d351614d38336da4e06d5a0705bc69170bb9c1618ac99df8bfc58405bc00",
+      "bytes": 2880
+    },
+    {
+      "path": "patches/RuntimeApiEntityActionService.php.patch",
+      "sha256": "947d92bbdca40c0b53412004ea741265e1c49193fb3cff3737e686114e3b51b3",
+      "bytes": 2684
+    },
+    {
+      "path": "patches/RuntimeContainerAudit.php.patch",
+      "sha256": "2dc07267b2b6f18bf9bec4f7e90d85d8f0474603c8e401ec2f57f1f46bd6fd29",
+      "bytes": 1326
+    },
+    {
+      "path": "php/RuntimeContainerTaxAudit.php",
+      "sha256": "fbbac1ba035a56928227ab3b5d3609a78ab97fe0f046138eeb3c35808e730790",
+      "bytes": 2750
+    },
+    {
+      "path": "php-exact/RuntimeApiEntityActionService.php",
+      "sha256": "cd7d6cb032f250c8ef69909033009d4210873c9c0bc811e5ded2b8d2e0c557fa",
+      "bytes": 118406
+    },
+    {
+      "path": "php-exact/RuntimeContainerAudit.php",
+      "sha256": "700bea4e36a10576f0ccaf74a5c611a01354d2975221fd0d4e32d3974d7f85d1",
+      "bytes": 28991
+    },
+    {
+      "path": "PLAN.md",
+      "sha256": "9c227437095671c3f5168beea51dce6ebaabcf26f4f720a08871bf04e3e9905e",
+      "bytes": 2311
+    },
+    {
+      "path": "REVIEW.md",
+      "sha256": "88a7d786592747ab727d2cb9ea9b4f7767f36b482fd062d09b167205458919ab",
+      "bytes": 5524
+    },
+    {
+      "path": "tests/browser-process.cjs",
+      "sha256": "87ce0cd0e716ef0b8c9c26ff58a80e9377a06cd29cc4885067bc5c9f8426ddd5",
+      "bytes": 3539
+    },
+    {
+      "path": "tests/ContainersTaxOnlyProcessTests.i",
+      "sha256": "72082cdc0cf6930883154327822b7aefb30a9202163624693bcb2f0be85a9729",
+      "bytes": 1063
+    },
+    {
+      "path": "tests/ContainersTaxOnlyTests.i",
+      "sha256": "ec82a0ed12c85a4dc5dd9746aba629e6c3ca5b61eeb7eb0c1b2c63218fdd7df3",
+      "bytes": 4637
+    },
+    {
+      "path": "tests/freeze.py",
+      "sha256": "93f4cc30822575b09147e39c9cae7f6927cbfeb7480582cdb5a17982a7bccdec",
+      "bytes": 4217
+    },
+    {
+      "path": "tests/patches.py",
+      "sha256": "1dd1d569871757027b3bf187380678080289448f94a79b162588ff4c9a1dbcb3",
+      "bytes": 4351
+    },
+    {
+      "path": "tests/phpunit-bootstrap.php",
+      "sha256": "ad27814251e0cbc022ccefeacbee0b68dd929f47d12c7c8ce71315fd4e5b8f8d",
+      "bytes": 276
+    },
+    {
+      "path": "tests/phpunit.xml",
+      "sha256": "0af183504d9ad62e353031c3a7db6eb0682325c008cf477af380ddf6d8eea962",
+      "bytes": 757
+    },
+    {
+      "path": "tests/prepare-metadata.py",
+      "sha256": "8f03c196a642ed4245b9c6d11c04a8c0eef40d87b3bf4218facb95b196a4150a",
+      "bytes": 3292
+    },
+    {
+      "path": "tests/prepare-php.py",
+      "sha256": "d8fb3a278341a01a0d4830e7661e6452ccec4bf1585e7bde98bed48916893674",
+      "bytes": 123
+    },
+    {
+      "path": "tests/prepare.py",
+      "sha256": "31dd5f0535dd8435dfeee88982837b62e97d4b50f4d29e09d08a22d590f09fef",
+      "bytes": 5128
+    },
+    {
+      "path": "tests/preview-native.php",
+      "sha256": "d186b0cdd3f09bd0dfa2099e2d9c9737a70521170b090ea2f04c969dc8aad293",
+      "bytes": 2521
+    },
+    {
+      "path": "tests/run-abl.ps1",
+      "sha256": "b93c5f3c6813b4b24cb9cc7ed4a526009a9df4d6466d2930e1ea1937fd30f476",
+      "bytes": 2673
+    },
+    {
+      "path": "tests/RuntimeContainerTaxOnlyProcessTest.php",
+      "sha256": "2654ce377d194c992f39676828d6a768c0656cf00816ff132c293e2309113881",
+      "bytes": 7028
+    },
+    {
+      "path": "tests/verify-all.ps1",
+      "sha256": "ffac61b0e8a503473370f9fbd3b9c57929e38534b296ff923eedf2e466e90d82",
+      "bytes": 1783
+    },
+    {
+      "path": "tests/verify-wiring.py",
+      "sha256": "76d168f8ca21f8d24a853f93c07fccc6a3fff4dcd8b647d00c717a83e4d9e870",
+      "bytes": 2375
+    }
+  ],
+  "baselines": [
+    {
+      "plan": "patches/abl-plan.json",
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersImpostosService.p",
+      "baselineSha256": "7c2f1ce11dd750531a79ad67386f691a02f9244700fcc1a9b59ff83c8e28b669"
+    },
+    {
+      "plan": "patches/abl-plan.json",
+      "target": "D:/opencode/motor-progress/v2/sursum-api/includes/ContainerProcessBoundary.i",
+      "baselineSha256": "895eb07004a834725397c3a68129726772c561a2fab6145337fee08e029f74db"
+    },
+    {
+      "plan": "patches/abl-plan.json",
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersProcessosService.p",
+      "baselineSha256": "c8c33cd04ee545baf83b854dcfb467b6a863827640c766d3533160debcb66a96"
+    },
+    {
+      "plan": "patches/abl-plan.json",
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersProcessos.p",
+      "baselineSha256": "afd001e23855a4a5349097b4b9cf7e6c4a9a825735b3698df8eea6f7e9ccd9f0"
+    },
+    {
+      "plan": "patches/php-plan.json",
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeContainerAudit.php",
+      "baselineSha256": "1b5ef784ec816e8b9e27570a6bea97f8dc8f82beadcb77de8e745f3349e0256a"
+    },
+    {
+      "plan": "patches/php-plan.json",
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeApiEntityActionService.php",
+      "baselineSha256": "a01949ced3219e92ae5d809d101de0882ff3bdda8c593214ea1879c2a68f5615"
+    },
+    {
+      "plan": "metadata/source-addition.json",
+      "target": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-processes-source-before.json",
+      "baselineSha256": "f623263ac90dcc2c6ff8adf1410ee55f8468ca331ec9af093e0a65ab4ced3213"
+    },
+    {
+      "plan": "metadata/parent-navigation.json",
+      "target": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/official-build3/op1003-program-after.json",
+      "baselineSha256": "a656a2c5e9c34ee12cc223b78155dcab6a664770f81bf0a4229e06b705195de9"
+    }
+  ],
+  "auditedInputs": [
+    {
+      "path": "sources/scriptcase/ciw-completion-helpers-20261028/bl_calcular_impostos_container/index.php",
+      "sha256": "525f1c892fdb58b892c91eb8134044af703ebf403e90ee9c67ba392c63f63481"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/schema/schema-despesas_container.json",
+      "sha256": "8328dab88c34a735c3088ba268fee9c3949fe4f4cd6296a215de185f6377b67b"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/schema/schema-calcs_imp_container.json",
+      "sha256": "b00dd3b8f3f7ed8452168c3c3fce31726d09c4eeca7287440969c31cee665089"
+    }
+  ],
+  "preservedFreezes": [
+    {
+      "path": "integration-src/ciw-completion-20261028/container-expense-batch/manifest.json",
+      "sha256": "75b0f1351d95e648516ffccdd9c4d85bb1cf20a22e3b966783aea4ab323ff8f5"
+    },
+    {
+      "path": "integration-src/ciw-completion-20261028/container-fiscal-readonly/manifest.json",
+      "sha256": "b847a16ad4406c6703490bb2fb7809dfea3fce5dc6012bc94e52e2fca7643173"
+    }
+  ],
+  "evidence": [
+    {
+      "path": ".runtime/ciw-completion-20261028/container-tax-only/abl-final.log",
+      "sha256": "befbded60f78ff0da5131b8027b15ce5f6595b431458ec34501c15f4089ab21d"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/container-tax-only/wiring-final.log",
+      "sha256": "510fe2a784d33f32d72a8305eeec069054cdb84f7af9f66f138c50b86a5db83b"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/container-tax-only/phpunit-final.log",
+      "sha256": "78923c6dcec63219a63540c39846d025bde0430386d222f694978d8411a80528"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/container-tax-only/builder-final.log",
+      "sha256": "20437693b878ca87e196f45ebd9ead649fd8e26ad92c71f79b73563a8fc5edc1"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/container-tax-only/process-native-final.log",
+      "sha256": "2b6c0b017ce50189f99ee5cf890fba4ddda02df4a39e52ba89d1c6cd1fddb8b4"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/container-tax-only/process-regression-final.log",
+      "sha256": "60271748fae988fd5e224a895fb978b3cddc668232173315705d76fbffec7321"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/container-tax-only/local/compile.log",
+      "sha256": "d31a93ac66bf35f53196fc0a1ed263798639c7514c2a294621d1a6afbdeb0d2f"
+    },
+    {
+      "path": ".runtime/ciw-completion-20261028/container-tax-only/red/test-UTF-8-AMERICAN.log",
+      "sha256": "b305d5d9d22008cdcf61db90437354b125f20ad61c0a0455e2f70faa51f01e3d"
+    }
+  ],
+  "command": "powershell -NoProfile -ExecutionPolicy Bypass -File integration-src/ciw-completion-20261028/container-tax-only/tests/verify-all.ps1",
+  "results": {
+    "localOpenEdge": "12.8 NUM-DBS=0",
+    "localCompileEntries": 9,
+    "checksPerCombination": 219,
+    "core": 160,
+    "existingSync": 11,
+    "taxOnlyRoot": 16,
+    "boundaryIma": 32,
+    "combinations": [
+      "UTF-8/AMERICAN",
+      "UTF-8/EUROPEAN",
+      "ISO8859-1/AMERICAN",
+      "ISO8859-1/EUROPEAN"
+    ],
+    "phpUnitTests": 53,
+    "phpUnitAssertions": 364,
+    "newProcessTests": 5,
+    "newProcessAssertions": 87,
+    "nativeProcessChecks": 13,
+    "publicWiringSourceParentChecks": 12,
+    "existingProcessFrontend": "PASS"
+  },
+  "limits": {
+    "collectedRows": 50000,
+    "stopAfterSeconds": 10,
+    "scope": "new operation only",
+    "context": "container MED mandatory",
+    "clientParameters": []
+  },
+  "newFiles": {
+    "php/RuntimeContainerTaxAudit.php": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeContainerTaxAudit.php"
+  },
+  "gatesReference": "REVIEW.md",
+  "sourceOperationCountBefore": 5,
+  "sourceOperationCountAfter": 6,
+  "sourcePreviewMustNotReplaceAuthentication": true,
+  "predecessor": {
+    "path": "D:\\opencode\\conversao-sc\\.runtime\\ciw-completion-20261028\\container-tax-only\\frozen-v1\\manifest.json",
+    "sha256": "b1235ab3d39a9c930abd12f7a05a9674cad4149ac9765169eb6d3b6b940ce5c3",
+    "productAblAndMetadataUnchanged": true
+  },
+  "phpRebase": [
+    {
+      "target": "D:\\opencode\\construtor-pg\\backend\\src\\Runtime\\RuntimeContainerAudit.php",
+      "baselineSha256": "1b5ef784ec816e8b9e27570a6bea97f8dc8f82beadcb77de8e745f3349e0256a",
+      "candidateSha256": "700bea4e36a10576f0ccaf74a5c611a01354d2975221fd0d4e32d3974d7f85d1",
+      "preservesOutsideAnchors": true
+    },
+    {
+      "target": "D:\\opencode\\construtor-pg\\backend\\src\\Runtime\\RuntimeApiEntityActionService.php",
+      "baselineSha256": "a01949ced3219e92ae5d809d101de0882ff3bdda8c593214ea1879c2a68f5615",
+      "candidateSha256": "cd7d6cb032f250c8ef69909033009d4210873c9c0bc811e5ded2b8d2e0c557fa",
+      "preservesOutsideAnchors": true
+    }
+  ]
+}

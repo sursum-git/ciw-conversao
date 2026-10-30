@@ -1,0 +1,472 @@
+{
+  "state": "TEST_DEPENDENCY_OVERLAY_ONLY_NOT_INTEGRATION",
+  "readerBaselineSha256": "bb4d23622b1238dda80d073215873b9f4d602cf30fffca7fb12c7e23507698cf",
+  "readerCandidateSha256": "8ecee3d853961e297598d533844da711c3f0dca058d7b4c35125fa8575b3581e",
+  "readerComparisonAddOnlyHunks": [
+    {
+      "baselineStartByte": 2052,
+      "baselineEndByteExclusive": 2052,
+      "oldBytesHex": "",
+      "newBytesHex": "444546494e45205641524941424c4520636f6d70617269736f6e4861734572726f7273204153204c4f474943414c204e4f2d554e444f2e0d0a"
+    },
+    {
+      "baselineStartByte": 8178,
+      "baselineEndByteExclusive": 8178,
+      "oldBytesHex": "",
+      "newBytesHex": "20494620636f6d70617269736f6e4861734572726f727320414e44204c4f4f4b5550286f3a47657443686172616374657228276669656c6427292c27766c5f746f745f707265762c766c5f746f745f73656d5f64697374725f637573746f2c766c5f756e69745f73656d5f64697374725f637573746f2c766c5f646573705f707265765f706572635f6669786f2c766c5f746f745f706572635f6669786f2c766c5f756e69745f706572635f6669786f27293e30205448454e2052554e204661696c2827434f4d50415249534f4e5f444552495645445f46494c5445525f554e50524f56454e272c353033292e0d0a"
+    },
+    {
+      "baselineStartByte": 16017,
+      "baselineEndByteExclusive": 16017,
+      "oldBytesHex": "",
+      "newBytesHex": "20205748454e2027636f6e7461696e65725f637573746f735f636f6d7061726163616f5f7265616c27204f52205748454e2027636f6e7461696e65725f637573746f735f636f6d7061726163616f5f646f6c617227205448454e2041535349474e20634669656c644c6973743d27636f6e7461696e65725f69642c76657273616f5f69642c6974656d5f636f6e7461696e65725f637573746f5f69642c6974656d5f636f6e7461696e65725f69642c636f6469676f5f6572702c64657363726963616f2c71745f616c6f636164612c71745f636f6e6669726d5f656d622c766c5f637573746f5f707265762c766c5f646573705f707265762c766c5f746f745f707265762c766c5f756e69745f707265762c766c5f646573705f707265765f73656d5f64697374725f637573746f2c766c5f746f745f73656d5f64697374725f637573746f2c766c5f756e69745f73656d5f64697374725f637573746f2c766c5f646573705f707265765f706572635f6669786f2c766c5f746f745f706572635f6669786f2c766c5f756e69745f706572635f6669786f272063416c6961734c6973743d634669656c644c69737420634b65794c6973743d27636f6e7461696e65725f69642c76657273616f5f69642c6974656d5f636f6e7461696e65725f637573746f5f696427206261736557686572653d2754525545272e0d0a"
+    },
+    {
+      "baselineStartByte": 25559,
+      "baselineEndByteExclusive": 25559,
+      "oldBytesHex": "",
+      "newBytesHex": "204946204c4f4f4b55502870635265736f757263652c27636f6e7461696e65725f637573746f735f636f6d7061726163616f5f7265616c2c636f6e7461696e65725f637573746f735f636f6d7061726163616f5f646f6c617227293e30205448454e20444f3a0d0a2020636f6d70617269736f6e4861734572726f72733d623a46494e442d4649525354282757484552452027202b20623a4e414d45202b20272e70726f6a656374696f6e5f6572726f72203c3e2027202b2051554f544552282727292c4e4f2d4c4f434b29204e4f2d4552524f522e0d0a2020444f20693d3120544f204552524f522d5354415455533a4e554d2d4d455353414745533a204946204552524f522d5354415455533a4745542d4e554d4245522869293c3e353635205448454e2052554e204661696c2827434f4d50415249534f4e5f434f4e46494755524154494f4e272c353033292e20454e442e0d0a20454e442e0d0a"
+    },
+    {
+      "baselineStartByte": 29501,
+      "baselineEndByteExclusive": 29501,
+      "oldBytesHex": "",
+      "newBytesHex": "20204946204c4f4f4b55502870635265736f757263652c27636f6e7461696e65725f637573746f735f636f6d7061726163616f5f7265616c2c636f6e7461696e65725f637573746f735f636f6d7061726163616f5f646f6c617227293e30205448454e20444f3a0d0a202020494620746f74616c56616c75653e3530303030205448454e2052554e204661696c28274349575f4552505f51554552595f4c494d4954272c353033292e0d0a202020494620623a4255464645522d4649454c44282770726f6a656374696f6e5f6572726f7227293a4255464645522d56414c55453d27434f4d50415249534f4e5f5a45524f5f44495649534f5227205448454e2052554e204661696c2827434f4d50415249534f4e5f5a45524f5f44495649534f52272c343232292e0d0a202020494620623a4255464645522d4649454c44282770726f6a656374696f6e5f6572726f7227293a4255464645522d56414c55453c3e2727205448454e2052554e204661696c2827434f4d50415249534f4e5f434f4e46494755524154494f4e272c353033292e0d0a2020454e442e0d0a"
+    }
+  ],
+  "financeCanonicalPin": {
+    "path": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersPainelFinanceReadService.p",
+    "sha256": "ca3a9a4a33f25f7fcf26d670dcdee54eb38d47bf46eb72dd5ea8f211f67a3900"
+  },
+  "labelFrozenDependency": {
+    "path": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/candidate-exact/ContainersVersionHistoryLabels.p",
+    "sha256": "bce8fc89f40c69d3407fd6e5e789dfd6ee84d6191eeeffd1da131a7e886678b8"
+  },
+  "origins": [
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/ApiExecutionRepository.cls",
+      "copiedTo": "test-inputs/ApiExecutionRepository.cls",
+      "sha256": "10019842295b4330c6fdc78d7df6e44095e38ad24eac7f97dc07fd6e024735af"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/CiwErpReadTest.p",
+      "copiedTo": "test-inputs/CiwErpReadTest.p",
+      "sha256": "321e247e04e397c8fde6541bdb0c6fda06a67f27d47d7496b52b5fa9cae82a34"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/ComparisonCoreFixture.i",
+      "copiedTo": "test-inputs/ComparisonCoreFixture.i",
+      "sha256": "bb0f0fabcbab26e837f921233f0747b698ea5d4e112de8f7ca4c17897f1f2c7a"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/ComparisonItemJoinTest.p",
+      "copiedTo": "test-inputs/ComparisonItemJoinTest.p",
+      "sha256": "75941bea44db5a4ed932ae57cf8f511b3b67451e7e30f0b761756eb61860ddd0"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/ComparisonMaterializerTest.p",
+      "copiedTo": "test-inputs/ComparisonMaterializerTest.p",
+      "sha256": "d073735845417381ad0b836a0c7294af7efc95ecd1f78081ca2fb1ce4f8ce910"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/ComparisonProjectionTest.p",
+      "copiedTo": "test-inputs/ComparisonProjectionTest.p",
+      "sha256": "03b7d72f2fa06ee1696a1b0a9021f43463053e2716cb764ed6c45eef5374d080"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/ComparisonReaderTest.p",
+      "copiedTo": "test-inputs/ComparisonReaderTest.p",
+      "sha256": "f647e5d6532d98b41368007f9da60af87e71f09488555932327fd9db23131adc"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/ComparisonRoundingEvidenceTest.p",
+      "copiedTo": "test-inputs/ComparisonRoundingEvidenceTest.p",
+      "sha256": "cb540ecb3abe3ce444bd0e3c7e50ed60f0d48109de073214faa061950479f99d"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/ComparisonServiceTest.p",
+      "copiedTo": "test-inputs/ComparisonServiceTest.p",
+      "sha256": "952af6d8f1ff1cdf5eb88d1eb83ab4590a0605df63447cd437ab3909ebef38e8"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/ComparisonSnapshotTestTables.i",
+      "copiedTo": "test-inputs/ComparisonSnapshotTestTables.i",
+      "sha256": "24480f748f0b71bf28b27ef4abf117540238ebc8cdf992a4e883940ab907262d"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/ComparisonSqlObservedTest.p",
+      "copiedTo": "test-inputs/ComparisonSqlObservedTest.p",
+      "sha256": "8afda4db9e164cad170352eef47c4ea4e9ad8ad94eb07e381bf6f8beb0f70f3d"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/Compile.p",
+      "copiedTo": "test-inputs/Compile.p",
+      "sha256": "4194805531a29ed27f37c7f4c990c9e61854b0d94bf378d461312bd7f4f7545a"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/ContainersVersionAuxHistoryTest.p",
+      "copiedTo": "test-inputs/ContainersVersionAuxHistoryTest.p",
+      "sha256": "b2194fabceea481a7b482be23ce826fab859d519aa10c87de48aa0b4a3111060"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/ContainersVersionComparisonTable.i",
+      "copiedTo": "test-inputs/ContainersVersionComparisonTable.i",
+      "sha256": "71895e8fe06bff39219d0f4491a300e47a956125d07a491babea94d16d307199"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/ContainersVersionCompositionFixture.i",
+      "copiedTo": "test-inputs/ContainersVersionCompositionFixture.i",
+      "sha256": "de6d1f189e5d2486bd55ba8671434af9cdf33bb14f821b4308b7c962281d2207"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/ContainersVersionFixture.p",
+      "copiedTo": "test-inputs/ContainersVersionFixture.p",
+      "sha256": "8a51aa36071a0b3767e5c087a9a3722ffb8ca8d8be1b1860c0855ab57283b42b"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/ContainersVersionHistoryTest.p",
+      "copiedTo": "test-inputs/ContainersVersionHistoryTest.p",
+      "sha256": "e9cde6bcf0b4a5942c7bb991800be9b5220c233d284d905324044517808b5075"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/ContainersVersionHistoryTestTables.i",
+      "copiedTo": "test-inputs/ContainersVersionHistoryTestTables.i",
+      "sha256": "24480f748f0b71bf28b27ef4abf117540238ebc8cdf992a4e883940ab907262d"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/ContainersVersionRuntimeFixture.i",
+      "copiedTo": "test-inputs/ContainersVersionRuntimeFixture.i",
+      "sha256": "e70eca87a0d00e774fb1aa96650616ac2dc3ce3ce87ae27a66a0498ccf160377"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/ContainersVersionTest.p",
+      "copiedTo": "test-inputs/ContainersVersionTest.p",
+      "sha256": "80504be79a48caf04126b5a196441ae17730d4b409f273855f027d967f905f9f"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/ContainersVersionTestTables.i",
+      "copiedTo": "test-inputs/ContainersVersionTestTables.i",
+      "sha256": "24480f748f0b71bf28b27ef4abf117540238ebc8cdf992a4e883940ab907262d"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/CostDistributionEligibleTest.p",
+      "copiedTo": "test-inputs/CostDistributionEligibleTest.p",
+      "sha256": "2b2b086f7591bc726e13d8f94c86aea680a9acc4e4bfada21c999d8c4af5b05b"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/CostDistributionFixtures.i",
+      "copiedTo": "test-inputs/CostDistributionFixtures.i",
+      "sha256": "0e036f617c489921415c7eda8777f0c6f241d1dcc97093079449c217c642d9dd"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/CostDistributionLedgerTest.p",
+      "copiedTo": "test-inputs/CostDistributionLedgerTest.p",
+      "sha256": "a168ddcc4a6fb3d5bb4d52c71cfc97399254e7da7f76f85470c0f970aca41d67"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/DynamicQueryRequestModel.cls",
+      "copiedTo": "test-inputs/DynamicQueryRequestModel.cls",
+      "sha256": "447e0aec7069516ca770ec352a16466973940725e3a175a32880fbb25cbe0c7a"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/DynamicQueryRequestSerializer.cls",
+      "copiedTo": "test-inputs/DynamicQueryRequestSerializer.cls",
+      "sha256": "a35ad277e74791851a5c07ec4373df05261425a29f841d839659d41d187b7ab6"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/ExpenseTaxRelationsReadTest.p",
+      "copiedTo": "test-inputs/ExpenseTaxRelationsReadTest.p",
+      "sha256": "963675398b7fbd708401cb8335569006060c1f43d718b8de42d2002cdec1dc80"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/ImportDiscountCurrentFixtures.i",
+      "copiedTo": "test-inputs/ImportDiscountCurrentFixtures.i",
+      "sha256": "5057a938491603a8ab25ca1608a995edb761d53a54f193283601b2d533e1590f"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/ImportDiscountsLabelsTest.p",
+      "copiedTo": "test-inputs/ImportDiscountsLabelsTest.p",
+      "sha256": "71a08b4c66f434bd1ccd596c7b6b618ec678d615b7469e021bfe8275946c9ef0"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/ImportDiscountSourceFixtures.i",
+      "copiedTo": "test-inputs/ImportDiscountSourceFixtures.i",
+      "sha256": "076f38cb3427a465a871cc1789880948ada244367afebe4df2976f245f362f4e"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/ImportDiscountsReadTest.p",
+      "copiedTo": "test-inputs/ImportDiscountsReadTest.p",
+      "sha256": "cc83171fa68ddc298d674e03b4e9f935318acaa5a5c56393de5a9534c65ff1b0"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/ItemCostManualReadTest.p",
+      "copiedTo": "test-inputs/ItemCostManualReadTest.p",
+      "sha256": "724b45dace64b64f6ce51723d75d42966b6c845694c43619259cbca0441cfaad"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/LedgerFixtures.i",
+      "copiedTo": "test-inputs/LedgerFixtures.i",
+      "sha256": "99401916bd23c998e28de730cf5e3b2d235b17248298343da4615cf98a05ed6a"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/PasoeExecutionContext.cls",
+      "copiedTo": "test-inputs/PasoeExecutionContext.cls",
+      "sha256": "9ea6b5ef99d7e888dbdc5c90cf779de243c49df78469ba3ed360251ef2209fb8"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/PasoeRuntimeIdentity.cls",
+      "copiedTo": "test-inputs/PasoeRuntimeIdentity.cls",
+      "sha256": "76a735350bed6f483289fda10e4089e977790e10199b6c24887e56c4fb5fcd28"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/PurchaseItemsReadTest.p",
+      "copiedTo": "test-inputs/PurchaseItemsReadTest.p",
+      "sha256": "a8c05e089db3aaed7bc4a5ea97ae5fd28e4b1298b0032d78924e7d85094def7c"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/Regression.p",
+      "copiedTo": "test-inputs/Regression.p",
+      "sha256": "ef69972f5537d91e62915c0cc04ce4caab99699f2f68d7fac80dbb483bceb41d"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/SampleContainerItemsFixtures.i",
+      "copiedTo": "test-inputs/SampleContainerItemsFixtures.i",
+      "sha256": "d50f56b6c387c300ddc8b30e7ae314ed8cc23aadb34738b2fb6b958b46acb71d"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/SampleContainerItemsTest.p",
+      "copiedTo": "test-inputs/SampleContainerItemsTest.p",
+      "sha256": "edd7e959c258a6dcf8f8a78bd9c89070e22210ce9d04f8c3e55272219973c88a"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/SelectedExpenseDefaultsTests.i",
+      "copiedTo": "test-inputs/SelectedExpenseDefaultsTests.i",
+      "sha256": "39e93d91d2a73123ef415df0bdcdc3cc383a7d7f0a7c101c1414662e20b18ade"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/SelectionRootTests.i",
+      "copiedTo": "test-inputs/SelectionRootTests.i",
+      "sha256": "dae82a6f03d464c69dc027324dfb5a484c3e1fb31ed301fd0e168c926fb22a8c"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/includes/ContainerApiIdentity.i",
+      "copiedTo": "test-inputs/sursum-api/includes/ContainerApiIdentity.i",
+      "sha256": "77d71a5bb0367ffd35c2039396b42d0ed76d3b9b72868dfd5181270068ec7d1a"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/includes/ContainerCustoBoundary.i",
+      "copiedTo": "test-inputs/sursum-api/includes/ContainerCustoBoundary.i",
+      "sha256": "bfe5d0a4714b13a6aae6776f6d9eccd6a7712b9d67a409db1b269a1ddefcbf11"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/includes/ContainerExpenseBatchSnapshot.i",
+      "copiedTo": "test-inputs/sursum-api/includes/ContainerExpenseBatchSnapshot.i",
+      "sha256": "5e4a204ab904d8c6e277281c6c2c7923c193f9d6c36c3ce971017c444b35c75b"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/includes/ContainerExpenseDefaultsPlan.i",
+      "copiedTo": "test-inputs/sursum-api/includes/ContainerExpenseDefaultsPlan.i",
+      "sha256": "ac98ab4e6eb379784017aa6c011aea57342cccefeda8281e00a1002db6b3e88d"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/includes/ContainerFinancePolicy.i",
+      "copiedTo": "test-inputs/sursum-api/includes/ContainerFinancePolicy.i",
+      "sha256": "27c4710b9c3dc051aaa2c6867118f3a502f7b2f9bf0a816a2cd4f301a8213b35"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/includes/ContainerMaintenancePolicy.i",
+      "copiedTo": "test-inputs/sursum-api/includes/ContainerMaintenancePolicy.i",
+      "sha256": "1668f425cfc83663f2e0adc301a3e08ae15c6794054988986ffb8ce700955b03"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/includes/ContainerProcessBoundary.i",
+      "copiedTo": "test-inputs/sursum-api/includes/ContainerProcessBoundary.i",
+      "sha256": "6db9a0e2ed85aa442a5f345312bb59fca2b60294cb287ce02fba91f4d9c0b614"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/includes/ContainersVersionAuxHistoryTables.i",
+      "copiedTo": "test-inputs/sursum-api/includes/ContainersVersionAuxHistoryTables.i",
+      "sha256": "d930b8806ef0a065ebc31c071f7ed5d9400a6c9c10eea8400521c53c3c403be6"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/sursum-api/includes/ContainersVersionComparisonTable.i",
+      "copiedTo": "test-inputs/sursum-api/includes/ContainersVersionComparisonTable.i",
+      "sha256": "71895e8fe06bff39219d0f4491a300e47a956125d07a491babea94d16d307199"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/includes/ContainersVersionHistoryTable.i",
+      "copiedTo": "test-inputs/sursum-api/includes/ContainersVersionHistoryTable.i",
+      "sha256": "e5285fabef060dd20905aced163059e735078873901b11052ab23c39836d326b"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/includes/ContainerTransactionAudit.i",
+      "copiedTo": "test-inputs/sursum-api/includes/ContainerTransactionAudit.i",
+      "sha256": "08451f0d2f01e2f45f689695ba5e16f34c96e79ce06253a7e801bc815a8dab66"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/includes/CostDistributionEligibleTable.i",
+      "copiedTo": "test-inputs/sursum-api/includes/CostDistributionEligibleTable.i",
+      "sha256": "fa332e1e40971d9eefa7f9d267176346b76219f5f2f1c901eb506f120f241afc"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/includes/CostDistributionLedgerTable.i",
+      "copiedTo": "test-inputs/sursum-api/includes/CostDistributionLedgerTable.i",
+      "sha256": "084ca89e33c18fcba7ea3cf96ec213046056c0db52b74c924a4b7fc977745323"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/includes/ImportDiscountsReadTables.i",
+      "copiedTo": "test-inputs/sursum-api/includes/ImportDiscountsReadTables.i",
+      "sha256": "f1d31239a2f8c669218af4d7f968f45b8600bd4a12dd7a087e043b0726b1fbc1"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/includes/parametros_ima.i",
+      "copiedTo": "test-inputs/sursum-api/includes/parametros_ima.i",
+      "sha256": "766ee9e284d97070dfee97e9d46bfedf1983e092c82a9fbf4145fcaf90dd4e47"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/includes/PurchaseItemSnapshot.i",
+      "copiedTo": "test-inputs/sursum-api/includes/PurchaseItemSnapshot.i",
+      "sha256": "f7e81fbcd3fbc53f124c60d99c3065b73e2d876665ce900f8772ed1f25d7350d"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/includes/PurchaseItemsReadBuffer.i",
+      "copiedTo": "test-inputs/sursum-api/includes/PurchaseItemsReadBuffer.i",
+      "sha256": "ed977f03a856adb2f5582565b4e0a45a9520961b8262cc1d54f18d70b5b4c70f"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/includes/PurchaseItemValueRules.i",
+      "copiedTo": "test-inputs/sursum-api/includes/PurchaseItemValueRules.i",
+      "sha256": "1ae6949d39fa07286e0e1c76776b9bb508de6715d1494858d7ac53c1d591c894"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/includes/PurchaseJsonContract.i",
+      "copiedTo": "test-inputs/sursum-api/includes/PurchaseJsonContract.i",
+      "sha256": "5a15f9429a83f9781a250ed3fc2ae9a855fb5d639e91a1afdeb8a99836c25935"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/includes/PurchaseOrderSnapshot.i",
+      "copiedTo": "test-inputs/sursum-api/includes/PurchaseOrderSnapshot.i",
+      "sha256": "98b8da213a666f328747d0698608954ab646ef60fc2c86e313f6d156b3fa573a"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/includes/SampleContainerItemsTable.i",
+      "copiedTo": "test-inputs/sursum-api/includes/SampleContainerItemsTable.i",
+      "sha256": "e945db7e9ef46a364f08720196f217a8453ed94ed56e13110f5cf0671107e494"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwCadastrosCrud.p",
+      "copiedTo": "test-inputs/sursum-api/programs/CiwCadastrosCrud.p",
+      "sha256": "5717308a591f27516341ded859ce669b4c3fab95199f93b06bae655080cf75c3"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwErpReadService.p",
+      "copiedTo": "test-inputs/sursum-api/programs/CiwErpReadService.p",
+      "sha256": "bb4d23622b1238dda80d073215873b9f4d602cf30fffca7fb12c7e23507698cf"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersCustoCalculator.p",
+      "copiedTo": "test-inputs/sursum-api/programs/ContainersCustoCalculator.p",
+      "sha256": "9ba548fb0c49f7448b944a47a883200738ba7faf4f0d8111f13c08cb765ee6ac"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersItemCustoPhysical.i",
+      "copiedTo": "test-inputs/sursum-api/programs/ContainersItemCustoPhysical.i",
+      "sha256": "c4cc307895afc1a5539bd985a2416e35f2f114508c12a0944dc431aeadb56248"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersVersionAuxHistoryService.p",
+      "copiedTo": "test-inputs/sursum-api/programs/ContainersVersionAuxHistoryService.p",
+      "sha256": "6294d044179fa0faa3d990d1c034f6e39c66f0490342e9bf1722682135abdf67"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/sursum-api/programs/ContainersVersionComparisonApi.p",
+      "copiedTo": "test-inputs/sursum-api/programs/ContainersVersionComparisonApi.p",
+      "sha256": "71040ad5ada2480aa0d386a10d507853d176dd6aac6679ebc5532a596953ca7a"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/sursum-api/programs/ContainersVersionComparisonMaterializer.p",
+      "copiedTo": "test-inputs/sursum-api/programs/ContainersVersionComparisonMaterializer.p",
+      "sha256": "e997fce0d59d9664fc053eca332914295140f71574216340f070cd4db2ae537b"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/sursum-api/programs/ContainersVersionComparisonProjection.p",
+      "copiedTo": "test-inputs/sursum-api/programs/ContainersVersionComparisonProjection.p",
+      "sha256": "146472ab7c98938a105e5f6653a7eb9799da18bf26722ca4bdaa43d24ec808ff"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/official-preparation/package/sursum-api/programs/ContainersVersionComparisonService.p",
+      "copiedTo": "test-inputs/sursum-api/programs/ContainersVersionComparisonService.p",
+      "sha256": "a5618108eda35bd542754ac156b86983add93318cdf2413e7c087b954f87e65c"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersVersionContextBody.i",
+      "copiedTo": "test-inputs/sursum-api/programs/ContainersVersionContextBody.i",
+      "sha256": "50e236f982a5683d8a259a1ccc173e1948525fd3ed7142be78265c916aecb231"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersVersionHistoryLabels.p",
+      "copiedTo": "test-inputs/sursum-api/programs/ContainersVersionHistoryLabels.p",
+      "sha256": "9bfe21dc6ff9d86105d7602d376a2adc3cc3b9fe61783a68f7d1cd03f9d100bb"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersVersionHistoryService.p",
+      "copiedTo": "test-inputs/sursum-api/programs/ContainersVersionHistoryService.p",
+      "sha256": "8b6bfd5a7c7e824ec1b91a637db738c62053ee8b5f4a8534d6e2ed764b309672"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersVersionService.p",
+      "copiedTo": "test-inputs/sursum-api/programs/ContainersVersionService.p",
+      "sha256": "beeda66faf880b271263ac98617046a0ecb1790c994ef576153fd9343885e590"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/programs/CostDistributionEligibleCollector.p",
+      "copiedTo": "test-inputs/sursum-api/programs/CostDistributionEligibleCollector.p",
+      "sha256": "5435da46101508ca45ec5f1a129dee8cad83b863eea3ee87fe68ca5c2e4de1e2"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/programs/CostDistributionEligibleReadService.p",
+      "copiedTo": "test-inputs/sursum-api/programs/CostDistributionEligibleReadService.p",
+      "sha256": "6c01b0eb3f8b72f7003e1b004a638bea8f5b99956227f207283dc62ba8b82d3f"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/programs/CostDistributionLedgerCollector.p",
+      "copiedTo": "test-inputs/sursum-api/programs/CostDistributionLedgerCollector.p",
+      "sha256": "03cf680d0f6e8a9be892ec5ac6e7b0553e820591cbe652d3e8477687937b42d1"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/programs/CostDistributionLedgerReadService.p",
+      "copiedTo": "test-inputs/sursum-api/programs/CostDistributionLedgerReadService.p",
+      "sha256": "3db516e5ef52dd874ac3e5a5a7894fa86f278aa9a9df6ae597ba3ab6c3a0e3b2"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/programs/ImportDiscountsCollector.p",
+      "copiedTo": "test-inputs/sursum-api/programs/ImportDiscountsCollector.p",
+      "sha256": "710e829b911874ce17f9976bcd478d558594fb49db5eeadffdd04a588c8c51f5"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/programs/ImportDiscountsReadService.p",
+      "copiedTo": "test-inputs/sursum-api/programs/ImportDiscountsReadService.p",
+      "sha256": "ad50ae2fc4a6ae5f0c4045912443f0895b9c24afb673fb3c06ebcb1a4fe3a148"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/programs/SampleContainerItemsCollector.p",
+      "copiedTo": "test-inputs/sursum-api/programs/SampleContainerItemsCollector.p",
+      "sha256": "532e8154c07fb0cf5de120ae5b81d3363a4b4016d70a796e6887044537cf4679"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/programs/SampleContainerItemsReadService.p",
+      "copiedTo": "test-inputs/sursum-api/programs/SampleContainerItemsReadService.p",
+      "sha256": "9947a2dfef0f478e5cdaac0cf38afdd03356fa502dc72939166470d37e275d54"
+    },
+    {
+      "input": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersVersionService.p",
+      "copiedTo": "baseline-exact/ContainersVersionService.p",
+      "sha256": "beeda66faf880b271263ac98617046a0ecb1790c994ef576153fd9343885e590"
+    },
+    {
+      "input": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-cost-comparison-readonly/frozen-rebase11-v1/abl/ContainersVersionComparisonService.p",
+      "copiedTo": "baseline-exact/ContainersVersionComparisonService.p",
+      "sha256": "a5618108eda35bd542754ac156b86983add93318cdf2413e7c087b954f87e65c"
+    }
+  ]
+}

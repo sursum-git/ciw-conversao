@@ -1,0 +1,22 @@
+ADD TABLE "user-web"
+  AREA "Schema Area"
+ADD FIELD "Login" OF "user-web" AS character
+ADD FIELD "usuario" OF "user-web" AS character
+ADD FIELD "tp-usuario" OF "user-web" AS integer
+ADD FIELD "ativo" OF "user-web" AS logical
+ADD TABLE "repres"
+  AREA "Schema Area"
+ADD FIELD "cod-rep" OF "repres" AS integer
+ADD FIELD "nome-abrev" OF "repres" AS character
+ADD TABLE "devol-cli"
+  AREA "Schema Area"
+ADD FIELD "cod-estabel" OF "devol-cli" AS character
+ADD FIELD "serie" OF "devol-cli" AS character
+ADD FIELD "nr-nota-fis" OF "devol-cli" AS character
+ADD TABLE "nota-fiscal"
+  AREA "Schema Area"
+ADD FIELD "cod-estabel" OF "nota-fiscal" AS character
+ADD FIELD "serie" OF "nota-fiscal" AS character
+ADD FIELD "nr-nota-fis" OF "nota-fiscal" AS character
+ADD FIELD "cod-rep" OF "nota-fiscal" AS integer
+.

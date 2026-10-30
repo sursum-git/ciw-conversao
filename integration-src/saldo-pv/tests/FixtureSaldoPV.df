@@ -1,0 +1,131 @@
+ADD TABLE "item"
+  AREA "Schema Area"
+ADD FIELD "it-codigo" OF "item" AS character
+ADD FIELD "desc-item" OF "item" AS character
+ADD FIELD "fm-codigo" OF "item" AS character
+ADD FIELD "un" OF "item" AS character
+ADD FIELD "peso-liquido" OF "item" AS decimal
+  DECIMALS 10
+ADD FIELD "ge-codigo" OF "item" AS integer
+ADD TABLE "item-ext"
+  AREA "Schema Area"
+ADD FIELD "it-codigo" OF "item-ext" AS character
+ADD FIELD "gramatura" OF "item-ext" AS decimal
+  DECIMALS 10
+ADD TABLE "saldo-estoq"
+  AREA "Schema Area"
+ADD FIELD "cod-estabel" OF "saldo-estoq" AS character
+ADD FIELD "cod-depos" OF "saldo-estoq" AS character
+ADD FIELD "it-codigo" OF "saldo-estoq" AS character
+ADD FIELD "cod-refer" OF "saldo-estoq" AS character
+ADD FIELD "lote" OF "saldo-estoq" AS character
+ADD FIELD "qtidade-atu" OF "saldo-estoq" AS decimal
+  DECIMALS 10
+ADD TABLE "ped-venda"
+  AREA "Schema Area"
+ADD FIELD "cod-estabel" OF "ped-venda" AS character
+ADD FIELD "tp-pedido" OF "ped-venda" AS character
+ADD FIELD "nome-abrev" OF "ped-venda" AS character
+ADD FIELD "nr-pedcli" OF "ped-venda" AS character
+ADD FIELD "cod-sit-ped" OF "ped-venda" AS integer
+ADD TABLE "ped-item"
+  AREA "Schema Area"
+ADD FIELD "nome-abrev" OF "ped-item" AS character
+ADD FIELD "nr-pedcli" OF "ped-item" AS character
+ADD FIELD "it-codigo" OF "ped-item" AS character
+ADD FIELD "cod-refer" OF "ped-item" AS character
+ADD FIELD "cod-sit-item" OF "ped-item" AS integer
+ADD FIELD "qt-pedida" OF "ped-item" AS decimal
+  DECIMALS 10
+ADD TABLE "nota-fiscal"
+  AREA "Schema Area"
+ADD FIELD "cod-estabel" OF "nota-fiscal" AS character
+ADD FIELD "serie" OF "nota-fiscal" AS character
+ADD FIELD "nr-nota-fis" OF "nota-fiscal" AS character
+ADD FIELD "dt-cancela" OF "nota-fiscal" AS date
+ADD FIELD "dt-confirma" OF "nota-fiscal" AS date
+ADD FIELD "nat-operacao" OF "nota-fiscal" AS character
+ADD TABLE "it-nota-fisc"
+  AREA "Schema Area"
+ADD FIELD "cod-estabel" OF "it-nota-fisc" AS character
+ADD FIELD "serie" OF "it-nota-fisc" AS character
+ADD FIELD "nr-nota-fis" OF "it-nota-fisc" AS character
+ADD FIELD "it-codigo" OF "it-nota-fisc" AS character
+ADD FIELD "cod-refer" OF "it-nota-fisc" AS character
+ADD FIELD "qt-faturada" OF "it-nota-fisc" AS decimal
+  DECIMALS 10
+  EXTENT 2
+ADD TABLE "natur-oper"
+  AREA "Schema Area"
+ADD FIELD "nat-operacao" OF "natur-oper" AS character
+ADD FIELD "nat-vinculada" OF "natur-oper" AS character
+ADD TABLE "peds_web"
+  AREA "Schema Area"
+ADD FIELD "ped_web_id" OF "peds_web" AS integer
+ADD FIELD "ind_sit_ped_web" OF "peds_web" AS integer
+ADD FIELD "cod_estabel" OF "peds_web" AS character
+ADD FIELD "nr_container" OF "peds_web" AS integer
+ADD FIELD "login" OF "peds_web" AS character
+ADD TABLE "itens_ped_web"
+  AREA "Schema Area"
+ADD FIELD "ped_web_id" OF "itens_ped_web" AS integer
+ADD FIELD "it_codigo" OF "itens_ped_web" AS character
+ADD FIELD "cod_refer" OF "itens_ped_web" AS character
+ADD FIELD "qt_pedida" OF "itens_ped_web" AS decimal
+  DECIMALS 10
+ADD TABLE "pp-container"
+  AREA "Schema Area"
+ADD FIELD "nr-container" OF "pp-container" AS integer
+ADD FIELD "situacao" OF "pp-container" AS integer
+ADD FIELD "cod-estabel" OF "pp-container" AS character
+ADD FIELD "exclusivo" OF "pp-container" AS logical
+ADD FIELD "log_rota_indefinida" OF "pp-container" AS logical
+ADD FIELD "num_origem" OF "pp-container" AS integer
+ADD FIELD "log-1" OF "pp-container" AS logical
+ADD TABLE "pp-it-container"
+  AREA "Schema Area"
+ADD FIELD "nr-container" OF "pp-it-container" AS integer
+ADD FIELD "it-codigo" OF "pp-it-container" AS character
+ADD FIELD "cod-refer" OF "pp-it-container" AS character
+ADD FIELD "qt-pedida" OF "pp-it-container" AS decimal
+  DECIMALS 10
+ADD FIELD "qt-vendida" OF "pp-it-container" AS decimal
+  DECIMALS 10
+ADD FIELD "perc-dsp-venda" OF "pp-it-container" AS decimal
+  DECIMALS 10
+ADD FIELD "cod_estab_definido" OF "pp-it-container" AS character
+ADD TABLE "locais_estoq_portal"
+  AREA "Schema Area"
+ADD FIELD "cod_empresa" OF "locais_estoq_portal" AS character
+ADD FIELD "cod_estab" OF "locais_estoq_portal" AS character
+ADD FIELD "cod_depos" OF "locais_estoq_portal" AS character
+ADD FIELD "cod_grupo_usuario" OF "locais_estoq_portal" AS character
+ADD FIELD "cod_usuario" OF "locais_estoq_portal" AS character
+ADD FIELD "dt_hora_inicio" OF "locais_estoq_portal" AS datetime
+ADD FIELD "dt_hora_fim" OF "locais_estoq_portal" AS datetime
+ADD TABLE "pp_container_permissao"
+  AREA "Schema Area"
+ADD FIELD "nr_container" OF "pp_container_permissao" AS integer
+ADD FIELD "cod_repres" OF "pp_container_permissao" AS integer
+ADD TABLE "controle_preco"
+  AREA "Schema Area"
+ADD FIELD "it_codigo" OF "controle_preco" AS character
+ADD FIELD "tb_preco_id" OF "controle_preco" AS integer
+ADD FIELD "tp_preco" OF "controle_preco" AS integer
+ADD FIELD "dt_inicial" OF "controle_preco" AS date
+ADD FIELD "dt_final" OF "controle_preco" AS date
+ADD FIELD "log_vencido" OF "controle_preco" AS logical
+ADD TABLE "liquida-ima"
+  AREA "Schema Area"
+ADD FIELD "it-codigo" OF "liquida-ima" AS character
+ADD FIELD "dt-inicio" OF "liquida-ima" AS date
+ADD FIELD "dt-final" OF "liquida-ima" AS date
+ADD TABLE "usuarios_grupos"
+  AREA "Schema Area"
+ADD FIELD "login_usuario" OF "usuarios_grupos" AS character
+ADD FIELD "cod_grupo" OF "usuarios_grupos" AS integer
+ADD TABLE "im-param"
+  AREA "Schema Area"
+ADD FIELD "cod-param" OF "im-param" AS character
+ADD FIELD "val-param" OF "im-param" AS character
+.

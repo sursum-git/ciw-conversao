@@ -1,0 +1,377 @@
+{
+  "status": "CANDIDATE_READY_LOCAL_FROZEN_V1_AWAITING_ROOT_REVIEW",
+  "domain": "container-nf-available-readonly",
+  "programCode": "op1053",
+  "entityCode": "container_nfs_disponiveis_med_progress",
+  "scope": "MED only; available NF read/get; origin remains partial",
+  "sourceFiles": [
+    {
+      "path": "metadata/api-source-preview.json",
+      "sha256": "365a1b27a9e7abae169aa3657d8215a9aa2f595f1a7d0235c4c751dac5569f63"
+    },
+    {
+      "path": "metadata/builder-draft.json",
+      "sha256": "40b150e08a75e918c3aa57a38f9a76eb08110bcd92c20eceb52db7c89685b877"
+    },
+    {
+      "path": "metadata/parent-builder-preview.json",
+      "sha256": "9dc002d64e3fdc25e63fb7d3c8d50e0922559e50822817b18fbfa9df8245e94c"
+    },
+    {
+      "path": "metadata/parent-navigation-delta.json",
+      "sha256": "50375fed289294ba1f4b59ad56f3696d27dc7ef21842bf147c2b77d84452ff08"
+    },
+    {
+      "path": "metadata/source-addition.json",
+      "sha256": "d00b297ca8f69ae23227a479508f62f43150d0300d9a4e2f1907a3dd54cb8058"
+    },
+    {
+      "path": "patches/ContainersPainelFinanceRead.p.patch",
+      "sha256": "cb5a1cd950718eebc1dad1f87755c5af304041c6e0d8362224a6d20d00a9c356"
+    },
+    {
+      "path": "patches/ContainersPainelFinanceReadService.p.patch",
+      "sha256": "13eec20fa158f65cef6e92a3b920c2ea3610d332f4d0db3eab58da2e117ee0a6"
+    },
+    {
+      "path": "patches/patch-plan.json",
+      "sha256": "a4e6505c23ff5470aa78472388b34b2ed65d67b68f2f1c5ed7ed7f60130c3130"
+    },
+    {
+      "path": "patches/RuntimeApiEntityActionService.php.patch",
+      "sha256": "039c1df9c18c98f1ed1a7ca23f872a06b3c1c0670dabebb5e533b35b5bbb8c60"
+    },
+    {
+      "path": "php/RuntimeContainerNfAvailableRead.php",
+      "sha256": "6015b42bebe3c7a883c54f31d7d76e41ee9bb89538b29c2b9234ba6ea991f9d3"
+    },
+    {
+      "path": "PLAN.md",
+      "sha256": "3d453384311d6397f5658b6435864e207e238d10055f747609b2a5128eb1152e"
+    },
+    {
+      "path": "REVIEW.md",
+      "sha256": "abb170dd681c75dcbc32104591b2a2121ad5fe8b3f52146cbccc07c256a6064b"
+    },
+    {
+      "path": "source-evidence.json",
+      "sha256": "e8d49cd39a03745efcc785f2e80414d281bd80a0dcacbbad2d80baa62327d4e9"
+    },
+    {
+      "path": "tests/bootstrap.php",
+      "sha256": "985fd9f2b5aaad8d63f469a730de4f24c590f4c35740fae3d584b34519605eda"
+    },
+    {
+      "path": "tests/build-patches.py",
+      "sha256": "199b924babed7205624a6f9b558b889558e918879c605420dbc222ce9ed4402f"
+    },
+    {
+      "path": "tests/ContainerNfAvailableBuilderTest.php",
+      "sha256": "3009720ed2c88bc983793c8a860e2310bdcf1b7f1942f5d0389e6f2af77b6f9d"
+    },
+    {
+      "path": "tests/ContainerNfAvailableTest.p",
+      "sha256": "3e32f27f7cfc2ec99cdad4771c909c7879f1787a2e36190f9fb6385f704ff1b4"
+    },
+    {
+      "path": "tests/freeze.py",
+      "sha256": "357d143db544c08f51dab166433dcc589c2bf703da00e2ad59a0b6daf607c68e"
+    },
+    {
+      "path": "tests/LegacyNfSelectionContractTest.php",
+      "sha256": "9af006080db25c8368093dd4efe6f39fecceebbbe011665016c297ad0d474928"
+    },
+    {
+      "path": "tests/native-readonly.cjs",
+      "sha256": "bbd937d483cbab047967edeccab303ae82d4af15939678424abc7d5369c66b49"
+    },
+    {
+      "path": "tests/phpunit.xml",
+      "sha256": "81b1f819032a2a6e351f360bd881ba7e6af39c4c69af8aa88a6e0729a3809280"
+    },
+    {
+      "path": "tests/prepare-metadata.py",
+      "sha256": "c94aec963e3b462a752cf9f253ce2c983f811dcab1c5157133b6cafdb57926eb"
+    },
+    {
+      "path": "tests/prepare.py",
+      "sha256": "d380c1b9aedaf2eb3af17489720bda8293dc019e3994ddd5853fb7ecf964eed3"
+    },
+    {
+      "path": "tests/run-abl.ps1",
+      "sha256": "da00e0b68ded3a42ff45264aab43780e603f5e514937bdd7223e6728ce7686e0"
+    },
+    {
+      "path": "tests/RuntimeContainerNfAvailableReadTest.php",
+      "sha256": "0ac1bd5ef436afb37deac11eee15a223cd758c43631caddc3def03f4296dc226"
+    },
+    {
+      "path": "tests/verify-all.ps1",
+      "sha256": "dc1b5769002ed8e44a563654535123f4831060b6e56b5c529ff0056138019dc5"
+    },
+    {
+      "path": "tests/verify-wiring.py",
+      "sha256": "8dac92101d6d1ddc97ef51f50ae200ef759a48f0fb1cac9d3756dbfd8b62778e"
+    }
+  ],
+  "candidateSources": [
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersPainelFinanceRead.p",
+      "relative": "sursum-api/programs/ContainersPainelFinanceRead.p",
+      "baselineSha256": "668ddc25441f7e1479a0aaf8ad1df98c0f1c29b5fd0d9088600f032d7016cbc0",
+      "candidateSha256": "7134408e9a7749a0c2afac3725e4c2812f72279904c6a816beaa433e57634b1c",
+      "frozenCandidatePath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-nf-available-readonly/frozen-v1/candidates/sursum-api/programs/ContainersPainelFinanceRead.p",
+      "patchPath": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-nf-available-readonly/patches/ContainersPainelFinanceRead.p.patch"
+    },
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ContainersPainelFinanceReadService.p",
+      "relative": "sursum-api/programs/ContainersPainelFinanceReadService.p",
+      "baselineSha256": "8d73610ed26de4e54f3a5c89a6f38b31de7d237a2c8f4d51b31d9271751ef9df",
+      "candidateSha256": "09678e8fabe46c2fd35ea3bf814e587765490135533a034822236da2ed5c37cf",
+      "frozenCandidatePath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-nf-available-readonly/frozen-v1/candidates/sursum-api/programs/ContainersPainelFinanceReadService.p",
+      "patchPath": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-nf-available-readonly/patches/ContainersPainelFinanceReadService.p.patch"
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeApiEntityActionService.php",
+      "relative": "php/RuntimeApiEntityActionService.php",
+      "baselineSha256": "41d2a8ff9377b7bd7a7df9106d2dc557a58f607153149c82ed2f64adc1ccfcc7",
+      "candidateSha256": "399cf18a00bca42875c2a35c648eaa4021029b4e3473b872b16f2e62865c96d2",
+      "frozenCandidatePath": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-nf-available-readonly/frozen-v1/candidates/php/RuntimeApiEntityActionService.php",
+      "patchPath": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-nf-available-readonly/patches/RuntimeApiEntityActionService.php.patch"
+    }
+  ],
+  "newFiles": [
+    {
+      "candidatePath": "D:/opencode/conversao-sc/integration-src/ciw-completion-20261028/container-nf-available-readonly/php/RuntimeContainerNfAvailableRead.php",
+      "sha256": "6015b42bebe3c7a883c54f31d7d76e41ee9bb89538b29c2b9234ba6ea991f9d3",
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeContainerNfAvailableRead.php"
+    }
+  ],
+  "testInputs": [
+    {
+      "path": "testinputs/Compile.p",
+      "sha256": "67935a603d748539328da24bec9124c34d97b1475fafac6d686f1997277de1f4"
+    },
+    {
+      "path": "testinputs/ContainerNfAvailableTest.p",
+      "sha256": "3e32f27f7cfc2ec99cdad4771c909c7879f1787a2e36190f9fb6385f704ff1b4"
+    },
+    {
+      "path": "testinputs/ContainersPainelFinanceReadService.p",
+      "sha256": "a243b6ceabbe2d5d19bfbe779b4d54339cbce8cc960c944277c7b0e3155e9463"
+    },
+    {
+      "path": "testinputs/ContainersPainelFinanceReadTest.p",
+      "sha256": "46751e8ee8ed618bc84582e9ae7caaf1799cc2eade2e3820b086118e64f65030"
+    },
+    {
+      "path": "testinputs/Execute.p",
+      "sha256": "8c4b79ca243f88c6c259a1a14e709b2e844bd3020a339a2c5450f3b7f669797e"
+    },
+    {
+      "path": "testinputs/php/ProgramBuilderService.php",
+      "sha256": "72c6dafbfa0e93196b443ec45cd6d7c743fddd6415719febd70a0965d1fe18ee"
+    },
+    {
+      "path": "testinputs/php/RuntimeApiEntityActionService.php",
+      "sha256": "399cf18a00bca42875c2a35c648eaa4021029b4e3473b872b16f2e62865c96d2"
+    },
+    {
+      "path": "testinputs/sursum-api/includes/ContainerFinancePolicy.i",
+      "sha256": "27c4710b9c3dc051aaa2c6867118f3a502f7b2f9bf0a816a2cd4f301a8213b35"
+    },
+    {
+      "path": "testinputs/sursum-api/includes/ContainerPaymentIdentity.i",
+      "sha256": "cffe626b2d85df3cd43932879041cc473890be1069e732e6b27a943459f0c102"
+    },
+    {
+      "path": "testinputs/sursum-api/includes/parametros_ima.i",
+      "sha256": "766ee9e284d97070dfee97e9d46bfedf1983e092c82a9fbf4145fcaf90dd4e47"
+    },
+    {
+      "path": "testinputs/sursum-api/programs/ContainersPainelFinanceRead.p",
+      "sha256": "7134408e9a7749a0c2afac3725e4c2812f72279904c6a816beaa433e57634b1c"
+    },
+    {
+      "path": "testinputs/sursum-api/programs/ContainersPainelFinanceReadService.p",
+      "sha256": "09678e8fabe46c2fd35ea3bf814e587765490135533a034822236da2ed5c37cf"
+    },
+    {
+      "path": "testinputs/WrapperCompileFixture.p",
+      "sha256": "bf9e5a7f45ee212acb920be4945d553561729f43020511db7127f5966a3df2d6"
+    }
+  ],
+  "tests": {
+    "ablCompiler": "12.8 diagnostic only; no publishable .r",
+    "ablFourCombinations": [
+      {
+        "codepage": "UTF-8",
+        "culture": "AMERICAN",
+        "numDbs": 0,
+        "newChecks": 39,
+        "financialRegressionChecks": 231,
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-nf-available-readonly/local/test-UTF-8-AMERICAN.log",
+        "sha256": "49ee6bf025e6c4dfa763202e0990e3e40c734275c9532d91c4019a101556ed0a"
+      },
+      {
+        "codepage": "UTF-8",
+        "culture": "EUROPEAN",
+        "numDbs": 0,
+        "newChecks": 39,
+        "financialRegressionChecks": 231,
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-nf-available-readonly/local/test-UTF-8-EUROPEAN.log",
+        "sha256": "60712b469064528e20ed48809b7d4062bf80fb224de696f550564ac70a215f7f"
+      },
+      {
+        "codepage": "ISO8859-1",
+        "culture": "AMERICAN",
+        "numDbs": 0,
+        "newChecks": 39,
+        "financialRegressionChecks": 231,
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-nf-available-readonly/local/test-ISO8859-1-AMERICAN.log",
+        "sha256": "49ee6bf025e6c4dfa763202e0990e3e40c734275c9532d91c4019a101556ed0a"
+      },
+      {
+        "codepage": "ISO8859-1",
+        "culture": "EUROPEAN",
+        "numDbs": 0,
+        "newChecks": 39,
+        "financialRegressionChecks": 231,
+        "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-nf-available-readonly/local/test-ISO8859-1-EUROPEAN.log",
+        "sha256": "60712b469064528e20ed48809b7d4062bf80fb224de696f550564ac70a215f7f"
+      }
+    ],
+    "ablTotalChecks": 1080,
+    "phpFocused": {
+      "tests": 33,
+      "assertions": 221,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0
+    },
+    "phpCanonicalFull": {
+      "tests": 885,
+      "assertions": 5841,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0
+    },
+    "native": {
+      "success": true,
+      "checks": 19,
+      "nativeCrudValidator": true,
+      "ajv2020": true,
+      "realKendoGridForm": true,
+      "rows": 3,
+      "fields": 18,
+      "readonly": true,
+      "writes": 0,
+      "network": 0,
+      "parentNavigationWithoutChildren": true,
+      "contextRequired": true
+    },
+    "wiring": {
+      "success": true,
+      "checks": 90,
+      "bytePreserving": true,
+      "canonicalChanged": false,
+      "rebaseAction8": true,
+      "sharedPrograms": 2,
+      "newPhpBoundary": 1,
+      "sharedPhpPatches": 1,
+      "sourceOperationsBefore": 4,
+      "sourceOperationsCandidate": 6,
+      "parentProgram": "op1000",
+      "originFullyConverted": false,
+      "official122Validated": false
+    },
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File integration-src/ciw-completion-20261028/container-nf-available-readonly/tests/verify-all.ps1",
+    "commandUsesPinnedInputsNoRegeneration": true
+  },
+  "evidence": [
+    {
+      "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-nf-available-readonly/php-focused.xml",
+      "sha256": "72554819b886a8755c286346f8c48afed6f38b42ccbfc36c27472d2685bf5342"
+    },
+    {
+      "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-nf-available-readonly/php-canonical-full.xml",
+      "sha256": "974cddb16aad340f494c81dbeb817af4c17d4e28785046100765dcb7753aa52a"
+    },
+    {
+      "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-nf-available-readonly/php-red.xml",
+      "sha256": "329f958a6d6f4cb1f5247a78f55c670e71b60000720793b4b83dd963f9519fa7"
+    },
+    {
+      "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-nf-available-readonly/php-scalar-red.xml",
+      "sha256": "29594d358330008e67523555c8dcadcc9af3bcb5ea09759b54acdd3900c19b64"
+    },
+    {
+      "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-nf-available-readonly/collation-red.log",
+      "sha256": "7247b672e81d0e7b91c9f64f3af66b261a579909ab931e7228be1392ec27e7e9"
+    },
+    {
+      "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-nf-available-readonly/native-result.json",
+      "sha256": "65aa58edca1395445d25c3d3d619df04c415b6479a44d62e55af7305e183a837"
+    },
+    {
+      "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-nf-available-readonly/wiring-result.json",
+      "sha256": "147f7a163324755a38de78e85679f91dd6981ad66ff778af0c156ee437924de2"
+    },
+    {
+      "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-nf-available-readonly/eol-proof.json",
+      "sha256": "35db8a2967e7f89e38623f69dd3e1d75009dba874376f7d6d978d28116be38d5"
+    },
+    {
+      "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-nf-available-readonly/action8-rebase-input.json",
+      "sha256": "48d611d38fecfbc84a72124f56246dc8cc16d70b2bf45f74c584bbe24d5b68e5"
+    },
+    {
+      "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/container-nf-available-readonly/local/compile.log",
+      "sha256": "9e9cc8e606a54cd24cec284f9a167929daec5bfb35cab2c795665d3de0264c68"
+    },
+    {
+      "path": "D:/opencode/conversao-sc/.runtime/ciw-completion-20261028/official-build8/canonical-manifest.json",
+      "sha256": "5fe95cea65fd022fc48670ca4ad319f1cc5a26254388a7b8a2b8c4f7321f9182"
+    }
+  ],
+  "limits": {
+    "processedSourceRows": 50000,
+    "sourceRowsDefinition": "Rows processed from fixed CID links and matching ERP documents, not internal index IO; next fetched row detects excess.",
+    "stopAfterSeconds": 10,
+    "eligibleRowsExamined": 200,
+    "excess": "503 and no partial data",
+    "collation": "422 CONTAINER_NF_COLLATION_UNPROVEN on potentially ambiguous non-byteidentical comparison; no document normalization"
+  },
+  "metadata": {
+    "newReadonlyProgram": "metadata/builder-draft.json",
+    "sourceAppendOnly": "metadata/source-addition.json",
+    "sourceOperationsBefore": 4,
+    "sourceOperationsAfter": 6,
+    "parentDelta": "metadata/parent-navigation-delta.json",
+    "parentProgram": "op1000",
+    "parentExpectedVersion": "1.0.2",
+    "parentCandidateVersion": "1.0.3",
+    "authenticationReplacementAllowed": false
+  },
+  "gates": {
+    "independentReviewCompleted": false,
+    "official122Compiled": false,
+    "canonicalIntegrated": false,
+    "runtimePublished": false,
+    "metadataPublished": false,
+    "realPasoeValidated": false,
+    "newReadAccessGranted": false,
+    "sqlOdbcExecuted": false,
+    "originFullyConverted": false
+  },
+  "safety": {
+    "canonicalEdited": false,
+    "remoteExecuted": false,
+    "businessWritten": false,
+    "ddlOrSequenceCreated": false,
+    "grantExecuted": false,
+    "inventoryChanged": false,
+    "otherFreezesChanged": false
+  },
+  "integration": "Root applies only matching byte patches, copies the one new PHP helper, compiles official12.2/.42 and publishes sursum-api/MED under its gates. Sanitized source preview never replaces stored authentication."
+}

@@ -1,0 +1,25 @@
+--- baseline/public/metadata/schemas/crud-definition-v1.schema.json
++++ candidate/public/metadata/schemas/crud-definition-v1.schema.json
+@@ -2774,8 +2774,20 @@
+         },
+         "required": {
+           "type": "boolean"
+-        }
+-      },
++        },
++        "filterOnly": {
++          "type": "boolean"
++        }
++      },
++      "allOf": [
++        {
++          "if": {"properties": {"filterOnly": {"const": true}}, "required": ["filterOnly"]},
++          "then": {
++            "required": ["filter", "required", "readonly", "createDefault"],
++            "properties": {"filter": {"const": true}, "required": {"const": false}, "readonly": {"const": true}, "createDefault": {"const": false}}
++          }
++        }
++      ],
+       "additionalProperties": false
+     },
+     "fieldCondition": {

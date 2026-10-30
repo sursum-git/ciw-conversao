@@ -1,0 +1,78 @@
+{
+  "canonical": "D:\\opencode\\construtor-pg\\src\\crud-engine\\CrudEngine.js",
+  "relative": "src/crud-engine/CrudEngine.js",
+  "baselineSha256": "5d78f77bc72c56c1bbd345d92ae3e4714a71f1d04e5b76e0453855a8c193bba7",
+  "candidateSha256": "ae49f19edb1cc37fd7725c86ce85300b07868d693cc72a2f27a64f716d233d81",
+  "edits": [
+    {
+      "start": 9672,
+      "end": 9722,
+      "beforeBase64": "ICAgICAgICBjb250ZXh0VmFsdWVzOiB0aGlzLmNvbnRleHRWYWx1ZXMgfHwge30sDQo=",
+      "afterBase64": "ICAgICAgICBjb250ZXh0VmFsdWVzOiB0aGlzLmdldFJlcXVlc3RDb250ZXh0VmFsdWVzKCksDQo="
+    },
+    {
+      "start": 11442,
+      "end": 11492,
+      "beforeBase64": "ICAgICAgICBjb250ZXh0VmFsdWVzOiB0aGlzLmNvbnRleHRWYWx1ZXMgfHwge30sDQo=",
+      "afterBase64": "ICAgICAgICBjb250ZXh0VmFsdWVzOiB0aGlzLmdldFJlcXVlc3RDb250ZXh0VmFsdWVzKCksDQo="
+    },
+    {
+      "start": 56521,
+      "end": 56521,
+      "beforeBase64": "",
+      "afterBase64": "ICAgICAgICBpZiAoaXRlbS5maWx0ZXJPbmx5ID09PSB0cnVlICYmIE9iamVjdC5wcm90b3R5cGUuaGFzT3duUHJvcGVydHkuY2FsbChzdXBwbGllZCwgaXRlbS5maWVsZCkgJiYgKHJhdyA9PSBudWxsIHx8IHJhdyA9PT0gIiIpKSB7IHRocm93IGdsb2JhbC5DcnVkVXRpbHMubWFrZUVycm9yKCJDUlVEX0NPTlRFWFRfSU5WQUxJRCIsICJTZWxlY2FvIGluZm9ybWFkYSBpbnZhbGlkYTogIiArIGl0ZW0uZmllbGQgKyAiLiIpOyB9DQo="
+    },
+    {
+      "start": 57819,
+      "end": 57819,
+      "beforeBase64": "",
+      "afterBase64": "ICAgIH0NCg0KICAgIGdldFJlcXVlc3RDb250ZXh0VmFsdWVzKCkgew0KICAgICAgY29uc3QgdmFsdWVzID0gdGhpcy5jb250ZXh0VmFsdWVzIHx8IHt9Ow0KICAgICAgY29uc3QgZXhjbHVkZWQgPSBnbG9iYWwuQ3J1ZFV0aWxzLmVuc3VyZUFycmF5KHRoaXMuZGVmaW5pdGlvbiAmJiB0aGlzLmRlZmluaXRpb24uY29udGV4dEZpZWxkcykuZmlsdGVyKChpdGVtKSA9PiBpdGVtLmZpbHRlck9ubHkgPT09IHRydWUpLm1hcCgoaXRlbSkgPT4gaXRlbS5maWVsZCk7DQogICAgICBpZiAoIWV4Y2x1ZGVkLmxlbmd0aCkgeyByZXR1cm4gdmFsdWVzOyB9DQogICAgICByZXR1cm4gT2JqZWN0LmZyb21FbnRyaWVzKE9iamVjdC5lbnRyaWVzKHZhbHVlcykuZmlsdGVyKChbZmllbGRdKSA9PiBleGNsdWRlZC5pbmRleE9mKGZpZWxkKSA9PT0gLTEpKTsNCg=="
+    },
+    {
+      "start": 60537,
+      "end": 60672,
+      "beforeBase64": "ICAgICAgICBkYXRhOiBPYmplY3QuYXNzaWduKHsgW3ByaW1hcnlLZXldOiBpZCwgaWQsIGNvbnRleHQ6IE9iamVjdC5hc3NpZ24oe30sIHRoaXMuY29udGV4dFZhbHVlcyB8fCB7fSkgfSwgcmVjb3JkID8geyByZWNvcmQgfSA6IHt9KQ0K",
+      "afterBase64": "ICAgICAgICBkYXRhOiBPYmplY3QuYXNzaWduKHsgW3ByaW1hcnlLZXldOiBpZCwgaWQsIGNvbnRleHQ6IE9iamVjdC5hc3NpZ24oe30sIHRoaXMuZ2V0UmVxdWVzdENvbnRleHRWYWx1ZXMoKSkgfSwgcmVjb3JkID8geyByZWNvcmQgfSA6IHt9KQ0K"
+    }
+  ],
+  "unchangedByteRanges": [
+    {
+      "baselineStart": 0,
+      "candidateStart": 0,
+      "bytes": 9672,
+      "sha256": "5951ea4a079238eeac91faf3de1ae4bd8c36a54d9b4fc935b9843e081a3cc9ff"
+    },
+    {
+      "baselineStart": 9722,
+      "candidateStart": 9728,
+      "bytes": 1720,
+      "sha256": "4878821009f90427e31dd5d2f92978146c147c247b98805399e6316b3340468c"
+    },
+    {
+      "baselineStart": 11492,
+      "candidateStart": 11504,
+      "bytes": 45029,
+      "sha256": "a163251d0bd5d6a5d401c4bede916c65fc85edf7e20627d1ba19ebab007bb426"
+    },
+    {
+      "baselineStart": 56521,
+      "candidateStart": 56778,
+      "bytes": 1298,
+      "sha256": "a66b99c61da3175bfb0581830c8c45f3a983dbd7f7e7b516c1ee5ee438e80a14"
+    },
+    {
+      "baselineStart": 57819,
+      "candidateStart": 58497,
+      "bytes": 2718,
+      "sha256": "0c4bf5c3bdc046c4958ef7137def8e83a270db5f0abfadb782832352efae87ea"
+    },
+    {
+      "baselineStart": 60672,
+      "candidateStart": 61356,
+      "bytes": 94525,
+      "sha256": "70495fac7e2cdcbfb74c5a314ffbc226ce9ab9677cccd88f2a9c2368b2332bd3"
+    }
+  ],
+  "roundTripExact": true,
+  "role": "native-runtime-capability"
+}

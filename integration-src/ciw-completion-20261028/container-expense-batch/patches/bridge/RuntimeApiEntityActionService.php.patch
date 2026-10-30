@@ -1,0 +1,44 @@
+--- D:\opencode\construtor-pg\backend\src\Runtime\RuntimeApiEntityActionService.php
++++ D:\opencode\construtor-pg\backend\src\Runtime\RuntimeApiEntityActionService.php
+@@ -804,9 +804,25 @@
+ 
+ 
+ 
++    private function containerExpenseBatchRequest(array $definition,array $config,array $payload,string $operation):array
++    {
++        $actor='';
++        if ($operation==='batch') {
++            $session=$this->authenticatedSessions?->resolve();
++            if (!$session || $session->getStatus()!=='active') { throw new RuntimeHttpException('AUTH_REQUIRED','Sessao ativa obrigatoria para o lote.',401); }
++            $actor=$this->attachmentActor();
++        }
++        return RuntimeContainerExpenseBatch::run($definition,$config,$payload,$operation,$actor,
++            fn(string $permission):bool=>$this->permissions?->hasPermission($permission) ?? false,
++            fn(array $endpoint,array $request):array=>$this->requestEndpoint($definition,$endpoint,$definition['apiSource']['authHeaders'] ?? [],[],$request),
++            fn(array $row):array=>$this->mapItem($definition,$row),
++            fn(string $event,array $before,array $after,array $metadata)=>$this->transactions->log($definition['entityCode'].'.api.'.$event,'Operacao nativa de despesas do container.',before:$before,after:$after,metadata:['entityCode'=>$definition['entityCode']]+(($metadata['available']??false)===true ? ['audit'=>$metadata] : $metadata)));
++    }
++
+     private function read(array $definition, array $payload): array
+ 
+     {
++        if (RuntimeContainerExpenseBatch::supports($definition)) { return $this->containerExpenseBatchRequest($definition,[],$payload,'read'); }
+ 
+         if (RuntimeCiwErpQuery::supports($definition)) { return $this->readCiwErpPage($definition, $payload); }
+ 
+@@ -963,6 +979,7 @@
+     private function get(array $definition, array $payload): array
+ 
+     {
++        if (RuntimeContainerExpenseBatch::supports($definition)) { return $this->containerExpenseBatchRequest($definition,[],$payload,'get'); }
+ 
+         $id = $this->extractRecordId($definition, $payload);
+ 
+@@ -1909,6 +1926,7 @@
+     private function batch(array $definition, array $config, array $payload): array
+ 
+     {
++        if (RuntimeContainerExpenseBatch::supports($definition)) { return $this->containerExpenseBatchRequest($definition,$config,$payload,'batch'); }
+ 
+         $session = $this->authenticatedSessions?->resolve();
+ 

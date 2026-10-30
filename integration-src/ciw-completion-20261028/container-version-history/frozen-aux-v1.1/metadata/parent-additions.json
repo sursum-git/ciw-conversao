@@ -1,0 +1,90 @@
+{
+  "status": "ADDITIVE_AFTER_WAVE1_RUNTIME_SNAPSHOT_REQUIRED",
+  "screenId": "ciw.container-versoes-custo",
+  "preserveExistingLinks": [
+    "ciw.container-versao-itens-historico"
+  ],
+  "operations": [
+    {
+      "op": "add",
+      "path": "/programDraft/rowLinks/-",
+      "value": {
+        "id": "payments_historicos",
+        "label": "Pagamentos históricos da versão",
+        "screenId": "ciw.container-versao-pagamentos-historico",
+        "parameters": [
+          {
+            "field": "container_id",
+            "sourceField": "container_id"
+          },
+          {
+            "field": "versao_id",
+            "sourceField": "versao_id"
+          }
+        ],
+        "position": "end"
+      }
+    },
+    {
+      "op": "add",
+      "path": "/programDraft/rowLinks/-",
+      "value": {
+        "id": "nfs_historicos",
+        "label": "NFs históricas da versão",
+        "screenId": "ciw.container-versao-nfs-historico",
+        "parameters": [
+          {
+            "field": "container_id",
+            "sourceField": "container_id"
+          },
+          {
+            "field": "versao_id",
+            "sourceField": "versao_id"
+          }
+        ],
+        "position": "end"
+      }
+    },
+    {
+      "op": "add",
+      "path": "/programDraft/rowLinks/-",
+      "value": {
+        "id": "discounts_historicos",
+        "label": "Descontos históricos da versão",
+        "screenId": "ciw.container-versao-descontos-historico",
+        "parameters": [
+          {
+            "field": "container_id",
+            "sourceField": "container_id"
+          },
+          {
+            "field": "versao_id",
+            "sourceField": "versao_id"
+          }
+        ],
+        "position": "end"
+      }
+    },
+    {
+      "op": "add",
+      "path": "/programDraft/rowLinks/-",
+      "value": {
+        "id": "expenses_historicos",
+        "label": "Despesas históricas da versão",
+        "screenId": "ciw.container-versao-despesas-historico",
+        "parameters": [
+          {
+            "field": "container_id",
+            "sourceField": "container_id"
+          },
+          {
+            "field": "versao_id",
+            "sourceField": "versao_id"
+          }
+        ],
+        "position": "end"
+      }
+    }
+  ],
+  "version": "increment current published parent version only after capturing its exact hash"
+}

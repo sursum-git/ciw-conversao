@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-28",
+  "state": "ANALYSIS_COMPLETE_RECONCILIATION_PROPOSED",
+  "packageDirectory": "integration-src/purchase-pending-20261028/sample-batch",
+  "artifacts": [
+    {
+      "path": "integration-src/purchase-pending-20261028/sample-batch/brief.md",
+      "sha256": "2b473ffec719cda5dbabcac5dd404e493b526ca11dcced0881fde108eeb20624"
+    },
+    {
+      "path": "integration-src/purchase-pending-20261028/sample-batch/review.md",
+      "sha256": "bedb5a5587613a2160459b25fc8eeda1cc3dde8f90d90c5f4753918e43cd3d1a"
+    },
+    {
+      "path": "integration-src/purchase-pending-20261028/sample-batch/navigation-proposal.json",
+      "sha256": "21299ee84f2d83f51454ee1a17695f409b58bdb83f026ad7e71582f42d508ee1"
+    },
+    {
+      "path": "integration-src/purchase-pending-20261028/sample-batch/collect-evidence.ps1",
+      "sha256": "a9ef5ab8991c456966c2a5b7549f3763fff76e6f9cf7cb925808da091e6784fb"
+    },
+    {
+      "path": "integration-src/purchase-pending-20261028/sample-batch/evidence.json",
+      "sha256": "b8dea6290d4c18a31861cca7baa4afaa215fe7f7b8d70495394621220474b227"
+    },
+    {
+      "path": "integration-src/purchase-pending-20261028/sample-batch/reconciliation-proposal.json",
+      "sha256": "a682e0f0ebcd76949d2c822c7742f54528903a1633f65a8dee1925e67b899374"
+    },
+    {
+      "path": "integration-src/purchase-pending-20261028/sample-batch/review-signal-config.json",
+      "sha256": "1394d57fe282ea88a4a0425bf87d27288920c7c1ca5f021f3f51f61af758a9a4"
+    },
+    {
+      "path": "integration-src/purchase-pending-20261028/sample-batch/review-signal-config-final.json",
+      "sha256": "b0a2c7b4a341b3e54321047cfbe22adb395b00c3b4ff37943672aca66938bb96"
+    },
+    {
+      "path": "integration-src/purchase-pending-20261028/sample-batch/review-signal-config-probes.php",
+      "sha256": "237a770169b3daeee0b1f35d2bded2185edf18e8a434fd0dc7d02e03e5e0ab8e"
+    }
+  ],
+  "executableCandidates": [],
+  "canonicalPatches": [],
+  "builderPublicationCandidates": [],
+  "inventoryProposal": {
+    "path": "reconciliation-proposal.json",
+    "target": "integration-src/ciw-inventory/inventory-reviewed.json",
+    "baselineSHA256": "3e9b91debb5c9b162896503a8f5e46e5c9e8ca2ed1403553244304e7a0ce52dc",
+    "applyAutomatically": false
+  },
+  "compilation": "not applicable; no executable changed",
+  "publication": "none",
+  "businessWrites": 0,
+  "schemaMutations": 0,
+  "grants": 0,
+  "scopeLimitation": "No implemented batch command in observed source; missing payment blank bodies and all-company parity remain explicit."
+}

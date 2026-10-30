@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "state": "OFFLINE_COMPANION_ROOT_REVIEW_REQUIRED",
+  "sourceFreezeSha256": "17acb3059051f6eb87f3aef20ba1f7c79aae6de05c52d208dd8748a350a2d6e0",
+  "displayPaths": 24,
+  "files": [
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\comparison-metadata-text-v1\\closed-text-map.json",
+      "sha256": "02788b63a1b18729f4759d028a0228930cb266abda421ebb90038227b50133ec"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\comparison-metadata-text-v1\\container_custos_comparacao_dolar-builder-draft.json",
+      "sha256": "16a3583b4bf57f361eeef3980fa098b442610f29edff261ef9d7303db84d7ded"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\comparison-metadata-text-v1\\container_custos_comparacao_real-builder-draft.json",
+      "sha256": "f3157f4c41a181ba9cd0e3fa2894ad956ebae3127665913e9a215332832a423c"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\comparison-metadata-text-v1\\prepare-labels.py",
+      "sha256": "1a87006b6faf246f4ed2e7b972ed841d98ce2906436d44ecd91f7a7a5ffeea76"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\comparison-metadata-text-v1\\proof.json",
+      "sha256": "6467aba890a86214714ad2d7f61ff2313bab4be030741730e0aa4c57f7d58757"
+    },
+    {
+      "path": "D:\\opencode\\conversao-sc\\integration-src\\ciw-completion-20261028\\comparison-metadata-text-v1\\README.md",
+      "sha256": "1c6336c9e09252812f16e8448d68de4122638c26c776a9d75da87971f3dba37f"
+    }
+  ]
+}

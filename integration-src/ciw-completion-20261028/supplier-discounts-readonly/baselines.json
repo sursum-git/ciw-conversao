@@ -1,0 +1,53 @@
+{
+  "files": [
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ImportDiscountsCollector.p",
+      "baselineFile": "baseline-exact/ImportDiscountsCollector.p",
+      "sha256": "710e829b911874ce17f9976bcd478d558594fb49db5eeadffdd04a588c8c51f5"
+    },
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ImportDiscountsReadService.p",
+      "baselineFile": "baseline-exact/ImportDiscountsReadService.p",
+      "sha256": "ad50ae2fc4a6ae5f0c4045912443f0895b9c24afb673fb3c06ebcb1a4fe3a148"
+    },
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/ImportDiscountsReadApi.p",
+      "baselineFile": "baseline-exact/ImportDiscountsReadApi.p",
+      "sha256": "d5c88dab039cff35166eeb2b8905554999513e13945295d6d5b619004dbd9407"
+    },
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwErpReadService.p",
+      "baselineFile": "baseline-exact/CiwErpReadService.p",
+      "sha256": "e330e9adcf4377f09d822e2423f7262d05428ca78172667ff61a20df669711ed"
+    },
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/programs/CiwCadastrosCrud.p",
+      "baselineFile": "baseline-exact/CiwCadastrosCrud.p",
+      "sha256": "5717308a591f27516341ded859ce669b4c3fab95199f93b06bae655080cf75c3"
+    },
+    {
+      "target": "D:/opencode/motor-progress/v2/sursum-api/includes/ImportDiscountsReadTables.i",
+      "baselineFile": "baseline-exact/ImportDiscountsReadTables.i",
+      "sha256": "f1d31239a2f8c669218af4d7f968f45b8600bd4a12dd7a087e043b0726b1fbc1"
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeImportDiscountRead.php",
+      "baselineFile": "baseline-exact/RuntimeImportDiscountRead.php",
+      "sha256": "da183dfadf900d516a577495d8348293c0aa1a9b36954cde50de9be819cd0197"
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeCiwErpQuery.php",
+      "baselineFile": "baseline-exact/RuntimeCiwErpQuery.php",
+      "sha256": "ee404b000f78b9ff0d482ccf9e735fcd483d196b30811b53b422d4587c819da5"
+    },
+    {
+      "target": "D:/opencode/construtor-pg/backend/src/Runtime/RuntimeApiEntityActionService.php",
+      "baselineFile": "baseline-exact/RuntimeApiEntityActionService.php",
+      "sha256": "5f7591ae378c46c0c865c04cb03afaeb9c76fa31dbf329e5661851942ccfc7c6"
+    }
+  ],
+  "currentBaselineProof": {
+    "path": ".runtime/ciw-completion-20261028/official-build11/canonical-manifest.json",
+    "sha256": "b4b985a6c3ab6ddb0839768b0f4c4b6164673d3e67beb244a28786ebbd20d419"
+  }
+}

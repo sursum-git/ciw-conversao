@@ -1,0 +1,65 @@
+{
+  "scope": [
+    "cons_representante_ativos",
+    "ctrl_envios_repres_amostra"
+  ],
+  "analysis_copies": true,
+  "files": [
+    {
+      "application": "cons_representante_ativos",
+      "file": "cons_representante_ativos.php",
+      "remote_sha256": "c569be07fe36e04bdfa4142c222dd745afc0ee30c5eaac1f9a1508bef4a27576",
+      "copied_sha256": "c569be07fe36e04bdfa4142c222dd745afc0ee30c5eaac1f9a1508bef4a27576",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_representante_ativos",
+      "file": "cons_representante_ativos_grid.class.php",
+      "remote_sha256": "e8a9810730714eb41e906d553bf5ae62c8436a731f586499de4836cfd60687ef",
+      "copied_sha256": "d8f91c89fa6f5b0ea30f42c5a6a89ab99e357b535fbcb2155123d2318609f2d5",
+      "sensitive_literals_omitted": 2
+    },
+    {
+      "application": "cons_representante_ativos",
+      "file": "cons_representante_ativos_lookup.class.php",
+      "remote_sha256": "a36dcea06c14ec28fb38baf0087a78a3d220d357fdadfb3c52407b7329101ca8",
+      "copied_sha256": "a36dcea06c14ec28fb38baf0087a78a3d220d357fdadfb3c52407b7329101ca8",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "cons_representante_ativos",
+      "file": "index.php",
+      "remote_sha256": "6dbac80f5432fc7134594d8d8cb5fa75f5f7c532dcca5c0c3f0415051c684def",
+      "copied_sha256": "49f1699fffa424f2a5367c6855cfef8a514eb9714ce0187055711103bddaebef",
+      "sensitive_literals_omitted": 7
+    },
+    {
+      "application": "ctrl_envios_repres_amostra",
+      "file": "ctrl_envios_repres_amostra.php",
+      "remote_sha256": "a0be97baed27f2e3870a48dfedc2fb9935a9d991b1da879ac4b2a99546bf302d",
+      "copied_sha256": "a0be97baed27f2e3870a48dfedc2fb9935a9d991b1da879ac4b2a99546bf302d",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "ctrl_envios_repres_amostra",
+      "file": "ctrl_envios_repres_amostra_apl.php",
+      "remote_sha256": "d34142a3d990390fabe79bc7b85cc506dc2a30e28e83c1b23a91f6166f182123",
+      "copied_sha256": "7874ee9752d11e213965aaceeb4b43085e9d03b27e75997adf8f6603cd293192",
+      "sensitive_literals_omitted": 2
+    },
+    {
+      "application": "ctrl_envios_repres_amostra",
+      "file": "ctrl_envios_repres_amostra_form0.php",
+      "remote_sha256": "7256e4bb4a2ed31b6986b16d3d6cb8e9d12c8f4f6d5518009f44731a18a59371",
+      "copied_sha256": "752d4dcb7153bd0412b172e80f982c379a88ef38323c82f03e98a02fcd00d6cc",
+      "sensitive_literals_omitted": 0
+    },
+    {
+      "application": "ctrl_envios_repres_amostra",
+      "file": "index.php",
+      "remote_sha256": "3b4953085cbcf1a7794d6d74913903266d02ed4e36dcbd86c0e87f844a699340",
+      "copied_sha256": "557c6a3e0a0c55231423efdef0a34103dc41b4aa6af5e26edebe27574d5bc220",
+      "sensitive_literals_omitted": 2
+    }
+  ]
+}

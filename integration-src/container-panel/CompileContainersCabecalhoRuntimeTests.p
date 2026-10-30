@@ -1,0 +1,30 @@
+/* Uses real classes in mandatory12.2; local12.8 may use isolated fixture
+   stubs. Test never invokes a real sequence or persists execution events. */
+DEFINE VARIABLE failed AS LOGICAL NO-UNDO.
+DEFINE VARIABLE i AS INTEGER NO-UNDO.
+DEFINE VARIABLE j AS INTEGER NO-UNDO.
+DEFINE VARIABLE name AS CHARACTER NO-UNDO.
+OUTPUT TO "compile-containers-cabecalho-runtime.log".
+PUT UNFORMATTED "OpenEdge " PROVERSION SKIP.
+DO i=1 TO 3:
+ name=ENTRY(i,"ContainersCabecalhoRuntime.p,ContainersCabecalhoRuntimeTest.p,ContainersCustoCalculator.p").
+ COMPILE VALUE(name) SAVE NO-ERROR.
+ PUT UNFORMATTED name " COMPILER:ERROR=" COMPILER:ERROR SKIP.
+ IF COMPILER:ERROR OR ERROR-STATUS:ERROR THEN failed=TRUE.
+ DO j=1 TO ERROR-STATUS:NUM-MESSAGES: PUT UNFORMATTED ERROR-STATUS:GET-MESSAGE(j) SKIP. END.
+END.
+OUTPUT CLOSE.
+IF NOT failed THEN DO i=1 TO 2:
+ SESSION:NUMERIC-FORMAT=ENTRY(i,"AMERICAN,EUROPEAN").
+ RUN ContainersCabecalhoRuntimeTest.p NO-ERROR.
+ OUTPUT TO "compile-containers-cabecalho-runtime.log" APPEND.
+ IF ERROR-STATUS:ERROR THEN DO:
+  failed=TRUE. DO j=1 TO ERROR-STATUS:NUM-MESSAGES: PUT UNFORMATTED ERROR-STATUS:GET-MESSAGE(j) SKIP. END.
+ END.
+ ELSE PUT UNFORMATTED "PASS " SESSION:NUMERIC-FORMAT SKIP.
+ OUTPUT CLOSE.
+END.
+OUTPUT TO "compile-containers-cabecalho-runtime.log" APPEND.
+PUT UNFORMATTED (IF failed THEN "FAIL RUNTIME" ELSE "PASS RUNTIME") SKIP.
+OUTPUT CLOSE.
+QUIT.

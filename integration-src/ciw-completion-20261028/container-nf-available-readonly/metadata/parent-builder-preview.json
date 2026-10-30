@@ -1,0 +1,211 @@
+{
+  "programDraft": {
+    "programCode": "op1000",
+    "programTitle": "Containers",
+    "module": "operacional",
+    "pageType": "crud",
+    "builderEntityCode": "containers_progress",
+    "screenId": "ciw.containers",
+    "version": "1.0.3",
+    "subtitle": "Consulta de containers",
+    "icon": null,
+    "permissionPrefix": "containers_progress",
+    "gridEditMode": "form",
+    "crudOptions": {
+      "pageSize": 30,
+      "gridFields": [
+        {
+          "field": "container_id",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "cod_estabel",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "cod_emit_forn",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "nome_ab_forn",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "dt_recebimento",
+          "hidden": false,
+          "width": 170
+        },
+        {
+          "field": "dt_prev_chegada",
+          "hidden": false,
+          "width": 170
+        },
+        {
+          "field": "situacao",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "vl_dolar_compra",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "vl_dolar_venda",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "situacao_container_descricao",
+          "hidden": false,
+          "width": 160
+        },
+        {
+          "field": "dt_prev_embarque",
+          "hidden": false,
+          "width": 170
+        },
+        {
+          "field": "dt_real_embarque",
+          "hidden": false,
+          "width": 170
+        },
+        {
+          "field": "num_pedido",
+          "hidden": true,
+          "width": 160
+        },
+        {
+          "field": "dt_compra",
+          "hidden": true,
+          "width": 170
+        },
+        {
+          "field": "exclusivo",
+          "hidden": true,
+          "width": 160
+        },
+        {
+          "field": "ind_dt_embarque",
+          "hidden": true,
+          "width": 160
+        },
+        {
+          "field": "ind_dt_prev_chegada",
+          "hidden": true,
+          "width": 160
+        },
+        {
+          "field": "log_pagto_final",
+          "hidden": true,
+          "width": 160
+        },
+        {
+          "field": "agente_cargas_nome",
+          "hidden": true,
+          "width": 160
+        },
+        {
+          "field": "armador_nome",
+          "hidden": true,
+          "width": 160
+        }
+      ],
+      "filterFields": [
+        "container_id",
+        "log_pagto_final",
+        "cod_emit_forn",
+        "cod_agente_cargas",
+        "cod_armador",
+        "dt_prev_embarque",
+        "dt_real_embarque",
+        "dt_prev_chegada",
+        "dt_recebimento",
+        "situacao",
+        "situacao_container_id"
+      ],
+      "defaultSort": [
+        {
+          "field": "situacao",
+          "dir": "asc"
+        },
+        {
+          "field": "situacao_container_id",
+          "dir": "asc"
+        },
+        {
+          "field": "container_id",
+          "dir": "asc"
+        }
+      ],
+      "defaultGroup": [
+        {
+          "field": "situacao",
+          "dir": "asc"
+        },
+        {
+          "field": "situacao_container_id",
+          "dir": "asc"
+        }
+      ]
+    },
+    "formOptions": null,
+    "rowLinks": [
+      {
+        "id": "painel_container",
+        "label": "Painel do Container",
+        "screenId": "ciw.container-painel",
+        "parameters": [
+          {
+            "field": "container_id",
+            "sourceField": "container_id"
+          }
+        ],
+        "position": "start"
+      },
+      {
+        "id": "nfs_disponiveis_med",
+        "label": "NFs disponíveis — MED",
+        "screenId": "ciw.container-nfs-disponiveis-med",
+        "parameters": [
+          {
+            "field": "container_id",
+            "sourceField": "container_id"
+          }
+        ],
+        "position": "start"
+      }
+    ],
+    "contextFields": [],
+    "allowCreate": false,
+    "allowUpdate": false,
+    "allowDelete": false,
+    "changeSummary": "Acrescenta acesso contextual à consulta MED de NFs disponíveis, inclusive sem notas ou despesas vinculadas.",
+    "programOrigin": "standard",
+    "ownerScope": "system",
+    "customizationPolicy": "overlay_only",
+    "subscriberId": null,
+    "baseProgramCode": null,
+    "baseProgramVersionId": null,
+    "upgradeFrozen": false,
+    "frozenReason": null,
+    "publicationPolicy": {
+      "allowedDatabaseEnvironments": []
+    },
+    "analyticsConfig": null,
+    "reportConfig": null,
+    "specialDocumentConfig": null,
+    "regulatedDocumentConfig": null,
+    "masterDetailConfig": null,
+    "customMode": null,
+    "customEntryUrl": null,
+    "customFrameTitle": null
+  },
+  "previewOnly": true,
+  "sourceReferenceProgram": "op1007",
+  "noEntityOrAuthenticationReplacement": true
+}

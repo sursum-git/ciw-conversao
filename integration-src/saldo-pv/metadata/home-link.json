@@ -1,0 +1,1 @@
+{"id":"iol-estoque-termos-busca","code":"cd0190","title":"Correções da pesquisa de estoque","subtitle":"Equivalências da busca por descrição","type":"crud","screenId":"iol.estoque-termos-busca","moduleId":"ciw","permission":"estoque_termos_busca_progress.read"}

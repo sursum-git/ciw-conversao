@@ -1,0 +1,3240 @@
+{
+    "schemaVersion": "1.0",
+    "pageType": "crud",
+    "screenId": "ciw.container-custos-comparacao-dolar",
+    "program": {
+        "id": "op1041",
+        "module": "operacional",
+        "entity": "container_custos_comparacao_dolar_progress",
+        "title": "ComparaÃ§Ã£o histÃ³rica de custos â€” USD",
+        "version": "1.0.0",
+        "subtitle": "VersÃ£o persistida selecionada; cÃ³digo e descriÃ§Ã£o atuais. Consulta global.",
+        "icon": "file",
+        "permission": "container_custos_comparacao_dolar_progress.read",
+        "programOrigin": "standard",
+        "ownerScope": "system",
+        "customizationPolicy": "overlay_only",
+        "subscriberId": null,
+        "baseProgramCode": null,
+        "baseProgramVersionId": null,
+        "upgradeFrozen": false,
+        "frozenReason": null,
+        "publicationPolicy": {
+            "allowedDatabaseEnvironments": []
+        }
+    },
+    "permissions": {
+        "read": "container_custos_comparacao_dolar_progress.read",
+        "create": false,
+        "edit": false,
+        "delete": false,
+        "saveLayout": "user.preferences"
+    },
+    "dataSource": {
+        "api": {
+            "read": {
+                "endpointId": "read",
+                "method": "POST"
+            },
+            "get": {
+                "endpointId": "get",
+                "method": "POST"
+            },
+            "saveLayout": {
+                "endpointId": "saveLayout",
+                "method": "POST"
+            },
+            "restoreLayout": {
+                "endpointId": "restoreLayout",
+                "method": "POST"
+            },
+            "saveSort": {
+                "endpointId": "saveSort",
+                "method": "POST"
+            },
+            "deleteSort": {
+                "endpointId": "deleteSort",
+                "method": "POST"
+            },
+            "saveGroup": {
+                "endpointId": "saveGroup",
+                "method": "POST"
+            },
+            "deleteGroup": {
+                "endpointId": "deleteGroup",
+                "method": "POST"
+            },
+            "saveFilter": {
+                "endpointId": "saveFilter",
+                "method": "POST"
+            },
+            "deleteFilter": {
+                "endpointId": "deleteFilter",
+                "method": "POST"
+            },
+            "lookupFrequent": {
+                "endpointId": "lookupFrequent",
+                "method": "POST"
+            },
+            "recordLookupUsage": {
+                "endpointId": "recordLookupUsage",
+                "method": "POST"
+            },
+            "saveMobileTemplate": {
+                "endpointId": "saveMobileTemplate",
+                "method": "POST"
+            },
+            "deleteMobileTemplate": {
+                "endpointId": "deleteMobileTemplate",
+                "method": "POST"
+            }
+        }
+    },
+    "runtime": {
+        "entityCode": "container_custos_comparacao_dolar_progress",
+        "programId": "op1041",
+        "mode": "readonly-api",
+        "lock": {
+            "enabled": false,
+            "modes": []
+        },
+        "messages": {
+            "enabled": false,
+            "pollIntervalSeconds": 30,
+            "events": {
+                "enabled": false
+            }
+        }
+    },
+    "contextFields": [
+        {
+            "field": "container_id",
+            "filter": true,
+            "createDefault": true,
+            "readonly": true,
+            "required": true
+        },
+        {
+            "field": "versao_id",
+            "filter": true,
+            "createDefault": true,
+            "readonly": true,
+            "required": true
+        }
+    ],
+    "dataModel": {
+        "primaryKey": "record_key",
+        "fields": {
+            "record_key": {
+                "label": "Chave da linha",
+                "type": "text",
+                "nullable": false,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "record_key"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_custos_comparacao_dolar_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "text"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "string"
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tamanho",
+                        "value": "2048"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "record_key",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": true,
+                    "maxLength": 2048
+                }
+            },
+            "container_id": {
+                "label": "Container",
+                "type": "integer",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "container_id"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_custos_comparacao_dolar_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "container_id",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false
+                }
+            },
+            "versao_id": {
+                "label": "VersÃ£o",
+                "type": "integer",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "versao_id"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_custos_comparacao_dolar_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "versao_id",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false
+                }
+            },
+            "item_container_custo_id": {
+                "label": "Item histÃ³rico",
+                "type": "integer",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "item_container_custo_id"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_custos_comparacao_dolar_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "item_container_custo_id",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false
+                }
+            },
+            "item_container_id": {
+                "label": "Item do container",
+                "type": "integer",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "item_container_id"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_custos_comparacao_dolar_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "integer"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "item_container_id",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false
+                }
+            },
+            "codigo_erp": {
+                "label": "CÃ³digo ERP atual",
+                "type": "text",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "codigo_erp"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_custos_comparacao_dolar_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "text"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "string"
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tamanho",
+                        "value": "160"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "codigo_erp",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false,
+                    "maxLength": 160
+                }
+            },
+            "descricao": {
+                "label": "DescriÃ§Ã£o atual do item",
+                "type": "text",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "descricao"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_custos_comparacao_dolar_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "text"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "string"
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tamanho",
+                        "value": "160"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "descricao",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "validation": {
+                    "required": false,
+                    "maxLength": 160
+                }
+            },
+            "qt_alocada": {
+                "label": "Quantidade alocada",
+                "type": "number",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "qt_alocada"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_custos_comparacao_dolar_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "number"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "numeric"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "qt_alocada",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "decimals": 2,
+                "format": "n2",
+                "validation": {
+                    "required": false
+                }
+            },
+            "qt_confirm_emb": {
+                "label": "Quantidade confirmada",
+                "type": "number",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "qt_confirm_emb"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_custos_comparacao_dolar_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "number"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "numeric"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "qt_confirm_emb",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "decimals": 2,
+                "format": "n2",
+                "validation": {
+                    "required": false
+                }
+            },
+            "vl_custo_prev": {
+                "label": "Mercadoria",
+                "type": "number",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "vl_custo_prev"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_custos_comparacao_dolar_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "number"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "numeric"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "vl_custo_prev",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "decimals": 2,
+                "format": "n2",
+                "validation": {
+                    "required": false
+                }
+            },
+            "vl_desp_prev": {
+                "label": "Despesa",
+                "type": "number",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "vl_desp_prev"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_custos_comparacao_dolar_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "number"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "numeric"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "vl_desp_prev",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "decimals": 2,
+                "format": "n2",
+                "validation": {
+                    "required": false
+                }
+            },
+            "vl_tot_prev": {
+                "label": "Total",
+                "type": "number",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "vl_tot_prev"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_custos_comparacao_dolar_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "number"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "numeric"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "vl_tot_prev",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "decimals": 2,
+                "format": "n2",
+                "validation": {
+                    "required": false
+                }
+            },
+            "vl_unit_prev": {
+                "label": "UnitÃ¡rio",
+                "type": "number",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "vl_unit_prev"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_custos_comparacao_dolar_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "number"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "numeric"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "vl_unit_prev",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "decimals": 2,
+                "format": "n2",
+                "validation": {
+                    "required": false
+                }
+            },
+            "vl_desp_prev_sem_distr_custo": {
+                "label": "Despesa sem distribuiÃ§Ã£o",
+                "type": "number",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "vl_desp_prev_sem_distr_custo"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_custos_comparacao_dolar_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "number"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "numeric"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "vl_desp_prev_sem_distr_custo",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "decimals": 2,
+                "format": "n2",
+                "validation": {
+                    "required": false
+                }
+            },
+            "vl_tot_sem_distr_custo": {
+                "label": "Total sem distribuiÃ§Ã£o",
+                "type": "number",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "vl_tot_sem_distr_custo"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_custos_comparacao_dolar_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "number"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "numeric"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "vl_tot_sem_distr_custo",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "decimals": 2,
+                "format": "n2",
+                "validation": {
+                    "required": false
+                }
+            },
+            "vl_unit_sem_distr_custo": {
+                "label": "UnitÃ¡rio sem distribuiÃ§Ã£o",
+                "type": "number",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "vl_unit_sem_distr_custo"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_custos_comparacao_dolar_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "number"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "numeric"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "vl_unit_sem_distr_custo",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "decimals": 2,
+                "format": "n2",
+                "validation": {
+                    "required": false
+                }
+            },
+            "vl_desp_prev_perc_fixo": {
+                "label": "Despesa percentual fixo",
+                "type": "number",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "vl_desp_prev_perc_fixo"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_custos_comparacao_dolar_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "number"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "numeric"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "vl_desp_prev_perc_fixo",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "decimals": 2,
+                "format": "n2",
+                "validation": {
+                    "required": false
+                }
+            },
+            "vl_tot_perc_fixo": {
+                "label": "Total percentual fixo",
+                "type": "number",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "vl_tot_perc_fixo"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_custos_comparacao_dolar_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "number"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "numeric"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "vl_tot_perc_fixo",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "decimals": 2,
+                "format": "n2",
+                "validation": {
+                    "required": false
+                }
+            },
+            "vl_unit_perc_fixo": {
+                "label": "UnitÃ¡rio percentual fixo",
+                "type": "number",
+                "nullable": true,
+                "technicalProperties": [
+                    {
+                        "section": "Modelo",
+                        "label": "Campo",
+                        "value": "vl_unit_perc_fixo"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Entidade",
+                        "value": "container_custos_comparacao_dolar_progress"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Tipo de dado",
+                        "value": "number"
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Obrigatorio",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Modelo",
+                        "label": "Chave primaria",
+                        "value": "Nao",
+                        "critical": false
+                    },
+                    {
+                        "section": "Banco",
+                        "label": "Tipo banco",
+                        "value": "numeric"
+                    },
+                    {
+                        "section": "Runtime",
+                        "label": "Somente leitura",
+                        "value": "Sim",
+                        "critical": true
+                    },
+                    {
+                        "section": "API",
+                        "label": "JSON Path",
+                        "value": "vl_unit_perc_fixo",
+                        "critical": true
+                    }
+                ],
+                "readonly": true,
+                "editable": false,
+                "decimals": 2,
+                "format": "n2",
+                "validation": {
+                    "required": false
+                }
+            }
+        }
+    },
+    "crud": {
+        "query": {
+            "pageSize": 30,
+            "defaultSort": [
+                {
+                    "field": "item_container_custo_id",
+                    "dir": "asc"
+                }
+            ],
+            "defaultPageSize": 30
+        },
+        "filter": {
+            "type": "window",
+            "mode": "basic",
+            "title": "Filtros",
+            "openOnLoad": false,
+            "showAppliedFilters": true,
+            "fields": [
+                {
+                    "id": "codigo_erp",
+                    "field": "codigo_erp",
+                    "label": "CÃ³digo ERP atual",
+                    "type": "text",
+                    "operator": "contains",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "contains"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "codigo_erp"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_custos_comparacao_dolar_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "text"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "string"
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tamanho",
+                            "value": "160"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "codigo_erp",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "descricao",
+                    "field": "descricao",
+                    "label": "DescriÃ§Ã£o atual do item",
+                    "type": "text",
+                    "operator": "contains",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "contains"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "descricao"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_custos_comparacao_dolar_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "text"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "string"
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tamanho",
+                            "value": "160"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "descricao",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "qt_alocada",
+                    "field": "qt_alocada",
+                    "label": "Quantidade alocada",
+                    "type": "decimal",
+                    "operator": "eq",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "contains"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "qt_alocada"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_custos_comparacao_dolar_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "qt_alocada",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "qt_confirm_emb",
+                    "field": "qt_confirm_emb",
+                    "label": "Quantidade confirmada",
+                    "type": "decimal",
+                    "operator": "eq",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "contains"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "qt_confirm_emb"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_custos_comparacao_dolar_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "qt_confirm_emb",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "vl_custo_prev",
+                    "field": "vl_custo_prev",
+                    "label": "Mercadoria",
+                    "type": "decimal",
+                    "operator": "eq",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "contains"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_custo_prev"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_custos_comparacao_dolar_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_custo_prev",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "vl_desp_prev",
+                    "field": "vl_desp_prev",
+                    "label": "Despesa",
+                    "type": "decimal",
+                    "operator": "eq",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "contains"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_desp_prev"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_custos_comparacao_dolar_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_desp_prev",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "vl_tot_prev",
+                    "field": "vl_tot_prev",
+                    "label": "Total",
+                    "type": "decimal",
+                    "operator": "eq",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "contains"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_tot_prev"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_custos_comparacao_dolar_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_tot_prev",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "vl_unit_prev",
+                    "field": "vl_unit_prev",
+                    "label": "UnitÃ¡rio",
+                    "type": "decimal",
+                    "operator": "eq",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "contains"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_unit_prev"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_custos_comparacao_dolar_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_unit_prev",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "vl_desp_prev_sem_distr_custo",
+                    "field": "vl_desp_prev_sem_distr_custo",
+                    "label": "Despesa sem distribuiÃ§Ã£o",
+                    "type": "decimal",
+                    "operator": "eq",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "contains"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_desp_prev_sem_distr_custo"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_custos_comparacao_dolar_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_desp_prev_sem_distr_custo",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "vl_tot_sem_distr_custo",
+                    "field": "vl_tot_sem_distr_custo",
+                    "label": "Total sem distribuiÃ§Ã£o",
+                    "type": "decimal",
+                    "operator": "eq",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "contains"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_tot_sem_distr_custo"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_custos_comparacao_dolar_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_tot_sem_distr_custo",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "vl_unit_sem_distr_custo",
+                    "field": "vl_unit_sem_distr_custo",
+                    "label": "UnitÃ¡rio sem distribuiÃ§Ã£o",
+                    "type": "decimal",
+                    "operator": "eq",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "contains"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_unit_sem_distr_custo"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_custos_comparacao_dolar_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_unit_sem_distr_custo",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "vl_desp_prev_perc_fixo",
+                    "field": "vl_desp_prev_perc_fixo",
+                    "label": "Despesa percentual fixo",
+                    "type": "decimal",
+                    "operator": "eq",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "contains"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_desp_prev_perc_fixo"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_custos_comparacao_dolar_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_desp_prev_perc_fixo",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "vl_tot_perc_fixo",
+                    "field": "vl_tot_perc_fixo",
+                    "label": "Total percentual fixo",
+                    "type": "decimal",
+                    "operator": "eq",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "contains"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_tot_perc_fixo"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_custos_comparacao_dolar_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_tot_perc_fixo",
+                            "critical": true
+                        }
+                    ]
+                },
+                {
+                    "id": "vl_unit_perc_fixo",
+                    "field": "vl_unit_perc_fixo",
+                    "label": "UnitÃ¡rio percentual fixo",
+                    "type": "decimal",
+                    "operator": "eq",
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Filtro"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Operador inicial",
+                            "value": "contains"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_unit_perc_fixo"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_custos_comparacao_dolar_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_unit_perc_fixo",
+                            "critical": true
+                        }
+                    ]
+                }
+            ]
+        },
+        "grid": {
+            "editing": {
+                "mode": "form"
+            },
+            "pageable": true,
+            "sortable": true,
+            "filterable": false,
+            "groupable": false,
+            "resizable": true,
+            "reorderable": true,
+            "columnMenu": true,
+            "toolbar": [
+                {
+                    "id": "filters",
+                    "label": "Filtros",
+                    "action": "filters",
+                    "icon": "filter"
+                },
+                {
+                    "id": "refresh",
+                    "label": "Atualizar",
+                    "action": "refresh",
+                    "icon": "arrow-rotate-cw"
+                },
+                {
+                    "id": "layout",
+                    "label": "Leiaute",
+                    "action": "layout",
+                    "icon": "columns",
+                    "permission": "saveLayout"
+                }
+            ],
+            "columns": [
+                {
+                    "field": "codigo_erp",
+                    "title": "CÃ³digo ERP atual",
+                    "width": 170,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "220"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "codigo_erp"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_custos_comparacao_dolar_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "text"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "string"
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tamanho",
+                            "value": "160"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "codigo_erp",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "descricao",
+                    "title": "DescriÃ§Ã£o atual do item",
+                    "width": 320,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "220"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "descricao"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_custos_comparacao_dolar_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "text"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "string"
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tamanho",
+                            "value": "160"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "descricao",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "qt_alocada",
+                    "title": "Quantidade alocada",
+                    "width": 170,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "qt_alocada"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_custos_comparacao_dolar_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "qt_alocada",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "qt_confirm_emb",
+                    "title": "Quantidade confirmada",
+                    "width": 170,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "qt_confirm_emb"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_custos_comparacao_dolar_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "qt_confirm_emb",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "vl_custo_prev",
+                    "title": "Mercadoria",
+                    "width": 170,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_custo_prev"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_custos_comparacao_dolar_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_custo_prev",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "vl_desp_prev",
+                    "title": "Despesa",
+                    "width": 170,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_desp_prev"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_custos_comparacao_dolar_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_desp_prev",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "vl_tot_prev",
+                    "title": "Total",
+                    "width": 170,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_tot_prev"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_custos_comparacao_dolar_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_tot_prev",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "vl_unit_prev",
+                    "title": "UnitÃ¡rio",
+                    "width": 170,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_unit_prev"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_custos_comparacao_dolar_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_unit_prev",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "vl_desp_prev_sem_distr_custo",
+                    "title": "Despesa sem distribuiÃ§Ã£o",
+                    "width": 170,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_desp_prev_sem_distr_custo"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_custos_comparacao_dolar_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_desp_prev_sem_distr_custo",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "vl_tot_sem_distr_custo",
+                    "title": "Total sem distribuiÃ§Ã£o",
+                    "width": 170,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_tot_sem_distr_custo"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_custos_comparacao_dolar_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_tot_sem_distr_custo",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "vl_unit_sem_distr_custo",
+                    "title": "UnitÃ¡rio sem distribuiÃ§Ã£o",
+                    "width": 170,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_unit_sem_distr_custo"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_custos_comparacao_dolar_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_unit_sem_distr_custo",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "vl_desp_prev_perc_fixo",
+                    "title": "Despesa percentual fixo",
+                    "width": 170,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_desp_prev_perc_fixo"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_custos_comparacao_dolar_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_desp_prev_perc_fixo",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "vl_tot_perc_fixo",
+                    "title": "Total percentual fixo",
+                    "width": 170,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_tot_perc_fixo"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_custos_comparacao_dolar_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_tot_perc_fixo",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                },
+                {
+                    "field": "vl_unit_perc_fixo",
+                    "title": "UnitÃ¡rio percentual fixo",
+                    "width": 170,
+                    "technicalProperties": [
+                        {
+                            "section": "Exibicao",
+                            "label": "Superficie",
+                            "value": "Grid"
+                        },
+                        {
+                            "section": "Exibicao",
+                            "label": "Largura sugerida",
+                            "value": "150"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Campo",
+                            "value": "vl_unit_perc_fixo"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Entidade",
+                            "value": "container_custos_comparacao_dolar_progress"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Tipo de dado",
+                            "value": "number"
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Obrigatorio",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Modelo",
+                            "label": "Chave primaria",
+                            "value": "Nao",
+                            "critical": false
+                        },
+                        {
+                            "section": "Banco",
+                            "label": "Tipo banco",
+                            "value": "numeric"
+                        },
+                        {
+                            "section": "Runtime",
+                            "label": "Somente leitura",
+                            "value": "Sim",
+                            "critical": true
+                        },
+                        {
+                            "section": "API",
+                            "label": "JSON Path",
+                            "value": "vl_unit_perc_fixo",
+                            "critical": true
+                        }
+                    ],
+                    "visible": true
+                }
+            ],
+            "rowActions": [
+                {
+                    "id": "view",
+                    "label": "Visualizar",
+                    "action": "view",
+                    "icon": "eye",
+                    "permission": "read"
+                }
+            ],
+            "rowLinks": [],
+            "bulkActions": {
+                "enabled": false,
+                "actions": []
+            },
+            "print": {
+                "enabled": false,
+                "options": []
+            }
+        },
+        "form": {
+            "id": "ciw-container-custos-comparacao-dolar-form",
+            "mode": "popup",
+            "layout": "tabs",
+            "maximizeForm": true,
+            "title": {
+                "create": "Incluir comparaã§ã£o histã³rica de custos â€” usd",
+                "view": "Detalhe de comparaã§ã£o histã³rica de custos â€” usd",
+                "edit": "Alterar comparaã§ã£o histã³rica de custos â€” usd",
+                "delete": "Excluir comparaã§ã£o histã³rica de custos â€” usd"
+            },
+            "behavior": {
+                "closeOnSave": true,
+                "closeOnCancel": true
+            },
+            "tabs": [
+                {
+                    "id": "geral",
+                    "title": "Geral",
+                    "sections": [
+                        {
+                            "id": "principal",
+                            "title": "Principal",
+                            "columns": 2,
+                            "fields": [
+                                {
+                                    "field": "codigo_erp",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "descricao",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "qt_alocada",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "qt_confirm_emb",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "vl_custo_prev",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "vl_desp_prev",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "vl_tot_prev",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "vl_unit_prev",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "vl_desp_prev_sem_distr_custo",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "vl_tot_sem_distr_custo",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "vl_unit_sem_distr_custo",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "vl_desp_prev_perc_fixo",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "vl_tot_perc_fixo",
+                                    "readonly": true
+                                },
+                                {
+                                    "field": "vl_unit_perc_fixo",
+                                    "readonly": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "fields": [
+                {
+                    "field": "codigo_erp",
+                    "readonly": true
+                },
+                {
+                    "field": "descricao",
+                    "readonly": true
+                },
+                {
+                    "field": "qt_alocada",
+                    "readonly": true
+                },
+                {
+                    "field": "qt_confirm_emb",
+                    "readonly": true
+                },
+                {
+                    "field": "vl_custo_prev",
+                    "readonly": true
+                },
+                {
+                    "field": "vl_desp_prev",
+                    "readonly": true
+                },
+                {
+                    "field": "vl_tot_prev",
+                    "readonly": true
+                },
+                {
+                    "field": "vl_unit_prev",
+                    "readonly": true
+                },
+                {
+                    "field": "vl_desp_prev_sem_distr_custo",
+                    "readonly": true
+                },
+                {
+                    "field": "vl_tot_sem_distr_custo",
+                    "readonly": true
+                },
+                {
+                    "field": "vl_unit_sem_distr_custo",
+                    "readonly": true
+                },
+                {
+                    "field": "vl_desp_prev_perc_fixo",
+                    "readonly": true
+                },
+                {
+                    "field": "vl_tot_perc_fixo",
+                    "readonly": true
+                },
+                {
+                    "field": "vl_unit_perc_fixo",
+                    "readonly": true
+                }
+            ],
+            "logs": {
+                "enabled": false
+            },
+            "print": {
+                "enabled": false,
+                "options": []
+            },
+            "otherActions": {
+                "enabled": false,
+                "actions": []
+            }
+        },
+        "userLayout": {
+            "enabled": true,
+            "storageKey": "ciw-container-custos-comparacao-dolar-layout"
+        }
+    }
+}
