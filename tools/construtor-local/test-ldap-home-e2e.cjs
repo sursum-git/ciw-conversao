@@ -51,8 +51,13 @@ async function run() {
       hasToken: Boolean(localStorage.getItem("crudEngine.authToken")),
       hasSession: Boolean(localStorage.getItem("crudEngine.runtimeSessionId")),
       loginMessage: (document.querySelector("#login-message") || {}).textContent || "",
-      homeError: (document.querySelector(".crud-message-error") || {}).textContent || ""
+      homeError: (document.querySelector(".crud-message-error") || {}).textContent || "",
+      themeHref: (document.querySelector("#kendo-theme-link") || {}).href || ""
     }));
+
+    if (!state.themeHref.endsWith("/src/styles/material-ima.css")) {
+      throw new Error("HOME_THEME_NOT_MATERIAL");
+    }
 
     const diagnosis = state.homeError ? await page.evaluate(async () => {
       const root = document.createElement("main");
