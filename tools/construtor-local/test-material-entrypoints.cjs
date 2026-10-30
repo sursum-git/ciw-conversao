@@ -31,3 +31,9 @@ test("as configuracoes globais carregam Material IMA", () => {
   assert.match(production.theme.kendoTheme, /material-ima\.css$/);
   assert.match(standard.theme.kendoTheme, /material-ima\.css$/);
 });
+
+test("Material IMA usa a base visual Material 2", () => {
+  const theme = fs.readFileSync(path.join(projectRoot, "src/styles/material-ima.css"), "utf8");
+  assert.match(theme, /@import url\("\.\.\/\.\.\/kendo\/styles\/material-2\.css"\);/);
+  assert.doesNotMatch(theme, /material-main\.css/);
+});

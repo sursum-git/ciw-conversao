@@ -52,11 +52,22 @@ async function run() {
       hasSession: Boolean(localStorage.getItem("crudEngine.runtimeSessionId")),
       loginMessage: (document.querySelector("#login-message") || {}).textContent || "",
       homeError: (document.querySelector(".crud-message-error") || {}).textContent || "",
-      themeHref: (document.querySelector("#kendo-theme-link") || {}).href || ""
+      themeHref: (document.querySelector("#kendo-theme-link") || {}).href || "",
+      material2Loaded: (() => {
+        const link = document.querySelector("#kendo-theme-link");
+        try {
+          return Array.from(link && link.sheet && link.sheet.cssRules || []).some((rule) => String(rule.href || "").endsWith("/kendo/styles/material-2.css"));
+        } catch (_) {
+          return false;
+        }
+      })()
     }));
 
     if (!state.themeHref.endsWith("/src/styles/material-ima.css")) {
       throw new Error("HOME_THEME_NOT_MATERIAL");
+    }
+    if (!state.material2Loaded) {
+      throw new Error("HOME_MATERIAL_2_NOT_LOADED");
     }
 
     const diagnosis = state.homeError ? await page.evaluate(async () => {
