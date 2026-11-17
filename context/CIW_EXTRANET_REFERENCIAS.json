@@ -1,0 +1,352 @@
+[
+  {
+    "source": "ciw.alertas-importacao-med",
+    "path": "crud.grid.rowLinks.0.screenId",
+    "target": "ciw.processos-compra-med"
+  },
+  {
+    "source": "ciw.alertas-importacao-med",
+    "path": "crud.grid.rowLinks.1.screenId",
+    "target": "ciw.container-painel"
+  },
+  {
+    "source": "ciw.container-calculos-impostos-med",
+    "path": "crud.grid.rowLinks.0.screenId",
+    "target": "ciw.container-painel"
+  },
+  {
+    "source": "ciw.container-custos-itens",
+    "path": "crud.grid.rowLinks.0.screenId",
+    "target": "ciw.proc-compra-itens"
+  },
+  {
+    "source": "ciw.container-custos-itens",
+    "path": "crud.grid.rowLinks.1.screenId",
+    "target": "ciw.container-itens"
+  },
+  {
+    "source": "ciw.container-despesa-memoria-med",
+    "path": "crud.grid.rowLinks.0.screenId",
+    "target": "ciw.container-calculos-impostos-med"
+  },
+  {
+    "source": "ciw.container-despesa-memoria-med",
+    "path": "crud.grid.rowLinks.1.screenId",
+    "target": "ciw.container-painel"
+  },
+  {
+    "source": "ciw.container-despesas",
+    "path": "crud.grid.rowLinks.0.screenId",
+    "target": "ciw.container-despesa-memoria-med"
+  },
+  {
+    "source": "ciw.container-despesas",
+    "path": "crud.grid.rowLinks.1.screenId",
+    "target": "ciw.container-calcular-impostos"
+  },
+  {
+    "source": "ciw.container-despesas",
+    "path": "crud.grid.rowLinks.2.screenId",
+    "target": "ciw.container-selecionar-despesas"
+  },
+  {
+    "source": "ciw.container-despesas",
+    "path": "crud.grid.rowLinks.3.screenId",
+    "target": "ciw.container-despesas-lote"
+  },
+  {
+    "source": "ciw.container-itens",
+    "path": "crud.grid.rowLinks.0.screenId",
+    "target": "ciw.proc-compra-itens"
+  },
+  {
+    "source": "ciw.container-painel",
+    "path": "crud.form.returnScreenId",
+    "target": "ciw.containers"
+  },
+  {
+    "source": "ciw.container-painel",
+    "path": "crud.form.tabs.1.linkedPage.screenId",
+    "target": "ciw.container-resumo"
+  },
+  {
+    "source": "ciw.container-painel",
+    "path": "crud.form.tabs.10.linkedPage.screenId",
+    "target": "ciw.container-rastro-dolar"
+  },
+  {
+    "source": "ciw.container-painel",
+    "path": "crud.form.tabs.11.linkedPage.screenId",
+    "target": "ciw.container-gerar-versao"
+  },
+  {
+    "source": "ciw.container-painel",
+    "path": "crud.form.tabs.12.linkedPage.screenId",
+    "target": "ciw.container-fechar-custos"
+  },
+  {
+    "source": "ciw.container-painel",
+    "path": "crud.form.tabs.13.linkedPage.screenId",
+    "target": "ciw.container-sincronizar-impostos"
+  },
+  {
+    "source": "ciw.container-painel",
+    "path": "crud.form.tabs.14.linkedPage.screenId",
+    "target": "ciw.container-alocar-itens"
+  },
+  {
+    "source": "ciw.container-painel",
+    "path": "crud.form.tabs.2.linkedPage.screenId",
+    "target": "ciw.container-itens"
+  },
+  {
+    "source": "ciw.container-painel",
+    "path": "crud.form.tabs.3.linkedPage.screenId",
+    "target": "ciw.container-custos-itens"
+  },
+  {
+    "source": "ciw.container-painel",
+    "path": "crud.form.tabs.4.linkedPage.screenId",
+    "target": "ciw.container-despesas"
+  },
+  {
+    "source": "ciw.container-painel",
+    "path": "crud.form.tabs.5.linkedPage.screenId",
+    "target": "ciw.container-anexos"
+  },
+  {
+    "source": "ciw.container-painel",
+    "path": "crud.form.tabs.6.linkedPage.screenId",
+    "target": "ciw.container-versoes-custo"
+  },
+  {
+    "source": "ciw.container-painel",
+    "path": "crud.form.tabs.7.linkedPage.screenId",
+    "target": "ciw.container-pagamentos"
+  },
+  {
+    "source": "ciw.container-painel",
+    "path": "crud.form.tabs.8.linkedPage.screenId",
+    "target": "ciw.container-nfs"
+  },
+  {
+    "source": "ciw.container-painel",
+    "path": "crud.form.tabs.9.linkedPage.screenId",
+    "target": "ciw.container-comparativos"
+  },
+  {
+    "source": "ciw.container-painel",
+    "path": "crud.grid.rowLinks.0.screenId",
+    "target": "ciw.container-alocar-itens"
+  },
+  {
+    "source": "ciw.container-versoes-custo",
+    "path": "crud.grid.rowLinks.0.screenId",
+    "target": "ciw.container-versao-itens-historico"
+  },
+  {
+    "source": "ciw.container-versoes-custo",
+    "path": "crud.grid.rowLinks.1.screenId",
+    "target": "ciw.container-versao-pagamentos-historico"
+  },
+  {
+    "source": "ciw.container-versoes-custo",
+    "path": "crud.grid.rowLinks.2.screenId",
+    "target": "ciw.container-versao-nfs-historico"
+  },
+  {
+    "source": "ciw.container-versoes-custo",
+    "path": "crud.grid.rowLinks.3.screenId",
+    "target": "ciw.container-versao-descontos-historico"
+  },
+  {
+    "source": "ciw.container-versoes-custo",
+    "path": "crud.grid.rowLinks.4.screenId",
+    "target": "ciw.container-versao-despesas-historico"
+  },
+  {
+    "source": "ciw.container-versoes-custo",
+    "path": "crud.grid.rowLinks.5.screenId",
+    "target": "ciw.container-custos-comparacao-real"
+  },
+  {
+    "source": "ciw.container-versoes-custo",
+    "path": "crud.grid.rowLinks.6.screenId",
+    "target": "ciw.container-custos-comparacao-dolar"
+  },
+  {
+    "source": "ciw.containers",
+    "path": "crud.grid.rowLinks.0.screenId",
+    "target": "ciw.container-painel"
+  },
+  {
+    "source": "ciw.containers",
+    "path": "crud.grid.rowLinks.1.screenId",
+    "target": "ciw.container-nfs-disponiveis-med"
+  },
+  {
+    "source": "ciw.cotacoes-bc",
+    "path": "crud.grid.rowLinks.0.screenId",
+    "target": "ciw.cotacoes-bc-buscar"
+  },
+  {
+    "source": "ciw.despesas",
+    "path": "crud.grid.rowLinks.0.screenId",
+    "target": "ciw.empresas-despesa"
+  },
+  {
+    "source": "ciw.proc-compra-alertas",
+    "path": "crud.grid.rowLinks.0.screenId",
+    "target": "ciw.proc-compra-itens"
+  },
+  {
+    "source": "ciw.proc-compra-alocacoes",
+    "path": "crud.grid.rowLinks.0.screenId",
+    "target": "ciw.container-painel"
+  },
+  {
+    "source": "ciw.proc-compra-itens",
+    "path": "crud.form.tabs.5.linkedPage.screenId",
+    "target": "ciw.proc-compra-amostras"
+  },
+  {
+    "source": "ciw.proc-compra-itens",
+    "path": "crud.form.tabs.6.linkedPage.screenId",
+    "target": "ciw.proc-compra-anexos"
+  },
+  {
+    "source": "ciw.proc-compra-itens",
+    "path": "crud.form.tabs.7.linkedPage.screenId",
+    "target": "ciw.proc-compra-alocacoes"
+  },
+  {
+    "source": "ciw.proc-compra-itens",
+    "path": "crud.form.tabs.8.linkedPage.screenId",
+    "target": "ciw.formatos-amostra"
+  },
+  {
+    "source": "ciw.proc-compra-itens",
+    "path": "crud.grid.rowLinks.0.screenId",
+    "target": "ciw.proc-compra-amostras"
+  },
+  {
+    "source": "ciw.proc-compra-itens",
+    "path": "crud.grid.rowLinks.1.screenId",
+    "target": "ciw.proc-compra-anexos"
+  },
+  {
+    "source": "ciw.proc-compra-itens",
+    "path": "crud.grid.rowLinks.2.screenId",
+    "target": "ciw.proc-compra-alocacoes"
+  },
+  {
+    "source": "ciw.proc-compra-itens",
+    "path": "crud.grid.rowLinks.3.screenId",
+    "target": "ciw.formatos-amostra"
+  },
+  {
+    "source": "ciw.proc-compra-quantidades",
+    "path": "crud.grid.rowLinks.0.screenId",
+    "target": "ciw.proc-compra-itens"
+  },
+  {
+    "source": "ciw.proc-compra-quantidades",
+    "path": "crud.grid.rowLinks.1.screenId",
+    "target": "ciw.proc-compra-alocacoes"
+  },
+  {
+    "source": "ciw.processos-compra-med",
+    "path": "crud.form.tabs.10.linkedPage.screenId",
+    "target": "ciw.proc-compra-quantidades"
+  },
+  {
+    "source": "ciw.processos-compra-med",
+    "path": "crud.form.tabs.2.linkedPage.screenId",
+    "target": "ciw.proc-compra-itens"
+  },
+  {
+    "source": "ciw.processos-compra-med",
+    "path": "crud.form.tabs.3.linkedPage.screenId",
+    "target": "ciw.proc-compra-pagamentos"
+  },
+  {
+    "source": "ciw.processos-compra-med",
+    "path": "crud.form.tabs.4.linkedPage.screenId",
+    "target": "ciw.proc-compra-documentos"
+  },
+  {
+    "source": "ciw.processos-compra-med",
+    "path": "crud.form.tabs.5.linkedPage.screenId",
+    "target": "ciw.proc-compra-despesas"
+  },
+  {
+    "source": "ciw.processos-compra-med",
+    "path": "crud.form.tabs.6.linkedPage.screenId",
+    "target": "ciw.proc-compra-gerar-despesas"
+  },
+  {
+    "source": "ciw.processos-compra-med",
+    "path": "crud.form.tabs.7.linkedPage.screenId",
+    "target": "ciw.proc-compra-resumo"
+  },
+  {
+    "source": "ciw.processos-compra-med",
+    "path": "crud.form.tabs.8.linkedPage.screenId",
+    "target": "ciw.proc-compra-calcular-impostos"
+  },
+  {
+    "source": "ciw.processos-compra-med",
+    "path": "crud.form.tabs.9.linkedPage.screenId",
+    "target": "ciw.proc-compra-alertas"
+  },
+  {
+    "source": "ciw.processos-compra-med",
+    "path": "crud.grid.rowLinks.0.screenId",
+    "target": "ciw.proc-compra-documentos"
+  },
+  {
+    "source": "ciw.processos-compra-med",
+    "path": "crud.grid.rowLinks.1.screenId",
+    "target": "ciw.proc-compra-despesas"
+  },
+  {
+    "source": "ciw.processos-compra-med",
+    "path": "crud.grid.rowLinks.2.screenId",
+    "target": "ciw.proc-compra-gerar-despesas"
+  },
+  {
+    "source": "ciw.processos-compra-med",
+    "path": "crud.grid.rowLinks.3.screenId",
+    "target": "ciw.proc-compra-resumo"
+  },
+  {
+    "source": "ciw.processos-compra-med",
+    "path": "crud.grid.rowLinks.4.screenId",
+    "target": "ciw.proc-compra-calcular-impostos"
+  },
+  {
+    "source": "ciw.processos-compra-med",
+    "path": "crud.grid.rowLinks.5.screenId",
+    "target": "ciw.proc-compra-alertas"
+  },
+  {
+    "source": "ciw.processos-compra-med",
+    "path": "crud.grid.rowLinks.6.screenId",
+    "target": "ciw.proc-compra-quantidades"
+  },
+  {
+    "source": "ciw.quantidades-importadas-med",
+    "path": "crud.grid.rowLinks.0.screenId",
+    "target": "ciw.proc-compra-itens"
+  },
+  {
+    "source": "ciw.quantidades-importadas-med",
+    "path": "crud.grid.rowLinks.1.screenId",
+    "target": "ciw.proc-compra-alocacoes"
+  },
+  {
+    "source": "ciw.sinalizadores-importacao-med",
+    "path": "crud.grid.rowLinks.0.screenId",
+    "target": "ciw.alertas-importacao-med"
+  }
+]

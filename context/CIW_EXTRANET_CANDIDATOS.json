@@ -1,0 +1,866 @@
+[
+  {
+    "screen": "ciw.alertas-importacao-med",
+    "code": "op1032",
+    "version": "1.0.0",
+    "entity": "proc_compra_sinalizados_med_progress",
+    "file": "../construtor-pg/integrations\\ciw-purchase-signals-global\\alertas-importacao-med-builder-draft.json",
+    "sha256": "7235d348e8dd761206232f7b7c69c03bb79520448360f524dd8be06d87de27ba"
+  },
+  {
+    "screen": "ciw.alertas-importacao-med",
+    "code": "op1032",
+    "version": "1.0.0",
+    "entity": "proc_compra_sinalizados_med_progress",
+    "file": "integration-src\\purchase-pending-20261028\\signals-global\\metadata\\alertas-importacao-med-builder-draft.json",
+    "sha256": "7235d348e8dd761206232f7b7c69c03bb79520448360f524dd8be06d87de27ba"
+  },
+  {
+    "screen": "ciw.coloracoes",
+    "code": "cd0094",
+    "version": "1.0.0",
+    "entity": "coloracoes_progress",
+    "file": "../construtor-pg/integrations\\ciw-cadastros\\coloracoes-builder-draft.json",
+    "sha256": "04c887cd4f1c7661e73174e7ce16828907ba197bcd45e2ca5836eae31656cd94"
+  },
+  {
+    "screen": "ciw.coloracoes",
+    "code": "cd0094",
+    "version": "1.0.0",
+    "entity": "coloracoes_progress",
+    "file": "integration-src\\ciw-cadastros\\metadata\\coloracoes-builder-draft.json",
+    "sha256": "04c887cd4f1c7661e73174e7ce16828907ba197bcd45e2ca5836eae31656cd94"
+  },
+  {
+    "screen": "ciw.container-alocar-itens",
+    "code": "op1025",
+    "version": "1.0.0",
+    "entity": "container_alocacao_progress",
+    "file": "../construtor-pg/integrations\\ciw-container-allocation\\container-alocar-itens-builder-draft.json",
+    "sha256": "ad2e871ea2791fafe5119022b634b7607ae55b2927bebca8f0fcaa283f6bdbf5"
+  },
+  {
+    "screen": "ciw.container-alocar-itens",
+    "code": "op1025",
+    "version": "1.0.0",
+    "entity": "container_alocacao_progress",
+    "file": "integration-src\\container-allocation-batch\\metadata\\container-alocar-itens-builder-draft.json",
+    "sha256": "ad2e871ea2791fafe5119022b634b7607ae55b2927bebca8f0fcaa283f6bdbf5"
+  },
+  {
+    "screen": "ciw.container-comparativos",
+    "code": "op1010",
+    "version": "1.0.0",
+    "entity": "container_custo_comparativos_progress",
+    "file": "../construtor-pg/integrations\\ciw-container-painel\\custo-comparativos-builder-draft.json",
+    "sha256": "7ea55b960155c72349cc5d3dd86c67bbb234ba35eebe73f18fbd24cd1237fd40"
+  },
+  {
+    "screen": "ciw.container-comparativos",
+    "code": "op1010",
+    "version": "1.0.0",
+    "entity": "container_custo_comparativos_progress",
+    "file": "integration-src\\container-panel\\metadata\\custo-comparativos-builder-draft.json",
+    "sha256": "7ea55b960155c72349cc5d3dd86c67bbb234ba35eebe73f18fbd24cd1237fd40"
+  },
+  {
+    "screen": "ciw.container-despesas",
+    "code": "op1003",
+    "version": "1.0.0",
+    "entity": "container_despesas_progress",
+    "file": "integration-src\\container-panel\\metadata\\despesas-builder-draft.json",
+    "sha256": "10e91579a2a26554067a092f4baa01a0631f3e2745bfa6c485e8be5c885ff980"
+  },
+  {
+    "screen": "ciw.container-despesas",
+    "code": "op1003",
+    "version": "1.0.1",
+    "entity": "container_despesas_progress",
+    "file": "../construtor-pg/integrations\\ciw-container-painel\\despesas-1.0.1-builder-draft-candidate.json",
+    "sha256": "6f4596622e1e3806227701ff890d7f007ddae143a4a88013f349ae8a8c16019e"
+  },
+  {
+    "screen": "ciw.container-despesas",
+    "code": "op1003",
+    "version": "1.0.1",
+    "entity": "container_despesas_progress",
+    "file": "../construtor-pg/integrations\\ciw-container-painel\\despesas-builder-draft.json",
+    "sha256": "6f4596622e1e3806227701ff890d7f007ddae143a4a88013f349ae8a8c16019e"
+  },
+  {
+    "screen": "ciw.container-despesas",
+    "code": "op1003",
+    "version": "1.0.1",
+    "entity": "container_despesas_progress",
+    "file": "integration-src\\container-panel\\metadata\\despesas-1.0.1-builder-draft-candidate.json",
+    "sha256": "6f4596622e1e3806227701ff890d7f007ddae143a4a88013f349ae8a8c16019e"
+  },
+  {
+    "screen": "ciw.container-itens",
+    "code": "op1002",
+    "version": "1.0.0",
+    "entity": "container_itens_progress",
+    "file": "../construtor-pg/integrations\\ciw-container-painel\\itens-builder-draft.json",
+    "sha256": "942418dc5dbae840d1e31a9bc770bd6e7f3e634628fdf8bfac6cb03703e17a55"
+  },
+  {
+    "screen": "ciw.container-itens",
+    "code": "op1002",
+    "version": "1.0.0",
+    "entity": "container_itens_progress",
+    "file": "integration-src\\container-panel\\metadata\\itens-builder-draft.json",
+    "sha256": "942418dc5dbae840d1e31a9bc770bd6e7f3e634628fdf8bfac6cb03703e17a55"
+  },
+  {
+    "screen": "ciw.container-itens",
+    "code": "op1002",
+    "version": "1.0.1",
+    "entity": "container_itens_progress",
+    "file": "../construtor-pg/integrations\\ciw-container-painel\\itens-1.0.1-builder-draft-candidate.json",
+    "sha256": "351a5ab8fa9a8af10b3717343956158310a2804c145d2dd5099d61fa8ea2ea7f"
+  },
+  {
+    "screen": "ciw.container-itens",
+    "code": "op1002",
+    "version": "1.0.1",
+    "entity": "container_itens_progress",
+    "file": "integration-src\\container-panel\\metadata\\itens-1.0.1-builder-draft-candidate.json",
+    "sha256": "351a5ab8fa9a8af10b3717343956158310a2804c145d2dd5099d61fa8ea2ea7f"
+  },
+  {
+    "screen": "ciw.container-painel",
+    "code": "op1001",
+    "version": "1.0.0",
+    "entity": "container_painel_progress",
+    "file": "integration-src\\container-panel\\metadata\\painel-builder-draft.json",
+    "sha256": "f8c52adbeffd9858a11b8ff6610a1b94b2e034ec49c852bedfeda44db816bae2"
+  },
+  {
+    "screen": "ciw.container-painel",
+    "code": "op1001",
+    "version": "1.0.1",
+    "entity": "container_painel_progress",
+    "file": "integration-src\\container-panel\\metadata\\painel-1.0.1-builder-draft.json",
+    "sha256": "b8a6c51fe856e61223d122efdb8069da00a4afeafb9c78362d3822b4555764d9"
+  },
+  {
+    "screen": "ciw.container-painel",
+    "code": "op1001",
+    "version": "1.0.2",
+    "entity": "container_painel_progress",
+    "file": "integration-src\\container-panel\\metadata\\painel-1.0.2-available-builder-draft.json",
+    "sha256": "f108701859de0b6345b203bfef4cff93b3dd46e47f1a3eb94bc24ad334df8516"
+  },
+  {
+    "screen": "ciw.container-painel",
+    "code": "op1001",
+    "version": "1.0.2",
+    "entity": "container_painel_progress",
+    "file": "integration-src\\container-panel\\metadata\\painel-1.0.2-builder-draft.json",
+    "sha256": "878bf2f412c2852de012784762278cc4066ac208ddaf95d1b782c1cc0d8828ed"
+  },
+  {
+    "screen": "ciw.container-painel",
+    "code": "op1001",
+    "version": "1.0.3",
+    "entity": "container_painel_progress",
+    "file": "../construtor-pg/integrations\\ciw-container-painel\\painel-1.0.3-builder-draft.json",
+    "sha256": "0d581661a14cced78b46c7d0fbcd24607d06cc521838736d3ed1df9b2820e202"
+  },
+  {
+    "screen": "ciw.container-painel",
+    "code": "op1001",
+    "version": "1.0.3",
+    "entity": "container_painel_progress",
+    "file": "integration-src\\container-panel\\metadata\\painel-1.0.3-builder-draft.json",
+    "sha256": "0d581661a14cced78b46c7d0fbcd24607d06cc521838736d3ed1df9b2820e202"
+  },
+  {
+    "screen": "ciw.container-painel",
+    "code": "op1001",
+    "version": "1.0.4",
+    "entity": "container_painel_progress",
+    "file": "../construtor-pg/integrations\\ciw-container-painel\\painel-1.0.4-builder-draft-candidate.json",
+    "sha256": "1a011940e7cb2ee2735d6656cb67949f7d7d359b0677d067a8dcdf90179b9a3e"
+  },
+  {
+    "screen": "ciw.container-painel",
+    "code": "op1001",
+    "version": "1.0.4",
+    "entity": "container_painel_progress",
+    "file": "../construtor-pg/integrations\\ciw-container-painel\\painel-builder-draft.json",
+    "sha256": "1a011940e7cb2ee2735d6656cb67949f7d7d359b0677d067a8dcdf90179b9a3e"
+  },
+  {
+    "screen": "ciw.container-painel",
+    "code": "op1001",
+    "version": "1.0.4",
+    "entity": "container_painel_progress",
+    "file": "integration-src\\container-panel\\metadata\\painel-1.0.4-builder-draft-candidate.json",
+    "sha256": "1a011940e7cb2ee2735d6656cb67949f7d7d359b0677d067a8dcdf90179b9a3e"
+  },
+  {
+    "screen": "ciw.container-painel",
+    "code": "op1001",
+    "version": "1.0.5",
+    "entity": "container_painel_progress",
+    "file": "../construtor-pg/integrations\\ciw-container-painel\\painel-1.0.5-builder-draft-candidate.json",
+    "sha256": "eadbf84f98d63aae5cf62806f424885f786e7d8119282a17f3049b832e8b0ba4"
+  },
+  {
+    "screen": "ciw.container-painel",
+    "code": "op1001",
+    "version": "1.0.5",
+    "entity": "container_painel_progress",
+    "file": "integration-src\\container-panel\\metadata\\painel-1.0.5-builder-draft-candidate.json",
+    "sha256": "eadbf84f98d63aae5cf62806f424885f786e7d8119282a17f3049b832e8b0ba4"
+  },
+  {
+    "screen": "ciw.container-painel",
+    "code": "op1001",
+    "version": "1.0.6",
+    "entity": "container_painel_progress",
+    "file": "../construtor-pg/integrations\\ciw-container-painel\\painel-1.0.6-builder-draft-candidate.json",
+    "sha256": "f7f9a202d630ef9917649a875a83ba7e85bc45e64f03242493b6d160ad0119e8"
+  },
+  {
+    "screen": "ciw.container-painel",
+    "code": "op1001",
+    "version": "1.0.6",
+    "entity": "container_painel_progress",
+    "file": "integration-src\\container-panel\\metadata\\painel-1.0.6-builder-draft-candidate.json",
+    "sha256": "f7f9a202d630ef9917649a875a83ba7e85bc45e64f03242493b6d160ad0119e8"
+  },
+  {
+    "screen": "ciw.container-painel",
+    "code": "op1001",
+    "version": "1.0.7",
+    "entity": "container_painel_progress",
+    "file": "../construtor-pg/integrations\\ciw-container-painel\\painel-1.0.7-builder-draft-candidate.json",
+    "sha256": "bdaa87ad4183de790ef6cba2fa81a687a4795efda632a5d9643395e7318e143f"
+  },
+  {
+    "screen": "ciw.container-painel",
+    "code": "op1001",
+    "version": "1.0.8",
+    "entity": "container_painel_progress",
+    "file": "../construtor-pg/integrations\\ciw-container-allocation\\container-painel-builder-draft.json",
+    "sha256": "2ebe39cfad714880282e312777dfbd7859aecce6049357c2a62389b73e1d8cea"
+  },
+  {
+    "screen": "ciw.container-painel",
+    "code": "op1001",
+    "version": "1.0.8",
+    "entity": "container_painel_progress",
+    "file": "../construtor-pg/integrations\\ciw-container-painel\\painel-1.0.8-builder-draft-candidate.json",
+    "sha256": "2ebe39cfad714880282e312777dfbd7859aecce6049357c2a62389b73e1d8cea"
+  },
+  {
+    "screen": "ciw.container-painel",
+    "code": "op1001",
+    "version": "1.0.8",
+    "entity": "container_painel_progress",
+    "file": "integration-src\\container-allocation-batch\\metadata\\container-painel-builder-draft.json",
+    "sha256": "2ebe39cfad714880282e312777dfbd7859aecce6049357c2a62389b73e1d8cea"
+  },
+  {
+    "screen": "ciw.container-rastro-dolar",
+    "code": "op1011",
+    "version": "1.0.0",
+    "entity": "container_custo_rastro_progress",
+    "file": "../construtor-pg/integrations\\ciw-container-painel\\custo-rastro-builder-draft.json",
+    "sha256": "aea49642d001e1a3bb30243f694c984469ae195d87dc4aa33e36b3f12381c8df"
+  },
+  {
+    "screen": "ciw.container-rastro-dolar",
+    "code": "op1011",
+    "version": "1.0.0",
+    "entity": "container_custo_rastro_progress",
+    "file": "integration-src\\container-panel\\metadata\\custo-rastro-builder-draft.json",
+    "sha256": "aea49642d001e1a3bb30243f694c984469ae195d87dc4aa33e36b3f12381c8df"
+  },
+  {
+    "screen": "ciw.container-resumo",
+    "code": "op1009",
+    "version": "1.0.0",
+    "entity": "container_custo_resumo_progress",
+    "file": "../construtor-pg/integrations\\ciw-container-painel\\custo-resumo-builder-draft.json",
+    "sha256": "b90ae941b8731c2e9e02ee06017a4c7279a302ea9a91dc8a25fee8fc70757528"
+  },
+  {
+    "screen": "ciw.container-resumo",
+    "code": "op1009",
+    "version": "1.0.0",
+    "entity": "container_custo_resumo_progress",
+    "file": "integration-src\\container-panel\\metadata\\custo-resumo-builder-draft.json",
+    "sha256": "b90ae941b8731c2e9e02ee06017a4c7279a302ea9a91dc8a25fee8fc70757528"
+  },
+  {
+    "screen": "ciw.container-sincronizar-impostos",
+    "code": "op1017",
+    "version": "1.0.0",
+    "entity": "container_processos_progress",
+    "file": "../construtor-pg/integrations\\ciw-container-painel\\processo-sincronizar-impostos-builder-draft-candidate.json",
+    "sha256": "ebf5d03559495dc5df93b7614679317ff4453a2a550c8213d6fce72fe43a0f2f"
+  },
+  {
+    "screen": "ciw.container-sincronizar-impostos",
+    "code": "op1017",
+    "version": "1.0.0",
+    "entity": "container_processos_progress",
+    "file": "integration-src\\container-panel\\metadata\\processo-sincronizar-impostos-builder-draft-candidate.json",
+    "sha256": "ebf5d03559495dc5df93b7614679317ff4453a2a550c8213d6fce72fe43a0f2f"
+  },
+  {
+    "screen": "ciw.cotacoes-bc",
+    "code": "cd0103",
+    "version": "1.0.0",
+    "entity": "hist_cotacoes_bc_progress",
+    "file": "../construtor-pg/integrations\\ciw-cotacoes\\hist-cotacoes-bc-builder-draft.json",
+    "sha256": "57ef4a56324bbd16846957fa96b767fc47686135e53615316392906c353c9d87"
+  },
+  {
+    "screen": "ciw.cotacoes-bc",
+    "code": "cd0103",
+    "version": "1.0.0",
+    "entity": "hist_cotacoes_bc_progress",
+    "file": "integration-src\\ciw-cotacoes\\metadata\\hist-cotacoes-bc-builder-draft.json",
+    "sha256": "57ef4a56324bbd16846957fa96b767fc47686135e53615316392906c353c9d87"
+  },
+  {
+    "screen": "ciw.cotacoes-bc",
+    "code": "cd0103",
+    "version": "1.0.1",
+    "entity": "hist_cotacoes_bc_progress",
+    "file": "../construtor-pg/integrations\\ciw-bc-client\\cotacoes-1.0.1-builder-draft.json",
+    "sha256": "2e4d0ec3501a69c62ad60c4a4ee481f7582995ca1f7ca93ed01d0cbf43cdaac7"
+  },
+  {
+    "screen": "ciw.cotacoes-bc",
+    "code": "cd0103",
+    "version": "1.0.1",
+    "entity": "hist_cotacoes_bc_progress",
+    "file": "integration-src\\ciw-bc-client\\metadata\\cotacoes-1.0.1-builder-draft.json",
+    "sha256": "2e4d0ec3501a69c62ad60c4a4ee481f7582995ca1f7ca93ed01d0cbf43cdaac7"
+  },
+  {
+    "screen": "ciw.despesas",
+    "code": "cd0092",
+    "version": "1.0.2",
+    "entity": "despesas_progress",
+    "file": "../construtor-pg/integrations\\ciw-despesas\\builder-draft.json",
+    "sha256": "c800b65a560f663cfce1d3c8ef65392a33a1deed8f4b4d42f9b4afa29c5c5e53"
+  },
+  {
+    "screen": "ciw.despesas",
+    "code": "cd0092",
+    "version": "1.0.2",
+    "entity": "despesas_progress",
+    "file": "integration-src\\despesas\\despesas\\builder-draft.json",
+    "sha256": "c800b65a560f663cfce1d3c8ef65392a33a1deed8f4b4d42f9b4afa29c5c5e53"
+  },
+  {
+    "screen": "ciw.despesas",
+    "code": "cd0092",
+    "version": "1.0.2",
+    "entity": "despesas_progress",
+    "file": "integration-src\\row-link-icons\\integrations\\ciw-despesas\\builder-draft.json",
+    "sha256": "c800b65a560f663cfce1d3c8ef65392a33a1deed8f4b4d42f9b4afa29c5c5e53"
+  },
+  {
+    "screen": "ciw.empresas",
+    "code": "cd0090",
+    "version": "1.0.0",
+    "entity": "empresas_progress",
+    "file": "../construtor-pg/integrations\\ciw-empresas\\builder-draft.json",
+    "sha256": "1f78bc09f657079467459dca724fb48552fa9af1b131128ca4a3e8c7cb0ce6af"
+  },
+  {
+    "screen": "ciw.empresas",
+    "code": "cd0090",
+    "version": "1.0.0",
+    "entity": "empresas_progress",
+    "file": "integration-src\\metadata\\builder-draft.json",
+    "sha256": "1f78bc09f657079467459dca724fb48552fa9af1b131128ca4a3e8c7cb0ce6af"
+  },
+  {
+    "screen": "ciw.empresas-despesa",
+    "code": "cd0093",
+    "version": "1.0.1",
+    "entity": "empresas_despesa_progress",
+    "file": "../construtor-pg/integrations\\ciw-empresas-despesa\\builder-draft.json",
+    "sha256": "41d515fae29ab2d9993f1b8a4af13b18c7809e80b4267257c023ad1c3b8f7de8"
+  },
+  {
+    "screen": "ciw.empresas-despesa",
+    "code": "cd0093",
+    "version": "1.0.1",
+    "entity": "empresas_despesa_progress",
+    "file": "integration-src\\despesas\\empresas-despesa\\builder-draft.json",
+    "sha256": "41d515fae29ab2d9993f1b8a4af13b18c7809e80b4267257c023ad1c3b8f7de8"
+  },
+  {
+    "screen": "ciw.formatos-amostra",
+    "code": "cd0109",
+    "version": "1.0.0",
+    "entity": "formatos_amostra_progress",
+    "file": "../construtor-pg/integrations\\ciw-purchase-sample-formats\\formatos-amostra-builder-draft.json",
+    "sha256": "9faab1b97eb9b9bb6832a8fefab601e25ff62c75e8a7ff830506a4c08611db12"
+  },
+  {
+    "screen": "ciw.formatos-amostra",
+    "code": "cd0109",
+    "version": "1.0.0",
+    "entity": "formatos_amostra_progress",
+    "file": "integration-src\\purchase-sample-formats\\metadata\\formatos-amostra-builder-draft.json",
+    "sha256": "9faab1b97eb9b9bb6832a8fefab601e25ff62c75e8a7ff830506a4c08611db12"
+  },
+  {
+    "screen": "ciw.fornecedores",
+    "code": "cd0099",
+    "version": "1.0.0",
+    "entity": "fornecedores_consulta_progress",
+    "file": "../construtor-pg/integrations\\ciw-fornecedores\\fornecedores-builder-draft.json",
+    "sha256": "e43203f9607377185b52fde3af81f4423c3b52b51b88cb1f2acf56d5ec0109f1"
+  },
+  {
+    "screen": "ciw.fornecedores",
+    "code": "cd0099",
+    "version": "1.0.0",
+    "entity": "fornecedores_consulta_progress",
+    "file": "integration-src\\ciw-fornecedores\\metadata\\fornecedores-builder-draft.json",
+    "sha256": "e43203f9607377185b52fde3af81f4423c3b52b51b88cb1f2acf56d5ec0109f1"
+  },
+  {
+    "screen": "ciw.fornecedores-estrangeiros",
+    "code": "cd0100",
+    "version": "1.0.0",
+    "entity": "fornecedores_estrangeiros_consulta_progress",
+    "file": "../construtor-pg/integrations\\ciw-fornecedores\\fornecedores_estrangeiros-builder-draft.json",
+    "sha256": "30979094cbba866b6c4f88e99dea9c0a88b3a712afaba134cbae8b10ef1fbd89"
+  },
+  {
+    "screen": "ciw.fornecedores-estrangeiros",
+    "code": "cd0100",
+    "version": "1.0.0",
+    "entity": "fornecedores_estrangeiros_consulta_progress",
+    "file": "integration-src\\ciw-fornecedores\\metadata\\fornecedores_estrangeiros-builder-draft.json",
+    "sha256": "30979094cbba866b6c4f88e99dea9c0a88b3a712afaba134cbae8b10ef1fbd89"
+  },
+  {
+    "screen": "ciw.itens-erp",
+    "code": "cd0101",
+    "version": "1.0.0",
+    "entity": "itens_consulta_progress",
+    "file": "../construtor-pg/integrations\\ciw-referencias\\itens-builder-draft.json",
+    "sha256": "b82acb65da99f0f100fab48953f55db616410629a4a12ce8ea3d95e366201d17"
+  },
+  {
+    "screen": "ciw.itens-erp",
+    "code": "cd0101",
+    "version": "1.0.0",
+    "entity": "itens_consulta_progress",
+    "file": "integration-src\\ciw-referencias\\metadata\\itens-builder-draft.json",
+    "sha256": "b82acb65da99f0f100fab48953f55db616410629a4a12ce8ea3d95e366201d17"
+  },
+  {
+    "screen": "ciw.motivos-desconto",
+    "code": "cd0097",
+    "version": "1.0.0",
+    "entity": "motivos_desconto_progress",
+    "file": "../construtor-pg/integrations\\ciw-cadastros\\motivos_desconto-builder-draft.json",
+    "sha256": "7a29d86708ed92f48db08a1b3a96b9e1805e4491bf7135e52e727abe5a6daaef"
+  },
+  {
+    "screen": "ciw.motivos-desconto",
+    "code": "cd0097",
+    "version": "1.0.0",
+    "entity": "motivos_desconto_progress",
+    "file": "integration-src\\ciw-cadastros\\metadata\\motivos_desconto-builder-draft.json",
+    "sha256": "7a29d86708ed92f48db08a1b3a96b9e1805e4491bf7135e52e727abe5a6daaef"
+  },
+  {
+    "screen": "ciw.proc-compra-alocacoes",
+    "code": "op1026",
+    "version": "1.0.0",
+    "entity": "proc_compra_alocacoes_progress",
+    "file": "../construtor-pg/integrations\\ciw-purchase-allocations\\proc-compra-alocacoes-builder-draft.json",
+    "sha256": "38a96e26de961bacaf186a77bbfc0c2b496ce067d685106553078dacb8fb3223"
+  },
+  {
+    "screen": "ciw.proc-compra-alocacoes",
+    "code": "op1026",
+    "version": "1.0.0",
+    "entity": "proc_compra_alocacoes_progress",
+    "file": "integration-src\\purchase-allocations\\metadata\\proc-compra-alocacoes-builder-draft.json",
+    "sha256": "38a96e26de961bacaf186a77bbfc0c2b496ce067d685106553078dacb8fb3223"
+  },
+  {
+    "screen": "ciw.proc-compra-amostras",
+    "code": "op1018",
+    "version": "1.0.0",
+    "entity": "proc_compra_amostras_progress",
+    "file": "../construtor-pg/integrations\\ciw-purchase-samples\\proc-compra-amostras-builder-draft.json",
+    "sha256": "024468e6e893eeaa059281b2de69820994a2f47dec3aed498563f08851f69c4a"
+  },
+  {
+    "screen": "ciw.proc-compra-amostras",
+    "code": "op1018",
+    "version": "1.0.0",
+    "entity": "proc_compra_amostras_progress",
+    "file": "integration-src\\purchase-samples\\metadata\\proc-compra-amostras-builder-draft.json",
+    "sha256": "024468e6e893eeaa059281b2de69820994a2f47dec3aed498563f08851f69c4a"
+  },
+  {
+    "screen": "ciw.proc-compra-anexos",
+    "code": "op1019",
+    "version": "1.0.0",
+    "entity": "proc_compra_anexos_progress",
+    "file": "../construtor-pg/integrations\\ciw-purchase-attachments\\proc-compra-anexos-builder-draft.json",
+    "sha256": "ef063cce86f8f63fc9fb7a953a03656a9146c2380b5ccfc9b2e5342d846679f0"
+  },
+  {
+    "screen": "ciw.proc-compra-anexos",
+    "code": "op1019",
+    "version": "1.0.0",
+    "entity": "proc_compra_anexos_progress",
+    "file": "integration-src\\purchase-attachments\\metadata\\proc-compra-anexos-builder-draft.json",
+    "sha256": "ef063cce86f8f63fc9fb7a953a03656a9146c2380b5ccfc9b2e5342d846679f0"
+  },
+  {
+    "screen": "ciw.proc-compra-documentos",
+    "code": "op1020",
+    "version": "1.0.0",
+    "entity": "proc_compra_documentos_progress",
+    "file": "../construtor-pg/integrations\\ciw-purchase-order-attachments\\proc-compra-documentos-builder-draft.json",
+    "sha256": "2833073c3675fe443a08b8f195486cfca46f4eba2b40942aeb28fc040ff0351c"
+  },
+  {
+    "screen": "ciw.proc-compra-documentos",
+    "code": "op1020",
+    "version": "1.0.0",
+    "entity": "proc_compra_documentos_progress",
+    "file": "integration-src\\purchase-order-attachments\\metadata\\proc-compra-documentos-builder-draft.json",
+    "sha256": "2833073c3675fe443a08b8f195486cfca46f4eba2b40942aeb28fc040ff0351c"
+  },
+  {
+    "screen": "ciw.proc-compra-itens",
+    "code": "op1014",
+    "version": "1.0.0",
+    "entity": "proc_compra_itens_progress",
+    "file": "integration-src\\purchase-items\\metadata\\proc-compra-itens-builder-draft.json",
+    "sha256": "8570ad7098b04688843699b7f9d199a930e9ed9ae88d4df838eac3c87b3518eb"
+  },
+  {
+    "screen": "ciw.proc-compra-itens",
+    "code": "op1014",
+    "version": "1.0.1",
+    "entity": "proc_compra_itens_progress",
+    "file": "../construtor-pg/integrations\\ciw-purchase-samples\\proc-compra-itens-builder-draft.json",
+    "sha256": "dd3ac4c5fb53f8987ebb1b5065019f7e6453076846f44970103e46a8a483fdb3"
+  },
+  {
+    "screen": "ciw.proc-compra-itens",
+    "code": "op1014",
+    "version": "1.0.1",
+    "entity": "proc_compra_itens_progress",
+    "file": "integration-src\\purchase-samples\\metadata\\proc-compra-itens-builder-draft.json",
+    "sha256": "dd3ac4c5fb53f8987ebb1b5065019f7e6453076846f44970103e46a8a483fdb3"
+  },
+  {
+    "screen": "ciw.proc-compra-itens",
+    "code": "op1014",
+    "version": "1.0.2",
+    "entity": "proc_compra_itens_progress",
+    "file": "../construtor-pg/integrations\\ciw-purchase-attachments\\proc-compra-itens-builder-draft.json",
+    "sha256": "ef0a343c8276bedbe69ea1e2e5d31eba2d484a87d79c5fd84a7b6d6b37403ffe"
+  },
+  {
+    "screen": "ciw.proc-compra-itens",
+    "code": "op1014",
+    "version": "1.0.2",
+    "entity": "proc_compra_itens_progress",
+    "file": "integration-src\\purchase-attachments\\metadata\\proc-compra-itens-builder-draft.json",
+    "sha256": "ef0a343c8276bedbe69ea1e2e5d31eba2d484a87d79c5fd84a7b6d6b37403ffe"
+  },
+  {
+    "screen": "ciw.proc-compra-itens",
+    "code": "op1014",
+    "version": "1.0.3",
+    "entity": "proc_compra_itens_progress",
+    "file": "../construtor-pg/integrations\\ciw-purchase-allocations\\proc-compra-itens-builder-draft.json",
+    "sha256": "2919ca8941f091937fc40465ed55629cfb08c81b9545f720beaa1dc9896a76b6"
+  },
+  {
+    "screen": "ciw.proc-compra-itens",
+    "code": "op1014",
+    "version": "1.0.3",
+    "entity": "proc_compra_itens_progress",
+    "file": "integration-src\\purchase-allocations\\metadata\\proc-compra-itens-builder-draft.json",
+    "sha256": "2919ca8941f091937fc40465ed55629cfb08c81b9545f720beaa1dc9896a76b6"
+  },
+  {
+    "screen": "ciw.proc-compra-itens",
+    "code": "op1014",
+    "version": "1.0.4",
+    "entity": "proc_compra_itens_progress",
+    "file": "../construtor-pg/integrations\\ciw-purchase-items\\proc-compra-itens-builder-draft.json",
+    "sha256": "89129a91d8f9d9ae433e696746426e7b942e8cc45ff0125a6a349f19b7e38e8c"
+  },
+  {
+    "screen": "ciw.proc-compra-itens",
+    "code": "op1014",
+    "version": "1.0.4",
+    "entity": "proc_compra_itens_progress",
+    "file": "../construtor-pg/integrations\\ciw-purchase-sample-formats\\proc-compra-itens-builder-draft.json",
+    "sha256": "89129a91d8f9d9ae433e696746426e7b942e8cc45ff0125a6a349f19b7e38e8c"
+  },
+  {
+    "screen": "ciw.proc-compra-itens",
+    "code": "op1014",
+    "version": "1.0.4",
+    "entity": "proc_compra_itens_progress",
+    "file": "integration-src\\purchase-sample-formats\\metadata\\proc-compra-itens-builder-draft.json",
+    "sha256": "89129a91d8f9d9ae433e696746426e7b942e8cc45ff0125a6a349f19b7e38e8c"
+  },
+  {
+    "screen": "ciw.proc-compra-pagamentos",
+    "code": "op1013",
+    "version": "1.0.1",
+    "entity": "proc_compra_pagamentos_progress",
+    "file": "../construtor-pg/integrations\\ciw-purchase-payments\\proc-compra-pagamentos-builder-draft.json",
+    "sha256": "adfbc3295d79760d067e9267b3b6e7157239b0baa202e5f95229bf7e111535ff"
+  },
+  {
+    "screen": "ciw.proc-compra-pagamentos",
+    "code": "op1013",
+    "version": "1.0.1",
+    "entity": "proc_compra_pagamentos_progress",
+    "file": "integration-src\\purchase-payments\\metadata\\proc-compra-pagamentos-builder-draft.json",
+    "sha256": "adfbc3295d79760d067e9267b3b6e7157239b0baa202e5f95229bf7e111535ff"
+  },
+  {
+    "screen": "ciw.processos-compra-med",
+    "code": "cd0108",
+    "version": "1.0.0",
+    "entity": "procs_compra_med_progress",
+    "file": "../construtor-pg/integrations\\ciw-purchase-orders\\processos-compra-med-builder-draft.json",
+    "sha256": "5dcabe6f3bdb6913bd79fe637e0724b4ce6f6bc1d09daa5a9ad553e944840ef8"
+  },
+  {
+    "screen": "ciw.processos-compra-med",
+    "code": "cd0108",
+    "version": "1.0.0",
+    "entity": "procs_compra_med_progress",
+    "file": "integration-src\\purchase-orders\\metadata\\processos-compra-med-builder-draft.json",
+    "sha256": "5dcabe6f3bdb6913bd79fe637e0724b4ce6f6bc1d09daa5a9ad553e944840ef8"
+  },
+  {
+    "screen": "ciw.processos-compra-med",
+    "code": "cd0108",
+    "version": "1.0.2",
+    "entity": "procs_compra_med_progress",
+    "file": "integration-src\\purchase-items\\metadata\\processos-compra-med-builder-draft.json",
+    "sha256": "4b0389b3773e5dbb5ee571d307c67256b99fceb843e6eabc4d45a02951f1ce3a"
+  },
+  {
+    "screen": "ciw.processos-compra-med",
+    "code": "cd0108",
+    "version": "1.0.3",
+    "entity": "procs_compra_med_progress",
+    "file": "../construtor-pg/integrations\\ciw-purchase-order-attachments\\processos-compra-med-builder-draft.json",
+    "sha256": "9c04fa8c299162943ec1fc6ba52de99028bd1549f4ff31586f05fa80737017be"
+  },
+  {
+    "screen": "ciw.processos-compra-med",
+    "code": "cd0108",
+    "version": "1.0.3",
+    "entity": "procs_compra_med_progress",
+    "file": "integration-src\\purchase-order-attachments\\metadata\\processos-compra-med-builder-draft.json",
+    "sha256": "9c04fa8c299162943ec1fc6ba52de99028bd1549f4ff31586f05fa80737017be"
+  },
+  {
+    "screen": "ciw.processos-compra-med",
+    "code": "cd0108",
+    "version": "1.0.4",
+    "entity": "procs_compra_med_progress",
+    "file": "../construtor-pg/integrations\\ciw-purchase-expenses\\processos-compra-med-builder-draft.json",
+    "sha256": "6634f4370f15bb84a1fca70c215af67c89e6027d1fa32fa508f86e46aaf5502a"
+  },
+  {
+    "screen": "ciw.processos-compra-med",
+    "code": "cd0108",
+    "version": "1.0.4",
+    "entity": "procs_compra_med_progress",
+    "file": "integration-src\\purchase-expenses\\metadata\\processos-compra-med-builder-draft.json",
+    "sha256": "6634f4370f15bb84a1fca70c215af67c89e6027d1fa32fa508f86e46aaf5502a"
+  },
+  {
+    "screen": "ciw.processos-compra-med",
+    "code": "cd0108",
+    "version": "1.0.5",
+    "entity": "procs_compra_med_progress",
+    "file": "../construtor-pg/integrations\\ciw-purchase-summary\\processos-compra-med-builder-draft.json",
+    "sha256": "17e7a07eb0626e5b7849a3aab872dec370be0f64bbcd3e451168dea8ae1d990e"
+  },
+  {
+    "screen": "ciw.processos-compra-med",
+    "code": "cd0108",
+    "version": "1.0.5",
+    "entity": "procs_compra_med_progress",
+    "file": "integration-src\\purchase-summary\\metadata\\processos-compra-med-builder-draft.json",
+    "sha256": "17e7a07eb0626e5b7849a3aab872dec370be0f64bbcd3e451168dea8ae1d990e"
+  },
+  {
+    "screen": "ciw.processos-compra-med",
+    "code": "cd0108",
+    "version": "1.0.6",
+    "entity": "procs_compra_med_progress",
+    "file": "../construtor-pg/integrations\\ciw-purchase-items\\processos-compra-med-builder-draft.json",
+    "sha256": "56cc5e53a90eb5d6fc8e9b41da73ca42a35428867b6d52b3656a470b99bc76c1"
+  },
+  {
+    "screen": "ciw.processos-compra-med",
+    "code": "cd0108",
+    "version": "1.0.6",
+    "entity": "procs_compra_med_progress",
+    "file": "../construtor-pg/integrations\\ciw-purchase-taxes\\processos-compra-med-builder-draft.json",
+    "sha256": "56cc5e53a90eb5d6fc8e9b41da73ca42a35428867b6d52b3656a470b99bc76c1"
+  },
+  {
+    "screen": "ciw.processos-compra-med",
+    "code": "cd0108",
+    "version": "1.0.6",
+    "entity": "procs_compra_med_progress",
+    "file": "integration-src\\purchase-taxes\\metadata\\processos-compra-med-builder-draft.json",
+    "sha256": "56cc5e53a90eb5d6fc8e9b41da73ca42a35428867b6d52b3656a470b99bc76c1"
+  },
+  {
+    "screen": "ciw.processos-compra-med",
+    "code": "cd0108",
+    "version": "1.0.7",
+    "entity": "procs_compra_med_progress",
+    "file": "../construtor-pg/integrations\\ciw-purchase-signals\\processos-compra-med-builder-draft.json",
+    "sha256": "cbdf71979a9b08a25b63a4cba63124792ea5de3f0b2e45d783880af7c8ff2366"
+  },
+  {
+    "screen": "ciw.processos-compra-med",
+    "code": "cd0108",
+    "version": "1.0.7",
+    "entity": "procs_compra_med_progress",
+    "file": "integration-src\\purchase-signals\\metadata\\processos-compra-med-builder-draft.json",
+    "sha256": "cbdf71979a9b08a25b63a4cba63124792ea5de3f0b2e45d783880af7c8ff2366"
+  },
+  {
+    "screen": "ciw.processos-compra-med",
+    "code": "cd0108",
+    "version": "1.0.8",
+    "entity": "procs_compra_med_progress",
+    "file": "../construtor-pg/integrations\\ciw-purchase-quantities\\processos-compra-med-builder-draft.json",
+    "sha256": "d1c83a65285a48bdd7bd89a11165c3bcd0bca4a137629ccae7bc52d0b080a747"
+  },
+  {
+    "screen": "ciw.processos-compra-med",
+    "code": "cd0108",
+    "version": "1.0.8",
+    "entity": "procs_compra_med_progress",
+    "file": "integration-src\\purchase-quantities\\metadata\\processos-compra-med-builder-draft.json",
+    "sha256": "d1c83a65285a48bdd7bd89a11165c3bcd0bca4a137629ccae7bc52d0b080a747"
+  },
+  {
+    "screen": "ciw.quantidades-importadas-med",
+    "code": "op1029",
+    "version": "1.0.0",
+    "entity": "proc_compra_quantidades_med_progress",
+    "file": "../construtor-pg/integrations\\ciw-purchase-quantities\\quantidades-importadas-med-builder-draft.json",
+    "sha256": "895c6950745d1953fbceac6a11e4633149b8e6aa7309c3f05f352be11c5718c1"
+  },
+  {
+    "screen": "ciw.quantidades-importadas-med",
+    "code": "op1029",
+    "version": "1.0.0",
+    "entity": "proc_compra_quantidades_med_progress",
+    "file": "integration-src\\purchase-quantities\\metadata\\quantidades-importadas-med-builder-draft.json",
+    "sha256": "895c6950745d1953fbceac6a11e4633149b8e6aa7309c3f05f352be11c5718c1"
+  },
+  {
+    "screen": "ciw.sinalizadores-importacao",
+    "code": "cd0110",
+    "version": "1.0.0",
+    "entity": "sinalizadores_importacao_progress",
+    "file": "../construtor-pg/integrations\\ciw-signal-config\\sinalizadores-importacao-builder-draft.json",
+    "sha256": "6e222ee643131ab8895bccc15222a2f13cb668725897b5217280a75833427d6a"
+  },
+  {
+    "screen": "ciw.sinalizadores-importacao",
+    "code": "cd0110",
+    "version": "1.0.0",
+    "entity": "sinalizadores_importacao_progress",
+    "file": "integration-src\\purchase-pending-20261028\\signal-config\\metadata\\sinalizadores-importacao-builder-draft.json",
+    "sha256": "6e222ee643131ab8895bccc15222a2f13cb668725897b5217280a75833427d6a"
+  },
+  {
+    "screen": "ciw.sinalizadores-importacao-med",
+    "code": "op1031",
+    "version": "1.0.0",
+    "entity": "proc_compra_sinalizadores_med_progress",
+    "file": "../construtor-pg/integrations\\ciw-purchase-signals-global\\sinalizadores-importacao-med-builder-draft.json",
+    "sha256": "e8894e6eeb4164c567ed9798d9bd29b2de5d3c634c9b33a29425d3e89acb4eae"
+  },
+  {
+    "screen": "ciw.sinalizadores-importacao-med",
+    "code": "op1031",
+    "version": "1.0.0",
+    "entity": "proc_compra_sinalizadores_med_progress",
+    "file": "integration-src\\purchase-pending-20261028\\signals-global\\metadata\\sinalizadores-importacao-med-builder-draft.json",
+    "sha256": "e8894e6eeb4164c567ed9798d9bd29b2de5d3c634c9b33a29425d3e89acb4eae"
+  },
+  {
+    "screen": "ciw.situacoes-container",
+    "code": "cd0095",
+    "version": "1.0.0",
+    "entity": "situacoes_container_progress",
+    "file": "../construtor-pg/integrations\\ciw-cadastros\\situacoes_container-builder-draft.json",
+    "sha256": "05e2e017ac07ea8cbb6f03cd506da3770efa3b0da971aefd3017da51622788d1"
+  },
+  {
+    "screen": "ciw.situacoes-container",
+    "code": "cd0095",
+    "version": "1.0.0",
+    "entity": "situacoes_container_progress",
+    "file": "integration-src\\ciw-cadastros\\metadata\\situacoes_container-builder-draft.json",
+    "sha256": "05e2e017ac07ea8cbb6f03cd506da3770efa3b0da971aefd3017da51622788d1"
+  },
+  {
+    "screen": "ciw.tipos-anexo",
+    "code": "cd0091",
+    "version": "1.0.0",
+    "entity": "tipos_anexo_progress",
+    "file": "../construtor-pg/integrations\\ciw-tipos-anexo\\builder-draft.json",
+    "sha256": "0f1073f003a024d07d7ed686d528a635c260ada600cdd705f7f927c56058dd12"
+  },
+  {
+    "screen": "ciw.tipos-anexo",
+    "code": "cd0091",
+    "version": "1.0.0",
+    "entity": "tipos_anexo_progress",
+    "file": "integration-src\\tipos-anexo\\builder-draft.json",
+    "sha256": "0f1073f003a024d07d7ed686d528a635c260ada600cdd705f7f927c56058dd12"
+  },
+  {
+    "screen": "ciw.tipos-versao-custo",
+    "code": "cd0096",
+    "version": "1.0.0",
+    "entity": "tipos_versao_custo_progress",
+    "file": "../construtor-pg/integrations\\ciw-cadastros\\tipos_versao_custo-builder-draft.json",
+    "sha256": "f1f9a342df0a54870ea4bafa7c0b61f3a93f1e6dbc8589f629c719c7a63d1152"
+  },
+  {
+    "screen": "ciw.tipos-versao-custo",
+    "code": "cd0096",
+    "version": "1.0.0",
+    "entity": "tipos_versao_custo_progress",
+    "file": "integration-src\\ciw-cadastros\\metadata\\tipos_versao_custo-builder-draft.json",
+    "sha256": "f1f9a342df0a54870ea4bafa7c0b61f3a93f1e6dbc8589f629c719c7a63d1152"
+  }
+]

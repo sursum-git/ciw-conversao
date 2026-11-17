@@ -1,0 +1,51 @@
+{
+  "snapshotEndpointId": "nfLinkSnapshot",
+  "snapshotScreenId": "ciw.container-nfs",
+  "snapshotAction": "read",
+  "requiredContextFields": [
+    "container_id"
+  ],
+  "responseStampField": "nf_stamp",
+  "requestStampField": "expected_nf_stamp",
+  "keyFields": [
+    "documento",
+    "serie",
+    "estab",
+    "nat_operacao",
+    "cod_emitente"
+  ],
+  "grids": [
+    {
+      "screenId": "ciw.container-nfs-disponiveis-med",
+      "grid": {
+        "bulkActions": {
+          "enabled": true,
+          "actions": [
+            {
+              "id": "associar_nfs",
+              "label": "Associar NFs",
+              "action": "associar_nfs",
+              "endpointId": "associar_nfs"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "screenId": "ciw.container-nfs",
+      "grid": {
+        "bulkActions": {
+          "enabled": true,
+          "actions": [
+            {
+              "id": "desassociar_nfs",
+              "label": "Desassociar NFs",
+              "action": "desassociar_nfs",
+              "endpointId": "desassociar_nfs"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

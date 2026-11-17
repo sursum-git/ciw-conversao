@@ -1,3 +1,29 @@
+## Associação de NFs — compilação local no servidor .42
+
+A máquina deste workspace é `IMA-SRV-DESENV` (`192.168.0.42`). O compilador oficial está disponível localmente em `C:\Progress_12\OE\bin\_progres.exe`, versão `12.2.12.0`. Não é necessário SSH para executar o compilador neste workspace. Foram compilados sem erro `ContainersNfsLinkService`, `ContainersProcessosService` e `ContainersPainelFinanceReadService`. Os testes ABL em tabelas temporárias passaram 5 verificações do writer e 28 da fronteira. O wrapper `ContainersProcessos.p` ainda exige `OpenEdge.Net.pl` no PROPATH e esquema `espec.im-param` no ambiente de compilação. O lote não foi publicado. A sessão administrativa do Builder e a validação de gravação, concorrência e auditoria em PASOE MED permanecem pendentes.
+
+No servidor Windows `192.168.0.42`, o mapeamento `T:\especificos` dá acesso aos mesmos fontes que o PASOE acessa pela montagem Linux `/mnt/datasul/ERP/especificos`. Usar o caminho Windows para acesso local e o caminho da montagem Linux ao verificar a resolução de fontes no PASOE.
+
+## Comparação do backup CIW com a extranet — 16/11/2026
+
+O dump `construtor_pg-20261116-202749.dump`, de PostgreSQL 14.3, foi restaurado em transação única em uma instância local isolada e desligada ao fim. O backup contém 133 programas, 134 telas publicadas (73 com prefixo `ciw.`) e 18 fontes de API. A consulta à extranet retornou 58 programas, 61 telas publicadas, nenhuma `ciw.*` e zero fontes de API. A Home está em `1.0.0` nos dois bancos, com hash JSON distinto (backup `a2a8b624d90092cde94a4c7927d89a21`, extranet `4d9a91eac77da29b42b11d41f38410b9`). O backup confirma as versões publicadas como referência para a etapa de migração seletiva. Nenhuma alteração foi feita na extranet.
+
+## Extranet do Construtor PG — 16/11/2026
+
+Destino conferido via SSH com `suporte_ima@192.168.0.39`: `/var/www/clients/client1/web7/web/extranet`. O catálogo consultado pela CLI do backend tinha 58 programas, nenhum com código `ciw.*`, e zero fontes de API. `RuntimeCiwErpQuery.php` e `RuntimeApiEntityActionService.php` têm os mesmos hashes das cópias locais. A API administrativa exige autenticação do Builder. Nenhum metadado foi publicado nesta verificação. O escopo autorizado é incluir somente aplicações CIW convertidas e suas fontes necessárias, preservando as configurações visuais da extranet. A origem histórica das versões publicadas era o PostgreSQL local em `.runtime/construtor-pg/postgres`, ausente neste checkout.
+
+<!-- BEGIN LOCAL_PROJECT_PATHS_20261104 -->
+## Caminhos locais vigentes — 04/11/2026
+
+- Conversão CIW: `C:\Users\tadeu.parreiras\Documents\ChatGPT\ciw-conversao`.
+- Construtor: `C:\Users\tadeu.parreiras\Documents\ChatGPT\construtor-pg` (relativo: `../construtor-pg`); diretório `backend` confirmado.
+- Motor Progress: `C:\Users\tadeu.parreiras\Documents\ChatGPT\motor_progress` (relativo: `../motor_progress`); `sursum-api` está diretamente na raiz, sem subpasta `v2`.
+
+Este mapeamento prevalece sobre as referências históricas a `D:\opencode\construtor-pg` e `D:\opencode\motor-progress\v2` nos contextos, scripts e manifestos. Resolver os respectivos sufixos a partir das raízes locais acima. Não acrescentar `v2` ao motor nem substituir em massa caminhos de evidências históricas. Scripts com caminhos antigos precisam ser adaptados antes do uso.
+
+Antes de alterar os projetos relacionados, ler seus próprios AGENTS/contextos e preservar mudanças existentes. A localização dos diretórios não comprova disponibilidade de serviços, bancos ou estado privado `.runtime/`, nem revalida publicações históricas.
+<!-- END LOCAL_PROJECT_PATHS_20261104 -->
+
 <!-- BEGIN CIW_MENU_SCOPE_20261029 -->
 ## Escopo de conversão revisado — menu Scriptcase e chamadas transitivas
 

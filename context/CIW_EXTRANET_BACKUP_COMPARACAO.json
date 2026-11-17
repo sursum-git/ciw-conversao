@@ -1,0 +1,438 @@
+[
+  {
+    "screen": "ciw.alertas-importacao-med",
+    "version": "1.0.0",
+    "scope": "convertido",
+    "references": [
+      "ciw.container-painel",
+      "ciw.processos-compra-med"
+    ]
+  },
+  {
+    "screen": "ciw.coloracoes",
+    "version": "1.0.1",
+    "scope": "convertido",
+    "references": []
+  },
+  {
+    "screen": "ciw.container-alocar-itens",
+    "version": "1.0.0",
+    "scope": "convertido",
+    "references": []
+  },
+  {
+    "screen": "ciw.container-anexos",
+    "version": "1.0.0",
+    "scope": "referencia a validar",
+    "references": []
+  },
+  {
+    "screen": "ciw.container-calcular-impostos",
+    "version": "1.0.0",
+    "scope": "referencia a validar",
+    "references": []
+  },
+  {
+    "screen": "ciw.container-calculos-impostos-med",
+    "version": "1.0.0",
+    "scope": "referencia a validar",
+    "references": [
+      "ciw.container-painel"
+    ]
+  },
+  {
+    "screen": "ciw.container-comparativos",
+    "version": "1.0.0",
+    "scope": "convertido",
+    "references": []
+  },
+  {
+    "screen": "ciw.container-custos-comparacao-dolar",
+    "version": "1.0.0",
+    "scope": "referencia a validar",
+    "references": []
+  },
+  {
+    "screen": "ciw.container-custos-comparacao-real",
+    "version": "1.0.0",
+    "scope": "referencia a validar",
+    "references": []
+  },
+  {
+    "screen": "ciw.container-custos-itens",
+    "version": "1.0.1",
+    "scope": "referencia a validar",
+    "references": [
+      "ciw.container-itens",
+      "ciw.proc-compra-itens"
+    ]
+  },
+  {
+    "screen": "ciw.container-despesa-memoria-med",
+    "version": "1.0.0",
+    "scope": "referencia a validar",
+    "references": [
+      "ciw.container-calculos-impostos-med",
+      "ciw.container-painel"
+    ]
+  },
+  {
+    "screen": "ciw.container-despesas",
+    "version": "1.0.5",
+    "scope": "convertido",
+    "references": [
+      "ciw.container-calcular-impostos",
+      "ciw.container-despesa-memoria-med",
+      "ciw.container-despesas-lote",
+      "ciw.container-selecionar-despesas"
+    ]
+  },
+  {
+    "screen": "ciw.container-despesas-lote",
+    "version": "1.0.0",
+    "scope": "referencia a validar",
+    "references": []
+  },
+  {
+    "screen": "ciw.container-fechar-custos",
+    "version": "1.0.0",
+    "scope": "referencia a validar",
+    "references": []
+  },
+  {
+    "screen": "ciw.container-gerar-versao",
+    "version": "1.0.0",
+    "scope": "referencia a validar",
+    "references": []
+  },
+  {
+    "screen": "ciw.container-itens",
+    "version": "1.0.2",
+    "scope": "convertido",
+    "references": [
+      "ciw.proc-compra-itens"
+    ]
+  },
+  {
+    "screen": "ciw.container-nfs",
+    "version": "1.0.1",
+    "scope": "referencia a validar",
+    "references": []
+  },
+  {
+    "screen": "ciw.container-nfs-disponiveis-med",
+    "version": "1.0.0",
+    "scope": "referencia a validar",
+    "references": []
+  },
+  {
+    "screen": "ciw.container-pagamentos",
+    "version": "1.0.2",
+    "scope": "referencia a validar",
+    "references": []
+  },
+  {
+    "screen": "ciw.container-painel",
+    "version": "1.0.8",
+    "scope": "convertido",
+    "references": [
+      "ciw.container-alocar-itens",
+      "ciw.container-anexos",
+      "ciw.container-comparativos",
+      "ciw.container-custos-itens",
+      "ciw.container-despesas",
+      "ciw.container-fechar-custos",
+      "ciw.container-gerar-versao",
+      "ciw.container-itens",
+      "ciw.container-nfs",
+      "ciw.container-pagamentos",
+      "ciw.container-rastro-dolar",
+      "ciw.container-resumo",
+      "ciw.container-sincronizar-impostos",
+      "ciw.container-versoes-custo",
+      "ciw.containers"
+    ]
+  },
+  {
+    "screen": "ciw.container-rastro-dolar",
+    "version": "1.0.0",
+    "scope": "convertido",
+    "references": []
+  },
+  {
+    "screen": "ciw.container-resumo",
+    "version": "1.0.0",
+    "scope": "convertido",
+    "references": []
+  },
+  {
+    "screen": "ciw.container-selecionar-despesas",
+    "version": "1.0.0",
+    "scope": "referencia a validar",
+    "references": []
+  },
+  {
+    "screen": "ciw.container-sincronizar-impostos",
+    "version": "1.0.0",
+    "scope": "convertido",
+    "references": []
+  },
+  {
+    "screen": "ciw.container-versao-descontos-historico",
+    "version": "1.0.0",
+    "scope": "referencia a validar",
+    "references": []
+  },
+  {
+    "screen": "ciw.container-versao-despesas-historico",
+    "version": "1.0.1",
+    "scope": "referencia a validar",
+    "references": []
+  },
+  {
+    "screen": "ciw.container-versao-itens-historico",
+    "version": "1.0.1",
+    "scope": "referencia a validar",
+    "references": []
+  },
+  {
+    "screen": "ciw.container-versao-nfs-historico",
+    "version": "1.0.1",
+    "scope": "referencia a validar",
+    "references": []
+  },
+  {
+    "screen": "ciw.container-versao-pagamentos-historico",
+    "version": "1.0.0",
+    "scope": "referencia a validar",
+    "references": []
+  },
+  {
+    "screen": "ciw.container-versoes-custo",
+    "version": "1.0.3",
+    "scope": "referencia a validar",
+    "references": [
+      "ciw.container-custos-comparacao-dolar",
+      "ciw.container-custos-comparacao-real",
+      "ciw.container-versao-descontos-historico",
+      "ciw.container-versao-despesas-historico",
+      "ciw.container-versao-itens-historico",
+      "ciw.container-versao-nfs-historico",
+      "ciw.container-versao-pagamentos-historico"
+    ]
+  },
+  {
+    "screen": "ciw.containers",
+    "version": "1.0.3",
+    "scope": "referencia a validar",
+    "references": [
+      "ciw.container-nfs-disponiveis-med",
+      "ciw.container-painel"
+    ]
+  },
+  {
+    "screen": "ciw.cotacoes-bc",
+    "version": "1.0.1",
+    "scope": "convertido",
+    "references": [
+      "ciw.cotacoes-bc-buscar"
+    ]
+  },
+  {
+    "screen": "ciw.cotacoes-bc-buscar",
+    "version": "1.0.0",
+    "scope": "referencia a validar",
+    "references": []
+  },
+  {
+    "screen": "ciw.despesas",
+    "version": "1.0.2",
+    "scope": "convertido",
+    "references": [
+      "ciw.empresas-despesa"
+    ]
+  },
+  {
+    "screen": "ciw.empresas",
+    "version": "1.0.0",
+    "scope": "convertido",
+    "references": []
+  },
+  {
+    "screen": "ciw.empresas-despesa",
+    "version": "1.0.1",
+    "scope": "convertido",
+    "references": []
+  },
+  {
+    "screen": "ciw.formatos-amostra",
+    "version": "1.0.0",
+    "scope": "convertido",
+    "references": []
+  },
+  {
+    "screen": "ciw.fornecedores",
+    "version": "1.0.0",
+    "scope": "convertido",
+    "references": []
+  },
+  {
+    "screen": "ciw.fornecedores-estrangeiros",
+    "version": "1.0.0",
+    "scope": "convertido",
+    "references": []
+  },
+  {
+    "screen": "ciw.itens-erp",
+    "version": "1.0.0",
+    "scope": "convertido",
+    "references": []
+  },
+  {
+    "screen": "ciw.motivos-desconto",
+    "version": "1.0.1",
+    "scope": "convertido",
+    "references": []
+  },
+  {
+    "screen": "ciw.proc-compra-alertas",
+    "version": "1.0.0",
+    "scope": "referencia a validar",
+    "references": [
+      "ciw.proc-compra-itens"
+    ]
+  },
+  {
+    "screen": "ciw.proc-compra-alocacoes",
+    "version": "1.0.0",
+    "scope": "convertido",
+    "references": [
+      "ciw.container-painel"
+    ]
+  },
+  {
+    "screen": "ciw.proc-compra-amostras",
+    "version": "1.0.0",
+    "scope": "convertido",
+    "references": []
+  },
+  {
+    "screen": "ciw.proc-compra-anexos",
+    "version": "1.0.0",
+    "scope": "convertido",
+    "references": []
+  },
+  {
+    "screen": "ciw.proc-compra-calcular-impostos",
+    "version": "1.0.0",
+    "scope": "referencia a validar",
+    "references": []
+  },
+  {
+    "screen": "ciw.proc-compra-despesas",
+    "version": "1.0.0",
+    "scope": "referencia a validar",
+    "references": []
+  },
+  {
+    "screen": "ciw.proc-compra-documentos",
+    "version": "1.0.0",
+    "scope": "convertido",
+    "references": []
+  },
+  {
+    "screen": "ciw.proc-compra-gerar-despesas",
+    "version": "1.0.0",
+    "scope": "referencia a validar",
+    "references": []
+  },
+  {
+    "screen": "ciw.proc-compra-itens",
+    "version": "1.0.5",
+    "scope": "convertido",
+    "references": [
+      "ciw.formatos-amostra",
+      "ciw.proc-compra-alocacoes",
+      "ciw.proc-compra-amostras",
+      "ciw.proc-compra-anexos"
+    ]
+  },
+  {
+    "screen": "ciw.proc-compra-pagamentos",
+    "version": "1.0.1",
+    "scope": "convertido",
+    "references": []
+  },
+  {
+    "screen": "ciw.proc-compra-quantidades",
+    "version": "1.0.1",
+    "scope": "referencia a validar",
+    "references": [
+      "ciw.proc-compra-alocacoes",
+      "ciw.proc-compra-itens"
+    ]
+  },
+  {
+    "screen": "ciw.proc-compra-resumo",
+    "version": "1.0.0",
+    "scope": "referencia a validar",
+    "references": []
+  },
+  {
+    "screen": "ciw.processos-compra-med",
+    "version": "1.0.8",
+    "scope": "convertido",
+    "references": [
+      "ciw.proc-compra-alertas",
+      "ciw.proc-compra-calcular-impostos",
+      "ciw.proc-compra-despesas",
+      "ciw.proc-compra-documentos",
+      "ciw.proc-compra-gerar-despesas",
+      "ciw.proc-compra-itens",
+      "ciw.proc-compra-pagamentos",
+      "ciw.proc-compra-quantidades",
+      "ciw.proc-compra-resumo"
+    ]
+  },
+  {
+    "screen": "ciw.quantidades-importadas-med",
+    "version": "1.0.0",
+    "scope": "convertido",
+    "references": [
+      "ciw.proc-compra-alocacoes",
+      "ciw.proc-compra-itens"
+    ]
+  },
+  {
+    "screen": "ciw.sinalizadores-importacao",
+    "version": "1.0.0",
+    "scope": "convertido",
+    "references": []
+  },
+  {
+    "screen": "ciw.sinalizadores-importacao-med",
+    "version": "1.0.0",
+    "scope": "convertido",
+    "references": [
+      "ciw.alertas-importacao-med"
+    ]
+  },
+  {
+    "screen": "ciw.situacoes-container",
+    "version": "1.0.1",
+    "scope": "convertido",
+    "references": []
+  },
+  {
+    "screen": "ciw.tipos-anexo",
+    "version": "1.0.0",
+    "scope": "convertido",
+    "references": []
+  },
+  {
+    "screen": "ciw.tipos-versao-custo",
+    "version": "1.0.1",
+    "scope": "convertido",
+    "references": []
+  }
+]

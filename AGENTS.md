@@ -5,7 +5,7 @@ Antes de trabalhar, leia [context/PROJECT_CONTEXT.md](context/PROJECT_CONTEXT.md
 Para continuar após o chat de16/10/2026, ler primeiro [context/RETOMADA_2026-10-16.md](context/RETOMADA_2026-10-16.md). Contém caminhos Scriptcase, estado publicado versus fontes preparados, decisões mais recentes e ordem de retomada; corrige estados históricos do contexto longo.
 
 - Responder em português, de forma direta. Reutilizar o frontend do `construtor-pg` por metadados JSON; não criar um frontend paralelo nem alterar bibliotecas Kendo.
-- Este workspace contém a conversão e suas ferramentas. Os projetos canônicos relacionados ficam em `D:\opencode\construtor-pg` e `D:\opencode\motor-progress\v2`; ler seus próprios AGENTS/contextos antes de alterá-los e preservar mudanças existentes.
+- Este workspace contém a conversão e suas ferramentas. Os projetos canônicos relacionados ficam em `C:\Users\tadeu.parreiras\Documents\ChatGPT\construtor-pg` e `C:\Users\tadeu.parreiras\Documents\ChatGPT\motor_progress`; ler seus próprios AGENTS/contextos antes de alterá-los e preservar mudanças existentes.
 - ABL executável deve ser compilado em OpenEdge 12.2 no `.42`, publicado e validado no PASOE real conforme a skill `motor-progress-publicar-pasoe`. Usar `sursum-api/med`; não trocar de instância como fallback.
 - Nunca gravar senhas/tokens em fontes, exemplos ou memória. `.runtime/` contém estado privado ignorado; mencionar caminhos, nunca seu conteúdo.
 - Testes de negócio autorizados devem usar somente registros novos marcados para teste e removê-los ao terminar. Preservar registros criados pelo usuário.

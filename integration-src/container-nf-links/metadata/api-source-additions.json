@@ -1,0 +1,38 @@
+{
+  "code": "motor_progress_container_financeiro",
+  "responseContract": "sursum-programs",
+  "operations": [
+    {
+      "code": "associar_nfs",
+      "name": "Associar notas fiscais ao container",
+      "type": "custom",
+      "method": "POST",
+      "allowProcess": true,
+      "path": "/SursumPrograms/containers-processos",
+      "itemPath": "data",
+      "requestContextFields": [
+        "container_id"
+      ],
+      "bodyTemplate": {
+        "resource": "nfs",
+        "operation": "associar"
+      }
+    },
+    {
+      "code": "desassociar_nfs",
+      "name": "Desassociar notas fiscais do container",
+      "type": "custom",
+      "method": "POST",
+      "allowProcess": true,
+      "path": "/SursumPrograms/containers-processos",
+      "itemPath": "data",
+      "requestContextFields": [
+        "container_id"
+      ],
+      "bodyTemplate": {
+        "resource": "nfs",
+        "operation": "desassociar"
+      }
+    }
+  ]
+}

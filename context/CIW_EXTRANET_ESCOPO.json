@@ -1,0 +1,392 @@
+{
+  "converted": [
+    "ciw.alertas-importacao-med",
+    "ciw.coloracoes",
+    "ciw.container-alocar-itens",
+    "ciw.container-comparativos",
+    "ciw.container-despesas",
+    "ciw.container-itens",
+    "ciw.container-painel",
+    "ciw.container-rastro-dolar",
+    "ciw.container-resumo",
+    "ciw.container-sincronizar-impostos",
+    "ciw.cotacoes-bc",
+    "ciw.despesas",
+    "ciw.empresas",
+    "ciw.empresas-despesa",
+    "ciw.formatos-amostra",
+    "ciw.fornecedores",
+    "ciw.fornecedores-estrangeiros",
+    "ciw.itens-erp",
+    "ciw.motivos-desconto",
+    "ciw.proc-compra-alocacoes",
+    "ciw.proc-compra-amostras",
+    "ciw.proc-compra-anexos",
+    "ciw.proc-compra-documentos",
+    "ciw.proc-compra-itens",
+    "ciw.proc-compra-pagamentos",
+    "ciw.processos-compra-med",
+    "ciw.quantidades-importadas-med",
+    "ciw.sinalizadores-importacao",
+    "ciw.sinalizadores-importacao-med",
+    "ciw.situacoes-container",
+    "ciw.tipos-anexo",
+    "ciw.tipos-versao-custo"
+  ],
+  "embeddedAndReturnDependencies": [
+    "ciw.container-anexos",
+    "ciw.container-custos-itens",
+    "ciw.container-fechar-custos",
+    "ciw.container-gerar-versao",
+    "ciw.container-nfs",
+    "ciw.container-pagamentos",
+    "ciw.container-versoes-custo",
+    "ciw.containers",
+    "ciw.proc-compra-alertas",
+    "ciw.proc-compra-calcular-impostos",
+    "ciw.proc-compra-despesas",
+    "ciw.proc-compra-gerar-despesas",
+    "ciw.proc-compra-quantidades",
+    "ciw.proc-compra-resumo"
+  ],
+  "optionalGridDestinations": [
+    "ciw.container-despesa-memoria-med",
+    "ciw.container-calcular-impostos",
+    "ciw.container-selecionar-despesas",
+    "ciw.container-despesas-lote",
+    "ciw.container-versao-itens-historico",
+    "ciw.container-versao-pagamentos-historico",
+    "ciw.container-versao-nfs-historico",
+    "ciw.container-versao-descontos-historico",
+    "ciw.container-versao-despesas-historico",
+    "ciw.container-custos-comparacao-real",
+    "ciw.container-custos-comparacao-dolar",
+    "ciw.container-nfs-disponiveis-med",
+    "ciw.cotacoes-bc-buscar"
+  ],
+  "directApiSourceReferences": [],
+  "entityApiReferences": [
+    {
+      "screen": "ciw.alertas-importacao-med",
+      "entity": "proc_compra_sinalizados_med_progress",
+      "sources": [
+        "motor_progress_ciw_cadastros"
+      ]
+    },
+    {
+      "screen": "ciw.coloracoes",
+      "entity": "coloracoes_progress",
+      "sources": [
+        "motor_progress_ciw_cadastros"
+      ]
+    },
+    {
+      "screen": "ciw.container-alocar-itens",
+      "entity": "container_alocacao_progress",
+      "sources": [
+        "motor_progress_container_alocacao"
+      ]
+    },
+    {
+      "screen": "ciw.container-anexos",
+      "entity": "container_anexos_progress",
+      "sources": [
+        "motor_progress_container_painel"
+      ]
+    },
+    {
+      "screen": "ciw.container-comparativos",
+      "entity": "container_custo_comparativos_progress",
+      "sources": [
+        "motor_progress_container_custos"
+      ]
+    },
+    {
+      "screen": "ciw.container-custos-itens",
+      "entity": "container_custo_itens_progress",
+      "sources": [
+        "motor_progress_container_custos"
+      ]
+    },
+    {
+      "screen": "ciw.container-despesas",
+      "entity": "container_despesas_progress",
+      "sources": [
+        "motor_progress_container_despesas"
+      ]
+    },
+    {
+      "screen": "ciw.container-fechar-custos",
+      "entity": "container_processos_progress",
+      "sources": [
+        "motor_progress_container_processos"
+      ]
+    },
+    {
+      "screen": "ciw.container-gerar-versao",
+      "entity": "container_processos_progress",
+      "sources": [
+        "motor_progress_container_processos"
+      ]
+    },
+    {
+      "screen": "ciw.container-itens",
+      "entity": "container_itens_progress",
+      "sources": [
+        "motor_progress_container_itens"
+      ]
+    },
+    {
+      "screen": "ciw.container-nfs",
+      "entity": "container_nfs_progress",
+      "sources": [
+        "motor_progress_container_financeiro"
+      ]
+    },
+    {
+      "screen": "ciw.container-pagamentos",
+      "entity": "container_pagamentos_progress",
+      "sources": [
+        "motor_progress_container_pagamentos"
+      ]
+    },
+    {
+      "screen": "ciw.container-painel",
+      "entity": "container_painel_progress",
+      "sources": [
+        "motor_progress_container_cabecalho"
+      ]
+    },
+    {
+      "screen": "ciw.container-rastro-dolar",
+      "entity": "container_custo_rastro_progress",
+      "sources": [
+        "motor_progress_container_custos"
+      ]
+    },
+    {
+      "screen": "ciw.container-resumo",
+      "entity": "container_custo_resumo_progress",
+      "sources": [
+        "motor_progress_container_custos"
+      ]
+    },
+    {
+      "screen": "ciw.container-sincronizar-impostos",
+      "entity": "container_processos_progress",
+      "sources": [
+        "motor_progress_container_processos"
+      ]
+    },
+    {
+      "screen": "ciw.container-versoes-custo",
+      "entity": "container_versoes_custo_progress",
+      "sources": [
+        "motor_progress_container_painel"
+      ]
+    },
+    {
+      "screen": "ciw.containers",
+      "entity": "containers_progress",
+      "sources": [
+        "motor_progress_containers"
+      ]
+    },
+    {
+      "screen": "ciw.cotacoes-bc",
+      "entity": "hist_cotacoes_bc_progress",
+      "sources": [
+        "motor_progress_ciw_cadastros"
+      ]
+    },
+    {
+      "screen": "ciw.despesas",
+      "entity": "despesas_progress",
+      "sources": [
+        "motor_progress_despesas"
+      ]
+    },
+    {
+      "screen": "ciw.empresas",
+      "entity": "empresas_progress",
+      "sources": [
+        "motor_progress_empresas"
+      ]
+    },
+    {
+      "screen": "ciw.empresas-despesa",
+      "entity": "empresas_despesa_progress",
+      "sources": [
+        "motor_progress_despesas"
+      ]
+    },
+    {
+      "screen": "ciw.formatos-amostra",
+      "entity": "formatos_amostra_progress",
+      "sources": [
+        "motor_progress_ciw_cadastros"
+      ]
+    },
+    {
+      "screen": "ciw.fornecedores",
+      "entity": "fornecedores_consulta_progress",
+      "sources": [
+        "motor_progress_ciw_cadastros"
+      ]
+    },
+    {
+      "screen": "ciw.fornecedores-estrangeiros",
+      "entity": "fornecedores_estrangeiros_consulta_progress",
+      "sources": [
+        "motor_progress_ciw_cadastros"
+      ]
+    },
+    {
+      "screen": "ciw.itens-erp",
+      "entity": "itens_consulta_progress",
+      "sources": [
+        "motor_progress_ciw_cadastros"
+      ]
+    },
+    {
+      "screen": "ciw.motivos-desconto",
+      "entity": "motivos_desconto_progress",
+      "sources": [
+        "motor_progress_ciw_cadastros"
+      ]
+    },
+    {
+      "screen": "ciw.proc-compra-alertas",
+      "entity": "proc_compra_alertas_progress",
+      "sources": [
+        "motor_progress_ciw_cadastros"
+      ]
+    },
+    {
+      "screen": "ciw.proc-compra-alocacoes",
+      "entity": "proc_compra_alocacoes_progress",
+      "sources": [
+        "motor_progress_ciw_cadastros"
+      ]
+    },
+    {
+      "screen": "ciw.proc-compra-amostras",
+      "entity": "proc_compra_amostras_progress",
+      "sources": [
+        "motor_progress_ciw_cadastros"
+      ]
+    },
+    {
+      "screen": "ciw.proc-compra-anexos",
+      "entity": "proc_compra_anexos_progress",
+      "sources": [
+        "motor_progress_ciw_cadastros"
+      ]
+    },
+    {
+      "screen": "ciw.proc-compra-calcular-impostos",
+      "entity": "proc_compra_despesas_progress",
+      "sources": [
+        "motor_progress_ciw_cadastros"
+      ]
+    },
+    {
+      "screen": "ciw.proc-compra-despesas",
+      "entity": "proc_compra_despesas_progress",
+      "sources": [
+        "motor_progress_ciw_cadastros"
+      ]
+    },
+    {
+      "screen": "ciw.proc-compra-documentos",
+      "entity": "proc_compra_documentos_progress",
+      "sources": [
+        "motor_progress_ciw_cadastros"
+      ]
+    },
+    {
+      "screen": "ciw.proc-compra-gerar-despesas",
+      "entity": "proc_compra_despesas_progress",
+      "sources": [
+        "motor_progress_ciw_cadastros"
+      ]
+    },
+    {
+      "screen": "ciw.proc-compra-itens",
+      "entity": "proc_compra_itens_progress",
+      "sources": [
+        "motor_progress_ciw_cadastros"
+      ]
+    },
+    {
+      "screen": "ciw.proc-compra-pagamentos",
+      "entity": "proc_compra_pagamentos_progress",
+      "sources": [
+        "motor_progress_ciw_cadastros"
+      ]
+    },
+    {
+      "screen": "ciw.proc-compra-quantidades",
+      "entity": "proc_compra_quantidades_progress",
+      "sources": [
+        "motor_progress_ciw_cadastros"
+      ]
+    },
+    {
+      "screen": "ciw.proc-compra-resumo",
+      "entity": "proc_compra_resumo_progress",
+      "sources": [
+        "motor_progress_ciw_cadastros"
+      ]
+    },
+    {
+      "screen": "ciw.processos-compra-med",
+      "entity": "procs_compra_med_progress",
+      "sources": [
+        "motor_progress_ciw_cadastros"
+      ]
+    },
+    {
+      "screen": "ciw.quantidades-importadas-med",
+      "entity": "proc_compra_quantidades_med_progress",
+      "sources": [
+        "motor_progress_ciw_cadastros"
+      ]
+    },
+    {
+      "screen": "ciw.sinalizadores-importacao",
+      "entity": "sinalizadores_importacao_progress",
+      "sources": [
+        "motor_progress_ciw_cadastros"
+      ]
+    },
+    {
+      "screen": "ciw.sinalizadores-importacao-med",
+      "entity": "proc_compra_sinalizadores_med_progress",
+      "sources": [
+        "motor_progress_ciw_cadastros"
+      ]
+    },
+    {
+      "screen": "ciw.situacoes-container",
+      "entity": "situacoes_container_progress",
+      "sources": [
+        "motor_progress_ciw_cadastros"
+      ]
+    },
+    {
+      "screen": "ciw.tipos-anexo",
+      "entity": "tipos_anexo_progress",
+      "sources": [
+        "motor_progress_tipos_anexo"
+      ]
+    },
+    {
+      "screen": "ciw.tipos-versao-custo",
+      "entity": "tipos_versao_custo_progress",
+      "sources": [
+        "motor_progress_ciw_cadastros"
+      ]
+    }
+  ]
+}
